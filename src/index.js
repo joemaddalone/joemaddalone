@@ -80,7 +80,6 @@ class Elsewhere extends React.Component {
           { txt: 'htmlstack', url: 'http://www.htmlstack.com' },
           { txt: 'JavascriptOO', url: 'http://www.javascriptoo.com' },
           { txt: 'FillText', url: 'http://www.filltext.com' },
-          { txt: 'vbSharp', url: 'http://www.vbsharp.com' },
           { txt: 'LearnYou.it', url: 'http://www.learnyou.it' },
           { txt: 'PackageManager.org', url: 'http://www.packagemanager.org' },
           { txt: 'printz', url: 'http://www.printz.org' },
