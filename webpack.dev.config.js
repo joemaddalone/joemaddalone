@@ -11,7 +11,7 @@ module.exports = {
   ],
   devtool: process.env.WEBPACK_DEVTOOL || 'source-map',
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, 'docs'),
     filename: 'bundle.js'
   },
   module: {
@@ -26,7 +26,7 @@ module.exports = {
     }]
   },
   devServer: {
-      contentBase: "./public",
+      contentBase: "./docs",
       noInfo: true, //  --no-info option
       inline: true
   },
