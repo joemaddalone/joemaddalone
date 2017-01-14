@@ -83,7 +83,6 @@ class Elsewhere extends React.Component {
           { txt: 'LearnYou.it', url: 'http://www.learnyou.it' },
           { txt: 'PackageManager.org', url: 'http://www.packagemanager.org' },
           { txt: 'printz', url: 'http://www.printz.org' },
-          { txt: '2xBG', url: 'http://www.2xbg.com' },
           { txt: 'Insert Title', url: 'http://www.insert-title.com' },
     ];
     let links = wheres.map((w, i) => <a key={i} href={w.url}>{w.txt}</a>);
