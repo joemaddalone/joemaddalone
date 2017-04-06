@@ -1,27 +1,29 @@
 {
-  "name": "web",
-  "version": "1.0.0",
-  "description": "",
-  "main": "''",
-  "dependencies": {
-    "react": "^0.13.3",
-    "react-motion": "^0.3.0"
-  },
+  "name": "jm3",
+  "version": "0.1.0",
+  "private": true,
   "devDependencies": {
-    "autoprefixer-loader": "^3.1.0",
-    "babel-core": "^5.8.20",
-    "babel-loader": "^5.3.2",
-    "css-loader": "^0.19.0",
-    "react-hot-loader": "^1.2.8",
-    "style-loader": "^0.12.4",
-    "transfer-webpack-plugin": "^0.1.4",
-    "webpack": "^1.10.5",
-    "webpack-dev-server": "^1.10.1"
+    "gh-pages": "^0.12.0",
+    "npm-run-all": "^4.0.2",
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-scripts": "0.9.5"
+  },
+  "dependencies": {
+    "moment": "^2.18.1",
+    "react": "^15.4.2",
+    "react-custom-scrollbars": "^4.0.2",
+    "react-dom": "^15.4.2",
+    "react-motion": "^0.4.7",
+    "react-router-dom": "^4.0.0",
+    "react-router-transition": "0.0.6",
+    "react-typewriter": "^0.4.1"
   },
   "scripts": {
-    "build": "webpack --config webpack.build.config.js -p",
-    "dev": "webpack-dev-server  --config webpack.dev.config.js"
-  },
-  "author": "",
-  "license": "ISC"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
 }

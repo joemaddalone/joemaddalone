@@ -1,0 +1,169 @@
+a {
+    text-decoration: none;
+}
+
+.home {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+
+.spinners-holders {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55px;
+    transition: all 1s ease;
+}
+
+.tiles {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55px;
+    transition: all 1s ease;
+}
+
+
+.tile {
+    position: relative;
+    width: 35px;
+    height: 55px;
+    overflow: hidden;
+    float: left;
+}
+
+.tile-char {
+    width: 45px;
+    height: 55px;
+    font-size: 45px;
+    line-height: 1;
+    opacity: 0.5;
+    transition: opacity 2s ease;
+}
+
+.tile-char.active {
+    opacity: 1;
+    text-shadow: 0 0 8px #ccc;
+}
+
+.tile-controls {
+    margin: 32px auto;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width:45vw;
+    max-width: 600px;
+}
+
+@media(max-width:600px){
+    .tile-controls {
+        width: 95vw;
+        max-width: 100%;
+    }
+}
+
+@media(max-height:400px){
+    .tile-controls {
+        margin-bottom: 120px;
+    }
+}
+
+
+
+.control-item {
+    margin: 20px;
+    width: 48px;
+}
+
+@media(max-width:768px){
+    .control-item {
+        margin: 10px;
+        width: 32px;
+    }
+}
+
+.control-item a img{
+  opacity: 0.4;
+  transition:opacity 0.5s ease-out;
+
+}
+
+.control-item a img:hover{
+  opacity: 1;
+}
+
+.else {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.elsewhere {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.elsewhere h2 {
+    text-transform: lowercase;
+    color: #ccc;
+    font-size: 2.4rem;
+}
+
+.elsewhere a {
+    color: #ccc;
+    font-size: 1.2rem;
+    transition: 1s all ease-out;
+}
+
+.elsewhere a:hover {
+    color: #000;
+}
+
+
+.mobile-h1 {
+    text-align: center;
+}

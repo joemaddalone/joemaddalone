@@ -1,0 +1,141 @@
+<!--
+ _          _ _                         _
+| |        | | |                       | |
+| |__   ___| | | ___     __ _  ___  ___| | __
+| '_ \ / _ \ | |/ _ \   / _` |/ _ \/ _ \ |/ /
+| | | |  __/ | | (_) | | (_| |  __/  __/   <
+|_| |_|\___|_|_|\___/   \__, |\___|\___|_|\_\
+                         __/ |
+                        |___/
+Didn't see that coming did you?
+Browse, steal, copy, clone, enjoy!
+
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>joe.maddalone</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
+<!--
+
+// the source code - more or less
+
+
+import React from 'react';
+import { Motion, spring, presets } from 'react-motion';
+import './home.css'
+import twitter from '../../icon/icon-twitter.svg'
+import github from '../../icon/icon-github.svg'
+import linkedin from '../../icon/icon-linkedin.svg'
+import youtube from '../../icon/icon-youtube.svg'
+const ExternalLink = ( props ) => <a href={props.url}><img src={props.icon} style={{ width: 32, height: 32 }}/></a>;
+
+class CharSpinner extends React.Component {
+	constructor () {
+		super();
+		this.chars = '\',abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.'.split( '' );
+	}
+
+	findPos = ( char ) => {
+		return this.chars.indexOf( char );
+	};
+
+	render () {
+		return (
+		  <Motion defaultStyle={{ top: 0 }} style={{ top: spring( this.findPos( this.props.char ), presets.wobbly ) }}>
+			  {val => {
+				  let style = {
+					  position: 'absolute',
+					  top: (val.top * 55) * -1
+				  };
+				  return (
+					<div className="tile">
+						<div style={style}>
+							{this.chars.map( char => {
+								let tileClass = 'tile-char';
+								if ( char === this.props.char ) {
+									tileClass += ' active '
+								}
+								return <div key={char} className={tileClass}>{char}</div>
+							} )}
+						</div>
+					</div>
+				  )
+			  }}
+		  </Motion>
+		)
+	}
+}
+
+
+const CharSpinners = ( { str } ) => (
+  <div className="spinners-holder">{str.split( '' ).map( ( char, i ) => <CharSpinner key={i} char={char}/> )}</div>
+);
+
+const Elsewhere = () => {
+	let wheres = [
+		{ txt: 'egghead.io', url: "http://www.egghead.io/instructors/joe-maddalone" },
+		{ txt: 'htmlstack', url: 'http://www.htmlstack.com' },
+		{ txt: 'JavascriptOO', url: 'http://www.javascriptoo.com' },
+		{ txt: 'FillText', url: 'http://www.filltext.com' },
+		{ txt: 'LearnYou.it', url: 'http://www.learnyou.it' },
+		{ txt: 'PackageManager.org', url: 'http://www.packagemanager.org' },
+		{ txt: 'printz', url: 'http://www.printz.org' },
+		{ txt: 'Insert Title', url: 'http://www.insert-title.com' },
+	];
+	let links = wheres.map( ( w, i ) => <a key={i} href={w.url}>{w.txt}</a> );
+	return <div className="elsewhere"><h2>ElseWhere</h2>{links}</div>;
+};
+
+const Controls = ( props ) => {
+	let controls = [
+		{ txt: 'Twitter', icon: twitter, url: "http://www.twitter.com/joemaddalone", type: 'external' },
+		{ txt: 'Github', icon: github, url: 'http://www.github.com/joemaddalone', type: 'external' },
+		{ txt: 'LinkedIn', icon: linkedin, url: 'http://www.linkedin.com/in/joemaddalone', type: 'external' },
+		{ txt: 'YouTube', icon: youtube, url: 'http://www.youtube.com/joemaddalone', type: 'external' },
+	];
+	return (
+	  <div className="tile-controls">
+		  {controls.map( ( control, i ) => <Control url={control.url} key={i} m={props.m} txt={control.txt}
+			icon={control.icon}/> )}
+	  </div>
+	);
+};
+
+const Control = ( props ) => (
+  <div className="control-item" onMouseOver={props.m.bind( null, props.txt )}>
+	  { props.type === 'internal'
+		? <InternalLink {...props} />
+		: <ExternalLink {...props} />}
+  </div>
+);
+
+
+class Home extends React.Component {
+	constructor () {
+		super();
+		this.state = { stdOut: 'Hi, I\'m Joe' }
+	}
+
+	setString ( s ) {
+		this.setState( { stdOut: s } );
+	}
+
+	render () {
+		return (
+		  <div className="home">
+			  {!mobileCheck() ? <div className="tiles"><CharSpinners str={this.state.stdOut}/></div>: <h1 className="mobile-h1">Hi, I'm Joe</h1>}
+			  <Controls m={this.setString.bind( this )}/>
+			  <Elsewhere />
+		  </div>
+		);
+	}
+}
+-->
