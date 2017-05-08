@@ -132,7 +132,7 @@ module.exports = {
         {
             title: "htmlstack",
             url: "http://www.htmlstack.com",
-            description: "Eperimenting with all things possible in a browser."
+            description: "Experimenting with all things possible in a browser."
         }
     ]
 }
