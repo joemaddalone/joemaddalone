@@ -5,7 +5,6 @@ import twitter from '../../icon/icon-twitter.svg'
 import github from '../../icon/icon-github.svg'
 import linkedin from '../../icon/icon-linkedin.svg'
 import youtube from '../../icon/icon-youtube.svg'
-import { Link } from 'react-router-dom';
 
 
 const SideBar = (props) => (
@@ -65,7 +64,7 @@ const Resume = () => {
 		<div>
 			<div className="header">
 				<h1>Joe Maddalone</h1>
-				<a href="http://joemaddalone.com/Joe-Maddalone-May2017.pdf">PDF</a>
+				<a href="/Joe-Maddalone-May2017.pdf" target="_blank">PDF</a>
 			</div>
 			<div className="resume">
 				<div className="left-col">
