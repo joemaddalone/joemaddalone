@@ -1,93 +1,82 @@
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import Work from './Work'
-import Skills from './Skills'
-import data from './resume-data';
-import './resume.css';
+const data = require('./resume-data')
+import './resume.css'
+import twitter from '../../icon/icon-twitter.svg'
+import github from '../../icon/icon-github.svg'
+import linkedin from '../../icon/icon-linkedin.svg'
+import youtube from '../../icon/icon-youtube.svg'
+import { Link } from 'react-router-dom';
 
 
-const Intro = () => <p>I am an accomplished web developer able to work in various environments and adapt to new
-	processes quickly. I have extensive experience coordinating large projects with multiple teams, handholding through
-	decision making with small startups, and managing to make my own ‘weekend projects’ profitable. I've taught
-	thousands of developers the skills they need to advance their careers. I'm a father of five, I've founded companies,
-	invented services, led teams, and guided products. However, I have not yet had the pleasure of working with you.</p>
-
-
-const ResumeNav = ( { slides, next, currentSlide } ) => (
-  <nav className="resume-nav">
-	  {slides.map( ( s, i ) => <a key={i} className={currentSlide === i ? 'active' : ''} href="javascript:void(0)"
-		onClick={next.bind( null, i )}>{s.label}</a> )}
-  </nav>
+const SideBar = (props) => (
+	<div>
+		<section>
+			<h1>Contact me.</h1>
+			<p>
+				<a href="mailto:joe.maddalone@gmail.com">joe.maddalone@gmail.com</a>
+				<br />
+			</p>
+			<p>773.593.9645</p>
+		</section>
+		<section className="social-links">
+			<h1>Get to to know me.</h1>
+			<a target="_blank" href="http://youtube.com/joemaddalone" >
+				<img src={youtube} alt="" />
+			</a>
+			<a target="_blank" href="http://twitter.com/joemaddalone" >
+				<img src={twitter} alt="" />
+			</a>
+			<a target="_blank" href="http://linked.com/in/joemaddalone" >
+				<img src={linkedin} alt="" />
+			</a>
+			<a target="_blank" href="http://github.com/joemaddalone" >
+				<img src={github} alt="" />
+			</a>
+		</section>
+		<section>
+			<h1>Skills.</h1>
+			{props.skills.join(', ')}
+		</section>
+		<section className="personal">
+			<h1>Personal projects.</h1>
+			{props.personal.map((p, i) => (
+				<div className="project" key={i}>
+					<p>
+						<a href={p.url}>{p.title}</a><br />
+						{p.description}
+					</p>
+				</div>
+			))}
+		</section>
+	</div>
 )
 
+const Job = ({ title, to, from, company, highlights }) => (
+	<div className="job">
+		<h1>{company} - {title} ({from} - {to})</h1>
+		<ul>
+			{highlights.map((h, i) => <li key={i}>{h}</li>)}
+		</ul>
+	</div>
+)
 
-class Resume extends React.Component {
-	constructor ( { match, history } ) {
-		super();
-		this.history = history;
-		this.slides = [
-			{ label: "Intro", component: Intro },
-			{ label: "Work", component: Work },
-			{ label: "Skills", component: Skills }
-		]
-		this.state = {
-			currentSlide: 0
-		}
-	}
-	
-	componentWillMount () {
-		//document.body.style.overflow = 'scroll'
-	}
-	
-	setSlide ( currentSlide ) {
-		if ( currentSlide !== this.state.currentSlide ) {
-			this.setState( { currentSlide } );
-		}
-	}
-	
-	nextSlide ( e ) {
-		if ( this.state.currentSlide === this.slides.length - 1 ) {
-			this.setState( { currentSlide: 0 } );
-		}
-		else {
-			this.setState( { currentSlide: this.state.currentSlide + 1 } );
-		}
-	}
-	
-	render () {
-		const back = ( e ) => {
-			stop( e )
-			if ( e.target.className === 'overlay' ) {
-				document.querySelector( '.overlay' ).style.opacity = 0;
-				setTimeout( () => this.history.push( '/' ), 250 )
-			}
-		};
-		const stop = ( e ) => e.stopPropagation();
-		
-		return (
-		  <div className="resume">
-			  <div className="overlay" onClick={back}>
-				  <ResumeNav slides={this.slides} currentSlide={this.state.currentSlide}
-					next={this.setSlide.bind( this )}/>
-				  <ReactCSSTransitionGroup transitionName="modal-slide" transitionEnterTimeout={0}
-					transitionLeaveTimeout={0}>
-					  <div key={Math.random()} className="modal modal-slide" onClick={stop}>
-						  
-						  {React.createElement(this.slides[ this.state.currentSlide ].component)}
-					  </div>
-				  </ReactCSSTransitionGroup>
-			  </div>
-		  </div>)
-	}
-	
-	componentDidMount () {
-		setTimeout( () => document.querySelector( '.overlay' ).style.opacity = 1, 250 )
-	}
-	
-	componentWillUnmount () {
-		//document.body.style.overflow = ''
-	}
+const Resume = () => {
+	return (
+		<div>
+			<div className="header">
+				<h1>Joe Maddalone</h1>
+				<a href="http://joemaddalone.com/Joe-Maddalone-May2017.pdf">PDF</a>
+			</div>
+			<div className="resume">
+				<div className="left-col">
+					<SideBar skills={data.skills} personal={data.personal} />
+				</div>
+				<div className="right-col">
+					{data.work.map((d, i) => <Job key={i} {...d} />)}
+				</div>
+			</div>
+		</div>
+
+	)
 }
-
-
-export default Resume
+export default Resume;

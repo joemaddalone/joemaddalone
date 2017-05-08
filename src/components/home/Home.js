@@ -8,8 +8,8 @@ import linkedin from '../../icon/icon-linkedin.svg'
 import youtube from '../../icon/icon-youtube.svg'
 import cv from '../../icon/icon-cv.svg'
 import { Link } from 'react-router-dom';
-const InternalLink = ( props ) => <Link to={props.url}><img src={props.icon} style={{ width: 32, height: 32 }}/></Link>;
-const ExternalLink = ( props ) => <a href={props.url}><img src={props.icon} style={{ width: 32, height: 32 }}/></a>;
+const InternalLink = ( props ) => <Link to={props.url}><img alt={props.title} src={props.icon} style={{ width: 32, height: 32 }}/></Link>;
+const ExternalLink = ( props ) => <a href={props.url}><img alt={props.title}src={props.icon} style={{ width: 32, height: 32 }}/></a>;
 
 
 const mobileCheck = function() {
@@ -81,7 +81,7 @@ const Controls = ( props ) => {
 		{ txt: 'Github', icon: github, url: 'http://www.github.com/joemaddalone', type: 'external' },
 		{ txt: 'LinkedIn', icon: linkedin, url: 'http://www.linkedin.com/in/joemaddalone', type: 'external' },
 		{ txt: 'YouTube', icon: youtube, url: 'http://www.youtube.com/joemaddalone', type: 'external' },
-		// { txt: 'My Resume', icon: cv, url: '/#/resume', type: 'internal' }
+		{ txt: 'My Resume', icon: cv, url: '/#/resume', type: 'internal' }
 	];
 	return (
 	  <div className="tile-controls">
