@@ -18,7 +18,7 @@ module.exports = {
             highlights: [
                 "Led multiple teams of senior developers on several projects.",
                 "Responsible for demonstrating progress to executive teams.",
-                "AngularJS, React, Backbone, Less, Sass "
+                "AngularJS, Backbone, Less, Sass "
             ]
         },
         {
