@@ -3,7 +3,7 @@ module.exports = {
             company: "Genos Research",
             title: "Lead Front End Developer",
             from: "12/2015",
-            to: "05/2016",
+            to: "05/2017",
             highlights: [
                 "Implementing architecture, features, best practices, and testing.",
                 "Heavily involved in engineering decisions, sprint planning, task assignment, and feature prioritization.",
