@@ -47,6 +47,10 @@ const SideBar = (props) => (
 				</div>
 			))}
 		</section>
+		<section className="refs">
+			<h1>References.</h1>
+			<p>References available upon request.</p>
+		</section>
 	</div>
 )
 
