@@ -1,5 +1,5 @@
-module.exports = {
-    work: [{
+const data = {
+    work: [ {
             company: "Genos Research",
             title: "Lead Front End Developer",
             from: "12/2015",
@@ -114,7 +114,7 @@ module.exports = {
         "SQL/MySQL",
         "Agile/Scrum"
     ],
-    personal: [{
+    personal: [ {
             title: "FillText",
             url: "http://www.filltext.com",
             description: "A node API for simulating APIs."
@@ -135,4 +135,6 @@ module.exports = {
             description: "Experimenting with all things possible in a browser."
         }
     ]
-}
+};
+
+export default data;

@@ -1,11 +1,10 @@
 import React from 'react';
-const data = require('./resume-data')
-import './resume.css'
-import twitter from '../../icon/icon-twitter.svg'
-import github from '../../icon/icon-github.svg'
-import linkedin from '../../icon/icon-linkedin.svg'
-import youtube from '../../icon/icon-youtube.svg'
-
+import data from './resume-data';
+import './resume.css';
+import twitter from '../../icon/icon-twitter.svg';
+import github from '../../icon/icon-github.svg';
+import linkedin from '../../icon/icon-linkedin.svg';
+import youtube from '../../icon/icon-youtube.svg';
 
 const SideBar = (props) => (
 	<div>
@@ -52,7 +51,7 @@ const SideBar = (props) => (
 			<p>References available upon request.</p>
 		</section>
 	</div>
-)
+);
 
 const Job = ({ title, to, from, company, highlights }) => (
 	<div className="job">
@@ -61,7 +60,7 @@ const Job = ({ title, to, from, company, highlights }) => (
 			{highlights.map((h, i) => <li key={i}>{h}</li>)}
 		</ul>
 	</div>
-)
+);
 
 const Resume = () => {
 	return (
@@ -80,6 +79,6 @@ const Resume = () => {
 			</div>
 		</div>
 
-	)
-}
+	);
+};
 export default Resume;
