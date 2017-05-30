@@ -1,22 +1,22 @@
-node('master') {
-	try {
-		stage('build') {
-			checkout scm
-
-			sh "npm install"
+pipeline {
+	agent any
+    stages {
+		stage('build'){
+			steps {
+				checkout scm
+				sh "npm install"
+			}
+			
 		}
-
 		stage('test'){
-			sh "echo 'TESTING'"
+			steps {
+				echo "TESTING"
+			}
 		}
-
 		stage('deploy'){
-			sh "echo 'DEPLOYING'"
+			steps {
+				echo "TESTING"
+			}
 		}
-
-	}
-	catch(err) {
-		throw err
-	}
-	finally {}
+    }
 }
