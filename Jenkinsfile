@@ -6,6 +6,10 @@ node('master') {
 			sh "npm install"
 		}
 
+		stage('test'){
+			sh "echo 'TESTING'"
+		}
+
 		stage('deploy'){
 			sh "echo 'DEPLOYING'"
 		}
