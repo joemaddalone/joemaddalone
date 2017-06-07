@@ -1,5 +1,15 @@
 const data = {
-    work: [ {
+    work: [ 
+        {
+            company: "CloudBees",
+            title: "Software Engineer",
+            from: "06/2017",
+            to: "present",
+            highlights: [
+                "code", "code", "code"
+            ]
+        },
+        {
             company: "Genos Research",
             title: "Lead Front End Developer",
             from: "12/2015",
