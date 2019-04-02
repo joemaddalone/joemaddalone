@@ -6,7 +6,6 @@ const Elsewhere = () => {
 		{ txt: 'htmlstack', url: 'http://www.htmlstack.com' },
 		{ txt: 'JavascriptOO', url: 'http://www.javascriptoo.com' },
 		{ txt: 'FillText', url: 'http://www.filltext.com' },
-		{ txt: 'LearnYou.it', url: 'http://www.learnyou.it' },
 		{ txt: 'PackageManager.org', url: 'http://www.packagemanager.org' },
 		{ txt: 'printz', url: 'http://www.printz.org' },
 		{ txt: 'Insert Title', url: 'http://www.insert-title.com' },
