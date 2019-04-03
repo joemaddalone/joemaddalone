@@ -15,6 +15,7 @@ a {
     flex-direction: column;
     justify-content: center;
     height: 90vh;
+    font-family: monospace;
 }
 
 .spinners-holders {

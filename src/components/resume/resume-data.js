@@ -7,8 +7,8 @@ const data = {
       to: '04/2019',
       highlights: [
         'Led a team of senior software engineers.',
-        'Implementing architecture, features, best practices, and testing.',
-        'ES2018+, React, Mobx, Jest/Enzyme/react-testing-library, Cypress, Puppeteer, Docker, Jenkins'
+        'Helped grow a Jenkins plugin into a standalone SaaS and then into a flagship product.',
+        'ES2018+, React, Mobx, D3, Jest/Enzyme/react-testing-library, Cypress, Puppeteer, Docker, Jenkins'
       ]
     },
     {
@@ -19,7 +19,7 @@ const data = {
       highlights: [
         'Implementing architecture, features, best practices, and testing.',
         'Heavily involved in engineering decisions, sprint planning, task assignment, and feature prioritization.',
-        'ES6/7, Babel, Node, Grunt, Nightmare, ITCSS'
+        'ES6/7, D3, Babel, Node, Grunt, Nightmare, ITCSS'
       ]
     },
     {
@@ -30,7 +30,7 @@ const data = {
       highlights: [
         'Led multiple teams of senior developers on several projects.',
         'Responsible for demonstrating progress to executive teams.',
-        'AngularJS, Backbone, Less, Sass '
+        'AngularJS, Backbone, D3, Less, Sass '
       ]
     },
     {
@@ -96,6 +96,8 @@ const data = {
     'SVG',
     'HTML',
     'CSS',
+    'FlexBox',
+    'CSS Grid',
     'Less',
     'Sass',
     'AngularJS',
