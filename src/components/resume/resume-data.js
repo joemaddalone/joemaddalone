@@ -7,7 +7,7 @@ const data = {
       to: '04/2019',
       highlights: [
         'Led a team of senior software engineers.',
-        'Helped grow a Jenkins plugin into a standalone SaaS and then into a flagship product.',
+        'Helped grow a Jenkins plugin into a standalone SaaS.',
         'ES2018+, React, Mobx, D3, Jest/Enzyme/react-testing-library, Cypress, Puppeteer, Docker, Jenkins'
       ]
     },
