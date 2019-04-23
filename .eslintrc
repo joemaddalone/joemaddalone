@@ -1,50 +1,87 @@
 {
   "env": {
-    "shared-node-browser": true,
+    "browser": true,
     "es6": true,
-    "mocha": true
+    "node": true
   },
+  "extends": ["prettier"],
   "parser": "babel-eslint",
-  "parserOptions": {
-    "ecmaVersion": 7,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true,
-      "modules": true,
-      "blockBindings": true,
-      "defaultParams": true,
-      "forOf": true,
-      "generators": true,
-      "objectLiteralComputedProperties": true,
-      "objectLiteralDuplicateProperties": false,
-      "objectLiteralShorthandMethods": true,
-      "objectLiteralShorthandProperties": true,
-      "templateStrings": true,
-      "experimentalObjectRestSpead": true
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
     }
   },
   "rules": {
-    "strict": [2, "never"],
-    "semi": [2, "always", {"omitLastInOneLineBlock": true }],
-    "brace-style": [2, "1tbs", {
-      "allowSingleLine": true
-    }],
-    "comma-style": ["error", "last"],
-    "comma-spacing": ["error", { "before": false, "after": true }],
-    "object-property-newline": ["error", { "allowMultiplePropertiesPerLine": true }],
-    "object-curly-spacing": ["error", "always"],
-    "key-spacing": ["error", { "beforeColon": false, "afterColon": true, "mode": "minimum" }],
-    "rest-spread-spacing": ["error", "never"],
-    "array-bracket-spacing": ["error", "always"],
-    "no-mixed-spaces-and-tabs": "error",
-    "no-dupe-keys": 2,
-    "no-ex-assign": 2,
+    "eol-last": 1,
+    "no-unused-vars": 1,
+    "no-underscore-dangle": [0],
+    "object-shorthand": [0, "always"],
+    "quote-props": [0, "as-needed"],
+    "no-var": 0,
+    "prefer-const": 2,
+    "prefer-arrow-callback": 2,
+    "no-trailing-spaces": [0, { "skipBlankLines": true }],
+    "key-spacing": [2],
+    "semi": [2],
     "no-extra-semi": 2,
-    "valid-typeof": 2,
-    "generator-star-spacing": [2, {"before": false, "after": true}],
+    "no-console": 0,
+    "prefer-template": 1,
+    "react/display-name": 0,
+    "react/jsx-boolean-value": 2,
+    "jsx-quotes": 2,
+    "react/jsx-no-undef": 2,
+    "react/jsx-sort-props": 0,
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
-    "react/react-in-jsx-scope": 2
+    "react/no-did-mount-set-state": 2,
+    "react/no-did-update-set-state": 2,
+    "react/no-multi-comp": 0,
+    "react/no-unknown-property": 0,
+    "react/no-unused-prop-types": 1,
+    "react/prop-types": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/self-closing-comp": 0,
+    "react/jsx-indent-props": 0,
+    "quotes": [0, "single"],
+    "strict": [2, "global"],
+    "jsx-a11y/click-events-have-key-events": 1,
+    "jsx-a11y/no-autofocus": 0,
+    "jsx-a11y/anchor-is-valid": 1,
+    "jsx-a11y/no-noninteractive-element-interactions": 1,
+    "jsx-a11y/no-noninteractive-tabindex": 1,
+    "jsx-a11y/tabindex-no-positive": 1,
+    "jsx-a11y/interactive-supports-focus": 1,
+    "jsx-a11y/label-has-for": [
+      1,
+      {
+        "required": {
+          "every": ["nesting", "id"]
+        },
+        "allowChildren": true
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": 1,
+    "jsx-a11y/anchor-has-content": 1,
+    "jsx-a11y/mouse-events-have-key-events": 1,
+    "jsx-a11y/role-has-required-aria-props": 1,
+    "jsx-a11y/role-supports-aria-props": 1,
+    "jsx-a11y/scope": 1,
+    "jsx-a11y/accessible-emoji": 1,
+    "jsx-a11y/alt-text": 1,
+    "jsx-a11y/aria-activedescendant-has-tabindex": 1,
+    "jsx-a11y/aria-props": 1,
+    "jsx-a11y/aria-proptypes": 1,
+    "jsx-a11y/aria-role": 1,
+    "jsx-a11y/aria-unsupported-elements": 1,
+    "jsx-a11y/heading-has-content": 1,
+    "jsx-a11y/html-has-lang": 1,
+    "jsx-a11y/iframe-has-title": 1,
+    "jsx-a11y/img-redundant-alt": 1,
+    "jsx-a11y/no-static-element-interactions": 1,
+    "jsx-a11y/no-onchange": 1,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
-  "plugins": ["react"]
+  "plugins": ["react", "jsx-a11y", "react-hooks"]
 }

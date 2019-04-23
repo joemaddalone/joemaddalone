@@ -1,0 +1,25 @@
+body {
+	background-color: #f8f8f8;
+}
+
+.home {
+	display: flex;
+	flex-direction: column;
+	width: 99vw;
+	height: 99vh;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.controls {
+	margin-top: 25px;
+	width: 400px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.control:focus {
+	outline: 0;
+	outline: thin dotted;
+}
