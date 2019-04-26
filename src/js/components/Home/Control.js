@@ -1,31 +1,24 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from "prop-types";
-import { Spring } from "react-spring/renderprops";
-import Path from "../svg/Path";
-import "./Flourish.css";
+import PropTypes from 'prop-types';
+import { Spring } from 'react-spring/renderprops';
+import Path from '../svg/Path';
+import './Control.css';
 
-
-const InternalLink = ({url, children}) => (
-	<Link to={url}>
-		{children}		
-	</Link>
-);
-
-InternalLink.propTypes = {
-	url: PropTypes.string,
-	children: PropTypes.node
+const LinkComponent = ({ url, children, type, interaction }) => {
+	const ext = type === 'external';
+	const activate = {
+		onMouseOver: interaction,
+		onFocus: interaction
+	};
+	return React.createElement(ext ? 'a' : Link, ext ? { href: url, target: '_blank', ...activate } : { to: url, ...activate}, children);
 };
 
-const ExternalLink = ({url, children}) => (
-	<a href={url} target="_blank">
-		{children}
-	</a>
-);
-
-ExternalLink.propTypes = {
+LinkComponent.propTypes = {
 	url: PropTypes.string,
-	children: PropTypes.node
+	children: PropTypes.node,
+	type: PropTypes.string,
+	interaction: PropTypes.func
 };
 
 const Control = ({ control, setStr, active }) => {
@@ -34,7 +27,7 @@ const Control = ({ control, setStr, active }) => {
 	const size = 45;
 	const center = svgSize / 2;
 	const x = center - size / 2;
-	const y = center - size / 2;
+	const y = x;
 	const path = new Path()
 		.moveTo(x, y)
 		.lineTo(x + size, y)
@@ -42,44 +35,30 @@ const Control = ({ control, setStr, active }) => {
 		.lineTo(x, y + size)
 		.lineTo(x, y);
 
-	path.attr("stroke", control.color);
-
+	path.attr('stroke', control.color);
 
 	const activate = () => {
 		setStr(control);
 		setActivated(activated + 1);
 	};
 
-	const LinkComponent = control.type === 'external' ? ExternalLink : InternalLink;
-
 	return (
-		<LinkComponent url={control.url}>
-		<div
-			className="control"
-			style={{ width: svgSize }}
-			tabIndex={0}
-			role="button"
-			onFocus={activate}
-			onMouseOver={activate}
-			key={control.icon}
-		>
-			<svg width={svgSize} height={svgSize} className="flourish">
-
+		<LinkComponent type={control.type} url={control.url} interaction={activate}>
+			<svg width={svgSize} height={svgSize} className="flourish" style={{pointerEvents: 'none'}}>
 				{activated > 0 && (
 					<g id="control-box">
-						<Spring config={{ duration: active ? 600 : 250 }} from={{ x: active ? 360 : 0 }} to={{ x: active ? 0 : 360 }}>
+						<Spring
+							config={{ duration: active ? 600 : 250 }}
+							from={{ x: active ? 360 : 0 }}
+							to={{ x: active ? 0 : 360 }}>
 							{({ x }) => <path d={path.toString()} stroke={control.color} strokeDashoffset={x} />}
 						</Spring>
 					</g>
-					)}
-
-
-				
+				)}
 				<g transform="translate(19, 19)">
-				<path className="icon" d={control.icon}  fill={active ? control.color : "#222"}></path>
+					<path className="icon" d={control.icon} fill={active ? control.color : '#222'} />
 				</g>
 			</svg>
-		</div>
 		</LinkComponent>
 	);
 };

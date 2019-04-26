@@ -1,28 +1,19 @@
-
-
 .elsewhere {
-	display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-	font-family: monospace;
-}
+	& h2 {
+		color: #ccc;
+		font-size: 2.4rem;
+		margin-bottom: 10px;
+	}
 
-.elsewhere h2 {
-    text-transform: lowercase;
-    color: #ccc;
-    font-size: 2.4rem;
-	margin-bottom: 10px;
-}
+	& a {
+		text-decoration: none;
+		color: #ccc;
+		font-size: 1.2rem;
+		line-height: 1.5;
+		transition: 1s all ease-out;
 
-.elsewhere a {
-	text-decoration: none;
-    color: #ccc;
-    font-size: 1.2rem;
-	line-height: 1.5;
-    transition: 1s all ease-out;
-}
-
-.elsewhere a:hover {
-    color: #000;
+		&:hover {
+			color: #000;
+		}
+	}
 }
