@@ -6,7 +6,7 @@ const Elsewhere = () => {
 		{ txt: 'htmlstack', url: 'http://www.htmlstack.com' },
 		{ txt: 'JavascriptOO', url: 'http://www.javascriptoo.com' },
 		{ txt: 'FillText', url: 'http://www.filltext.com' },
-		{ txt: 'React Loop', url: 'https://reactloop.com/about' }
+		{ txt: 'React Loop', url: 'https://2019.reactloop.com/about' }
 	];
 	return (
 		<div className="elsewhere flex flex-column justify-center items-center courier">
