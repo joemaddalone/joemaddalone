@@ -4,7 +4,6 @@ const Elsewhere = () => {
 	const wheres = [
 		{ txt: 'egghead.io', url: 'http://www.egghead.io/instructors/joe-maddalone' },
 		{ txt: 'htmlstack', url: 'http://www.htmlstack.com' },
-		{ txt: 'JavascriptOO', url: 'http://www.javascriptoo.com' },
 		{ txt: 'FillText', url: 'http://www.filltext.com' },
 		{ txt: 'React Loop', url: 'https://2019.reactloop.com/about' }
 	];
