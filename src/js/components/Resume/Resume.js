@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
-import data from "./resume-data";
-import "./resume.css";
-import icons from "../icons";
+import data from './resume-data';
+import './resume.css';
+import icons from '../icons';
 import avatar from './avatar.jpg';
 
-const SideBar = ({skills, personal})  => (
+const SideBar = ({ skills, personal }) => (
 	<aside className="sidebar">
 		<section className="social-links">
 			<h1>Get to to know me.</h1>
@@ -34,7 +34,7 @@ const SideBar = ({skills, personal})  => (
 		</section>
 		<section>
 			<h1>Skills.</h1>
-			{skills.join(", ")}
+			{skills.join(', ')}
 		</section>
 		<section className="personal">
 			<h1>Personal projects.</h1>
@@ -55,10 +55,9 @@ const SideBar = ({skills, personal})  => (
 );
 
 SideBar.propTypes = {
-  personal: PropTypes.array,
-  skills: PropTypes.array
+	personal: PropTypes.array,
+	skills: PropTypes.array
 };
-
 
 const Job = ({ title, to, from, company, highlights }) => (
 	<article>
@@ -79,11 +78,11 @@ const Job = ({ title, to, from, company, highlights }) => (
 );
 
 Job.propTypes = {
-  title: PropTypes.string,
-  to: PropTypes.string,
-  from: PropTypes.string,
-  company: PropTypes.string,
-  highlights: PropTypes.array
+	title: PropTypes.string,
+	to: PropTypes.string,
+	from: PropTypes.string,
+	company: PropTypes.string,
+	highlights: PropTypes.array
 };
 
 const Resume = () => {
@@ -95,9 +94,8 @@ const Resume = () => {
 					<span className="thin">Maddalone</span>
 				</h1>
 				<summary>
-					Currently focused on JavaScript, but experienced in all aspects of web
-					development including front and back end, cloud environments, CI/CD,
-					and Agile methodologies.
+					Currently focused on JavaScript, but experienced in all aspects of web development including front
+					and back end, cloud environments, CI/CD, and Agile methodologies.
 				</summary>
 				<aside>
 					<div>
@@ -105,10 +103,7 @@ const Resume = () => {
 						<p>
 							tel: +1 773-593-9645
 							<br />
-							email:{" "}
-							<a href="mailto:joe.maddalone@gmail.com">
-								joe.maddalone@gmail.com
-							</a>
+							email: <a href="mailto:joe.maddalone@gmail.com">joe.maddalone@gmail.com</a>
 							<br />
 							web: <a href="http://joemaddalone.com">joemaddalone.com</a>
 						</p>
@@ -121,7 +116,7 @@ const Resume = () => {
 					<Job key={i} {...d} />
 				))}
 			</section>
-			<a className="pdf-link" href="./Joe-Maddalone-April-2019.pdf">
+			<a className="pdf-link" href="./Joe-Maddalone-April2021.pdf">
 				.pdf
 			</a>
 		</main>
