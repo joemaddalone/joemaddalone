@@ -1,6 +1,24 @@
 const data = {
 	work: [
 		{
+			company: 'LogDNA',
+			title: 'Senior Software Engineer IV',
+			from: '08/2019',
+			to: 'present',
+			highlights: ['Redis, Mongo', 'Vue, Vuex']
+		},
+		{
+			company: 'Datacoral',
+			title: 'Senior Software Engineer',
+			from: '06/2019',
+			to: '08/2020',
+			highlights: [
+				'Leading a team of software engineers.',
+				'Turning data engineering into a point and click process.',
+				'ES2018+, React, Redux'
+			]
+		},
+		{
 			company: 'CloudBees',
 			title: 'Senior Software Engineer / Tech Lead',
 			from: '06/2017',
@@ -119,7 +137,7 @@ const data = {
 	personal: [
 		{
 			title: 'React Loop',
-			url: 'https://reactloop.com',
+			url: 'https://reactloop.com/about',
 			description: 'Primary organizer of React Loop conference.'
 		},
 		{
@@ -131,6 +149,11 @@ const data = {
 			title: 'egghead.io',
 			url: 'http://egghead.io/instructors/joe-maddalone',
 			description: 'Teaching the latest in web technologies'
+		},
+		{
+			title: 'react-svg-path',
+			url: 'https://joemaddalone.github.io/react-svg-path',
+			description: 'An advanced path rendering system in React.'
 		},
 		{
 			title: 'htmlstack',

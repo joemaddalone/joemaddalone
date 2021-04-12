@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Spring } from 'react-spring/renderprops';
-import Path from '../svg/Path';
+import { useSpring, animated } from 'react-spring';
+import { Svg, Square } from 'react-svg-path';
 import './Control.css';
 
 const LinkComponent = ({ url, children, type, interaction }) => {
@@ -11,7 +11,11 @@ const LinkComponent = ({ url, children, type, interaction }) => {
 		onMouseOver: interaction,
 		onFocus: interaction
 	};
-	return React.createElement(ext ? 'a' : Link, ext ? { href: url, target: '_blank', ...activate } : { to: url, ...activate}, children);
+	return React.createElement(
+		ext ? 'a' : Link,
+		ext ? { href: url, target: '_blank', ...activate } : { to: url, ...activate },
+		children
+	);
 };
 
 LinkComponent.propTypes = {
@@ -23,20 +27,16 @@ LinkComponent.propTypes = {
 
 const Control = ({ control, setStr, active }) => {
 	const [activated, setActivated] = useState(0);
+	const strokeProps = useSpring({
+		config: { duration: active ? 600 : 250 },
+		to: { x: active ? 0 : 360 },
+		from: { x: active ? 360 : 0 },
+		onChange(values) {
+			applyAnimatedValues(ref.current, values);
+		}
+	});
 	const svgSize = 60;
-	const size = 45;
 	const center = svgSize / 2;
-	const x = center - size / 2;
-	const y = x;
-	const path = new Path()
-		.moveTo(x, y)
-		.lineTo(x + size, y)
-		.lineTo(x + size, y + size)
-		.lineTo(x, y + size)
-		.lineTo(x, y);
-
-	path.attr('stroke', control.color);
-
 	const activate = () => {
 		setStr(control);
 		setActivated(activated + 1);
@@ -44,21 +44,16 @@ const Control = ({ control, setStr, active }) => {
 
 	return (
 		<LinkComponent type={control.type} url={control.url} interaction={activate}>
-			<svg width={svgSize} height={svgSize} className="flourish" style={{pointerEvents: 'none'}}>
+			<Svg width={svgSize} height={svgSize} className="flourish" style={{ pointerEvents: 'none' }}>
 				{activated > 0 && (
-					<g id="control-box">
-						<Spring
-							config={{ duration: active ? 600 : 250 }}
-							from={{ x: active ? 360 : 0 }}
-							to={{ x: active ? 0 : 360 }}>
-							{({ x }) => <path d={path.toString()} stroke={control.color} strokeDashoffset={x} />}
-						</Spring>
-					</g>
+					<animated.g id="control-box" strokeDashoffset={strokeProps.x}>
+						<Square cx={center} cy={center} size={45} stroke={control.color} />
+					</animated.g>
 				)}
 				<g transform="translate(19, 19)">
 					<path className="icon" d={control.icon} fill={active ? control.color : '#222'} />
 				</g>
-			</svg>
+			</Svg>
 		</LinkComponent>
 	);
 };
