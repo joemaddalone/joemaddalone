@@ -6,7 +6,7 @@
 	"scripts": {
 		"precommit": "pretty-quick --staged",
 		"prettier": "prettier --write 'src/**/*.{js,jsx,less,css}'",
-		"predeploy": "npm run build",
+		"predeploy": "npm run build:prod",
 		"deploy": "gh-pages -d dist",
 		"serve": "cd dist; live-server",
 		"build:prod": "node build/prod.js",
