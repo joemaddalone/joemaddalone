@@ -20,10 +20,10 @@ const Social = ({ transition, cx, cy, controls }) => {
 };
 
 Social.propTypes = {
-	transition: PropTypes.func.isRequired,
-	cx: PropTypes.number.isRequired,
-	cy: PropTypes.number.isRequired,
-	controls: PropTypes.array.isRequired,
+	transition: PropTypes.func,
+	cx: PropTypes.number,
+	cy: PropTypes.number,
+	controls: PropTypes.array,
 };
 
 export default Social;
