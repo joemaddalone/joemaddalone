@@ -5,7 +5,7 @@ const postCssNesting = require('postcss-nesting');
 
 module.exports = {
   bundle: true,
-  entryPoints: [path.resolve(root, "./src/js/index.js")],
+  entryPoints: [path.resolve(root, "./src/index.js")],
   outfile: path.resolve(root, "./dist/index.js"),
   loader: {
     ".js": "jsx",
