@@ -1,0 +1,100 @@
+/* ../../../../var/folders/r7/f_hd_cfd3cv10rp5w3y7wr780000gn/T/tmp-61799-94qKHyeuaTBT/joemaddalone/src/components/launcher/launcher.css */
+body {
+  overflow-x: hidden;
+}
+.launcher {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+}
+.flourish {
+  cursor: pointer;
+}
+.control-box path {
+  opacity: 0.5;
+  stroke-width: 2;
+  stroke-dasharray: 360;
+  pointer-events: bounding-box;
+}
+.control-box.link path {
+  stroke-width: 18;
+  opacity: 0.6;
+}
+.control-box.link path.highlighter {
+  pointer-events: none;
+}
+.control-box-banner path {
+  opacity: 0.5;
+  stroke-width: 2;
+  pointer-events: bounding-box;
+}
+.control-box-banner path.flag {
+  opacity: 1;
+  stroke: none;
+}
+.flourish use,
+.flourish text {
+  stroke: transparent;
+  transition: fill 500ms ease-in;
+  pointer-events: none;
+}
+path:focus {
+  outline: none;
+}
+text {
+  font-family:
+    courier,
+    courier new,
+    serif;
+  font-size: 95%;
+}
+text.big {
+  font-weight: bold;
+  font-size: 160%;
+}
+text.medium {
+  font-size: 130%;
+}
+text.small {
+  font-weight: normal;
+  font-size: 90%;
+}
+text.middle {
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes _rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.atom {
+  transform-origin: center;
+  fill: transparent;
+}
+.ring {
+  transform-origin: center;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+._ring {
+  transform-origin: center;
+  animation-name: _rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
