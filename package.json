@@ -11,7 +11,9 @@
 		"serve": "cd dist; live-server",
 		"build:prod": "node build/prod.js",
 		"build:dev": "node build/dev.js",
-		"start": "stmux [ \"npm run build:dev\" : \"npm run serve\" ]"
+		"start": "stmux [ \"npm run build:dev\" : \"npm run serve\" : \"npm run blog:dev\" ]",
+		"blog:dev": "slinkity --serve --incremental",
+		"blog:prod": "slinkity"
 	},
 	"dependencies": {
 		"react": "^17.0.2",
@@ -22,6 +24,8 @@
 		"tachyons": "^4.12.0"
 	},
 	"devDependencies": {
+		"@11ty/eleventy": "^1.0.0-beta.8",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3",
 		"@deanc/esbuild-plugin-postcss": "^1.0.1",
 		"babel-eslint": "^10.1.0",
 		"esbuild": "^0.11.12",
@@ -40,6 +44,7 @@
 		"prettier": "^2.2.1",
 		"pretty-quick": "^3.1.0",
 		"prop-types": "^15.7.2",
+		"slinkity": "^0.4.1",
 		"stmux": "^1.8.1"
 	}
 }

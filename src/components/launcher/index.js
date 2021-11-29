@@ -72,6 +72,8 @@ function Launcher() {
 	// 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	// }, [showLoader]);
 
+	
+
 	return (
 		<div className="launcher" style={{ minHeight }}>
 			<Svg width={size.width} height={height} scale style={{ minHeight }}>
