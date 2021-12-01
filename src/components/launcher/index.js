@@ -64,7 +64,6 @@ function Launcher() {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [showLoader]);
 
-
 	React.useEffect(() => {
 		if (transition) {
 			setTransition(false);
@@ -74,7 +73,6 @@ function Launcher() {
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
-
 
 	return (
 		<div className="launcher" style={{ minHeight }}>
