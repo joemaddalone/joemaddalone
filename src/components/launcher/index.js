@@ -1,8 +1,8 @@
 import React from 'react';
 import { Svg, Rect, Text, MarkerTriangle } from 'react-svg-path';
 import Social from './Social';
-import Transition from './Transition';
-import Atom from './Atom';
+// import Transition from './Transition';
+// import Atom from './Atom';
 import Links from './Links';
 import useWindowSize from './useWindowSize';
 import icons from './icons';
@@ -49,30 +49,28 @@ const socialLinks = [
 
 function Launcher() {
 	const initBgc = '#eee';
-	const [transition, setTransition] = React.useState(null);
-	const [showLoader, setShowLoader] = React.useState(false);
+	// const [transition, setTransition] = React.useState(null);
+	// const [showLoader, setShowLoader] = React.useState(false);
 	const size = useWindowSize();
 	const minHeight = 350;
 	const height = Math.max(size.height, minHeight);
 
-	React.useEffect(() => {
-		if (showLoader) {
-			setTimeout(() => {
-				window.location.href = transition.url;
-			}, 400);
-		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [showLoader]);
+	const setTransition = (t) => (window.location.href = t.url);
 
-	React.useEffect(() => {
-		if (transition) {
-			setTransition(false);
-		}
-		if (showLoader) {
-			setShowLoader(false);
-		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	// React.useEffect(() => {
+	// 	if (showLoader) {
+	// 		setTimeout(() => {
+	// 			window.location.href = transition.url;
+	// 			setTransition(false);
+	// 		setShowLoader(false);
+	// 		}, 400);
+	// 	}
+	// 	return () => {
+	// 		setTransition(false);
+	// 		setShowLoader(false);
+	// 	};
+	// 	// eslint-disable-next-line react-hooks/exhaustive-deps
+	// }, [showLoader]);
 
 	return (
 		<div className="launcher" style={{ minHeight }}>
@@ -93,11 +91,11 @@ function Launcher() {
 					</Text>
 
 					<Links oy={30} transition={setTransition} />
-					{transition ? (
+					{/* {transition ? (
 						<Transition width={size.width} color={transition.color} completed={() => setShowLoader(true)} />
 					) : null}
 
-					{showLoader ? <Atom color={transition.color} /> : null}
+					{showLoader ? <Atom color={transition.color} /> : null} */}
 				</Rect>
 			</Svg>
 		</div>
