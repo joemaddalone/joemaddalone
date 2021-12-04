@@ -4,6 +4,11 @@ import { Text, Group, Rect, Line } from "react-svg-path";
 import { useSprings, animated } from "react-spring";
 
 const wheres = [
+	{
+    color: "#9b7ede",
+    txt: "I write sometimes",
+    url: "/writes",
+  },
   {
     color: "#9b7ede",
     txt: "egghead.io",

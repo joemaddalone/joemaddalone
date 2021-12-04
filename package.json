@@ -6,25 +6,22 @@
 	"scripts": {
 		"precommit": "pretty-quick --staged",
 		"prettier": "prettier --write 'src/**/*.{js,jsx,less,css}'",
-		"predeploy": "npm run build:prod",
+		"predeploy": "npm run build",
 		"deploy": "gh-pages -d dist",
-		"serve": "cd dist; live-server",
-		"build:prod": "node build/prod.js",
-		"build:dev": "node build/dev.js",
-		"start": "stmux [ \"npm run build:dev\" : \"npm run serve\" ]"
+		"start": "slinkity --serve",
+		"build": "slinkity"
 	},
 	"dependencies": {
+		"luxon": "^2.1.1",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
-		"react-router-dom": "^6.0.2",
 		"react-spring": "^9.3.2",
-		"react-svg-path": "^1.13.2",
-		"tachyons": "^4.12.0"
+		"react-svg-path": "^1.13.2"
 	},
 	"devDependencies": {
-		"@deanc/esbuild-plugin-postcss": "^1.0.1",
+		"@11ty/eleventy": "^1.0.0-beta.8",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3",
 		"babel-eslint": "^10.1.0",
-		"esbuild": "^0.11.12",
 		"eslint": "^7.24.0",
 		"eslint-config-prettier": "^8.2.0",
 		"eslint-config-react-app": "^6.0.0",
@@ -34,12 +31,9 @@
 		"eslint-plugin-react-hooks": "^4.2.0",
 		"gh-pages": "^3.1.0",
 		"husky": "^6.0.0",
-		"live-server": "^1.2.1",
-		"postcss-nesting": "^7.0.1",
-		"postcss-preset-env": "^6.7.0",
 		"prettier": "^2.2.1",
 		"pretty-quick": "^3.1.0",
 		"prop-types": "^15.7.2",
-		"stmux": "^1.8.1"
+		"slinkity": "^0.4.1"
 	}
 }
