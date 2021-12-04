@@ -51,9 +51,9 @@ function Launcher() {
 	const initBgc = '#eee';
 	// const [transition, setTransition] = React.useState(null);
 	// const [showLoader, setShowLoader] = React.useState(false);
-	const size = useWindowSize();
-	const minHeight = 350;
-	const height = Math.max(size.height, minHeight);
+	// const size = useWindowSize();
+	// const minHeight = 350;
+	// const height = Math.max(size.height, minHeight);
 
 	const setTransition = (t) => (window.location.href = t.url);
 
@@ -72,18 +72,21 @@ function Launcher() {
 	// 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	// }, [showLoader]);
 
-	
+	const size = {
+		width: 400,
+		height: 500,
+	};
 
 	return (
-		<div className="launcher" style={{ minHeight }}>
-			<Svg width={size.width} height={height} scale style={{ minHeight }}>
+		<div className="launcher"  style={{minHeight: size.height}}>
+			<Svg width={size.width} height={size.height}>
 				<defs>
 					{socialLinks.map((control) => {
 						return <path id={control.id} key={control.id} d={control.icon} className="icon" />;
 					})}
 				</defs>
 				<MarkerTriangle id="marker-explain-start" size={10} color="#999" />
-				<Rect width={size.width} height={height} fill={initBgc} className="container">
+				<Rect width={size.width} height={size.height} fill={initBgc} className="container">
 					<Text ox={12} oy={-150} className="big middle">
 						Hi, I'm Joe Maddalone
 					</Text>

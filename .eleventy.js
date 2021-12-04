@@ -17,5 +17,6 @@ module.exports = function (eleventyConfig) {
 			output: 'dist/writes',
 		},
 		htmlTemplateEngine: 'njk',
+		pathPrefix: "/writes/"
 	};
 };
