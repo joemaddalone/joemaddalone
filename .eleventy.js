@@ -1,23 +1,20 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const { DateTime } = require("luxon");
+const { DateTime } = require('luxon');
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(syntaxHighlight);
-	eleventyConfig.addFilter('readableDate', (dateObj) => {
-		return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('LLL dd yyyy');
+
+	eleventyConfig.addShortcode('youtube', (id) => {
+		return `<iframe class="yt-embed" src="https://www.youtube-nocookie.com/embed/${id}" frameborder="0" allowfullscreen></iframe>`;
 	});
 
-	// https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-	eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-		return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
-	});
-
-	eleventyConfig.addPassthroughCopy("src/assets");
+	eleventyConfig.addPassthroughCopy('src/assets');
+	eleventyConfig.addPassthroughCopy('CNAME');
 	return {
 		dir: {
 			input: 'src',
-			output: '_dry',
+			output: 'dist',
 		},
-		htmlTemplateEngine: 'njk'
+		htmlTemplateEngine: 'njk',
 	};
 };

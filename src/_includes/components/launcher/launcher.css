@@ -1,11 +1,9 @@
-body {
+body, html {
   background-color: #eee;
 }
 
 .launcher {
 	display: flex;
-	width: 100vw;
-	height: 100vh;
 	justify-content: center;
 	align-items: center;
 }

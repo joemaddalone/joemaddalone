@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" >
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width,initial-scale=1" >
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png" >
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png" >
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-icon-72x72.png" >
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-icon-76x76.png" >
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-icon-114x114.png" >
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-icon-120x120.png" >
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-icon-144x144.png" >
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png" >
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png" >
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/android-icon-192x192.png" >
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" >
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png" >
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" >
+        <meta name="msapplication-TileColor" content="#ffffff" >
+        <meta name="msapplication-TileImage" content="/assets/ms-icon-144x144.png" >
+        <meta name="theme-color" content="#ffffff" >
         <link             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css"
             integrity="sha512-d0v474klOFSF7qD9WDvyRxAvXaWSxCHDZdnBSZQjo8BpVr6vpjwAgqetpqkKP38DzlOzdVPaLVnzzW1Ba8wB9w=="
@@ -11,19 +26,25 @@
         >
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" >
         <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet" >
-        
+        <link rel="stylesheet" href="/@includes/index.css" >
         <title>joe writes</title>
-      <link rel="stylesheet" href="/assets/index.2cfb3dee.css">
     </head>
     <body>
-        <header>
-            <b>I write stuff. sometimes.</b>
+        <header class="flex items-center justify-between bb">
+            <b><a href="/writes/">I write stuff. sometimes.</a></b>
+            <a href="/">
+                <img src="/assets/favicon-32x32.png" width="32" height="32" alt="">
+            </a>
         </header>
-        <div class="standard-article"><ul class="postlist"><li class="postlist-item">
-    <time class="postlist-date" datetime="2020-11-29">Nov 29 2020</time>
-    <a href="/2020/the-long-goodbye-to-commonjs/" class="postlist-link">The long goodbye to CommonJS</a>
-    <p>With the advent of HTTP2, ES Modules, and other technologies the future of web developnent is ripe for major shifts.</p>
+        <main class="standard-article"><ul class="postlist mt2">
+<li class="postlist-item">
+    <a href="/2021/rethinking-the-developer-career-path/" class="postlist-link">Rethinking the Developer Career Path</a>
+    <p><i>A really interesting perspective on this age old problem.</i></p>
+  </li><li class="postlist-item">
+    <a href="/2021/the-long-goodbye-to-commonjs/" class="postlist-link">The Long Goodbye to CommonJS</a>
+    <p><i>With the advent of HTTP/2, ES Modules, and other technologies the future of web development is ripe for major shifts.</i></p>
   </li></ul>
-</div>
-    <style></style></body>
+</main>
+        <footer>Joe Maddalone</footer>
+    </body>
 </html>
