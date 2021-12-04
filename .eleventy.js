@@ -11,12 +11,13 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter('htmlDateString', (dateObj) => {
 		return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
 	});
+
+	eleventyConfig.addPassthroughCopy("src/assets");
 	return {
 		dir: {
-			input: 'src/writes',
-			output: 'dist/writes',
+			input: 'src',
+			output: '_dry',
 		},
-		htmlTemplateEngine: 'njk',
-		pathPrefix: "/writes/"
+		htmlTemplateEngine: 'njk'
 	};
 };
