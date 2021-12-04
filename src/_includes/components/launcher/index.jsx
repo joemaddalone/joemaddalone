@@ -1,4 +1,4 @@
-import React, { createFactory } from 'react';
+import React from 'react';
 import { Svg, Rect, Text, MarkerTriangle } from 'react-svg-path';
 import Social from './Social';
 import Links from './Links';
