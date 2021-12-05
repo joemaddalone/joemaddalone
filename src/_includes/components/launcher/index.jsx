@@ -45,7 +45,6 @@ const socialLinks = [
 ];
 
 function Launcher() {
-	const setTransition = (t) => window.location.href = t.url;
 	const initBgc = '#eee';
 	const size = {
 		width: 400,
@@ -65,12 +64,12 @@ function Launcher() {
 					<Text ox={12} oy={-150} className="big middle">
 						Hi, I'm Joe Maddalone
 					</Text>
-					<Social oy={-100} controls={socialLinks} transition={setTransition} />
+					<Social oy={-100} controls={socialLinks} />
 					<Text fill="#999" oy={0} className="medium middle">
 						other stuff
 					</Text>
 
-					<Links oy={30} transition={setTransition} />
+					<Links oy={30} />
 				</Rect>
 			</Svg>
 		</div>

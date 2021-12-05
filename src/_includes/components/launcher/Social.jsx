@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SocialButton from './SocialButton';
 
-const Social = ({ transition, cx, cy, controls }) => {
+const Social = ({ cx, cy, controls }) => {
 	const offset = (controls.length - 1) * 30;
 	return controls.map((control, index) => {
 		return (
@@ -10,7 +10,6 @@ const Social = ({ transition, cx, cy, controls }) => {
 				offset={offset}
 				cx={cx}
 				cy={cy}
-				transition={transition}
 				ox={index * 30}
 				key={control.id}
 				control={control}
@@ -20,7 +19,6 @@ const Social = ({ transition, cx, cy, controls }) => {
 };
 
 Social.propTypes = {
-	transition: PropTypes.func,
 	cx: PropTypes.number,
 	cy: PropTypes.number,
 	controls: PropTypes.array,
