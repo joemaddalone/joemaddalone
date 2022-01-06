@@ -74,3 +74,59 @@ ctx.stroke(p);
 	const p1 = new Path2D(new Path().triangle(70, 150, 50).toString());
 	ctx2.stroke(p1);
 </script>
+
+And with that we're off to the races. This next part is a bit ["draw the rest of the fucking owl"](https://www.reddit.com/r/restofthefuckingowl/)
+
+<canvas width="300" height="80" id="ex4" style="background: white;"></canvas>
+
+```js
+import Path from "@joemaddalone/path";
+let cx = 0;
+let cy = 0;
+let moveX = 1;
+let moveY = 1;
+const size = 20
+const halfSize = size/2;
+const c = document.getElementById("canvas");
+const ctx = c.getContext('2d');
+const { x, y } = c.getBoundingClientRect();
+const outOfBounds = (pos, end) => pos + size > end || pos < 0;
+
+const update = () => {
+	ctx.clearRect(0, 0, c.width, c.height);
+	moveY = outOfBounds(cy + moveY, c.height) ? -moveY : moveY
+	moveX = outOfBounds(cx + moveX, c.width) ? -moveX : moveX
+	cx += moveX;
+	cy += moveY;
+	const sq = new Path().square(size, cx + halfSize, cy + halfSize)
+	ctx.stroke(new Path2D(sq.toString()));
+	requestAnimationFrame(update);
+}
+update();
+```
+
+<script type="module">
+	import Path from "@joemaddalone/path";
+	let cx = 0;
+	let cy = 0;
+	let movex = 1;
+	let movey = 1;
+	const size = 20
+	const halfSize = size/2;
+	const c = document.getElementById("ex4");
+	const ctx = c.getContext('2d');
+	const { x, y } = c.getBoundingClientRect();
+	const outOfBounds = (pos, end) => pos + size > end || pos < 0;
+
+	const update = () => {
+		ctx.clearRect(0, 0, c.width, c.height);
+		movey = outOfBounds(cy + movey, c.height) ? -movey : movey
+		movex = outOfBounds(cx + movex, c.width) ? -movex : movex
+		cx += movex;
+		cy += movey;
+		const sq = new Path().square(size, cx + halfSize, cy + halfSize).toString()
+		ctx.stroke(new Path2D(sq));
+		requestAnimationFrame(update);
+	}
+	update();
+</script>
