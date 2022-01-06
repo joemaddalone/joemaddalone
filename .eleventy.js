@@ -24,6 +24,11 @@ module.exports = function (eleventyConfig) {
 		return content;
 	});
 
+	eleventyConfig.addCollection('published', function (collectionApi) {
+		const now = new Date();
+		return collectionApi.getFilteredByTag('posts').filter((post) => !post.data.tags.includes('draft'));
+	});
+
 	return {
 		dir: {
 			input: 'src',

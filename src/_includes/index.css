@@ -126,11 +126,11 @@ footer {
 	display: flex;
 	flex-direction: column;
 	list-style-type: none;
-	margin-top: 45px;
+	margin-top: 15px;
 }
 
 .postlist .postlist-item .postlist-link {
-	font-size: 1.5rem;
+	/* font-size: 1.5rem; */
 }
 
 .postlist .postlist-item .postlist-date {
