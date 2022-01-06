@@ -4,6 +4,7 @@ layout: layout
 date: 2021-12-04
 tags: ['post']
 summary: 'A really interesting perspective on this age old problem.'
+permalink: "/{{ title | slugify }}/"
 ---
 
 # {{ title }}

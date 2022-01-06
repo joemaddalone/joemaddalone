@@ -4,6 +4,7 @@ layout: layout
 date: 2021-11-29
 tags: ['post']
 summary: 'With the advent of HTTP/2, ES Modules, and other technologies the future of web development is ripe for major shifts.'
+permalink: "/{{ title | slugify }}/"
 ---
 
 # The long goodbye to CommonJS.
