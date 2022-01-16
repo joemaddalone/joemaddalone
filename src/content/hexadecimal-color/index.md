@@ -4,12 +4,10 @@ layout: layout
 date: 2022-01-16
 tags: ['post']
 summary: 'How hexadecimal color works.'
-permalink: "/{{ title | slugify }}/"
+permalink: '/{{ title | slugify }}/'
 ---
 
 # {{ title }}
-
-*P.S.  This is not a blog, this page is not complete yet.*
 
 I suppose I just never really thought about it much and left the hexing of colors to designer witchcraft not meant for the likes of this poor programmer-minded plebe to understand, but it turns out these friggin' designer-types have been programming all along.
 
@@ -17,86 +15,174 @@ I suppose I just never really thought about it much and left the hexing of color
 
 ### Hexadecimal is fancy speaking for Base 16
 
-As mere mortals we use a Base 10 counting system.  It consists of numerals from 0 to 9.  It goes like this:
+As mere mortals we use a Base 10 counting system. It consists of numerals from 0 to 9. It goes like this:
 
 ```js
-0  = 0  // 0 ones           = 00
-1  = 1  // 1 one            = 01
-2  = 2  // 2 ones           = 02
-3  = 3  // 3 ones           = 03
-4  = 4  // 4 ones           = 04
-5  = 5  // 5 ones           = 05 (50% between 0 and 10)
-6  = 6  // 6 ones           = 06
-7  = 7  // 7 ones           = 07
-8  = 8  // 8 ones           = 08
-9  = 9  // 9 ones           = 09
-10 = 10 // 1 ten and 0 ones = 10
-11 = 11 // 1 ten and 1 one  = 11
+0 = 0; // 0 ones           = 00
+1 = 1; // 1 one            = 01
+2 = 2; // 2 ones           = 02
+3 = 3; // 3 ones           = 03
+4 = 4; // 4 ones           = 04
+5 = 5; // 5 ones           = 05 (50% between 0 and 10)
+6 = 6; // 6 ones           = 06
+7 = 7; // 7 ones           = 07
+8 = 8; // 8 ones           = 08
+9 = 9; // 9 ones           = 09
+10 = 10; // 1 ten and 0 ones = 10
+11 = 11; // 1 ten and 1 one  = 11
 ```
 
-If we were working using a Base 6 counting system it would go like this:
+If we were working using a Base 6 counting system it would consist of numerals from 0 to 5 and look like this:
 
 ```js
-0  = 0  // 0 ones            = 00
-1  = 1  // 1 one             = 01
-2  = 2  // 2 ones            = 02
-3  = 3  // 3 ones            = 03 (50% between 0 and 10)
-4  = 4  // 4 ones            = 04
-5  = 5  // 5 ones            = 05
-10 = 6  // 1 six and 0 one   = 06
-11 = 7  // 1 six and 1 one   = 07
-12 = 8  // 1 six and 2 ones  = 08
-13 = 9  // 1 six and 3 ones  = 09
-14 = 10 // 1 six and 4 ones  = 10
-15 = 11 // 1 six and 5 ones  = 11
+0 = 0; // 0 ones            = 00
+1 = 1; // 1 one             = 01
+2 = 2; // 2 ones            = 02
+3 = 3; // 3 ones            = 03 (50% between 0 and 10)
+4 = 4; // 4 ones            = 04
+5 = 5; // 5 ones            = 05
+10 = 6; // 1 six and 0 ones  = 06
+11 = 7; // 1 six and 1 one   = 07
+12 = 8; // 1 six and 2 ones  = 08
+13 = 9; // 1 six and 3 ones  = 09
+14 = 10; // 1 six and 4 ones  = 10
+15 = 11; // 1 six and 5 ones  = 11
 ```
 
-And in Hexadecimal, also known as Base 16?
+In Hexadecimal, also known as Base 16, we have use the numerals from 0 to 9 and then substitute letters for 10 to 15.
 
 ```js
-0  =  0  // 0 ones               = 00
-1  =  1  // 1 one                = 01
-2  =  2  // 2 ones               = 02
-3  =  3  // 3 ones               = 03
-4  =  4  // 4 ones               = 04
-5  =  5  // 5 ones               = 05
-6  =  6  // 6 ones               = 06
-7  =  7  // 7 ones               = 07
-8  =  8  // 8 ones               = 08 (50% between 0 and 10)
-9  =  9  // 9 ones               = 09
-A  =  10 // 10 ones              = 10 ("A", yep we just make it up)
-B  =  11 // 11 ones              = 11
-C  =  12 // 12 ones              = 12
-D  =  13 // 13 ones              = 13
-E  =  14 // 14 ones              = 14
-F  =  15 // 15 ones              = 15
-10 =  16 // 1 sixteen and 0 ones = 16
-11 =  17 // 1 sixteen and 1 one  = 17
+0 = 0; // 0 ones               = 00
+1 = 1; // 1 one                = 01
+2 = 2; // 2 ones               = 02
+3 = 3; // 3 ones               = 03
+4 = 4; // 4 ones               = 04
+5 = 5; // 5 ones               = 05
+6 = 6; // 6 ones               = 06
+7 = 7; // 7 ones               = 07
+8 = 8; // 8 ones               = 08 (50% between 0 and 10)
+9 = 9; // 9 ones               = 09
+A = 10; // 10 ones              = 10 ("A", yep we just make it up)
+B = 11; // 11 ones              = 11
+C = 12; // 12 ones              = 12
+D = 13; // 13 ones              = 13
+E = 14; // 14 ones              = 14
+F = 15; // 15 ones              = 15
+10 = 16; // 1 sixteen and 0 ones = 16
+11 = 17; // 1 sixteen and 1 one  = 17
 ```
 
-## Hex Colors are RGB.
+## Hex Colors represent RGB.
 
-Hex color is a representation of RGB colors.  RGB is Red, Green, and Blue.  Each color is represented as a lightness of the color in a two-character string.  `RRGGBB`.
+Hex color is a representation of RGB colors. RGB is Red, Green, and Blue and is used in virtually all light emitting technologies such as computer monitors. Each color is represented as a value between 0 and 255 where zero is fully off and 255 is fully on.
 
-## ...and whats with RGB?
+> The RGB color model is an additive color model in which the red, green, and blue primary colors of light are added together in various ways to reproduce a broad array of colors. The name of the model comes from the initials of the three additive primary colors, red, green, and blue. [https://en.wikipedia.org/wiki/RGB_color_model](https://en.wikipedia.org/wiki/RGB_color_model)
 
-I'm going to add more here.  This is not a blog.
+So how why is `#ff0000` <span style="color:#f00">red</span>? Hexadecimals colors can be notated as `RRGGBB` where each set of two characters represents the 0 to 255 value of the colors red (<span style="color:#f00">RR</span>), green, (<span style="color:#0f0">GG</span>), and blue (<span style="color:#00f">BB</span>).
 
+<table class="ui celled structured table">
+<thead>
+	<tr>
+		<th>Color</th>
+		<th>Value</th>
+		<th></th>
+		<th></th>
+		<th></th>
+		<th>Total</th>
+	</tr>
+</thead>
+<tr>
+	<td rowspan="2">
+		<div class="tc">RR</div>
+	</td>
+	<td rowspan="2">
+		<div class="tc">ff</div>
+	</td>
+	<td>f in the first or  sixteens position</td>
+	<td>15 * 16</td>
+	<td>240</td>
+	<td rowspan="2">240 + 15 = 255</td>
+</tr>
+<tr>
+	<td>f in the ones position</td>
+	<td>15 * 1</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td rowspan="2">
+		<div class="tc">GG</div>
+	</td>
+	<td rowspan="2">
+		<div class="tc">00</div>
+	</td>
+	<td>0 in the first or  sixteens position</td>
+	<td>0 * 16</td>
+	<td>0</td>
+	<td rowspan="2">0 + 0 = 0</td>
+</tr>
+<tr>
+	<td>0 in the ones position</td>
+	<td>0 * 1</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td rowspan="2">
+		<div class="tc">BB</div>
+	</td>
+	<td rowspan="2">
+		<div class="tc">00</div>
+	</td>
+	<td>0 in the first or  sixteens position</td>
+	<td>0 * 16</td>
+	<td>0</td>
+	<td rowspan="2">0 + 0 = 0</td>
+</tr>
+<tr>
+	<td>0 in the ones position</td>
+	<td>0 * 1</td>
+	<td>0</td>
+</tr>
+</table>
 
-## Shorthand CSS.
-In CSS `f00` is expanded to `ff0000`.  When we use a 3-character shorthand each character is simply duplicated in place.  `f00` becomes `ff` (doubled `f`), followed by `00` (doubled `0`), followed by `00` (doubled `0`).  `f` = `ff`, followed by `0` = `00`, followed by `0` = `00`, becomes `ff0000`.
+Here the `RR` value is represented by `ff` which is equal to 255 or "fully on".  We have 255 for red and 0 for both green and blue and therefore we only see the red light. If we move that 255 (ff) value through each position we get the predictable result.
 
-## And RGBA?
+* `ff0000`: <span style="color:#f00">red</span>
+* `00ff00`: <span style="color:#0f0">green</span>
+* `0000ff`: <span style="color:#00f">blue</span>
 
-Alpha: #RRGGBBAA —- Alpha operated in the same domain as colors - 0 to 255.  So counting from 0 half of 255 is 128.
+## Shorthand CSS. Why is `#f00` also <span style="color:#f00">red</span>?
 
-128 = 80
-8 in the 16s spot, 0 in the 1s spot
+In CSS `f00` is expanded to `ff0000`. When we use a 3-character shorthand each character is simply duplicated in place. `f00` becomes `ff` (doubled `f`), followed by `00` (doubled `0`), followed by `00` (doubled `0`). `f` = `ff`, followed by `0` = `00`, followed by `0` = `00`, becomes `ff0000`.
 
-80 = 8*16 = 128.
+* `f00` -> `ff0000` -> <span style="color:#f00">red</span>
+* `0f0` -> `00ff00` -> <span style="color:#0f0">green</span>
+* `00f` -> `0000ff` -> <span style="color:#00f">blue</span>
 
-256 / 128 = 2 or 50%.
+## So what's with alphas values in hex colors?
 
-So #FF000080 = rgba(255,0,0, 0.5) = RED at 50% alpha
+Hexadecimal colors can also have an alpha value resulting in an 8 character string instead of six.  `#RRGGBBAA`.  The alpha value operates in the same domain as colors from 0 (00) to 255 (ff).
 
-and with short code we can say #f008 = #ff000088
+Here is a div with a background of blue at 255 alpha (ff).
+
+<div style="width:50px;height:50px;background-color: #0000ffff"></div>
+
+```html
+<div style="background-color: #0000fffff"></div>
+```
+
+And the same div with a background of blue at 136 alpha (88).
+
+<div style="width:50px;height:50px;background-color: #0000ff88"></div>
+
+```html
+<div style="background-color: #0000fff88"></div>
+```
+
+And now we can use 4 character shorthand.  `00f4` becomes `00 00 ff 44`
+
+<div style="width:50px;height:50px;background-color: #00f4"></div>
+
+```html
+<div style="background-color: #00f4"></div>
+```
+
