@@ -18,58 +18,58 @@ I suppose I just never really thought about it much and left the hexing of color
 As mere mortals we use a Base 10 counting system. It consists of numerals from 0 to 9. It goes like this:
 
 ```js
-0 = 0; // 0 ones           = 00
-1 = 1; // 1 one            = 01
-2 = 2; // 2 ones           = 02
-3 = 3; // 3 ones           = 03
-4 = 4; // 4 ones           = 04
-5 = 5; // 5 ones           = 05 (50% between 0 and 10)
-6 = 6; // 6 ones           = 06
-7 = 7; // 7 ones           = 07
-8 = 8; // 8 ones           = 08
-9 = 9; // 9 ones           = 09
-10 = 10; // 1 ten and 0 ones = 10
-11 = 11; // 1 ten and 1 one  = 11
+0 = 0 // 0 ones             = 00
+1 = 1 // 1 one              = 01
+2 = 2 // 2 ones             = 02
+3 = 3 // 3 ones             = 03
+4 = 4 // 4 ones             = 04
+5 = 5 // 5 ones             = 05
+6 = 6 // 6 ones             = 06
+7 = 7 // 7 ones             = 07
+8 = 8 // 8 ones             = 08
+9 = 9 // 9 ones             = 09
+10 = 10 // 1 ten and 0 ones = 10
+11 = 11 // 1 ten and 1 one  = 11
 ```
 
-If we were working using a Base 6 counting system it would consist of numerals from 0 to 5 and look like this:
+If we were working in Base 6 or heximal it would consist of numerals from 0 to 5 and look like this:
 
 ```js
-0 = 0; // 0 ones            = 00
-1 = 1; // 1 one             = 01
-2 = 2; // 2 ones            = 02
-3 = 3; // 3 ones            = 03 (50% between 0 and 10)
-4 = 4; // 4 ones            = 04
-5 = 5; // 5 ones            = 05
-10 = 6; // 1 six and 0 ones  = 06
-11 = 7; // 1 six and 1 one   = 07
-12 = 8; // 1 six and 2 ones  = 08
-13 = 9; // 1 six and 3 ones  = 09
-14 = 10; // 1 six and 4 ones  = 10
-15 = 11; // 1 six and 5 ones  = 11
+0 = 0 // 0 ones             = 00
+1 = 1 // 1 one              = 01
+2 = 2 // 2 ones             = 02
+3 = 3 // 3 ones             = 03
+4 = 4 // 4 ones             = 04
+5 = 5 // 5 ones             = 05
+10 = 6 // 1 six and 0 ones  = 06
+11 = 7 // 1 six and 1 one   = 07
+12 = 8 // 1 six and 2 ones  = 08
+13 = 9 // 1 six and 3 ones  = 09
+14 = 10 // 1 six and 4 ones = 10
+15 = 11 // 1 six and 5 ones = 11
 ```
 
-In Hexadecimal, also known as Base 16, we have use the numerals from 0 to 9 and then substitute letters for 10 to 15.
+In Hexadecimal, also known as Base 16, we use the numerals from 0 to 9 and then substitute letters for 10 to 15.
 
 ```js
-0 = 0; // 0 ones               = 00
-1 = 1; // 1 one                = 01
-2 = 2; // 2 ones               = 02
-3 = 3; // 3 ones               = 03
-4 = 4; // 4 ones               = 04
-5 = 5; // 5 ones               = 05
-6 = 6; // 6 ones               = 06
-7 = 7; // 7 ones               = 07
-8 = 8; // 8 ones               = 08 (50% between 0 and 10)
-9 = 9; // 9 ones               = 09
-A = 10; // 10 ones              = 10 ("A", yep we just make it up)
-B = 11; // 11 ones              = 11
-C = 12; // 12 ones              = 12
-D = 13; // 13 ones              = 13
-E = 14; // 14 ones              = 14
-F = 15; // 15 ones              = 15
-10 = 16; // 1 sixteen and 0 ones = 16
-11 = 17; // 1 sixteen and 1 one  = 17
+0 = 0 // 0 ones                 = 00
+1 = 1 // 1 one                  = 01
+2 = 2 // 2 ones                 = 02
+3 = 3 // 3 ones                 = 03
+4 = 4 // 4 ones                 = 04
+5 = 5 // 5 ones                 = 05
+6 = 6 // 6 ones                 = 06
+7 = 7 // 7 ones                 = 07
+8 = 8 // 8 ones                 = 08
+9 = 9 // 9 ones                 = 09
+A = 10 // 10 ones               = 10
+B = 11 // 11 ones               = 11
+C = 12 // 12 ones               = 12
+D = 13 // 13 ones               = 13
+E = 14 // 14 ones               = 14
+F = 15 // 15 ones               = 15
+10 = 16 // 1 sixteen and 0 ones = 16
+11 = 17 // 1 sixteen and 1 one  = 17
 ```
 
 ## Hex Colors represent RGB.
@@ -80,7 +80,9 @@ Hex color is a representation of RGB colors. RGB is Red, Green, and Blue and is 
 
 So how why is `#ff0000` <span style="color:#f00">red</span>? Hexadecimals colors can be notated as `RRGGBB` where each set of two characters represents the 0 to 255 value of the colors red (<span style="color:#f00">RR</span>), green, (<span style="color:#0f0">GG</span>), and blue (<span style="color:#00f">BB</span>).
 
-<table class="ui celled structured table">
+{% react 'components/hexadecimal/red' %}
+<!--
+<table class="ui celled single line structured compact table">
 <thead>
 	<tr>
 		<th>Color</th>
@@ -142,7 +144,7 @@ So how why is `#ff0000` <span style="color:#f00">red</span>? Hexadecimals colors
 	<td>0 * 1</td>
 	<td>0</td>
 </tr>
-</table>
+</table> -->
 
 Here the `RR` value is represented by `ff` which is equal to 255 or "fully on".  We have 255 for red and 0 for both green and blue and therefore we only see the red light. If we move that 255 (ff) value through each position we get the predictable result.
 
