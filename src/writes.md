@@ -8,7 +8,7 @@ layout: layout
 {% assign posts = collections.post | reverse %}
 {%- for post in posts -%}
 <li class="postlist-item">
-    <span><a href="{{ post.url }}" class="postlist-link">{{ post.data.title }}</a> : {{post.data.summary}}</span>
+    <span><a href="{{ post.url }}" class="postlist-link">{{ post.data.title }}</a> : {{post.data.excerpt}}</span>
   </li>
 {%- endfor -%}
 </ul>
