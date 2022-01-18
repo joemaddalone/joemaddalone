@@ -19,6 +19,7 @@
 }
 
 .hexadecimal-red-diagram text {
+	font-size: 250%;
 	font-weight: 700;
 	fill: #222;
 }

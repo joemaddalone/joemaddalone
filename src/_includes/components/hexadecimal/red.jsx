@@ -13,23 +13,25 @@ const createDag = () => {
         rankdir: 'TB',
         marginx: 10,
         marginy: 10,
-        nodesep: 35,
+        nodesep: 100,
         ranksep: 50,
     });
     g.setDefaultEdgeLabel(() => ({}));
 
-    const labelNode = { width: 100, height: 50 };
-    const descriptionNode = { width: 160, height: 80 };
+    const labelNode = { width: 100, height: 80 };
+    const descriptionNode = { width: 215, height: 80 };
 
-    g.setNode('root', { label: 'ff 00 00', width: 400, height: 80 });
-    g.setNode('answer', { label: 'red=255, green=0, blue=0', width: 400, height: 80 });
+    // g.setNode('root', { label: 'ff 00 00', width: 150, height: 80 });
+    g.setNode('ranswer', { label: 'red=255', width: 200, height: 80 });
+    g.setNode('ganswer', { label: 'green=0', width: 200, height: 80 });
+    g.setNode('banswer', { label: 'blue=0', width: 200, height: 80 });
 
     g.setNode('rr', { id: 'rr', label: 'ff', ...labelNode });
     g.setNode('r0', { id: 'rr', label: 'f', ...labelNode });
     g.setNode('r1', { id: 'rr', label: 'f', ...labelNode });
     g.setNode('r0m', { label: '15 x 16', ...descriptionNode });
     g.setNode('r1m', { label: '15 x 1', ...descriptionNode });
-    g.setNode('ra', { label: '240 + 15 = 255', ...descriptionNode });
+    g.setNode('ra', { label: '240 + 15', ...descriptionNode });
 
     g.setEdge('rr', 'r0');
     g.setEdge('rr', 'r1');
@@ -43,7 +45,7 @@ const createDag = () => {
     g.setNode('g1', { id: 'gg', label: '0', ...labelNode });
     g.setNode('g0m', { label: '0 x 16', ...descriptionNode });
     g.setNode('g1m', { label: '0 x 1', ...descriptionNode });
-    g.setNode('ga', { label: '0 + 0 = 0', ...descriptionNode });
+    g.setNode('ga', { label: '0 + 0', ...descriptionNode });
 
     g.setEdge('gg', 'g0');
     g.setEdge('gg', 'g1');
@@ -57,7 +59,7 @@ const createDag = () => {
     g.setNode('b1', { id: 'bb', label: '0', ...labelNode });
     g.setNode('b0m', { label: '0 x 16', ...descriptionNode });
     g.setNode('b1m', { label: '0 x 1', ...descriptionNode });
-    g.setNode('ba', { label: '0 + 0 = 0', ...descriptionNode });
+    g.setNode('ba', { label: '0 + 0', ...descriptionNode });
 
     g.setEdge('bb', 'b0');
     g.setEdge('bb', 'b1');
@@ -66,13 +68,9 @@ const createDag = () => {
     g.setEdge('b0m', 'ba');
     g.setEdge('b1m', 'ba');
 
-    g.setEdge('root', 'rr');
-    g.setEdge('root', 'gg');
-    g.setEdge('root', 'bb');
-
-    g.setEdge('ra', 'answer');
-    g.setEdge('ga', 'answer');
-    g.setEdge('ba', 'answer');
+    g.setEdge('ra', 'ranswer');
+    g.setEdge('ga', 'ganswer');
+    g.setEdge('ba', 'banswer');
 
     dagre.layout(g);
 
