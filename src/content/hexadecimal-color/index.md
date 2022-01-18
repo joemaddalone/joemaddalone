@@ -3,7 +3,7 @@ title: 'Hexadecimal Color'
 layout: layout
 date: 2022-01-16
 tags: ['post']
-summary: 'How hexadecimal color works.'
+excerpt: 'How hexadecimal color works.'
 permalink: '/{{ title | slugify }}/'
 ---
 

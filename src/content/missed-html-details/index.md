@@ -3,7 +3,7 @@ title: 'Missed HTML: details'
 layout: layout
 date: 2021-12-13
 tags: ['post']
-summary: 'The details tag is often overlooked and reinvented.'
+excerpt: 'The details tag is often overlooked and reinvented.'
 permalink: "/{{ title | slugify }}/"
 ---
 

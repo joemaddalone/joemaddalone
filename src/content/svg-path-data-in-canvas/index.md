@@ -3,7 +3,7 @@ title: 'Svg Path Data in Canvas'
 layout: layout
 date: 2022-01-05
 tags: ['post']
-summary: 'Building canvas shapes with svg path data'
+excerpt: 'Building canvas shapes with svg path data'
 permalink: '/{{ title | slugify }}/'
 ---
 
