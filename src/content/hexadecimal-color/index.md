@@ -72,7 +72,9 @@ F = 15; // 15 ones               = 15
 11 = 17; // 1 sixteen and 1 one  = 17
 ```
 
-There's even a very simple way to convert a decimal to base whatevs in JavaScript.
+### Let's build a calculator.
+
+Converting a decimal to base<sub>n</sub> in JavaScript is super easy.
 
 ```js
 (255).toString(16); // outputs ff.
@@ -92,8 +94,9 @@ And with that we can create a rudimentary decimal (base<sub>10</sub>) to hexadec
   }
 </script>
 ```
+
 <div class="ui input">
-  <input type="number" value="0" id="i" class="ui input" />
+  <input inputmode="numeric" pattern="[0-9]*" type="number" value="0" id="i" class="ui input" />
   <div class="ui label">
     <h2 id="l">00</h2>
   </div>
@@ -102,19 +105,24 @@ And with that we can create a rudimentary decimal (base<sub>10</sub>) to hexadec
   const toBase16 = (n) => {
     return (+n).toString(16);
   }
+  const makeInput = () => {
+    const input = document.createElement('input');
+    input.setAttribute('type') = "number";
+  };
   i.oninput = ({target}) => {
     l.innerText = toBase16(target.value);
   }
 </script>
 
-
-## Hex Colors represent RGB.
+### Hex Colors represent RGB.
 
 Hex color is a representation of RGB colors. RGB is Red, Green, and Blue and is used in virtually all light emitting technologies such as computer monitors. Each color is represented as a value between 0 and 255 where zero is fully off and 255 is fully on.
 
 > The RGB color model is an additive color model in which the red, green, and blue primary colors of light are added together in various ways to reproduce a broad array of colors. The name of the model comes from the initials of the three additive primary colors, red, green, and blue. [https://en.wikipedia.org/wiki/RGB_color_model](https://en.wikipedia.org/wiki/RGB_color_model)
 
-So how why is `#ff0000` <span style="color:#f00">red</span>? Hexadecimals colors can be notated as `RRGGBB` where each set of two characters represents the 0 to 255 value of the colors red (<span style="color:#f00">RR</span>), green, (<span style="color:#0f0">GG</span>), and blue (<span style="color:#00f">BB</span>).
+### RRGGBB
+
+Hexadecimals colors can be notated as `RRGGBB` where each set of two characters represents the 0 to 255 value of the colors red (<span style="color:#f00">RR</span>), green, (<span style="color:#0f0">GG</span>), and blue (<span style="color:#00f">BB</span>).
 
 {% react 'components/hexadecimal/red' %}
 
@@ -123,6 +131,7 @@ Here the `RR` value is represented by `ff` which is equal to 255 or "fully on". 
 -   `ff0000`: <span style="color:#f00">red</span>
 -   `00ff00`: <span style="color:#0f0">green</span>
 -   `0000ff`: <span style="color:#00f">blue</span>
+
 
 ## Shorthand CSS. Why is `#f00` also <span style="color:#f00">red</span>?
 

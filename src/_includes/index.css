@@ -70,7 +70,7 @@
 body,
 html {
 	background-color: #eee;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 header {
@@ -111,6 +111,10 @@ footer {
 .standard-article p {
 	line-height: 1.7;
 	display: block;
+}
+
+.standard-article pre code {
+	font-size: .8rem;
 }
 
 .standard-article blockquote p {

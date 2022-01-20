@@ -10,21 +10,16 @@ import dagre from 'dagre';
 const createDag = () => {
     const g = new dagre.graphlib.Graph();
     g.setGraph({
-        rankdir: 'TB',
+        rankdir: 'LR',
         marginx: 10,
         marginy: 10,
-        nodesep: 100,
+        nodesep: 20,
         ranksep: 50,
     });
     g.setDefaultEdgeLabel(() => ({}));
 
     const labelNode = { width: 100, height: 80 };
     const descriptionNode = { width: 215, height: 80 };
-
-    // g.setNode('root', { label: 'ff 00 00', width: 150, height: 80 });
-    g.setNode('ranswer', { label: 'red=255', width: 200, height: 80 });
-    g.setNode('ganswer', { label: 'green=0', width: 200, height: 80 });
-    g.setNode('banswer', { label: 'blue=0', width: 200, height: 80 });
 
     g.setNode('rr', { id: 'rr', label: 'ff', ...labelNode });
     g.setNode('r0', { id: 'rr', label: 'f', ...labelNode });
@@ -68,10 +63,6 @@ const createDag = () => {
     g.setEdge('b0m', 'ba');
     g.setEdge('b1m', 'ba');
 
-    g.setEdge('ra', 'ranswer');
-    g.setEdge('ga', 'ganswer');
-    g.setEdge('ba', 'banswer');
-
     dagre.layout(g);
 
     return {
@@ -86,7 +77,7 @@ const { graph, edges, nodes } = createDag();
 export default function App() {
     return (
         <Svg
-            className="hexadecimal-red-diagram"
+            className="hexadecimal-red-diagram pa3"
             width={graph.width}
             height={graph.height}
             scale
@@ -94,20 +85,6 @@ export default function App() {
             <MarkerTriangle id="my-marker-id" />
             {edges.map(({ points }, i) => {
                 return <Polyline key={i} points={points.map((p) => Object.values(p))} stroke="#666" fill="none" />;
-                return (
-                    <Quad
-
-                        stroke="#000"
-                        fill="none"
-                        key={i}
-                        sx={points[0].x}
-                        sy={points[0].y}
-                        cx={points[1].x}
-                        cy={points[1].y}
-                        ex={points[2].x}
-                        ey={points[2].y}
-                    />
-                );
             })}
             {nodes.map(({ x, y, width, height, label, id }, index) => {
                 return (
