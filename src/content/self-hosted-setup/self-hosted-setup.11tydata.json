@@ -1,0 +1,78 @@
+{
+    "apps": [
+        {
+            "app": "Apprise-api",
+            "url": "https://github.com/caronc/apprise-api",
+            "description": "I currently use this for a single notification with a modified version of <a href=\"https://github.com/Chronial/snapraid-runner\">snapraid-runner</a>, but plan to do a lot more with it."
+        },
+        {
+            "app": "Bookstack",
+            "url": "https://www.bookstackapp.com/",
+            "description": "If I ever get motivated enough this will eventually become a usfeul family wiki."
+        },
+        { "app": "Calibre", "url": "https://calibre-ebook.com/", "description": "Ebook management" },
+        {
+            "app": "Calibre-web",
+            "url": "https://github.com/janeczku/calibre-web",
+            "description": "Provides an OPDS feed for Calibre"
+        },
+        {
+            "app": "Codeserver",
+            "url": "https://github.com/coder/code-server",
+            "description": "Edit compose and env files in an actual edit instead of terminal."
+        },
+        { "app": "Deemix", "url": "https://deemix.app/", "description": "Get music." },
+        { "app": "Filebrowser", "url": "https://filebrowser.org/", "description": "For easy manual file needs." },
+        { "app": "Glances", "url": "https://nicolargo.github.io/glances/", "description": "Light weight monitoring" },
+        { "app": "Heimdall", "url": "https://heimdall.site/", "description": "Clean dashboard" },
+        {
+            "app": "Jackett",
+            "url": "https://github.com/Jackett/Jackett",
+            "description": "Add feeds to various *-Arr apps."
+        },
+        { "app": "Komga", "url": "https://komga.org/", "description": "OPDS feed for comic books" },
+        {
+            "app": "Ouroboros",
+            "url": "https://github.com/pyouroboros/ouroboros",
+            "description": "Update containers automatically"
+        },
+        { "app": "Overseerr", "url": "https://overseerr.dev/", "description": "Media request system" },
+        {
+            "app": "Paperless-ng",
+            "url": "https://github.com/jonaswinkler/paperless-ng",
+            "description": "Organize paper documents digitally.  Will likely migrate to paperless-ngx"
+        },
+        { "app": "Pihole", "url": "https://pi-hole.net/", "description": "Network wide ad blocker." },
+        { "app": "Plex", "url": "https://www.plex.tv/", "description": "Media server. Movies, TV, Music, Audio books" },
+        { "app": "Portainer", "url": "https://www.portainer.io/", "description": "Easy container management" },
+        {
+            "app": "Nginx Proxy Manager",
+            "url": "https://nginxproxymanager.com/",
+            "description": "Local domains instead of ip addresses and ports"
+        },
+        {
+            "app": "MergerFS",
+            "url": "https://github.com/trapexit/mergerfs",
+            "description": "A dead simple union filesystem"
+        },
+        { "app": "Radarr", "url": "https://radarr.video/", "description": "Movie collecton manager" },
+        {
+            "app": "ruTorrent",
+            "url": "https://github.com/Novik/ruTorrent",
+            "description": "Coupled with rTorrent it is a little extra legwork for the most connectable torrent software ever."
+        },
+        { "app": "Snapraid", "url": "https://www.snapraid.it/", "description": "Dead simple array backup" },
+        { "app": "Sonarr", "url": "https://sonarr.tv/", "description": "TV collecton manager" },
+        {
+            "app": "Tautulli",
+            "url": "https://tautulli.com/",
+            "description": "Plex monitoring, but mostly using it for notifications"
+        },
+        { "app": "Tinymediamanager", "url": "https://www.tinymediamanager.org/", "description": "Media file renaming" },
+        {
+            "app": "Unpackerr",
+            "url": "https://github.com/davidnewhall/unpackerr",
+            "description": "Automatic decompression watcher"
+        }
+    ]
+}
