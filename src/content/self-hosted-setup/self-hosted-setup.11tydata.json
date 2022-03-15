@@ -8,7 +8,7 @@
         {
             "app": "Bookstack",
             "url": "https://www.bookstackapp.com/",
-            "description": "If I ever get motivated enough this will eventually become a usfeul family wiki."
+            "description": "If I ever get motivated enough this will eventually become a useful family wiki."
         },
         { "app": "Calibre", "url": "https://calibre-ebook.com/", "description": "Ebook management" },
         {
@@ -19,7 +19,7 @@
         {
             "app": "Codeserver",
             "url": "https://github.com/coder/code-server",
-            "description": "Edit compose and env files in an actual edit instead of terminal."
+            "description": "Edit compose and env files in an actual editor instead of terminal."
         },
         { "app": "Deemix", "url": "https://deemix.app/", "description": "Get music." },
         { "app": "Filebrowser", "url": "https://filebrowser.org/", "description": "For easy manual file needs." },
@@ -55,14 +55,14 @@
             "url": "https://github.com/trapexit/mergerfs",
             "description": "A dead simple union filesystem"
         },
-        { "app": "Radarr", "url": "https://radarr.video/", "description": "Movie collecton manager" },
+        { "app": "Radarr", "url": "https://radarr.video/", "description": "Movie collection manager" },
         {
             "app": "ruTorrent",
             "url": "https://github.com/Novik/ruTorrent",
             "description": "Coupled with rTorrent it is a little extra legwork for the most connectable torrent software ever."
         },
         { "app": "Snapraid", "url": "https://www.snapraid.it/", "description": "Dead simple array backup" },
-        { "app": "Sonarr", "url": "https://sonarr.tv/", "description": "TV collecton manager" },
+        { "app": "Sonarr", "url": "https://sonarr.tv/", "description": "TV collection manager" },
         {
             "app": "Tautulli",
             "url": "https://tautulli.com/",
