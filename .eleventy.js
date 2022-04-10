@@ -2,7 +2,6 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const htmlmin = require('html-minifier');
 const pluginSEO = require('eleventy-plugin-seo');
 const path = require('path');
-
 const Image = require('@11ty/eleventy-img');
 
 async function imageShortcode(src, alt) {
@@ -10,12 +9,6 @@ async function imageShortcode(src, alt) {
 		// You bet we throw an error on missing alt (alt="" works okay)
 		throw new Error(`Missing \`alt\` on myImage from: ${src}`);
 	}
-
-	const imageSizes = {
-		320: 'small',
-		640: 'medium',
-		1280: 'large',
-	};
 
 	let imgSrc = src;
 	let outputDir = './src/img';
@@ -33,11 +26,6 @@ async function imageShortcode(src, alt) {
 		widths: [800],
 		formats: ['jpeg'],
 		outputDir,
-		// filenameFormat: function (id, src, width, format, options) {
-		// 	const extension = path.extname(src);
-		// 	const name = path.basename(src, extension);
-		// 	return `${name}.${format}`;
-		// },
 	});
 
 	let data = metadata.jpeg[metadata.jpeg.length - 1];
@@ -51,10 +39,6 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addShortcode('youtube', (id) => {
 		return `<iframe class="yt-embed" src="https://www.youtube-nocookie.com/embed/${id}" frameborder="0" allowfullscreen></iframe>`;
 	});
-
-	eleventyConfig.addPassthroughCopy('src/assets');
-	eleventyConfig.addPassthroughCopy('src/public');
-	eleventyConfig.addPassthroughCopy('src/img');
 
 	eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 	eleventyConfig.addLiquidShortcode('image', imageShortcode);
@@ -92,6 +76,10 @@ module.exports = function (eleventyConfig) {
 			showPageNumbers: false,
 		},
 	});
+
+	eleventyConfig.addPassthroughCopy('src/assets');
+	eleventyConfig.addPassthroughCopy('src/public');
+	eleventyConfig.addPassthroughCopy('src/img');
 
 	return {
 		dir: {
