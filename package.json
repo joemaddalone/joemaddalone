@@ -6,7 +6,7 @@
 	"scripts": {
 		"precommit": "pretty-quick --staged",
 		"prettier": "prettier --write 'src/**/*.{js,jsx,less,css}'",
-		"predeploy": "npm run build",
+		"predeploy": "npm run build && npm run build",
 		"deploy": "gh-pages -d dist",
 		"start": "slinkity --serve",
 		"build": "slinkity"
