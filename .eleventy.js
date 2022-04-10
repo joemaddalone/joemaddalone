@@ -1,6 +1,49 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const htmlmin = require('html-minifier');
 const pluginSEO = require('eleventy-plugin-seo');
+const path = require('path');
+
+const Image = require('@11ty/eleventy-img');
+
+async function imageShortcode(src, alt) {
+	if (alt === undefined) {
+		// You bet we throw an error on missing alt (alt="" works okay)
+		throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+	}
+
+	const imageSizes = {
+		"320": "small",
+		"640": "medium",
+		"1280": "large"
+	  }
+
+	let imgSrc = src; 
+
+	// handle same folder images, append the input path to make the path relative 
+	// to project folder as 11ty requires it
+	if (!imgSrc.startsWith('.')) {   
+	  const inputPath = this.page.inputPath;  
+	  const pathParts = inputPath.split('/');  
+	  pathParts.pop();  
+	  imgSrc = pathParts.join('/') + '/' + src; 
+	}
+
+	let metadata = await Image(imgSrc, {
+		widths: [800],
+		formats: ['jpeg'],
+		outputDir: "./dist/img/",
+		filenameFormat: function (id, src, width, format, options) { 
+			const extension = path.extname(src);
+			const name = path.basename(src, extension);
+			// const size = imageSizes[width+""];
+			// return `${name}_${size}.${format}`;
+			return `${name}.${format}`;
+		  }
+	});
+
+	let data = metadata.jpeg[metadata.jpeg.length - 1];
+	return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
+}
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(syntaxHighlight);
@@ -9,8 +52,9 @@ module.exports = function (eleventyConfig) {
 		return `<iframe class="yt-embed" src="https://www.youtube-nocookie.com/embed/${id}" frameborder="0" allowfullscreen></iframe>`;
 	});
 
-	eleventyConfig.addPassthroughCopy('src/assets');
-	eleventyConfig.addPassthroughCopy('src/public');
+	eleventyConfig.addShortcode("image", imageShortcode);
+
+	eleventyConfig.addPassthroughCopy('src/assets').addPassthroughCopy('src/public');
 
 	eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
 		if (outputPath.endsWith('.html')) {
@@ -36,7 +80,7 @@ module.exports = function (eleventyConfig) {
 		url: 'https://joemaddalone.com',
 		author: 'Joe Maddalone',
 		twitter: 'joemaddalone',
-		image: "/assets/android-icon-192x192.png",
+		image: '/assets/android-icon-192x192.png',
 		options: {
 			titleDivider: '|',
 			imageWithBaseUrl: true,

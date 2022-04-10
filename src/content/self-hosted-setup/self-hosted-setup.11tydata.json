@@ -14,12 +14,12 @@
         {
             "app": "Calibre-web",
             "url": "https://github.com/janeczku/calibre-web",
-            "description": "Provides an OPDS feed for Calibre"
+            "description": "Provides an OPDS feed for Calibre."
         },
         {
             "app": "Codeserver",
             "url": "https://github.com/coder/code-server",
-            "description": "Edit compose and env files in an actual editor instead of terminal."
+            "description": "Edit various configs and scripts on my server in an actual editor instead of terminal."
         },
         { "app": "Deemix", "url": "https://deemix.app/", "description": "Get music." },
         { "app": "Filebrowser", "url": "https://filebrowser.org/", "description": "For easy manual file needs." },
@@ -66,7 +66,7 @@
         {
             "app": "Tautulli",
             "url": "https://tautulli.com/",
-            "description": "Plex monitoring, but mostly using it for notifications"
+            "description": "Plex monitoring, but mostly using it for notifications. Every time something is added or removed from Plex this will ping a slack channel."
         },
         { "app": "Tinymediamanager", "url": "https://www.tinymediamanager.org/", "description": "Media file renaming" },
         {
