@@ -31,6 +31,7 @@
             "description": "Add feeds to various *-Arr apps."
         },
         { "app": "Komga", "url": "https://komga.org/", "description": "OPDS feed for comic books" },
+        { "app": "logspout", "url": "https://github.com/gliderlabs/logspout", "description": "all the logs." },
         {
             "app": "Ouroboros",
             "url": "https://github.com/pyouroboros/ouroboros",
@@ -43,6 +44,11 @@
             "description": "Organize paper documents digitally.  Will likely migrate to paperless-ngx"
         },
         { "app": "Pihole", "url": "https://pi-hole.net/", "description": "Network wide ad blocker." },
+        {
+            "app": "PiVPN",
+            "url": "https://www.pivpn.io/",
+            "description": "For when I'm away from my local network."
+        },
         { "app": "Plex", "url": "https://www.plex.tv/", "description": "Media server. Movies, TV, Music, Audio books" },
         { "app": "Portainer", "url": "https://www.portainer.io/", "description": "Easy container management" },
         {
