@@ -1,5 +1,5 @@
 import React from 'react';
-import { Svg, Circle, Rect, Text } from 'react-svg-path';
+import { Svg, Rect, Text } from 'react-svg-path';
 import Gridset from 'gridset';
 import propTypes from 'prop-types';
 import './diagram.css';
@@ -16,16 +16,6 @@ const graph = {
     width: 1200,
     height: 700,
     elements: {
-        internet: {
-            props: {
-                cx: grid.col(4).cx,
-                cy: grid.row(0).cy,
-                width: 400,
-                height: 100,
-            },
-            shape: Rect,
-            text: 'internet',
-        },
         pihole: {
             props: {
                 cx: grid.col(4).cx,
@@ -39,7 +29,7 @@ const graph = {
         rtorrent: {
             props: {
                 cx: grid.col(4).cx - 100,
-                cy: grid.row(2).cy,
+                cy: grid.row(0).cy,
                 width: 200,
                 height: 100,
             },
@@ -49,7 +39,7 @@ const graph = {
         jackett: {
             props: {
                 cx: grid.col(4).cx + 100,
-                cy: grid.row(2).cy,
+                cy: grid.row(0).cy,
                 width: 200,
                 height: 100,
             },
@@ -58,8 +48,8 @@ const graph = {
         },
         bazarr: {
             props: {
-                cx: grid.col(9).cx - 100,
-                cy: grid.row(2).cy,
+                cx: grid.col(0).r + 50,
+                cy: grid.row(6).cy,
                 width: 200,
                 height: 100,
             },
@@ -78,8 +68,8 @@ const graph = {
         },
         tautulli: {
             props: {
-                cx: grid.col(9).cx + 100,
-                cy: grid.row(2).cy,
+                cx: grid.col(7).cx,
+                cy: grid.row(6).cy,
                 width: 200,
                 height: 100,
             },
@@ -89,7 +79,7 @@ const graph = {
         pvr: {
             props: {
                 cx: grid.col(4).cx,
-                cy: grid.row(3).cy,
+                cy: grid.row(1).cy,
                 width: 400,
                 height: 100,
             },
@@ -98,8 +88,8 @@ const graph = {
         },
         media: {
             props: {
-                cx: grid.col(9).cx,
-                cy: grid.row(3).cy,
+                cx: grid.col(4).cx,
+                cy: grid.row(6).cy,
                 width: 400,
                 height: 100,
             },
@@ -108,8 +98,8 @@ const graph = {
         },
         overseerr: {
             props: {
-                cx: grid.col(1).cx,
-                cy: grid.row(3).cy,
+                cx: grid.col(0).r + 50,
+                cy: grid.row(1).cy,
                 width: 200,
                 height: 100,
             },
@@ -119,7 +109,7 @@ const graph = {
         reseed: {
             props: {
                 cx: grid.col(4).cx,
-                cy: grid.row(5).cy,
+                cy: grid.row(3).cy,
                 width: 400,
                 height: 100,
             },
@@ -129,8 +119,8 @@ const graph = {
         },
         storage: {
             props: {
-                cx: grid.col(9).cx,
-                cy: grid.row(5).cy,
+                cx: grid.col(4).cx,
+                cy: grid.row(4).cy,
                 width: 400,
                 height: 100,
             },
@@ -140,7 +130,7 @@ const graph = {
         unpackerr: {
             props: {
                 cx: grid.col(4).cx,
-                cy: grid.row(4).cy,
+                cy: grid.row(2).cy,
                 width: 400,
                 height: 100,
             },
@@ -149,8 +139,8 @@ const graph = {
         },
         tmm: {
             props: {
-                cx: grid.col(9).cx,
-                cy: grid.row(4).cy,
+                cx: grid.col(4).cx,
+                cy: grid.row(5).cy,
                 width: 400,
                 height: 100,
             },
@@ -161,8 +151,8 @@ const graph = {
 };
 
 const Node = (el) => {
-    const width = el.props.width - 20;
-    const height = el.props.height - 20;
+    const width = el.props.width - 10;
+    const height = el.props.height - 10;
     return (
         <el.shape {...el.props} width={width} height={height} fill="white" stroke="red">
             <Text className="middle">{el.text}</Text>
@@ -183,11 +173,9 @@ export default function App() {
             height={graph.height}
             scale
             style={{ maxWidth: 800 }}>
-            {/* {grid.flatCells.map((cell, i) => {
-                return <Rect key={i} cx={cell.cx} cy={cell.cy} width={cell.w} height={cell.h} stroke="#ccc" fill="none" />;
-            })} */}
-            <Node {...graph.elements.internet} />
-            <Node {...graph.elements.pihole} />
+                <Text sy={50} sx={700}>
+                    Media management architecture
+                </Text>
             <Node {...graph.elements.rtorrent} />
             <Node {...graph.elements.jackett} />
             <Node {...graph.elements.pvr} />
@@ -199,7 +187,6 @@ export default function App() {
             <Node {...graph.elements.bazarr} />
             <Node {...graph.elements.tautulli} />
             <Node {...graph.elements.tmm} />
-            <Node {...graph.elements.apprise} />
         </Svg>
     );
 }
