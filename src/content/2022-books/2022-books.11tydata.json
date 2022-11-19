@@ -1,0 +1,67 @@
+{
+    "books2022": [
+        { "title": "A Walk Through Hell", "author": "Garth Ennis and Goran Sudzuka", "isbn": "9781949028423" },
+        {
+            "title": "Algorithms to Live By",
+            "subtitle": "The Computer Science of Human Decisions",
+            "author": "Brian Christian and Tom Griffiths",
+            "isbn": "9781627790369"
+        },
+        { "title": "All You Need is Kill", "author": "Hiroshi Sakurazaka", "isbn": "9781421527611" },
+        { "title": "Babyteeth, Vol 1 thru 3", "author": "Donnie Cates and Garry Brown", "isbn": "9781935002772" },
+        { "title": "Between Two Fires", "author": "Christopher Buehlman" },
+        { "title": "Cinema Speculation", "author": "Quentin Tarantino" },
+        {
+            "title": "City of Sedition",
+            "subtitle": "The History of New York City During the Civil War",
+            "author": "John Strausbaugh"
+        },
+        { "title": "Cultish", "subtitle": "The Language of Fanaticism", "author": "Amanda Montell" },
+        { "title": "Death Wins a Goldfish", "author": "Brian Rea" },
+        { "title": "Digital Zettelkasten", "author": "David Kadavy" },
+        {
+            "title": "Donnie Brasco",
+            "subtitle": "My Undercover Life in the Mafia - A True Story by FBI Agent",
+            "author": "Joseph D. Pistone",
+            "isbn": "9780451192578"
+        },
+        { "title": "Factfulness", "author": "Hans Rosling" },
+        { "title": "From Hell: Master Edition", "author": "Alan Moore and Eddie Campbell", "isbn": "9781603094696" },
+        { "title": "Geiger, Vol. 1", "author": "Geoff Johns and Gary Frank" },
+        { "title": "I Heard You Paint Houses", "author": "Charles Brandt" },
+        { "title": "Judas: The Last Days", "author": "W. Maxwell Prince and John Armor" },
+        { "title": "Killers of the Flower Moon", "author": "David Grann" },
+        { "title": "Later", "author": "Stephen King" },
+        { "title": "Molly's Game", "author": "Molly Bloom" },
+        { "title": "My Damage", "author": "Keith Morris" },
+        { "title": "Norse Mythology", "author": "Neil Gaiman", "isbn": "9780393356182" },
+        { "title": "Once Upon Atari", "author": "Howard Scott Warshaw" },
+        { "title": "Permanent Record", "author": "Edward Snowden", "isbn": " 9781250772909" },
+        { "title": "Project Hail Mary", "author": "Andy Weir", "isbn": "9780593135228" },
+        { "title": "Proving Ground", "author": "Kathy Kleiman" },
+        { "title": "Recursion", "author": "Blake Crouch" },
+        { "title": "Sapiens: A Brief History of Humankind", "author": "Yuval Noah Harari" },
+        { "title": "Stiff", "subtitle": "The Curious Lives of Human Cadavers", "author": "Mary Roach" },
+        { "title": "Tender is the Flesh", "author": "Augustina Bazterrica" },
+        { "title": "The Color of Money", "author": "Walter Tevis" },
+        { "title": "The Final Girl Support Group", "author": "Grady Hendrix" },
+        { "title": "The Hustler", "author": "Walter Tevis" },
+        { "title": "The Impending Blindness of Billie Scott", "author": "Zoe Thorogood" },
+        { "title": "The Innovators", "author": "Walter Isaacson" },
+        { "title": "The Lathe of Heaven", "author": "Ursula K. Le Guin", "isbn": "9781416556961" },
+        { "title": "The Many Deaths of Laila Starr", "author": "Ram V and Felipe Amdrade" },
+        { "title": "The Order of Time", "author": "Carlo Rovelli" },
+        { "title": "The Stranger in the Woods", "author": "Michael Finkel" },
+        { "title": "The Subtle Art of Not Giving a F*ck", "author": "Mark Manson" },
+        { "title": "The Taking of Jemima Boone", "author": "Matthew Pearl" },
+        { "title": "The Twelve Lives of Alfred Hitchcock", "author": "Edward" },
+        { "title": "The Victorian Internet", "author": "Tom Standage" },
+        {
+            "title": "Unmask Alice",
+            "subtitle": "LSD, Satanic Panic, and the Imposter Behind the World's Most Notorious Diaries",
+            "author": "Rick Emerson"
+        },
+        { "title": "V for Vendetta", "author": "Alan Moore and David Lloyd" },
+        { "title": "Y: The Last Man", "author": "Brian K. Vaughn and Pia Guerra" }
+    ]
+}
