@@ -15,7 +15,7 @@
             "author": "Daniel Drescher",
             "isbn": "9781484226032"
         },
-        { "title": "Cinema Speculation", "author": "Quentin Tarantino", "isbn": "9781474624237" },
+        { "title": "Cinema Speculation", "author": "Quentin Tarantino", "isbn": "9780063112582" },
         {
             "title": "City of Sedition",
             "subtitle": "The History of New York City During the Civil War",
@@ -50,7 +50,7 @@
         },
         { "title": "The Final Girl Support Group", "author": "Grady Hendrix", "isbn": "9780593201237" },
         { "title": "From Hell: Master Edition", "author": "Alan Moore and Eddie Campbell", "isbn": "0878162860" },
-        { "title": "Geiger, Vol. 1", "author": "Geoff Johns and Gary Frank" },
+        { "title": "Geiger, Vol. 1", "author": "Geoff Johns and Gary Frank", "isbn": "9781534320024" },
         { "title": "The Hustler", "isbn": "9781560254737", "author": "Walter Tevis" },
         { "title": "I Heard You Paint Houses", "isbn": "9781586421557", "author": "Charles Brandt" },
         { "title": "The Impending Blindness of Billie Scott", "isbn": "9781910395646", "author": "Zoe Thorogood" },
@@ -87,16 +87,26 @@
             "isbn": "9780393050936",
             "author": "Mary Roach"
         },
-        { "title": "The Stranger in the Woods", "author": "Michael Finkel" },
+        { "title": "The Stranger in the Woods", "author": "Michael Finkel", "isbn": "9781101924921" },
         {
             "title": "The Subtle Art of Not Giving a F*ck",
             "subtitle": "A counterintuitive approach to living a better life",
             "isbn": "9780062457714",
             "author": "Mark Manson"
         },
-        { "title": "The Taking of Jemima Boone", "subtitle": "Colonial Settlers, Tribal Nations, and the Kidnap That Shaped a Nation", "isbn": "9780063118331", "author": "Matthew Pearl" },
+        {
+            "title": "The Taking of Jemima Boone",
+            "subtitle": "Colonial Settlers, Tribal Nations, and the Kidnap That Shaped a Nation",
+            "isbn": "9780063118331",
+            "author": "Matthew Pearl"
+        },
         { "title": "Tender is the Flesh", "isbn": "9781797112695", "author": "Augustina Bazterrica" },
-        { "title": "The Twelve Lives of Alfred Hitchcock", "subtitle": "An Anatomy of the Master of Suspense", "isbn": "9781662074929", "author": "Edward White" },
+        {
+            "title": "The Twelve Lives of Alfred Hitchcock",
+            "subtitle": "An Anatomy of the Master of Suspense",
+            "isbn": "9781662074929",
+            "author": "Edward White"
+        },
         {
             "title": "Unmask Alice",
             "isbn": "9781637740422",

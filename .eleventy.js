@@ -10,27 +10,31 @@ async function imageShortcode(src, alt) {
 		throw new Error(`Missing \`alt\` on myImage from: ${src}`);
 	}
 
-	let imgSrc = src;
-	let outputDir = './src/img';
+	try {
+		let imgSrc = src;
+		let outputDir = './src/img';
 
-	// handle same folder images, append the input path to make the path relative
-	// to project folder as 11ty requires it
-	if (!imgSrc.startsWith('.')) {
-		const inputPath = this.page.inputPath;
-		const pathParts = inputPath.split('/');
-		pathParts.pop();
-		imgSrc = pathParts.join('/') + '/' + src;
+		// handle same folder images, append the input path to make the path relative
+		// to project folder as 11ty requires it
+		if (!imgSrc.startsWith('.')) {
+			const inputPath = this.page.inputPath;
+			const pathParts = inputPath.split('/');
+			pathParts.pop();
+			imgSrc = pathParts.join('/') + '/' + src;
+		}
+
+		let metadata = await Image(imgSrc, {
+			widths: [800],
+			formats: ['jpeg'],
+			outputDir,
+		});
+
+		let data = metadata.jpeg[metadata.jpeg.length - 1];
+
+		return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
+	} catch (err) {
+		return;
 	}
-
-	let metadata = await Image(imgSrc, {
-		widths: [800],
-		formats: ['jpeg'],
-		outputDir,
-	});
-
-	let data = metadata.jpeg[metadata.jpeg.length - 1];
-
-	return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
 }
 
 module.exports = function (eleventyConfig) {

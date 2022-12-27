@@ -12,8 +12,9 @@ permalink: '/{{ title | slugify }}/'
 
 <div class="ui divided items">
 {% for book in books2022 %}
+
 <div class="item">
-			<div class="image"><img src="https://covers.openlibrary.org/b/isbn/{{book.isbn}}-M.jpg" /></div>
+		<div class="image">{% if book.isbn %}{% assign img = book.isbn | append: ".jpg" %}{% image img, book.title %}{% endif %}</div>
 		<div class="content">
 			<div class="header">{{book.title}}</div>
 			<div class="meta i">{{book.subtitle}}</div>
