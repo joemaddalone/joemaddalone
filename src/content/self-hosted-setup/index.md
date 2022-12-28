@@ -7,7 +7,10 @@ excerpt: 'Hosting all the things from a closet.'
 permalink: '/{{ title | slugify }}/'
 ---
 
-# {{ title }}
+<hgroup>
+	<h1>{{ title }}</h1>
+	<p>{{ excerpt }}</p>
+</hgroup>
 
 I've always had a media server setup running in our house, but during the pandemic I got much more interested in self hosting various services.  This list of self hosted applications on my home server changes all the time.
 

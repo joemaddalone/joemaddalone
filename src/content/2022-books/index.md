@@ -7,7 +7,10 @@ excerpt: 'A bunch of things I read.'
 permalink: '/{{ title | slugify }}/'
 ---
 
-# {{ title }}
+<hgroup>
+	<h1>{{ title }}</h1>
+	<p>{{ excerpt }}</p>
+</hgroup>
 
 
 <div class="ui divided items">

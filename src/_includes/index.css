@@ -121,6 +121,22 @@ footer {
 	color: var(--black-60);
 }
 
+.standard-article hgroup {
+    padding-left: 16px;
+		margin-bottom: 16px;
+    border-left: 15px solid #222;
+}
+
+.standard-article hgroup h1 {
+    margin-bottom: 0;
+}
+
+.standard-article hgroup p {
+    margin: 0;
+		font-style: italic;
+		color: #666;
+}
+
 .postlist {
 	margin: 0;
 	padding: 4px;

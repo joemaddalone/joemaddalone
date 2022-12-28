@@ -7,7 +7,10 @@ excerpt: 'Building canvas shapes with svg path data'
 permalink: '/{{ title | slugify }}/'
 ---
 
-# {{ title }}
+<hgroup>
+	<h1>{{ title }}</h1>
+	<p>{{ excerpt }}</p>
+</hgroup>
 
 Typically most canvas drawing requires a series of commands. Something like this.
 

@@ -7,9 +7,12 @@ excerpt: 'An overlooked science fiction master class'
 permalink: '/{{ title | slugify }}/'
 ---
 
-# {{ title }}
+<hgroup>
+	<h1>{{ title }}</h1>
+	<p>{{ excerpt }}</p>
+</hgroup>
 
-<div class="ui small left floated image mpa3">
+<div class="ui small right floated image mpa3">
 {% image "poster.png", "The Man From Earth" %}
 </div>
 

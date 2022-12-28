@@ -7,7 +7,10 @@ excerpt: 'The details tag is often overlooked and reinvented.'
 permalink: "/{{ title | slugify }}/"
 ---
 
-# {{ title }}
+<hgroup>
+	<h1>{{ title }}</h1>
+	<p>{{ excerpt }}</p>
+</hgroup>
 
 ## &lt;details&gt;
 
@@ -79,7 +82,7 @@ permalink: "/{{ title | slugify }}/"
 	details.css summary:hover, details.css li:hover {
 		color: blue;
 	}
-	details.css { 
+	details.css {
 		cursor: pointer;
 	}
 	details.css > details {

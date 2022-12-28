@@ -7,7 +7,10 @@ excerpt: 'A quick win for otherwise complicated typography.'
 permalink: "/{{ title | slugify }}/"
 ---
 
-# {{ title }}
+<hgroup>
+	<h1>{{ title }}</h1>
+	<p>{{ excerpt }}</p>
+</hgroup>
 
 ## &lt;ruby&gt;
 
@@ -69,20 +72,6 @@ permalink: "/{{ title | slugify }}/"
 	ruby.css.over {
 		ruby-position: over
 	}
-	hgroup {
-    text-align: right;
-    padding-right: 16px;
-    border-right: 10px solid #00c8d7;
-}
-
-hgroup h1 {
-    margin-bottom: 0;
-}
-
-hgroup p {
-    margin: 0;
-    font-weight: bold;
-}
 </style>
 
 <ruby class="css over">50%<rt>CPU Usage</rt></ruby>

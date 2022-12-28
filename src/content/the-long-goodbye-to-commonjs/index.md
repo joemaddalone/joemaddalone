@@ -7,7 +7,10 @@ excerpt: 'With the advent of HTTP/2, ES Modules, and other technologies the futu
 permalink: "/{{ title | slugify }}/"
 ---
 
-# The long goodbye to CommonJS.
+<hgroup>
+	<h1>{{ title }}</h1>
+	<p>{{ excerpt }}</p>
+</hgroup>
 
 *TLDR; {{ summary }}*
 

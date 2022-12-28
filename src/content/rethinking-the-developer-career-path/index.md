@@ -7,7 +7,10 @@ excerpt: 'A really interesting perspective on this age old problem.'
 permalink: "/{{ title | slugify }}/"
 ---
 
-# {{ title }}
+<hgroup>
+	<h1>{{ title }}</h1>
+	<p>{{ excerpt }}</p>
+</hgroup>
 
 {% youtube "yIPbE7BssOs" %}
 

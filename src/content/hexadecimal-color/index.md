@@ -7,7 +7,10 @@ excerpt: 'How hexadecimal color works.'
 permalink: '/{{ title | slugify }}/'
 ---
 
-# {{ title }}
+<hgroup>
+	<h1>{{ title }}</h1>
+	<p>{{ excerpt }}</p>
+</hgroup>
 
 I suppose I just never really thought about it much and left the hexing of colors to designer witchcraft not meant for the likes of this poor programmer-minded plebe to understand, but it turns out these friggin' designer-types have been programming all along.
 
