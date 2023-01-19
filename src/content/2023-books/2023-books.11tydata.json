@@ -4,6 +4,18 @@
             "title": "Upgrade",
             "author": "Blake Crouch",
             "isbn": "9780593157534"
+        },
+        {
+            "title": "Soonish",
+            "subtitle": "Ten Emerging Technologies That'll Improve and/or Ruin Everything",
+            "author": "Kelly & Zach Weinersmith",
+            "isbn": "9780399563829"
+        },
+        {
+            "title": "You Are Not Expected to Understand This",
+            "subtitle": "How 26 Lines of Code Changed the World",
+            "author": "Torie Bosch",
+            "isbn": "9780691208480"
         }
     ]
 }
