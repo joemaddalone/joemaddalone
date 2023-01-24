@@ -17,9 +17,9 @@ Typically most canvas drawing requires a series of commands. Something like this
 ```js
 ctx.beginPath();
 ctx.moveTo(150, 10);
-ctx.lineTo(100, 70);
-ctx.lineTo(185, 75);
-ctx.lineTo(150, 10);
+ctx.lineTo(115, 70);
+ctx.lineTo(185, 70);
+ctx.closePath();
 ctx.stroke();
 ```
 This gives us a triangle.
@@ -33,7 +33,7 @@ This gives us a triangle.
 	ctx0.moveTo(150, 10);
 	ctx0.lineTo(115, 70);
 	ctx0.lineTo(185, 70);
-	ctx0.lineTo(150, 10);
+	ctx0.closePath();
 	ctx0.stroke();
 </script>
 
