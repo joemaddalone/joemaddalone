@@ -1,15 +1,20 @@
 {
     "books2023": [
         {
-            "title": "Upgrade",
-            "author": "Blake Crouch",
-            "isbn": "9780593157534"
+            "title": "Electron in Action",
+            "author": "Steve Kinney",
+            "isbn": "9781617294143"
         },
         {
             "title": "Soonish",
             "subtitle": "Ten Emerging Technologies That'll Improve and/or Ruin Everything",
             "author": "Kelly & Zach Weinersmith",
             "isbn": "9780399563829"
+        },
+        {
+            "title": "Upgrade",
+            "author": "Blake Crouch",
+            "isbn": "9780593157534"
         },
         {
             "title": "You Are Not Expected to Understand This",
