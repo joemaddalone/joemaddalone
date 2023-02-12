@@ -1,9 +1,21 @@
 {
     "books2023": [
         {
+            "title": "Blood Merdian",
+            "subtitle": "Or the Evening Redness in the West",
+            "author": "Cormac McCarthy",
+            "isbn": "9780679728757"
+        },
+        {
             "title": "Electron in Action",
             "author": "Steve Kinney",
             "isbn": "9781617294143"
+        },
+        {
+            "title": "Quantum Bullshit",
+            "subtitle": "How to Ruin Your Life with Advice from Quantum Physics",
+            "author": "Chris Ferrie",
+            "isbn": "9781728266053"
         },
         {
             "title": "Recessional",
