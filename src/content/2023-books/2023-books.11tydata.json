@@ -1,15 +1,33 @@
 {
     "books2023": [
         {
+            "title": "The Alignment Problem",
+            "subtitle": "Machine Learning and Human Values",
+            "author": "Brian Christian",
+            "isbn": "9780393635829"
+        },
+        {
             "title": "Blood Merdian",
             "subtitle": "Or the Evening Redness in the West",
             "author": "Cormac McCarthy",
             "isbn": "9780679728757"
         },
         {
+            "title": "Code",
+            "subtitle": "The Hidden Language of Computer Hardware and Software",
+            "author": "Charles Petzold",
+            "isbn": "9780137909100"
+        },
+        {
             "title": "Electron in Action",
             "author": "Steve Kinney",
             "isbn": "9781617294143"
+        },
+        {
+            "title": "Empire of Pain",
+            "subtitle": "The Secret History of the Sackler Dynasty",
+            "author": "Patrick Radden Keefe",
+            "isbn": "9780385545693"
         },
         {
             "title": "Quantum Bullshit",
@@ -35,10 +53,27 @@
             "isbn": "9780593157534"
         },
         {
+            "title": "Wounds: Six Stories from the Border of Hell",
+            "author": "Nathan Ballingrud",
+            "isbn": "9781534449923"
+        },
+        {
             "title": "You Are Not Expected to Understand This",
             "subtitle": "How 26 Lines of Code Changed the World",
             "author": "Torie Bosch",
             "isbn": "9780691208480"
+        },
+        {
+            "title": "What You Do Is Who You Are",
+            "subtitle": "How to Create Your Business Culture",
+            "author": "Ben Horowitz",
+            "isbn": "9780008356118"
+        },
+        {
+            "title": "Zero",
+            "subtitle": "The Biography of a Dangerous Idea",
+            "author": "Charles Seife",
+            "isbn": "9780140296471"
         }
     ]
 }
