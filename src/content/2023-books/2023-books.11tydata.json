@@ -74,6 +74,22 @@
             "subtitle": "The Biography of a Dangerous Idea",
             "author": "Charles Seife",
             "isbn": "9780140296471"
+        },
+        {
+            "title": "Moneyball",
+            "subtitle": "The Art of Winning an Unfair Ga",
+            "author": "Michael Lewis",
+            "isbn": "9780393324815"
+        },
+        {
+            "title": "What Is ChatGPT Doing ... and Why Does It Work?",
+            "author": "Stephen Wolfram",
+            "isbn": "9781579550813"
+        },
+        {
+            "title": "The Fourth Man",
+            "author": "Jeff McComsey",
+            "isbn": "9781953165350"
         }
     ]
 }
