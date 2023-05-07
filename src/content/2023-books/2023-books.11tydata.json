@@ -30,6 +30,17 @@
             "isbn": "9780385545693"
         },
         {
+            "title": "The Fourth Man",
+            "author": "Jeff McComsey",
+            "isbn": "9781953165350"
+        },
+        {
+            "title": "Moneyball",
+            "subtitle": "The Art of Winning an Unfair Ga",
+            "author": "Michael Lewis",
+            "isbn": "9780393324815"
+        },
+        {
             "title": "Quantum Bullshit",
             "subtitle": "How to Ruin Your Life with Advice from Quantum Physics",
             "author": "Chris Ferrie",
@@ -53,15 +64,9 @@
             "isbn": "9780593157534"
         },
         {
-            "title": "Wounds: Six Stories from the Border of Hell",
-            "author": "Nathan Ballingrud",
-            "isbn": "9781534449923"
-        },
-        {
-            "title": "You Are Not Expected to Understand This",
-            "subtitle": "How 26 Lines of Code Changed the World",
-            "author": "Torie Bosch",
-            "isbn": "9780691208480"
+            "title": "What Is ChatGPT Doing ... and Why Does It Work?",
+            "author": "Stephen Wolfram",
+            "isbn": "9781579550813"
         },
         {
             "title": "What You Do Is Who You Are",
@@ -70,26 +75,27 @@
             "isbn": "9780008356118"
         },
         {
+            "title": "Wounds: Six Stories from the Border of Hell",
+            "author": "Nathan Ballingrud",
+            "isbn": "9781534449923"
+        },
+        {
+            "title": "Writing the Revolution",
+            "subtitle": "Wikipedia and the Survival of Facts in the Digital Age",
+            "author": "Heather Ford",
+            "isbn": "9780262046299"
+        },
+        {
+            "title": "You Are Not Expected to Understand This",
+            "subtitle": "How 26 Lines of Code Changed the World",
+            "author": "Torie Bosch",
+            "isbn": "9780691208480"
+        },
+        {
             "title": "Zero",
             "subtitle": "The Biography of a Dangerous Idea",
             "author": "Charles Seife",
             "isbn": "9780140296471"
-        },
-        {
-            "title": "Moneyball",
-            "subtitle": "The Art of Winning an Unfair Ga",
-            "author": "Michael Lewis",
-            "isbn": "9780393324815"
-        },
-        {
-            "title": "What Is ChatGPT Doing ... and Why Does It Work?",
-            "author": "Stephen Wolfram",
-            "isbn": "9781579550813"
-        },
-        {
-            "title": "The Fourth Man",
-            "author": "Jeff McComsey",
-            "isbn": "9781953165350"
         }
     ]
 }
