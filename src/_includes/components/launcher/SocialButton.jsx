@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { RoundedSquare, Line, MarkerTriangle, Rect, Text } from 'react-svg-path';
+import { RoundedSquare, Line, MarkerTriangle, MarkerLine, Rect, Text } from 'react-svg-path';
 import { useSpring, animated } from 'react-spring';
 import './launcher.css';
 
@@ -21,7 +21,7 @@ const SocialButton = ({ cx, cy, ox, offset, control }) => {
             onMouseOver: () => setActivated(controlSetter),
             onFocus: () => setActivated(controlSetter),
             onMouseOut: clear,
-            onBlur: clear
+            onBlur: clear,
         };
     };
 
@@ -41,6 +41,7 @@ const SocialButton = ({ cx, cy, ox, offset, control }) => {
     return (
         <>
             {flag ? <MarkerTriangle id="my-marker-id" color={activated?.color} /> : null}
+            {flag ? <MarkerLine id="my-marker-s" color={activated?.color} /> : null}
             <g className="flourish" transform={`translate(${tx}, ${cy})`}>
                 <animated.g className="control-box" strokeDashoffset={x}>
                     <a href={control.url}>
@@ -75,6 +76,82 @@ const SocialButton = ({ cx, cy, ox, offset, control }) => {
                         strokeDasharray={bannerDist}
                         markerEnd="url(#my-marker-id)"
                     />
+
+                    <Line
+                        className="control-box-banner"
+                        sx={activated.cx - 23}
+                        sy={activated.cy - 18}
+                        ey={activated.cy + 18}
+                        ex={activated.cx - 23}
+                        stroke={activated.color}
+                        strokeWidth={0.5}
+                        strokeDasharray={bannerDist}
+                    />
+
+                    <Line
+                        className="control-box-banner"
+                        sx={activated.cx - 26}
+                        sy={activated.cy - 15}
+                        ey={activated.cy + 15}
+                        ex={activated.cx - 26}
+                        stroke={activated.color}
+                        strokeWidth={0.5}
+                        strokeDasharray={bannerDist}
+                    />
+
+                    <Line
+                        className="control-box-banner"
+                        sx={activated.cx - 29}
+                        sy={activated.cy - 10}
+                        ey={activated.cy + 10}
+                        ex={activated.cx - 29}
+                        stroke={activated.color}
+                        strokeWidth={0.5}
+                        strokeDasharray={bannerDist}
+                    />
+
+                    <Line
+                        className="control-box-banner"
+                        sx={activated.cx + 23}
+                        sy={activated.cy - 18}
+                        ey={activated.cy + 18}
+                        ex={activated.cx + 23}
+                        stroke={activated.color}
+                        strokeWidth={0.5}
+                        strokeDasharray={bannerDist}
+                    />
+
+                    <Line
+                        className="control-box-banner"
+                        sx={activated.cx + 26}
+                        sy={activated.cy - 15}
+                        ey={activated.cy + 15}
+                        ex={activated.cx + 26}
+                        stroke={activated.color}
+                        strokeWidth={0.5}
+                        strokeDasharray={bannerDist}
+                    />
+
+                    <Line
+                        className="control-box-banner"
+                        sx={activated.cx + 29}
+                        sy={activated.cy - 10}
+                        ey={activated.cy + 10}
+                        ex={activated.cx + 29}
+                        stroke={activated.color}
+                        strokeWidth={0.5}
+                        strokeDasharray={bannerDist}
+                    />
+
+                    <Line
+                        className="control-box-banner"
+                        sx={activated.cx}
+                        sy={activated.cy - 20}
+                        ey={activated.cy - 30}
+                        ex={activated.cx}
+                        stroke={activated.color}
+                        strokeDasharray={bannerDist}
+                    />
                 </animated.g>
             ) : null}
             {flag && activated ? (
@@ -98,7 +175,7 @@ SocialButton.propTypes = {
     ox: PropTypes.number,
     oy: PropTypes.number,
     offset: PropTypes.number,
-    control: PropTypes.object
+    control: PropTypes.object,
 };
 
 export default SocialButton;

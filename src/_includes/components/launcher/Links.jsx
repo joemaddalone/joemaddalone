@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text, Group, Rect, Line } from 'react-svg-path';
+import { Text, Group, Rect, Line, Quad } from 'react-svg-path';
 import { useSprings, animated } from 'react-spring';
 
 const wheres = [
@@ -49,7 +49,7 @@ const Links = ({ cx, cy }) => {
             onMouseOver: () => api.start((item) => item === index && setterActive(true, index)),
             onFocus: () => api.start((item) => item === index && setterActive(true, index)),
             onMouseOut: () => api.start((item) => item === index && setterActive(false, index)),
-            onBlur: () => api.start((item) => item === index && setterActive(false, index))
+            onBlur: () => api.start((item) => item === index && setterActive(false, index)),
         };
     };
 
@@ -59,6 +59,26 @@ const Links = ({ cx, cy }) => {
                 const len = wheres[i].txt.length * 11;
                 return (
                     <animated.g key={i} className="control-box link" strokeDashoffset={n.x}>
+                        <Line
+                            className="highlighter"
+                            sx={-len / 2}
+                            sy={i * 30 + 3}
+                            ex={len / 2}
+                            ey={i * 30}
+                            stroke={wheres[i].color}
+                            strokeWidth={4}
+                        />
+                        <Quad
+                            className="highlighter"
+                            sx={-len / 2}
+                            sy={i * 30 + 5}
+                            ex={len / 2}
+                            ey={i * 30 + 5}
+                            cx={0}
+                            cy={i * 30 - 5}
+                            stroke={wheres[i].color}
+                            fill="none"
+                        />
                         <a href={wheres[i].url}>
                             <Rect
                                 tabIndex={0}
@@ -68,18 +88,8 @@ const Links = ({ cx, cy }) => {
                                 height={25}
                                 stroke="transparent"
                                 strokeWidth={0.5}
-                                radius={5}
                                 fill="#eee"
                                 {...activator(i)}>
-                                <Line
-                                    className="highlighter"
-                                    sx={-len / 2}
-                                    sy={i * 30}
-                                    ex={len / 2}
-                                    ey={i * 30}
-                                    stroke={wheres[i].color}
-                                    strokeWidth={3}
-                                />
                                 <Text fill={n.color} dy={2} className="middle">
                                     {wheres[i].txt}
                                 </Text>

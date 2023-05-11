@@ -21,7 +21,7 @@ body, html {
 
 .control-box.link path {
 	stroke-width: 18;
-	opacity: 0.6;
+	/* opacity: 0.6; */
 }
 
 .control-box.link path.highlighter {
