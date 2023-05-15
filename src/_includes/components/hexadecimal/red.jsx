@@ -84,7 +84,7 @@ export default function App() {
             style={{ maxWidth: 800 }}>
             <MarkerTriangle id="my-marker-id" />
             {edges.map(({ points }, i) => {
-                return <Polyline key={i} points={points.map((p) => Object.values(p))} stroke="#666" fill="none" />;
+                return <Polyline key={i} points={points.map((p) => Object.values(p))} stroke="#666" fill="none" markerEnd="url(#my-marker-id)" />;
             })}
             {nodes.map(({ x, y, width, height, label, id }, index) => {
                 return (
