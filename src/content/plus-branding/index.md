@@ -13,7 +13,7 @@ permalink: '/{{ title | slugify }}/'
 </hgroup>
 
 
-I'm sure the context of this phenomena will be lost in due time, but in the year 2023 we have a plethora of services confirming to a peculiarly similar naming convention.
+A phenomena certain to be lost in the marketing machine mythos, in the year 2023 we have a plethora of services conforming to a peculiarly similar naming convention.
 
 * Apple TV +
 * Disney +
