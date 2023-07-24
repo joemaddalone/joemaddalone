@@ -1,7 +1,7 @@
 ---
 title: '2023 in the Books'
 layout: layout
-date: 2023-05-07
+date: 2023-12-31
 tags: ['post']
 excerpt: 'A bunch of things I read in 2023.'
 permalink: '/{{ title | slugify }}/'
