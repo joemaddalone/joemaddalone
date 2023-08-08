@@ -34,7 +34,13 @@ permalink: '/{{ title | slugify }}/'
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-gap: 15px;
-}
+  }
+
+  .seven .container {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-gap: 15px;
+  }
 </style>
 
 <hgroup>
@@ -199,6 +205,35 @@ gap. seems legit.
 ```
 
 <div class="ui segment six">
+<div class="container">
+<div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+</div>
+
+
+grid-template-* provides flexibility.  We can use percentages, fractions, repeat, and even auto.
+
+
+```css
+.container {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-gap: 15px;
+}
+```
+
+<div class="ui segment seven">
 <div class="container">
 <div>1</div>
   <div>2</div>
