@@ -39,7 +39,6 @@ permalink: '/{{ title | slugify }}/'
   .seven .container {
     display: grid;
     grid-template-columns: 20% auto 20%;
-    grid-gap: 15px;
   }
 
   .eight .container {
@@ -208,7 +207,6 @@ grid-template-* provides flexibility.  We can use percentages, fractions, repeat
 .container {
     display: grid;
     grid-template-columns: 20% auto 20%;
-    grid-gap: 15px;
 }
 ```
 
