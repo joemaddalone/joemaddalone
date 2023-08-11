@@ -41,6 +41,12 @@ permalink: '/{{ title | slugify }}/'
     grid-template-columns: 20% auto 20%;
     grid-gap: 15px;
   }
+
+  .eight .container {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-gap: 15px;
+  }
 </style>
 
 <hgroup>
@@ -123,6 +129,7 @@ Or how about 3 even 33.33% columns.
 }
 ```
 
+
 <div class="ui segment three">
 <div class="container">
 <div>1</div>
@@ -194,34 +201,6 @@ Still... I hate typing so... repeat to the rescue.
 </div>
 </div>
 
-gap. seems legit.
-
-```css
-.container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
-}
-```
-
-<div class="ui segment six">
-<div class="container">
-<div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>10</div>
-  <div>11</div>
-  <div>12</div>
-</div>
-</div>
-
-
 grid-template-* provides flexibility.  We can use percentages, fractions, repeat, and even auto.
 
 
@@ -249,3 +228,259 @@ grid-template-* provides flexibility.  We can use percentages, fractions, repeat
   <div>12</div>
 </div>
 </div>
+
+
+gap. seems legit.
+
+```css
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+```
+
+<div class="ui segment six">
+<div class="container">
+<div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+</div>
+
+Now we can hang some meaningful items on our grid positioned by column and row.
+
+<style>
+  .eight .container {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-gap: 15px;
+  }
+
+.eight .container .logo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .eight .container .nav {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .eight .container .aside {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .eight .container .main {
+    grid-column: 2;
+    grid-row: 1;
+  }
+</style>
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  grid-gap: 15px;
+}
+
+.logo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+nav {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+aside {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+main {
+  grid-column: 2;
+  grid-row: 1;
+}
+```
+
+<div class="ui segment eight">
+<div class="container">
+  <div class="logo">Logo</div>
+  <div class="nav">Nav</div>
+  <div class="main">Main</div>
+  <div class="aside">Aside</div>
+</div>
+</div>
+
+And adjust the row span of aside and main.
+
+<style>
+  .nine .container {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-gap: 15px;
+  }
+
+.nine .container .logo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .nine .container .nav {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .nine .container .aside {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .nine .container .main {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+</style>
+
+```css
+aside {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+main {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+```
+
+<div class="ui segment nine">
+<div class="container">
+  <div class="logo">Logo</div>
+  <div class="nav">Nav</div>
+  <div class="main">Main</div>
+  <div class="aside">Aside</div>
+</div>
+</div>
+
+
+Let's tweak the height of the grid.
+
+<style>
+  .ten .container {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-gap: 15px;
+    height: 400px;
+  }
+
+.ten .container .logo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .ten .container .nav {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .ten .container .aside {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .ten .container .main {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+</style>
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  grid-gap: 15px;
+  height: 400px;
+}
+```
+
+<div class="ui segment ten">
+<div class="container">
+  <div class="logo">Logo</div>
+  <div class="nav">Nav</div>
+  <div class="main">Main</div>
+  <div class="aside">Aside</div>
+</div>
+</div>
+
+A problem appears, the logo is way too tall.  We can utilize grid-template-rows to solve this.
+
+
+<style>
+  .eleven .container {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 60px auto;
+    grid-gap: 15px;
+    height: 400px;
+  }
+
+.eleven .container .logo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .eleven .container .nav {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .eleven .container .aside {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .eleven .container .main {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+</style>
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  grid-template-rows: 60px auto;
+  grid-gap: 15px;
+  height: 400px;
+}
+```
+
+<div class="ui segment eleven">
+<div class="container">
+  <div class="logo">Logo</div>
+  <div class="nav">Nav</div>
+  <div class="main">Main</div>
+  <div class="aside">Aside</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
