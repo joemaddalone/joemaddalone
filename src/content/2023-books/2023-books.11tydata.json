@@ -19,6 +19,18 @@
             "isbn": "9780679728757"
         },
         {
+            "title": "Broad band",
+            "subtitle": "The Untold Story of the Women Who Made the Internet",
+            "author": "Claire Lisa Evans",
+            "isbn": "9780735211759"
+        },
+        {
+            "title": "Caste",
+            "subtitle": "The Origins of Our Discontents",
+            "author": "Isabel Wilkerson",
+            "isbn": "9780593230251"
+        },
+        {
             "title": "Code",
             "subtitle": "The Hidden Language of Computer Hardware and Software",
             "author": "Charles Petzold",
@@ -47,7 +59,7 @@
         },
         {
             "title": "Moneyball",
-            "subtitle": "The Art of Winning an Unfair Ga",
+            "subtitle": "The Art of Winning an Unfair Game",
             "author": "Michael Lewis",
             "isbn": "9780393324815"
         },
