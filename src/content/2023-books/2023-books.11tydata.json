@@ -1,164 +1,169 @@
 {
-    "books2023": [
-        {
-            "title": "The Alignment Problem",
-            "subtitle": "Machine Learning and Human Values",
-            "author": "Brian Christian",
-            "isbn": "9780393635829"
-        },
-        {
-            "title": "American Midnight",
-            "subtitle": "Democracy's Forgotten Crisis, 1917-1921",
-            "author": "Adam Hochschild",
-            "isbn": "9780358442011"
-        },
-        {
-            "title": "Blood Merdian",
-            "subtitle": "Or the Evening Redness in the West",
-            "author": "Cormac McCarthy",
-            "isbn": "9780679728757"
-        },
-        {
-            "title": "Broad band",
-            "subtitle": "The Untold Story of the Women Who Made the Internet",
-            "author": "Claire Lisa Evans",
-            "isbn": "9780735211759"
-        },
-        {
-            "title": "Caste",
-            "subtitle": "The Origins of Our Discontents",
-            "author": "Isabel Wilkerson",
-            "isbn": "9780593230251"
-        },
-        {
-            "title": "Code",
-            "subtitle": "The Hidden Language of Computer Hardware and Software",
-            "author": "Charles Petzold",
-            "isbn": "9780137909100"
-        },
-        {
-            "title": "Electron in Action",
-            "author": "Steve Kinney",
-            "isbn": "9781617294143"
-        },
-        {
-            "title": "Empire of Pain",
-            "subtitle": "The Secret History of the Sackler Dynasty",
-            "author": "Patrick Radden Keefe",
-            "isbn": "9780385545693"
-        },
-        {
-            "title": "The Fourth Man",
-            "author": "Jeff McComsey",
-            "isbn": "9781953165350"
-        },
-        {
-            "title": "Heat 2",
-            "subtitle": "A Novel",
-            "author": "Michael Mann",
-            "isbn": "9780062653376"
-        },
-        {
-            "title": "Killshot",
-            "author": "Elmore Leonard",
-            "isbn": "9780060512248"
-        },
-        {
-            "title": "Moneyball",
-            "subtitle": "The Art of Winning an Unfair Game",
-            "author": "Michael Lewis",
-            "isbn": "9780393324815"
-        },
-        {
-            "title": "Monsters",
-            "subtitle": "A Fan's Dilemma",
-            "author": "Claire Dederer",
-            "isbn": "9780525655114"
-        },
-        {
-            "title": "Music: A Subversive History",
-            "author": "Ted Gioia",
-            "isbn": "9781541644366"
-        },
-        {
-            "title": "Quantum Bullshit",
-            "subtitle": "How to Ruin Your Life with Advice from Quantum Physics",
-            "author": "Chris Ferrie",
-            "isbn": "9781728266053"
-        },
-        {
-            "title": "Recessional",
-            "subtitle": "The Death of Free Speech and the Cost of a Free Lunch",
-            "author": "David Mamet",
-            "isbn": "9780063158993"
-        },
-        {
-            "title": "Rum Punch",
-            "subtitle": "A Novel",
-            "author": "Elmore Leonard",
-            "isbn": "9780062119827"
-        },
-        {
-            "title": "A Shortcut Through Time",
-            "subtitle": "The Path to the Quantum Computer",
-            "author": "George Johnson",
-            "isbn": "9780375726187"
-        },
-        {
-            "title": "Soonish",
-            "subtitle": "Ten Emerging Technologies That'll Improve and/or Ruin Everything",
-            "author": "Kelly & Zach Weinersmith",
-            "isbn": "9780399563829"
-        },
-        {
-            "title": "Steve Jobs",
-            "author": "Walter Isaacson",
-            "isbn": "9781451648539"
-        },
-        {
-            "title": "Upgrade",
-            "author": "Blake Crouch",
-            "isbn": "9780593157534"
-        },
-        {
-            "title": "What Is ChatGPT Doing ... and Why Does It Work?",
-            "author": "Stephen Wolfram",
-            "isbn": "9781579550813"
-        },
-        {
-            "title": "What You Do Is Who You Are",
-            "subtitle": "How to Create Your Business Culture",
-            "author": "Ben Horowitz",
-            "isbn": "9780008356118"
-        },
-        {
-            "title": "Wounds: Six Stories from the Border of Hell",
-            "author": "Nathan Ballingrud",
-            "isbn": "9781534449923"
-        },
-        {
-            "title": "Writing the Revolution",
-            "subtitle": "Wikipedia and the Survival of Facts in the Digital Age",
-            "author": "Heather Ford",
-            "isbn": "9780262046299"
-        },
-        {
-            "title": "Wager",
-            "subtitle": "A Tale of Shipwreck, Mutiny and Murder",
-            "author": "David Grann",
-            "isbn": "9780385534260"
-        },
-        {
-            "title": "You Are Not Expected to Understand This",
-            "subtitle": "How 26 Lines of Code Changed the World",
-            "author": "Torie Bosch",
-            "isbn": "9780691208480"
-        },
-        {
-            "title": "Zero",
-            "subtitle": "The Biography of a Dangerous Idea",
-            "author": "Charles Seife",
-            "isbn": "9780140296471"
-        }
-    ]
+  "books2023": [
+    {
+      "title": "The Alignment Problem",
+      "subtitle": "Machine Learning and Human Values",
+      "author": "Brian Christian",
+      "isbn": "9780393635829"
+    },
+    {
+      "title": "American Midnight",
+      "subtitle": "Democracy's Forgotten Crisis, 1917-1921",
+      "author": "Adam Hochschild",
+      "isbn": "9780358442011"
+    },
+    {
+      "title": "Blood Merdian",
+      "subtitle": "Or the Evening Redness in the West",
+      "author": "Cormac McCarthy",
+      "isbn": "9780679728757"
+    },
+    {
+      "title": "Broad band",
+      "subtitle": "The Untold Story of the Women Who Made the Internet",
+      "author": "Claire Lisa Evans",
+      "isbn": "9780735211759"
+    },
+    {
+      "title": "Caste",
+      "subtitle": "The Origins of Our Discontents",
+      "author": "Isabel Wilkerson",
+      "isbn": "9780593230251"
+    },
+    {
+      "title": "Code",
+      "subtitle": "The Hidden Language of Computer Hardware and Software",
+      "author": "Charles Petzold",
+      "isbn": "9780137909100"
+    },
+    {
+      "title": "Electron in Action",
+      "author": "Steve Kinney",
+      "isbn": "9781617294143"
+    },
+    {
+      "title": "Empire of Pain",
+      "subtitle": "The Secret History of the Sackler Dynasty",
+      "author": "Patrick Radden Keefe",
+      "isbn": "9780385545693"
+    },
+    {
+      "title": "The Fourth Man",
+      "author": "Jeff McComsey",
+      "isbn": "9781953165350"
+    },
+    {
+      "title": "Full Throttle ",
+      "author": "Joe Hill",
+      "isbn": "9780062200679"
+    },
+    {
+      "title": "Heat 2",
+      "subtitle": "A Novel",
+      "author": "Michael Mann",
+      "isbn": "9780062653376"
+    },
+    {
+      "title": "Killshot",
+      "author": "Elmore Leonard",
+      "isbn": "9780060512248"
+    },
+    {
+      "title": "Moneyball",
+      "subtitle": "The Art of Winning an Unfair Game",
+      "author": "Michael Lewis",
+      "isbn": "9780393324815"
+    },
+    {
+      "title": "Monsters",
+      "subtitle": "A Fan's Dilemma",
+      "author": "Claire Dederer",
+      "isbn": "9780525655114"
+    },
+    {
+      "title": "Music: A Subversive History",
+      "author": "Ted Gioia",
+      "isbn": "9781541644366"
+    },
+    {
+      "title": "Quantum Bullshit",
+      "subtitle": "How to Ruin Your Life with Advice from Quantum Physics",
+      "author": "Chris Ferrie",
+      "isbn": "9781728266053"
+    },
+    {
+      "title": "Recessional",
+      "subtitle": "The Death of Free Speech and the Cost of a Free Lunch",
+      "author": "David Mamet",
+      "isbn": "9780063158993"
+    },
+    {
+      "title": "Rum Punch",
+      "subtitle": "A Novel",
+      "author": "Elmore Leonard",
+      "isbn": "9780062119827"
+    },
+    {
+      "title": "A Shortcut Through Time",
+      "subtitle": "The Path to the Quantum Computer",
+      "author": "George Johnson",
+      "isbn": "9780375726187"
+    },
+    {
+      "title": "Soonish",
+      "subtitle": "Ten Emerging Technologies That'll Improve and/or Ruin Everything",
+      "author": "Kelly & Zach Weinersmith",
+      "isbn": "9780399563829"
+    },
+    {
+      "title": "Steve Jobs",
+      "author": "Walter Isaacson",
+      "isbn": "9781451648539"
+    },
+    {
+      "title": "Upgrade",
+      "author": "Blake Crouch",
+      "isbn": "9780593157534"
+    },
+    {
+      "title": "What Is ChatGPT Doing ... and Why Does It Work?",
+      "author": "Stephen Wolfram",
+      "isbn": "9781579550813"
+    },
+    {
+      "title": "What You Do Is Who You Are",
+      "subtitle": "How to Create Your Business Culture",
+      "author": "Ben Horowitz",
+      "isbn": "9780008356118"
+    },
+    {
+      "title": "Wounds: Six Stories from the Border of Hell",
+      "author": "Nathan Ballingrud",
+      "isbn": "9781534449923"
+    },
+    {
+      "title": "Writing the Revolution",
+      "subtitle": "Wikipedia and the Survival of Facts in the Digital Age",
+      "author": "Heather Ford",
+      "isbn": "9780262046299"
+    },
+    {
+      "title": "Wager",
+      "subtitle": "A Tale of Shipwreck, Mutiny and Murder",
+      "author": "David Grann",
+      "isbn": "9780385534260"
+    },
+    {
+      "title": "You Are Not Expected to Understand This",
+      "subtitle": "How 26 Lines of Code Changed the World",
+      "author": "Torie Bosch",
+      "isbn": "9780691208480"
+    },
+    {
+      "title": "Zero",
+      "subtitle": "The Biography of a Dangerous Idea",
+      "author": "Charles Seife",
+      "isbn": "9780140296471"
+    }
+  ]
 }

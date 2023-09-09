@@ -1,6 +1,7 @@
 // node scripts/book.mjs 978-1-60309-057-5
 
 import { downloadFile } from './download.mjs';
+import fs from 'fs';
 
 const isbn = process.argv[2];
 const getBook = async (isbn) => {
@@ -22,13 +23,31 @@ const formatted = {
     isbn: isbn,
 };
 
-console.log(JSON.stringify(formatted, null, 2));
+const updateBooks = (formatted) => {
+    const removeArticles = (str) => {
+        const words = str.split(' ');
+        if (words.length <= 1) return str;
+        if (words[0] == 'a' || words[0] == 'the' || words[0] == 'an') return words.splice(1).join(' ');
+        return str;
+    }
+    const books = JSON.parse(fs.readFileSync('../src/content/2023-books/2023-books.11tydata.json'));
+    for (let i = 0; i < books.books2023.length; i++) {
+        const aTitle = removeArticles(formatted.title.toLowerCase());
+        const bTitle = removeArticles(books.books2023[i].title.toLowerCase());
+        if (aTitle < bTitle) {
+            books.books2023.splice(i, 0, formatted);
+            break;
+        }
+    }
+    fs.writeFileSync('../src/content/2023-books/2023-books.11tydata.json', JSON.stringify(books, null, 2));
+};
 
-if(b[`ISBN:${isbn}`].cover) {
-	const cover = b[`ISBN:${isbn}`].cover.large;
-	downloadFile(cover, `../src/content/2023-books/${isbn}.jpg`);
-}
-else { 
-	console.log('no cover');
-	console.log(JSON.stringify(b, null, 2));
+updateBooks(formatted);
+
+if (b[`ISBN:${isbn}`].cover) {
+    const cover = b[`ISBN:${isbn}`].cover.large;
+    downloadFile(cover, `../src/content/2023-books/${isbn}.jpg`);
+} else {
+    console.log('no cover');
+    console.log(JSON.stringify(b, null, 2));
 }
