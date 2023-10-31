@@ -1,61 +1,29 @@
 import React from 'react';
-import { Circle, Segment, Line, Group } from 'react-svg-path';
-
+import PropTypes from 'prop-types';
+import { Circle, Group, RadialLines } from 'react-svg-path';
 
 const sketchStroke_0 = '#ddd';
 const sketchStroke_1 = '#004';
 const sketchFill_0 = '#eee';
+const size = 50;
 
-const Heading = ({ col_a, col_b, inner, outer, centralSize, cx, cy, children }) => {
+const Heading = ({ cx, cy, ox }) => {
     return (
         <Group>
-            <Segment
-				cx={cx}
-				cy={cy}
-                size={centralSize * 1.25}
-                startAngle={330}
-                endAngle={0}
-                fill="none"
-                strokeWidth="4"
-                stroke={sketchStroke_0}
-            />
-            <Line
-                sx={inner._11.x}
-                sy={inner._11.y}
-                ex={outer._11.x}
-                ey={outer._11.y}
-                strokeWidth="4"
-                stroke={sketchStroke_0}
-            />
-            <Line
-                sx={outer._11.x}
-                sy={outer._11.y}
-                ex={col_a.x}
-                ey={outer._11.y}
-                strokeWidth="4"
-                stroke={sketchStroke_0}>
-                <Circle size={80} ox={-40} fill="#fff" strokeWidth="4" stroke={sketchStroke_0} />
-                <Circle size={65} ox={-40} fill={sketchFill_0} strokeWidth="0" />
-            </Line>
-
+            <Circle cx={cx} cy={cy} size={size} ox={ox} fill="#fff" strokeWidth="4" stroke={sketchStroke_0} />
+            {/* <Circle cx={cx} cy={cy} size={65} ox={ox} fill={sketchFill_0} strokeWidth="0" /> */}
+            <Circle cx={cx} cy={cy} size={size} fill="none" className="line-high">
+                {/* <RadialLines innerSize={size} outerSize={size * 1.1} points={50} className="line-high rotate45" /> */}
+                <RadialLines innerSize={size * 0.8} outerSize={size} points={4} className="line-high rotate45" />
+            </Circle>
         </Group>
     );
 };
 
-
 Heading.propTypes = {
-    inner: PropTypes.object.isRequired,
-    outer: PropTypes.object.isRequired,
-	centralSize: PropTypes.number.isRequired,
-	cx: PropTypes.number,
-	cy: PropTypes.number,
-	col_a: PropTypes.object.isRequired,
-	col_b: PropTypes.object.isRequired,
+    cx: PropTypes.number,
+    cy: PropTypes.number,
+    ox: PropTypes.number,
 };
 
-
 export default Heading;
-
-
-
-

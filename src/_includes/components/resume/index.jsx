@@ -1,7 +1,9 @@
 import React from 'react';
-import Path, { Svg, Circle, Segment, Line, Text, Rect } from 'react-svg-path';
+import Path, { Svg, Circle, Segment, Line, Text, Rect, MarkerTriangle } from 'react-svg-path';
 import icons from './icons';
 import Sketch from './Sketch';
+import Heading from './Heading';
+import './resume.css';
 
 const socialLinks = [
     {
@@ -75,7 +77,8 @@ const textStyle = {
 
 const Resume = () => {
     return (
-        <Svg width={svgWidth} height={svgHeight}>
+        <Svg width={svgWidth} height={svgHeight} >
+            <MarkerTriangle markerStyle={{fill: sketchStroke_0}} id="arrow-marker" />
             <defs>
                 {socialLinks.map((control) => {
                     return <path id={control.id} key={control.id} d={control.icon} className="icon" />;
@@ -146,7 +149,7 @@ const Resume = () => {
             </Rect> */}
 
             {/* profile */}
-            <Circle cx={inner._0.x} cy={inner._0.y} size="10" fill={sketchStroke_0} />
+            <Circle  cx={inner._0.x} cy={inner._0.y} size="10" fill={sketchStroke_0} />
             <Segment
                 size={centralSize * 1.25}
                 startAngle={330}
@@ -170,8 +173,7 @@ const Resume = () => {
                 ey={outerMost._11.y}
                 strokeWidth="4"
                 stroke={sketchStroke_0}>
-                <Circle size={80} ox={-40} fill="#fff" strokeWidth="4" stroke={sketchStroke_0} />
-                <Circle size={65} ox={-40} fill={sketchFill_0} strokeWidth="0" />
+                <Heading ox={-40} />
             </Line>
 
             {/* skills */}
@@ -180,12 +182,11 @@ const Resume = () => {
                 startAngle={270}
                 endAngle={300}
                 fill="none"
-                strokeWidth="4"
+                strokeWidth="3"
                 stroke={sketchStroke_0}
             />
-            <Line sx={inner._9.x} sy={inner._9.y} ex={col_a.x} ey={inner._9.y} strokeWidth="4" stroke={sketchStroke_0}>
-                <Circle size={80} ox={-40} fill="#fff" strokeWidth="4" stroke={sketchStroke_0} />
-                <Circle size={65} ox={-40} fill={sketchFill_0} strokeWidth="0" />
+            <Line markerEnd="url(#arrow-marker)" sx={inner._9.x} sy={inner._9.y} ex={col_a.x} ey={inner._9.y} strokeWidth="4" stroke={sketchStroke_0}>
+                <Heading ox={-30} />
             </Line>
 
             {/* bottom left */}
@@ -205,8 +206,7 @@ const Resume = () => {
                 strokeWidth="4"
                 stroke={sketchStroke_0}>
                 <Line ex={col_a.x} ey={outerMost._6.y} strokeWidth="4" stroke={sketchStroke_0}>
-                    <Circle size={80} ox={-40} fill="#fff" strokeWidth="4" stroke={sketchStroke_0} />
-                    <Circle size={65} ox={-40} fill={sketchFill_0} strokeWidth="0" />
+                    <Heading ox={-40} />
                 </Line>
             </Line>
 
@@ -227,8 +227,7 @@ const Resume = () => {
                 strokeWidth="4"
                 stroke={sketchStroke_0}>
                 <Line ex={col_b.x} ey={outerMost._1.y} strokeWidth="4" stroke={sketchStroke_0}>
-                    <Circle size={80} ox={40} fill="#fff" strokeWidth="4" stroke={sketchStroke_0} />
-                    <Circle size={65} ox={40} fill={sketchFill_0} strokeWidth="0" />
+                    <Heading ox={40} />
                 </Line>
             </Line>
 
@@ -249,8 +248,7 @@ const Resume = () => {
                 strokeWidth="4"
                 stroke={sketchStroke_0}>
                 <Line ex={col_b.x} ey={outer._4.y} strokeWidth="4" stroke={sketchStroke_0}>
-                    <Circle size={80} ox={40} fill="#fff" strokeWidth="4" stroke={sketchStroke_0} />
-                    <Circle size={65} ox={40} fill={sketchFill_0} strokeWidth="0" />
+                <Heading ox={40} />
                 </Line>
             </Line>
         </Svg>
