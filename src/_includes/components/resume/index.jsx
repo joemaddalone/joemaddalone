@@ -77,8 +77,8 @@ const textStyle = {
 
 const Resume = () => {
     return (
-        <Svg width={svgWidth} height={svgHeight} >
-            <MarkerTriangle markerStyle={{fill: sketchStroke_0}} id="arrow-marker" />
+        <Svg width={svgWidth} height={svgHeight}>
+            <MarkerTriangle markerStyle={{ fill: sketchStroke_0 }} id="arrow-marker" />
             <defs>
                 {socialLinks.map((control) => {
                     return <path id={control.id} key={control.id} d={control.icon} className="icon" />;
@@ -149,7 +149,7 @@ const Resume = () => {
             </Rect> */}
 
             {/* profile */}
-            <Circle  cx={inner._0.x} cy={inner._0.y} size="10" fill={sketchStroke_0} />
+            <Circle cx={inner._0.x} cy={inner._0.y} size="10" fill={sketchStroke_0} />
             <Segment
                 size={centralSize * 1.25}
                 startAngle={330}
@@ -167,6 +167,7 @@ const Resume = () => {
                 stroke={sketchStroke_0}
             />
             <Line
+                markerEnd="url(#arrow-marker)"
                 sx={outerMost._11.x}
                 sy={outerMost._11.y}
                 ex={col_a.x}
@@ -185,8 +186,15 @@ const Resume = () => {
                 strokeWidth="3"
                 stroke={sketchStroke_0}
             />
-            <Line markerEnd="url(#arrow-marker)" sx={inner._9.x} sy={inner._9.y} ex={col_a.x} ey={inner._9.y} strokeWidth="4" stroke={sketchStroke_0}>
-                <Heading ox={-30} />
+            <Line
+                markerEnd="url(#arrow-marker)"
+                sx={inner._9.x}
+                sy={inner._9.y}
+                ex={col_a.x}
+                ey={inner._9.y}
+                strokeWidth="4"
+                stroke={sketchStroke_0}>
+                <Heading ox={-40} />
             </Line>
 
             {/* bottom left */}
@@ -205,7 +213,12 @@ const Resume = () => {
                 ey={outerMost._6.y}
                 strokeWidth="4"
                 stroke={sketchStroke_0}>
-                <Line ex={col_a.x} ey={outerMost._6.y} strokeWidth="4" stroke={sketchStroke_0}>
+                <Line
+                    markerEnd="url(#arrow-marker)"
+                    ex={col_a.x}
+                    ey={outerMost._6.y}
+                    strokeWidth="4"
+                    stroke={sketchStroke_0}>
                     <Heading ox={-40} />
                 </Line>
             </Line>
@@ -226,7 +239,12 @@ const Resume = () => {
                 ey={outerMost._1.y}
                 strokeWidth="4"
                 stroke={sketchStroke_0}>
-                <Line ex={col_b.x} ey={outerMost._1.y} strokeWidth="4" stroke={sketchStroke_0}>
+                <Line
+                    markerEnd="url(#arrow-marker)"
+                    ex={col_b.x}
+                    ey={outerMost._1.y}
+                    strokeWidth="4"
+                    stroke={sketchStroke_0}>
                     <Heading ox={40} />
                 </Line>
             </Line>
@@ -247,8 +265,13 @@ const Resume = () => {
                 ey={outer._4.y}
                 strokeWidth="4"
                 stroke={sketchStroke_0}>
-                <Line ex={col_b.x} ey={outer._4.y} strokeWidth="4" stroke={sketchStroke_0}>
-                <Heading ox={40} />
+                <Line
+                    markerEnd="url(#arrow-marker)"
+                    ex={col_b.x}
+                    ey={outer._4.y}
+                    strokeWidth="4"
+                    stroke={sketchStroke_0}>
+                    <Heading ox={40} />
                 </Line>
             </Line>
         </Svg>

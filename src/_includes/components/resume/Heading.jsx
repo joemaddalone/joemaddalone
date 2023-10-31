@@ -5,7 +5,7 @@ import { Circle, Group, RadialLines } from 'react-svg-path';
 const sketchStroke_0 = '#ddd';
 const sketchStroke_1 = '#004';
 const sketchFill_0 = '#eee';
-const size = 50;
+const size = 70;
 
 const Heading = ({ cx, cy, ox }) => {
     return (
