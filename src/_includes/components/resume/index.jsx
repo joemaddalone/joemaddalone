@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Path, { Group, Svg, Circle, Segment, Line, Text, Rect, MarkerTriangle } from 'react-svg-path';
+import Path, { Group, Svg, Circle, Segment, Line, Text, Rect, MarkerTriangle, SymX} from 'react-svg-path';
 import icons from './icons';
 import Sketch from './Sketch';
 import Heading from './Heading';
@@ -167,7 +167,6 @@ const Resume = () => {
                     <Circle cx={inner._8.x} cy={inner._8.y} size="10" fill={sketchStroke_0} />
                     <Circle cx={inner._10.x} cy={inner._10.y} size="10" fill={sketchStroke_0} />
 
-
                     <Circle cx={inner._0.x} cy={inner._0.y} size="10" fill={sketchStroke_0} />
                     <Segment
                         size={centralSize * 1.25}
@@ -213,7 +212,7 @@ const Resume = () => {
                         ey={inner._9.y}
                         strokeWidth="4"
                         stroke={sketchStroke_0}>
-                        <Heading ox={-40} />
+                        <Heading ox={-40} click={() => updateCS(500)} />
                     </Line>
 
                     {/* bottom left */}
@@ -238,7 +237,7 @@ const Resume = () => {
                             ey={outerMost._6.y}
                             strokeWidth="4"
                             stroke={sketchStroke_0}>
-                            <Heading ox={-40} />
+                            <Heading ox={-40} click={() => updateCS(500)} />
                         </Line>
                     </Line>
 
@@ -264,7 +263,7 @@ const Resume = () => {
                             ey={outerMost._1.y}
                             strokeWidth="4"
                             stroke={sketchStroke_0}>
-                            <Heading ox={40} />
+                            <Heading ox={40} click={() => updateCS(500)} />
                         </Line>
                     </Line>
 
@@ -290,10 +289,15 @@ const Resume = () => {
                             ey={outer._4.y}
                             strokeWidth="4"
                             stroke={sketchStroke_0}>
-                            <Heading ox={40} />
+                            <Heading ox={40} click={() => updateCS(500)} />
                         </Line>
                     </Line>
                 </Group>
+            )}
+            {centralSize !== 180 && (
+            <Circle onClick={() => setCentralSize(180)} size={25} oy={30} fill="#fff" stroke="#222">
+                <SymX width={10} height={10} stroke="#222" style={{pointerEvents: 'none'}} />
+                </Circle>
             )}
         </Svg>
     );
