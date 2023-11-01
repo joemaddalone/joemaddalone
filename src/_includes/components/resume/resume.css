@@ -4,6 +4,11 @@
   --target-low: #1c354f;
 }
 
+
+#resume-svg path {
+	transition: all 0.25s ease-in-out;
+}
+
 .rotate45 {
   transform-box: fill-box;
   transform-origin: center;
@@ -40,4 +45,8 @@
 }
 .fill-high {
    fill: var(--target-high)
+}
+
+p, b {
+	font-family: monospace;
 }

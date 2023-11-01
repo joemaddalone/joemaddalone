@@ -1,5 +1,5 @@
-import React from 'react';
-import Path, { Svg, Circle, Segment, Line, Text, Rect, MarkerTriangle } from 'react-svg-path';
+import React, { useState } from 'react';
+import Path, { Group, Svg, Circle, Segment, Line, Text, Rect, MarkerTriangle } from 'react-svg-path';
 import icons from './icons';
 import Sketch from './Sketch';
 import Heading from './Heading';
@@ -44,13 +44,6 @@ const socialLinks = [
     },
 ];
 
-const svgWidth = 875; // window.innerWidth - 25;
-const svgHeight = 875;
-const centralSize = 180;
-const cx = svgWidth / 2;
-const cy = svgHeight / 2;
-const offset = 1.6;
-
 const makeClockPoints = (cx, cy, size) => {
     return Array.from({ length: 12 }).reduce((accum, cur, i) => {
         const angle = i * 30;
@@ -58,13 +51,6 @@ const makeClockPoints = (cx, cy, size) => {
         return { ...accum, [`_${i}`]: point };
     }, {});
 };
-
-const inner = makeClockPoints(cx, cy, centralSize / offset);
-const outer = makeClockPoints(cx, cy, centralSize);
-const outerMost = makeClockPoints(cx, cy, centralSize * 1.5);
-
-const col_a = { x: cx - 250 };
-const col_b = { x: cx + 250 };
 
 const sketchStroke_0 = '#ddd';
 const sketchStroke_1 = '#004';
@@ -76,8 +62,24 @@ const textStyle = {
 };
 
 const Resume = () => {
+    const [centralSize, setCentralSize] = useState(180);
+    const svgWidth = 875; // window.innerWidth - 25;
+    const svgHeight = 875;
+    const cx = svgWidth / 2;
+    const cy = svgHeight / 2;
+    const offset = 1.6;
+    const inner = makeClockPoints(cx, cy, centralSize / offset);
+    const outer = makeClockPoints(cx, cy, centralSize);
+    const outerMost = makeClockPoints(cx, cy, centralSize * 1.5);
+    const col_a = { x: cx - 250 };
+    const col_b = { x: cx + 250 };
+
+    const updateCS = (val) => {
+        console.log('SET!!!');
+        setCentralSize(val);
+    };
     return (
-        <Svg width={svgWidth} height={svgHeight}>
+        <Svg width={svgWidth} height={svgHeight} id="resume-svg">
             <MarkerTriangle markerStyle={{ fill: sketchStroke_0 }} id="arrow-marker" />
             <defs>
                 {socialLinks.map((control) => {
@@ -88,10 +90,6 @@ const Resume = () => {
             <Circle size={centralSize} fill="none" strokeWidth="4" stroke={sketchStroke_0}>
                 <Text style={{ ...textStyle }}>interface</Text>
             </Circle>
-            <Circle cx={inner._2.x} cy={inner._2.y} size="10" fill={sketchStroke_0} />
-            <Circle cx={inner._3.x} cy={inner._3.y} size="10" fill={sketchStroke_0} />
-            <Circle cx={inner._8.x} cy={inner._8.y} size="10" fill={sketchStroke_0} />
-            <Circle cx={inner._10.x} cy={inner._10.y} size="10" fill={sketchStroke_0} />
 
             {/* <Rect
                 cx={col_a.x + 30}
@@ -101,7 +99,13 @@ const Resume = () => {
                 fill="none"
                 strokeWidth="0"
                 stroke={sketchStroke_0}>
-                <Text style={{ ...textStyle }}>CONTENT</Text>
+                <foreignObject x={col_a.x - 70} y={outerMost._11.y + 45} width="225" height="140">
+                    <b>Heading</b>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum distinctio cumque maiores, eius
+                        fuga tempore nesciunt quibusdam quidem laboriosam reiciendis asperiores?
+                    </p>
+                </foreignObject>
             </Rect> */}
 
             {/* <Rect
@@ -112,7 +116,14 @@ const Resume = () => {
                 fill="none"
                 strokeWidth="0"
                 stroke={sketchStroke_0}>
-                <Text style={{ ...textStyle }}>CONTENT</Text>
+                <foreignObject x={col_a.x - 70} y={outerMost._9.y + 45} width="225" height="180">
+                    <b>Profile</b>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum distinctio cumque maiores, eius
+                        fuga tempore nesciunt quibusdam quidem laboriosam reiciendis asperiores? Quaerat, atque illo
+                        perspiciatis sit aut dolor numquam architecto
+                    </p>
+                </foreignObject>
             </Rect> */}
 
             {/* <Rect
@@ -149,131 +160,141 @@ const Resume = () => {
             </Rect> */}
 
             {/* profile */}
-            <Circle cx={inner._0.x} cy={inner._0.y} size="10" fill={sketchStroke_0} />
-            <Segment
-                size={centralSize * 1.25}
-                startAngle={330}
-                endAngle={0}
-                fill="none"
-                strokeWidth="4"
-                stroke={sketchStroke_0}
-            />
-            <Line
-                sx={inner._11.x}
-                sy={inner._11.y}
-                ex={outerMost._11.x}
-                ey={outerMost._11.y}
-                strokeWidth="4"
-                stroke={sketchStroke_0}
-            />
-            <Line
-                markerEnd="url(#arrow-marker)"
-                sx={outerMost._11.x}
-                sy={outerMost._11.y}
-                ex={col_a.x}
-                ey={outerMost._11.y}
-                strokeWidth="4"
-                stroke={sketchStroke_0}>
-                <Heading ox={-40} />
-            </Line>
+            {centralSize === 180 && (
+                <Group>
+                    <Circle cx={inner._2.x} cy={inner._2.y} size="10" fill={sketchStroke_0} />
+                    <Circle cx={inner._3.x} cy={inner._3.y} size="10" fill={sketchStroke_0} />
+                    <Circle cx={inner._8.x} cy={inner._8.y} size="10" fill={sketchStroke_0} />
+                    <Circle cx={inner._10.x} cy={inner._10.y} size="10" fill={sketchStroke_0} />
 
-            {/* skills */}
-            <Segment
-                size={centralSize * 1.25}
-                startAngle={270}
-                endAngle={300}
-                fill="none"
-                strokeWidth="3"
-                stroke={sketchStroke_0}
-            />
-            <Line
-                markerEnd="url(#arrow-marker)"
-                sx={inner._9.x}
-                sy={inner._9.y}
-                ex={col_a.x}
-                ey={inner._9.y}
-                strokeWidth="4"
-                stroke={sketchStroke_0}>
-                <Heading ox={-40} />
-            </Line>
 
-            {/* bottom left */}
-            <Segment
-                size={centralSize * 1.25}
-                startAngle={210}
-                endAngle={240}
-                fill="none"
-                strokeWidth="4"
-                stroke={sketchStroke_0}
-            />
-            <Line
-                sx={inner._7.x}
-                sy={inner._7.y}
-                ex={outerMost._7.x}
-                ey={outerMost._6.y}
-                strokeWidth="4"
-                stroke={sketchStroke_0}>
-                <Line
-                    markerEnd="url(#arrow-marker)"
-                    ex={col_a.x}
-                    ey={outerMost._6.y}
-                    strokeWidth="4"
-                    stroke={sketchStroke_0}>
-                    <Heading ox={-40} />
-                </Line>
-            </Line>
+                    <Circle cx={inner._0.x} cy={inner._0.y} size="10" fill={sketchStroke_0} />
+                    <Segment
+                        size={centralSize * 1.25}
+                        startAngle={330}
+                        endAngle={0}
+                        fill="none"
+                        strokeWidth="4"
+                        stroke={sketchStroke_0}
+                    />
+                    <Line
+                        sx={inner._11.x}
+                        sy={inner._11.y}
+                        ex={outerMost._11.x}
+                        ey={outerMost._11.y}
+                        strokeWidth="4"
+                        stroke={sketchStroke_0}
+                    />
+                    <Line
+                        markerEnd="url(#arrow-marker)"
+                        sx={outerMost._11.x}
+                        sy={outerMost._11.y}
+                        ex={col_a.x}
+                        ey={outerMost._11.y}
+                        strokeWidth="4"
+                        stroke={sketchStroke_0}>
+                        <Heading ox={-40} click={() => updateCS(500)} />
+                    </Line>
 
-            {/* work */}
-            <Segment
-                size={centralSize * 1.25}
-                startAngle={30}
-                endAngle={60}
-                fill="none"
-                strokeWidth="4"
-                stroke={sketchStroke_0}
-            />
-            <Line
-                sx={inner._1.x}
-                sy={inner._1.y}
-                ex={outerMost._1.x}
-                ey={outerMost._1.y}
-                strokeWidth="4"
-                stroke={sketchStroke_0}>
-                <Line
-                    markerEnd="url(#arrow-marker)"
-                    ex={col_b.x}
-                    ey={outerMost._1.y}
-                    strokeWidth="4"
-                    stroke={sketchStroke_0}>
-                    <Heading ox={40} />
-                </Line>
-            </Line>
+                    {/* skills */}
+                    <Segment
+                        size={centralSize * 1.25}
+                        startAngle={270}
+                        endAngle={300}
+                        fill="none"
+                        strokeWidth="3"
+                        stroke={sketchStroke_0}
+                    />
+                    <Line
+                        markerEnd="url(#arrow-marker)"
+                        sx={inner._9.x}
+                        sy={inner._9.y}
+                        ex={col_a.x}
+                        ey={inner._9.y}
+                        strokeWidth="4"
+                        stroke={sketchStroke_0}>
+                        <Heading ox={-40} />
+                    </Line>
 
-            {/* bottom right */}
-            <Segment
-                size={centralSize * 1.25}
-                startAngle={90}
-                endAngle={4 * 30}
-                fill="none"
-                strokeWidth="4"
-                stroke={sketchStroke_0}
-            />
-            <Line
-                sx={inner._4.x}
-                sy={inner._4.y}
-                ex={outer._4.x}
-                ey={outer._4.y}
-                strokeWidth="4"
-                stroke={sketchStroke_0}>
-                <Line
-                    markerEnd="url(#arrow-marker)"
-                    ex={col_b.x}
-                    ey={outer._4.y}
-                    strokeWidth="4"
-                    stroke={sketchStroke_0}>
-                    <Heading ox={40} />
-                </Line>
-            </Line>
+                    {/* bottom left */}
+                    <Segment
+                        size={centralSize * 1.25}
+                        startAngle={210}
+                        endAngle={240}
+                        fill="none"
+                        strokeWidth="4"
+                        stroke={sketchStroke_0}
+                    />
+                    <Line
+                        sx={inner._7.x}
+                        sy={inner._7.y}
+                        ex={outerMost._7.x}
+                        ey={outerMost._6.y}
+                        strokeWidth="4"
+                        stroke={sketchStroke_0}>
+                        <Line
+                            markerEnd="url(#arrow-marker)"
+                            ex={col_a.x}
+                            ey={outerMost._6.y}
+                            strokeWidth="4"
+                            stroke={sketchStroke_0}>
+                            <Heading ox={-40} />
+                        </Line>
+                    </Line>
+
+                    {/* work */}
+                    <Segment
+                        size={centralSize * 1.25}
+                        startAngle={30}
+                        endAngle={60}
+                        fill="none"
+                        strokeWidth="4"
+                        stroke={sketchStroke_0}
+                    />
+                    <Line
+                        sx={inner._1.x}
+                        sy={inner._1.y}
+                        ex={outerMost._1.x}
+                        ey={outerMost._1.y}
+                        strokeWidth="4"
+                        stroke={sketchStroke_0}>
+                        <Line
+                            markerEnd="url(#arrow-marker)"
+                            ex={col_b.x}
+                            ey={outerMost._1.y}
+                            strokeWidth="4"
+                            stroke={sketchStroke_0}>
+                            <Heading ox={40} />
+                        </Line>
+                    </Line>
+
+                    {/* bottom right */}
+                    <Segment
+                        size={centralSize * 1.25}
+                        startAngle={90}
+                        endAngle={4 * 30}
+                        fill="none"
+                        strokeWidth="4"
+                        stroke={sketchStroke_0}
+                    />
+                    <Line
+                        sx={inner._4.x}
+                        sy={inner._4.y}
+                        ex={outer._4.x}
+                        ey={outer._4.y}
+                        strokeWidth="4"
+                        stroke={sketchStroke_0}>
+                        <Line
+                            markerEnd="url(#arrow-marker)"
+                            ex={col_b.x}
+                            ey={outer._4.y}
+                            strokeWidth="4"
+                            stroke={sketchStroke_0}>
+                            <Heading ox={40} />
+                        </Line>
+                    </Line>
+                </Group>
+            )}
         </Svg>
     );
 };
