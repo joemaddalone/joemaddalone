@@ -10,7 +10,7 @@ const size = 70;
 const Heading = ({ cx, cy, ox,click }) => {
     return (
         <Group>
-            <Circle style={{cursor: 'pointer'}} onClick={click} cx={cx} cy={cy} size={size} ox={ox} fill="transparent" strokeWidth="4" stroke={sketchStroke_0} />
+            <Circle class="pointer" onClick={click} cx={cx} cy={cy} size={size} ox={ox} fill="transparent" strokeWidth="4" stroke={sketchStroke_0} />
             {/* <Circle cx={cx} cy={cy} size={65} ox={ox} fill={sketchFill_0} strokeWidth="0" /> */}
             <Circle cx={cx} cy={cy} size={size} fill="none">
                 {/* <RadialLines innerSize={size} outerSize={size * 1.1} points={50} className="line-high rotate45" /> */}

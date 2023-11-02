@@ -50,3 +50,8 @@
 p, b {
 	font-family: monospace;
 }
+
+
+.pointer {
+  cursor: pointer;
+}

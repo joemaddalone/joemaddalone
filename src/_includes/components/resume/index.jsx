@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Path, { Group, Svg, Circle, Segment, Line, Text, Rect, MarkerTriangle, SymX} from 'react-svg-path';
+import Path, { Group, Svg, Circle, Segment, Line, Text, Rect, MarkerTriangle, SymX, RadialLines } from 'react-svg-path';
 import icons from './icons';
 import Sketch from './Sketch';
 import Heading from './Heading';
@@ -191,9 +191,7 @@ const Resume = () => {
                         ex={col_a.x}
                         ey={outerMost._11.y}
                         strokeWidth="4"
-                        stroke={sketchStroke_0}>
-                        <Heading ox={-40} click={() => updateCS(500)} />
-                    </Line>
+                        stroke={sketchStroke_0}></Line>
 
                     {/* skills */}
                     <Segment
@@ -211,9 +209,7 @@ const Resume = () => {
                         ex={col_a.x}
                         ey={inner._9.y}
                         strokeWidth="4"
-                        stroke={sketchStroke_0}>
-                        <Heading ox={-40} click={() => updateCS(500)} />
-                    </Line>
+                        stroke={sketchStroke_0}></Line>
 
                     {/* bottom left */}
                     <Segment
@@ -236,9 +232,8 @@ const Resume = () => {
                             ex={col_a.x}
                             ey={outerMost._6.y}
                             strokeWidth="4"
-                            stroke={sketchStroke_0}>
-                            <Heading ox={-40} click={() => updateCS(500)} />
-                        </Line>
+                            stroke={sketchStroke_0}
+                        />
                     </Line>
 
                     {/* work */}
@@ -262,9 +257,8 @@ const Resume = () => {
                             ex={col_b.x}
                             ey={outerMost._1.y}
                             strokeWidth="4"
-                            stroke={sketchStroke_0}>
-                            <Heading ox={40} click={() => updateCS(500)} />
-                        </Line>
+                            stroke={sketchStroke_0}
+                        />
                     </Line>
 
                     {/* bottom right */}
@@ -288,16 +282,41 @@ const Resume = () => {
                             ex={col_b.x}
                             ey={outer._4.y}
                             strokeWidth="4"
-                            stroke={sketchStroke_0}>
-                            <Heading ox={40} click={() => updateCS(500)} />
-                        </Line>
+                            stroke={sketchStroke_0}
+                        />
                     </Line>
                 </Group>
             )}
+            {centralSize === 180 && (
+                <Group>
+                    <Heading cx={col_b.x + 40} cy={outerMost._1.y} click={() => updateCS(500)} />
+                    <Heading cx={col_b.x + 40} cy={outer._4.y} click={() => updateCS(500)} />
+                    <Heading cx={col_a.x - 40} cy={outerMost._6.y} click={() => updateCS(500)} />
+                    <Heading cx={col_a.x - 40} cy={outerMost._9.y} click={() => updateCS(500)} />
+                    <Heading cx={col_a.x - 40} cy={outerMost._11.y} click={() => updateCS(500)} />
+                </Group>
+            )}
+
             {centralSize !== 180 && (
-            <Circle onClick={() => setCentralSize(180)} size={25} oy={30} fill="#fff" stroke="#222">
-                <SymX width={10} height={10} stroke="#222" style={{pointerEvents: 'none'}} />
-                </Circle>
+                <Group>
+                    <RadialLines
+                        innerSize={centralSize * 1.1}
+                        outerSize={centralSize * 1.15}
+                        points={12}
+                        cx={cx}
+                        cy={cy}
+                        stroke="#999"
+                    />
+                    <Circle
+                        onClick={() => setCentralSize(180)}
+                        size={25}
+                        cy={cy - 50}
+                        class="pointer"
+                        fill="#fff"
+                        stroke="#222">
+                        <SymX width={10} height={10} stroke="#222" style={{ pointerEvents: 'none' }} />
+                    </Circle>
+                </Group>
             )}
         </Svg>
     );
