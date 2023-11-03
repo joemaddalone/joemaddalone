@@ -5,9 +5,9 @@ import { Circle, Group, RadialLines } from 'react-svg-path';
 const sketchStroke_0 = '#ddd';
 const sketchStroke_1 = '#004';
 const sketchFill_0 = '#eee';
-const size = 70;
+// const size = 70;
 
-const Heading = ({ cx, cy, ox,click }) => {
+const Heading = ({ cx, cy, ox,click, size }) => {
     return (
         <Group>
             <Circle class="pointer" onClick={click} cx={cx} cy={cy} size={size} ox={ox} fill="transparent" strokeWidth="4" stroke={sketchStroke_0} />
@@ -25,6 +25,7 @@ Heading.propTypes = {
     cy: PropTypes.number,
     ox: PropTypes.number,
     click: PropTypes.func,
+    size: PropTypes.number,
 };
 
 export default Heading;
