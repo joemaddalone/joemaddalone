@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import Path, { Group, Svg, Circle, Segment, Line, Text, Rect, MarkerTriangle, SymX, RadialLines } from 'react-svg-path';
+import Path, {
+    Group,
+    Svg,
+    Circle,
+    Segment,
+    Line,
+    Text,
+    RoundedRect,
+    MarkerTriangle,
+    SymX,
+    RadialLines,
+} from 'react-svg-path';
 import icons from './icons';
 import Sketch from './Sketch';
 import Heading from './Heading';
@@ -24,9 +35,43 @@ const textStyle = {
     textAnchor: 'middle',
 };
 
+const section = {
+    a: {
+        label: 'a',
+        w: 500,
+        h: 300,
+        cs: 225,
+    },
+    b: {
+        label: 'b',
+        w: 250,
+        h: 400,
+        cs: 180,
+    },
+    c: {
+        label: 'c',
+        w: 525,
+        h: 400,
+        cs: 225,
+    },
+    d: {
+        label: 'd',
+        w: 550,
+        h: 250,
+        cs: 225,
+    },
+    e: {
+        label: 'e',
+        w: 500,
+        h: 180,
+        cs: 225,
+    },
+};
+
 const Resume = () => {
     const [centralSize, setCentralSize] = useState(180);
     const [activated, setActivated] = useState(false);
+    const [activeSection, setSection] = useState(null);
     const svgWidth = 810; // window.innerWidth - 25;
     const svgHeight = 800;
     const cx = svgWidth / 2;
@@ -40,23 +85,33 @@ const Resume = () => {
 
     const headingSpring = useSpring({
         config: { duration: activated ? 200 : 0 },
-        to: { rh: activated ? 0 : 80 },
-        from: { rh: activated ? 80 : 50 },
-        onRest: () => setCentralSize(activated ? 400 : 180),
+        to: { rh: activated ? 20 : 80 },
+        from: { rh: activated ? 80 : 20 },
+        onRest: () => {
+            setCentralSize(activated ? activeSection.cs : 180)
+            setSection(activated ? activeSection : null);
+        }
     });
     const AnimatedH = animated(Heading);
 
-    const updateCS = (val) => {
-        console.log('SET!!!');
-        setCentralSize(val);
+    const updateSection = (val) => {
+        setSection(val);
+        setActivated(true);
     };
     return (
         <Svg width={svgWidth} height={svgHeight} id="resume-svg">
             <MarkerTriangle markerStyle={{ fill: sketchStroke_0 }} id="arrow-marker" />
-            <Sketch col_a={col_a} col_b={col_b} centralSize={centralSize} />
-            <Circle size={centralSize} fill="none" strokeWidth="4" stroke={sketchStroke_0}>
-                <Text style={{ ...textStyle }}>interface</Text>
-            </Circle>
+            {/* <Sketch col_a={col_a} col_b={col_b} centralSize={centralSize} /> */}
+            {!activated && (
+                <RadialLines
+                    innerSize={centralSize * 0.8}
+                    outerSize={centralSize * 0.9}
+                    points={8}
+                    cx={cx}
+                    cy={cy}
+                    stroke="#999"
+                />
+            )}
 
             {/* <Rect
                 cx={col_a.x + 30}
@@ -127,7 +182,7 @@ const Resume = () => {
             </Rect> */}
 
             {/* profile */}
-            {centralSize === 180 && (
+            {200 !== 180 && (
                 <Pointers
                     inner={inner}
                     outer={outer}
@@ -137,51 +192,61 @@ const Resume = () => {
                     centralSize={centralSize}
                 />
             )}
-            {centralSize === 180 && (
+            {180 === 180 && (
                 <Group>
                     <AnimatedH
                         size={headingSpring.rh}
                         cx={col_b.x + 40}
                         cy={outerMost._1.y}
-                        click={() => setActivated(true)}
+                        click={() => updateSection(section.a)}
                     />
                     <AnimatedH
                         size={headingSpring.rh}
                         cx={col_b.x + 40}
                         cy={outer._4.y}
-                        click={() => setActivated(true)}
+                        click={() => updateSection(section.b)}
                     />
                     <AnimatedH
                         size={headingSpring.rh}
                         cx={col_a.x - 40}
                         cy={outerMost._6.y}
-                        click={() => setActivated(true)}
+                        click={() => updateSection(section.c)}
                     />
                     <AnimatedH
                         size={headingSpring.rh}
                         cx={col_a.x - 40}
                         cy={outerMost._9.y}
-                        click={() => setActivated(true)}
+                        click={() => updateSection(section.d)}
                     />
                     <AnimatedH
                         size={headingSpring.rh}
                         cx={col_a.x - 40}
                         cy={outerMost._11.y}
-                        click={() => setActivated(true)}
+                        click={() => updateSection(section.e)}
                     />
                 </Group>
             )}
 
-            {centralSize !== 180 && (
+            <RoundedRect
+                radius={activated ? 8 : centralSize}
+                width={activated ? activeSection.w : centralSize}
+                height={activated ? activeSection.h : centralSize}
+                fill={activated ? '#fff8' : 'none'}
+                strokeWidth="4"
+                stroke={sketchStroke_0}>
+                <Text style={{ ...textStyle }}>{activated? activeSection.label : 'interface'}</Text>
+            </RoundedRect>
+
+            {activated && (
                 <Group>
-                    <RadialLines
+                    {/* <RadialLines
                         innerSize={centralSize * 1.1}
                         outerSize={centralSize * 1.15}
                         points={12}
                         cx={cx}
                         cy={cy}
                         stroke="#999"
-                    />
+                    /> */}
                     <Circle
                         onClick={() => setActivated(false)}
                         size={25}
