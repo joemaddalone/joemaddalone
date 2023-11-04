@@ -100,8 +100,8 @@ const Resume = () => {
     };
     return (
         <Svg width={svgWidth} height={svgHeight} id="resume-svg">
-            <MarkerTriangle markerStyle={{ fill: sketchStroke_0 }} id="arrow-marker" />
-            {/* <Sketch col_a={col_a} col_b={col_b} centralSize={centralSize} /> */}
+            <MarkerTriangle markerStyle={{ fill: '#20a0c1' }} id="arrow-marker" />
+            <Sketch col_a={col_a} col_b={col_b} centralSize={centralSize} />
             {!activated && (
                 <RadialLines
                     innerSize={centralSize * 0.8}
@@ -190,6 +190,7 @@ const Resume = () => {
                     col_a={col_a}
                     col_b={col_b}
                     centralSize={centralSize}
+                    activated={activated}
                 />
             )}
             {180 === 180 && (
