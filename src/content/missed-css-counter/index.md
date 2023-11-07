@@ -120,5 +120,75 @@ div p:before {
   <p>Third</p>
 </div>
 
+### counter-reset
+
+Using css counters we can define when to reset the counter.  Here we'll use a section element to reset the counter. 
+
+```css
+div {
+  counter: number;
+  counter-reset: section;
+}
+```
+
+```html
+<div>
+  <section>
+    <p>First</p>
+    <p>Second</p>
+    <p>Third</p>
+  </section>
+  <section>
+    <p>First</p>
+    <p>Second</p>
+    <p>Third</p>
+  </section>
+</div>
+```
+
+<style>
+	div.c {
+		counter: numberC;
+		counter-reset: section;
+	}
+
+	div.c section {
+		border-bottom: 1px solid #222;
+		padding: 15px 0;
+	}
+
+	div.c p {
+		counter-increment: numberC;
+	}
+
+	div.c p:before {
+		content: counter(numberC, upper-roman);
+		width: 1.5em;
+		height: 1.5em;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		margin-right: 0.3em;
+		background: #000;
+		color: #fff;
+
+	}
+</style>
+
+<div class="ui segment c">
+	<section>
+		<p>First</p>
+		<p>Second</p>
+		<p>Third</p>
+	</section>
+	<section>
+		<p>First</p>
+		<p>Second</p>
+		<p>Third</p>
+	</section>
+</div>
+
+
 
 
