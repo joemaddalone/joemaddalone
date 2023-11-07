@@ -4,8 +4,8 @@
   --target-low: #1c354f;
 }
 
-#resume-svg {
-
+#resume-svg text {
+  transition: all 0.25s ease-in-out;
 }
 
 #resume-svg path {

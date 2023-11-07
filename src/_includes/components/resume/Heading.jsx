@@ -1,18 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Circle, Group, RadialLines } from 'react-svg-path';
+import { Circle, Group, Text } from 'react-svg-path';
 
 const sketchStroke_0 = '#ddd';
 const sketchStroke_1 = '#004';
 const sketchFill_0 = '#eee';
 // const size = 70;
 
-const Heading = ({ cx, cy, ox,click, size }) => {
+const textStyle = {
+    dominantBaseline: 'middle',
+    textAnchor: 'middle',
+};
+
+const Heading = ({ cx, cy, ox, click, size }) => {
     return (
         <Group>
-            <Circle class="pointer" onClick={click} cx={cx} cy={cy} size={size} ox={ox} fill="transparent" strokeWidth="4" stroke={sketchStroke_0} />
+            <Circle
+                class="pointer"
+                onClick={click}
+                cx={cx}
+                cy={cy}
+                size={size}
+                ox={ox}
+                fill="transparent"
+                strokeWidth="4"
+                stroke={sketchStroke_0}
+            />
             {/* <Circle cx={cx} cy={cy} size={65} ox={ox} fill={sketchFill_0} strokeWidth="0" /> */}
             <Circle cx={cx} cy={cy} size={size} fill="none">
+                <Text style={{ ...textStyle }}>A</Text>
                 {/* <RadialLines innerSize={size} outerSize={size * 1.1} points={50} className="line-high rotate45" /> */}
                 {/* <RadialLines innerSize={size * 0.8} outerSize={size} points={4} className="line-high rotate45" /> */}
             </Circle>

@@ -69,11 +69,11 @@ const section = {
 };
 
 const Resume = () => {
-    const [centralSize, setCentralSize] = useState(180);
+    const [centralSize, setCentralSize] = useState(80);
     const [activated, setActivated] = useState(false);
     const [activeSection, setSection] = useState(null);
-    const svgWidth = 810; // window.innerWidth - 25;
-    const svgHeight = 800;
+    const svgWidth = 700; // window.innerWidth - 25;
+    const svgHeight = 700;
     const cx = svgWidth / 2;
     const cy = svgHeight / 2;
     const offset = 1.6;
@@ -88,7 +88,7 @@ const Resume = () => {
         to: { rh: activated ? 20 : 80 },
         from: { rh: activated ? 80 : 20 },
         onRest: () => {
-            setCentralSize(activated ? activeSection.cs : 180)
+            setCentralSize(activated ? activeSection.cs : 125);
             setSection(activated ? activeSection : null);
         }
     });

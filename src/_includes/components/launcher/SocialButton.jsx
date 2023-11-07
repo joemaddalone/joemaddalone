@@ -41,7 +41,6 @@ const SocialButton = ({ cx, cy, ox, offset, control }) => {
     return (
         <>
             {flag ? <MarkerTriangle id="my-marker-id" color={activated?.color} /> : null}
-            {flag ? <MarkerLine id="my-marker-s" color={activated?.color} /> : null}
             <g className="flourish" transform={`translate(${tx}, ${cy})`}>
                 <animated.g className="control-box" strokeDashoffset={x}>
                     <a href={control.url}>
