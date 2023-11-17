@@ -8,6 +8,10 @@
   transition: all 0.25s ease-in-out;
 }
 
+#resume-svg .animated-group {
+  transition: all 0.25s ease-in-out;
+}
+
 #resume-svg path {
 	transition: all 0.25s ease-in-out;
 }

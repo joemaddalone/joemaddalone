@@ -90,7 +90,7 @@ const Resume = () => {
         onRest: () => {
             setCentralSize(activated ? activeSection.cs : 125);
             setSection(activated ? activeSection : null);
-        }
+        },
     });
     const AnimatedH = animated(Heading);
 
@@ -196,30 +196,35 @@ const Resume = () => {
             {180 === 180 && (
                 <Group>
                     <AnimatedH
+                        content="A"
                         size={headingSpring.rh}
                         cx={col_b.x + 40}
                         cy={outerMost._1.y}
                         click={() => updateSection(section.a)}
                     />
                     <AnimatedH
+                        content="B"
                         size={headingSpring.rh}
                         cx={col_b.x + 40}
                         cy={outer._4.y}
                         click={() => updateSection(section.b)}
                     />
                     <AnimatedH
+                        content="C"
                         size={headingSpring.rh}
                         cx={col_a.x - 40}
                         cy={outerMost._6.y}
                         click={() => updateSection(section.c)}
                     />
                     <AnimatedH
+                        content="D"
                         size={headingSpring.rh}
                         cx={col_a.x - 40}
                         cy={outerMost._9.y}
                         click={() => updateSection(section.d)}
                     />
                     <AnimatedH
+                        content="E"
                         size={headingSpring.rh}
                         cx={col_a.x - 40}
                         cy={outerMost._11.y}
@@ -235,7 +240,7 @@ const Resume = () => {
                 fill={activated ? '#fff8' : 'none'}
                 strokeWidth="4"
                 stroke={sketchStroke_0}>
-                <Text style={{ ...textStyle }}>{activated? activeSection.label : 'interface'}</Text>
+                <Text style={{ ...textStyle }}>{activated ? activeSection.label : 'interface'}</Text>
             </RoundedRect>
 
             {activated && (
