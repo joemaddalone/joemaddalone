@@ -1,7 +1,7 @@
 ---
 title: 'React Loop Mission Statement'
 layout: layout
-date: 2023-11-17
+date: 2023-11-18
 tags: ['post']
 excerpt: 'A mission statement I wrote'
 permalink: '/{{ title | slugify }}/'
