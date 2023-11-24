@@ -113,6 +113,10 @@ footer {
 	display: block;
 }
 
+.standard-article pre {
+	margin-bottom: 15px;
+}
+
 .standard-article pre code {
 	font-size: .8rem;
 }
