@@ -27,7 +27,7 @@ ollama pull codellama
 
 ## Start ollama
 
-If you get a *port already in use* error, this is common on Linux.  It's already running.
+If you get a *port already in use* error, this is common on Linux immediately after installation.  It's already running.
 
 ```bash
 ollama serve
@@ -64,7 +64,7 @@ npm i langchain
 ```
 
 
-## Our first app
+## Our first app, impossible question
 
 ```js
 // index.js
@@ -76,15 +76,12 @@ const ollama = new Ollama({
   model: "llama2"
 });
 
-const res = await ollama.call(
-	"How many vowels are in each color of the rainbow?"
-);
+const question = "What color is the house at 6353 Juan Tabo?"
+const res = await ollama.call();
 console.log(res)
 
 // alternatively we could capture the response as a stream.
-// const stream = await ollama.stream(
-// 	"How many vowels are in each color of the rainbow?"
-// );
+// const stream = await ollama.stream(question);
 
 // const chunks = [];
 // for await (const chunk of stream) {
@@ -95,17 +92,70 @@ console.log(res)
 This should result in something along the lines of:
 
 ```bash
-The colors of the rainbow, in order, are: red, orange, yellow, green, blue, indigo, and violet.
+I apologize, but I'm a large language model, I do not have access to real-time
+information about the color of houses or any other physical properties...
+```
+Obviously the llama2 does not know the color of the house.  Had we asked some more general question we would definitely get an answer, but I have purposely asked it something it does not know.
 
-Here's the number of vowels in each color of the rainbow:
+So let's give it some context.
 
-1. Red - 2 vowels (A and E)
-2. Orange - 3 vowels (A, E, and O)
-3. Yellow - 4 vowels (A, E, I, and O)
-4. Green - 4 vowels (A, E, I, and O)
-5. Blue - 3 vowels (A, E, and O)
-6. Indigo - 4 vowels (A, E, I, and O)
-7. Violet - 2 vowels (A and E)
+### chain and Document
+
+```js
+// index.js
+// run: node index.js
+import { Ollama } from "langchain/llms/ollama";
+import { loadQAStuffChain } from "langchain/chains";
+import { Document } from "langchain/document";
+
+const ollama = new Ollama(/*... same as before */);
+
+const question = "What color is the house at 6353 Juan Tabo?"
+const chain = loadQAStuffChain(ollama);
+const input_documents = [
+	new Document({ pageContent: "The color of the house at 6353 Juan Tabo is blue" })
+];
+const res = await chain.call({ input_documents, question});
+
+console.log(res.text)
+```
+### result:
+
+```bash
+The color of the house at 6353 Juan Tabo is blue.
 ```
 
-not great.
+Much better.  An kind of exciting when you observe what actually happened.  We taught the model about something new.  We could have told it anything.  This example was a bit "call and response".  Let's see if it can infer information from slightly less direct context.
+
+### chain and Document
+
+```js
+// index.js
+// run: node index.js
+import { Ollama } from "langchain/llms/ollama";
+import { loadQAStuffChain } from "langchain/chains";
+import { Document } from "langchain/document";
+
+const ollama = new Ollama(/*... same as before */);
+
+const question = "What color is the house at 6353 Juan Tabo?"
+const chain = loadQAStuffChain(ollama);
+const docs = [
+  new Document({ pageContent: "Houses on Juan Tabo are either red or blue" }),
+  new Document({ pageContent: "6353 is an address on Juan Tabo" }),
+  new Document({ pageContent: "Houses on Juan Tabo with odd numbered addresses are red" }),
+  new Document({ pageContent: "Houses on Juan Tabo with even numbered addresses are blue" }),
+];
+const res = await chain.call({ input_documents, question});
+
+console.log(res.text)
+```
+### result:
+
+```bash
+* Houses on Juan Tabo are either red or blue.
+* The address 6353 is an odd numbered address, which means the house is red.
+
+Therefore, the house at 6353 on Juan Tabo is red.
+```
+
