@@ -12,6 +12,20 @@ permalink: '/{{ title | slugify }}/'
 	<p>{{ excerpt }}</p>
 </hgroup>
 
+## What is Ollama?
+[Ollama](https://ollama.ai/) is a tool for downloading and running large language models.  It's like bittorrent for open source LLMs.
+
+## What is LangChain?
+First, an LLM chain is the chaining of multiple LLM calls. We do this in order to deal with the constraint of limited context challenges when interacting with large volumes of information.
+
+* **System prompt**: "You are an assistant for question-answering tasks.  Use the following code sample to answer the question.  if you don't know the answer, just say that you don't know. Keep your answers concise."
+* **Context**: "Here is the code I'd like to discuss: ...code..."
+* **Question**: "How can I further optimize this code?"
+
+LLM Chains abstract away the complexity of multiple calls.  [LangChain](https://www.langchain.com/) is an LLM Chain library we can use to produce our LLM CHain in order to provide context which, hopefully, results in less hallucinations.  LangChain also allows us to pair our LLM chain with document retrieval methods.  Pulling in PDFs or database records as context for our LLM chain is, put mildly, awesome.
+
+
+
 ## Install ollama
 
 ```bash
@@ -91,15 +105,19 @@ console.log(res)
 
 This should result in something along the lines of:
 
-```bash
+<div class="ui ignored info message">
+
 I apologize, but I'm a large language model, I do not have access to real-time
 information about the color of houses or any other physical properties...
-```
+
+</div>
 Obviously the llama2 does not know the color of the house.  Had we asked some more general question we would definitely get an answer, but I have purposely asked it something it does not know.
 
 So let's give it some context.
 
-### chain and Document
+## chain and Document and Stuff
+
+We covered what a `chain` is previously.  To `Stuff` a chain is exactly what it sounds like.  Fill it with stuff.  In this case stuff it with `Documents`
 
 ```js
 // index.js
@@ -121,13 +139,11 @@ console.log(res.text)
 ```
 ### result:
 
-```bash
+<div class="ui ignored info message">
 The color of the house at 6353 Juan Tabo is blue.
-```
+</div>
 
 Much better.  An kind of exciting when you observe what actually happened.  We taught the model about something new.  We could have told it anything.  This example was a bit "call and response".  Let's see if it can infer information from slightly less direct context.
-
-### chain and Document
 
 ```js
 // index.js
@@ -142,9 +158,8 @@ const question = "What color is the house at 6353 Juan Tabo?"
 const chain = loadQAStuffChain(ollama);
 const docs = [
   new Document({ pageContent: "Houses on Juan Tabo are either red or blue" }),
-  new Document({ pageContent: "6353 is an address on Juan Tabo" }),
-  new Document({ pageContent: "Houses on Juan Tabo with odd numbered addresses are red" }),
-  new Document({ pageContent: "Houses on Juan Tabo with even numbered addresses are blue" }),
+  new Document({ pageContent: "0 through 9999 are valid addresses on Juan Tabo Blvd" }),
+  new Document({ pageContent: "Houses on Juan Tabo Blvd with odd numbered addresses are red" }),
 ];
 const res = await chain.call({ input_documents, question});
 
@@ -152,10 +167,13 @@ console.log(res.text)
 ```
 ### result:
 
-```bash
-* Houses on Juan Tabo are either red or blue.
-* The address 6353 is an odd numbered address, which means the house is red.
+<div class="ui ignored info message">
 
-Therefore, the house at 6353 on Juan Tabo is red.
-```
+* Houses on Juan Tabo are either red or blue.
+* The addresses on Juan Tabo Blvd range from 0 to 9999, which means that all valid addresses are accounted for.
+* Houses on Juan Tabo Blvd with odd numbered addresses are colored red.
+
+Given these facts, we can conclude that the house at 6353 on Juan Tabo Blvd is colored red.
+
+</div>
 
