@@ -210,3 +210,48 @@ console.log(res.text)
 To determine the color of the house at 6353 Juan Tabo Blvd, we need to look at the address and see if it is an odd number. Since 6353 is an odd number, according to the information given, the house should be red. Therefore, the house at 6353 on Juan Tabo Blvd is red.
 
 </div>
+
+## Multiple external Documents
+
+Lastly, let's have the code read a directory of external text documents.
+
+```md
+--> /jauntabo/a.txt
+Houses on Juan Tabo Blvd are either red or blue.
+
+--> /jauntabo/b.txt
+0 through 9999 are valid addresses on Juan Tabo Blvd.
+
+--> /jauntabo/c.txt
+Houses on Juan Tabo Blvd with odd numbered addresses are red.
+
+--> /jauntabo/d.txt -- this is a new piece of context for the LLM!
+Houses on Juan Tabo Blvd with prime numbered addresses are blue.
+```
+
+```js
+import { Ollama } from "langchain/llms/ollama";
+import { loadQAStuffChain } from "langchain/chains";
+import { Document } from "langchain/document";
+import { TextLoader } from "langchain/document_loaders/fs/text";
+import { DirectoryLoader } from "langchain/document_loaders/fs/directory";
+
+const ollama = new Ollama(/*... same as before */);
+
+const question = "What color is the house at 1901 on Juan Tabo Blvd?";
+const chain = loadQAStuffChain(llmA);
+const loader = new DirectoryLoader("jauntabo", {
+  ".txt": (path) => new TextLoader(path)
+});
+const input_documents = await loader.load();
+const res = await chain.call({ input_documents, question });
+console.log(res.text);
+```
+
+### result
+
+<div class="ui ignored info message">
+
+The house at 1901 on Juan Tabo Blvd is blue.
+
+</div>
