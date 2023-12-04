@@ -110,7 +110,7 @@ This should result in something along the lines of:
 <div class="ui ignored info message">
 
 The color of the house at 6353 Juan Tabo Blvd ... would depend
-on the specific property and its owners. There records that
+on the specific property and its owners. There are no records to
 indicate the color of this particular house...
 
 </div>
@@ -196,7 +196,7 @@ import { TextLoader } from "langchain/document_loaders/fs/text";
 const ollama = new Ollama(/*... same as before */);
 
 const question = "What color is the house at 6353 on Juan Tabo Blvd?"
-const chain = loadQAStuffChain(llmA);
+const chain = loadQAStuffChain(ollama);
 const loader = new TextLoader("./jauntabo.txt");
 const input_documents = await loader.load();
 const res = await chain.call({ input_documents, question });
@@ -239,7 +239,7 @@ import { DirectoryLoader } from "langchain/document_loaders/fs/directory";
 const ollama = new Ollama(/*... same as before */);
 
 const question = "What color is the house at 1901 on Juan Tabo Blvd?";
-const chain = loadQAStuffChain(llmA);
+const chain = loadQAStuffChain(ollama);
 const loader = new DirectoryLoader("jauntabo", {
   ".txt": (path) => new TextLoader(path)
 });
