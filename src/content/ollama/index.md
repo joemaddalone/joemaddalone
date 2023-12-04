@@ -176,3 +176,37 @@ The house at 6353 on Juan Tabo Blvd has a red address because it is an odd numbe
 
 </div>
 
+## External documents
+
+Here I have moved our context data into a single external text file.  We'll use the TextLoader from LangChain to convert it into a Document.
+
+```md
+// jauntabo.txt
+Houses on Juan Tabo Blvd are either red or blue.
+0 through 9999 are valid addresses on Juan Tabo Blvd.
+Houses on Juan Tabo Blvd with odd numbered addresses are red.
+```
+
+```js
+import { Ollama } from "langchain/llms/ollama";
+import { loadQAStuffChain } from "langchain/chains";
+import { Document } from "langchain/document";
+import { TextLoader } from "langchain/document_loaders/fs/text";
+
+const ollama = new Ollama(/*... same as before */);
+
+const question = "What color is the house at 6353 on Juan Tabo Blvd?"
+const chain = loadQAStuffChain(llmA);
+const loader = new TextLoader("./jauntabo.txt");
+const input_documents = await loader.load();
+const res = await chain.call({ input_documents, question });
+console.log(res.text)
+```
+
+### result
+
+<div class="ui ignored info message">
+
+To determine the color of the house at 6353 Juan Tabo Blvd, we need to look at the address and see if it is an odd number. Since 6353 is an odd number, according to the information given, the house should be red. Therefore, the house at 6353 on Juan Tabo Blvd is red.
+
+</div>
