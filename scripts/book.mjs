@@ -3,7 +3,8 @@
 import { downloadFile } from './download.mjs';
 import fs from 'fs';
 
-const isbn = process.argv[2];
+// replace dashes with empty string
+const isbn = (process.argv[2] || '').replace(/-/g, '');
 const getBook = async (isbn) => {
     try {
         const response = await fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${isbn}&jscmd=data&format=json`);
