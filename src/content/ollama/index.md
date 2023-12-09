@@ -64,7 +64,7 @@ curl http://localhost:11434/api/tags
 
 I personally run this on a custom port with
 ```bash
-LLAMA_HOST=0.0.0.0:9494 ollama serve
+OLLAMA_HOST=0.0.0.0:9494 ollama serve
 ```
 
 ## Setup project
@@ -98,10 +98,8 @@ console.log(res)
 
 // alternatively we could capture the response as a stream.
 // const stream = await ollama.stream(question);
-
-// const chunks = [];
 // for await (const chunk of stream) {
-// 	console.log(chunk)
+// 	process.stdout.write(chunk);
 // }
 ```
 
