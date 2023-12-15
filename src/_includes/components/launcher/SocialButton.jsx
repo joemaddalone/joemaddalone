@@ -73,75 +73,9 @@ const SocialButton = ({ cx, cy, ox, offset, control }) => {
                         ex={activated.cx}
                         stroke={activated.color}
                         strokeDasharray={bannerDist}
-                        markerEnd="url(#my-marker-id)"
-                    />
-
-                    <Line
-                        className="control-box-banner"
-                        sx={activated.cx - 23}
-                        sy={activated.cy - 18}
-                        ey={activated.cy + 18}
-                        ex={activated.cx - 23}
-                        stroke={activated.color}
-                        strokeWidth={0.5}
-                        strokeDasharray={bannerDist}
-                    />
-
-                    <Line
-                        className="control-box-banner"
-                        sx={activated.cx - 26}
-                        sy={activated.cy - 15}
-                        ey={activated.cy + 15}
-                        ex={activated.cx - 26}
-                        stroke={activated.color}
-                        strokeWidth={0.5}
-                        strokeDasharray={bannerDist}
-                    />
-
-                    <Line
-                        className="control-box-banner"
-                        sx={activated.cx - 29}
-                        sy={activated.cy - 10}
-                        ey={activated.cy + 10}
-                        ex={activated.cx - 29}
-                        stroke={activated.color}
-                        strokeWidth={0.5}
-                        strokeDasharray={bannerDist}
-                    />
-
-                    <Line
-                        className="control-box-banner"
-                        sx={activated.cx + 23}
-                        sy={activated.cy - 18}
-                        ey={activated.cy + 18}
-                        ex={activated.cx + 23}
-                        stroke={activated.color}
-                        strokeWidth={0.5}
-                        strokeDasharray={bannerDist}
-                    />
-
-                    <Line
-                        className="control-box-banner"
-                        sx={activated.cx + 26}
-                        sy={activated.cy - 15}
-                        ey={activated.cy + 15}
-                        ex={activated.cx + 26}
-                        stroke={activated.color}
-                        strokeWidth={0.5}
-                        strokeDasharray={bannerDist}
-                    />
-
-                    <Line
-                        className="control-box-banner"
-                        sx={activated.cx + 29}
-                        sy={activated.cy - 10}
-                        ey={activated.cy + 10}
-                        ex={activated.cx + 29}
-                        stroke={activated.color}
-                        strokeWidth={0.5}
-                        strokeDasharray={bannerDist}
-                    />
-
+                        markerEnd="url(#my-marker-id)">
+                        {flag ? <g /> : null}
+                    </Line>
                     <Line
                         className="control-box-banner"
                         sx={activated.cx}
