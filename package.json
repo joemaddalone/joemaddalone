@@ -9,7 +9,9 @@
 		"predeploy": "npm run build && npm run build",
 		"deploy": "gh-pages -d dist",
 		"start": "slinkity --serve",
-		"build": "slinkity"
+		"build": "slinkity",
+		"git": "git add . && git commit -m",
+		"postgit": "git push --all"
 	},
 	"dependencies": {
 		"dagre": "^0.8.5",
