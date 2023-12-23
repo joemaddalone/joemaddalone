@@ -48,11 +48,11 @@ function Launcher() {
 	const initBgc = '#eee';
 	const size = {
 		width: 400,
-		height: 500,
+		height: 150,
 	};
 
 	return (
-		<div className="launcher"  style={{minHeight: size.height}}>
+		<div className="launcher">
 			<Svg width={size.width} height={size.height}>
 				<defs>
 					{socialLinks.map((control) => {
@@ -61,17 +61,14 @@ function Launcher() {
 				</defs>
 				<MarkerTriangle id="marker-explain-start" size={10} color="#999" />
 				<Rect width={size.width} height={size.height} fill={initBgc} className="container">
-					<Text ox={12} oy={-150} className="big middle">
+					<Text ox={12} oy={-50} className="big middle">
 						Hi, I'm Joe Maddalone
 					</Text>
-					<Social oy={-100} controls={socialLinks} />
-					<Text fill="#999" oy={0} className="medium middle">
-						other stuff
-					</Text>
-
-					<Links oy={30} />
+					<Social oy={0} controls={socialLinks} />
 				</Rect>
 			</Svg>
+			<h2 style={{fontFamily: 'monospace'}}>other stuff</h2>
+			<Links />
 		</div>
 	);
 }

@@ -1,11 +1,16 @@
-body, html {
-  background-color: #eee;
+body,
+html {
+	background-color: #eee;
 }
 
 .launcher {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	/* justify-content: center; */
 	align-items: center;
+	height: 99vh;
+	padding-top: 5vh;
+	min-height: 480px;
 }
 
 .flourish {
@@ -46,7 +51,8 @@ body, html {
 	pointer-events: none;
 }
 
-path:focus, a:focus {
+path:focus,
+a:focus {
 	outline: none;
 }
 
@@ -74,39 +80,24 @@ text.middle {
 	text-anchor: middle;
 }
 
-@keyframes rotate {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+.links {
+	display: flex;
+	flex-direction: column;
+
 }
 
-@keyframes _rotate {
-	from {
-		transform: rotate(360deg);
-	}
-	to {
-		transform: rotate(0deg);
-	}
+.links a {
+	font-family: monospace;
+	font-size: 150%;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	border-bottom: 2px dotted #130536cf;
+	margin-bottom: 10px;
 }
 
-.atom {
-	transform-origin: center;
-	fill: transparent;
-}
-
-.ring {
-	transform-origin: center;
-	animation-name: rotate;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-}
-
-._ring {
-	transform-origin: center;
-	animation-name: _rotate;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+.links a:hover {
+	color: #4747bf;
+	border-bottom: 2px dotted #4747bf;
+    text-decoration: none;
 }

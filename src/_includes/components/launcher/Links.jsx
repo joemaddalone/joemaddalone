@@ -1,18 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text, Group, Rect, Line, Quad } from 'react-svg-path';
-import { useSprings, animated } from 'react-spring';
 
 const wheres = [
     {
         color: '#7f9cf5',
         txt: 'I write sometimes',
         url: '/writes',
-    },
-    {
-        color: '#9b7ede',
-        txt: 'egghead.io',
-        url: 'http://www.egghead.io/instructors/joe-maddalone',
     },
     {
         color: '#bcd2ee',
@@ -30,82 +23,27 @@ const wheres = [
         txt: 'NWC JS Meetup',
         url: 'https://www.meetup.com/Northwest-Chicago-JavaScript/',
     },
+    {
+        color: '#9b7ede',
+        txt: 'egghead.io',
+        url: 'http://www.egghead.io/instructors/joe-maddalone',
+    }
 ];
 
-const Links = ({ cx, cy }) => {
-    const [springs, api] = useSprings(wheres.length, () => ({
-        x: 360,
-        color: '#222',
-    }));
-
-    const setterActive = (active, index) => ({
-        x: active ? 0 : 360,
-        color: active ? '#fff' : wheres[index].color,
-        config: { duration: active ? 800 : 400 },
-    });
-
-    const activator = (index) => {
-        return {
-            onMouseOver: () => api.start((item) => item === index && setterActive(true, index)),
-            onFocus: () => api.start((item) => item === index && setterActive(true, index)),
-            onMouseOut: () => api.start((item) => item === index && setterActive(false, index)),
-            onBlur: () => api.start((item) => item === index && setterActive(false, index)),
-        };
-    };
-
+const Links = () => {
     return (
-        <Group transform={`translate(${cx}, ${cy})`} className="flourish">
-            {springs.map((n, i) => {
-                const len = wheres[i].txt.length * 11;
+        <div class="links">
+            {wheres.map((where, i) => {
                 return (
-                    <animated.g key={i} className="control-box link" strokeDashoffset={n.x}>
-                        <Line
-                            className="highlighter"
-                            sx={-len / 2}
-                            sy={i * 30 + 3}
-                            ex={len / 2}
-                            ey={i * 30}
-                            stroke={wheres[i].color}
-                            strokeWidth={4}
-                        />
-                        <Quad
-                            className="highlighter"
-                            sx={-len / 2}
-                            sy={i * 30 + 5}
-                            ex={len / 2}
-                            ey={i * 30 + 5}
-                            cx={0}
-                            cy={i * 30 - 5}
-                            stroke={wheres[i].color}
-                            fill="none"
-                        />
-                        <a href={wheres[i].url}>
-                            <Rect
-                                tabIndex={0}
-                                cx={0}
-                                cy={i * 30}
-                                width={200}
-                                height={25}
-                                stroke="transparent"
-                                strokeWidth={0.5}
-                                fill="#eee"
-                                {...activator(i)}>
-                                <Text fill={n.color} dy={2} className="middle">
-                                    {wheres[i].txt}
-                                </Text>
-                            </Rect>
-                        </a>
-                    </animated.g>
+                    <a className="ui" href={where.url} key={i}>
+                        {where.txt}
+                    </a>
                 );
             })}
-        </Group>
+        </div>
     );
 };
 
-Links.propTypes = {
-    cx: PropTypes.number,
-    cy: PropTypes.number,
-    transition: PropTypes.func,
-};
+Links.propTypes = {};
 
 export default Links;
