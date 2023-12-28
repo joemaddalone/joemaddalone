@@ -16,6 +16,7 @@
             "url": "https://github.com/janeczku/calibre-web",
             "description": "Provides an OPDS feed for Calibre."
         },
+        { "app": "Cockpit", "url": "https://cockpit-project.org/", "description": "web-based graphical interface for servers" },
         {
             "app": "Codeserver",
             "url": "https://github.com/coder/code-server",
@@ -23,7 +24,6 @@
         },
         { "app": "Deemix", "url": "https://deemix.app/", "description": "Get music." },
         { "app": "Filebrowser", "url": "https://filebrowser.org/", "description": "For easy manual file needs." },
-        { "app": "Glances", "url": "https://nicolargo.github.io/glances/", "description": "Light weight monitoring" },
         { "app": "Heimdall", "url": "https://heimdall.site/", "description": "Clean dashboard" },
         {
             "app": "Jackett",
@@ -32,6 +32,18 @@
         },
         { "app": "Komga", "url": "https://komga.org/", "description": "OPDS feed for comic books" },
         { "app": "logspout", "url": "https://github.com/gliderlabs/logspout", "description": "all the logs." },
+        {
+            "app": "MergerFS",
+            "url": "https://github.com/trapexit/mergerfs",
+            "description": "A dead simple union filesystem"
+        },
+        { "app": "NextcloudPi", "url": "https://nextcloudpi.com/", "description": "Keep your data close" },
+        {
+            "app": "Nginx Proxy Manager",
+            "url": "https://nginxproxymanager.com/",
+            "description": "Local domains instead of ip addresses and ports"
+        },
+        { "app": "OliveTin", "url": "https://www.olivetin.app/", "description": "simple access to predefined shell commands from a web interface" },
         {
             "app": "Ouroboros",
             "url": "https://github.com/pyouroboros/ouroboros",
@@ -51,17 +63,8 @@
         },
         { "app": "Plex", "url": "https://www.plex.tv/", "description": "Media server. Movies, TV, Music, Audio books" },
         { "app": "Portainer", "url": "https://www.portainer.io/", "description": "Easy container management" },
-        {
-            "app": "Nginx Proxy Manager",
-            "url": "https://nginxproxymanager.com/",
-            "description": "Local domains instead of ip addresses and ports"
-        },
-        {
-            "app": "MergerFS",
-            "url": "https://github.com/trapexit/mergerfs",
-            "description": "A dead simple union filesystem"
-        },
         { "app": "Radarr", "url": "https://radarr.video/", "description": "Movie collection manager" },
+        { "app": "Readarr", "url": "https://readarr.com/", "description": "ebook collection manager " },
         {
             "app": "ruTorrent",
             "url": "https://github.com/Novik/ruTorrent",
