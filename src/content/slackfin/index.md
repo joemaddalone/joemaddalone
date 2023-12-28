@@ -99,7 +99,7 @@ export default class Api {
 	  .map((a) => {
 		return {
 		  title: `${a.key} (${a.name})`,
-		  value: a.balances.available || a.balances.current,
+		  value: a.type === 'credit' ? ~~a.balances.current*-1 : a.balances.available || a.balances.current,
 		};
 	  });
 	return payload;
