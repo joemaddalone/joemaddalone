@@ -273,4 +273,4 @@ try {
 
 ## Next up
 
-I got this running on a cron schedule in [OliveTin](https://github.com/OliveTin/OliveTin).  I will 100% remember to follow up and plug that part in...
+I got this running on a cron schedule in [OliveTin](https://github.com/OliveTin/OliveTin).  I explain it a bit [here](/olivetin-node/):
