@@ -1,0 +1,69 @@
+{
+	"persons": [
+		{
+			"first": "Warren",
+			"last": "McCulloch"
+		},
+		{
+			"first": "Walter",
+			"last": "Pitts"
+		},
+		{
+			"first": "Frank",
+			"last": "Rosenblatt"
+		},
+		{
+			"first": "Marvin",
+			"last": "Minsky"
+		},
+		{
+			"first": "Bernard",
+			"last": "Widrow"
+		},
+		{
+			"first": "Marcian",
+			"last": "Hoff"
+		},
+		{
+			"first": "Kunihiko",
+			"last": "Fukushima"
+		},
+		{
+			"first": "Terrence",
+			"last": "Sejnowski"
+		},
+		{
+			"first": "Charles",
+			"last": "Rosenberg"
+		},
+		{
+			"first": "Gerald",
+			"last": "Tesauro"
+		},
+		{
+			"first": "Demis",
+			"last": "Hassabis"
+		},
+		{
+			"first": "Shane",
+			"last": "Legg"
+		},
+		{
+			"first": "Mustafa",
+			"last": "Suleyman"
+		},
+		{
+			"first": "Alex",
+			"last": "Krizhevsky"
+		},
+		{
+			"first": "Ilya",
+			"last": "Sutskever"
+		},
+		{
+			"first": "Geoffrey",
+			"last": "Hinton"
+		}
+
+	]
+}

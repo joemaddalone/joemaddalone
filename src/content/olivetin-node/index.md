@@ -47,11 +47,10 @@ Now in our OliveTin config we can just:
 ```yaml
 listenAddressSingleHTTPFrontend: 0.0.0.0:1337
 logLevel: "INFO"
-- title: Slack Fin
+- title: Do The Thing
   shell: "/node/node /projects/myscript/index.mjs"
-  maxConcurrent: 1
-  timeout: 5
+  timeout: 60
   icon: backup
   execOnCron:
-    - "0 */8 * * *" # At minute 0 past every 8th hour
+    - "0 0 */8 * * *" # At minute 0 past every 8th hour
 ```
