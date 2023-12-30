@@ -19,6 +19,12 @@
       "isbn": "9780735211292"
     },
     {
+      "title": "Batman",
+      "subtitle": "The killing joke",
+      "author": "Alan Moore",
+      "isbn": "9780930289454"
+    },
+    {
       "title": "Blood Merdian",
       "subtitle": "Or the Evening Redness in the West",
       "author": "Cormac McCarthy",
@@ -152,6 +158,11 @@
       "subtitle": "Curious Tales of Invention, Accidental Genius, and Stationery Obsession",
       "author": "James Ward",
       "isbn": "9781476799865"
+    },
+    {
+      "title": "Plunge",
+      "author": "Joe Hill",
+      "isbn": "9781779506887"
     },
     {
       "title": "Poverty, by America",
