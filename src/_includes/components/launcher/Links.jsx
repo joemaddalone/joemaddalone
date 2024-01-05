@@ -32,7 +32,7 @@ const wheres = [
 
 const Links = () => {
     return (
-        <div class="links">
+        <div className="links">
             {wheres.map((where, i) => {
                 return (
                     <a className="ui" href={where.url} key={i}>

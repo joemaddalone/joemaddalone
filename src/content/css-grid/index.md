@@ -32,7 +32,7 @@ permalink: '/{{ title | slugify }}/'
 
 	.six > .container {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: 20% auto 20%;
 		grid-gap: 15px;
   }
 
@@ -233,7 +233,7 @@ gap. seems legit.
 ```css
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 20% auto 20%;
     grid-gap: 15px;
 }
 ```
