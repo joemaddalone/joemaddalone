@@ -40,7 +40,7 @@ const updateBooks = (formatted) => {
             break;
         }
     }
-    fs.writeFileSync('../src/content/2023-books/2023-books.11tydata.json', JSON.stringify(books, null, 2));
+    fs.writeFileSync('../src/content/2024-books/2024-books.11tydata.json', JSON.stringify(books, null, 2));
 };
 
 updateBooks(formatted);
