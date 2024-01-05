@@ -32,11 +32,11 @@ const updateBooks = (formatted) => {
         return str;
     };
     const books = JSON.parse(fs.readFileSync('../src/content/2024-books/2024-books.11tydata.json'));
-    for (let i = 0; i < books.books2023.length; i++) {
+    for (let i = 0; i < books.books2024.length; i++) {
         const aTitle = removeArticles(formatted.title.toLowerCase());
-        const bTitle = removeArticles(books.books2023[i].title.toLowerCase());
+        const bTitle = removeArticles(books.books2024[i].title.toLowerCase());
         if (aTitle < bTitle) {
-            books.books2023.splice(i, 0, formatted);
+            books.books2024.splice(i, 0, formatted);
             break;
         }
     }
