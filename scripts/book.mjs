@@ -31,7 +31,7 @@ const updateBooks = (formatted) => {
         if (words[0] == 'a' || words[0] == 'the' || words[0] == 'an') return words.splice(1).join(' ');
         return str;
     };
-    const books = JSON.parse(fs.readFileSync('../src/content/2023-books/2023-books.11tydata.json'));
+    const books = JSON.parse(fs.readFileSync('../src/content/2024-books/2024-books.11tydata.json'));
     for (let i = 0; i < books.books2023.length; i++) {
         const aTitle = removeArticles(formatted.title.toLowerCase());
         const bTitle = removeArticles(books.books2023[i].title.toLowerCase());
@@ -48,7 +48,7 @@ updateBooks(formatted);
 if (b[`ISBN:${isbn}`].cover) {
     const cover = b[`ISBN:${isbn}`].cover.large;
     try {
-        await downloadFile(cover, `../src/content/2023-books/${isbn}.jpg`);
+        await downloadFile(cover, `../src/content/2024-books/${isbn}.jpg`);
         commit(`add ${isbn}`);
     }
     catch (err) {
