@@ -31,7 +31,7 @@ async function imageShortcode(src, alt) {
 
 		let data = metadata.jpeg[metadata.jpeg.length - 1];
 
-		return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
+		return `<img src="${data.url}" alt="${alt}" loading="lazy" decoding="async">`;
 	} catch (err) {
 		return;
 	}

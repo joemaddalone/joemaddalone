@@ -34,10 +34,6 @@ Plus:
 4: electrically positive
 ```
 
-<div class="ui medium right floated bordered image ma2">
-{% image "plus_branding.png", "Plus Branding" %}
-</div>
-
 It would seem that in some of these cases plus actually makes sense.  If a service or product already exists and this new service is in addition to that service or product, or a more "premium" version of that service.  Apple TV is a service (and a device maybe?), Apple TV + is in addition to that service.  However, the addition of addition (+) usually adds up to nothing more than imitation and fad.
 
 

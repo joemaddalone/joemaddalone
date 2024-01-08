@@ -21,7 +21,7 @@ According to lore, Jerome Bixby spent four decades writing the screenplay for Th
 
 The Man From Earth is a 2007 science fiction film that tells the story a college professor, John Oldman, who claims to be a Cro-Magnon who has lived for over 14,000 years. The entire film transpires in a single setting where John reveals his identity to colleagues who are skeptical of his claims and try to prove his statement a prank or him insane. John's colleagues are comprised of Harry the biologist, Edith the art history professor and devout Christian, Dan the anthropologist, Sandy the historian, Art the archaeologist, Will the psychiatry professor, and Linda the young student.
 
-<div class="flex align-center justify-center ma3">
+<div class="flex align-center fluid image justify-center ma3">
 
 {% image "scene.jpg", "The Man From Earth" %}
 
