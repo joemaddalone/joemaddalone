@@ -1,69 +1,134 @@
 {
-	"persons": [
-		{
-			"first": "Warren",
-			"last": "McCulloch"
-		},
-		{
-			"first": "Walter",
-			"last": "Pitts"
-		},
-		{
-			"first": "Frank",
-			"last": "Rosenblatt"
-		},
-		{
-			"first": "Marvin",
-			"last": "Minsky"
-		},
-		{
-			"first": "Bernard",
-			"last": "Widrow"
-		},
-		{
-			"first": "Marcian",
-			"last": "Hoff"
-		},
-		{
-			"first": "Kunihiko",
-			"last": "Fukushima"
-		},
-		{
-			"first": "Terrence",
-			"last": "Sejnowski"
-		},
-		{
-			"first": "Charles",
-			"last": "Rosenberg"
-		},
-		{
-			"first": "Gerald",
-			"last": "Tesauro"
-		},
-		{
-			"first": "Demis",
-			"last": "Hassabis"
-		},
-		{
-			"first": "Shane",
-			"last": "Legg"
-		},
-		{
-			"first": "Mustafa",
-			"last": "Suleyman"
-		},
-		{
-			"first": "Alex",
-			"last": "Krizhevsky"
-		},
-		{
-			"first": "Ilya",
-			"last": "Sutskever"
-		},
-		{
-			"first": "Geoffrey",
-			"last": "Hinton"
-		}
-
-	]
+	"ai": {
+		"orgs": [
+			{
+				"name": "Google DeepMind",
+				"location": "London, UK",
+				"website": "https://deepmind.com/"
+			},
+			{
+				"name": "Google Brain",
+				"location": "Mountain View, CA",
+				"website": "https://research.google.com/teams/brain/"
+			},
+			{
+				"name": "OpenAI",
+				"location": "San Francisco, CA",
+				"website": "https://openai.com/"
+			},
+			{
+				"name": "Facebook AI Research",
+				"location": "Menlo Park, CA",
+				"website": "https://research.fb.com/category/facebook-ai-research-fair/"
+			},
+			{
+				"name": "Microsoft Research",
+				"location": "Redmond, WA",
+				"website": "https://www.microsoft.com/en-us/research/"
+			},
+			{
+				"name": "IBM Research",
+				"location": "Yorktown Heights, NY",
+				"website": "https://www.research.ibm.com/"
+			},
+			{
+				"name": "Baidu Research",
+				"location": "Beijing, China",
+				"website": "http://research.baidu.com/"
+			},
+			{
+				"name": "NVIDIA Research",
+				"location": "Santa Clara, CA",
+				"website": "https://research.nvidia.com/"
+			},
+			{
+				"name": "Apple AI Research",
+				"location": "Cupertino, CA",
+				"website": "https://www.apple.com/ai/"
+			},
+			{
+				"name": "Amazon AI Research",
+				"location": "Seattle, WA",
+				"website": "https://www.amazon.science/"
+			},
+			{
+				"name": "Intel AI Research",
+				"location": "Santa Clara, CA",
+				"website": "https://ai.intel.com/"
+			},
+			{
+				"name": "Uber AI Labs",
+				"location": "San Francisco, CA",
+				"website": "https://eng.uber.com/uber-ai-labs/"
+			}
+		],
+		"persons": [
+			{
+				"first": "Warren",
+				"last": "McCulloch"
+			},
+			{
+				"first": "Walter",
+				"last": "Pitts"
+			},
+			{
+				"first": "Frank",
+				"last": "Rosenblatt"
+			},
+			{
+				"first": "Marvin",
+				"last": "Minsky"
+			},
+			{
+				"first": "Bernard",
+				"last": "Widrow"
+			},
+			{
+				"first": "Marcian",
+				"last": "Hoff"
+			},
+			{
+				"first": "Kunihiko",
+				"last": "Fukushima"
+			},
+			{
+				"first": "Terrence",
+				"last": "Sejnowski"
+			},
+			{
+				"first": "Charles",
+				"last": "Rosenberg"
+			},
+			{
+				"first": "Gerald",
+				"last": "Tesauro"
+			},
+			{
+				"first": "Demis",
+				"last": "Hassabis"
+			},
+			{
+				"first": "Shane",
+				"last": "Legg"
+			},
+			{
+				"first": "Mustafa",
+				"last": "Suleyman"
+			},
+			{
+				"first": "Alex",
+				"last": "Krizhevsky"
+			},
+			{
+				"first": "Ilya",
+				"last": "Sutskever"
+			},
+			{
+				"first": "Geoffrey",
+				"last": "Hinton"
+			}
+	
+		]
+	}
+	
 }
