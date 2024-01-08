@@ -24,7 +24,7 @@ Douglas Crockford takes issue with the way we "sound" letters. Douglas Crockford
 
 ## The New Rules
 
-<table class="ui celled table">
+<table class="ui celled unstackable table">
 	<thead>
 		<tr>
 			<th>Letter</th>
