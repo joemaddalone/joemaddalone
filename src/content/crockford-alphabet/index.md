@@ -232,9 +232,9 @@ ay bee see dee ee fee ghee hee eye jee kee lee mee nee oh pee ree see tee you ve
 
 `pee ree oh ghee ree mee mee ee ree`
 
-### Crockford
+### Crockford (Krokford)
 
-`kee ree oh see kee oh ree dee`
+`kee ree oh kee oh ree dee`
 
 I love these sounds. And Crockford. You are welcome
 
