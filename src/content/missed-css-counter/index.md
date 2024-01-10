@@ -18,9 +18,9 @@ permalink: '/{{ title | slugify }}/'
 
 ```html
 <div>
-  <p>First</p>
-  <p>Second</p>
-  <p>Third</p>
+  <span>First</span>
+  <span>Second</span>
+  <span>Third</span>
 </div>
 ```
 ### CSS
@@ -29,18 +29,20 @@ permalink: '/{{ title | slugify }}/'
 div {
   counter: number;
 }
-div p {
+div span {
+  display:block;
   counter-increment: number;
 }
-div p:before {
+div span:before {
   content: counter(number);
   width: 1.5em;
   height: 1.5em;
+  border-radius: 1.5em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   margin-right: 0.3em;
+  margin-bottom: 0.5em;
   background: #000;
   color: #fff;
 }
@@ -51,31 +53,32 @@ div p:before {
 		counter: number;
 	}
 
-	div.a p {
+	div.a span {
+		display:block;
 		counter-increment: number;
 	}
 
-	div.a p:before {
+	div.a span:before {
 		content: counter(number);
 		width: 1.5em;
 		height: 1.5em;
+		border-radius: 1.5em;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		border-radius: 50%;
 		margin-right: 0.3em;
+		margin-bottom: 0.5em;
 		background: #000;
 		color: #fff;
-
 	}
 </style>
 
 And now we have numbering without ordered list.  The immediate benefit being that we can style as we see fit.
 
 <div class="ui segment a">
-  <p>First</p>
-  <p>Second</p>
-  <p>Third</p>
+  <span>First</span>
+  <span>Second</span>
+  <span>Third</span>
 </div>
 
 With a small tweak we can choose different formats.
@@ -83,7 +86,7 @@ With a small tweak we can choose different formats.
 ### CSS
 
 ```css
-div p:before {
+div span:before {
   content: counter(number, upper-roman);
   <-- lower-roman, lower-greek, upper-alpha, etc...-->
   ...
@@ -95,34 +98,35 @@ div p:before {
 		counter: numberB;
 	}
 
-	div.b p {
+	div.b span {
+		display:block;
 		counter-increment: numberB;
 	}
 
-	div.b p:before {
+	div.b span:before {
 		content: counter(numberB, upper-roman);
 		width: 1.5em;
 		height: 1.5em;
+		border-radius: 1.5em;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		border-radius: 50%;
 		margin-right: 0.3em;
+		margin-bottom: 0.5em;
 		background: #000;
 		color: #fff;
-
 	}
 </style>
 
 <div class="ui segment b">
-  <p>First</p>
-  <p>Second</p>
-  <p>Third</p>
+  <span>First</span>
+  <span>Second</span>
+  <span>Third</span>
 </div>
 
 ### counter-reset
 
-Using css counters we can define when to reset the counter.  Here we'll use a section element to reset the counter. 
+Using css counters we can define when to reset the counter.  Here we'll use a section element to reset the counter.
 
 ```css
 div {
@@ -134,14 +138,14 @@ div {
 ```html
 <div>
   <section>
-    <p>First</p>
-    <p>Second</p>
-    <p>Third</p>
+    <span>First</span>
+    <span>Second</span>
+    <span>Third</span>
   </section>
   <section>
-    <p>First</p>
-    <p>Second</p>
-    <p>Third</p>
+    <span>First</span>
+    <span>Second</span>
+    <span>Third</span>
   </section>
 </div>
 ```
@@ -157,19 +161,21 @@ div {
 		padding: 15px 0;
 	}
 
-	div.c p {
+	div.c span {
+		display:block;
 		counter-increment: numberC;
 	}
 
-	div.c p:before {
+	div.c span:before {
 		content: counter(numberC, upper-roman);
 		width: 1.5em;
 		height: 1.5em;
+		border-radius: 1.5em;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		border-radius: 50%;
 		margin-right: 0.3em;
+		margin-bottom: 0.5em;
 		background: #000;
 		color: #fff;
 
@@ -178,17 +184,13 @@ div {
 
 <div class="ui segment c">
 	<section>
-		<p>First</p>
-		<p>Second</p>
-		<p>Third</p>
+		<span>First</span>
+		<span>Second</span>
+		<span>Third</span>
 	</section>
 	<section>
-		<p>First</p>
-		<p>Second</p>
-		<p>Third</p>
+		<span>First</span>
+		<span>Second</span>
+		<span>Third</span>
 	</section>
 </div>
-
-
-
-
