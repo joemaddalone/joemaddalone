@@ -12,9 +12,6 @@ permalink: '/{{ title | slugify }}/'
 	<p>{{ excerpt }}</p>
 </hgroup>
 
-
-# Why I Build and Abandon...
-
 I was building a thing and at v0.06 I kinda forgot what I was intending to build.  Shit.  I was once again in the presence of a project I was going to bail on.  I'd write a few comments, make a half-hearted attempt at ear-marking the code as the utmost important thing to get to... when I had more time to think.  This led to some internal guilt.  Then wondered why I was building it at all?  Why do I even bother?
 
 I went back and looked at the iterations of the code and deduced that my intent was to learn.

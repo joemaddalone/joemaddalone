@@ -13,7 +13,7 @@ permalink: '/{{ title | slugify }}/'
 </hgroup>
 
 
-## I hate most financial snapshot apps... eventually.
+I hate most financial snapshot apps... eventually.
 
 So, I started off using PersonalCapital, then it turned into Empower. After that, I switched to Mint, and now it's Credit Karma. The funny thing is, all these apps seem to suffer from what I call "DupliBalance Disorder." You know, the classic scenario where you check your financial data, and suddenly, an account decides to clone itself, messing up all your totals. You try to fix it by kicking out the extra account, but whoops, it ends up deleting both. Add it back, and now you've got three.
 

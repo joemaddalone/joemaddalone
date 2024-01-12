@@ -12,14 +12,11 @@ permalink: '/{{ title | slugify }}/'
 	<p>{{ excerpt }}</p>
 </hgroup>
 
-## OliveTin
 
-> *[OliveTin](https://www.olivetin.app/) gives safe and simple access to predefined shell commands from a web interface.*
+*[OliveTin](https://www.olivetin.app/) gives safe and simple access to predefined shell commands from a web interface.*
 
 
 Technically OliveTin is mean for making a nice little panel of buttons that do whatever you want.  I also use it as a script runner since those actions can be tied to cron schedules.
-
-## nvm
 
 I use nvm and it made it slightly trickier to get OliveTin (running in docker) to access my code.
 
