@@ -43,7 +43,7 @@ This led to the following mental models of my flow when I code in my free time:
 - [commit-flow](https://github.com/joemaddalone/commit-flow)
   - Uses commitizen to convert our commit policy into a terminal form
 
-I have so many more of these in horrible and outdated shape that I would never bother to share.  These few are reasonable examples of code I took to a good enough point.  As in good enough for whatever I needed at the time.  They could all be improved in various ways... and I may or may not ever get to those iprovements.  And I'm okay with that.
+I have many more of these in horrible and outdated shape that I would never bother to share, but these few are reasonable examples of code I took to a good enough point.  As in good enough for whatever I needed at the time.  They could all be improved in various ways... and I may or may not ever get to those improvements.  And I'm okay with that.
 
 > "Make dumb shit.  Learn." --- Joe Maddalone
 
