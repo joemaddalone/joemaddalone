@@ -1,6 +1,11 @@
 {
   "books2024": [
     {
+      "title": "The Dark Tower: The Waste Lands",
+      "author": "Stephen King",
+      "isbn": "9781444723465"
+    },
+    {
       "title": "The Drawing of the Three",
       "author": "Stephen King",
       "isbn": "9780451163523"
