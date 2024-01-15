@@ -83,21 +83,28 @@ text.middle {
 .links {
 	display: flex;
 	flex-direction: column;
-
 }
 
 .links a {
+	text-align: center;
 	font-family: monospace;
-	font-size: 150%;
+	font-size: 125%;
+	padding: 5px;
 	color: inherit;
 	cursor: pointer;
-	text-decoration: none;
-	border-bottom: 2px dotted #130536cf;
+	text-decoration: underline;
 	margin-bottom: 10px;
 }
 
 .links a:hover {
-	color: #4747bf;
-	border-bottom: 2px dotted #4747bf;
-    text-decoration: none;
+	transition: all 200ms linear;
+	color: #fff;
+	background-color: #222;
+	text-decoration: none;
 }
+
+/* .links a:before {
+	position: absolute;
+	content: '‣';
+	left: -15px;
+} */
