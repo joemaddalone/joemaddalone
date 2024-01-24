@@ -2,6 +2,7 @@
 import { commit } from './commit.mjs';
 import { downloadFile } from './download.mjs';
 import fs from 'fs';
+const READING_YEAR = '2023';
 
 // replace dashes with empty string
 const isbn = (process.argv[2] || '').replace(/-/g, '');
@@ -31,20 +32,20 @@ const updateBooks = (formatted) => {
         if (words[0] == 'a' || words[0] == 'the' || words[0] == 'an') return words.splice(1).join(' ');
         return str;
     };
-    const books = JSON.parse(fs.readFileSync('../src/content/2024-books/2024-books.11tydata.json'));
-    if(!books.books2024.length) {
-        books.books2024.push(formatted);
+    const books = JSON.parse(fs.readFileSync(`../src/content/${READING_YEAR}-books/${READING_YEAR}-books.11tydata.json`));
+    if(!books[`books${READING_YEAR}`].length) {
+        books[`books${READING_YEAR}`].push(formatted);
     } else {
-        for (let i = 0; i < books.books2024.length; i++) {
+        for (let i = 0; i < books[`books${READING_YEAR}`].length; i++) {
             const aTitle = removeArticles(formatted.title.toLowerCase());
-            const bTitle = removeArticles(books.books2024[i].title.toLowerCase());
+            const bTitle = removeArticles(books[`books${READING_YEAR}`][i].title.toLowerCase());
             if (aTitle < bTitle) {
-                books.books2024.splice(i, 0, formatted);
+                books[`books${READING_YEAR}`].splice(i, 0, formatted);
                 break;
             }
         }
     }
-    fs.writeFileSync('../src/content/2024-books/2024-books.11tydata.json', JSON.stringify(books, null, 2));
+    fs.writeFileSync(`../src/content/${READING_YEAR}-books/${READING_YEAR}-books.11tydata.json`, JSON.stringify(books, null, 2));
 };
 
 updateBooks(formatted);
@@ -52,7 +53,7 @@ updateBooks(formatted);
 if (b[`ISBN:${isbn}`].cover) {
     const cover = b[`ISBN:${isbn}`].cover.large;
     try {
-        await downloadFile(cover, `../src/content/2024-books/${isbn}.jpg`);
+        await downloadFile(cover, `../src/content/${READING_YEAR}-books/${isbn}.jpg`);
         commit(`add ${isbn}`);
     }
     catch (err) {
