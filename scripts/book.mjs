@@ -32,20 +32,29 @@ const updateBooks = (formatted) => {
         if (words[0] == 'a' || words[0] == 'the' || words[0] == 'an') return words.splice(1).join(' ');
         return str;
     };
-    const books = JSON.parse(fs.readFileSync(`../src/content/${READING_YEAR}-books/${READING_YEAR}-books.11tydata.json`));
-    if(!books[`books${READING_YEAR}`].length) {
+    const books = JSON.parse(
+        fs.readFileSync(`../src/content/${READING_YEAR}-books/${READING_YEAR}-books.11tydata.json`)
+    );
+    if (!books[`books${READING_YEAR}`].length) {
         books[`books${READING_YEAR}`].push(formatted);
     } else {
+        let inserted = false;
         for (let i = 0; i < books[`books${READING_YEAR}`].length; i++) {
             const aTitle = removeArticles(formatted.title.toLowerCase());
             const bTitle = removeArticles(books[`books${READING_YEAR}`][i].title.toLowerCase());
+            console.log(aTitle, bTitle);
             if (aTitle < bTitle) {
                 books[`books${READING_YEAR}`].splice(i, 0, formatted);
+                inserted = true;
                 break;
             }
         }
+        if (!inserted) books[`books${READING_YEAR}`].push(formatted);
     }
-    fs.writeFileSync(`../src/content/${READING_YEAR}-books/${READING_YEAR}-books.11tydata.json`, JSON.stringify(books, null, 2));
+    fs.writeFileSync(
+        `../src/content/${READING_YEAR}-books/${READING_YEAR}-books.11tydata.json`,
+        JSON.stringify(books, null, 2)
+    );
 };
 
 updateBooks(formatted);
@@ -55,8 +64,7 @@ if (b[`ISBN:${isbn}`].cover) {
     try {
         await downloadFile(cover, `../src/content/${READING_YEAR}-books/${isbn}.jpg`);
         commit(`add ${isbn}`);
-    }
-    catch (err) {
+    } catch (err) {
         console.log('no cover');
         console.log(JSON.stringify(b, null, 2));
     }
