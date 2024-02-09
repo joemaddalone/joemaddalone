@@ -168,3 +168,19 @@ footer {
 	max-height: 25rem;
 	width: 100%;
 }
+
+
+.resume-header {
+	font-size: 75%;
+	padding: 25px 10px;
+	margin: 0 auto;
+	max-width: 900px;
+	color: #222;
+}
+
+.resume-container {
+	margin: 0 auto;
+	padding: 10px;
+	max-width: 900px;
+	color: #222;
+}

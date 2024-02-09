@@ -6,7 +6,11 @@
                 "title": "Senior Software Engineer IV",
                 "from": "08/2020",
                 "to": "present",
-                "highlights": ["Redis, Mongo", "Vue, Vuex"]
+                "highlights": [
+                    "Developed complex data visualizations for log analysis and open telemetry",
+                    "Developed UI component library",
+                    "Redis, Mongo, ElasticSearch, Vue 2 → Vue 3, Vuex → Pinia"
+                ]
             },
             {
                 "company": "Datacoral",
@@ -14,7 +18,7 @@
                 "from": "06/2019",
                 "to": "08/2020",
                 "highlights": [
-                    "Leading a team of software engineers.",
+                    "Led a team of software engineers.",
                     "Turning data engineering into a point and click process.",
                     "ES2018+, React, Redux"
                 ]
@@ -57,7 +61,7 @@
                 "from": "01/2000",
                 "to": "12/2015",
                 "highlights": [
-                    "Managed all aspects of my own consultancy.  Primarily a .NET shop.",
+                    "Managed all aspects of my own consultancy.  Primarily a .NET / Angular shop.",
                     "LDM Solutions (01/2010 - 03/2014)",
                     "CognitiveTPG (02/2008 - 05/2015)",
                     "Mega Media Depot (10/2005 - 12/2009)",
