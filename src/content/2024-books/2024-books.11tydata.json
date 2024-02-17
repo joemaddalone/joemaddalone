@@ -1,19 +1,25 @@
 {
   "books2024": [
     {
-      "title": "The Dark Tower: The Waste Lands",
+      "title": "The Big Short",
+      "subtitle": "Inside the Doomsday Machine",
+      "author": "Michael Lewis",
+      "isbn": "9780393353150"
+    },
+    {
+      "title": "The Dark Tower II: The Drawing of the Three",
+      "author": "Stephen King",
+      "isbn": "9780451163523"
+    },
+    {
+      "title": "The Dark Tower III: The Waste Lands",
       "author": "Stephen King",
       "isbn": "9781444723465"
     },
     {
-      "title": "The Dark Tower: Wizard and Glass",
+      "title": "The Dark Tower IV: Wizard and Glass",
       "author": "Stephen King",
       "isbn": "9781444723472"
-    },
-    {
-      "title": "The Drawing of the Three",
-      "author": "Stephen King",
-      "isbn": "9780451163523"
     },
     {
       "title": "Genius Makers",
