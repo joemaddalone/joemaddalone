@@ -1,6 +1,11 @@
 {
   "books2024": [
     {
+      "title": "'Salem's Lot",
+      "author": "Stephen King",
+      "isbn": "9780307743671"
+    },
+    {
       "title": "The Big Short",
       "subtitle": "Inside the Doomsday Machine",
       "author": "Michael Lewis",
