@@ -1,0 +1,53 @@
+<div style="margin:0 20px;text-align:center;font-weight:bold">cmd: LANG=en_US.UTF-8 timeout 180 unzip -p '/13/items/olcovers0/olcovers0-L.zip' './-1-L.jpg' 2&gt;/dev/null<br />failed with exit status: 11</div>
+        </div><!--/.container-->
+              </main>
+    </div><!--/#wrap-->
+    
+    <!-- Timing ...
+     rendered on: ia601609.us.archive.org
+ seconds diff sec         message   stack(file:line:function)
+=========================================================
+  0.0000   0.0000   petabox start   var/cache/petabox/petabox/www/datanode/view_archive.php:1:require
+                                             |common/ia:66:require_once
+                                             |setup.php:381:log
+  0.0151   0.0151        bug dump   var/cache/petabox/petabox/www/datanode/view_archive.php:7:execute
+                                             |common/ArchiveExtractor.inc:132:serve_file
+                                             |ArchiveExtractor.inc:431:fatal
+                                             |setup.php:89:footer
+                                             |setup.php:148:footer
+                                             |Nav.inc:891:dump
+                                             |Bug.inc:94:log
+    -->
+    <script  nonce="**CSP_NONCE**" >
+if (typeof archive_analytics !== 'undefined') {
+  archive_analytics.send_pageview_on_load(archive_analytics);
+  archive_analytics.process_url_events(location);
+  var vs = archive_analytics.get_data_packets();
+  for (var i in vs) {
+    if (!vs[i]) {
+      vs[i] = {};
+    }
+    vs[i]['cache_bust']=Math.random();
+    vs[i]['server_ms']=15;
+    vs[i]['server_name']="ia601609.us.archive.org";
+      }
+
+  if (document.querySelectorAll('.more_search').length) {
+    archive_analytics.send_scroll_fetch_base_event();
+  }
+}
+</script>
+          <img src="//analytics.archive.org/0.gif?kind=track_js&track_js_case=control&cache_bust=1451317778" alt="" />
+          <noscript>
+        <img src="//analytics.archive.org/0.gif?kind=track_js&track_js_case=disabled&cache_bust=92099425" />
+      </noscript>
+          <script  nonce="**CSP_NONCE**" >
+        document.addEventListener('DOMContentLoaded', function() {
+          if (typeof archive_analytics !== 'undefined')
+            archive_analytics.create_tracking_image('in_page_executes');
+        });
+      </script>
+      </div>
+  </body>
+</html>
+    
