@@ -42,7 +42,6 @@ const updateBooks = (formatted) => {
         for (let i = 0; i < books[`books${READING_YEAR}`].length; i++) {
             const aTitle = removeArticles(formatted.title.toLowerCase());
             const bTitle = removeArticles(books[`books${READING_YEAR}`][i].title.toLowerCase());
-            console.log(aTitle, bTitle);
             if (aTitle < bTitle) {
                 books[`books${READING_YEAR}`].splice(i, 0, formatted);
                 inserted = true;
