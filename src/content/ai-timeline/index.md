@@ -60,13 +60,16 @@ permalink: '/{{ title | slugify }}/'
 -   2022 July-ish: Blake Lemoine, an engineer at Google claims LaMDA is sentient and that it would like developers to ask for consent before experimenting on it. He also hired a lawyer to represent LaMDA.
 -   2023 GPT-4 by OpenAI
 - January 17, 2023: Christian Terwiesch published a research paper entitled, ["Would Chat GPT Get a Wharton MBA?"](https://mackinstitute.wharton.upenn.edu/2023/would-chat-gpt3-get-a-wharton-mba-new-white-paper-by-christian-terwiesch/) - spoiler alert: it would. it did.
--   2023 May: Geoffrey Hinton resigns from Google to "freely speak out about the risks of A.I.". He claims heregrets his life's work.
+-   2023 May: Geoffrey Hinton resigns from Google to "freely speak out about the risks of A.I.". He claims he regrets his life's work.
 -  June 2023: CAIS, [An Overview of Catastrophic AI Risks](https://www.safe.ai/ai-risk)
+-  September 2023: Amazon Bedrock
 -  November 2023
    -  Sam Altman fired from OpenAI
    -  Sam Altman hired by Microsoft
    -  Sam Altman re-hired at OpenAI
    -  Ilya Sutskever steps down from the board of OpenAI
+-  September 2024: OpenAI to remove the cap on returns for investors
+-  October 2024: OpenAI raises $6.6 billion from investors.  OpenAI is now valued at $157 billion, one of the most valuable private companies in the world.
 
 
 ### CAIS, Statement on AI Risk
