@@ -40,11 +40,6 @@
       "isbn": "9781585425402"
     },
     {
-      "title": "The dark tower",
-      "author": "Stephen King",
-      "isbn": "9781880418628"
-    },
-    {
       "title": "The Dark Tower II: The Drawing of the Three",
       "author": "Stephen King",
       "isbn": "9780451163523"
@@ -68,6 +63,11 @@
       "title": "The Dark Tower VI: Song of Susannah",
       "author": "Stephen King",
       "isbn": "9781416521495"
+    },
+    {
+      "title": "The Dark Tower VII: The Dark Tower",
+      "author": "Stephen King",
+      "isbn": "9781880418628"
     },
     {
       "title": "Distrust that particular flavor",
