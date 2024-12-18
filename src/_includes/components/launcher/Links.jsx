@@ -12,7 +12,7 @@ const wheres = [
         txt: 'react-svg-path',
         url: 'https://joemaddalone.github.io/react-svg-path-docs',
     },
-    { color: '#f26157', txt: 'FillText', url: 'http://www.filltext.com' },
+    // { color: '#f26157', txt: 'FillText', url: 'http://www.filltext.com' },
     {
         color: '#7f9cf5',
         txt: 'React Loop',

@@ -62,17 +62,19 @@ permalink: '/{{ title | slugify }}/'
 -   January 17, 2023: Christian Terwiesch published a research paper entitled, ["Would Chat GPT Get a Wharton MBA?"](https://mackinstitute.wharton.upenn.edu/2023/would-chat-gpt3-get-a-wharton-mba-new-white-paper-by-christian-terwiesch/) - spoiler alert: it would. it did.
 -   2023 May: Geoffrey Hinton resigns from Google to "freely speak out about the risks of A.I.". He claims he regrets his life's work.
 -   2023 June : CAIS, [An Overview of Catastrophic AI Risks](https://www.safe.ai/ai-risk)
--   2023 September : Amazon Bedrock
+-   2023 September : General availability of [Amazon Bedrock](https://aws.amazon.com/bedrock/)
 -  2023 November
    -  Sam Altman fired from OpenAI
    -  Sam Altman hired by Microsoft
    -  Sam Altman re-hired at OpenAI
    -  Ilya Sutskever steps down from the board of OpenAI
-- 2024 June: Ilya Sutskever launches Safe Superintelligence Inc.  The new company's "first product will be the safe superintelligence, and it will not do anything else up until then".
+- 2024 June: Ilya Sutskever launches [Safe Superintelligence Inc.](https://ssi.inc/)  The new company's "first product will be the safe superintelligence, and it will not do anything else up until then".
 -  2024 September:
-   -  OpenAI to remove the cap on returns for investors
-   -  Safe Superintelligence Inc raises $1 billion from venture capital firms
--  2024 October: OpenAI raises $6.6 billion from investors.  OpenAI is now valued at $157 billion, one of the most valuable private companies in the world.
+   -  OpenAI to [remove the cap on returns for investors](https://www.reuters.com/technology/artificial-intelligence/openai-remove-non-profit-control-give-sam-altman-equity-sources-say-2024-09-25/)
+   -  [Safe Superintelligence Inc raises $1 billion from venture capital firms](https://www.reuters.com/technology/artificial-intelligence/openai-co-founder-sutskevers-new-safety-focused-ai-startup-ssi-raises-1-billion-2024-09-04/)
+-  2024 October:
+   -  OpenAI raises $6.6 billion from investors.  OpenAI is now valued at $157 billion, one of the most valuable private companies in the world.
+   -  Hinton & Hopfield receive [Nobel Prize in Physics](https://www.nobelprize.org/prizes/physics/2024/press-release/) “for foundational discoveries and inventions that enable machine learning with artificial neural networks”
 
 
 ### CAIS, Statement on AI Risk
