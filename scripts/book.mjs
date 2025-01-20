@@ -2,7 +2,7 @@
 import { commit } from './commit.mjs';
 import { downloadFile } from './download.mjs';
 import fs from 'fs';
-const READING_YEAR = '2024';
+const READING_YEAR = '2025';
 
 // replace dashes with empty string
 const isbn = (process.argv[2] || '').replace(/-/g, '');
