@@ -16,7 +16,7 @@ const Heading = ({ cx, cy, ox, click, size, content = 'A' }) => {
     return (
         <Group>
             <Circle
-                class="pointer"
+                className="pointer"
                 onClick={click}
                 cx={cx}
                 cy={cy}

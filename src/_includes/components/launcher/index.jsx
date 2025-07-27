@@ -6,15 +6,15 @@ import icons from './icons';
 import './launcher.css';
 
 const socialLinks = [
-	{
-		id: 'twitter',
-		txt: 'Twitter',
-		msg: 'I tweet now and then.',
-		icon: icons.twitter,
-		url: 'http://www.twitter.com/joemaddalone',
-		type: 'external',
-		color: '#0084b4',
-	},
+	// {
+	// 	id: 'twitter',
+	// 	txt: 'Twitter',
+	// 	msg: 'I tweet now and then.',
+	// 	icon: icons.twitter,
+	// 	url: 'http://www.twitter.com/joemaddalone',
+	// 	type: 'external',
+	// 	color: '#0084b4',
+	// },
 	{
 		id: 'github',
 		txt: 'Github',
