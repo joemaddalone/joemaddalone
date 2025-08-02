@@ -1,0 +1,33 @@
+{
+  "name": "orbital-orbit",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "predeploy": "npm run build && npm run build",
+		"deploy": "gh-pages -d dist",
+    "git": "git add . && git commit -m",
+		"postgit": "git push --all"
+  },
+  "dependencies": {
+    "@astro-community/astro-embed-youtube": "^0.5.6",
+    "@astrojs/mdx": "^4.3.1",
+    "@astrojs/react": "^4.3.0",
+    "@babel/runtime": "^7.28.2",
+    "@joemaddalone/path": "^1.4.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "astro": "^5.12.4",
+    "dagre": "^0.8.5",
+    "gh-pages": "^6.3.0",
+    "gridset": "^1.0.5",
+    "prop-types": "^15.8.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-spring": "^10.0.1",
+    "react-svg-path": "^1.15.0"
+  }
+}

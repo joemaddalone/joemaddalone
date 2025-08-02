@@ -1,0 +1,135 @@
+{
+    "resume": {
+        "work": [
+            {
+                "company": "Mezmo",
+                "title": "Senior Software Engineer IV",
+                "from": "08/2020",
+                "to": "08/2025",
+                "highlights": [
+                    "Developed complex data visualizations for log analysis and open telemetry",
+                    "Developed UI component library",
+                    "Redis, Mongo, ElasticSearch, Vue 2 → Vue 3, Vuex → Pinia"
+                ]
+            },
+            {
+                "company": "Datacoral",
+                "title": "Senior Software Engineer",
+                "from": "06/2019",
+                "to": "08/2020",
+                "highlights": [
+                    "Led a team of software engineers.",
+                    "Turning data engineering into a point and click process.",
+                    "ES2018+, React, Redux"
+                ]
+            },
+            {
+                "company": "CloudBees",
+                "title": "Senior Software Engineer / Tech Lead",
+                "from": "06/2017",
+                "to": "06/2019",
+                "highlights": [
+                    "Led a team of senior software engineers.",
+                    "Helped grow a Jenkins plugin into a standalone SaaS.",
+                    "ES2018+, React, Mobx, D3, Jest/Enzyme/react-testing-library, Cypress, Puppeteer, Docker, Jenkins"
+                ]
+            },
+            {
+                "company": "Genos Research",
+                "title": "Lead Front End Developer",
+                "from": "12/2015",
+                "to": "05/2017",
+                "highlights": [
+                    "Implementing architecture, features, best practices, and testing.",
+                    "Heavily involved in engineering decisions, sprint planning, task assignment, and feature prioritization.",
+                    "ES6/7, D3, Babel, Node, Grunt, Nightmare, ITCSS"
+                ]
+            },
+            {
+                "company": "Universal Mind ",
+                "title": "Technical Architect Consultant",
+                "from": "03/2014",
+                "to": "12/2015",
+                "highlights": [
+                    "Led multiple teams of senior developers on several projects.",
+                    "Responsible for demonstrating progress to executive teams.",
+                    "AngularJS, Backbone, D3, Less, Sass "
+                ]
+            },
+            {
+                "company": "Insert Title Web Services",
+                "from": "01/2000",
+                "to": "12/2015",
+                "highlights": [
+                    "Managed all aspects of my own consultancy.  Primarily a .NET / Angular shop.",
+                    "LDM Solutions (01/2010 - 03/2014)",
+                    "CognitiveTPG (02/2008 - 05/2015)",
+                    "Mega Media Depot (10/2005 - 12/2009)",
+                    "Healthspring & Norm Thompson (09/2005 - 01/2013)",
+                    "Strategic Incentive Marketing (06/2004 - 09/2010)",
+                    "Open Road Radio (01/2000 - 10/2005)",
+					"...dozens of shorter term projects.",
+					"ASP, VB.NET, C#, SQL, VBA, EDI x12, VB.NET, HIPPA, VBA, VB6 Desktop"
+                ]
+            }
+        ],
+        "skills": [
+            "git",
+            "node.js",
+            "JavaScript/ES2018+",
+            "D3",
+            "SVG",
+            "HTML",
+            "CSS",
+            "FlexBox",
+            "CSS Grid",
+            "Less",
+            "Sass",
+            "AngularJS",
+            "Backbone",
+            "React",
+            "Redux",
+            "MobX",
+            "Jest",
+            "Enzyme",
+            "react-testing-library",
+            "express",
+            "hapi",
+            "Bootstrap",
+            "tachyons",
+            "npm",
+            "yarn",
+            "Grunt",
+            "gulp",
+            "webpack",
+            "Agile/Scrum"
+        ],
+        "personal": [
+            {
+                "title": "React Loop",
+                "url": "https://reactloop.com/about",
+                "description": "Primary organizer of React Loop conference."
+            },
+            {
+                "title": "FillText",
+                "url": "http://www.filltext.com",
+                "description": "A node API for simulating APIs."
+            },
+            {
+                "title": "egghead.io",
+                "url": "http://egghead.io/instructors/joe-maddalone",
+                "description": "Teaching the latest in web technologies"
+            },
+            {
+                "title": "react-svg-path",
+                "url": "https://joemaddalone.github.io/react-svg-path",
+                "description": "An advanced path rendering system in React."
+            },
+            {
+                "title": "htmlstack",
+                "url": "http://www.htmlstack.com",
+                "description": "Experimenting with all things possible in a browser."
+            }
+        ]
+    }
+}

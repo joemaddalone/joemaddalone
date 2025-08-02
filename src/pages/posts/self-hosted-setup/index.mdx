@@ -1,0 +1,34 @@
+---
+title: 'My self-hosted stuff'
+date: 2022-03-14
+tags: ['post']
+excerpt: 'Hosting all the things from a closet.'
+---
+import data from './self-hosted-setup.11tydata.json';
+import Diagram from './homeserver/diagram.jsx';
+
+<hgroup>
+	<h1>My self-hosted stuff</h1>
+	<p>Hosting all the things from a closet.</p>
+</hgroup>
+
+I've always had a media server setup running in our house, but during the pandemic I got much more interested in self hosting various services.  This list of self hosted applications on my home server changes all the time.
+
+<div class="ui segment">
+<Diagram />
+</div>
+
+
+
+_With the exception of Snapraid and MergerFS these are all running in docker and are accessed in a browser._
+
+{data.apps.map((app) => (
+	<div class="ui segment">
+	<div class="flex justify-between">
+		<a href={app.url}>{app.app}</a>
+	</div>
+	<p>{app.description}</p>
+</div>
+))}
+
+

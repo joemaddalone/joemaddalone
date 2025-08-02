@@ -1,0 +1,10 @@
+---
+const { title, excerpt, url } = Astro.props;
+---
+
+<li class="postlist-item">
+    <span>
+        <a href={url} class="postlist-link">
+            {title}</a> : {excerpt}
+        </span>
+</li>

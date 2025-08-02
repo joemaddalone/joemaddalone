@@ -1,0 +1,9 @@
+node_modules
+.cursor
+.astro
+coverage/
+*.log
+.vscode
+dist/
+src/img
+.DS_Store

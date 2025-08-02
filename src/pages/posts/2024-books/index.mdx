@@ -1,0 +1,29 @@
+---
+title: '2024 in the Books'
+date: 2024-12-31
+tags: ['post']
+excerpt: 'A bunch of things I read in 2024.'
+---
+import data from './2024-books.11tydata.json';
+
+<hgroup>
+	<h1>2024 in the Books</h1>
+	<p>A bunch of things I read in 2024.</p>
+</hgroup>
+
+<div class="ui divided items">
+
+{data.books2024.map((book) => (
+	<div class="item">
+			<div class="image">
+				<img src={`/assets/books/${book.isbn}.jpg`} alt={book.title} />
+			</div>
+			<div class="content">
+				<div class="header">{book.title}</div>
+				<div class="meta i">{book.subtitle}</div>
+				<div class="meta pt2">{book.author}</div>
+			</div>
+	</div>
+))}
+</div>
+

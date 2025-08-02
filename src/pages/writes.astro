@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+import { getCollection } from "astro:content";
+import "../styles/global.css";
+const pageTitle = "Blog Page";
+import createSlug from "../lib/createSlug";
+const allPosts = await getCollection("blog");
+---
+<style>
+</style>
+<BaseLayout pageTitle={pageTitle}>
+<div class="standard-article">
+    <ul class="postlist">
+        {
+            allPosts.filter((post) => post.data.tags.includes('post')).sort((a, b) => a.data.date.getTime() - b.data.date.getTime()).reverse().map((post) => (
+                <BlogPost
+                    url={`/${createSlug(post.data.title)}`}
+                    title={post.data.title}
+                    excerpt={post.data.excerpt}
+                />
+            ))
+        }
+    </ul>
+</div>
+</BaseLayout>
