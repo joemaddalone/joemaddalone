@@ -1,0 +1,94 @@
+<!DOCTYPE html><meta charset="utf-8"><hgroup>
+	<h1>Missed HTML: details</h1>
+	<p>The details tag is often overlooked and reinvented.</p>
+</hgroup>
+<h2 id="details">&#x3C;details></h2>
+<blockquote>
+<p>The &#x3C;details> HTML element creates a disclosure widget in which information is visible only when the widget is toggled into an “open” state. A summary or label must be provided using the &#x3C;summary> element. - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">MDN</a></p>
+</blockquote>
+<h3 id="html">HTML</h3>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#ADB1C2">&#x3C;</span><span style="color:#13BBB7">details</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">    &#x3C;</span><span style="color:#13BBB7">summary</span><span style="color:#ADB1C2">></span><span style="color:#565869">Detail</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">summary</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#565869">    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></span>
+<span class="line"><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">details</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">&#x3C;</span><span style="color:#13BBB7">details</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">    &#x3C;</span><span style="color:#13BBB7">summary</span><span style="color:#ADB1C2">></span><span style="color:#565869">Detail2</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">summary</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#565869">    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></span>
+<span class="line"><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">details</span><span style="color:#ADB1C2">></span></span></code></pre>
+<div class="ui segment">
+<details>
+    <summary>Detail</summary>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</details>
+<details>
+    <summary>Detail2</summary>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</details>
+</div>
+<h3 id="and-with-a-little-css-and-nesting">And with a little css and nesting.</h3>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#ADB1C2">&#x3C;</span><span style="color:#13BBB7">style</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#F767BB">    details</span><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">css summary</span><span style="color:#FF82CBBB">:</span><span style="color:#F767BB">hover</span><span style="color:#ADB1C2">,</span></span>
+<span class="line"><span style="color:#F767BB">    details</span><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">css li</span><span style="color:#FF82CBBB">:</span><span style="color:#F767BB">hover</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">        color</span><span style="color:#ADB1C2">: </span><span style="color:#2DAE58">blue</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">    }</span></span>
+<span class="line"><span style="color:#F767BB">    details</span><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">css</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">        cursor</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">pointer</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">    }</span></span>
+<span class="line"><span style="color:#F767BB">    details</span><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">css </span><span style="color:#FF82CBBB">></span><span style="color:#F767BB"> details</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">        margin-left</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">12</span><span style="color:#FF5C57CC">px</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">    }</span></span>
+<span class="line"><span style="color:#F767BB">    details</span><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">css </span><span style="color:#FF82CBBB">></span><span style="color:#F767BB"> details </span><span style="color:#FF82CBBB">></span><span style="color:#F767BB"> details</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">        margin-left</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">24</span><span style="color:#FF5C57CC">px</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">    }</span></span>
+<span class="line"><span style="color:#F767BB">    details</span><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">css ul</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">        margin</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">0</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">    }</span></span>
+<span class="line"><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">style</span><span style="color:#ADB1C2">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#ADB1C2">&#x3C;</span><span style="color:#13BBB7">details</span><span style="color:#FF8380"> class</span><span style="color:#ADB1C2">=</span><span style="color:#ADB1C2">"</span><span style="color:#CF9C00">css</span><span style="color:#ADB1C2">"</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">    &#x3C;</span><span style="color:#13BBB7">summary</span><span style="color:#ADB1C2">></span><span style="color:#565869">Root</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">summary</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">    &#x3C;</span><span style="color:#13BBB7">details</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">        &#x3C;</span><span style="color:#13BBB7">summary</span><span style="color:#ADB1C2">></span><span style="color:#565869">Dir</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">summary</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">        &#x3C;</span><span style="color:#13BBB7">details</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">            &#x3C;</span><span style="color:#13BBB7">summary</span><span style="color:#ADB1C2">></span><span style="color:#565869">file list</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">summary</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">            &#x3C;</span><span style="color:#13BBB7">ul</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">                &#x3C;</span><span style="color:#13BBB7">li</span><span style="color:#ADB1C2">></span><span style="color:#565869">a</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">li</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">                &#x3C;</span><span style="color:#13BBB7">li</span><span style="color:#ADB1C2">></span><span style="color:#565869">b</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">li</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">                &#x3C;</span><span style="color:#13BBB7">li</span><span style="color:#ADB1C2">></span><span style="color:#565869">c</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">li</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">            &#x3C;/</span><span style="color:#13BBB7">ul</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">        &#x3C;/</span><span style="color:#13BBB7">details</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">    &#x3C;/</span><span style="color:#13BBB7">details</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">details</span><span style="color:#ADB1C2">></span></span></code></pre>
+<style>
+	details.css summary:hover, details.css li:hover {
+		color: blue;
+	}
+	details.css {
+		cursor: pointer;
+	}
+	details.css > details {
+		margin-left: 12px;
+	}
+	details.css > details > details {
+		margin-left: 24px;
+	}
+	details.css ul {
+		margin: 0;
+	}
+</style>
+<div class="ui segment">
+	<details class="css">
+		<summary>Root</summary>
+		<details>
+			<summary>Dir</summary>
+			<details>
+			<summary>file list</summary>
+			<ul>
+				<li>a</li>
+				<li>b</li>
+				<li>c</li>
+			</ul>
+		</details>
+		</details>
+	</details>
+</div>

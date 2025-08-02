@@ -1,5 +1,6 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.034c3e17.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.d1b335d8.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-icon-72x72.639c03b3.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-icon-76x76.d1818067.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-icon-114x114.07a3b4e8.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-icon-120x120.ac9883bb.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-icon-144x144.9f8d2b36.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.77f1b6fb.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.b2a7fc8d.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/android-icon-192x192.2a711125.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.71f7d1c5.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.498e56db.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.5a17786a.png"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css" integrity="sha512-d0v474klOFSF7qD9WDvyRxAvXaWSxCHDZdnBSZQjo8BpVr6vpjwAgqetpqkKP38DzlOzdVPaLVnzzW1Ba8wB9w==" crossorigin="anonymous"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css"><link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet"><title>CSS Grid | joe talks too much</title><meta name="description" content="clever thing."><meta name="robots" content="index,follow"><meta name="author" content="Joe Maddalone"><link rel="canonical" href="https://joemaddalone.com/css-grid/"><meta property="og:title" content="CSS Grid | joe talks too much"><meta property="og:type" content="article"><meta property="og:url" content="https://joemaddalone.com/css-grid/"><meta property="og:description" content="clever thing."><meta property="og:image" content="https://joemaddalone.com/assets/android-icon-192x192.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@joemaddalone"><meta name="twitter:url" content="https://joemaddalone.com/css-grid/"><meta name="twitter:title" content="CSS Grid | joe talks too much"><meta name="twitter:description" content="clever thing."><meta name="twitter:image" content="https://joemaddalone.com/assets/android-icon-192x192.png">  <link rel="stylesheet" href="/assets/index.44fb1042.css">
-</head><body><header class="flex items-center justify-between bb"><b><a href="/writes/">I write stuff. sometimes.</a></b> <a href="/"><img src="/assets/favicon-32x32.71f7d1c5.png" width="32" height="32" alt=""></a></header><main class="standard-article"><style>.container > div {
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/x-icon" href="/assets/favicon.ico"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.12.5"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css" integrity="sha512-d0v474klOFSF7qD9WDvyRxAvXaWSxCHDZdnBSZQjo8BpVr6vpjwAgqetpqkKP38DzlOzdVPaLVnzzW1Ba8wB9w==" crossorigin="anonymous"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css"><link href="//unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet"><title></title><style>.nav-links{width:100%;top:5rem;left:48px;background-color:#ff9776;display:none;margin:0}.nav-links a{display:block;text-align:center;padding:10px 0;text-decoration:none;font-size:1.2rem;font-weight:700;text-transform:uppercase}.nav-links a:hover,.nav-links a:focus{background-color:#ff9776}.expanded{display:unset}@media screen and (min-width: 636px){.nav-links{margin-left:5em;display:block;position:static;width:auto;background:none}.nav-links a{display:inline-block;padding:15px 20px}}html.dark{background-color:#0d0950;color:#fff}.dark .nav-links a{color:#fff}:root{--black: #000;--near-black: #111;--dark-gray: #333;--mid-gray: #555;--gray: #777;--silver: #999;--light-silver: #aaa;--moon-gray: #ccc;--light-gray: #eee;--near-white: #f8f8f8;--white: #fff;--transparent: transparent;--black-90: rgba(0, 0, 0, .9);--black-80: rgba(0, 0, 0, .8);--black-70: rgba(0, 0, 0, .7);--black-60: rgba(0, 0, 0, .6);--black-50: rgba(0, 0, 0, .5);--black-40: rgba(0, 0, 0, .4);--black-30: rgba(0, 0, 0, .3);--black-20: rgba(0, 0, 0, .2);--black-10: rgba(0, 0, 0, .1);--black-05: rgba(0, 0, 0, .05);--black-025: rgba(0, 0, 0, .025);--black-0125: rgba(0, 0, 0, .0125);--white-90: rgba(255, 255, 255, .9);--white-80: rgba(255, 255, 255, .8);--white-70: rgba(255, 255, 255, .7);--white-60: rgba(255, 255, 255, .6);--white-50: rgba(255, 255, 255, .5);--white-40: rgba(255, 255, 255, .4);--white-30: rgba(255, 255, 255, .3);--white-20: rgba(255, 255, 255, .2);--white-10: rgba(255, 255, 255, .1);--white-05: rgba(255, 255, 255, .05);--white-025: rgba(255, 255, 255, .025);--white-0125: rgba(255, 255, 255, .0125);--dark-red: #e7040f;--red: #ff4136;--light-red: #ff725c;--orange: #ff6300;--gold: #ffb700;--yellow: #ffd700;--light-yellow: #fbf1a9;--purple: #5e2ca5;--light-purple: #a463f2;--dark-purple: rebeccapurple;--dark-pink: #d5008f;--hot-pink: #ff41b4;--pink: #ff80cc;--light-pink: #ffa3d7;--dark-green: #137752;--green: #19a974;--light-green: #9eebcf;--navy: #001b44;--dark-blue: #00449e;--blue: #357edd;--light-blue: #96ccff;--lightest-blue: #cdecff;--washed-blue: #f6fffe;--washed-green: #e8fdf5;--washed-yellow: #fffceb;--washed-red: #ffdfdf}body,html{background-color:#eee;font-size:18px}header{font-size:75%;padding:25px 10px;margin:0 auto;max-width:800px;color:#222}header b{color:#222}footer{padding:15px 8px;font-size:75%;margin:20px auto;max-width:800px;border-top:1px dashed #222}.standard-article{margin:0 auto;padding:10px;max-width:800px;color:#222}.standard-article a{text-decoration:none}.standard-article a:hover{text-decoration:underline}.standard-article p{line-height:1.7;display:block}.standard-article pre{margin-bottom:15px;padding:1em;border-radius:.5em}.standard-article pre code{font-size:.8rem}.standard-article blockquote p{color:var(--black-60)}.standard-article hgroup{padding-left:16px;margin-bottom:16px;border-left:15px solid #222}.standard-article hgroup h1{margin-bottom:0}.standard-article hgroup p{margin:0;font-style:italic;color:#666}.postlist{margin:0;padding:4px}.postlist .postlist-item{display:flex;flex-direction:column;list-style-type:none;margin-top:15px}.postlist .postlist-item .postlist-date{font-size:1rem;padding-bottom:5px}.yt-embed{height:50vw;margin:1rem 0;max-height:25rem;width:100%}.resume-header{font-size:75%;padding:25px 10px;margin:0 auto;max-width:900px;color:#222}.resume-container{margin:0 auto;padding:10px;max-width:900px;color:#222}
+</style></head> <body> <header class="flex items-center justify-between bb"> <b><a href="/writes/">I write stuff. sometimes.</a></b> <a href="/"> <img src="/assets/favicon-32x32.png" width="32" height="32" alt=""> </a> </header>  <div class="standard-article">  <style>
+	.container > div {
 		outline: 1px solid orange;
 	}
 	.two > .container {
@@ -36,7 +37,178 @@
     display: grid;
     grid-template-columns: 20% auto 20%;
     grid-gap: 15px;
-  }</style><hgroup><h1>CSS Grid</h1><p>clever thing.</p></hgroup><p>Grid seems hard. So let's simplify it.</p><p>Our basic markup</p><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css"><br>  <span class="token selector">.container</span> <span class="token punctuation">{</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector">.container > div</span> <span class="token punctuation">{</span><br>      <span class="token property">outline</span><span class="token punctuation">:</span> 1px solid orange<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br>  ...<br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>11<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>12<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre><div class="ui segment one"><div class="container"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div></div></div><p>Let's add two even 50% columns.</p><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span><br>    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span><br>    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 50% 50%<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre><div class="ui segment two"><div class="container"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div></div></div><p>Or how about 3 even 33.33% columns.</p><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span><br>    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span><br>    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 33.33% 33.33% 33.33%<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre><div class="ui segment three"><div class="container"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div></div></div><p>That gets tedious quick. So we can use fraction units to create an even 4 columns instead of 25%.</p><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span><br>    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span><br>    <span class="token comment">/* grid-template-columns: 25% 25% 25% 25%; */</span><br>    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr 1fr 1fr 1fr<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre><div class="ui segment four"><div class="container"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div></div></div><p>Still... I hate typing so... repeat to the rescue.</p><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span><br>    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span><br>    <span class="token comment">/* grid-template-columns: 1fr 1fr 1fr 1fr; */</span><br>    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token function">repeat</span><span class="token punctuation">(</span>4<span class="token punctuation">,</span> 1fr<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre><div class="ui segment five"><div class="container"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div></div></div><p>grid-template-* provides flexibility. We can use percentages, fractions, repeat, and even auto.</p><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span><br>    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span><br>    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 20% auto 20%<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre><div class="ui segment seven"><div class="container"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div></div></div><p>gap. seems legit.</p><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span><br>    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span><br>    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 20% auto 20%<span class="token punctuation">;</span><br>    <span class="token property">grid-gap</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre><div class="ui segment six"><div class="container"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div></div></div><p>Now we can hang some meaningful items on our grid positioned by column and row.</p><style>.eight .container {
+  }
+</style>
+<hgroup>
+	<h1>CSS Grid</h1>
+	<p>clever thing.</p>
+</hgroup>
+<p>Grid seems hard. So let’s simplify it.</p>
+<p>Our basic markup</p>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#ADB1C2">&#x3C;</span><span style="color:#13BBB7">style</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#FF82CBBB">  .</span><span style="color:#F767BB">container</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#ADB1C2">  }</span></span>
+<span class="line"><span style="color:#FF82CBBB">  .</span><span style="color:#F767BB">container </span><span style="color:#FF82CBBB">></span><span style="color:#F767BB"> div</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">      outline</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">1</span><span style="color:#FF5C57CC">px</span><span style="color:#13BBB7"> solid </span><span style="color:#2DAE58">orange</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">  }</span></span>
+<span class="line"><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">style</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">&#x3C;</span><span style="color:#13BBB7">div</span><span style="color:#FF8380"> class</span><span style="color:#ADB1C2">=</span><span style="color:#ADB1C2">"</span><span style="color:#CF9C00">container</span><span style="color:#ADB1C2">"</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span><span style="color:#565869">1</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span><span style="color:#565869">2</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span><span style="color:#565869">3</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#565869">  ...</span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span><span style="color:#565869">10</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span><span style="color:#565869">11</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span><span style="color:#565869">12</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span></span></code></pre>
+<div class="ui segment one">
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+</div>
+<p>Let’s add two even 50% columns.</p>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">container</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">    display</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">grid</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">    grid-template-columns</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">50</span><span style="color:#FF5C57CC">%</span><span style="color:#FF5C57"> 50</span><span style="color:#FF5C57CC">%</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span></code></pre>
+<div class="ui segment two">
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+</div>
+<p>Or how about 3 even 33.33% columns.</p>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">container</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">    display</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">grid</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">    grid-template-columns</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">33.33</span><span style="color:#FF5C57CC">%</span><span style="color:#FF5C57"> 33.33</span><span style="color:#FF5C57CC">%</span><span style="color:#FF5C57"> 33.33</span><span style="color:#FF5C57CC">%</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span></code></pre>
+<div class="ui segment three">
+<div class="container">
+<div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+</div>
+<p>That gets tedious quick. So we can use fraction units to create an even 4 columns instead of 25%.</p>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">container</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">    display</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">grid</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">    /* grid-template-columns: 25% 25% 25% 25%; */</span></span>
+<span class="line"><span style="color:#565869">    grid-template-columns</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">1</span><span style="color:#FF5C57CC">fr</span><span style="color:#FF5C57"> 1</span><span style="color:#FF5C57CC">fr</span><span style="color:#FF5C57"> 1</span><span style="color:#FF5C57CC">fr</span><span style="color:#FF5C57"> 1</span><span style="color:#FF5C57CC">fr</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span></code></pre>
+<div class="ui segment four">
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+</div>
+<p>Still… I hate typing so… repeat to the rescue.</p>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">container</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">    display</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">grid</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">    /* grid-template-columns: 1fr 1fr 1fr 1fr; */</span></span>
+<span class="line"><span style="color:#565869">    grid-template-columns</span><span style="color:#ADB1C2">: </span><span style="color:#09A1ED">repeat</span><span style="color:#ADB1C2">(</span><span style="color:#FF5C57">4</span><span style="color:#ADB1C2">,</span><span style="color:#FF5C57"> 1</span><span style="color:#FF5C57CC">fr</span><span style="color:#ADB1C2">);</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span></code></pre>
+<div class="ui segment five">
+<div class="container">
+<div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+</div>
+<p>grid-template-* provides flexibility.  We can use percentages, fractions, repeat, and even auto.</p>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">container</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">    display</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">grid</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">    grid-template-columns</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">20</span><span style="color:#FF5C57CC">%</span><span style="color:#13BBB7"> auto </span><span style="color:#FF5C57">20</span><span style="color:#FF5C57CC">%</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span></code></pre>
+<div class="ui segment seven">
+<div class="container">
+<div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+</div>
+<p>gap. seems legit.</p>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">container</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">    display</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">grid</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">    grid-template-columns</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">20</span><span style="color:#FF5C57CC">%</span><span style="color:#13BBB7"> auto </span><span style="color:#FF5C57">20</span><span style="color:#FF5C57CC">%</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">    grid-gap</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">15</span><span style="color:#FF5C57CC">px</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span></code></pre>
+<div class="ui segment six">
+<div class="container">
+<div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+</div>
+<p>Now we can hang some meaningful items on our grid positioned by column and row.</p>
+<style>
+  .eight .container {
     display: grid;
     grid-template-columns: 20% auto 20%;
     grid-gap: 15px;
@@ -60,7 +232,44 @@
   .eight .container .main {
     grid-column: 2;
     grid-row: 1;
-  }</style><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span><br>  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span><br>  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 20% auto 20%<span class="token punctuation">;</span><br>  <span class="token property">grid-gap</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token selector">.logo</span> <span class="token punctuation">{</span><br>  <span class="token property">grid-column</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span><br>  <span class="token property">grid-row</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token selector">nav</span> <span class="token punctuation">{</span><br>  <span class="token property">grid-column</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span><br>  <span class="token property">grid-row</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token selector">aside</span> <span class="token punctuation">{</span><br>  <span class="token property">grid-column</span><span class="token punctuation">:</span> 3<span class="token punctuation">;</span><br>  <span class="token property">grid-row</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token selector">main</span> <span class="token punctuation">{</span><br>  <span class="token property">grid-column</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span><br>  <span class="token property">grid-row</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre><div class="ui segment eight"><div class="container"><div class="logo">Logo</div><div class="nav">Nav</div><div class="main">Main</div><div class="aside">Aside</div></div></div><p>And adjust the row span of aside and main.</p><style>.nine .container {
+  }
+</style>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">container</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  display</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">grid</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  grid-template-columns</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">20</span><span style="color:#FF5C57CC">%</span><span style="color:#13BBB7"> auto </span><span style="color:#FF5C57">20</span><span style="color:#FF5C57CC">%</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  grid-gap</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">15</span><span style="color:#FF5C57CC">px</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">logo</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  grid-column</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">1</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  grid-row</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">1</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F767BB">nav</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  grid-column</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">1</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  grid-row</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">2</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F767BB">aside</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  grid-column</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">3</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  grid-row</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">1</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F767BB">main</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  grid-column</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">2</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  grid-row</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">1</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span></code></pre>
+<div class="ui segment eight">
+<div class="container">
+  <div class="logo">Logo</div>
+  <div class="nav">Nav</div>
+  <div class="main">Main</div>
+  <div class="aside">Aside</div>
+</div>
+</div>
+<p>And adjust the row span of aside and main.</p>
+<style>
+  .nine .container {
     display: grid;
     grid-template-columns: 20% auto 20%;
     grid-gap: 15px;
@@ -84,7 +293,28 @@
   .nine .container .main {
     grid-column: 2;
     grid-row: 1 / span 2;
-  }</style><pre class="language-css"><code class="language-css"><span class="token selector">aside</span> <span class="token punctuation">{</span><br>  <span class="token property">grid-column</span><span class="token punctuation">:</span> 3<span class="token punctuation">;</span><br>  <span class="token property">grid-row</span><span class="token punctuation">:</span> 1 / span 2<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token selector">main</span> <span class="token punctuation">{</span><br>  <span class="token property">grid-column</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span><br>  <span class="token property">grid-row</span><span class="token punctuation">:</span> 1 / span 2<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre><div class="ui segment nine"><div class="container"><div class="logo">Logo</div><div class="nav">Nav</div><div class="main">Main</div><div class="aside">Aside</div></div></div><p>Let's tweak the height of the grid.</p><style>.ten .container {
+  }
+</style>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#F767BB">aside</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  grid-column</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">3</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  grid-row</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">1</span><span style="color:#13BBB7"> / span </span><span style="color:#FF5C57">2</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F767BB">main</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  grid-column</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">2</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  grid-row</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">1</span><span style="color:#13BBB7"> / span </span><span style="color:#FF5C57">2</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span></code></pre>
+<div class="ui segment nine">
+<div class="container">
+  <div class="logo">Logo</div>
+  <div class="nav">Nav</div>
+  <div class="main">Main</div>
+  <div class="aside">Aside</div>
+</div>
+</div>
+<p>Let’s tweak the height of the grid.</p>
+<style>
+  .ten .container {
     display: grid;
     grid-template-columns: 20% auto 20%;
     grid-gap: 15px;
@@ -109,7 +339,25 @@
   .ten .container .main {
     grid-column: 2;
     grid-row: 1 / span 2;
-  }</style><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span><br>  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span><br>  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 20% auto 20%<span class="token punctuation">;</span><br>  <span class="token property">grid-gap</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span><br>  <span class="token property">height</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre><div class="ui segment ten"><div class="container"><div class="logo">Logo</div><div class="nav">Nav</div><div class="main">Main</div><div class="aside">Aside</div></div></div><p>A problem appears, the logo is way too tall. We can utilize grid-template-rows to solve this.</p><style>.eleven .container {
+  }
+</style>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">container</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  display</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">grid</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  grid-template-columns</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">20</span><span style="color:#FF5C57CC">%</span><span style="color:#13BBB7"> auto </span><span style="color:#FF5C57">20</span><span style="color:#FF5C57CC">%</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  grid-gap</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">15</span><span style="color:#FF5C57CC">px</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  height</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">400</span><span style="color:#FF5C57CC">px</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span></code></pre>
+<div class="ui segment ten">
+<div class="container">
+  <div class="logo">Logo</div>
+  <div class="nav">Nav</div>
+  <div class="main">Main</div>
+  <div class="aside">Aside</div>
+</div>
+</div>
+<p>A problem appears, the logo is way too tall.  We can utilize grid-template-rows to solve this.</p>
+<style>
+  .eleven .container {
     display: grid;
     grid-template-columns: 20% auto 20%;
     grid-template-rows: 60px auto;
@@ -135,4 +383,20 @@
   .eleven .container .main {
     grid-column: 2;
     grid-row: 1 / span 2;
-  }</style><pre class="language-css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span><br>  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span><br>  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 20% auto 20%<span class="token punctuation">;</span><br>  <span class="token property">grid-template-rows</span><span class="token punctuation">:</span> 60px auto<span class="token punctuation">;</span><br>  <span class="token property">grid-gap</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span><br>  <span class="token property">height</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre><div class="ui segment eleven"><div class="container"><div class="logo">Logo</div><div class="nav">Nav</div><div class="main">Main</div><div class="aside">Aside</div></div></div></main><footer class="flex justify-between"><div>I'm Joe Maddalone</div><div><i>This is not a blog, these pages are changed all the time.</i></div></footer><style></style></body></html>
+  }
+</style>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#FF82CBBB">.</span><span style="color:#F767BB">container</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  display</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">grid</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  grid-template-columns</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">20</span><span style="color:#FF5C57CC">%</span><span style="color:#13BBB7"> auto </span><span style="color:#FF5C57">20</span><span style="color:#FF5C57CC">%</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  grid-template-rows</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">60</span><span style="color:#FF5C57CC">px</span><span style="color:#13BBB7"> auto</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  grid-gap</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">15</span><span style="color:#FF5C57CC">px</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  height</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">400</span><span style="color:#FF5C57CC">px</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span></code></pre>
+<div class="ui segment eleven">
+<div class="container">
+  <div class="logo">Logo</div>
+  <div class="nav">Nav</div>
+  <div class="main">Main</div>
+  <div class="aside">Aside</div>
+</div>
+</div>  </div>  <footer class="flex justify-between"> <div>I'm Joe Maddalone</div> <div><i>This is not a blog, these pages are changed all the time.</i></div> </footer> </body></html>

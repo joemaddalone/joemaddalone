@@ -1,0 +1,92 @@
+<!DOCTYPE html><meta charset="utf-8"/><hgroup><h1>Svg Path Data in Canvas</h1><p>Building canvas shapes with svg path data</p></hgroup>
+<p>Typically most canvas drawing requires a series of commands. Something like this.</p>
+<script src="https://unpkg.com/@joemaddalone/path@1.4.0/dist/index.js"></script>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869;overflow-x:auto" tabindex="0" data-language="js"><code><span class="line"><span style="color:#565869">ctx</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">beginPath</span><span style="color:#ADB1C2">();</span></span>
+<span class="line"><span style="color:#565869">ctx</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">moveTo</span><span style="color:#ADB1C2">(</span><span style="color:#FF5C57">150</span><span style="color:#ADB1C2">,</span><span style="color:#FF5C57"> 10</span><span style="color:#ADB1C2">);</span></span>
+<span class="line"><span style="color:#565869">ctx</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">lineTo</span><span style="color:#ADB1C2">(</span><span style="color:#FF5C57">115</span><span style="color:#ADB1C2">,</span><span style="color:#FF5C57"> 70</span><span style="color:#ADB1C2">);</span></span>
+<span class="line"><span style="color:#565869">ctx</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">lineTo</span><span style="color:#ADB1C2">(</span><span style="color:#FF5C57">185</span><span style="color:#ADB1C2">,</span><span style="color:#FF5C57"> 70</span><span style="color:#ADB1C2">);</span></span>
+<span class="line"><span style="color:#565869">ctx</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">closePath</span><span style="color:#ADB1C2">();</span></span>
+<span class="line"><span style="color:#565869">ctx</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">stroke</span><span style="color:#ADB1C2">();</span></span></code></pre>
+<p>This gives us a triangle.</p>
+<canvas width="300" height="80" id="ex1" style="background: white;"></canvas>
+<script>
+const c0 = document.getElementById("ex1");
+const ctx0 = c0.getContext('2d');
+ctx0.beginPath();
+ctx0.moveTo(150, 10);
+ctx0.lineTo(115, 70);
+ctx0.lineTo(185, 70);
+ctx0.closePath();
+ctx0.stroke();
+</script>
+<p>However,using <code>Path2D</code> we can utilize the common svg path data commands to accomplish this. In my opinion this is much more simple.</p>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869;overflow-x:auto" tabindex="0" data-language="js"><code><span class="line"><span style="color:#F767BB">const</span><span style="color:#565869"> p </span><span style="color:#ADB1C2">=</span><span style="color:#F767BB"> new</span><span style="color:#09A1ED"> Path2D</span><span style="color:#ADB1C2">(</span><span style="color:#ADB1C2">&#39;</span><span style="color:#CF9C00">M150 10 L115 70 L185 70 Z</span><span style="color:#ADB1C2">&#39;</span><span style="color:#ADB1C2">);</span></span>
+<span class="line"><span style="color:#565869">ctx1</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">stroke</span><span style="color:#ADB1C2">(</span><span style="color:#565869">p</span><span style="color:#ADB1C2">);</span></span></code></pre>
+<canvas width="300" height="80" id="ex2" style="background: white;"></canvas>
+<script>
+const c1 = document.getElementById("ex2");
+const ctx1 = c1.getContext('2d');
+const p = new Path2D('M150 10 L115 70 L185 70 Z');
+ctx1.stroke(p);
+</script>
+<p>If you’re not familiar with svg path data commands I have a short series to ramp you up.</p>
+<p><a href="https://youtube.com/playlist?list=PLKiuVKZics1eZrb8UykoOrg293vpelh-6">SVG Path Video Series</a></p>
+<p>Moreover there are a ton of svg path libraries out there that can simplify this even further.  I’ll tout <a href="https://github.com/joemaddalone/path">my own library</a> in this next example.</p>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869;overflow-x:auto" tabindex="0" data-language="js"><code><span class="line"><span style="color:#ADB1C2">// import Path from &quot;https://unpkg.com/@joemaddalone/path@1.4.0/dist/index.js&quot;;</span></span>
+<span class="line"><span style="color:#F767BB">const</span><span style="color:#565869"> p </span><span style="color:#ADB1C2">=</span><span style="color:#F767BB"> new</span><span style="color:#09A1ED"> Path2D</span><span style="color:#ADB1C2">(</span><span style="color:#F767BB">new</span><span style="color:#09A1ED"> Path</span><span style="color:#ADB1C2">().</span><span style="color:#09A1ED">triangle</span><span style="color:#ADB1C2">(</span><span style="color:#FF5C57">70</span><span style="color:#ADB1C2">,</span><span style="color:#FF5C57"> 150</span><span style="color:#ADB1C2">,</span><span style="color:#FF5C57"> 50</span><span style="color:#ADB1C2">).</span><span style="color:#09A1ED">toString</span><span style="color:#ADB1C2">());</span></span>
+<span class="line"><span style="color:#565869">ctx</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">stroke</span><span style="color:#ADB1C2">(</span><span style="color:#565869">p</span><span style="color:#ADB1C2">);</span></span></code></pre>
+<canvas width="300" height="80" id="ex3" style="background: white;"></canvas>
+<script type="module">
+const c2 = document.getElementById("ex3");
+const ctx2 = c2.getContext('2d');
+const p1 = new Path2D(new path().triangle(70, 150, 50).toString());
+ctx2.stroke(p1);
+</script>
+<p>And with that we’re off to the races. This next part is a bit <a href="https://www.reddit.com/r/restofthefuckingowl/">“draw the rest of the fucking owl”</a></p>
+<canvas width="300" height="80" id="ex4" style="background: white;"></canvas>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869;overflow-x:auto" tabindex="0" data-language="js"><code><span class="line"><span style="color:#F767BB">import</span><span style="color:#565869"> Path </span><span style="color:#F767BB">from</span><span style="color:#ADB1C2"> &quot;</span><span style="color:#CF9C00">@joemaddalone/path</span><span style="color:#ADB1C2">&quot;</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#F767BB">let</span><span style="color:#565869"> cx </span><span style="color:#ADB1C2">=</span><span style="color:#FF5C57"> 0</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#F767BB">let</span><span style="color:#565869"> cy </span><span style="color:#ADB1C2">=</span><span style="color:#FF5C57"> 0</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#F767BB">let</span><span style="color:#565869"> moveX </span><span style="color:#ADB1C2">=</span><span style="color:#FF5C57"> 1</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#F767BB">let</span><span style="color:#565869"> moveY </span><span style="color:#ADB1C2">=</span><span style="color:#FF5C57"> 1</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#F767BB">const</span><span style="color:#565869"> size </span><span style="color:#ADB1C2">=</span><span style="color:#FF5C57"> 20</span></span>
+<span class="line"><span style="color:#F767BB">const</span><span style="color:#565869"> halfSize </span><span style="color:#ADB1C2">=</span><span style="color:#565869"> size</span><span style="color:#ADB1C2">/</span><span style="color:#FF5C57">2</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#F767BB">const</span><span style="color:#565869"> c </span><span style="color:#ADB1C2">=</span><span style="color:#565869"> document</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">getElementById</span><span style="color:#ADB1C2">(</span><span style="color:#ADB1C2">&quot;</span><span style="color:#CF9C00">canvas</span><span style="color:#ADB1C2">&quot;</span><span style="color:#ADB1C2">);</span></span>
+<span class="line"><span style="color:#F767BB">const</span><span style="color:#565869"> ctx </span><span style="color:#ADB1C2">=</span><span style="color:#565869"> c</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">getContext</span><span style="color:#ADB1C2">(</span><span style="color:#ADB1C2">&#39;</span><span style="color:#CF9C00">2d</span><span style="color:#ADB1C2">&#39;</span><span style="color:#ADB1C2">);</span></span>
+<span class="line"><span style="color:#F767BB">const</span><span style="color:#ADB1C2"> {</span><span style="color:#565869"> x</span><span style="color:#ADB1C2">,</span><span style="color:#565869"> y </span><span style="color:#ADB1C2">}</span><span style="color:#ADB1C2"> =</span><span style="color:#565869"> c</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">getBoundingClientRect</span><span style="color:#ADB1C2">();</span></span>
+<span class="line"><span style="color:#F767BB">const</span><span style="color:#09A1ED"> outOfBounds</span><span style="color:#ADB1C2"> =</span><span style="color:#ADB1C2"> (</span><span style="color:#565869">pos</span><span style="color:#ADB1C2">,</span><span style="color:#565869"> end</span><span style="color:#ADB1C2">)</span><span style="color:#ADB1C2"> =&gt;</span><span style="color:#565869"> pos </span><span style="color:#ADB1C2">+</span><span style="color:#565869"> size </span><span style="color:#ADB1C2">&gt;</span><span style="color:#565869"> end </span><span style="color:#ADB1C2">||</span><span style="color:#565869"> pos </span><span style="color:#ADB1C2">&lt;</span><span style="color:#FF5C57"> 0</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F767BB">const</span><span style="color:#09A1ED"> update</span><span style="color:#ADB1C2"> =</span><span style="color:#ADB1C2"> ()</span><span style="color:#ADB1C2"> =&gt;</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">	ctx</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">clearRect</span><span style="color:#ADB1C2">(</span><span style="color:#FF5C57">0</span><span style="color:#ADB1C2">,</span><span style="color:#FF5C57"> 0</span><span style="color:#ADB1C2">,</span><span style="color:#565869"> c</span><span style="color:#ADB1C2">.</span><span style="color:#565869">width</span><span style="color:#ADB1C2">,</span><span style="color:#565869"> c</span><span style="color:#ADB1C2">.</span><span style="color:#565869">height</span><span style="color:#ADB1C2">);</span></span>
+<span class="line"><span style="color:#565869">	moveY </span><span style="color:#ADB1C2">=</span><span style="color:#09A1ED"> outOfBounds</span><span style="color:#ADB1C2">(</span><span style="color:#565869">cy </span><span style="color:#ADB1C2">+</span><span style="color:#565869"> moveY</span><span style="color:#ADB1C2">,</span><span style="color:#565869"> c</span><span style="color:#ADB1C2">.</span><span style="color:#565869">height</span><span style="color:#ADB1C2">)</span><span style="color:#ADB1C2"> ?</span><span style="color:#ADB1C2"> -</span><span style="color:#565869">moveY </span><span style="color:#ADB1C2">:</span><span style="color:#565869"> moveY</span></span>
+<span class="line"><span style="color:#565869">	moveX </span><span style="color:#ADB1C2">=</span><span style="color:#09A1ED"> outOfBounds</span><span style="color:#ADB1C2">(</span><span style="color:#565869">cx </span><span style="color:#ADB1C2">+</span><span style="color:#565869"> moveX</span><span style="color:#ADB1C2">,</span><span style="color:#565869"> c</span><span style="color:#ADB1C2">.</span><span style="color:#565869">width</span><span style="color:#ADB1C2">)</span><span style="color:#ADB1C2"> ?</span><span style="color:#ADB1C2"> -</span><span style="color:#565869">moveX </span><span style="color:#ADB1C2">:</span><span style="color:#565869"> moveX</span></span>
+<span class="line"><span style="color:#565869">	cx </span><span style="color:#ADB1C2">+=</span><span style="color:#565869"> moveX</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">	cy </span><span style="color:#ADB1C2">+=</span><span style="color:#565869"> moveY</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#F767BB">	const</span><span style="color:#565869"> sq </span><span style="color:#ADB1C2">=</span><span style="color:#F767BB"> new</span><span style="color:#09A1ED"> Path</span><span style="color:#ADB1C2">().</span><span style="color:#09A1ED">square</span><span style="color:#ADB1C2">(</span><span style="color:#565869">size</span><span style="color:#ADB1C2">,</span><span style="color:#565869"> cx </span><span style="color:#ADB1C2">+</span><span style="color:#565869"> halfSize</span><span style="color:#ADB1C2">,</span><span style="color:#565869"> cy </span><span style="color:#ADB1C2">+</span><span style="color:#565869"> halfSize</span><span style="color:#ADB1C2">)</span></span>
+<span class="line"><span style="color:#565869">	ctx</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">stroke</span><span style="color:#ADB1C2">(</span><span style="color:#F767BB">new</span><span style="color:#09A1ED"> Path2D</span><span style="color:#ADB1C2">(</span><span style="color:#565869">sq</span><span style="color:#ADB1C2">.</span><span style="color:#09A1ED">toString</span><span style="color:#ADB1C2">()));</span></span>
+<span class="line"><span style="color:#09A1ED">	requestAnimationFrame</span><span style="color:#ADB1C2">(</span><span style="color:#565869">update</span><span style="color:#ADB1C2">);</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span>
+<span class="line"><span style="color:#09A1ED">update</span><span style="color:#ADB1C2">();</span></span></code></pre>
+<script>
+let cx = 0;
+let cy = 0;
+let movex = 1;
+let movey = 1;
+const size = 20
+const halfSize = size/2;
+const c = document.getElementById("ex4");
+const ctx = c.getContext('2d');
+const outOfBounds = (pos, end) => pos + size > end || pos < 0;
+
+const update = () => {
+	ctx.clearRect(0, 0, c.width, c.height);
+	movey = outOfBounds(cy + movey, c.height) ? -movey : movey;
+	movex = outOfBounds(cx + movex, c.width) ? -movex : movex;
+	cx += movex;
+	cy += movey;
+	const sq = new path().square(size, cx + halfSize, cy + halfSize).toString();
+	ctx.stroke(new Path2D(sq));
+	requestAnimationFrame(update);
+}
+update();
+</script>

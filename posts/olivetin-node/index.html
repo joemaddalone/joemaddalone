@@ -1,0 +1,30 @@
+<!DOCTYPE html><meta charset="utf-8"><hgroup>
+	<h1>OliveTin Node</h1>
+	<p>olivetin + docker + nvm</p>
+</hgroup>
+<p><em><a href="https://www.olivetin.app/">OliveTin</a> gives safe and simple access to predefined shell commands from a web interface.</em></p>
+<p>Technically OliveTin is mean for making a nice little panel of buttons that do whatever you want.  I also use it as a script runner since those actions can be tied to cron schedules.</p>
+<p>I use nvm and it made it slightly trickier to get OliveTin (running in docker) to access my code.</p>
+<h2 id="docker-compose">docker-compose</h2>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#11658F">version</span><span style="color:#ADB1C2">:</span><span style="color:#ADB1C2"> "</span><span style="color:#CF9C00">3.3</span><span style="color:#ADB1C2">"</span></span>
+<span class="line"><span style="color:#11658F">services</span><span style="color:#ADB1C2">:</span></span>
+<span class="line"><span style="color:#11658F">  olivetin</span><span style="color:#ADB1C2">:</span></span>
+<span class="line"><span style="color:#11658F">    container_name</span><span style="color:#ADB1C2">:</span><span style="color:#CF9C00"> olivetin</span></span>
+<span class="line"><span style="color:#11658F">    image</span><span style="color:#ADB1C2">:</span><span style="color:#CF9C00"> jamesread/olivetin</span></span>
+<span class="line"><span style="color:#11658F">    volumes</span><span style="color:#ADB1C2">:</span></span>
+<span class="line"><span style="color:#ADB1C2">      -</span><span style="color:#CF9C00"> ${APPDATADIR}/OliveTin:/config</span></span>
+<span class="line"><span style="color:#ADB1C2">      -</span><span style="color:#CF9C00"> /home/username/.nvm/versions/node/v20.10.0/bin:/node</span><span style="color:#ADB1C2"> # this gets us to node</span></span>
+<span class="line"><span style="color:#ADB1C2">      -</span><span style="color:#CF9C00"> /path/to/projects:/projects</span><span style="color:#ADB1C2"> # this gets us to my code</span></span>
+<span class="line"><span style="color:#11658F">    ports</span><span style="color:#ADB1C2">:</span></span>
+<span class="line"><span style="color:#ADB1C2">      -</span><span style="color:#ADB1C2"> "</span><span style="color:#CF9C00">1337:1337</span><span style="color:#ADB1C2">"</span></span>
+<span class="line"><span style="color:#11658F">    restart</span><span style="color:#ADB1C2">:</span><span style="color:#CF9C00"> unless-stopped</span></span></code></pre>
+<h2 id="olivetin-configyml">OliveTin config.yml</h2>
+<p>Now in our OliveTin config we can just:</p>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#11658F">listenAddressSingleHTTPFrontend</span><span style="color:#ADB1C2">:</span><span style="color:#CF9C00"> 0.0.0.0:1337</span></span>
+<span class="line"><span style="color:#11658F">logLevel</span><span style="color:#ADB1C2">:</span><span style="color:#ADB1C2"> "</span><span style="color:#CF9C00">INFO</span><span style="color:#ADB1C2">"</span></span>
+<span class="line"><span style="color:#ADB1C2">-</span><span style="color:#11658F"> title</span><span style="color:#ADB1C2">:</span><span style="color:#CF9C00"> Do The Thing</span></span>
+<span class="line"><span style="color:#11658F">  shell</span><span style="color:#ADB1C2">:</span><span style="color:#ADB1C2"> "</span><span style="color:#CF9C00">/node/node /projects/myscript/index.mjs</span><span style="color:#ADB1C2">"</span></span>
+<span class="line"><span style="color:#11658F">  timeout</span><span style="color:#ADB1C2">:</span><span style="color:#FF5C57"> 60</span></span>
+<span class="line"><span style="color:#11658F">  icon</span><span style="color:#ADB1C2">:</span><span style="color:#CF9C00"> backup</span></span>
+<span class="line"><span style="color:#11658F">  execOnCron</span><span style="color:#ADB1C2">:</span></span>
+<span class="line"><span style="color:#ADB1C2">    -</span><span style="color:#ADB1C2"> "</span><span style="color:#CF9C00">0 0 */8 * * *</span><span style="color:#ADB1C2">"</span><span style="color:#ADB1C2"> # At minute 0 past every 8th hour</span></span></code></pre>

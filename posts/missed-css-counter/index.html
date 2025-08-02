@@ -1,0 +1,159 @@
+<!DOCTYPE html><meta charset="utf-8"><hgroup>
+	<h1>Missed CSS: counters</h1>
+	<p>Numbering without ordered lists.</p>
+</hgroup>
+<h2 id="css-counters">CSS Counters</h2>
+<h3 id="html">HTML</h3>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#ADB1C2">&#x3C;</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span><span style="color:#565869">First</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span><span style="color:#565869">Second</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span><span style="color:#565869">Third</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span></span></code></pre>
+<h3 id="css">CSS</h3>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#F767BB">div</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  counter</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">number</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span>
+<span class="line"><span style="color:#F767BB">div span</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  display</span><span style="color:#ADB1C2">:</span><span style="color:#13BBB7">block</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  counter-increment</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">number</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span>
+<span class="line"><span style="color:#F767BB">div span</span><span style="color:#FF82CBBB">:</span><span style="color:#F767BB">before</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  content</span><span style="color:#ADB1C2">: </span><span style="color:#09A1ED">counter</span><span style="color:#ADB1C2">(</span><span style="color:#11658F">number</span><span style="color:#ADB1C2">);</span></span>
+<span class="line"><span style="color:#565869">  width</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">1.5</span><span style="color:#FF5C57CC">em</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  height</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">1.5</span><span style="color:#FF5C57CC">em</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  border-radius</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">1.5</span><span style="color:#FF5C57CC">em</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  display</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">inline-flex</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  align-items</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">center</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  justify-content</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">center</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  margin-right</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">0.3</span><span style="color:#FF5C57CC">em</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  margin-bottom</span><span style="color:#ADB1C2">: </span><span style="color:#FF5C57">0.5</span><span style="color:#FF5C57CC">em</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  background</span><span style="color:#ADB1C2">: #</span><span style="color:#2DAE58">000</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  color</span><span style="color:#ADB1C2">: #</span><span style="color:#2DAE58">fff</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span></code></pre>
+<style>
+	div.a {
+		counter: number;
+	}
+
+	div.a span {
+		display:block;
+		counter-increment: number;
+	}
+
+	div.a span:before {
+		content: counter(number);
+		width: 1.5em;
+		height: 1.5em;
+		border-radius: 1.5em;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 0.3em;
+		margin-bottom: 0.5em;
+		background: #000;
+		color: #fff;
+	}
+</style>
+<p>And now we have numbering without ordered list.  The immediate benefit being that we can style as we see fit.</p>
+<div class="ui segment a">
+  <span>First</span>
+  <span>Second</span>
+  <span>Third</span>
+</div>
+<p>With a small tweak we can choose different formats.</p>
+<h3 id="css-1">CSS</h3>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#F767BB">div span</span><span style="color:#FF82CBBB">:</span><span style="color:#F767BB">before</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  content</span><span style="color:#ADB1C2">: </span><span style="color:#09A1ED">counter</span><span style="color:#ADB1C2">(</span><span style="color:#11658F">number</span><span style="color:#ADB1C2">,</span><span style="color:#13BBB7"> upper-roman</span><span style="color:#ADB1C2">);</span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;</span><span style="color:#565869">--</span><span style="color:#565869"> lower-roman</span><span style="color:#ADB1C2">, </span><span style="color:#565869">lower-greek</span><span style="color:#ADB1C2">, </span><span style="color:#565869">upper-alpha</span><span style="color:#ADB1C2">, </span><span style="color:#565869">etc</span><span style="color:#ADB1C2">...</span><span style="color:#565869">--</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">  ...</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span></code></pre>
+<style>
+	div.b {
+		counter: numberB;
+	}
+
+	div.b span {
+		display:block;
+		counter-increment: numberB;
+	}
+
+	div.b span:before {
+		content: counter(numberB, upper-roman);
+		width: 1.5em;
+		height: 1.5em;
+		border-radius: 1.5em;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 0.3em;
+		margin-bottom: 0.5em;
+		background: #000;
+		color: #fff;
+	}
+</style>
+<div class="ui segment b">
+  <span>First</span>
+  <span>Second</span>
+  <span>Third</span>
+</div>
+<h3 id="counter-reset">counter-reset</h3>
+<p>Using css counters we can define when to reset the counter.  Here we’ll use a section element to reset the counter.</p>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#F767BB">div</span><span style="color:#ADB1C2"> {</span></span>
+<span class="line"><span style="color:#565869">  counter</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">number</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#565869">  counter-reset</span><span style="color:#ADB1C2">: </span><span style="color:#13BBB7">section</span><span style="color:#ADB1C2">;</span></span>
+<span class="line"><span style="color:#ADB1C2">}</span></span></code></pre>
+<pre class="astro-code snazzy-light" style="background-color:#FAFBFC;color:#565869; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#ADB1C2">&#x3C;</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;</span><span style="color:#13BBB7">section</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">    &#x3C;</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span><span style="color:#565869">First</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">    &#x3C;</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span><span style="color:#565869">Second</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">    &#x3C;</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span><span style="color:#565869">Third</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;/</span><span style="color:#13BBB7">section</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;</span><span style="color:#13BBB7">section</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">    &#x3C;</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span><span style="color:#565869">First</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">    &#x3C;</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span><span style="color:#565869">Second</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">    &#x3C;</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span><span style="color:#565869">Third</span><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">span</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">  &#x3C;/</span><span style="color:#13BBB7">section</span><span style="color:#ADB1C2">></span></span>
+<span class="line"><span style="color:#ADB1C2">&#x3C;/</span><span style="color:#13BBB7">div</span><span style="color:#ADB1C2">></span></span></code></pre>
+<style>
+	div.c {
+		counter: numberC;
+		counter-reset: section;
+	}
+
+	div.c section {
+		border-bottom: 1px solid #222;
+		padding: 15px 0;
+	}
+
+	div.c span {
+		display:block;
+		counter-increment: numberC;
+	}
+
+	div.c span:before {
+		content: counter(numberC, upper-roman);
+		width: 1.5em;
+		height: 1.5em;
+		border-radius: 1.5em;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 0.3em;
+		margin-bottom: 0.5em;
+		background: #000;
+		color: #fff;
+
+	}
+</style>
+<div class="ui segment c">
+	<section>
+		<span>First</span>
+		<span>Second</span>
+		<span>Third</span>
+	</section>
+	<section>
+		<span>First</span>
+		<span>Second</span>
+		<span>Third</span>
+	</section>
+</div>
