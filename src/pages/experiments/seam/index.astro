@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Seam Carving</title>
+    </head>
+    <body>
+        <div style="width: 800px; margin: 0 auto; text-align: center; font-family: monospace;">
+            <h2>Seam Carving</h2>
+            <p>This is a simple implementation of seam carving. It is not optimized for performance and is not a real-time implementation. It is a proof of concept.</p>
+            <p>The algorithm is based on the paper <a href="https://perso.crans.org/frenoy/matlab2012/seamcarving.pdf">Seam Carving for Content-Aware Image Resizing</a> by Shai Avidan and Ariel Shamir.</p>
+            <div style="margin-bottom: 20px;">
+                &larr; Back to <a href="/experiments"> joe.maddalone.com/experiments</a></div>
+            <button id="carveBtn_100">100%</button>
+            <button id="carveBtn_80">80%</button>
+            <button id="carveBtn_60">60%</button>
+            <button id="carveBtn_40">40%</button>
+            <button id="carveBtn_20">20%</button>
+            <div id="info" style="margin: 10px; font-family: monospace;"></div>
+            <div class="container"></div>
+            
+        </div>
+        <script src="./seam.js"></script>
+
+    </body>
+</html>
