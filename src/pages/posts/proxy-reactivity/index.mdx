@@ -1,0 +1,193 @@
+---
+title: 'Proxy Reactivity'
+date: 2025-08-05
+tags: ['post']
+excerpt: 'kinda neat'
+---
+
+
+<hgroup>
+	<h1>Proxy Reactivity</h1>
+	<p>kinda neat</p>
+</hgroup>
+
+> The Proxy object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object. - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+
+<p>Here is a method for basic reactivity using a Proxy.</p>
+
+```js
+// our initial state
+const initialState = {}
+// a map of properties to their subscribers
+const listeners = new Map();
+// our proxy
+const state = new Proxy(initialState, {
+    set(target, property, value) {
+        const old = target[property];
+        target[property] = value;
+        if(old !== value){
+            if (listeners.has(property)) {
+                // if we have subscribers for this property, run them
+                listeners.get(property).forEach(fn => fn(value));
+            }
+        }
+        return true;
+    }
+});
+
+// now our listener creator
+const listen = (property, fn) => {
+  listeners.set(property, [...(listeners.get(property) || []), fn]);
+}
+
+// we can now listen to changes on x
+listen("x", (v) => {
+    console.log("x changed to", v);
+});
+
+state.x = 10; // Triggers the listener
+state.x = 10; // No trigger (same value)
+state.x = 20; // Triggers the listener again
+```
+But then we could get super original and wrap this in a helper function.  And since we're hip let's call it a `hook` instead of a wrapper function... let's call it the `useState` hook
+
+```js
+let stateId = 0;
+const useState = (initialValue) => {
+    const id = stateId++;
+    const property = `state_${id}`;
+    // Initialize the state if it doesn't exist
+    // Remember: this is our Proxy
+    if (!(property in state)) {
+        state[property] = initialValue;
+    }
+    // Create a reactive variable
+    const reactiveVar = {
+        _property: property,
+        get value() { return state[property]; },
+        set value(newValue) { state[property] = newValue; }
+    };
+    const setState = (newValue) => {
+        state[property] = newValue;
+    };
+    return [reactiveVar, setState];
+};
+```
+
+<p>
+	Now we can use our hook to create a counter.
+</p>
+
+```js
+// Example usage
+const [count, setCount] = useState(0);
+
+// key is now on ._property.  not the greatest API but it works.
+listen(count._property, (value) => {
+    console.log("Count changed to:", value);
+});
+
+// value is now on .value.  not the greatest API but it works.
+console.log(count.value); // 0
+
+setCount(20); // Triggers the listener
+setCount(20); // No trigger (same value)
+setCount(5); // Triggers the listener again
+console.log(count.value); // 5
+
+// We could also just use the property directly
+count.value = 10; // Triggers the listener
+count.value = 10; // No trigger (same value)
+count.value = 20; // Triggers the listener again
+console.log(count.value); // 20
+```
+
+
+<script>
+{`
+
+// our initial state
+const initialState = {}
+// a map of properties to their subscribers
+const listeners = new Map();
+// our proxy
+const state = new Proxy(initialState, {
+    set(target, property, value) {
+        const old = target[property];
+        target[property] = value;
+        if(old !== value){
+            if (listeners.has(property)) {
+                // if we have subscribers for this property, run them
+                listeners.get(property).forEach(fn => fn(value));
+            }
+        }
+        return true;
+    }
+});
+
+// now our listener creator
+const listen = (property, fn) => {
+  listeners.set(property, [...(listeners.get(property) || []), fn]);
+}
+
+// we can now listen to changes on x
+listen("x", (v) => {
+    console.log("x changed to", v);
+});
+
+console.log('-----initial implementation-----');
+
+state.x = 10; // Triggers the listener
+state.x = 10; // No trigger (same value)
+state.x = 20; // Triggers the listener again
+
+let stateId = 0;
+const useState = (initialValue) => {
+    const id = stateId++;
+    const property = 'state_${Math.random()}';
+    // Initialize the state if it doesn't exist
+    // Remember: this is our Proxy
+    if (!(property in state)) {
+        state[property] = initialValue;
+    }
+
+    // Create a reactive variable
+    const reactiveVar = {
+        _property: property,
+        get value() { return state[property]; },
+        set value(newValue) { state[property] = newValue; }
+    };
+
+    const setState = (newValue) => {
+        state[property] = newValue;
+    };
+
+
+    return [reactiveVar, setState];
+};
+
+// Example usage
+const [count, setCount] = useState(0);
+
+// key is now on ._property.  not the greatest API but it works.
+listen(count._property, (value) => {
+    console.log("Count changed to:", value);
+});
+
+console.log('-----useState implementation-----');
+
+// value is now on .value.  not the greatest API but it works.
+console.log(count.value); // 0
+setCount(20); // Triggers the listener
+setCount(20); // No trigger (same value)
+setCount(5); // Triggers the listener again
+console.log(count.value); // 5
+
+// We could also just set the value directly
+console.log('-----setting the value property directly-----');
+count.value = 10; // Triggers the listener
+count.value = 10; // No trigger (same value)
+count.value = 20; // Triggers the listener again
+console.log(count.value); // 20
+`}
+</script>
