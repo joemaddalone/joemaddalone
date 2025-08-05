@@ -1,0 +1,485 @@
+<html>
+    <head>
+        <title>Unicode Blackjack</title>
+        <style is:inline>
+            .card.s,
+            .card.c {
+                color: black;
+            }
+
+            .card.h,
+            .card.d {
+                color: red;
+            }
+
+            .controls {
+                margin: 20px 0;
+            }
+
+            .controls button {
+                font-size: 18px;
+                padding: 10px 20px;
+                margin: 0 10px;
+                cursor: pointer;
+            }
+
+            .controls button:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+
+            .game-state {
+                font-size: 24px;
+                font-weight: bold;
+                margin: 20px 0;
+                padding: 10px;
+                background-color: #f0f0f0;
+                border-radius: 5px;
+            }
+
+            .hand-container {
+                margin: 20px 0;
+            }
+
+            .player-hand {
+                margin: 10px 0;
+                padding: 10px;
+                border: 2px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .current-hand {
+                border-color: #007bff;
+                background-color: #f8f9fa;
+            }
+
+            .card {
+                font-size: 150px !important;
+                line-height: 1.2;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Unicode Blackjack</h1>
+        <div class="game-state">
+            <div class="game-state-text"></div>
+        </div>
+        <div class="player-hands">
+            <h2>Player Hands:</h2>
+            <div class="hand-container"></div>
+        </div>
+        <div class="controls">
+            <button class="hit">Hit</button>
+            <button class="stand">Stand</button>
+            <button class="split">Split</button>
+        </div>
+        <h2>Dealer Hand Total: <span class="dealer-hand-total"></span></h2>
+        <div class="hand dealer-hand"></div>
+
+        <script is:inline>
+            const $ = document.querySelector.bind(document);
+            const click = (selector, event) => {
+                $(selector).addEventListener("click", event);
+            };
+
+            class Shoe {
+                constructor(numDecks = 1) {
+                    this.cards = [];
+                    this.facedown = String.fromCodePoint(0x1f0a0);
+                    this.map = this.initMap();
+                    for (let i = 0; i < numDecks; i++) {
+                        this.cards.push(...Array.from(this.map.keys()));
+                    }
+                }
+                get cardsLeft() {
+                    return this.cards.length;
+                }
+                initMap() {
+                    const c = new Map(),
+                        s = "shdc";
+                    const forbidden = [0x1f0ac, 0x1f0bc, 0x1f0cc, 0x1f0dc];
+                    for (let S = 0; S < 4; S++) {
+                        for (let i = 0; i < 14; i++) {
+                            const codepoint = 0x1f0a0 + S * 16 + i + 1;
+                            if (!forbidden.includes(codepoint)) {
+                                c.set(
+                                    s[S] + i,
+                                    String.fromCodePoint(codepoint),
+                                );
+                            }
+                        }
+                    }
+                    return c;
+                }
+                shuffle() {
+                    const array = this.cards;
+                    for (let i = array.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [array[i], array[j]] = [array[j], array[i]];
+                    }
+                    this.cards = array;
+                }
+                deal() {
+                    return this.cards.shift();
+                }
+            }
+
+            class Blackjack {
+                constructor(manager) {
+                    this.manager = manager;
+                    this.state = this.createState(this.manager);
+                    this.shoe = new Shoe(6);
+                    this.shoe.shuffle();
+                    this.state.shoe = this.shoe;
+                }
+                static getCardValue(card) {
+                    const rank = parseInt(card.slice(1));
+                    if (rank === 0) return 11; // Ace
+                    if (rank >= 9) return 10; // Face cards
+                    return rank + 1;
+                }
+                createState(manager) {
+                    const state = {
+                        phase: "waiting", // waiting, dealing, player-turn, dealer-turn, game-over
+                        shoe: null,
+                        playerHands: [[]], // Array of hands for split functionality
+                        currentHandIndex: 0, // Which hand is currently being played
+                        dealerHand: [],
+                        playerTotals: [0], // Array of totals for each hand
+                        dealerTotal: 0,
+                        message: 'Click "New Game" to start',
+                    };
+
+                    const handlePhaseTransition = (state, newPhase) => {
+                        switch (newPhase) {
+                            case "dealing":
+                                this.dealInitialCards(state);
+                                break;
+                            case "player-hit":
+                                this.dealPlayerCard(state);
+                                break;
+                            case "player-stand":
+                                this.handlePlayerStand(state);
+                                break;
+                            case "player-split":
+                                this.handlePlayerSplit(state);
+                                break;
+                            case "dealerTurn":
+                                this.startDealerTurn(state);
+                                break;
+                            case "game-over":
+                                this.determineWinner(state);
+                                break;
+                        }
+                    };
+
+                    const proxy = new Proxy(state, {
+                        set(target, property, value) {
+                            const oldValue = target[property];
+                            target[property] = value;
+
+                            // Handle phase transitions
+                            if (property === "phase" && oldValue !== value) {
+                                handlePhaseTransition(proxy, value);
+                            }
+
+                            manager(proxy);
+                            return true;
+                        },
+                    });
+
+                    return proxy;
+                }
+                calculateHandTotal(hand) {
+                    let total = 0;
+                    let aces = 0;
+                    for (const card of hand) {
+                        const value = Blackjack.getCardValue(card);
+                        if (value === 11) {
+                            aces++;
+                            total += 11;
+                        } else {
+                            total += value;
+                        }
+                    }
+                    while (total > 21 && aces > 0) {
+                        total -= 10;
+                        aces--;
+                    }
+                    return total;
+                }
+                dealInitialCards(state) {
+                    if (state.shoe.cardsLeft < 52 * 6 * 0.25) {
+                        state.shoe = new Shoe(6);
+                        state.shoe.shuffle();
+                    }
+
+                    // Reset hands for new game
+                    state.playerHands = [
+                        [state.shoe.deal(), state.shoe.deal()],
+                    ];
+                    state.currentHandIndex = 0;
+                    state.dealerHand = [state.shoe.deal(), state.shoe.deal()];
+
+                    state.playerTotals = [
+                        this.calculateHandTotal(state.playerHands[0]),
+                    ];
+                    state.dealerTotal = this.calculateHandTotal(
+                        state.dealerHand,
+                    );
+
+                    state.message = "Your turn - Hit, Stand, or Split?";
+                    state.phase = "playerTurn";
+                }
+                dealPlayerCard(state) {
+                    const currentHand =
+                        state.playerHands[state.currentHandIndex];
+                    currentHand.push(state.shoe.deal());
+                    state.playerTotals[state.currentHandIndex] =
+                        this.calculateHandTotal(currentHand);
+
+                    if (state.playerTotals[state.currentHandIndex] > 21) {
+                        if (
+                            state.currentHandIndex <
+                            state.playerHands.length - 1
+                        ) {
+                            // Move to next hand
+                            state.currentHandIndex++;
+                            state.message = `Hand ${state.currentHandIndex + 1} - Hit, Stand, or Split?`;
+                            state.phase = "playerTurn";
+                        } else {
+                            // Check if all hands busted
+                            const allBusted = state.playerTotals.every(
+                                (total) => total > 21,
+                            );
+                            if (allBusted) {
+                                state.message = "All hands bust! Dealer wins.";
+                                state.phase = "gameOver";
+                            } else {
+                                // Some hands are still valid, go to dealer
+                                state.phase = "dealerTurn";
+                            }
+                        }
+                    } else {
+                        state.message = `Hand ${state.currentHandIndex + 1} - Hit, Stand, or Split?`;
+                        state.phase = "playerTurn";
+                    }
+                }
+                handlePlayerStand(state) {
+                    if (state.currentHandIndex < state.playerHands.length - 1) {
+                        // Move to next hand
+                        state.currentHandIndex++;
+                        state.message = `Hand ${state.currentHandIndex + 1} - Hit, Stand, or Split?`;
+                        state.phase = "playerTurn";
+                    } else {
+                        // All hands are done, dealer's turn
+                        state.phase = "dealerTurn";
+                    }
+                }
+                handlePlayerSplit(state) {
+                    const currentHand =
+                        state.playerHands[state.currentHandIndex];
+
+                    // Check if split is valid (two cards of same rank)
+                    if (
+                        currentHand.length !== 2 ||
+                        currentHand[0].slice(1) !== currentHand[1].slice(1)
+                    ) {
+                        state.message = "Can only split pairs!";
+                        state.phase = "playerTurn";
+                        return;
+                    }
+
+                    // Create two new hands from the split
+                    const card1 = currentHand[0];
+                    const card2 = currentHand[1];
+
+                    // Replace current hand with first card + new card
+                    state.playerHands[state.currentHandIndex] = [
+                        card1,
+                        state.shoe.deal(),
+                    ];
+                    state.playerTotals[state.currentHandIndex] =
+                        this.calculateHandTotal(
+                            state.playerHands[state.currentHandIndex],
+                        );
+
+                    // Add new hand with second card + new card
+                    state.playerHands.splice(state.currentHandIndex + 1, 0, [
+                        card2,
+                        state.shoe.deal(),
+                    ]);
+                    state.playerTotals.splice(
+                        state.currentHandIndex + 1,
+                        0,
+                        this.calculateHandTotal(
+                            state.playerHands[state.currentHandIndex + 1],
+                        ),
+                    );
+
+                    state.message = `Hand ${state.currentHandIndex + 1} - Hit, Stand, or Split?`;
+                    state.phase = "playerTurn";
+                }
+                startDealerTurn(state) {
+                    state.message = "Dealer's turn...";
+                    state.phase = "dealerTurn";
+
+                    // Simple dealer AI: hit on 16 or less, stand on 17+
+                    const playDealerTurn = () => {
+                        if (state.dealerTotal < 17) {
+                            // Create a new array to trigger the proxy
+                            const newCard = state.shoe.deal();
+                            state.dealerHand = [...state.dealerHand, newCard];
+                            state.dealerTotal = this.calculateHandTotal(
+                                state.dealerHand,
+                            );
+
+                            // Continue dealer's turn after a short delay
+                            setTimeout(playDealerTurn, 500);
+                        } else {
+                            // Dealer is done, determine winner
+                            this.determineWinner(state);
+                            this.manager(state);
+                            state.phase = "gameOver";
+                        }
+                    };
+
+                    // Start dealer's turn with a delay
+                    setTimeout(playDealerTurn, 500);
+                }
+                determineWinner(state) {
+                    let results = [];
+
+                    for (let i = 0; i < state.playerHands.length; i++) {
+                        const playerTotal = state.playerTotals[i];
+                        let result;
+
+                        if (playerTotal > 21) {
+                            result = `Hand ${i + 1}: Bust!`;
+                        } else if (state.dealerTotal > 21) {
+                            result = `Hand ${i + 1}: Dealer busts! You win!`;
+                        } else if (playerTotal > state.dealerTotal) {
+                            result = `Hand ${i + 1}: You win!`;
+                        } else if (state.dealerTotal > playerTotal) {
+                            result = `Hand ${i + 1}: Dealer wins.`;
+                        } else {
+                            result = `Hand ${i + 1}: Push - It's a tie!`;
+                        }
+
+                        results.push(result);
+                    }
+
+                    state.message = results.join(" | ");
+                    // start next hand after timeout
+                    setTimeout(() => {
+                        this.newHand();
+                    }, 3000);
+                }
+                hit() {
+                    if (this.state.phase === "playerTurn") {
+                        this.state.phase = "player-hit";
+                    }
+                }
+                stand() {
+                    if (this.state.phase === "playerTurn") {
+                        this.state.phase = "player-stand";
+                    }
+                }
+                split() {
+                    if (this.state.phase === "playerTurn") {
+                        this.state.phase = "player-split";
+                    }
+                }
+                newHand() {
+                    this.state.phase = "dealing";
+                }
+            }
+            // Update UI
+            function updateUI(state) {
+                const gameStateText = $(".game-state-text");
+                const handContainerEl = $(".hand-container");
+                const dealerHandEl = $(".dealer-hand");
+                const dealerTotalEl = $(".dealer-hand-total");
+                const hitBtn = $(".hit");
+                const standBtn = $(".stand");
+                const splitBtn = $(".split");
+                const newHandBtn = $(".new-hand");
+
+                // Update game state text
+                gameStateText.textContent = state.message;
+
+                // Update player hands
+                handContainerEl.innerHTML = "";
+                for (let i = 0; i < state.playerHands.length; i++) {
+                    const hand = state.playerHands[i];
+                    const total = state.playerTotals[i];
+                    const isCurrentHand = i === state.currentHandIndex;
+
+                    const handEl = document.createElement("div");
+                    handEl.className = `hand player-hand ${isCurrentHand ? "current-hand" : ""}`;
+                    handEl.innerHTML = `
+                        <h3>Hand ${i + 1} (${isCurrentHand ? "Current" : "Done"}) - Total: ${total}</h3>
+                        <div class="cards">
+                            ${hand.map((card) => `<span class="card ${card[0]}">${state.shoe?.map.get(card) || ""}</span>`).join("")}
+                        </div>
+                    `;
+                    handContainerEl.appendChild(handEl);
+                }
+
+                // Update dealer hand
+                if (
+                    state.phase === "dealerTurn" ||
+                    state.phase === "gameOver"
+                ) {
+                    // Show all dealer cards during dealer turn and game over
+                    dealerHandEl.innerHTML = state.dealerHand
+                        .map(
+                            (card, index) =>
+                                `<span class="card ${card[0]}">${state.shoe?.map.get(card) || ""}</span>`,
+                        )
+                        .join("");
+                    dealerTotalEl.textContent = state.dealerTotal;
+                } else {
+                    // Show only first card during player turn, second card facedown
+                    if (state.dealerHand.length > 0) {
+                        dealerHandEl.innerHTML =
+                            (state.dealerHand.length > 1
+                                ? `<span class="card">${state.shoe?.facedown || ""}</span>`
+                                : "") +
+                            `<span class="card ${state.dealerHand[0][1]}">${state.shoe?.map.get(state.dealerHand[1]) || ""}</span>`;
+
+                        dealerTotalEl.textContent = Blackjack.getCardValue(
+                            state.dealerHand[1],
+                        );
+                    } else {
+                        dealerHandEl.innerHTML = "";
+                        dealerTotalEl.textContent = 0;
+                    }
+                }
+
+                // Update button states
+                const currentHand = state.playerHands[state.currentHandIndex];
+                const canSplit =
+                    state.phase === "playerTurn" &&
+                    currentHand &&
+                    currentHand.length === 2 &&
+                    currentHand[0].slice(1) === currentHand[1].slice(1);
+
+                hitBtn.disabled = state.phase !== "playerTurn";
+                standBtn.disabled = state.phase !== "playerTurn";
+                splitBtn.disabled = !canSplit;
+            }
+
+            // Initialize game
+            const game = new Blackjack(updateUI);
+
+            // Event listeners
+            click(".hit", game.hit.bind(game));
+            click(".stand", game.stand.bind(game));
+            click(".split", game.split.bind(game));
+            updateUI(game.state);
+            game.newHand();
+        </script>
+    </body>
+</html>
