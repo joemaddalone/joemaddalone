@@ -166,10 +166,15 @@ footer {
 	display: block;
 }
 
+.expressive-code .frame {
+	box-shadow: none !important;
+}
+
 .standard-article pre {
-	margin-bottom: 15px;
+	margin-bottom: 15px !important;
+	margin-top: 15px !important;
 	padding: 1em;
-	border-radius: 0.5em;
+	border-radius: 0.5em !important;
 }
 
 .standard-article pre code {

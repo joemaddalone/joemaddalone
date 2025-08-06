@@ -69,7 +69,6 @@ If you're not familiar with svg path data commands I have a short series to ramp
 Moreover there are a ton of svg path libraries out there that can simplify this even further.  I'll tout [my own library](https://github.com/joemaddalone/path) in this next example.
 
 ```js
-// import Path from "https://unpkg.com/@joemaddalone/path@1.4.0/dist/index.js";
 const p = new Path2D(new Path().triangle(70, 150, 50).toString());
 ctx.stroke(p);
 ```

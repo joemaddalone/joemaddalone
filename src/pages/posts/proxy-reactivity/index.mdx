@@ -62,15 +62,11 @@ const useState = (initialValue) => {
         state[property] = initialValue;
     }
     // Create a reactive variable
-    const reactiveVar = {
+    return {
         _property: property,
         get value() { return state[property]; },
         set value(newValue) { state[property] = newValue; }
     };
-    const setState = (newValue) => {
-        state[property] = newValue;
-    };
-    return [reactiveVar, setState];
 };
 ```
 
@@ -80,7 +76,7 @@ const useState = (initialValue) => {
 
 ```js
 // Example usage
-const [count, setCount] = useState(0);
+const count = useState(0);
 
 // key is now on ._property.  not the greatest API but it works.
 listen(count._property, (value) => {
@@ -90,17 +86,31 @@ listen(count._property, (value) => {
 // value is now on .value.  not the greatest API but it works.
 console.log(count.value); // 0
 
-setCount(20); // Triggers the listener
-setCount(20); // No trigger (same value)
-setCount(5); // Triggers the listener again
-console.log(count.value); // 5
-
-// We could also just use the property directly
 count.value = 10; // Triggers the listener
 count.value = 10; // No trigger (same value)
 count.value = 20; // Triggers the listener again
 console.log(count.value); // 20
 ```
+
+## Replace the ugly parts
+
+We're building our own thing so let's make it a little more specific to our needs.
+
+```js del={2} ins={3-8}
+const listen = (property, fn) => {
+    listeners.set(property, [...(listeners.get(property) || []), fn]);
+    if (property?._property) {
+        listeners.set(property._property,
+            [...(listeners.get(property._property) || []),
+        fn]);
+    }
+}
+// an now we can just.
+listen(count, (value) => {
+    console.log("Count changed to:", value);
+});
+```
+
 
 
 <script>
@@ -126,12 +136,12 @@ const state = new Proxy(initialState, {
 });
 
 // now our listener creator
-const listen = (property, fn) => {
+const oldListen = (property, fn) => {
   listeners.set(property, [...(listeners.get(property) || []), fn]);
 }
 
 // we can now listen to changes on x
-listen("x", (v) => {
+oldListen("x", (v) => {
     console.log("x changed to", v);
 });
 
@@ -150,41 +160,25 @@ const useState = (initialValue) => {
     if (!(property in state)) {
         state[property] = initialValue;
     }
-
-    // Create a reactive variable
-    const reactiveVar = {
+    return {
         _property: property,
         get value() { return state[property]; },
         set value(newValue) { state[property] = newValue; }
     };
-
-    const setState = (newValue) => {
-        state[property] = newValue;
-    };
-
-
-    return [reactiveVar, setState];
 };
 
 // Example usage
-const [count, setCount] = useState(0);
+count = useState(0);
 
-// key is now on ._property.  not the greatest API but it works.
-listen(count._property, (value) => {
-    console.log("Count changed to:", value);
-});
+const listen = (property, fn) => {
+    if (property?._property) {
+        listeners.set(property._property,
+            [...(listeners.get(property._property) || []),
+        fn]);
+    }
+}
 
 console.log('-----useState implementation-----');
-
-// value is now on .value.  not the greatest API but it works.
-console.log(count.value); // 0
-setCount(20); // Triggers the listener
-setCount(20); // No trigger (same value)
-setCount(5); // Triggers the listener again
-console.log(count.value); // 5
-
-// We could also just set the value directly
-console.log('-----setting the value property directly-----');
 count.value = 10; // Triggers the listener
 count.value = 10; // No trigger (same value)
 count.value = 20; // Triggers the listener again
