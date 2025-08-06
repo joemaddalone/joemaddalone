@@ -163,6 +163,8 @@ footer {
 
 .standard-article p {
 	line-height: 1.7;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	display: block;
 }
 
@@ -170,12 +172,6 @@ footer {
 	box-shadow: none !important;
 }
 
-.standard-article pre {
-	margin-bottom: 15px !important;
-	margin-top: 15px !important;
-	padding: 1em;
-	border-radius: 0.5em !important;
-}
 
 .standard-article pre code {
 	font-size: .8rem;
@@ -243,4 +239,8 @@ footer {
 	padding: 10px;
 	max-width: 900px;
 	color: #222;
+}
+
+.sr-only {
+	display: none;
 }

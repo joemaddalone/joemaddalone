@@ -28,8 +28,10 @@ services:
     image: jamesread/olivetin
     volumes:
       - ${APPDATADIR}/OliveTin:/config
-      - /home/username/.nvm/versions/node/v20.10.0/bin:/node # this gets us to node
-      - /path/to/projects:/projects # this gets us to my code
+       # this gets us to node
+      - /home/username/.nvm/versions/node/v20.10.0/bin:/node
+       # this gets us to my code
+      - /path/to/projects:/projects
     ports:
       - "1337:1337"
     restart: unless-stopped
