@@ -1,0 +1,243 @@
+---
+import ExpLayout from "../../../layouts/ExpLayout.astro";
+---
+
+<ExpLayout pageTitle="Canvas video grid" sui tachyons>
+    <style is:inline>
+        .page {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        /* #buffer-v {
+            writing-mode: sideways-lr;
+        } */
+    </style>
+    <div class="page">
+        <div class="header mt4">
+            <h1 class="ui header">
+                <div class="content">Canvas video grid</div>
+            </h1>
+        </div>
+
+        <div class="mb2">
+            &larr; Back to <a href="/experiments">
+                joemaddalone.com/experiments</a
+            >
+        </div>
+
+        <div class="flex">
+            <div class="field mr2">
+                <label for="buffer-h">X Space</label>
+                <div class="flex items-center justify-between">
+                    <input
+                        type="range"
+                        id="buffer-h"
+                        name="buffer-h"
+                        min="0"
+                        max="25"
+                        value="0"
+                        class="ui slider w-100"
+                    />
+                </div>
+            </div>
+
+            <div class="field ml2">
+                <label for="buffer-h">Y Space</label>
+                <div class="flex items-center justify-between">
+                    <input
+                        id="buffer-v"
+                        name="buffer-v"
+                        type="range"
+                        min="0"
+                        max="25"
+                        value="0"
+                        class="ui slider w-100"
+                    />
+                </div>
+            </div>
+        </div>
+        <div id="container"></div>
+    </div>
+    <script>
+        import Gridset from "gridset";
+        const $ = document.querySelector.bind(document);
+        const dce = document.createElement.bind(document);
+        const c = dce("canvas");
+        const ctx = c.getContext("2d");
+        c.id = "c";
+
+        // Mouse tracking for hover effects
+        let mouseX = 0;
+        let mouseY = 0;
+        let isMouseOverCanvas = false;
+
+        const vid = (src: string) => {
+            const video = dce("video");
+            video.id = "player";
+            video.muted = true;
+            video.setAttribute("loop", "true");
+            video.style.display = "none";
+            video.innerHTML += `<source src="${src}" type="video/mp4" />`;
+            return video;
+        };
+        const makePlayer = () => {
+            const video = vid("/assets/exp/video/ddd.mp4"); // or ogv
+            const container = $("#container");
+            if (!container) return;
+            container.appendChild(video);
+            container.appendChild(c);
+
+            // Attach mouse listeners after canvas is in the DOM
+            c.addEventListener("mousemove", (e) => {
+                const rect = c.getBoundingClientRect();
+                mouseX = e.clientX - rect.left;
+                mouseY = e.clientY - rect.top;
+                isMouseOverCanvas = true;
+            });
+            c.addEventListener("mouseleave", () => {
+                isMouseOverCanvas = false;
+            });
+            video.addEventListener(
+                "loadedmetadata",
+                function () {
+                    setInterval(draw, 10);
+                },
+                false,
+            );
+            video.play();
+        };
+
+        const draw = () => {
+            const video = $("#player");
+            if (
+                !(video instanceof HTMLVideoElement) ||
+                !(c instanceof HTMLCanvasElement)
+            )
+                return;
+            var w = video.videoWidth;
+            var h = video.videoHeight;
+            var segments = 5;
+            var gw = Math.floor(w / segments);
+            var gh = Math.floor(h / segments);
+            // Get buffer value safely and as a number
+            const bufferH = $("#buffer-h").valueAsNumber || 0;
+            const bufferV = $("#buffer-v").valueAsNumber || 0;
+            c.width = 800;
+            c.height = 480;
+
+            const g = new Gridset({
+                width: w,
+                height: h,
+                rows: segments,
+                cols: segments,
+                cellSize: gw,
+            });
+
+            const gridWidth =
+                gw * segments + bufferH * (segments - 1) + bufferH / 2;
+            const startX = (c.width - gridWidth) / 2;
+            const gridHeight =
+                gh * segments + bufferV * (segments - 1) + bufferV / 2;
+            const startY = (c.height - gridHeight) / 2;
+            const adjustedGrid = g.flatCells.map((cell) => {
+                return {
+                    ...cell,
+                    x: cell.x + startX,
+                    y: cell.y + startY,
+                };
+            });
+
+            // Buffer-aware hover mapping
+            const gridVisualWidth = gw * segments + bufferH * (segments - 1);
+            const gridVisualHeight = gh * segments + bufferV * (segments - 1);
+            let hoveredCol = -1;
+            let hoveredRow = -1;
+            let hoverWholeGrid = false;
+            if (isMouseOverCanvas) {
+                const relX = mouseX - startX;
+                const relY = mouseY - startY;
+                const insideGrid =
+                    relX >= 0 &&
+                    relX <= gridVisualWidth &&
+                    relY >= 0 &&
+                    relY <= gridVisualHeight;
+                if (insideGrid) {
+                    if (bufferH === 0 && bufferV === 0) {
+                        hoverWholeGrid = true;
+                    } else {
+                        hoveredCol = Math.floor(relX / (gw + bufferH));
+                        hoveredRow = Math.floor(relY / (gh + bufferV));
+                        hoveredCol = Math.min(
+                            Math.max(hoveredCol, 0),
+                            segments - 1,
+                        );
+                        hoveredRow = Math.min(
+                            Math.max(hoveredRow, 0),
+                            segments - 1,
+                        );
+                    }
+                }
+            }
+
+            const hoveredRects: Array<{
+                x: number;
+                y: number;
+                w: number;
+                h: number;
+            }> = [];
+            adjustedGrid.forEach((cell, index) => {
+                if (ctx) {
+                    const sx = cell.x - startX;
+                    const sy = cell.y - startY;
+                    const dx = cell.x + bufferH * cell.ci;
+                    const dy = cell.y + bufferV * cell.ri;
+                    const dw = cell.w;
+                    const dh = cell.h;
+                    ctx.filter = "grayscale(100%)";
+                    const isHovered = (() => {
+                        if (!isMouseOverCanvas) return false;
+                        if (hoverWholeGrid) return true;
+                        if (hoveredRow === -1 || hoveredCol === -1)
+                            return false;
+                        // Connected behavior: when buffer is zero along an axis, treat that axis as a single group
+                        const sameCell =
+                            cell.ri === hoveredRow && cell.ci === hoveredCol;
+                        const sameRowConnected =
+                            bufferH === 0 && cell.ri === hoveredRow;
+                        const sameColConnected =
+                            bufferV === 0 && cell.ci === hoveredCol;
+                        return sameCell || sameRowConnected || sameColConnected;
+                    })();
+
+                    if (isHovered) {
+                        // ctx.filter = `hue-rotate(-${video.currentTime}turn)`;
+                        ctx.filter = "none";
+                        hoveredRects.push({ x: dx, y: dy, w: dw, h: dh });
+                    }
+                    ctx.drawImage(video, sx, sy, dw, dh, dx, dy, dw, dh);
+                    ctx.filter = "none";
+                }
+            });
+
+            // Draw a single outline around the union of hovered tiles
+            if (ctx && hoveredRects.length > 0) {
+                const minX = Math.min(...hoveredRects.map((r) => r.x));
+                const minY = Math.min(...hoveredRects.map((r) => r.y));
+                const maxX = Math.max(...hoveredRects.map((r) => r.x + r.w));
+                const maxY = Math.max(...hoveredRects.map((r) => r.y + r.h));
+                ctx.beginPath();
+                ctx.rect(minX - 3, minY - 3, maxX - minX + 6, maxY - minY + 6);
+                ctx.strokeStyle = "#e81";
+                ctx.lineWidth = 3;
+                ctx.stroke();
+                ctx.closePath();
+            }
+        };
+
+        makePlayer();
+    </script>
+</ExpLayout>
