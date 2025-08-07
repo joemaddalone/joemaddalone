@@ -1,0 +1,356 @@
+---
+import ExpLayout from "../../../layouts/ExpLayout.astro";
+---
+
+<ExpLayout pageTitle="Web Audio Code Generator" sui tachyons prism={false}>
+    <div class="ui container" style="padding: 2rem 0;">
+        <div style="margin-bottom: 20px;">
+            &larr; Back to <a href="/experiments">
+                joemaddalone.com/experiments</a
+            >
+        </div>
+        <div class="ui fluid card">
+            <div class="content">
+                <div class="header">
+                    <h1 class="ui header">
+                        <div class="content">Web Audio Code Generator</div>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="ui two column stackable grid" style="margin: 0;">
+                    <div class="column">
+                        <div
+                            class="ui basic segment"
+                            style="border: none; padding: 0 0 1rem 0;"
+                        >
+                            <h3 class="ui header" style="margin-bottom: 1rem;">
+                                <div class="content">Controls</div>
+                            </h3>
+
+                            <div class="ui form">
+                                <div class="field">
+                                    <label for="oscillatorType"
+                                        >Oscillator Type</label
+                                    >
+                                    <select
+                                        id="oscillatorType"
+                                        class="ui dropdown"
+                                    >
+                                        <option value="sine">Sine</option>
+                                        <option value="square">Square</option>
+                                        <option value="sawtooth"
+                                            >Sawtooth</option
+                                        >
+                                        <option value="triangle" selected
+                                            >Triangle</option
+                                        >
+                                    </select>
+                                </div>
+
+                                <div class="field">
+                                    <label for="startFrequency"
+                                        >Start Frequency (Hz)</label
+                                    >
+                                    <div
+                                        class="flex items-center justify-between"
+                                    >
+                                        <input
+                                            type="range"
+                                            id="startFrequency"
+                                            min="50"
+                                            max="2000"
+                                            value="1200"
+                                            step="50"
+                                            class="ui slider w-80"
+                                        />
+                                        <div class="ui label w-20">
+                                            Value: <span id="startFreqValue"
+                                                >1200</span
+                                            > Hz
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label for="endFrequency"
+                                        >End Frequency (Hz)</label
+                                    >
+                                    <div
+                                        class="flex items-center justify-between"
+                                    >
+                                        <input
+                                            type="range"
+                                            id="endFrequency"
+                                            min="50"
+                                            max="2000"
+                                            value="300"
+                                            step="50"
+                                            class="ui slider w-80"
+                                        />
+                                        <div class="ui label w-20">
+                                            Value: <span id="endFreqValue"
+                                                >300</span
+                                            > Hz
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label for="startGain">Start Gain</label>
+                                    <div
+                                        class="flex items-center justify-between"
+                                    >
+                                        <input
+                                            type="range"
+                                            id="startGain"
+                                            min="0"
+                                            max="1"
+                                            value="0.5"
+                                            step="0.01"
+                                            class="ui slider w-80"
+                                        />
+                                        <div class="ui label w-20">
+                                            Value: <span id="startGainValue"
+                                                >0.5</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label for="endGain">End Gain</label>
+                                    <div
+                                        class="flex items-center justify-between"
+                                    >
+                                        <input
+                                            type="range"
+                                            id="endGain"
+                                            min="0"
+                                            max="1"
+                                            value="0.01"
+                                            step="0.01"
+                                            class="ui slider w-80"
+                                        />
+                                        <div class="ui label w-20">
+                                            Value: <span id="endGainValue"
+                                                >0.01</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label for="duration"
+                                        >Duration (seconds)</label
+                                    >
+                                    <div
+                                        class="flex items-center justify-between"
+                                    >
+                                        <input
+                                            type="range"
+                                            id="duration"
+                                            min="0.1"
+                                            max="2"
+                                            value="0.25"
+                                            step="0.05"
+                                            class="ui slider w-80"
+                                        />
+                                        <div class="ui label w-20">
+                                            Value: <span id="durationValue"
+                                                >0.25</span
+                                            >s
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <button
+                                        class="ui primary button"
+                                        id="playBtn"
+                                    >
+                                        Play Sound
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div
+                            class="ui basic segment"
+                            style="border: none; padding: 0;"
+                        >
+                            <h3
+                                class="ui header flex justify-between items-center"
+                                style="margin-bottom: 1rem;"
+                            >
+                                <div class="content">
+                                    <div>Generated Code</div>
+                                </div>
+                                <button
+                                    class="ui button"
+                                    id="copyBtn"
+                                    style="margin-bottom: 1rem;"
+                                >
+                                    Copy Code
+                                </button>
+                            </h3>
+
+                            <div
+                                class="ui segment"
+                                style="background-color: #f8f9fa; font-family: 'Courier New', monospace; margin: 0;"
+                            >
+                                <pre
+                                    style="margin: 0; white-space: pre-wrap;"
+                                >
+                                    <code id="codeOutput" class="language-javascript">// Your generated code will appear here</code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script is:inline>
+        const $ = (selector) => document.querySelector(selector);
+        // Audio context for playing sounds
+        let audioContext = null;
+
+        // Get DOM elements
+        const oscillatorType = $("#oscillatorType");
+        const startFrequency = $("#startFrequency");
+        const endFrequency = $("#endFrequency");
+        const startGain = $("#startGain");
+        const endGain = $("#endGain");
+        const duration = $("#duration");
+        const playBtn = $("#playBtn");
+        const copyBtn = $("#copyBtn");
+        const codeOutput = $("#codeOutput");
+
+        // Update value displays
+        function updateValueDisplays() {
+            $("#startFreqValue").textContent = startFrequency.value;
+            $("#endFreqValue").textContent = endFrequency.value;
+            $("#startGainValue").textContent = startGain.value;
+            $("#endGainValue").textContent = endGain.value;
+            $("#durationValue").textContent = duration.value;
+        }
+
+        // Generate code based on current parameters
+        function generateCode() {
+            const code = `
+try {
+  const audioContext = new window.AudioContext();
+  const ctx = audioContext;
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+
+  osc.type = "${oscillatorType.value}";
+  osc.frequency.setValueAtTime(${startFrequency.value}, ctx.currentTime);
+  osc.frequency.exponentialRampToValueAtTime(
+      ${endFrequency.value},
+      ctx.currentTime + ${duration.value},
+  );
+
+  gain.gain.setValueAtTime(${startGain.value}, ctx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(
+      ${endGain.value},
+      ctx.currentTime + ${duration.value},
+  );
+
+  osc.connect(gain);
+  gain.connect(ctx.destination);
+  osc.start();
+  osc.stop(ctx.currentTime + ${duration.value});
+} catch (e) {
+    console.log("Audio playback failed:", e);
+}`;
+
+            codeOutput.innerHTML = `<code>${code}</code>`;
+        }
+
+        // Play sound with current parameters
+        function playSound() {
+            try {
+                if (!audioContext) {
+                    audioContext = new (window.AudioContext ||
+                        window.webkitAudioContext)();
+                }
+
+                const ctx = audioContext;
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+
+                osc.type = oscillatorType.value;
+                osc.frequency.setValueAtTime(
+                    parseFloat(startFrequency.value),
+                    ctx.currentTime,
+                );
+                osc.frequency.exponentialRampToValueAtTime(
+                    parseFloat(endFrequency.value),
+                    ctx.currentTime + parseFloat(duration.value),
+                );
+
+                gain.gain.setValueAtTime(
+                    parseFloat(startGain.value),
+                    ctx.currentTime,
+                );
+                gain.gain.exponentialRampToValueAtTime(
+                    parseFloat(endGain.value),
+                    ctx.currentTime + parseFloat(duration.value),
+                );
+
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start();
+                osc.stop(ctx.currentTime + parseFloat(duration.value));
+            } catch (e) {
+                console.log("Audio playback failed:", e);
+            }
+        }
+
+        // Copy code to clipboard
+        function copyCode() {
+            const code = codeOutput.textContent;
+            navigator.clipboard
+                .writeText(code)
+                .then(() => {
+                    copyBtn.innerHTML = "Copied!";
+                    copyBtn.classList.add("positive");
+                    setTimeout(() => {
+                        copyBtn.innerHTML = "Copy Code";
+                        copyBtn.classList.remove("positive");
+                    }, 2000);
+                })
+                .catch((err) => {
+                    console.error("Failed to copy code:", err);
+                });
+        }
+
+        // Event listeners
+        [
+            oscillatorType,
+            startFrequency,
+            endFrequency,
+            startGain,
+            endGain,
+            duration,
+        ].forEach((element) => {
+            element.addEventListener("input", () => {
+                updateValueDisplays();
+                generateCode();
+            });
+        });
+
+        playBtn.addEventListener("click", playSound);
+        copyBtn.addEventListener("click", copyCode);
+
+        // Initialize
+        updateValueDisplays();
+        generateCode();
+    </script>
+</ExpLayout>

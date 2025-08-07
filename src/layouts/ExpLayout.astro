@@ -1,5 +1,4 @@
 ---
-import "../styles/global.css";
 const { pageTitle, sui = true, tachyons = true, prism = true } = Astro.props;
 ---
 
@@ -43,7 +42,9 @@ const { pageTitle, sui = true, tachyons = true, prism = true } = Astro.props;
         <link
         href="https://unpkg.com/prismjs@1.20.0/themes/prism.css"
         rel="stylesheet"
-    />
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js" integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js" integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     )}
     <title>{pageTitle}</title>
   </head>
