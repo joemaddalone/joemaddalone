@@ -23,11 +23,16 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
                     <div class="column">
                         <div
                             class="ui basic segment"
-                            style="border: none; padding: 0 0 1rem 0;"
+                            style=" padding: 0 0 1rem 0;"
                         >
-                            <h3 class="ui header" style="margin-bottom: 1rem;">
-                                <div class="content">Controls</div>
-                            </h3>
+                            <div
+                                class="flex justify-between items-center bb b--light-gray h3"
+                                style="margin-bottom: 1rem;"
+                            >
+                                <div class="ui header">
+                                    <div>Controls</div>
+                                </div>
+                            </div>
 
                             <div class="ui form">
                                 <div class="field">
@@ -51,7 +56,9 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
 
                                 <div class="field">
                                     <label for="startFrequency"
-                                        >Start Frequency (Hz)</label
+                                        >Start Frequency (<span
+                                            id="startFreqValue">1200</span
+                                        >Hz)</label
                                     >
                                     <div
                                         class="flex items-center justify-between"
@@ -63,19 +70,16 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
                                             max="2000"
                                             value="1200"
                                             step="50"
-                                            class="ui slider w-80"
+                                            class="ui slider w-100"
                                         />
-                                        <div class="ui label w-20">
-                                            Value: <span id="startFreqValue"
-                                                >1200</span
-                                            > Hz
-                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="field">
                                     <label for="endFrequency"
-                                        >End Frequency (Hz)</label
+                                        >End Frequency (<span id="endFreqValue"
+                                            >300</span
+                                        >Hz)</label
                                     >
                                     <div
                                         class="flex items-center justify-between"
@@ -87,18 +91,18 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
                                             max="2000"
                                             value="300"
                                             step="50"
-                                            class="ui slider w-80"
+                                            class="ui slider w-100"
                                         />
-                                        <div class="ui label w-20">
-                                            Value: <span id="endFreqValue"
-                                                >300</span
-                                            > Hz
-                                        </div>
+                                        ˝
                                     </div>
                                 </div>
 
                                 <div class="field">
-                                    <label for="startGain">Start Gain</label>
+                                    <label for="startGain"
+                                        >Start Gain (<span id="startGainValue"
+                                            >0.5</span
+                                        >)</label
+                                    >
                                     <div
                                         class="flex items-center justify-between"
                                     >
@@ -109,18 +113,17 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
                                             max="1"
                                             value="0.5"
                                             step="0.01"
-                                            class="ui slider w-80"
+                                            class="ui slider w-100"
                                         />
-                                        <div class="ui label w-20">
-                                            Value: <span id="startGainValue"
-                                                >0.5</span
-                                            >
-                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="field">
-                                    <label for="endGain">End Gain</label>
+                                    <label for="endGain"
+                                        >End Gain (<span id="endGainValue"
+                                            >0.01</span
+                                        >)</label
+                                    >
                                     <div
                                         class="flex items-center justify-between"
                                     >
@@ -131,19 +134,16 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
                                             max="1"
                                             value="0.01"
                                             step="0.01"
-                                            class="ui slider w-80"
+                                            class="ui slider w-100"
                                         />
-                                        <div class="ui label w-20">
-                                            Value: <span id="endGainValue"
-                                                >0.01</span
-                                            >
-                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="field">
                                     <label for="duration"
-                                        >Duration (seconds)</label
+                                        >Duration (<span id="durationValue"
+                                            >0.25</span
+                                        >s)</label
                                     >
                                     <div
                                         class="flex items-center justify-between"
@@ -155,13 +155,8 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
                                             max="2"
                                             value="0.25"
                                             step="0.05"
-                                            class="ui slider w-80"
+                                            class="ui slider w-100"
                                         />
-                                        <div class="ui label w-20">
-                                            Value: <span id="durationValue"
-                                                >0.25</span
-                                            >s
-                                        </div>
                                     </div>
                                 </div>
 
@@ -182,11 +177,11 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
                             class="ui basic segment"
                             style="border: none; padding: 0;"
                         >
-                            <h3
-                                class="ui header flex justify-between items-center"
+                            <div
+                                class="flex justify-between items-center bb b--light-gray h3"
                                 style="margin-bottom: 1rem;"
                             >
-                                <div class="content">
+                                <div class="ui header">
                                     <div>Generated Code</div>
                                 </div>
                                 <button
@@ -196,15 +191,14 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
                                 >
                                     Copy Code
                                 </button>
-                            </h3>
+                            </div>
 
                             <div
                                 class="ui segment"
                                 style="background-color: #f8f9fa; font-family: 'Courier New', monospace; margin: 0;"
                             >
                                 <pre
-                                    style="margin: 0; white-space: pre-wrap;"
-                                >
+                                    style="margin: 0; white-space: pre-wrap; overflow-x: auto;">
                                     <code id="codeOutput" class="language-javascript">// Your generated code will appear here</code>
                                 </pre>
                             </div>

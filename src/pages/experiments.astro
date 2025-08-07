@@ -100,7 +100,6 @@ import createSlug from "../lib/createSlug";
             body,
             html {
                 background-color: #020728;
-                display: flex;
             }
 
             h1 {
@@ -137,6 +136,7 @@ import createSlug from "../lib/createSlug";
             }
 
             .content {
+                display: flex;
                 margin-top: 25px;
             }
 
@@ -174,7 +174,7 @@ import createSlug from "../lib/createSlug";
                 font-size: 14px;
                 font-weight: bold;
                 text-transform: uppercase;
-                border-radius: 2px;
+                border-radius: 6px;
                 border-color: var(--target-high);
                 text-align: center;
                 box-shadow: 0 0 10px 0 var(--target-high);
@@ -220,35 +220,22 @@ import createSlug from "../lib/createSlug";
     <body>
         <div class="container">
             <div class="explist">
-                <a
-                    href="/"
-                    class="shadow hover"
-                >
+                <a href="/" class="shadow hover">
                     <span class="label">H</span>
                     <span class="description">home</span>
                     <span class="counter fill-low">1</span>
                 </a>
-                <a
-                    href="/experiments/seam"
-                    class="shadow hover"
-                >
+                <a href="/experiments/seam" class="shadow hover">
                     <span class="label">SC</span>
                     <span class="description">seam carving</span>
                     <span class="counter fill-low">2</span>
                 </a>
-                <a
-                    href="/experiments/web-audio"
-                    class="shadow hover"
-                >
+                <a href="/experiments/web-audio" class="shadow hover">
                     <span class="label">WA</span>
                     <span class="description">web audio</span>
                     <span class="counter fill-low">3</span>
                 </a>
             </div>
-        </div>
-        <div class="content">
-            <h1>Experiments</h1>
-            <p>at my own risk.</p>
         </div>
     </body>
 </html>
