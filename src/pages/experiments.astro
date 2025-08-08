@@ -1,242 +1,114 @@
 ---
-import BlogPost from "../components/BlogPost.astro";
-import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
 const pageTitle = "experiments";
-import createSlug from "../lib/createSlug";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <link
-            rel="apple-touch-icon"
-            sizes="57x57"
-            href="/assets/apple-icon-57x57.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="60x60"
-            href="/assets/apple-icon-60x60.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="72x72"
-            href="/assets/apple-icon-72x72.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="76x76"
-            href="/assets/apple-icon-76x76.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="114x114"
-            href="/assets/apple-icon-114x114.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="120x120"
-            href="/assets/apple-icon-120x120.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="144x144"
-            href="/assets/apple-icon-144x144.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="152x152"
-            href="/assets/apple-icon-152x152.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/assets/apple-icon-180x180.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="192x192"
-            href="/assets/android-icon-192x192.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/assets/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="96x96"
-            href="/assets/favicon-96x96.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/assets/favicon-16x16.png"
-        />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta
-            name="msapplication-TileImage"
-            content="/assets/ms-icon-144x144.png"
-        />
-        <meta name="theme-color" content="#ffffff" />
-        <title>{pageTitle}</title>
+<BaseLayout pageTitle={pageTitle} includeFooter={false}>
+    <style>
+        p {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-align: center;
+            margin: 0;
+        }
 
-        <style>
-            :root {
-                --target-dark: #222;
-                --target-high: #20a0c1;
-                --target-low: #1c354f;
-            }
+        .explist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
-            body,
-            html {
-                background-color: #020728;
-            }
+        .explist a {
+            overflow: hidden;
+            counter: numberH;
+            counter-increment: numberH;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: 1px solid #222;
+            background-color: #eee;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            text-decoration: none;
+            color: #222;
+        }
 
-            h1 {
-                color: var(--target-high);
-                font-family: "Courier New", Courier, monospace;
-                font-size: 14px;
-                font-weight: bold;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                margin: 0;
-            }
+        .explist a:hover {
+            background-color: #222;
+            color: #fff;
+        }
 
-            p {
-                color: var(--target-high);
-                font-family: "Courier New", Courier, monospace;
-                font-size: 14px;
-                font-weight: bold;
-                letter-spacing: 1px;
-                text-align: center;
-                margin: 0;
-            }
+        .explist a span.label {
+            font-size: 80px;
+            font-weight: bold;
+            color: #ddd8;
+        }
 
-            .bg-dark {
-                background-color: var(--target-dark);
-            }
+        .explist a span.description {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            line-height: 1;
+            font-weight: bold;
+            color: #222;
+        }
 
-            .line-dark {
-                border-color: var(--target-dark);
-            }
+        .explist a span.counter {
+            position: absolute;
+            bottom: -4px;
+            right: 2px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #222;
+        }
 
-            .line-high {
-                border-color: var(--target-high);
-                border-width: 1.5;
-            }
+        .explist a span.counter::before {
+            content: counter(numberH);
+        }
 
-            .content {
-                display: flex;
-                margin-top: 25px;
-            }
+        .explist a:hover span.description {
+            color: #fff;
+        }
 
-            .thin {
-                border-width: 1px;
-            }
+        .explist a:hover span.label {
+            color: #444;
+            filter: blur(2px);
+        }
 
-            .fill-low {
-                background-color: var(--target-low);
-            }
-            .explist {
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                flex-wrap: wrap;
-                padding: 0;
-                margin: 0;
-            }
-            .explist a {
-                position: relative;
-                display: grid;
-                place-items: center;
-                place-content: center;
-                width: 95px;
-                height: 95px;
-                padding: 0;
-                margin: 5px;
-                border: 1px solid #000;
-                background-color: var(--target-low);
-                font-family: sans-serif;
-                font-size: 14px;
-                font-weight: bold;
-                text-transform: uppercase;
-                border-radius: 6px;
-                border-color: var(--target-high);
-                text-align: center;
-                box-shadow: 0 0 10px 0 var(--target-high);
-                text-decoration: none;
-                color: var(--target-high);
-            }
+        .explist a:hover span.counter {
+            color: #fff;
+        }
 
-            .explist a:hover {
-                background-color: var(--target-high);
-                color: var(--target-dark);
-                transition: all 0.3s ease-in-out;
-            }
-
-            .explist a span.label {
-                position: absolute;
-                pointer-events: none;
-                font-size: 24px;
-                font-weight: bold;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                text-align: center;
-                margin: 0;
-                top: 20%;
-                width: 100%;
-            }
-
-            .explist a span.counter {
-                pointer-events: none;
-                position: absolute;
-                bottom: 2px;
-                right: 2px;
-            }
-
-            .explist a span.description {
-                position: absolute;
-                font-size: 10px;
-                top: 55%;
-                left: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="explist">
-                <a href="/" class="shadow hover">
-                    <span class="label">H</span>
-                    <span class="description">home</span>
-                    <span class="counter fill-low">1</span>
-                </a>
-                <a href="/experiments/seam" class="shadow hover">
-                    <span class="label">SC</span>
-                    <span class="description">seam carving</span>
-                    <span class="counter fill-low">2</span>
-                </a>
-                <a href="/experiments/web-audio" class="shadow hover">
-                    <span class="label">WA</span>
-                    <span class="description">web audio</span>
-                    <span class="counter fill-low">3</span>
-                </a>
-                <a href="/experiments/canvas-exp" class="shadow hover">
-                    <span class="label">CE</span>
-                    <span class="description">canvas exp</span>
-                    <span class="counter fill-low">4</span>
-                </a>
-            </div>
+    </style>
+    
+    <div class="standard-article">
+        <div class="explist">
+            <a href="/experiments/seam" class="shadow hover">
+                <span class="label">SC</span>
+                <span class="description">seam carving</span>
+                <span class="counter fill-low"></span>
+            </a>
+            <a href="/experiments/web-audio" class="shadow hover">
+                <span class="label">WA</span>
+                <span class="description">web audio</span>
+                <span class="counter fill-low"></span>
+            </a>
+            <a href="/experiments/canvas-exp" class="shadow hover">
+                <span class="label">CE</span>
+                <span class="description">canvas exp</span>
+                <span class="counter fill-low"></span>
+            </a>
         </div>
-    </body>
-</html>
+    </div>
+</BaseLayout>
+
+

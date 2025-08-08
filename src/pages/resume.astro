@@ -1,16 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
 import data from "./resume.11tydata.json";
 const pageTitle = "Resume of Joe Maddalone";
 ---
 
-<BaseLayout includeHeader={false} pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} includeFooter={false}>
     
     <div class="ui internally celled grid">
         <div class="row">
-            <div class="four wide column">
-                <b>Get to know me.</b>
-            </div>
             <div class="twelve wide column">
                 <h2>Experience</h2>
                 <div class="ui divided items">
