@@ -13,6 +13,11 @@ const wheres = [
         url: '/experiments',
     },
     {
+        color: '#7f9cf5',
+        txt: 'I work',
+        url: '/resume',
+    },
+    {
         color: '#bcd2ee',
         txt: 'react-svg-path',
         url: 'https://joemaddalone.github.io/react-svg-path-docs',

@@ -1,5 +1,8 @@
 ---
-const { pageTitle, sui = true, tachyons = true, prism = true } = Astro.props;
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+const { pageTitle, includeHeader = true, includeFooter = true, sui = true, tachyons = true, prism = true } = Astro.props;
 ---
 
 <html lang="en">
@@ -49,6 +52,11 @@ const { pageTitle, sui = true, tachyons = true, prism = true } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <slot />
+    {includeHeader && <Header />}
+    {!includeHeader && <slot />}
+    {includeHeader && <div class="pt4">
+      <slot />
+    </div>}
+    {includeFooter && <Footer />}
   </body>
 </html>
