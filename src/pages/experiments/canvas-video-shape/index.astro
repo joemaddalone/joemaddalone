@@ -32,8 +32,6 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
       <div data-shape="x" class="ui icon button shape-button">
         x
       </div>
-
-      <div data-shape="pie" class="ui icon button shape-button">pie</div>
     </div>
     <input type="hidden" id="shape" value="star" />
     <div id="container"></div>
@@ -111,51 +109,17 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
           p = new path().regPolygon(450, 5, cx, cy);
           break;
         case "x":
-          const points = path.radialPoints(225, cx, cy, 8);
-          const [x1, y1] = points[0];
-          const [x2, y2] = points[1];
-          const [x3, y3] = points[2];
-          const [x4, y4] = points[3];
-          const [x5, y5] = points[4];
-          const [x6, y6] = points[5];
-          const [x7, y7] = points[6];
-          const [x8, y8] = points[7];
-          const innerPoints = path.radialPoints(50, cx, cy, 8);
-          const [ix1, iy1] = innerPoints[0];
-          const [ix2, iy2] = innerPoints[1];
-          const [ix3, iy3] = innerPoints[2];
-          const [ix4, iy4] = innerPoints[3];
-          const [ix5, iy5] = innerPoints[4];
-          const [ix6, iy6] = innerPoints[5];
-          const [ix7, iy7] = innerPoints[6];
-          const [ix8, iy8] = innerPoints[7];
-          p = new path()
-            .M(ix1, iy1)
-            .L(x1, y1)
-            .L(x2, y2)
-            .L(ix2, iy2)
-            .L(ix3, iy3)
-            .L(x3, y3)
-            .L(x4, y4)
-            .L(ix4, iy4)
-            .L(ix5, iy5)
-            .L(x5, y5)
-            .L(x6, y6)
-            .L(ix6, iy6)
-            .L(ix7, iy7)
-            .L(x7, y7)
-            .L(x8, y8)
-            .L(ix8, iy8)
-            .L(ix1, iy1);
-          break;
-        case "pie":
-          const dist = 2;
-          p = new path()
-            .sector(cx, cy - dist, 375, 0, 45)
-            .sector(cx, cy, 375, 45, 165)
-            .sector(cx - dist, cy, 375, 165, 270)
-            .sector(cx - dist, cy - dist, 375, 270, 360);
-          //   p = new path().sector(450, 200, 5, c.width / 2, c.height / 2);
+          const numPoints = 8;
+          const points = path.radialPoints(225, cx, cy, numPoints);
+          const innerPoints = path.radialPoints(0, cx, cy, numPoints);
+          p = new path().M(innerPoints[0][0], innerPoints[0][1]);
+          for (let i = 0; i < numPoints; i += 2) {
+            p = p
+              .L(points[i][0], points[i][1])
+              .L(points[i + 1][0], points[i + 1][1])
+              .L(innerPoints[i + 1][0], innerPoints[i + 1][1])
+              .L(innerPoints[(i + 2) % numPoints][0], innerPoints[(i + 2) % numPoints][1]);
+          }
           break;
       }
       // Matrix transformation

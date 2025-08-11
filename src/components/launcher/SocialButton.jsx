@@ -5,7 +5,6 @@ import { useSpring, animated } from 'react-spring';
 import './launcher.css';
 
 const SocialButton = ({ cx, cy, ox, offset, control }) => {
-    console.log(control);
     const [activated, setActivated] = React.useState(null);
     const [flag, setFlag] = React.useState(null);
     const tx = cx + ox - offset;
