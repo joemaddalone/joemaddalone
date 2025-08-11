@@ -1,0 +1,177 @@
+---
+import ExpLayout from "../../../layouts/ExpLayout.astro";
+---
+
+<ExpLayout pageTitle="Canvas video shape" sui tachyons>
+  <style is:inline>
+    .page {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+  </style>
+  <div class="page">
+    <div class="header mt4">
+      <h1 class="ui header">
+        <div class="content">Canvas video shape clipping</div>
+      </h1>
+    </div>
+
+    <div class="flex">
+      <div data-shape="star" class="ui icon button shape-button">star</div>
+
+      <div data-shape="ellipse" class="ui icon button shape-button">ellipse</div>
+
+      <div data-shape="regPolygon" class="ui icon button shape-button">
+        polygon
+      </div>
+
+      <div data-shape="x" class="ui icon button shape-button">
+        x
+      </div>
+
+      <div data-shape="pie" class="ui icon button shape-button">pie</div>
+    </div>
+    <input type="hidden" id="shape" value="star" />
+    <div id="container"></div>
+  </div>
+  <script>
+    import path from "@joemaddalone/path";
+    let shape = "sector";
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
+    const dce = document.createElement.bind(document);
+    const c = dce("canvas");
+    const ctx = c.getContext("2d");
+    c.id = "c";
+
+    $$(".shape-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        $("#shape").value = button.dataset.shape;
+      });
+    });
+
+    const vid = (src: string) => {
+      const video = dce("video");
+      video.id = "player";
+      video.muted = true;
+      video.setAttribute("loop", "true");
+      video.style.display = "none";
+      video.innerHTML += `<source src="${src}" type="video/mp4" />`;
+      return video;
+    };
+    const makePlayer = () => {
+      const video = vid("/assets/exp/video/ddd.mp4"); // or ogv
+      const container = $("#container");
+      if (!container) return;
+      container.appendChild(video);
+      container.appendChild(c);
+      video.addEventListener(
+        "loadedmetadata",
+        function () {
+          setInterval(draw.bind(this), 10);
+        },
+        false
+      );
+      video.play();
+    };
+
+    const draw = () => {
+      const video = $("#player");
+      if (
+        !(video instanceof HTMLVideoElement) ||
+        !(c instanceof HTMLCanvasElement)
+      )
+        return;
+      var w = video.videoWidth;
+      var h = video.videoHeight;
+      var segments = 5;
+      var gw = Math.floor(w / segments);
+      var gh = Math.floor(h / segments);
+      c.width = 800;
+      c.height = 480;
+      const shapeWidth = 400;
+      const shapeHeight = 400;
+      ctx.clearRect(0, 0, w, h);
+      const shape = $("#shape").value;
+      let p;
+      const cx = c.width / 2;
+      const cy = c.height / 2;
+      switch (shape) {
+        case "star":
+          p = new path().star(450, 200, 5, c.width / 2, c.height / 2);
+          break;
+        case "ellipse":
+          p = new path().ellipse(shapeWidth, 480, cx, cy);
+          break;
+        case "regPolygon":
+          p = new path().regPolygon(450, 5, cx, cy);
+          break;
+        case "x":
+          const points = path.radialPoints(225, cx, cy, 8);
+          const [x1, y1] = points[0];
+          const [x2, y2] = points[1];
+          const [x3, y3] = points[2];
+          const [x4, y4] = points[3];
+          const [x5, y5] = points[4];
+          const [x6, y6] = points[5];
+          const [x7, y7] = points[6];
+          const [x8, y8] = points[7];
+          const innerPoints = path.radialPoints(50, cx, cy, 8);
+          const [ix1, iy1] = innerPoints[0];
+          const [ix2, iy2] = innerPoints[1];
+          const [ix3, iy3] = innerPoints[2];
+          const [ix4, iy4] = innerPoints[3];
+          const [ix5, iy5] = innerPoints[4];
+          const [ix6, iy6] = innerPoints[5];
+          const [ix7, iy7] = innerPoints[6];
+          const [ix8, iy8] = innerPoints[7];
+          p = new path()
+            .M(ix1, iy1)
+            .L(x1, y1)
+            .L(x2, y2)
+            .L(ix2, iy2)
+            .L(ix3, iy3)
+            .L(x3, y3)
+            .L(x4, y4)
+            .L(ix4, iy4)
+            .L(ix5, iy5)
+            .L(x5, y5)
+            .L(x6, y6)
+            .L(ix6, iy6)
+            .L(ix7, iy7)
+            .L(x7, y7)
+            .L(x8, y8)
+            .L(ix8, iy8)
+            .L(ix1, iy1);
+          break;
+        case "pie":
+          const dist = 2;
+          p = new path()
+            .sector(cx, cy - dist, 375, 0, 45)
+            .sector(cx, cy, 375, 45, 165)
+            .sector(cx - dist, cy, 375, 165, 270)
+            .sector(cx - dist, cy - dist, 375, 270, 360);
+          //   p = new path().sector(450, 200, 5, c.width / 2, c.height / 2);
+          break;
+      }
+      // Matrix transformation
+      const region = new Path2D(p.toString());
+      ctx.translate(cx, cy);
+      // convert video time to radians from 0 to total time of video
+      // so that we do three rotations in the time of the video
+      const radians = (video.currentTime * Math.PI * 3) / video.duration;
+      ctx.rotate(radians);
+      ctx.translate(-cx, -cy);
+      ctx.clip(region);
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.drawImage(video, 0, 0, c.width, c.height);
+
+      // ctx.drawImage(video, 0, 0, c.width, c.height);
+    };
+    makePlayer();
+  </script>
+</ExpLayout>
