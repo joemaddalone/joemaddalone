@@ -92,7 +92,7 @@ count.value = 20; // Triggers the listener again
 console.log(count.value); // 20
 ```
 
-## Replace the ugly parts
+### Replace the ugly parts
 
 We're building our own thing so let's make it a little more specific to our needs.
 
@@ -111,7 +111,69 @@ listen(count, (value) => {
 });
 ```
 
+Then we could just turn this all into an easy to use class
 
+```js
+class Stater {
+  constructor(initialState = {}) {
+    this.stateId = 0;
+    this.listeners = new Map();
+    // our proxy
+    this.state = new Proxy(initialState, {
+      set: (target, property, value) => {
+        const old = target[property];
+        target[property] = value;
+        if (old !== value) {
+          if (this.listeners.has(property)) {
+            // if we have subscribers for this property, run them
+            this.listeners.get(property).forEach((fn) => fn(value));
+          }
+        }
+        return true;
+      },
+    });
+  }
+  listen(stateObj, fn) {
+    if (stateObj && stateObj._property) {
+      this.listeners.set(stateObj._property, [
+        ...(this.listeners.get(stateObj._property) || []),
+        fn,
+      ]);
+    }
+  }
+  useState(initialValue) {
+    const property = `state_${this.stateId++}`;
+    const listenRef = this.listen.bind(this);
+    const stateRef = this.state;
+    if (!(property in stateRef)) {
+      stateRef[property] = initialValue;
+    }
+    return {
+      _property: property,
+      get value() {
+        return stateRef[property];
+      },
+      set value(newValue) {
+        stateRef[property] = newValue;
+      },
+      // simpler access to listener creation
+      listen(fn) {
+        listenRef(this, fn);
+      },
+    };
+  }
+}
+
+const s = new Stater();
+const count = s.useState(0);
+
+count.listen((value) => {
+  console.log("Count changed to:", value);
+});
+
+count.value = 10; // Count changed to: 10
+count.value = 15;// Count changed to: 15
+```
 
 <script>
 {`
