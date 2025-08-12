@@ -1,0 +1,160 @@
+---
+import ExpLayout from "../../../layouts/ExpLayout.astro";
+---
+
+<ExpLayout pageTitle="Canvas video shape" sui tachyons>
+  <style>
+    .page {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+  </style>
+  <div class="page">
+    <div class="header mt4">
+      <h1 class="ui header">
+        <div class="content">particles</div>
+      </h1>
+    </div>
+    <div id="container"></div>
+    <div class="ui segment flex flex-column justify-center items-center">
+      <p class="ma4 w-60">
+        The experiment here is not the particle emitter itself, but the method
+        for rendering the particles. All particles are drawn at the same time
+        using a single svg path definition string.  Is it performant?  I don't know.  Was it fun to write?  Yes.
+      </p>
+      <div class="w-60" style="overflow-y: auto;">
+        <pre
+          class="code f7"
+          style="margin: 0; white-space: pre-wrap; overflow-x: auto; height: 250px;"
+          id="code">
+        </pre>
+      </div>
+    </div>
+  </div>
+</ExpLayout>
+<script>
+  import path from "@joemaddalone/path";
+
+  // DOM helpers
+  const $ = document.querySelector.bind(document);
+  const dce = document.createElement.bind(document);
+
+  // Constants
+  const MAX_PARTICLES = 10000;
+  const CANVAS_HEIGHT = 500;
+  const BACKGROUND_COLOR = "#eee";
+  const SIZE_DECAY_PER_FRAME = 0.12;
+  const SPEED_MIN = -10;
+  const SPEED_MAX = 10;
+  const SIZE_MIN = 5;
+  const SIZE_MAX = 20;
+  const BLUR_FILTER = "blur(4px)";
+  const COLORS = ["red", "blue", "green"];
+
+  // Utils
+  const randomRange = (min, max) => min + Math.random() * (max - min);
+
+  // Canvas setup (DPR-aware for crisp rendering)
+  const canvas = dce("canvas");
+  canvas.id = "c";
+  const container = $("#container");
+  const codeEl = document.getElementById("code");
+
+  const cssWidth = document.body.clientWidth;
+  const cssHeight = CANVAS_HEIGHT;
+  const dpr = window.devicePixelRatio || 1;
+  canvas.style.width = cssWidth + "px";
+  canvas.style.height = cssHeight + "px";
+  canvas.width = Math.floor(cssWidth * dpr);
+  canvas.height = Math.floor(cssHeight * dpr);
+
+  const ctx = canvas.getContext("2d");
+  if (ctx && dpr !== 1) {
+    ctx.scale(dpr, dpr);
+  }
+
+  if (container) {
+    container.appendChild(canvas);
+  }
+
+  // Particle store
+  let parts = [];
+
+  function createParticles() {
+    if (parts.length < MAX_PARTICLES) {
+      parts.push({
+        x: cssWidth / 2,
+        y: cssHeight / 2,
+        xspeed: randomRange(SPEED_MIN, SPEED_MAX),
+        yspeed: randomRange(SPEED_MIN, SPEED_MAX),
+        size: randomRange(SIZE_MIN, SIZE_MAX),
+        shape: "circle",
+        color: COLORS[Math.floor(Math.random() * COLORS.length)],
+      });
+    }
+  }
+
+  function updateParticles() {
+    for (let i = 0; i < parts.length; i++) {
+      const part = parts[i];
+      part.y += part.yspeed;
+      part.x += part.xspeed;
+      part.size -= SIZE_DECAY_PER_FRAME;
+    }
+  }
+
+  // In-place compaction to avoid per-frame array allocations
+  function compactParticles() {
+    let writeIndex = 0;
+    for (let i = 0; i < parts.length; i++) {
+      const part = parts[i];
+      if (part.size > 0) {
+        if (writeIndex !== i) parts[writeIndex] = part;
+        writeIndex++;
+      }
+    }
+    parts.length = writeIndex;
+  }
+
+  function drawParticles() {
+    if (!ctx || parts.length === 0) return;
+
+    const p = new path();
+    let lastColor = COLORS[0];
+    for (let i = 0; i < parts.length; i++) {
+      const part = parts[i];
+      p[part.shape](part.size, part.x, part.y);
+      lastColor = part.color;
+    }
+
+    const str = p.toString(); // this is the svg path definition string
+    if (codeEl) codeEl.textContent = str;
+
+    const r1 = new Path2D(str);
+    ctx.filter = BLUR_FILTER;
+    ctx.fillStyle = lastColor;
+    ctx.fill(r1);
+    ctx.filter = "none";
+  }
+
+  const animate = () => {
+    if (!ctx) return;
+
+    ctx.clearRect(0, 0, cssWidth, cssHeight);
+    ctx.fillStyle = BACKGROUND_COLOR;
+    // Use CSS pixel dimensions since context is scaled for DPR
+    ctx.fillRect(0, 0, cssWidth, cssHeight);
+
+    createParticles();
+    drawParticles();
+    updateParticles();
+    compactParticles();
+    requestAnimationFrame(animate);
+  };
+
+  animate();
+</script>
