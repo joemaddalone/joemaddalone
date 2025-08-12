@@ -38,7 +38,6 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
   </div>
   <script>
     import path from "@joemaddalone/path";
-    let shape = "sector";
     const $ = document.querySelector.bind(document);
     const $$ = document.querySelectorAll.bind(document);
     const dce = document.createElement.bind(document);
@@ -92,7 +91,6 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
       c.width = 800;
       c.height = 480;
       const shapeWidth = 400;
-      const shapeHeight = 400;
       ctx.clearRect(0, 0, w, h);
       const shape = $("#shape").value;
       let p;
@@ -133,8 +131,6 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
       ctx.clip(region);
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.drawImage(video, 0, 0, c.width, c.height);
-
-      // ctx.drawImage(video, 0, 0, c.width, c.height);
     };
     makePlayer();
   </script>
