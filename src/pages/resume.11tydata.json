@@ -4,8 +4,8 @@
             {
                 "company": "Mezmo",
                 "title": "Senior Software Engineer IV",
-                "from": "08/2020",
-                "to": "08/2025",
+                "from": "August 2020",
+                "to": "August 2025",
                 "highlights": [
                     "Developed complex data visualizations for log analysis and open telemetry",
                     "Developed UI component library",
@@ -15,8 +15,8 @@
             {
                 "company": "Datacoral",
                 "title": "Senior Software Engineer",
-                "from": "06/2019",
-                "to": "08/2020",
+                "from": "June 2019",
+                "to": "August 2020",
                 "highlights": [
                     "Led a team of software engineers.",
                     "Turning data engineering into a point and click process.",
@@ -26,8 +26,8 @@
             {
                 "company": "CloudBees",
                 "title": "Senior Software Engineer / Tech Lead",
-                "from": "06/2017",
-                "to": "06/2019",
+                "from": "June 2017",
+                "to": "June 2019",
                 "highlights": [
                     "Led a team of senior software engineers.",
                     "Helped grow a Jenkins plugin into a standalone SaaS.",
@@ -37,8 +37,8 @@
             {
                 "company": "Genos Research",
                 "title": "Lead Front End Developer",
-                "from": "12/2015",
-                "to": "05/2017",
+                "from": "December 2015",
+                "to": "May 2017",
                 "highlights": [
                     "Implementing architecture, features, best practices, and testing.",
                     "Heavily involved in engineering decisions, sprint planning, task assignment, and feature prioritization.",
@@ -48,8 +48,8 @@
             {
                 "company": "Universal Mind ",
                 "title": "Technical Architect Consultant",
-                "from": "03/2014",
-                "to": "12/2015",
+                "from": "March 2014",
+                "to": "December 2015",
                 "highlights": [
                     "Led multiple teams of senior developers on several projects.",
                     "Responsible for demonstrating progress to executive teams.",
@@ -58,16 +58,16 @@
             },
             {
                 "company": "Insert Title Web Services",
-                "from": "01/2000",
-                "to": "12/2015",
+                "from": "January 2000",
+                "to": "December 2015",
                 "highlights": [
                     "Managed all aspects of my own consultancy.  Primarily a .NET / Angular shop.",
-                    "LDM Solutions (01/2010 - 03/2014)",
-                    "CognitiveTPG (02/2008 - 05/2015)",
-                    "Mega Media Depot (10/2005 - 12/2009)",
-                    "Healthspring & Norm Thompson (09/2005 - 01/2013)",
-                    "Strategic Incentive Marketing (06/2004 - 09/2010)",
-                    "Open Road Radio (01/2000 - 10/2005)",
+                    "LDM Solutions (January 2010 - March 2014)",
+                    "CognitiveTPG (February 2008 - May 2015)",
+                    "Mega Media Depot (October 2005 - December 2009)",
+                    "Healthspring & Norm Thompson (September 2005 - January 2013)",
+                    "Strategic Incentive Marketing (June 2004 - September 2010)",
+                    "Open Road Radio (January2000 - October 2005)",
 					"...dozens of shorter term projects.",
 					"ASP, VB.NET, C#, SQL, VBA, EDI x12, VB.NET, HIPPA, VBA, VB6 Desktop"
                 ]

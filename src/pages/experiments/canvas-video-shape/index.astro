@@ -23,15 +23,15 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
     <div class="flex">
       <div data-shape="star" class="ui icon button shape-button">star</div>
 
-      <div data-shape="ellipse" class="ui icon button shape-button">ellipse</div>
+      <div data-shape="ellipse" class="ui icon button shape-button">
+        ellipse
+      </div>
 
       <div data-shape="regPolygon" class="ui icon button shape-button">
         polygon
       </div>
 
-      <div data-shape="x" class="ui icon button shape-button">
-        x
-      </div>
+      <div data-shape="x" class="ui icon button shape-button">x</div>
     </div>
     <input type="hidden" id="shape" value="star" />
     <div id="container"></div>
@@ -51,17 +51,20 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
       });
     });
 
-    const vid = (src: string) => {
+    const createVideo = (src) => {
       const video = dce("video");
       video.id = "player";
       video.muted = true;
       video.setAttribute("loop", "true");
+      video.setAttribute("playsinline", "true");
+      video.setAttribute("autoplay", "true");
       video.style.display = "none";
-      video.innerHTML += `<source src="${src}" type="video/mp4" />`;
+      video.innerHTML = `<source src="${src}" type="video/mp4" />`;
       return video;
     };
+
     const makePlayer = () => {
-      const video = vid("/assets/exp/video/ddd.mp4"); // or ogv
+      const video = createVideo("/assets/exp/video/ddd.mp4"); // or ogv
       const container = $("#container");
       if (!container) return;
       container.appendChild(video);
@@ -69,9 +72,10 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
       video.addEventListener(
         "loadedmetadata",
         function () {
+          console.log("loaded!");
           setInterval(draw.bind(this), 10);
         },
-        false
+        false,
       );
       video.play();
     };
@@ -116,7 +120,10 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
               .L(points[i][0], points[i][1])
               .L(points[i + 1][0], points[i + 1][1])
               .L(innerPoints[i + 1][0], innerPoints[i + 1][1])
-              .L(innerPoints[(i + 2) % numPoints][0], innerPoints[(i + 2) % numPoints][1]);
+              .L(
+                innerPoints[(i + 2) % numPoints][0],
+                innerPoints[(i + 2) % numPoints][1],
+              );
           }
           break;
       }

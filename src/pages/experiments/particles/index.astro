@@ -53,6 +53,7 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
   const SIZE_MIN = 5;
   const SIZE_MAX = 20;
   const BLUR_FILTER = "blur(4px)";
+     
   const COLORS = ["red", "blue", "green"];
 
   // Utils
@@ -64,13 +65,13 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
   const container = $("#container");
   const codeEl = document.getElementById("code");
 
-  const cssWidth = document.body.clientWidth;
-  const cssHeight = CANVAS_HEIGHT;
+  const clientWidth = document.body.clientWidth;
+  const clientHeight = CANVAS_HEIGHT;
   const dpr = window.devicePixelRatio || 1;
-  canvas.style.width = cssWidth + "px";
-  canvas.style.height = cssHeight + "px";
-  canvas.width = Math.floor(cssWidth * dpr);
-  canvas.height = Math.floor(cssHeight * dpr);
+  canvas.style.width = clientWidth + "px";
+  canvas.style.height = clientHeight + "px";
+  canvas.width = Math.floor(clientWidth * dpr);
+  canvas.height = Math.floor(clientHeight * dpr);
 
   const ctx = canvas.getContext("2d");
   if (ctx && dpr !== 1) {
@@ -87,8 +88,8 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
   function createParticles() {
     if (parts.length < MAX_PARTICLES) {
       parts.push({
-        x: cssWidth / 2,
-        y: cssHeight / 2,
+        x: clientWidth / 2,
+        y: clientHeight / 2,
         xspeed: randomRange(SPEED_MIN, SPEED_MAX),
         yspeed: randomRange(SPEED_MIN, SPEED_MAX),
         size: randomRange(SIZE_MIN, SIZE_MAX),
@@ -144,10 +145,10 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
   const animate = () => {
     if (!ctx) return;
 
-    ctx.clearRect(0, 0, cssWidth, cssHeight);
+    ctx.clearRect(0, 0, clientWidth, clientHeight);
     ctx.fillStyle = BACKGROUND_COLOR;
     // Use CSS pixel dimensions since context is scaled for DPR
-    ctx.fillRect(0, 0, cssWidth, cssHeight);
+    ctx.fillRect(0, 0, clientWidth, clientHeight);
 
     createParticles();
     drawParticles();

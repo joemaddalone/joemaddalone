@@ -16,13 +16,15 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
                 >Seam Carving for Content-Aware Image Resizing</a
             > by Shai Avidan and Ariel Shamir.
         </p>
-        <button class="ui button" id="carveBtn_100">100%</button>
-        <button class="ui button" id="carveBtn_80">80%</button>
-        <button class="ui button" id="carveBtn_60">60%</button>
-        <button class="ui button" id="carveBtn_40">40%</button>
-        <button class="ui button" id="carveBtn_20">20%</button>
-        <div id="info" style="margin: 10px; font-family: monospace;"></div>
-        <div class="image-container"></div>
+        <div class="controls">
+            <button class="ui button" id="carveBtn_100">100%</button>
+            <button class="ui button" id="carveBtn_80">80%</button>
+            <button class="ui button" id="carveBtn_60">60%</button>
+            <button class="ui button" id="carveBtn_40">40%</button>
+            <button class="ui button" id="carveBtn_20">20%</button>
+        </div>
+        <div id="info" class="info"></div>
+        <div class="image-container flex justify-center items-center"></div>
     </div>
 
     <script is:inline>
@@ -542,4 +544,39 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
         // Cleanup on page unload
         window.addEventListener("beforeunload", cleanup);
     </script>
+    <style>
+      .image-container {
+        width: 100%;
+        overflow: hidden;
+      }
+      .image-container canvas,
+      .image-container img {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 0.5rem 0 0.75rem;
+      }
+      .controls .ui.button {
+        flex: 1 1 30%;
+        min-width: 90px;
+        box-sizing: border-box;
+      }
+      @media (max-width: 480px) {
+        .controls .ui.button {
+          flex: 1 1 calc(50% - 0.5rem);
+        }
+      }
+      .info {
+        margin: 10px;
+        font-family: monospace;
+        overflow-wrap: anywhere;
+        font-size: 0.9rem;
+      }
+    </style>
 </ExpLayout>
