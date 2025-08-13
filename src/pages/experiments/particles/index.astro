@@ -10,17 +10,21 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+    }
+    .segment {
+      margin-top: 0;
     }
   </style>
   <div class="page">
-    <div class="header mt4">
-      <h1 class="ui header">
-        <div class="content">particles</div>
-      </h1>
-    </div>
     <div id="container"></div>
     <div class="ui segment flex flex-column justify-center items-center">
+      <h1 class="ui header">particles</h1>
+      <div class="w-60">
+        <div class="ui checkbox">
+          <input type="checkbox" id="showPath">
+          <label for="showPath">show path</label>
+        </div>
+      </div>
       <p class="ma4 w-60">
         The experiment here is not the particle emitter itself, but the method
         for rendering the particles. All particles are drawn at the same time
@@ -48,13 +52,14 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
   const CANVAS_HEIGHT = 500;
   const BACKGROUND_COLOR = "#eee";
   const SIZE_DECAY_PER_FRAME = 0.12;
-  const SPEED_MIN = -10;
-  const SPEED_MAX = 10;
-  const SIZE_MIN = 5;
-  const SIZE_MAX = 20;
+  const SPEED_MIN = -5;
+  const SPEED_MAX = 5;
+  const SIZE_MIN = 10;
+  const SIZE_MAX = 40;
   const BLUR_FILTER = "blur(4px)";
-     
-  const COLORS = ["red", "blue", "green"];
+  let SHOW_PATH = false;
+
+  const COLORS = ["red", "green", "blue"];
 
   // Utils
   const randomRange = (min, max) => min + Math.random() * (max - min);
@@ -64,7 +69,13 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
   canvas.id = "c";
   const container = $("#container");
   const codeEl = document.getElementById("code");
+  const showPathEl = document.getElementById("showPath");
 
+  if (showPathEl) {
+    showPathEl.addEventListener("change", (e) => {
+      SHOW_PATH = e.target.checked;
+    });
+  }
   const clientWidth = document.body.clientWidth;
   const clientHeight = CANVAS_HEIGHT;
   const dpr = window.devicePixelRatio || 1;
@@ -129,6 +140,9 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
     for (let i = 0; i < parts.length; i++) {
       const part = parts[i];
       p[part.shape](part.size, part.x, part.y);
+      if (i !== parts.length - 1 && SHOW_PATH) {
+        p.lineTo(parts[i + 1].x, parts[i + 1].y);
+      }
       lastColor = part.color;
     }
 
@@ -136,10 +150,21 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
     if (codeEl) codeEl.textContent = str;
 
     const r1 = new Path2D(str);
-    ctx.filter = BLUR_FILTER;
+    if(!SHOW_PATH) {
+      ctx.filter = BLUR_FILTER;
+    } else {
+      ctx.filter = "none";
+    }
     ctx.fillStyle = lastColor;
-    ctx.fill(r1);
-    ctx.filter = "none";
+
+    if(SHOW_PATH) {
+      ctx.strokeStyle = "#222";
+      ctx.lineWidth = 1.5;
+      ctx.stroke(r1);
+    } else {
+      ctx.fill(r1);
+    }
+    // ctx.filter = "none";
   }
 
   const animate = () => {
@@ -149,7 +174,6 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
     ctx.fillStyle = BACKGROUND_COLOR;
     // Use CSS pixel dimensions since context is scaled for DPR
     ctx.fillRect(0, 0, clientWidth, clientHeight);
-
     createParticles();
     drawParticles();
     updateParticles();
