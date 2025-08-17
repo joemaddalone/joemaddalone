@@ -4,6 +4,7 @@
             {
                 "company": "Mezmo",
                 "title": "Senior Software Engineer IV",
+                "url": "https://mezmo.com",
                 "from": "August 2020",
                 "to": "August 2025",
                 "highlights": [
@@ -13,8 +14,9 @@
                 ]
             },
             {
-                "company": "Datacoral",
-                "title": "Senior Software Engineer",
+                "company": "Datacoral (acquired by Cloudera)",
+                "title": "Senior Staff Software Engineer",
+                "url": "https://cloudera.com/",
                 "from": "June 2019",
                 "to": "August 2020",
                 "highlights": [
@@ -25,7 +27,8 @@
             },
             {
                 "company": "CloudBees",
-                "title": "Senior Software Engineer / Tech Lead",
+                "title": "Senior Software Engineer",
+                "url": "https://cloudbees.com",
                 "from": "June 2017",
                 "to": "June 2019",
                 "highlights": [
@@ -35,8 +38,9 @@
                 ]
             },
             {
-                "company": "Genos Research",
+                "company": "Genos Research (acquired by Nantomics)",
                 "title": "Lead Front End Developer",
+                "url": "https://nantomics.com/",
                 "from": "December 2015",
                 "to": "May 2017",
                 "highlights": [
@@ -48,6 +52,7 @@
             {
                 "company": "Universal Mind ",
                 "title": "Technical Architect Consultant",
+                "url": "https://universalmind.com/",
                 "from": "March 2014",
                 "to": "December 2015",
                 "highlights": [

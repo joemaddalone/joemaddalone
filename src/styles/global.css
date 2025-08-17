@@ -1,4 +1,8 @@
+@import 'tailwindcss';
+
 /* nav styles */
+
+
 .nav-links {
   width: 100%;
   top: 5rem;
@@ -240,11 +244,91 @@ footer {
 	color: #222;
 }
 
-.resume-container {
+.resume.container {
 	margin: 0 auto;
-	padding: 10px;
-	max-width: 900px;
+	max-width: 1200px;
 	color: #222;
+}
+
+
+.resume {
+  display: grid;
+  grid-template-columns: 300px auto;
+	grid-template-rows: 80px 135px 1fr;
+}
+
+.resume > * {
+	/* outline: 1px solid orange; */
+}
+
+.resume > .heading {
+  grid-column: 2;
+  grid-row: 1;
+	background-color: rgba(8, 145, 178, 0.2);
+}
+
+.resume > .me {
+  grid-row: 1 / span 2;
+	grid-column: 1;
+	background-color: #0891b2;
+	color: #fff;
+	a {
+		color: #fff;
+	}
+}
+
+.resume > .more {
+  grid-row: 3;
+	grid-column: 1;
+	background-color: rgba(8, 145, 178, 0.2);
+}
+
+.resume > .main {
+  grid-column: 2;
+	grid-row: 2 / span 2;
+	background-color: #fff;
+}
+
+.resume .heading .content {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	color: #222;
+	font-weight: bold;
+}
+
+.resume .aside .me {
+	background-color: #0891b2;
+	color: #fff;
+	a {
+		color: #fff;
+	}
+}
+
+@media (max-width: 768px) {
+	.resume > * {
+		outline: 1px solid orange;
+	}
+	.resume > .me {
+		grid-column: 1 / span 2;
+		grid-row: 1 / span 2;
+		padding: 1rem;
+
+	}
+	.resume > .heading {
+		grid-column: 1 / span 2;
+		grid-row: 3;
+	}
+
+	.resume > .main {
+		grid-column: 1 / span 2;
+		grid-row: 4;
+	}
+
+	.resume > .more {
+		grid-column: 1 / span 2;
+		grid-row: 5;
+	}
 }
 
 .sr-only {

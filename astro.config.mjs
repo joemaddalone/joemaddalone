@@ -7,6 +7,8 @@ import react from '@astrojs/react';
 
 import expressiveCode from 'astro-expressive-code';
 
+import tailwindcss from '@tailwindcss/vite';
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [expressiveCode({
@@ -18,5 +20,10 @@ export default defineConfig({
       theme: 'snazzy-light',
     },
   },
+
   site: 'https://joemaddalone.com',
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
