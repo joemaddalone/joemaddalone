@@ -32,5 +32,8 @@
     "react-spring": "^10.0.1",
     "react-svg-path": "^1.15.0",
     "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16"
   }
 }
