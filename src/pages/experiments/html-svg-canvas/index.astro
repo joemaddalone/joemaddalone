@@ -1,0 +1,28 @@
+---
+import ExpLayout from "../../../layouts/ExpLayout.astro";
+import ChartCatch from "../../../components/chart-catch";
+---
+
+<ExpLayout pageTitle="Canvas video shape" sui tachyons>
+	<style>
+    .page {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+			margin-top: 50px;
+    }
+    .segment {
+      margin-top: 0;
+    }
+  </style>
+  <div class="page">
+		<div class="mb4" style="max-width: 780px;">
+			<h1>HTML over SVG over Canvas</h1>
+			<p>I just like the idea of layering a canvas on top of a canvas.  Then an SVG over that.  Then some standard HTML over that.</p>
+		</div>
+
+		<ChartCatch client:load />
+	</div>
+</ExpLayout>
