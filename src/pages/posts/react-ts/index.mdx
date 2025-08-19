@@ -1,0 +1,178 @@
+---
+title: 'React+TypeScript'
+date: 2025-08-18
+tags: ['post']
+excerpt: 'Most of what you need'
+---
+
+
+<hgroup>
+	<h1>React+TypeScript</h1>
+	<p>Most of what you need</p>
+</hgroup>
+
+2025 job hunt and I'm ramping up on Typescript and React.  Having been in non-TypeScript Vue-land for the last
+5 years I took a day to just sit and write a small-ish app in Typescript and React which seems to be in every
+available job requirement out there.  I'm going to share some of the things I learned here.  I'm not going to
+cover the basics of React or Javascript, but I'll cover the things I found most useful.  This is mostly an exercise
+for me to remember all the things, but hopefully you find it useful too.
+
+
+### TypeScript + React Cheat Sheet
+
+```tsx
+// Props
+type Props = { title: string; onClick?: () => void };
+const MyComponent: React.FC<Props> = ({ title, onClick }) => ...
+
+// State
+const [value, setValue] = useState<string>("");
+
+// Events
+const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => ...
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => ...
+
+// Refs
+const ref = useRef<HTMLDivElement>(null);
+
+// Union
+type Mode = "light" | "dark";
+
+// Generics
+function identity<T>(arg: T): T { return arg; }
+
+```
+
+## 1. The Mental Model Shift
+
+You're used to writing React in JavaScript like this:
+
+```jsx
+function Button({ label, onClick }) {
+  return <button onClick={onClick}>{label}</button>;
+}
+```
+
+With TypeScript, the goal is:
+
+- Declare what shape your props, state, and return values have.
+- Get compile-time safety so that wrong usage is caught before runtime.
+
+In TypeScript:
+
+```tsx
+function Button({ label, onClick }: { label: string; onClick: () => void }) {
+  return <button onClick={onClick}>{label}</button>;
+}
+```
+
+Or more verbosely:
+
+```tsx
+type ButtonProps = {
+  label: string;
+  onClick: () => void;
+};
+
+function Button({ label, onClick }: ButtonProps) {
+  return <button onClick={onClick}>{label}</button>;
+}
+
+```
+
+**Key change:** You explicitly declare types for anything passed in or returned.
+
+## 2. Core Syntax Differences (JS → TS)
+
+<div class="flex justify-between">
+  <div class="w-1/2 mx-1">
+    <h3>JavaScript</h3>
+```js
+let name = "Joe";
+let ids = [1,2,3];
+let user = { id: 1 };
+(id) => id * 2;
+obj?.prop
+```
+  </div>
+  <div class="w-1/2 mx-1">
+    <h3>TypeScript</h3>
+```tsx
+let name: string = "Joe";
+let ids: number[] = [1,2,3];
+let user: { id: number } = { id: 1 };
+(id: number): number => id * 2
+{ prop?: string } // in type definition
+```
+  </div>
+</div>
+
+## 3. React + TypeScript Quick Patterns
+
+### Props
+
+```tsx
+type CardProps = {
+  title: string;
+  subtitle?: string; // optional prop
+};
+
+const Card: React.FC<CardProps> = ({ title, subtitle }) => (
+  <div>
+    <h1>{title}</h1>
+    {subtitle && <h2>{subtitle}</h2>}
+  </div>
+);
+```
+
+✅ Tip: You can use type or interface for props — type is more flexible, interface is more extendable.
+
+### State
+
+```tsx
+const [count, setCount] = React.useState<number>(0);
+
+```
+
+✅ Tip: If TS can infer the type (like useState(0) → number), you don’t need `<number>` explicitly.
+
+### Events
+
+```tsx
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  console.log(e.target.value);
+};
+```
+
+Common event types:
+
+- `React.ChangeEvent<HTMLInputElement>`
+- `React.MouseEvent<HTMLButtonElement>`
+- `React.FormEvent<HTMLFormElement>`
+
+### Refs
+
+```tsx
+const inputRef = React.useRef<HTMLInputElement>(null);
+
+React.useEffect(() => {
+  inputRef.current?.focus();
+}, []);
+```
+
+
+### useReducer with Types
+
+```tsx
+type State = { count: number };
+type Action = { type: "inc" } | { type: "dec" };
+
+function reducer(state: State, action: Action): State {
+  switch (action.type) {
+    case "inc": return { count: state.count + 1 };
+    case "dec": return { count: state.count - 1 };
+  }
+}
+
+const [state, dispatch] = React.useReducer(reducer, { count: 0 });
+```
