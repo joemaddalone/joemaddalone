@@ -80,8 +80,9 @@ export const ChartCatch = () => {
   const handleMouseMove = (e) => {
     const ctx = canvasRef.current.getContext("2d");
     const rect = canvasRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+
+    const x = e?.touches ? e.touches[0].clientX - rect.left : e.clientX - rect.left;
+    const y = e?.touches ? e.touches[0].clientY - rect.top : e.clientY - rect.top;
     const hitBox = hitBoxes.find((b) => {
       return b.x <= x && b.x + b.w >= x;
     });
@@ -124,6 +125,7 @@ export const ChartCatch = () => {
         ref={canvasRef}
         onMouseMove={handleMouseMove}
         onMouseOut={handleMouseOut}
+        onTouchStart={handleMouseMove}
         onTouchMove={handleMouseMove}
         onTouchEnd={handleMouseOut}
       />
