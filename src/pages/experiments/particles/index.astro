@@ -136,12 +136,14 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
     if (!ctx || parts.length === 0) return;
 
     const p = new path();
+    const l = new path();
     let lastColor = COLORS[0];
     for (let i = 0; i < parts.length; i++) {
       const part = parts[i];
       p[part.shape](part.size, part.x, part.y);
       if (i !== parts.length - 1 && SHOW_PATH) {
-        p.lineTo(parts[i + 1].x, parts[i + 1].y);
+        l.moveTo(part.x, part.y);
+        l.lineTo(parts[i + 1].x, parts[i + 1].y);
       }
       lastColor = part.color;
     }
@@ -161,6 +163,9 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
       ctx.strokeStyle = "#222";
       ctx.lineWidth = 1.5;
       ctx.stroke(r1);
+      ctx.strokeStyle = "#ccc";
+      ctx.lineWidth = 0.5;
+      ctx.stroke(new Path2D(l.toString()));
     } else {
       ctx.fill(r1);
     }
