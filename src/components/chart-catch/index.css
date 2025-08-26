@@ -3,7 +3,6 @@ path.highlight {
 	transition: fill 0.2s ease-in-out;
 }
 
-
 .infobox {
 	pointer-events: none;
 	position: absolute;

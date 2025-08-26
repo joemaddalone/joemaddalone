@@ -80,6 +80,7 @@ export const ChartCatch = () => {
   const handleMouseMove = (e) => {
     const ctx = canvasRef.current.getContext("2d");
     const rect = canvasRef.current.getBoundingClientRect();
+    // console.log(rect);
 
     const x = e?.touches ? e.touches[0].clientX - rect.left : e.clientX - rect.left;
     const y = e?.touches ? e.touches[0].clientY - rect.top : e.clientY - rect.top;
@@ -98,10 +99,23 @@ export const ChartCatch = () => {
       );
       const info = {
         x: x + 25,
-        y: y - 60,
-        w: 100,
-        h: 100,
+        y: y - 22,
+        w: 110,
+        h: 45,
       };
+
+      if ((x + info.w + 25) > rect.width) {
+        info.x = x - 25 - info.w;
+      }
+
+      if (info.y - (info.h / 2) < 0) {
+        info.y = 0;
+      }
+
+      if(info.y + info.h > rect.height) {
+        info.y = rect.height - info.h;
+      }
+
       setInfoBox(
         <div className="infobox" style={{ top: info.y, left: info.x }}>
           <CharSpinners str={hitBox.value.toString()} color="#fff" />
