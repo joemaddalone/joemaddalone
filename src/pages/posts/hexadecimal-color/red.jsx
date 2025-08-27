@@ -1,5 +1,5 @@
 import React from 'react';
-import { Rect, Svg, Text, Polyline, MarkerTriangle, Quad } from 'react-svg-path/dist/index.esm.js';
+import { Rect, Svg, Text, Polyline, MarkerTriangle, Quad } from 'react-svg-path';
 import './red.css';
 
 import dagre from 'dagre';
