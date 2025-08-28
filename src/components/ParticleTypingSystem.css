@@ -1,6 +1,6 @@
 .particle-system-container {
   position: relative;
-  width: 100vw;
+  /* width: 99vw; */
   height: 100vh;
   background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
   overflow: hidden;
@@ -23,7 +23,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 99vh;
   padding: 2rem;
   text-align: center;
   color: white;
