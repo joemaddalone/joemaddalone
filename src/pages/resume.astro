@@ -8,10 +8,7 @@ const work = data.resume.work.slice(0, 5);
 
 <BaseLayout pageTitle={pageTitle} includeFooter={false}>
   <div class="mt-5 mb-5">
-    <div class="flex justify-center">
-      <a href="/assets/Joe-Maddalone.pdf" class="border-1 rounded-full px-4 py-2 m-4">PDF <i class="ph ph-bold ph-download"></i></a>
-    </div>
-    <div class="resume container">
+    <div class="resume container border-1 border-gray-200 rounded-lg">
       <div class="heading p-4">
         <div class="content">
           I lead teams, mentor developers, close tickets, resolve problems, and
@@ -174,6 +171,9 @@ const work = data.resume.work.slice(0, 5);
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="space-y-2 border-t border-gray-900 pt-8">
+                <a href="/assets/Joe-Maddalone.pdf" class="border-1 px-4 py-2 m-4">Download as a PDF <i class="ph ph-bold ph-download"></i></a>
               </div>
             </div>
           </section>
