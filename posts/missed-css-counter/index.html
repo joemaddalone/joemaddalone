@@ -32,7 +32,7 @@
 	}
 </style>
 <p>And now we have numbering without ordered list.  The immediate benefit being that we can style as we see fit.</p>
-<div class="ui segment a">
+<div class="text-black a">
   <span>First</span>
   <span>Second</span>
   <span>Third</span>
@@ -64,7 +64,7 @@
 		color: #fff;
 	}
 </style>
-<div class="ui segment b">
+<div class="text-black b mt-4">
   <span>First</span>
   <span>Second</span>
   <span>Third</span>
@@ -72,6 +72,7 @@
 <h3 id="counter-reset">counter-reset</h3>
 <p>Using css counters we can define when to reset the counter.  Here we’ll use a section element to reset the counter.</p>
 <div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="css"><code><div class="ec-line"><div class="code"><span style="--0:#A2447B">div</span><span style="--0:#646670"> {</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#565869">counter</span><span style="--0:#646670">: </span><span style="--0:#0C7270">number</span><span style="--0:#646670">;</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#565869">counter-reset</span><span style="--0:#646670">: </span><span style="--0:#0C7270">section</span><span style="--0:#646670">;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#646670">}</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="div {  counter: number;  counter-reset: section;}"><div></div></button></div></figure></div>
+<hr>
 <div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="html"><code><div class="ec-line"><div class="code"><span style="--0:#646670">&#x3C;</span><span style="--0:#0C7270">div</span><span style="--0:#646670">></span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#646670">&#x3C;</span><span style="--0:#0C7270">section</span><span style="--0:#646670">></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#646670">&#x3C;</span><span style="--0:#0C7270">span</span><span style="--0:#646670">></span><span style="--0:#565869">First</span><span style="--0:#646670">&#x3C;/</span><span style="--0:#0C7270">span</span><span style="--0:#646670">></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#646670">&#x3C;</span><span style="--0:#0C7270">span</span><span style="--0:#646670">></span><span style="--0:#565869">Second</span><span style="--0:#646670">&#x3C;/</span><span style="--0:#0C7270">span</span><span style="--0:#646670">></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#646670">&#x3C;</span><span style="--0:#0C7270">span</span><span style="--0:#646670">></span><span style="--0:#565869">Third</span><span style="--0:#646670">&#x3C;/</span><span style="--0:#0C7270">span</span><span style="--0:#646670">></span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#646670">&#x3C;/</span><span style="--0:#0C7270">section</span><span style="--0:#646670">></span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#646670">&#x3C;</span><span style="--0:#0C7270">section</span><span style="--0:#646670">></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#646670">&#x3C;</span><span style="--0:#0C7270">span</span><span style="--0:#646670">></span><span style="--0:#565869">First</span><span style="--0:#646670">&#x3C;/</span><span style="--0:#0C7270">span</span><span style="--0:#646670">></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#646670">&#x3C;</span><span style="--0:#0C7270">span</span><span style="--0:#646670">></span><span style="--0:#565869">Second</span><span style="--0:#646670">&#x3C;/</span><span style="--0:#0C7270">span</span><span style="--0:#646670">></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#646670">&#x3C;</span><span style="--0:#0C7270">span</span><span style="--0:#646670">></span><span style="--0:#565869">Third</span><span style="--0:#646670">&#x3C;/</span><span style="--0:#0C7270">span</span><span style="--0:#646670">></span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#646670">&#x3C;/</span><span style="--0:#0C7270">section</span><span style="--0:#646670">></span></div></div><div class="ec-line"><div class="code"><span style="--0:#646670">&#x3C;/</span><span style="--0:#0C7270">div</span><span style="--0:#646670">></span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="<div>  <section>    <span>First</span>    <span>Second</span>    <span>Third</span>  </section>  <section>    <span>First</span>    <span>Second</span>    <span>Third</span>  </section></div>"><div></div></button></div></figure></div>
 <style>
 	div.c {
@@ -104,7 +105,7 @@
 
 	}
 </style>
-<div class="ui segment c">
+<div class="text-black c mt-4">
 	<section>
 		<span>First</span>
 		<span>Second</span>
