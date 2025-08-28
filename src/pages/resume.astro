@@ -3,6 +3,7 @@ import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import data from "./resume.11tydata.json";
 const pageTitle = "Resume of Joe Maddalone";
+const work = data.resume.work.slice(0, 5);
 ---
 
 <BaseLayout pageTitle={pageTitle} includeFooter={false}>
@@ -188,7 +189,7 @@ const pageTitle = "Resume of Joe Maddalone";
             style="grid-template-columns: repeat(1, 1fr);"
           >
             {
-              data.resume.work.map((work) => (
+              work.map((work) => (
                 <div class="space-y-2 pb-4">
                     <div>
                         <div class="flex items-start justify-between group-[.sidebar]:flex-col group-[.sidebar]:items-start">

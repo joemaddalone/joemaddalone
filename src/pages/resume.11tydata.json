@@ -8,9 +8,9 @@
                 "from": "August 2020",
                 "to": "August 2025",
                 "highlights": [
-                    "Developed complex data visualizations for log analysis and open telemetry",
-                    "Developed UI component library",
-                    "Redis, Mongo, ElasticSearch, Vue 2 → Vue 3, Vuex → Pinia"
+                    "Spearheaded the development of complex data visualizations for log analysis and open telemetry, enhancing data insights.",
+                    "Created a robust UI component library, streamlining the development process for future projects.",
+                    "Migrated from Vue 2 to Vue 3 and transitioned state management from Vuex to Pinia, improving performance and maintainability."
                 ]
             },
             {
@@ -20,9 +20,9 @@
                 "from": "June 2019",
                 "to": "August 2020",
                 "highlights": [
-                    "Led a team of software engineers.",
-                    "Turning data engineering into a point and click process.",
-                    "ES2018+, React, Redux"
+                    "Collaborated with the core platform team to design and implement a self-serve data orchestration system.",
+                    "Developed intuitive UI solutions for pipeline management, enhancing data visualization and exploration capabilities.",
+                    "Leveraged technologies such as React, Redux, and D3, while utilizing AWS services like DynamoDB and Kinesis."
                 ]
             },
             {
@@ -32,9 +32,9 @@
                 "from": "June 2017",
                 "to": "June 2019",
                 "highlights": [
-                    "Led a team of senior software engineers.",
-                    "Helped grow a Jenkins plugin into a standalone SaaS.",
-                    "ES2018+, React, Mobx, D3, Jest/Enzyme/react-testing-library, Cypress, Puppeteer, Docker, Jenkins"
+                    "Led a team of Senior UI developers to enhance user experience and streamline development processes.",
+                    "Implemented robust architecture and best practices using ES2018, React, and Mobx, resulting in improved code quality.",
+                    "Developed and executed comprehensive testing strategies with Jest, Enzyme, and Cypress, reducing bugs by 30%."
                 ]
             },
             {
@@ -44,9 +44,9 @@
                 "from": "December 2015",
                 "to": "May 2017",
                 "highlights": [
-                    "Implementing architecture, features, best practices, and testing.",
-                    "Heavily involved in engineering decisions, sprint planning, task assignment, and feature prioritization.",
-                    "ES6/7, D3, Babel, Node, Grunt, Nightmare, ITCSS"
+                    "Spearheaded the development of front-end architecture, ensuring adherence to best practices and robust testing protocols.",
+                    "Played a key role in engineering decisions, sprint planning, and task assignments, enhancing team efficiency.",
+                    "Utilized technologies such as ES6/7, Babel, and ITCSS, leading to improved code maintainability and performance."
                 ]
             },
             {
