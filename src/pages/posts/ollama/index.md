@@ -103,14 +103,14 @@ console.log(res)
 
 This should result in something along the lines of:
 
-<div class="ui ignored info message">
-
+<div class="message success">
 The color of the house at 6353 Juan Tabo Blvd ... would depend
 on the specific property and its owners. There are no records to
 indicate the color of this particular house...
-
 </div>
+
 Obviously the the LLM does not know the color of the house.  Had we asked some more general question we would definitely get an answer, but I have purposely asked it something it does not know.
+
 
 So let's give it some context.
 
@@ -138,7 +138,7 @@ console.log(res.text)
 ```
 ### result:
 
-<div class="ui ignored info message">
+<div class="message success">
 The color of the house at 6353 Juan Tabo is blue.
 </div>
 
@@ -166,10 +166,8 @@ console.log(res.text)
 ```
 ### result:
 
-<div class="ui ignored info message">
-
+<div class="message success">
 The house at 6353 on Juan Tabo Blvd has a red address because it is an odd number. According to the context given, houses on Juan Tabo Blvd with odd numbered addresses are red.
-
 </div>
 
 ## External documents
@@ -182,8 +180,9 @@ Houses on Juan Tabo Blvd are either red or blue.
 0 through 9999 are valid addresses on Juan Tabo Blvd.
 Houses on Juan Tabo Blvd with odd numbered addresses are red.
 ```
-
+---
 ```js
+// index.js
 import { Ollama } from "langchain/llms/ollama";
 import { loadQAStuffChain } from "langchain/chains";
 import { Document } from "langchain/document";
@@ -201,10 +200,8 @@ console.log(res.text)
 
 ### result
 
-<div class="ui ignored info message">
-
+<div class="message success">
 To determine the color of the house at 6353 Juan Tabo Blvd, we need to look at the address and see if it is an odd number. Since 6353 is an odd number, according to the information given, the house should be red. Therefore, the house at 6353 on Juan Tabo Blvd is red.
-
 </div>
 
 ## Multiple external Documents
@@ -224,8 +221,10 @@ Houses on Juan Tabo Blvd with odd numbered addresses are red.
 --> /jauntabo/d.txt -- this is a new piece of context for the LLM!
 Houses on Juan Tabo Blvd with prime numbered addresses are blue.
 ```
+---
 
 ```js
+// index.js
 import { Ollama } from "langchain/llms/ollama";
 import { loadQAStuffChain } from "langchain/chains";
 import { Document } from "langchain/document";
@@ -246,8 +245,6 @@ console.log(res.text);
 
 ### result
 
-<div class="ui ignored info message">
-
+<div class="message success">
 The house at 1901 on Juan Tabo Blvd is blue.
-
 </div>

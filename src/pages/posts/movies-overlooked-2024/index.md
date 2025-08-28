@@ -10,6 +10,8 @@ excerpt: 'forgotten on award night...'
 	<p>forgotten on award night...</p>
 </hgroup>
 
+<ul class="list-none">
+
 * [The Apprentice](https://www.imdb.com/title/tt8368368/)
 *	[The Bikeriders ](https://www.imdb.com/title/tt21454134/)
 *	[Cuckoo](https://www.imdb.com/title/tt12349832/)
@@ -24,3 +26,5 @@ excerpt: 'forgotten on award night...'
 *	[Love Lies Bleeding](https://www.imdb.com/title/tt19637052/)
 *	[Smile 2](https://www.imdb.com/title/tt29268110/)
 *	[Strange Darling](https://www.imdb.com/title/tt22375054/)
+
+</ul>

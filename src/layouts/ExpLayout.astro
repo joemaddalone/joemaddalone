@@ -2,7 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-const { pageTitle, includeHeader = true, includeFooter = true, sui = true, tachyons = true, prism = true } = Astro.props;
+const { pageTitle, includeHeader = true, includeFooter = true, prism = true } = Astro.props;
 ---
 
 <html lang="en">
@@ -11,7 +11,6 @@ const { pageTitle, includeHeader = true, includeFooter = true, sui = true, tachy
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png" />
@@ -29,34 +28,18 @@ const { pageTitle, includeHeader = true, includeFooter = true, sui = true, tachy
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/assets/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-    {sui && (
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css"
-      integrity="sha512-d0v474klOFSF7qD9WDvyRxAvXaWSxCHDZdnBSZQjo8BpVr6vpjwAgqetpqkKP38DzlOzdVPaLVnzzW1Ba8wB9w=="
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css"
-    />
-    )}
     {prism && (
         <link
         href="https://unpkg.com/prismjs@1.20.0/themes/prism.css"
         rel="stylesheet"
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js" integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js" integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     )}
     <title>{pageTitle}</title>
   </head>
   <body>
     {includeHeader && <Header />}
-    {!includeHeader && <slot />}
-    {includeHeader && <div class="pt4">
-      <slot />
-    </div>}
+    <slot />
     {includeFooter && <Footer />}
   </body>
 </html>

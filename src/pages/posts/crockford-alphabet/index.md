@@ -22,15 +22,15 @@ Douglas Crockford takes issue with the way we "sound" letters. Douglas Crockford
 
 ## The New Rules
 
-<table class="ui celled unstackable table">
+<table class="min-w-full divide-y-2 divide-gray-200 text-black">
 	<thead>
 		<tr>
-			<th>Letter</th>
-			<th>Sound</th>
-			<th>Note</th>
+			<th class="w-1/8 font-semibold text-gray-900">Letter</th>
+			<th class="w-1/8 font-semibold text-gray-900">Sound</th>
+			<th class="w-6/8 font-semibold text-gray-900">Note</th>
 		</tr>
 	</thead>
-	<tbody>
+	<tbody class=" divide-y-2 divide-gray-200 text-black">
 	<tr>
 		<td>
 			<h2 class="ui center aligned header">A</h2>
@@ -220,19 +220,20 @@ Douglas Crockford takes issue with the way we "sound" letters. Douglas Crockford
 
 How to "sound" the letters of the alphabet:
 
-```
+
+
 ay bee see dee ee fee ghee hee eye jee kee lee mee nee oh pee ree see tee you vee wee why zee
-```
+
 
 ## How to "sound" these words:
 
 ### Programmer
 
-`pee ree oh ghee ree mee mee ee ree`
+pee ree oh ghee ree mee mee ee ree
 
 ### Crockford (Krokford)
 
-`kee ree oh kee fee oh ree dee`
+kee ree oh kee fee oh ree dee
 
 I love these sounds. And Crockford. You are welcome
 

@@ -27,7 +27,7 @@ excerpt: 'The details tag is often overlooked and reinvented.'
 </details>
 ```
 
-<div class="ui segment">
+<div class="bg-white border border-gray-200 mt-6 p-4 text-black">
 <details>
     <summary>Detail</summary>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -93,7 +93,7 @@ excerpt: 'The details tag is often overlooked and reinvented.'
 		margin: 0;
 	}
 </style>
-<div class="ui segment">
+<div class="bg-white border border-gray-200 mt-6 p-4 text-black"">
 	<details class="css">
 		<summary>Root</summary>
 		<details>

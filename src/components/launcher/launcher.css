@@ -102,8 +102,8 @@ text.middle {
 	text-decoration: none;
 }
 
-/* .links a:before {
+.links a:before {
 	position: absolute;
 	content: '‣';
 	left: -15px;
-} */
+}

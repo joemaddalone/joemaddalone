@@ -21,7 +21,7 @@ Once I knew I was bringing in folks who may not understand why I even wanted to 
 
 <hr />
 
-<div class="ui segment">
+<div class="rounded-md border border-gray-300 bg-white p-4 shadow-sm">
 
 # Mission Statement
 
