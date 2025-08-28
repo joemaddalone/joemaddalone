@@ -1,22 +1,12 @@
 .particle-system-container {
   position: relative;
-  /* width: 99vw; */
   height: 100vh;
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
   overflow: hidden;
   font-family: 'Courier New', monospace;
 }
 
-.particle-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
 .content-overlay {
+	background-color: #eee;
   position: relative;
   z-index: 2;
   display: flex;
@@ -26,7 +16,7 @@
   height: 99vh;
   padding: 2rem;
   text-align: center;
-  color: white;
+  color: #222;
 }
 
 .typing-text {
@@ -42,34 +32,23 @@
   justify-content: center;
 }
 
-.cursor {
-  animation: blink 1s infinite;
-  color: #4ECDC4;
-  text-shadow: 0 0 10px #4ECDC4;
-}
-
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
-}
-
 .intro-text {
   margin-bottom: 3rem;
   opacity: 0;
-  animation: fadeInUp 1s ease-out 2s forwards;
+  animation: fadeInUp 0.5s ease-out 0.25s forwards;
 }
 
 .intro-text h2 {
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 1rem;
-  color: #4ECDC4;
-  text-shadow: 0 0 10px rgba(78, 205, 196, 0.3);
+  color: #222;
+	text-shadow: 0 0 10px rgba(0, 0, 255, 0.3);
 }
 
 .intro-text p {
   font-size: 1.1rem;
-  color: #b8b8b8;
+  color: #222;
   max-width: 600px;
   line-height: 1.6;
 }
@@ -80,12 +59,12 @@
   gap: 1.5rem;
   margin-bottom: 2rem;
   opacity: 0;
-  animation: fadeInUp 1s ease-out 3s forwards;
+  animation: fadeInUp 1s ease-out 0.5s forwards;
   font-family: 'Courier New', monospace;
 }
 
 .minimal-link {
-  color: #fff !important;
+  color: #222 !important;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 400;
@@ -112,7 +91,7 @@
   flex-wrap: wrap;
   justify-content: center;
   opacity: 0;
-  animation: fadeInUp 1s ease-out 4s forwards;
+  animation: fadeInUp 1s ease-out 1s forwards;
 }
 
 .social-link {
@@ -120,7 +99,7 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #b8b8b8;
+  color: #333 !important;
   transition: all 0.3s ease;
   padding: 1rem;
   border-radius: 50%;
@@ -132,9 +111,21 @@
 }
 
 .social-link:hover {
-  color: #4ECDC4;
-  background: rgba(78, 205, 196, 0.1);
+  color: blue !important;
+  background: rgba(0, 0, 100, 0.1);
   border-color: rgba(78, 205, 196, 0.3);
+}
+
+.social-link.linkined:hover {
+  color: #0077b5 !important;
+}
+
+.social-link.youtube:hover {
+  color: #ff0000 !important;
+}
+
+.social-link.github:hover {
+  color: #000000 !important;
 }
 
 .social-icon {
@@ -234,13 +225,6 @@
   }
 }
 
-/* High DPI displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .particle-canvas {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-  }
-}
 
 /* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
