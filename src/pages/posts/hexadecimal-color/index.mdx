@@ -15,7 +15,7 @@ import Calc from './calc.jsx';
 
 I suppose I just never really thought about it much and left the hexing of colors to designer witchcraft not meant for the likes of this poor programmer-minded plebe to understand.
 
-## Why is `#ff0000` <span style="color:#f00">red</span>?
+## Why is #ff0000 <span style="color:#f00">red</span>?
 
 ### Hexadecimal is fancy speaking for Base 16
 
@@ -114,20 +114,20 @@ Hexadecimals colors can be notated as `RRGGBB` where each set of two characters 
 
 <Red />
 
-Here the `RR` value is represented by `ff` which is equal to 255 or "fully on". We have 255 for red and 0 for both green and blue and therefore we only see the red light. If we move that 255 (ff) value through each position we get the predictable result.
+Here the `RR` value is represented by **ff** which is equal to 255 or "fully on". We have 255 for red and 0 for both green and blue and therefore we only see the red light. If we move that 255 (ff) value through each position we get the predictable result.
 
--   `ff0000`: <span style="color:#f00">red</span>
--   `00ff00`: <span style="color:#0f0">green</span>
--   `0000ff`: <span style="color:#00f">blue</span>
+-   **ff0000**: <span style="color:#f00">red</span>
+-   **00ff00**: <span style="color:#0f0">green</span>
+-   **0000ff**: <span style="color:#00f">blue</span>
 
 
 ## Shorthand CSS. Why is `#f00` also <span style="color:#f00">red</span>?
 
 In CSS `f00` is expanded to `ff0000`. When we use a 3-character shorthand each character is simply duplicated in place. `f00` becomes `ff` (doubled `f`), followed by `00` (doubled `0`), followed by `00` (doubled `0`). `f` = `ff`, followed by `0` = `00`, followed by `0` = `00`, becomes `ff0000`.
 
--   `f00` -> `ff0000` -> <span style="color:#f00">red</span>
--   `0f0` -> `00ff00` -> <span style="color:#0f0">green</span>
--   `00f` -> `0000ff` -> <span style="color:#00f">blue</span>
+-   **f00** -> **ff0000** -> <span style="color:#f00">red</span>
+-   **0f0** -> **00ff00** -> <span style="color:#0f0">green</span>
+-   **00f** -> **0000ff** -> <span style="color:#00f">blue</span>
 
 ## So what's with alphas values in hex colors?
 

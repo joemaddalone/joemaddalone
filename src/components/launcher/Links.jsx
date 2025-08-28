@@ -45,7 +45,7 @@ const Links = () => {
         <div className="links">
             {wheres.map((where, i) => {
                 return (
-                    <a className="ui" href={where.url} key={i}>
+                    <a className="n" href={where.url} key={i}>
                         {where.txt}
                     </a>
                 );

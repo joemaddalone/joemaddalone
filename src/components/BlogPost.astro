@@ -2,9 +2,9 @@
 const { title, excerpt, url } = Astro.props;
 ---
 
-<li class="postlist-item">
+<li class="list-none mt-[8px]">
     <span>
-        <a href={url} class="postlist-link">
+        <a href={url}>
             {title}</a> : {excerpt}
         </span>
 </li>

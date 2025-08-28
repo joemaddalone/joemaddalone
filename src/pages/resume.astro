@@ -1,27 +1,25 @@
 ---
-import "tailwindcss";
-
+import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import data from "./resume.11tydata.json";
 const pageTitle = "Resume of Joe Maddalone";
-import icons from '../components/launcher/icons';
 ---
 
 <BaseLayout pageTitle={pageTitle} includeFooter={false}>
-  <div class="mt5 mb5">
+  <div class="mt-5 mb-5">
     <div class="flex justify-center">
-      <a href="/assets/Joe-Maddalone.pdf" class="border-1 rounded-full px-4 py-2 ma4">PDF <i class="ph ph-bold ph-download"></i></a>
+      <a href="/assets/Joe-Maddalone.pdf" class="border-1 rounded-full px-4 py-2 m-4">PDF <i class="ph ph-bold ph-download"></i></a>
     </div>
     <div class="resume container">
-      <div class="heading pa4">
+      <div class="heading p-4">
         <div class="content">
           I lead teams, mentor developers, close tickets, resolve problems, and
           invent solutions where others give up.
         </div>
       </div>
-        <div class="me pa4">
-          <h2 class="f3">Joe Maddalone</h2>
-          <div class="find flex flex-col items-start gap-y-2 text-sm">
+        <div class="me p-4">
+          <h2 class="text-xl font-bold mt-2 mb-4">Joe Maddalone</h2>
+          <div class="find flex flex-col items-start gap-y-3 text-sm">
             <div class="find-item flex items-center gap-x-1.5">
               <i class="ph ph-bold ph-map-pin"></i><div>Chicago, IL</div>
             </div>
@@ -52,8 +50,8 @@ import icons from '../components/launcher/icons';
             </div>
           </div>
         </div>
-        <div class="more pa4">
-          <section id="profiles" class="mb4">
+        <div class="more p-4">
+          <section id="profiles" class="mb-4">
             <h4 class="mb-2 border-b border-primary text-base font-bold">
               Profiles
             </h4><div
@@ -179,7 +177,7 @@ import icons from '../components/launcher/icons';
             </div>
           </section>
         </div>
-      <div class="main pa4">
+      <div class="main p-4">
         <h4 class="mb-2 border-b border-primary text-base font-bold">
           Experience
         </h4>

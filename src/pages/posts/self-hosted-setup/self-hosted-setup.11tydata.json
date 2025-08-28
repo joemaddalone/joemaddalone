@@ -3,7 +3,7 @@
         {
             "app": "Apprise-api",
             "url": "https://github.com/caronc/apprise-api",
-            "description": "I currently use this for a single notification with a modified version of <a href=\"https://github.com/Chronial/snapraid-runner\">snapraid-runner</a>, but plan to do a lot more with it."
+            "description": "I currently use this for a single notification with a modified version of snapraid-runner, but plan to do a lot more with it."
         },
         {
             "app": "Bookstack",

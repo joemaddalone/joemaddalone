@@ -2,31 +2,18 @@
 import ExpLayout from "../../../layouts/ExpLayout.astro";
 ---
 
-<ExpLayout pageTitle="Canvas video grid" sui tachyons>
-    <style is:inline>
-        .page {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        /* #buffer-v {
-            writing-mode: sideways-lr;
-        } */
-    </style>
-    <div class="page">
-        <div class="header mt4">
-            <h1 class="ui header">
+<ExpLayout pageTitle="Canvas video grid">
+    <div class="content-container">
+        <div class="header mt-4">
+            <h1 class="text-3xl font-bold">
                 <div class="content">Canvas video grid</div>
             </h1>
         </div>
 
-        <div class="flex">
-            <div class="field mr2">
+        <div class="flex w-[50%]">
+            <div class="mr-2">
                 <label for="buffer-h">X Space</label>
-                <div class="flex items-center justify-between">
+                <div class="">
                     <input
                         type="range"
                         id="buffer-h"
@@ -39,9 +26,9 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
                 </div>
             </div>
 
-            <div class="field ml2">
+            <div class="ml-2">
                 <label for="buffer-h">Y Space</label>
-                <div class="flex items-center justify-between">
+                <div class="">
                     <input
                         id="buffer-v"
                         name="buffer-v"

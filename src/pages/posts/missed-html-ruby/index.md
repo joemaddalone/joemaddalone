@@ -22,7 +22,7 @@ excerpt: 'A quick win for otherwise complicated typography.'
 </ruby>
 ```
 
-<div class="ui segment">
+<div class="text-black text-2xl mt-4 border-1 rounded-md border-gray-200 shadow-sm p-4">
 <ruby>50<rt>Clicks</rt></ruby>
 </div>
 

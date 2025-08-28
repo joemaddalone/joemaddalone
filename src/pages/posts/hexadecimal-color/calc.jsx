@@ -12,18 +12,15 @@ const Calc = () => {
   };
 
   return (
-    <div className="ui input">
-      <input 
-        inputMode="numeric" 
-        pattern="[0-9]*" 
-        type="number" 
-        value={value} 
+    <div className="ui_input mt-4">
+      <input
+        inputMode="numeric"
+        pattern="[0-9]*"
+        type="number"
+        value={value}
         onChange={handleInputChange}
-        className="ui input" 
       />
-      <div className="ui label">
-        <h2>{toBase16(value)}</h2>
-      </div>
+      <div className="label">{toBase16(value)}</div>
     </div>
   );
 };

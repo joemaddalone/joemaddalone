@@ -73,7 +73,7 @@ div span:before {
 
 And now we have numbering without ordered list.  The immediate benefit being that we can style as we see fit.
 
-<div class="ui segment a">
+<div class="text-black a">
   <span>First</span>
   <span>Second</span>
   <span>Third</span>
@@ -116,7 +116,7 @@ div span:before {
 	}
 </style>
 
-<div class="ui segment b">
+<div class="text-black b mt-4">
   <span>First</span>
   <span>Second</span>
   <span>Third</span>
@@ -132,6 +132,8 @@ div {
   counter-reset: section;
 }
 ```
+
+---
 
 ```html
 <div>
@@ -180,7 +182,7 @@ div {
 	}
 </style>
 
-<div class="ui segment c">
+<div class="text-black c mt-4">
 	<section>
 		<span>First</span>
 		<span>Second</span>

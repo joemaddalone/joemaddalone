@@ -74,7 +74,7 @@ Our basic markup
 </div>
 ```
 
-<div class="ui segment one">
+<div class="one text-black mt-4 border-1 rounded-md border-gray-200 shadow-sm p-4">
 <div class="container">
   <div>1</div>
   <div>2</div>
@@ -100,7 +100,7 @@ Let's add two even 50% columns.
 }
 ```
 
-<div class="ui segment two">
+<div class="two text-black mt-4 border-1 rounded-md border-gray-200 shadow-sm p-4">
 <div class="container">
   <div>1</div>
   <div>2</div>
@@ -127,7 +127,7 @@ Or how about 3 even 33.33% columns.
 ```
 
 
-<div class="ui segment three">
+<div class="three text-black mt-4 border-1 rounded-md border-gray-200 shadow-sm p-4">
 <div class="container">
 <div>1</div>
   <div>2</div>
@@ -154,7 +154,7 @@ That gets tedious quick. So we can use fraction units to create an even 4 column
 }
 ```
 
-<div class="ui segment four">
+<div class="four text-black mt-4 border-1 rounded-md border-gray-200 shadow-sm p-4">
 <div class="container">
   <div>1</div>
   <div>2</div>
@@ -181,7 +181,7 @@ Still... I hate typing so... repeat to the rescue.
 }
 ```
 
-<div class="ui segment five">
+<div class="five text-black mt-4 border-1 rounded-md border-gray-200 shadow-sm p-4">
 <div class="container">
 <div>1</div>
   <div>2</div>
@@ -208,7 +208,7 @@ grid-template-* provides flexibility.  We can use percentages, fractions, repeat
 }
 ```
 
-<div class="ui segment seven">
+<div class="seven text-black mt-4 border-1 rounded-md border-gray-200 shadow-sm p-4">
 <div class="container">
 <div>1</div>
   <div>2</div>
@@ -236,7 +236,7 @@ gap. seems legit.
 }
 ```
 
-<div class="ui segment six">
+<div class="six text-black mt-4 border-1 rounded-md border-gray-200 shadow-sm p-4">
 <div class="container">
 <div>1</div>
   <div>2</div>
@@ -311,7 +311,7 @@ main {
 }
 ```
 
-<div class="ui segment eight">
+<div class="eight text-black mt-4 border-1 rounded-md border-gray-200 shadow-sm p-4">
 <div class="container">
   <div class="logo">Logo</div>
   <div class="nav">Nav</div>
@@ -362,7 +362,7 @@ main {
 }
 ```
 
-<div class="ui segment nine">
+<div class="nine text-black mt-4 border-1 rounded-md border-gray-200 shadow-sm p-4">
 <div class="container">
   <div class="logo">Logo</div>
   <div class="nav">Nav</div>
@@ -412,7 +412,7 @@ Let's tweak the height of the grid.
 }
 ```
 
-<div class="ui segment ten">
+<div class="ten text-black mt-4 border-1 rounded-md border-gray-200 shadow-sm p-4">
 <div class="container">
   <div class="logo">Logo</div>
   <div class="nav">Nav</div>
@@ -464,7 +464,7 @@ A problem appears, the logo is way too tall.  We can utilize grid-template-rows 
 }
 ```
 
-<div class="ui segment eleven">
+<div class="eleven text-black mt-4 border-1 rounded-md border-gray-200 shadow-sm p-4">
 <div class="container">
   <div class="logo">Logo</div>
   <div class="nav">Nav</div>

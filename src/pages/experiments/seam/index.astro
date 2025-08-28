@@ -2,8 +2,8 @@
 import ExpLayout from "../../../layouts/ExpLayout.astro";
 ---
 
-<ExpLayout pageTitle="Seam Carving" sui tachyons>
-    <div class="mw6 mw7-ns center pt4">
+<ExpLayout pageTitle="Seam Carving">
+    <div class="container mx-auto max-w-2xl mt-6 prose">
         <h2>Seam Carving</h2>
         <p>
             This is a simple implementation of seam carving. It is not optimized
@@ -17,11 +17,11 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
             > by Shai Avidan and Ariel Shamir.
         </p>
         <div class="controls">
-            <button class="ui button" id="carveBtn_100">100%</button>
-            <button class="ui button" id="carveBtn_80">80%</button>
-            <button class="ui button" id="carveBtn_60">60%</button>
-            <button class="ui button" id="carveBtn_40">40%</button>
-            <button class="ui button" id="carveBtn_20">20%</button>
+            <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_100">100%</button>
+            <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_80">80%</button>
+            <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_60">60%</button>
+            <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_40">40%</button>
+            <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_20">20%</button>
         </div>
         <div id="info" class="info"></div>
         <div class="image-container flex justify-center items-center"></div>

@@ -2,7 +2,7 @@
 import ExpLayout from "../../../layouts/ExpLayout.astro";
 ---
 
-<ExpLayout pageTitle="Canvas video shape" sui tachyons>
+<ExpLayout pageTitle="Canvas video shape">
   <style>
     .page {
       width: 100%;
@@ -17,20 +17,22 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
   </style>
   <div class="page">
     <div id="container"></div>
-    <div class="ui segment flex flex-column justify-center items-center">
-      <h1 class="ui header">particles</h1>
-      <div class="w-60">
-        <div class="ui checkbox">
-          <input type="checkbox" id="showPath">
-          <label for="showPath">show path</label>
-        </div>
+    <div class="mt-6 flex flex-col justify-center items-center">
+      <h1 class="text-3xl font-bold">particles</h1>
+      <div class="">
+        <label for="showPath" class="inline-flex items-center gap-3">
+          <input type="checkbox" class="size-5 rounded border-gray-300 shadow-sm" id="showPath" />
+          <span class="font-medium text-gray-700"> show path </span>
+        </label>
       </div>
-      <p class="ma4 w-60">
+      <div class="container mx-auto max-w-2xl mt-6 prose">
+      <p class="m-4">
         The experiment here is not the particle emitter itself, but the method
         for rendering the particles. All particles are drawn at the same time
         using a single svg path definition string.  Is it performant?  I don't know.  Was it fun to write?  Yes.
       </p>
-      <div class="w-60" style="overflow-y: auto;">
+      </div>
+      <div class="prose" style="overflow-y: auto;">
         <pre
           class="code f7"
           style="margin: 0; white-space: pre-wrap; overflow-x: auto; height: 250px;"
@@ -73,7 +75,7 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
 
   if (showPathEl) {
     showPathEl.addEventListener("change", (e) => {
-      SHOW_PATH = e.target.checked;
+      SHOW_PATH = (e.target as HTMLInputElement).checked;
     });
   }
   const clientWidth = document.body.clientWidth;
