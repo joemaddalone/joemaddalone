@@ -1,0 +1,53 @@
+{
+  "id": 13363,
+  "title": "The Man from Earth",
+  "originalTitle": "The Man from Earth",
+  "overview": "A departing professor gathers his closest colleagues for an intimate farewell, but the night takes an unexpected turn when he shares a stunning secret about his past. As the conversation unfolds, skepticism and curiosity collide, challenging everything they thought they knew about history, science, and belief.",
+  "releaseDate": "2007-06-10",
+  "posterPath": "/V086R82gNgWrotaXZFO4JhdgB1.jpg",
+  "backdropPath": "/gt4EnUGbbGbNOX0q47YII3WxB48.jpg",
+  "genres": [
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "runtime": 87,
+  "voteAverage": 7.628,
+  "voteCount": 2681,
+  "popularity": 3.4579,
+  "status": "Released",
+  "tagline": "From one of the acclaimed writers of Star Trek and The Twilight Zone comes a story that transcends both time and space...",
+  "budget": 200000,
+  "revenue": 0,
+  "productionCompanies": [
+    {
+      "id": 2741,
+      "name": "Falling Sky Entertainment",
+      "logoPath": null,
+      "originCountry": ""
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0756683",
+  "homepage": "http://manfromearth.com/"
+}
