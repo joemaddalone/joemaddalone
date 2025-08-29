@@ -5,12 +5,17 @@ tags: ['post']
 excerpt: 'A timeline of AI events.'
 ---
 
+import Timeline from '../../../components/Timeline';
+import timelineData from './timeline.json';
+
 <hgroup>
 	<h1>An AI Timeline</h1>
 	<p>A timeline of AI events.</p>
 </hgroup>
 
--   1943 [A Logical Calculus of the Ideas Immanent in Nervous Activity](https://www.cs.cmu.edu/~./epxing/Class/10715/reading/McCulloch.and.Pitts.pdf) by Warren S. McCulloch & Walter Pitts
+<Timeline data={timelineData} />
+
+{/* -   1943 [A Logical Calculus of the Ideas Immanent in Nervous Activity](https://www.cs.cmu.edu/~./epxing/Class/10715/reading/McCulloch.and.Pitts.pdf) by Warren S. McCulloch & Walter Pitts
 -   1958 [Perceptron Mark I](https://en.wikipedia.org/wiki/Perceptron) by Frank Rosenblatt
 -   1960 [ADALINE](https://en.wikipedia.org/wiki/ADALINE) by Bernard (Bernie) Widrow and Marcian “Ted” Hoff
 -   1980 [Neocognitron](https://en.wikipedia.org/wiki/Neocognitron) by Kunihiko Fukushima
@@ -72,7 +77,7 @@ excerpt: 'A timeline of AI events.'
    -  [Safe Superintelligence Inc raises $1 billion from venture capital firms](https://www.reuters.com/technology/artificial-intelligence/openai-co-founder-sutskevers-new-safety-focused-ai-startup-ssi-raises-1-billion-2024-09-04/)
 -  2024 October:
    -  OpenAI raises $6.6 billion from investors.  OpenAI is now valued at $157 billion, one of the most valuable private companies in the world.
-   -  Hinton & Hopfield receive [Nobel Prize in Physics](https://www.nobelprize.org/prizes/physics/2024/press-release/) “for foundational discoveries and inventions that enable machine learning with artificial neural networks”
+   -  Hinton & Hopfield receive [Nobel Prize in Physics](https://www.nobelprize.org/prizes/physics/2024/press-release/) “for foundational discoveries and inventions that enable machine learning with artificial neural networks” */}
 
 
 ### CAIS, Statement on AI Risk
