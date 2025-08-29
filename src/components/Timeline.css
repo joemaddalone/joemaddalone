@@ -1,0 +1,150 @@
+/* Timeline Component Styles */
+
+.timeline-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Smooth scrolling for the timeline */
+.timeline-container {
+  scroll-behavior: smooth;
+}
+
+/* Timeline line gradient animation */
+.timeline-container .bg-gradient-to-b {
+  background: linear-gradient(to bottom, #3b82f6, #8b5cf6, #ec4899);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Timeline node animations */
+.timeline-container .w-8.h-8 {
+  transition: all 0.3s ease;
+}
+
+.timeline-container .w-8.h-8:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Entry card animations */
+.timeline-container .p-6 {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-container .p-6:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Decade label animations */
+.timeline-container .bg-gray-100,
+.timeline-container .dark .bg-gray-800 {
+  transition: all 0.3s ease;
+}
+
+.timeline-container .bg-gray-100:hover,
+.timeline-container .dark .bg-gray-800:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal animations */
+.timeline-container .fixed {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.timeline-container .bg-white,
+.timeline-container .dark .bg-gray-800 {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline-container .w-5\/12 {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 1rem;
+		text-align: center !important;
+  }
+
+  .timeline-container .flex-row,
+  .timeline-container .flex-row-reverse {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .timeline-container .absolute.left-1\/2 {
+    left: 50%;
+  }
+
+  .timeline-container .w-8.h-8 {
+    margin: 0 auto;
+  }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  .timeline-container .bg-white {
+    background-color: #1f2937;
+  }
+
+  .timeline-container .border-gray-200 {
+    border-color: #374151;
+  }
+}
+
+/* Focus states for accessibility */
+.timeline-container .p-6:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.timeline-container button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.timeline-container .animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
