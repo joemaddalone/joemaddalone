@@ -1,0 +1,73 @@
+{
+  "id": 11601,
+  "title": "Stir of Echoes",
+  "originalTitle": "Stir of Echoes",
+  "overview": "After being hypnotized by his sister-in-law, Tom Witzky begins seeing haunting visions of a girl's ghost and a mystery begins to unfold around her.",
+  "releaseDate": "1999-09-10",
+  "posterPath": "/9CyJ5aYF27cITX1WSUTENeP4wBE.jpg",
+  "backdropPath": "/r6tolvqamMPUUZaaPkALU0nwxQb.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 99,
+  "voteAverage": 6.674,
+  "voteCount": 1278,
+  "popularity": 3.3858,
+  "status": "Released",
+  "tagline": "In every mind there is a door that should never be opened.",
+  "budget": 12000000,
+  "revenue": 21142914,
+  "productionCompanies": [
+    {
+      "id": 2188,
+      "name": "Artisan Entertainment",
+      "logoPath": "/f1zrx8bIsS81AHoPQq4riJx68Lt.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 1685,
+      "name": "Hofflund/Polone",
+      "logoPath": null,
+      "originCountry": ""
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    },
+    {
+      "englishName": "Spanish",
+      "iso6391": "es",
+      "name": "Español"
+    },
+    {
+      "englishName": "Korean",
+      "iso6391": "ko",
+      "name": "한국어/조선말"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0164181",
+  "homepage": ""
+}

@@ -1,0 +1,35 @@
+Film: King of New York
+Original Title: King of New York
+Release Date: 1990-07-18
+Runtime: 103 minutes
+Rating: 6.7/10 (724 votes)
+Popularity: 3.0497
+Status: Released
+
+Tagline: "Not everyone who runs a city is elected."
+
+Overview:
+A former drug lord returns from prison determined to wipe out all his competition and distribute the profits of his operations to New York's poor and lower classes in this stylish and ultra violent modern twist on Robin Hood.
+
+Genres:
+- Thriller
+- Crime
+
+Production Companies:
+- Reteitalia (IT)
+- Scena International (IT)
+- Seven Arts Pictures (US)
+
+Production Countries:
+- Italy
+- United States of America
+
+Spoken Languages:
+- English (English)
+- Español (Spanish)
+
+Budget: $5,300,000
+Revenue: $2,554,712
+IMDB: https://www.imdb.com/title/tt0099939
+
+Data retrieved on: 2025-08-29T01:54:20.208Z

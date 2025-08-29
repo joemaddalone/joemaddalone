@@ -1,0 +1,65 @@
+{
+  "id": 17590,
+  "title": "Deathtrap",
+  "originalTitle": "Deathtrap",
+  "overview": "A Broadway playwright puts murder in his plan to take credit for a student's script.",
+  "releaseDate": "1982-03-19",
+  "posterPath": "/fwrqCTcu5rAkU2dL2YqG6jjrLPn.jpg",
+  "backdropPath": "/u6L2WdJGEljiELhfmAyZ0X72jq5.jpg",
+  "genres": [
+    {
+      "id": 9648,
+      "name": "Mystery"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "runtime": 116,
+  "voteAverage": 6.7,
+  "voteCount": 284,
+  "popularity": 1.6026,
+  "status": "Released",
+  "tagline": "The trap is set... For a wickedly funny who'll-do-it.",
+  "budget": 10000000,
+  "revenue": 19000000,
+  "productionCompanies": [
+    {
+      "id": 174,
+      "name": "Warner Bros. Pictures",
+      "logoPath": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0083806",
+  "homepage": ""
+}

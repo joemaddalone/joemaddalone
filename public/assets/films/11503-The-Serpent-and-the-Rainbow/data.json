@@ -1,0 +1,63 @@
+{
+  "id": 11503,
+  "title": "The Serpent and the Rainbow",
+  "originalTitle": "The Serpent and the Rainbow",
+  "overview": "A Harvard anthropologist is sent to Haiti to retrieve a strange powder that is said to have the power to bring human beings back from the dead. In his quest to find the miracle drug, the cynical scientist enters the rarely seen netherworld of walking zombies, blood rites and ancient curses. Based on the true life experiences of Wade Davis and filmed on location in Haiti, it's a frightening excursion into black magic and the supernatural.",
+  "releaseDate": "1988-02-05",
+  "posterPath": "/ezgaj43WaSmyQa24NLG7vPK9hb5.jpg",
+  "backdropPath": "/z0ALFPZjhaAQjXThyMO9b3dIrz4.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 98,
+  "voteAverage": 6.388,
+  "voteCount": 525,
+  "popularity": 3.2033,
+  "status": "Released",
+  "tagline": "Don't Bury Me...I'm Not Dead!",
+  "budget": 11000000,
+  "revenue": 19595031,
+  "productionCompanies": [
+    {
+      "id": 33,
+      "name": "Universal Pictures",
+      "logoPath": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    },
+    {
+      "englishName": "Spanish",
+      "iso6391": "es",
+      "name": "Español"
+    },
+    {
+      "englishName": "French",
+      "iso6391": "fr",
+      "name": "Français"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0096071",
+  "homepage": ""
+}

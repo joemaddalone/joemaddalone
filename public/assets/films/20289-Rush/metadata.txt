@@ -1,0 +1,31 @@
+Film: Rush
+Original Title: Rush
+Release Date: 1991-12-22
+Runtime: 120 minutes
+Rating: 6.6/10 (144 votes)
+Popularity: 1.5471
+Status: Released
+
+Tagline: "How far do they go before they've gone too far?"
+
+Overview:
+Undercover cop Jim Raynor is a seasoned veteran. His partner, Kristen Cates, is lacking in experience, but he thinks she's tough enough to work his next case with him: a deep cover assignment to bring down the notoriously hard-to-capture drug lord Gaines. While their relationship turns romantic during the assignment, they also turn into junkies, and will have to battle their own addictions if they want to bring down Gaines once and for all.
+
+Genres:
+- Crime
+- Drama
+
+Production Companies:
+- The Zanuck Company (US)
+- MGM-Pathé Communications (US)
+
+Production Countries:
+- United States of America
+
+Spoken Languages:
+- English (English)
+
+Budget: $17,000,000
+IMDB: https://www.imdb.com/title/tt0102820
+
+Data retrieved on: 2025-08-29T01:54:35.676Z

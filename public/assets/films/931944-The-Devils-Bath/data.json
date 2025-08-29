@@ -1,0 +1,77 @@
+{
+  "id": 931944,
+  "title": "The Devil's Bath",
+  "originalTitle": "Des Teufels Bad",
+  "overview": "In 1750 Austria, a deeply religious woman named Agnes has just married her beloved, but her mind and heart soon grow heavy as her life becomes a long list of chores and expectations. Day after day, she is increasingly trapped in a murky and lonely path leading to evil thoughts, until the possibility of committing a shocking act of violence seems like the only way out of her inner prison.",
+  "releaseDate": "2024-03-08",
+  "posterPath": "/ycoXsJomPmPjtCfNweM0UWiTkPY.jpg",
+  "backdropPath": "/j4RUnJz8QCuWkmB8CPykD5UvgBb.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    },
+    {
+      "id": 36,
+      "name": "History"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    }
+  ],
+  "runtime": 121,
+  "voteAverage": 6.603,
+  "voteCount": 131,
+  "popularity": 2.3487,
+  "status": "Released",
+  "tagline": "",
+  "budget": 0,
+  "revenue": 0,
+  "productionCompanies": [
+    {
+      "id": 25523,
+      "name": "Ulrich Seidl Filmproduktion",
+      "logoPath": "/hVnHNJUHSxaTpQdWPzC8B5CRvns.png",
+      "originCountry": "AT"
+    },
+    {
+      "id": 23406,
+      "name": "Heimatfilm",
+      "logoPath": "/BTYR4mdM8dQxK0cK0gPVhkXd8j.png",
+      "originCountry": "DE"
+    },
+    {
+      "id": 122,
+      "name": "Coop99 Filmproduktion",
+      "logoPath": "/pbRxJ8oia1MypvLbukeamObtYr2.png",
+      "originCountry": "AT"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "AT",
+      "name": "Austria"
+    },
+    {
+      "iso31661": "DE",
+      "name": "Germany"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "German",
+      "iso6391": "de",
+      "name": "Deutsch"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "de",
+  "imdbId": "tt29141112",
+  "homepage": ""
+}

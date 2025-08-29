@@ -1,0 +1,59 @@
+{
+  "id": 10493,
+  "title": "Dead Calm",
+  "originalTitle": "Dead Calm",
+  "overview": "An Australian couple takes a sailing trip in the Pacific to get over the recent loss of their son. While on the open sea, they come across a sinking ship with one survivor who is not at all what he seems.",
+  "releaseDate": "1989-04-07",
+  "posterPath": "/hXpav86ZX5N1YIfVfVtzuZLNrjW.jpg",
+  "backdropPath": "/zBQL3BCjAyuAyUkyZGZJFP7hXuA.jpg",
+  "genres": [
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    }
+  ],
+  "runtime": 96,
+  "voteAverage": 6.6,
+  "voteCount": 781,
+  "popularity": 2.233,
+  "status": "Released",
+  "tagline": "High seas. Deep terror. Try to stay calm.",
+  "budget": 10400000,
+  "revenue": 7825000,
+  "productionCompanies": [
+    {
+      "id": 2537,
+      "name": "Kennedy Miller Productions",
+      "logoPath": null,
+      "originCountry": "AU"
+    },
+    {
+      "id": 174,
+      "name": "Warner Bros. Pictures",
+      "logoPath": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "AU",
+      "name": "Australia"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0097162",
+  "homepage": ""
+}

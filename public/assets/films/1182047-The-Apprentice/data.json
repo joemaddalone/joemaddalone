@@ -1,0 +1,151 @@
+{
+  "id": 1182047,
+  "title": "The Apprentice",
+  "originalTitle": "The Apprentice",
+  "overview": "A young Donald Trump, eager to make his name as a hungry scion of a wealthy family in 1970s New York, comes under the spell of Roy Cohn, the cutthroat attorney who would help create the Donald Trump we know today. Cohn sees in Trump the perfect protégé—someone with raw ambition, a hunger for success, and a willingness to do whatever it takes to win.",
+  "releaseDate": "2024-10-09",
+  "posterPath": "/zxA7bL9qOnU49NXIqpnyJlRvkqs.jpg",
+  "backdropPath": "/kv9xVrxfLpudBLyYf1QvLCpUQuy.jpg",
+  "genres": [
+    {
+      "id": 36,
+      "name": "History"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "runtime": 122,
+  "voteAverage": 6.907,
+  "voteCount": 723,
+  "popularity": 3.0405,
+  "status": "Released",
+  "tagline": "An American horror story.",
+  "budget": 16000000,
+  "revenue": 17271613,
+  "productionCompanies": [
+    {
+      "id": 34886,
+      "name": "Gidden Media",
+      "logoPath": "/t5U3RqGBm8Hz1Le3g6TryKZ44Uy.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 5056,
+      "name": "Head Gear Films",
+      "logoPath": "/583ITs4w9sK31FnJwKiRwapTpzb.png",
+      "originCountry": "GB"
+    },
+    {
+      "id": 25954,
+      "name": "Metrol Technology",
+      "logoPath": "/oga9DS7GZGbZ0iZ4JFuVTBMBv1C.png",
+      "originCountry": "GB"
+    },
+    {
+      "id": 61011,
+      "name": "Scythia Films",
+      "logoPath": "/kDPeollsOtUtGqqEF4P29NwEjf5.png",
+      "originCountry": "CA"
+    },
+    {
+      "id": 64293,
+      "name": "Profile Pictures",
+      "logoPath": "/lbYGnir9KeY8NyQZrUFZbf3QDej.png",
+      "originCountry": "DK"
+    },
+    {
+      "id": 23459,
+      "name": "Tailored Films",
+      "logoPath": "/41KbJFe2xc1jQHyZCDFTyFbKInM.png",
+      "originCountry": "IE"
+    },
+    {
+      "id": 225876,
+      "name": "Film Institute",
+      "logoPath": null,
+      "originCountry": "DK"
+    },
+    {
+      "id": 2801,
+      "name": "Film i Väst",
+      "logoPath": "/bswb1PLLsKDUXMLgy42bZtCtIde.png",
+      "originCountry": "SE"
+    },
+    {
+      "id": 1898,
+      "name": "Fís Éireann/Screen Ireland",
+      "logoPath": "/8ix6SGlJiyuUDxLBtY8E0PY2G7w.png",
+      "originCountry": "IE"
+    },
+    {
+      "id": 52059,
+      "name": "RocketScience",
+      "logoPath": "/rajoRd4i5xJKHAqFyeflFBMUBZM.png",
+      "originCountry": "GB"
+    },
+    {
+      "id": 96310,
+      "name": "LB Entertainment",
+      "logoPath": "/tBxSNuzARadiaBpIJ3qmdPG5BCz.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 108318,
+      "name": "AC Films",
+      "logoPath": "/jvRXArY2GnhDq7BsjxNCFOkWbp5.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 240814,
+      "name": "Rich Spirit",
+      "logoPath": "/qSYjDmbR8sDzN16IiPmBsIyBkMd.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 254741,
+      "name": "Wild 7 Films",
+      "logoPath": "/iL3S1uGiHFXEjBIfsSJ6NaVzjui.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    },
+    {
+      "iso31661": "GB",
+      "name": "United Kingdom"
+    },
+    {
+      "iso31661": "DK",
+      "name": "Denmark"
+    },
+    {
+      "iso31661": "IE",
+      "name": "Ireland"
+    },
+    {
+      "iso31661": "CA",
+      "name": "Canada"
+    },
+    {
+      "iso31661": "SE",
+      "name": "Sweden"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt8368368",
+  "homepage": "https://www.theapprenticemovie.com/"
+}

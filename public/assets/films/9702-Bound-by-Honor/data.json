@@ -1,0 +1,66 @@
+{
+  "id": 9702,
+  "title": "Bound by Honor",
+  "originalTitle": "Bound by Honor",
+  "overview": "Based on the true life experiences of poet Jimmy Santiago Baca, the film focuses on half-brothers Paco and Cruz, and their bi-racial cousin Miklo. It opens in 1972, as the three are members of an East L.A. gang known as the \"Vatos Locos\", and the story focuses on how a violent crime and the influence of narcotics alter their lives. Miklo is incarcerated and sent to San Quentin, where he makes a \"home\" for himself. Cruz becomes an exceptional artist, but a heroin addiction overcomes him with tragic results. Paco becomes a cop and an enemy to his \"carnal\", Miklo.",
+  "releaseDate": "1993-02-05",
+  "posterPath": "/gvP6R6juhe2IpCG7QGDgjyUvm0g.jpg",
+  "backdropPath": "/9xjUZjuYyehv2qnqMH0oR9nSTft.jpg",
+  "genres": [
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 180,
+  "voteAverage": 8.131,
+  "voteCount": 1447,
+  "popularity": 7.3308,
+  "status": "Released",
+  "tagline": "An epic story of three brothers. Bound by blood. Divided by fate. Driven by destiny.",
+  "budget": 35000000,
+  "revenue": 4500000,
+  "productionCompanies": [
+    {
+      "id": 915,
+      "name": "Hollywood Pictures",
+      "logoPath": "/4neXXpjSJDZPBGBnfWtqysB5htV.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    },
+    {
+      "englishName": "Spanish",
+      "iso6391": "es",
+      "name": "Español"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0106469",
+  "homepage": ""
+}

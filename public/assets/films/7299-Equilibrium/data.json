@@ -1,0 +1,69 @@
+{
+  "id": 7299,
+  "title": "Equilibrium",
+  "originalTitle": "Equilibrium",
+  "overview": "In a dystopian future, a totalitarian regime maintains peace by subduing the populace with a drug, and displays of emotion are punishable by death. A man in charge of enforcing the law rises to overthrow the system.",
+  "releaseDate": "2002-12-06",
+  "posterPath": "/eW3YrxOh3rd6PnRgMSftYoflvfe.jpg",
+  "backdropPath": "/huZZBPyYUnMPCnrAFyJhnwYsQx9.jpg",
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 107,
+  "voteAverage": 7.044,
+  "voteCount": 4724,
+  "popularity": 5.5063,
+  "status": "Released",
+  "tagline": "In a future where freedom is outlawed, outlaws will become heroes.",
+  "budget": 20000000,
+  "revenue": 5400000,
+  "productionCompanies": [
+    {
+      "id": 35304,
+      "name": "Blue Tulip Productions",
+      "logoPath": null,
+      "originCountry": "US"
+    },
+    {
+      "id": 7405,
+      "name": "Dimension Films",
+      "logoPath": "/rfnws0uY8rsNAsrLbx3gEIcYXx3.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 14,
+      "name": "Miramax",
+      "logoPath": "/m6AHu84oZQxvq7n1rsvMNJIAsMu.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0238380",
+  "homepage": ""
+}

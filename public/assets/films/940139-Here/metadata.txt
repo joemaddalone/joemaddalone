@@ -1,0 +1,32 @@
+Film: Here
+Original Title: Here
+Release Date: 2024-10-30
+Runtime: 105 minutes
+Rating: 6.637/10 (515 votes)
+Popularity: 3.3137
+Status: Released
+
+Tagline: "Joy, hope, loss, love, life happens..."
+
+Overview:
+An odyssey through time and memory, centered on a place in New Jersey where—from wilderness, and then, later, from a home—love, loss, struggle, hope and legacy play out between couples and families over generations.
+
+Genres:
+- Drama
+
+Production Companies:
+- Miramax (US)
+- ImageMovers (US)
+
+Production Countries:
+- United States of America
+
+Spoken Languages:
+- English (English)
+
+Budget: $40,000,000
+Revenue: $15,397,270
+IMDB: https://www.imdb.com/title/tt18272208
+Homepage: https://here-movie.com
+
+Data retrieved on: 2025-08-29T01:11:30.524Z

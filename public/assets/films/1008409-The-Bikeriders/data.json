@@ -1,0 +1,65 @@
+{
+  "id": 1008409,
+  "title": "The Bikeriders",
+  "originalTitle": "The Bikeriders",
+  "overview": "After a chance encounter, headstrong Kathy is drawn to Benny, member of Midwestern motorcycle club the Vandals. As the club transforms into a dangerous underworld of violence, Benny must choose between Kathy and his loyalty to the club.",
+  "releaseDate": "2024-06-19",
+  "posterPath": "/qTb6sSRt8Pw96JTan8ezU2xO0FU.jpg",
+  "backdropPath": "/kwGvFyRtGSSm8AFfnRNXoZTQmJj.jpg",
+  "genres": [
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "runtime": 116,
+  "voteAverage": 6.688,
+  "voteCount": 970,
+  "popularity": 3.5816,
+  "status": "Released",
+  "tagline": "Legacies don't come easy.",
+  "budget": 40000000,
+  "revenue": 36110860,
+  "productionCompanies": [
+    {
+      "id": 50914,
+      "name": "Tri-State Pictures",
+      "logoPath": null,
+      "originCountry": "US"
+    },
+    {
+      "id": 10104,
+      "name": "New Regency Pictures",
+      "logoPath": "/4sGWXoboEkWPphI6es6rTmqkCBh.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 508,
+      "name": "Regency Enterprises",
+      "logoPath": "/4sGWXoboEkWPphI6es6rTmqkCBh.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt21454134",
+  "homepage": "https://focusfeatures.com/the-bikeriders"
+}

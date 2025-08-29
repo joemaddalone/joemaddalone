@@ -1,0 +1,28 @@
+Film: Iceman
+Original Title: Iceman
+Release Date: 1984-04-13
+Runtime: 100 minutes
+Rating: 6.122/10 (131 votes)
+Popularity: 1.2302
+Status: Released
+
+Tagline: "A stone age man in a space age world... ...All he wants is a friend."
+
+Overview:
+A  team of Arctic researchers find a 40,000 year-old man frozen in ice and bring him back to life. Anthropologist Dr. Stanley Shephard wants to befriend the Iceman and learn about the man's past while Dr. Diane Brady and her surgical team want to discover the secret that will allow man to live in a frozen state.
+
+Genres:
+- Science Fiction
+
+Production Companies:
+- Universal Pictures (US)
+
+Production Countries:
+- United States of America
+
+Spoken Languages:
+- English (English)
+
+IMDB: https://www.imdb.com/title/tt0087452
+
+Data retrieved on: 2025-08-29T01:51:58.716Z

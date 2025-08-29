@@ -1,0 +1,33 @@
+Film: The Last Castle
+Original Title: The Last Castle
+Release Date: 2001-10-19
+Runtime: 131 minutes
+Rating: 7.2/10 (1319 votes)
+Popularity: 2.7946
+Status: Released
+
+Tagline: "A Castle Can Only Have One King"
+
+Overview:
+A court-martialed general rallies together 1200 inmates to rise against the system that put him away.
+
+Genres:
+- Action
+- Drama
+- Thriller
+
+Production Companies:
+- DreamWorks Pictures (US)
+- Robert Lawrence Productions (US)
+
+Production Countries:
+- United States of America
+
+Spoken Languages:
+- English (English)
+
+Budget: $72,000,000
+Revenue: $27,642,707
+IMDB: https://www.imdb.com/title/tt0272020
+
+Data retrieved on: 2025-08-29T01:57:01.331Z

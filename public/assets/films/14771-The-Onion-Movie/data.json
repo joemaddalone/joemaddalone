@@ -1,0 +1,54 @@
+{
+  "id": 14771,
+  "title": "The Onion Movie",
+  "originalTitle": "The Onion Movie",
+  "overview": "Venerable newscaster Norm Archer reports the latest news in politics, health, culture and entertainment - such as an automotive recall of decapitation-inducing \"Neckbelts\" and a study finding that \"depression hits losers hardest\". This compilation of bogus news stories, celebrity profiles, movie trailers and skits come courtesy of the ace satirists at The Onion.",
+  "releaseDate": "2008-05-31",
+  "posterPath": "/AikMOGbaKpCzHnupsdBzyacsKC2.jpg",
+  "backdropPath": "/cO2JV41rdC561pVh0ZlC4NFGFzF.jpg",
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "runtime": 80,
+  "voteAverage": 6.1,
+  "voteCount": 233,
+  "popularity": 0.9969,
+  "status": "Released",
+  "tagline": "America's Finest News Source.",
+  "budget": 0,
+  "revenue": 0,
+  "productionCompanies": [
+    {
+      "id": 13672,
+      "name": "The Onion",
+      "logoPath": null,
+      "originCountry": ""
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    },
+    {
+      "englishName": "Russian",
+      "iso6391": "ru",
+      "name": "Pусский"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0392878",
+  "homepage": "http://www.theonion.com/"
+}

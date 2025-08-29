@@ -1,0 +1,38 @@
+Film: Dark Blue
+Original Title: Dark Blue
+Release Date: 2002-12-14
+Runtime: 118 minutes
+Rating: 6.245/10 (347 votes)
+Popularity: 2.4225
+Status: Released
+
+Tagline: "Sworn to protect. Sworn to serve. Sworn to secrecy."
+
+Overview:
+Set during the Rodney King riots, a robbery homicide investigation triggers a series of events that will cause a corrupt LAPD officer to question his tactics.
+
+Genres:
+- Crime
+- Thriller
+
+Production Companies:
+- Intermedia Films (GB)
+- IM Filmproduktion (DE)
+- Cosmic Picture (US)
+- Alphaville Films (US)
+- United Artists (US)
+- Metro-Goldwyn-Mayer (US)
+
+Production Countries:
+- Germany
+- United Kingdom
+- United States of America
+
+Spoken Languages:
+- English (English)
+
+Budget: $15,000,000
+Revenue: $12,150,301
+IMDB: https://www.imdb.com/title/tt0279331
+
+Data retrieved on: 2025-08-29T01:57:47.035Z

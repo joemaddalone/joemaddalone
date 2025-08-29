@@ -1,0 +1,49 @@
+{
+  "id": 24749,
+  "title": "Iceman",
+  "originalTitle": "Iceman",
+  "overview": "A  team of Arctic researchers find a 40,000 year-old man frozen in ice and bring him back to life. Anthropologist Dr. Stanley Shephard wants to befriend the Iceman and learn about the man's past while Dr. Diane Brady and her surgical team want to discover the secret that will allow man to live in a frozen state.",
+  "releaseDate": "1984-04-13",
+  "posterPath": "/4HllE4JWVl3YbaWKmHXsBVkH4Sr.jpg",
+  "backdropPath": "/n3cFRS59vaXIE97lZKrtCc9H518.jpg",
+  "genres": [
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    }
+  ],
+  "runtime": 100,
+  "voteAverage": 6.122,
+  "voteCount": 131,
+  "popularity": 1.2302,
+  "status": "Released",
+  "tagline": "A stone age man in a space age world... ...All he wants is a friend.",
+  "budget": 0,
+  "revenue": 0,
+  "productionCompanies": [
+    {
+      "id": 33,
+      "name": "Universal Pictures",
+      "logoPath": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0087452",
+  "homepage": ""
+}

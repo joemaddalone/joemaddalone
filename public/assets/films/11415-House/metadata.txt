@@ -1,0 +1,32 @@
+Film: House
+Original Title: House
+Release Date: 1985-12-06
+Runtime: 92 minutes
+Rating: 6.2/10 (589 votes)
+Popularity: 1.3139
+Status: Released
+
+Tagline: "Horror Has Found a New Home."
+
+Overview:
+Roger Cobb, a divorced horror novelist coming to terms with the disappearance of his young son, inherits an old mansion home to malevolent supernatural residents.
+
+Genres:
+- Comedy
+- Horror
+- Fantasy
+
+Production Companies:
+- New World Pictures (US)
+
+Production Countries:
+- United States of America
+
+Spoken Languages:
+- English (English)
+
+Budget: $3,000,000
+Revenue: $19,444,631
+IMDB: https://www.imdb.com/title/tt0091223
+
+Data retrieved on: 2025-08-29T01:52:33.500Z

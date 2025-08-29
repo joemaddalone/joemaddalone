@@ -1,0 +1,35 @@
+Film: Circle
+Original Title: Circle
+Release Date: 2015-05-28
+Runtime: 86 minutes
+Rating: 6/10 (2036 votes)
+Popularity: 1.7569
+Status: Released
+
+Tagline: "In here…everything gets you killed."
+
+Overview:
+In a massive, mysterious chamber, fifty strangers awaken to find themselves trapped with no memory of how they got there.  Organized in an inward-facing circle and unable to move, they quickly learn that every two minutes, one of them must die…executed by a strange device in the center of the room.
+
+Genres:
+- Horror
+- Science Fiction
+- Mystery
+- Thriller
+
+Production Companies:
+- Votiv Films (US)
+- Taggart Productions ()
+- Felt Films ()
+
+Production Countries:
+- United States of America
+
+Spoken Languages:
+- English (English)
+
+Budget: $250,000
+IMDB: https://www.imdb.com/title/tt3118452
+Homepage: http://www.whatisthecircle.com
+
+Data retrieved on: 2025-08-29T01:59:55.174Z
