@@ -1,0 +1,89 @@
+{
+  "id": 869291,
+  "title": "Cuckoo",
+  "originalTitle": "Cuckoo",
+  "overview": "After reluctantly moving to the German Alps with her father and his new family, Gretchen discovers that their new town hides sinister secrets, as she's plagued by strange noises and frightening visions of a woman pursuing her.",
+  "releaseDate": "2024-02-16",
+  "posterPath": "/4bGP5cnSZbfBJfIidZNSEIKnav7.jpg",
+  "backdropPath": "/1eoCL8fPUZKlho03XVeNzZ3nlds.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 103,
+  "voteAverage": 5.754,
+  "voteCount": 390,
+  "popularity": 3.1303,
+  "status": "Released",
+  "tagline": "Fear its call.",
+  "budget": 7000000,
+  "revenue": 6680396,
+  "productionCompanies": [
+    {
+      "id": 22842,
+      "name": "Waypoint Entertainment",
+      "logoPath": "/buyfiDYTfPVTHxvYZ4yHu69zFPs.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 160071,
+      "name": "Fiction Park",
+      "logoPath": "/yl7TQ8q3YvNZiHRiqPSl4C8V9If.png",
+      "originCountry": "DE"
+    },
+    {
+      "id": 90733,
+      "name": "NEON",
+      "logoPath": "/3K9wCZTyDgop3ITK1rDi6T2PckE.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 234649,
+      "name": "100 Zeros",
+      "logoPath": null,
+      "originCountry": ""
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "DE",
+      "name": "Germany"
+    },
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "German",
+      "iso6391": "de",
+      "name": "Deutsch"
+    },
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    },
+    {
+      "englishName": "French",
+      "iso6391": "fr",
+      "name": "Français"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt12349832",
+  "homepage": "https://cuckoo.film"
+}

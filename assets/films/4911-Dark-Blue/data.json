@@ -1,0 +1,91 @@
+{
+  "id": 4911,
+  "title": "Dark Blue",
+  "originalTitle": "Dark Blue",
+  "overview": "Set during the Rodney King riots, a robbery homicide investigation triggers a series of events that will cause a corrupt LAPD officer to question his tactics.",
+  "releaseDate": "2002-12-14",
+  "posterPath": "/ekW39lKhQ3L3rdOgzyF3d0CoPLV.jpg",
+  "backdropPath": "/bl4OXajniUiTkgCgWbvXq7L5F2s.jpg",
+  "genres": [
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 118,
+  "voteAverage": 6.245,
+  "voteCount": 347,
+  "popularity": 2.4225,
+  "status": "Released",
+  "tagline": "Sworn to protect. Sworn to serve. Sworn to secrecy.",
+  "budget": 15000000,
+  "revenue": 12150301,
+  "productionCompanies": [
+    {
+      "id": 763,
+      "name": "Intermedia Films",
+      "logoPath": "/mCnIVkImjm8rUxIpGR5NgrGlIYL.png",
+      "originCountry": "GB"
+    },
+    {
+      "id": 1809,
+      "name": "IM Filmproduktion",
+      "logoPath": null,
+      "originCountry": "DE"
+    },
+    {
+      "id": 1810,
+      "name": "Cosmic Picture",
+      "logoPath": "/wlrVcwhemrOhn2QH78aGcSSEFnc.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 11462,
+      "name": "Alphaville Films",
+      "logoPath": "/7ZymELJwuWR4k5p0oeZ3d3WAhO3.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 60,
+      "name": "United Artists",
+      "logoPath": "/4YldLvCWQL9VIAHQ2Fu3Ffkh9Si.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 21,
+      "name": "Metro-Goldwyn-Mayer",
+      "logoPath": "/usUnaYV6hQnlVAXP6r4HwrlLFPG.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "DE",
+      "name": "Germany"
+    },
+    {
+      "iso31661": "GB",
+      "name": "United Kingdom"
+    },
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0279331",
+  "homepage": ""
+}

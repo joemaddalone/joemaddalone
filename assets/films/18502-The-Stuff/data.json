@@ -1,0 +1,63 @@
+{
+  "id": 18502,
+  "title": "The Stuff",
+  "originalTitle": "The Stuff",
+  "overview": "Amalgamated Dairies hires David Rutherford, an FBI man turned industrial saboteur, to investigate a popular new product called “the Stuff,” a new dessert product that is blowing ice cream sales out of the water. Nobody knows how it’s made or what’s in it, but people are lining up to buy it. It's got a delicious flavor to die for!",
+  "releaseDate": "1985-06-14",
+  "posterPath": "/bT0PxmeePfzX8YrZHGaAXau9RLN.jpg",
+  "backdropPath": "/tbYg8aKDTLia2ZjT3b4ykAAHyel.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "runtime": 86,
+  "voteAverage": 5.972,
+  "voteCount": 495,
+  "popularity": 1.7258,
+  "status": "Released",
+  "tagline": "Are you eating it... or is it eating you?",
+  "budget": 1700000,
+  "revenue": 0,
+  "productionCompanies": [
+    {
+      "id": 17069,
+      "name": "Larco Productions",
+      "logoPath": null,
+      "originCountry": ""
+    },
+    {
+      "id": 1950,
+      "name": "New World Pictures",
+      "logoPath": "/eIoDtHIJKZaZ4hGbKgqC0PzlqJc.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0090094",
+  "homepage": ""
+}

@@ -1,0 +1,67 @@
+{
+  "id": 21309,
+  "title": "River's Edge",
+  "originalTitle": "River's Edge",
+  "overview": "A group of high-school friends must come to terms with the fact that one of them, Samson, killed another, Jamie. Faced with the brutality of death, each must decide whether to turn their friend in to the police, or to help him escape the consequences of his dreadful deed.",
+  "releaseDate": "1986-10-10",
+  "posterPath": "/bT68aKa9d7zDF7Z8MaskbWBRqzb.jpg",
+  "backdropPath": "/A4nFhxBKmT2Zlyojmq6VUhlTPJG.jpg",
+  "genres": [
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 100,
+  "voteAverage": 6.524,
+  "voteCount": 293,
+  "popularity": 2.0579,
+  "status": "Released",
+  "tagline": "Which was worse? The murder or what came after?",
+  "budget": 1900000,
+  "revenue": 4600000,
+  "productionCompanies": [
+    {
+      "id": 3953,
+      "name": "Island",
+      "logoPath": null,
+      "originCountry": ""
+    },
+    {
+      "id": 469,
+      "name": "Hemdale Film Corporation",
+      "logoPath": null,
+      "originCountry": "GB"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "GB",
+      "name": "United Kingdom"
+    },
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0091860",
+  "homepage": ""
+}

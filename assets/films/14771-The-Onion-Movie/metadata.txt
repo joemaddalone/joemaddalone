@@ -1,0 +1,30 @@
+Film: The Onion Movie
+Original Title: The Onion Movie
+Release Date: 2008-05-31
+Runtime: 80 minutes
+Rating: 6.1/10 (233 votes)
+Popularity: 0.9969
+Status: Released
+
+Tagline: "America's Finest News Source."
+
+Overview:
+Venerable newscaster Norm Archer reports the latest news in politics, health, culture and entertainment - such as an automotive recall of decapitation-inducing "Neckbelts" and a study finding that "depression hits losers hardest". This compilation of bogus news stories, celebrity profiles, movie trailers and skits come courtesy of the ace satirists at The Onion.
+
+Genres:
+- Comedy
+
+Production Companies:
+- The Onion ()
+
+Production Countries:
+- United States of America
+
+Spoken Languages:
+- English (English)
+- Pусский (Russian)
+
+IMDB: https://www.imdb.com/title/tt0392878
+Homepage: http://www.theonion.com/
+
+Data retrieved on: 2025-08-29T01:58:44.327Z

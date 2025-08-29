@@ -1,0 +1,34 @@
+Film: Coherence
+Original Title: Coherence
+Release Date: 2013-09-19
+Runtime: 89 minutes
+Rating: 7.2/10 (3136 votes)
+Popularity: 7.0338
+Status: Released
+
+Tagline: "Rearrange your brain."
+
+Overview:
+Four couples gather for dinner the night a mysterious and powerful comet passes overhead.
+
+Genres:
+- Thriller
+- Science Fiction
+
+Production Companies:
+- Bellanova Films (US)
+- Ugly Duckling Films (GB)
+
+Production Countries:
+- United Kingdom
+- United States of America
+
+Spoken Languages:
+- English (English)
+
+Budget: $50,000
+Revenue: $139,745
+IMDB: https://www.imdb.com/title/tt2866360
+Homepage: https://independent-ent.com/production/coherence
+
+Data retrieved on: 2025-08-29T01:59:29.322Z

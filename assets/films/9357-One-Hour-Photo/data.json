@@ -1,0 +1,71 @@
+{
+  "id": 9357,
+  "title": "One Hour Photo",
+  "originalTitle": "One Hour Photo",
+  "overview": "Sy \"the photo guy\" Parrish has lovingly developed photos for the Yorkin family since their son was a baby. But as the Yorkins' lives become fuller, Sy's only seems lonelier, until he eventually believes he's part of their family. When \"Uncle\" Sy's picture-perfect fantasy collides with an ugly dose of reality, what happens next \"has the spine-tingling elements of the best psychological thrillers!\"",
+  "releaseDate": "2002-08-21",
+  "posterPath": "/fuSIN3Nq6dmaA8LZSkASpQueFO1.jpg",
+  "backdropPath": "/uwbp1RJkFR5vhaMJPujoB7Qkkgc.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 96,
+  "voteAverage": 6.649,
+  "voteCount": 1782,
+  "popularity": 2.0309,
+  "status": "Released",
+  "tagline": "The things that we fear the most have already happened to us...",
+  "budget": 12000000,
+  "revenue": 52223306,
+  "productionCompanies": [
+    {
+      "id": 43,
+      "name": "Fox Searchlight Pictures",
+      "logoPath": "/4RgIPr55kBakgupWkzdDxqXJEqr.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 7053,
+      "name": "Catch 23 Entertainment",
+      "logoPath": null,
+      "originCountry": "US"
+    },
+    {
+      "id": 1422,
+      "name": "Killer Films",
+      "logoPath": "/rIB6DuimR1qgLE14cBwpMABC2xx.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 5286,
+      "name": "Laughlin Park Pictures",
+      "logoPath": null,
+      "originCountry": ""
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0265459",
+  "homepage": "https://www.searchlightpictures.com/onehourphoto"
+}

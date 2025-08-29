@@ -1,0 +1,65 @@
+{
+  "id": 1100782,
+  "title": "Smile 2",
+  "originalTitle": "Smile 2",
+  "overview": "About to embark on a new world tour, global pop sensation Skye Riley begins experiencing increasingly terrifying and inexplicable events. Overwhelmed by the escalating horrors and the pressures of fame, Skye is forced to face her dark past to regain control of her life before it spirals out of control.",
+  "releaseDate": "2024-10-16",
+  "posterPath": "/ht8Uv9QPv9y7K0RvUyJIaXOZTfd.jpg",
+  "backdropPath": "/iR79ciqhtaZ9BE7YFA1HpCHQgX4.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    }
+  ],
+  "runtime": 127,
+  "voteAverage": 6.603,
+  "voteCount": 1753,
+  "popularity": 14.655,
+  "status": "Released",
+  "tagline": "It's the last thing you'll see.",
+  "budget": 28000000,
+  "revenue": 138128854,
+  "productionCompanies": [
+    {
+      "id": 4,
+      "name": "Paramount Pictures",
+      "logoPath": "/gz66EfNoYPqHTYI4q9UEN4CbHRc.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 12292,
+      "name": "Temple Hill Entertainment",
+      "logoPath": "/5J93SHsuvIV32AE9oSbMi02pqw9.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 231315,
+      "name": "Bad Feeling",
+      "logoPath": null,
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt29268110",
+  "homepage": "https://www.smile.movie"
+}

@@ -1,0 +1,59 @@
+{
+  "id": 11307,
+  "title": "The World According to Garp",
+  "originalTitle": "The World According to Garp",
+  "overview": "A struggling young writer finds his life and work dominated by his unfaithful wife and his radical feminist mother, whose best-selling manifesto turns her into a cultural icon.",
+  "releaseDate": "1982-07-23",
+  "posterPath": "/9ItRFdSCb7Sz3AC9LRxAzbH73kG.jpg",
+  "backdropPath": "/bEc081q9Ju5QLEOvAc6vMWUjW1p.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "runtime": 136,
+  "voteAverage": 6.683,
+  "voteCount": 358,
+  "popularity": 1.502,
+  "status": "Released",
+  "tagline": "Robin Williams is Garp. He's got a funny way of looking at life.",
+  "budget": 17000000,
+  "revenue": 29712172,
+  "productionCompanies": [
+    {
+      "id": 8792,
+      "name": "Pan Arts",
+      "logoPath": null,
+      "originCountry": ""
+    },
+    {
+      "id": 174,
+      "name": "Warner Bros. Pictures",
+      "logoPath": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0084917",
+  "homepage": ""
+}

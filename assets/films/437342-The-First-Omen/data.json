@@ -1,0 +1,60 @@
+{
+  "id": 437342,
+  "title": "The First Omen",
+  "originalTitle": "The First Omen",
+  "overview": "When a young American woman is sent to Rome to begin a life of service to the church, she encounters a darkness that causes her to question her own faith and uncovers a terrifying conspiracy that hopes to bring about the birth of evil incarnate.",
+  "releaseDate": "2024-04-03",
+  "posterPath": "/tnsDyNNkOxYUyjD8CNJoAla6YvY.jpg",
+  "backdropPath": "/aBoo55Vl58NCo8D8BPykolQ8y86.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    }
+  ],
+  "runtime": 119,
+  "voteAverage": 6.862,
+  "voteCount": 1141,
+  "popularity": 5.8988,
+  "status": "Released",
+  "tagline": "Create something to fear.",
+  "budget": 30000000,
+  "revenue": 53992802,
+  "productionCompanies": [
+    {
+      "id": 423,
+      "name": "Phantom Four",
+      "logoPath": "/uvA6e2O31qaonsbYd8tjvgqmNXh.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 127928,
+      "name": "20th Century Studios",
+      "logoPath": "/h0rjX5vjW5r8yEnUBStFarjcLT4.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    },
+    {
+      "englishName": "Italian",
+      "iso6391": "it",
+      "name": "Italiano"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt5672290",
+  "homepage": "https://www.20thcenturystudios.com/movies/the-first-omen"
+}

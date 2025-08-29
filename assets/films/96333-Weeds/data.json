@@ -1,0 +1,55 @@
+{
+  "id": 96333,
+  "title": "Weeds",
+  "originalTitle": "Weeds",
+  "overview": "A San Quentin inmate, sentenced to life without parole, writes a play that catches the interest of a reporter.",
+  "releaseDate": "1987-10-16",
+  "posterPath": "/1GVWnb769243POxPy3f9OiyWdK5.jpg",
+  "backdropPath": "/psSROYSqGVPrGvwy6cuIWKKdZKq.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "runtime": 115,
+  "voteAverage": 5.313,
+  "voteCount": 16,
+  "popularity": 1.3117,
+  "status": "Released",
+  "tagline": "Feel what it's like from the inside.",
+  "budget": 0,
+  "revenue": 0,
+  "productionCompanies": [
+    {
+      "id": 770,
+      "name": "Kingsgate Films",
+      "logoPath": null,
+      "originCountry": "US"
+    },
+    {
+      "id": 484,
+      "name": "DEG",
+      "logoPath": "/y3jYroFE9tjDTx5aSOgecXV732c.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0094304",
+  "homepage": ""
+}

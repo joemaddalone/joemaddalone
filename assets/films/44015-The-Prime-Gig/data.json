@@ -1,0 +1,58 @@
+{
+  "id": 44015,
+  "title": "The Prime Gig",
+  "originalTitle": "The Prime Gig",
+  "overview": "Pendelton \"Penny\" Wise is a smooth-talking con-artist who scams people with phoney travel comp vacations over the phone when, desperate for more fast cash, he's called to work for a shady, veteran con businessman Kelly Grant. The situation takes a turn for the worst when Penny begins a relationship with Grant's mistress, Caitlin.",
+  "releaseDate": "2001-04-24",
+  "posterPath": "/gJTeDkT6zYfUlSQFlSiBKfpibwA.jpg",
+  "backdropPath": "/uhOlGqbz8u0aMsboYizV8RmoWFg.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "runtime": 98,
+  "voteAverage": 5.9,
+  "voteCount": 25,
+  "popularity": 1.8981,
+  "status": "Released",
+  "tagline": "Too much is never enough.",
+  "budget": 0,
+  "revenue": 0,
+  "productionCompanies": [
+    {
+      "id": 2833,
+      "name": "Independent Pictures",
+      "logoPath": "/a3aoOysGArJDIwPtxYCqF5LMVKs.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    },
+    {
+      "englishName": "French",
+      "iso6391": "fr",
+      "name": "Français"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0223954",
+  "homepage": ""
+}

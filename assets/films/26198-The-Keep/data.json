@@ -1,0 +1,81 @@
+{
+  "id": 26198,
+  "title": "The Keep",
+  "originalTitle": "The Keep",
+  "overview": "Set during World War II, a German army garrison is sent to guard a mountain pass in a village in Romania's Carpathian mountains and sets up barracks in an ancient stone fortress. Two of the soldiers unwittingly release a mysterious entity that kills or corrupts those within its influence, drawing the attention of a Gestapo commander, a Jewish scholar, and a mysterious traveller.",
+  "releaseDate": "1983-12-16",
+  "posterPath": "/yd9wU3oajNxwaFHQ02rtTBuSFJD.jpg",
+  "backdropPath": "/iQYwVxXDSBMfZB4JTW5LRi7sBZR.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    }
+  ],
+  "runtime": 96,
+  "voteAverage": 5.6,
+  "voteCount": 281,
+  "popularity": 1.2748,
+  "status": "Released",
+  "tagline": "They were all drawn to the keep. Tonight, they will all face the evil.",
+  "budget": 6000000,
+  "revenue": 3661757,
+  "productionCompanies": [
+    {
+      "id": 4,
+      "name": "Paramount Pictures",
+      "logoPath": "/gz66EfNoYPqHTYI4q9UEN4CbHRc.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 15124,
+      "name": "Associated Capital",
+      "logoPath": null,
+      "originCountry": ""
+    },
+    {
+      "id": 15125,
+      "name": "Capital Equipment Leasing",
+      "logoPath": null,
+      "originCountry": ""
+    },
+    {
+      "id": 72275,
+      "name": "Howard W. Koch Productions",
+      "logoPath": null,
+      "originCountry": "US"
+    },
+    {
+      "id": 212435,
+      "name": "Gene Kirkwood Productions",
+      "logoPath": null,
+      "originCountry": ""
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "GB",
+      "name": "United Kingdom"
+    },
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0085780",
+  "homepage": ""
+}

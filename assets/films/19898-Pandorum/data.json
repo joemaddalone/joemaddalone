@@ -1,0 +1,107 @@
+{
+  "id": 19898,
+  "title": "Pandorum",
+  "originalTitle": "Pandorum",
+  "overview": "Two crew members wake up on an abandoned spacecraft with no idea who they are, how long they've been asleep, or what their mission is. The two soon discover they're actually not alone – and the reality of their situation is more horrifying than they could have imagined.",
+  "releaseDate": "2009-09-08",
+  "posterPath": "/mNMfa6r3pl0EzFIKEkVcxyr6Rc7.jpg",
+  "backdropPath": "/2M5V8VcK02o4R5cxe7Ew1ltaxKr.jpg",
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    },
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 108,
+  "voteAverage": 6.563,
+  "voteCount": 2491,
+  "popularity": 3.2268,
+  "status": "Released",
+  "tagline": "Don't fear the end of the world. Fear what happens next.",
+  "budget": 33000000,
+  "revenue": 20648328,
+  "productionCompanies": [
+    {
+      "id": 248,
+      "name": "Impact Pictures",
+      "logoPath": null,
+      "originCountry": "GB"
+    },
+    {
+      "id": 264,
+      "name": "Studio Babelsberg",
+      "logoPath": "/fA90qwUKgPhMONqtwY60GaHRyrW.png",
+      "originCountry": "DE"
+    },
+    {
+      "id": 491,
+      "name": "Summit Entertainment",
+      "logoPath": "/5LvDUt3KmvRnXQ4NrdWJYHeuA8J.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 47,
+      "name": "Constantin Film",
+      "logoPath": "/i7Z9ot2o3N5Sa3HrF09kniFs2y8.png",
+      "originCountry": "DE"
+    },
+    {
+      "id": 12807,
+      "name": "Overture Films",
+      "logoPath": "/i1TyJLN5V53V6IKbugEzwM3tMvw.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "DE",
+      "name": "Germany"
+    },
+    {
+      "iso31661": "GB",
+      "name": "United Kingdom"
+    },
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    },
+    {
+      "englishName": "Vietnamese",
+      "iso6391": "vi",
+      "name": "Tiếng Việt"
+    },
+    {
+      "englishName": "German",
+      "iso6391": "de",
+      "name": "Deutsch"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt1188729",
+  "homepage": "http://www.pandorummovie.com/"
+}

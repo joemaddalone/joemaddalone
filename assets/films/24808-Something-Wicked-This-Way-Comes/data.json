@@ -1,0 +1,63 @@
+{
+  "id": 24808,
+  "title": "Something Wicked This Way Comes",
+  "originalTitle": "Something Wicked This Way Comes",
+  "overview": "In a small American town, a diabolical circus arrives, granting wishes for the townsfolk, but twisted as only the esteemed Mr. Dark can make them. Can two young boys overcome the worst the devil himself can deal out?",
+  "releaseDate": "1983-04-29",
+  "posterPath": "/94dMO6kAawyFUk0sCDGIjAnchED.jpg",
+  "backdropPath": "/yCoyqFx0CB6Usa8xom9fU7sc44P.jpg",
+  "genres": [
+    {
+      "id": 14,
+      "name": "Fantasy"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    }
+  ],
+  "runtime": 95,
+  "voteAverage": 6.449,
+  "voteCount": 187,
+  "popularity": 0.9239,
+  "status": "Released",
+  "tagline": "What would you give a man who could make your deepest dreams come true?",
+  "budget": 20000000,
+  "revenue": 8400000,
+  "productionCompanies": [
+    {
+      "id": 3166,
+      "name": "Walt Disney Productions",
+      "logoPath": "/vyyv4Gy9nPqAZKElPm2izLlEaVS.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 611,
+      "name": "Bryna Productions",
+      "logoPath": null,
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0086336",
+  "homepage": ""
+}

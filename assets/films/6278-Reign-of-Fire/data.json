@@ -1,0 +1,89 @@
+{
+  "id": 6278,
+  "title": "Reign of Fire",
+  "originalTitle": "Reign of Fire",
+  "overview": "In post-apocalyptic England, an American volunteer and a British survivor team up to fight off a brood of fire-breathing dragons seeking to return to global dominance after centuries of rest underground. The Brit -- leading a clan of survivors to hunt down the King of the Dragons -- has much at stake: His mother was killed by a dragon, but his love is still alive.",
+  "releaseDate": "2002-07-09",
+  "posterPath": "/vZVXCj3jXzIPJUHLaQohzt2uTM3.jpg",
+  "backdropPath": "/gAozjuCvXYyrxhpkb0P4SuLnEkV.jpg",
+  "genres": [
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    }
+  ],
+  "runtime": 101,
+  "voteAverage": 6.195,
+  "voteCount": 2331,
+  "popularity": 4.0421,
+  "status": "Released",
+  "tagline": "They're extremely intelligent. Highly evolved. And they don't like sharing the planet.",
+  "budget": 60000000,
+  "revenue": 82150183,
+  "productionCompanies": [
+    {
+      "id": 9195,
+      "name": "Touchstone Pictures",
+      "logoPath": "/geK5QOBsXIPGHutKwXtYjMUyYSG.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 158,
+      "name": "Spyglass Entertainment",
+      "logoPath": "/6SHlNIype9zmyEMRsBtoueUtLsq.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 80,
+      "name": "The Zanuck Company",
+      "logoPath": "/i6B0AIrUESLt5Fm6MOPXmuPhsvA.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 7692,
+      "name": "World 2000 Entertainment",
+      "logoPath": null,
+      "originCountry": "IE"
+    },
+    {
+      "id": 58262,
+      "name": "Birnbaum/Barber Productions",
+      "logoPath": null,
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "IE",
+      "name": "Ireland"
+    },
+    {
+      "iso31661": "GB",
+      "name": "United Kingdom"
+    },
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0253556",
+  "homepage": ""
+}

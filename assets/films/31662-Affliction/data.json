@@ -1,0 +1,79 @@
+{
+  "id": 31662,
+  "title": "Affliction",
+  "originalTitle": "Affliction",
+  "overview": "A small town policeman must investigate a suspicious hunting accident. The investigation and other events result in him slowly disintegrating mentally.",
+  "releaseDate": "1997-12-30",
+  "posterPath": "/hNu8ePwoRyXDQxhLY4iurCVXAQs.jpg",
+  "backdropPath": "/hNNlrvbqYqAPGRf4cCsrF3kBsM1.jpg",
+  "genres": [
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 114,
+  "voteAverage": 6.308,
+  "voteCount": 289,
+  "popularity": 1.1972,
+  "status": "Released",
+  "tagline": "Like father like son...?",
+  "budget": 6000000,
+  "revenue": 6330054,
+  "productionCompanies": [
+    {
+      "id": 770,
+      "name": "Kingsgate Films",
+      "logoPath": null,
+      "originCountry": "US"
+    },
+    {
+      "id": 1644,
+      "name": "Largo Entertainment",
+      "logoPath": "/l5JFudbLN3vr1sSkjRoqF7To8Ky.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 1632,
+      "name": "Lionsgate",
+      "logoPath": "/cisLn1YAUuptXVBa0xjq7ST9cH0.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 175155,
+      "name": "JVC Entertainment Networks",
+      "logoPath": null,
+      "originCountry": ""
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0118564",
+  "homepage": ""
+}

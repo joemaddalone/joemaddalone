@@ -1,0 +1,63 @@
+{
+  "id": 1214509,
+  "title": "In a Violent Nature",
+  "originalTitle": "In a Violent Nature",
+  "overview": "The enigmatic resurrection, rampage, and retribution of an undead monster in a remote wilderness unleashes an iconic new killer after a locket is removed from a collapsed fire tower that entombed its rotting corpse.",
+  "releaseDate": "2024-05-31",
+  "posterPath": "/hPfWHgq07nXbeldwEGxWB4JqwtE.jpg",
+  "backdropPath": "/z31pODVM3uUB4bvirzxHdxrJIzb.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 94,
+  "voteAverage": 5.676,
+  "voteCount": 425,
+  "popularity": 3.6942,
+  "status": "Released",
+  "tagline": "Nature is unforgiving.",
+  "budget": 600000,
+  "revenue": 4258197,
+  "productionCompanies": [
+    {
+      "id": 59558,
+      "name": "Low Sky Productions",
+      "logoPath": null,
+      "originCountry": "CA"
+    },
+    {
+      "id": 224036,
+      "name": "Zygote Pictures",
+      "logoPath": null,
+      "originCountry": "CA"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "CA",
+      "name": "Canada"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt30321146",
+  "homepage": "https://www.inaviolentnature.com"
+}

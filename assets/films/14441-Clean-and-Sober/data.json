@@ -1,0 +1,55 @@
+{
+  "id": 14441,
+  "title": "Clean and Sober",
+  "originalTitle": "Clean and Sober",
+  "overview": "Hotshot real estate salesman Daryl has a bad cocaine habit. After embezzling his company's money, he wakes up next to a girl who overdosed. To hide from the police, he checks into a rehabilitation program guaranteeing anonymity. Under the mentorship of counselor Craig, Daryl accepts that he has a substance abuse problem. As he falls in love with fellow patient Charlie, Daryl begins committing to a newly sober life.",
+  "releaseDate": "1988-08-10",
+  "posterPath": "/cU2VrB1SbKg3WypvK2Z0u1jLQEK.jpg",
+  "backdropPath": "/awVbKi9qebgdC8IjZ77ruvciY2x.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "runtime": 124,
+  "voteAverage": 6.34,
+  "voteCount": 81,
+  "popularity": 1.7805,
+  "status": "Released",
+  "tagline": "Thirty remarkable days in the life of an ordinary man.",
+  "budget": 0,
+  "revenue": 8674093,
+  "productionCompanies": [
+    {
+      "id": 174,
+      "name": "Warner Bros. Pictures",
+      "logoPath": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 23,
+      "name": "Imagine Entertainment",
+      "logoPath": "/bJOFo2ufq7iFC1F4qZm8aLxF5aS.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0094884",
+  "homepage": ""
+}

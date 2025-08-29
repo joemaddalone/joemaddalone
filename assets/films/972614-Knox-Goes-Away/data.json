@@ -1,0 +1,75 @@
+{
+  "id": 972614,
+  "title": "Knox Goes Away",
+  "originalTitle": "Knox Goes Away",
+  "overview": "A contract killer, after being diagnosed with a fast-moving form of dementia, is presented with the opportunity to redeem himself by saving the life of his estranged adult son. But to do so, he must race against the police closing in on him as well as the ticking clock of his own rapidly deteriorating mind.",
+  "releaseDate": "2024-03-15",
+  "posterPath": "/w39qKYjltCix18BwtoZ1e45usdb.jpg",
+  "backdropPath": "/2NPhBHfzhEmXl8csQ2dKmoxfj5e.jpg",
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 114,
+  "voteAverage": 6.95,
+  "voteCount": 423,
+  "popularity": 4.1561,
+  "status": "Released",
+  "tagline": "",
+  "budget": 963703,
+  "revenue": 0,
+  "productionCompanies": [
+    {
+      "id": 3160,
+      "name": "Brookstreet Pictures",
+      "logoPath": "/AmGlFbccfbMu1RR3T0YWJtOBqA4.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 20312,
+      "name": "TPC",
+      "logoPath": "/iYmytRQt5jqlBIEaMQ0Cb6iAHh8.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 120766,
+      "name": "Sugar23",
+      "logoPath": "/yHuuJYoFfYunIQ5hohT1hGnXTJq.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 7493,
+      "name": "FilmNation Entertainment",
+      "logoPath": "/fHitYiGUCkRafgt6VPYQlXWLkdp.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt20115766",
+  "homepage": "https://www.sabanfilms.com/films/knox-goes-away"
+}

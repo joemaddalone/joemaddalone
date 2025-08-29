@@ -1,0 +1,42 @@
+{
+  "id": 136681,
+  "title": "Excision",
+  "originalTitle": "Excision",
+  "overview": "A neglected teen takes refuge in the dreams that used to haunt her and orchestrates a shocking plan to prove her worth to her disapproving parents.",
+  "releaseDate": "2008-09-20",
+  "posterPath": "/4pppWIf5hzPR2aNW5kjWqNM9329.jpg",
+  "backdropPath": "/p3XvDkdHtrlxcRklng2b70B8xua.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    }
+  ],
+  "runtime": 18,
+  "voteAverage": 6.667,
+  "voteCount": 18,
+  "popularity": 0.8996,
+  "status": "Released",
+  "tagline": "",
+  "budget": 0,
+  "revenue": 0,
+  "productionCompanies": [],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt1305669",
+  "homepage": ""
+}

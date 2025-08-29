@@ -1,0 +1,69 @@
+{
+  "id": 8438,
+  "title": "Murder in the First",
+  "originalTitle": "Murder in the First",
+  "overview": "A young, inexperienced public defender is assigned to defend an inmate accused of committing murder while behind bars.",
+  "releaseDate": "1995-01-20",
+  "posterPath": "/sU37ONoL9qUyYXUhubJSYH9tEoc.jpg",
+  "backdropPath": "/8uw6OCa4ofQ6A9xz5ldtgnEVPDr.jpg",
+  "genres": [
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "runtime": 122,
+  "voteAverage": 7.2,
+  "voteCount": 583,
+  "popularity": 1.445,
+  "status": "Released",
+  "tagline": "The trial that brought down Alcatraz",
+  "budget": 20000000,
+  "revenue": 29500000,
+  "productionCompanies": [
+    {
+      "id": 2428,
+      "name": "Wolper Organization",
+      "logoPath": null,
+      "originCountry": "US"
+    },
+    {
+      "id": 174,
+      "name": "Warner Bros. Pictures",
+      "logoPath": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 183,
+      "name": "Le Studio Canal+",
+      "logoPath": "/eadyph99FClrWlnE0jPniwOcvvw.png",
+      "originCountry": "FR"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "FR",
+      "name": "France"
+    },
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0113870",
+  "homepage": "https://www.warnerbros.com/movies/murder-first"
+}

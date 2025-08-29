@@ -1,0 +1,57 @@
+{
+  "id": 1019939,
+  "title": "Hundreds of Beavers",
+  "originalTitle": "Hundreds of Beavers",
+  "overview": "In the 19th century, a drunken applejack salesman must go from zero to hero and become North America's greatest fur trapper by defeating hundreds of beavers.",
+  "releaseDate": "2024-01-26",
+  "posterPath": "/qgXS9HrYaYDnILeXebatCbtX9IP.jpg",
+  "backdropPath": "/sEA9uraGDER7IkAbNzptTAGoAF.jpg",
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    }
+  ],
+  "runtime": 108,
+  "voteAverage": 7.228,
+  "voteCount": 197,
+  "popularity": 1.7523,
+  "status": "Released",
+  "tagline": "Possibly thousands.",
+  "budget": 150000,
+  "revenue": 804017,
+  "productionCompanies": [
+    {
+      "id": 184319,
+      "name": "SRH",
+      "logoPath": null,
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt12818328",
+  "homepage": "https://hundredsofbeavers.com"
+}
