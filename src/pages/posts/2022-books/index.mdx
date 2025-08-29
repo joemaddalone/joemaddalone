@@ -5,26 +5,16 @@ tags: ['post']
 excerpt: 'A bunch of things I read.'
 ---
 import data from './2022-books.11tydata.json';
+import BookWidget from '../../../components/BookWidget.jsx';
 
 <hgroup>
 	<h1>2022 in the Books</h1>
 	<p>A bunch of things I read in 2022.</p>
 </hgroup>
 
-<div class="ui divided items">
-
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mt-6">
 {data.books2022.map((book) => (
-
-	<div class="pl-2 pt-6">
-			<span class="flex items-center">
-				<span class="shrink-0 pe-4 text-lg text-gray-900">{book.title}</span>
-				<span class="h-px flex-1 bg-gray-300"></span>
-			</span>
-			<span class="italic text-black">{book.subtitle ? `${book.subtitle}` : ''}</span>
-			<div class="max-w-[175px] mx-auto">
-				<img src={`/assets/books/${book.isbn}.jpg`} alt={book.title} class="w-[100%] h-auto" />
-			</div>
-	</div>
-
+	<BookWidget key={book.isbn} bookData={book} compact />
 ))}
 </div>
+

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Image } from 'astro:assets';
 const FilmWidget = ({ filmData, posterPath = null, compact = false, className = '' }) => {
   // Helper function to format runtime from minutes to hours:minutes
   const formatRuntime = (minutes) => {
