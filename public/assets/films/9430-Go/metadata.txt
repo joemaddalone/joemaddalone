@@ -1,0 +1,34 @@
+Film: Go
+Original Title: Go
+Release Date: 1999-04-09
+Runtime: 98 minutes
+Rating: 7/10 (766 votes)
+Popularity: 2.0657
+Status: Released
+
+Tagline: "Life begins at 3am."
+
+Overview:
+A supermarket clerk decides to step in for an absent drug dealer, setting off an explosive, comedic chain of events.
+
+Genres:
+- Crime
+- Comedy
+- Thriller
+
+Production Companies:
+- Columbia Pictures (US)
+- Banner Entertainment ()
+- Saratoga Entertainment ()
+
+Production Countries:
+- United States of America
+
+Spoken Languages:
+- English (English)
+
+Budget: $6,500,000
+Revenue: $28,451,622
+IMDB: https://www.imdb.com/title/tt0139239
+
+Data retrieved on: 2025-08-29T01:56:44.505Z

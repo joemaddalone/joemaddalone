@@ -1,0 +1,73 @@
+{
+  "id": 11468,
+  "title": "The Salton Sea",
+  "originalTitle": "The Salton Sea",
+  "overview": "After the murder of his beloved wife, a man in search of redemption is set adrift in a world where nothing is as it seems. On his journey, he befriends slacker Jimmy \"The Finn\", becomes involved in rescuing his neighbor Colette from her own demons, and gets entangled in a web of deceit full of unexpected twists and turns.",
+  "releaseDate": "2002-02-12",
+  "posterPath": "/i3InMSlLUNBEdQTKazMdyVP1ryX.jpg",
+  "backdropPath": "/keHN5s88wrPD3C07n6Lzev0vd69.jpg",
+  "genres": [
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 103,
+  "voteAverage": 6.563,
+  "voteCount": 333,
+  "popularity": 1.4507,
+  "status": "Released",
+  "tagline": "If you're looking for the truth, you've come to the wrong place.",
+  "budget": 18000000,
+  "revenue": 1073198,
+  "productionCompanies": [
+    {
+      "id": 96043,
+      "name": "Humble Journey Films",
+      "logoPath": null,
+      "originCountry": ""
+    },
+    {
+      "id": 97,
+      "name": "Castle Rock Entertainment",
+      "logoPath": "/7znWcbDd4PcJzJUlJxYqAlPPykp.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 3982,
+      "name": "Darkwoods Productions",
+      "logoPath": "/bli7HkPOXOEWsDwDK0W7XXfeUU2.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0235737",
+  "homepage": ""
+}

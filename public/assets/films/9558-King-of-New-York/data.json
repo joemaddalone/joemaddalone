@@ -1,0 +1,74 @@
+{
+  "id": 9558,
+  "title": "King of New York",
+  "originalTitle": "King of New York",
+  "overview": "A former drug lord returns from prison determined to wipe out all his competition and distribute the profits of his operations to New York's poor and lower classes in this stylish and ultra violent modern twist on Robin Hood.",
+  "releaseDate": "1990-07-18",
+  "posterPath": "/1MyH4MJAJZJbb6wDVeOc2bTECtK.jpg",
+  "backdropPath": "/gIpMTiTPsuqWnJUU9Ft9U9KIijp.jpg",
+  "genres": [
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    }
+  ],
+  "runtime": 103,
+  "voteAverage": 6.7,
+  "voteCount": 724,
+  "popularity": 3.0497,
+  "status": "Released",
+  "tagline": "Not everyone who runs a city is elected.",
+  "budget": 5300000,
+  "revenue": 2554712,
+  "productionCompanies": [
+    {
+      "id": 1242,
+      "name": "Reteitalia",
+      "logoPath": "/qOvcm1WCLlAdNoQ1kCkk2J7bhWk.png",
+      "originCountry": "IT"
+    },
+    {
+      "id": 14974,
+      "name": "Scena International",
+      "logoPath": null,
+      "originCountry": "IT"
+    },
+    {
+      "id": 14159,
+      "name": "Seven Arts Pictures",
+      "logoPath": null,
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "IT",
+      "name": "Italy"
+    },
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    },
+    {
+      "englishName": "Spanish",
+      "iso6391": "es",
+      "name": "Español"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0099939",
+  "homepage": ""
+}

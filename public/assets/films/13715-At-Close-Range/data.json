@@ -1,0 +1,63 @@
+{
+  "id": 13715,
+  "title": "At Close Range",
+  "originalTitle": "At Close Range",
+  "overview": "Brad Whitewood Jr. lives in rural Pennsylvania and has few prospects. Against his mother's wishes, he seeks out his estranged father, the head of a gang of thieves in a nearby town. Though his new girlfriend supports his criminal ambitions, Brad Jr. soon learns that his father is a dangerous man. Inspired by the real events that led to the end of the Johnston Gang, who operated in the northeastern United States in the 1970s.",
+  "releaseDate": "1986-04-18",
+  "posterPath": "/bOkXqMmLowHBZY9lptWi3ljOXx4.jpg",
+  "backdropPath": "/ceFgHH7mnpwrKoK8dVRjfvIVr5e.jpg",
+  "genres": [
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 111,
+  "voteAverage": 6.9,
+  "voteCount": 282,
+  "popularity": 2.1482,
+  "status": "Released",
+  "tagline": "Like father. Like son. Like hell.",
+  "budget": 6500000,
+  "revenue": 2347000,
+  "productionCompanies": [
+    {
+      "id": 469,
+      "name": "Hemdale Film Corporation",
+      "logoPath": null,
+      "originCountry": "GB"
+    },
+    {
+      "id": 218473,
+      "name": "Cinema '85",
+      "logoPath": null,
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0090670",
+  "homepage": ""
+}

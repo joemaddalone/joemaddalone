@@ -1,0 +1,29 @@
+Film: Weeds
+Original Title: Weeds
+Release Date: 1987-10-16
+Runtime: 115 minutes
+Rating: 5.313/10 (16 votes)
+Popularity: 1.3117
+Status: Released
+
+Tagline: "Feel what it's like from the inside."
+
+Overview:
+A San Quentin inmate, sentenced to life without parole, writes a play that catches the interest of a reporter.
+
+Genres:
+- Drama
+
+Production Companies:
+- Kingsgate Films (US)
+- DEG (US)
+
+Production Countries:
+- United States of America
+
+Spoken Languages:
+- English (English)
+
+IMDB: https://www.imdb.com/title/tt0094304
+
+Data retrieved on: 2025-08-29T01:53:23.231Z

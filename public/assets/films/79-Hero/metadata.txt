@@ -1,0 +1,39 @@
+Film: Hero
+Original Title: 英雄
+Release Date: 2002-07-22
+Runtime: 99 minutes
+Rating: 7.5/10 (2350 votes)
+Popularity: 5.4794
+Status: Released
+
+Tagline: "One man's strength will unite an empire."
+
+Overview:
+During China's Warring States period, a district prefect arrives at the palace of Qin Shi Huang, claiming to have killed the three assassins who had made an attempt on the king's life three years ago.
+
+Genres:
+- Drama
+- Adventure
+- Action
+- History
+
+Production Companies:
+- Beijing New Picture Film Co. Ltd. (CN)
+- China Film Co-Production Corp. (CN)
+- Elite Group Enterprises (HK)
+- Edko Films (HK)
+- Sil-Metropole Organisation (HK)
+- Zhang Yimou Studio (CN)
+
+Production Countries:
+- Hong Kong
+- China
+
+Spoken Languages:
+- 普通话 (Mandarin)
+
+Budget: $31,000,000
+Revenue: $177,394,432
+IMDB: https://www.imdb.com/title/tt0299977
+
+Data retrieved on: 2025-08-29T02:33:22.129Z

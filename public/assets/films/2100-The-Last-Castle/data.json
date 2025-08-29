@@ -1,0 +1,63 @@
+{
+  "id": 2100,
+  "title": "The Last Castle",
+  "originalTitle": "The Last Castle",
+  "overview": "A court-martialed general rallies together 1200 inmates to rise against the system that put him away.",
+  "releaseDate": "2001-10-19",
+  "posterPath": "/pYnUfauPVK6g8IRO2REYl4TUZ2p.jpg",
+  "backdropPath": "/bYJyQqqJV30RJX6VPE3Rz1lPZhH.jpg",
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 131,
+  "voteAverage": 7.2,
+  "voteCount": 1319,
+  "popularity": 2.7946,
+  "status": "Released",
+  "tagline": "A Castle Can Only Have One King",
+  "budget": 72000000,
+  "revenue": 27642707,
+  "productionCompanies": [
+    {
+      "id": 7,
+      "name": "DreamWorks Pictures",
+      "logoPath": "/vru2SssLX3FPhnKZGtYw00pVIS9.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 12245,
+      "name": "Robert Lawrence Productions",
+      "logoPath": null,
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0272020",
+  "homepage": ""
+}

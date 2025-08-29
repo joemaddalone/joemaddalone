@@ -1,0 +1,69 @@
+{
+  "id": 83,
+  "title": "Open Water",
+  "originalTitle": "Open Water",
+  "overview": "Two divers are left out at sea without a boat. There’s nothing but water for miles, unless they look at what’s underneath them...",
+  "releaseDate": "2003-10-26",
+  "posterPath": "/7Gy5N0Yp7ocaKBR860v9KDbpYHj.jpg",
+  "backdropPath": "/58BUQzjN6TH0bLe6JEfgMbHc55u.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    }
+  ],
+  "runtime": 79,
+  "voteAverage": 5.543,
+  "voteCount": 1088,
+  "popularity": 1.6866,
+  "status": "Released",
+  "tagline": "Scream all you want.",
+  "budget": 120000,
+  "revenue": 54683487,
+  "productionCompanies": [
+    {
+      "id": 22376,
+      "name": "Plunge Pictures LLC",
+      "logoPath": null,
+      "originCountry": ""
+    },
+    {
+      "id": 35,
+      "name": "Lions Gate Films",
+      "logoPath": "/wxrHa3nZ1K4zo65p56991INkGo6.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 153897,
+      "name": "EastGate Films",
+      "logoPath": null,
+      "originCountry": ""
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0374102",
+  "homepage": "https://openwaterfilm.com/"
+}

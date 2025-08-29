@@ -1,0 +1,67 @@
+{
+  "id": 104,
+  "title": "Run Lola Run",
+  "originalTitle": "Lola rennt",
+  "overview": "Lola receives a phone call from her boyfriend Manni. He lost 100,000 DM in a subway train that belongs to a very bad guy. She has 20 minutes to raise this amount and meet Manni. Otherwise, he will rob a store to get the money. Three different alternatives may happen depending on some minor event along Lola's run.",
+  "releaseDate": "1998-08-20",
+  "posterPath": "/v0giIi4bTILVhNhJajet3WWY3FA.jpg",
+  "backdropPath": "/wRcm3iwi4BeMN59U4fjO7u3dOVI.jpg",
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 81,
+  "voteAverage": 7.291,
+  "voteCount": 2396,
+  "popularity": 2.2794,
+  "status": "Released",
+  "tagline": "Every second of every day you're faced with a decision that can change your life.",
+  "budget": 1530000,
+  "revenue": 7660911,
+  "productionCompanies": [
+    {
+      "id": 96,
+      "name": "X Filme Creative Pool",
+      "logoPath": "/9ps82gVzUeNdkjmLzoGDQLiLDio.png",
+      "originCountry": "DE"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "DE",
+      "name": "Germany"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "German",
+      "iso6391": "de",
+      "name": "Deutsch"
+    },
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    },
+    {
+      "englishName": "Japanese",
+      "iso6391": "ja",
+      "name": "日本語"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "de",
+  "imdbId": "tt0130827",
+  "homepage": ""
+}

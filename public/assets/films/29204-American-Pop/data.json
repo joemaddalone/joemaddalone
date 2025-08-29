@@ -1,0 +1,88 @@
+{
+  "id": 29204,
+  "title": "American Pop",
+  "originalTitle": "American Pop",
+  "overview": "The history of American popular music runs parallel with the history of a Russian Jewish immigrant family, with each male descendant possessing different musical abilities.",
+  "releaseDate": "1981-02-13",
+  "posterPath": "/uJ3zi0dGXAMQicBLdxS1bXg5jdV.jpg",
+  "backdropPath": "/n82OZ74V3KBDQKrSVqgVzE8nnjs.jpg",
+  "genres": [
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 10402,
+      "name": "Music"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 36,
+      "name": "History"
+    }
+  ],
+  "runtime": 96,
+  "voteAverage": 6.9,
+  "voteCount": 113,
+  "popularity": 2.1515,
+  "status": "Released",
+  "tagline": "All those years, all those dreams, all those sons... one of them is going to be a star.",
+  "budget": 1500000,
+  "revenue": 6000000,
+  "productionCompanies": [
+    {
+      "id": 4921,
+      "name": "Bakshi Productions",
+      "logoPath": null,
+      "originCountry": ""
+    },
+    {
+      "id": 4922,
+      "name": "Aspen Productions",
+      "logoPath": null,
+      "originCountry": "US"
+    },
+    {
+      "id": 5,
+      "name": "Columbia Pictures",
+      "logoPath": "/71BqEFAF4V3qjjMPCpLuyJFB9A.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    },
+    {
+      "englishName": "Hebrew",
+      "iso6391": "he",
+      "name": "עִבְרִית"
+    },
+    {
+      "englishName": "Russian",
+      "iso6391": "ru",
+      "name": "Pусский"
+    },
+    {
+      "englishName": "Yiddish",
+      "iso6391": "yi",
+      "name": ""
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0082009",
+  "homepage": ""
+}

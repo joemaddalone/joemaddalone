@@ -1,0 +1,95 @@
+{
+  "id": 79,
+  "title": "Hero",
+  "originalTitle": "英雄",
+  "overview": "During China's Warring States period, a district prefect arrives at the palace of Qin Shi Huang, claiming to have killed the three assassins who had made an attempt on the king's life three years ago.",
+  "releaseDate": "2002-07-22",
+  "posterPath": "/vxgZto2Cz7ILHAlmRXt50I2brB2.jpg",
+  "backdropPath": "/jDz6RYN3nKYtlo7J9IMvGoJit7B.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 36,
+      "name": "History"
+    }
+  ],
+  "runtime": 99,
+  "voteAverage": 7.5,
+  "voteCount": 2350,
+  "popularity": 5.4794,
+  "status": "Released",
+  "tagline": "One man's strength will unite an empire.",
+  "budget": 31000000,
+  "revenue": 177394432,
+  "productionCompanies": [
+    {
+      "id": 724,
+      "name": "Beijing New Picture Film Co. Ltd.",
+      "logoPath": null,
+      "originCountry": "CN"
+    },
+    {
+      "id": 2269,
+      "name": "China Film Co-Production Corp.",
+      "logoPath": null,
+      "originCountry": "CN"
+    },
+    {
+      "id": 142725,
+      "name": "Elite Group Enterprises",
+      "logoPath": null,
+      "originCountry": "HK"
+    },
+    {
+      "id": 10284,
+      "name": "Edko Films",
+      "logoPath": "/u0FCdiR026xbEbuY4yqaKj9Lf2O.png",
+      "originCountry": "HK"
+    },
+    {
+      "id": 5686,
+      "name": "Sil-Metropole Organisation",
+      "logoPath": "/o4aETXAP9HxOSRbGDWgBfkSzSJw.png",
+      "originCountry": "HK"
+    },
+    {
+      "id": 93117,
+      "name": "Zhang Yimou Studio",
+      "logoPath": null,
+      "originCountry": "CN"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "HK",
+      "name": "Hong Kong"
+    },
+    {
+      "iso31661": "CN",
+      "name": "China"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "Mandarin",
+      "iso6391": "zh",
+      "name": "普通话"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "zh",
+  "imdbId": "tt0299977",
+  "homepage": ""
+}

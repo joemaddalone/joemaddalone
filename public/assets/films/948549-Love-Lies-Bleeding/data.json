@@ -1,0 +1,83 @@
+{
+  "id": 948549,
+  "title": "Love Lies Bleeding",
+  "originalTitle": "Love Lies Bleeding",
+  "overview": "Reclusive gym manager Lou falls hard for Jackie, an ambitious bodybuilder headed through town to Las Vegas in pursuit of her dream. But their love ignites violence, pulling them deep into the web of Lou’s criminal family.",
+  "releaseDate": "2024-03-07",
+  "posterPath": "/xImj8RLe39YK0lyVu9kXv7ApN8p.jpg",
+  "backdropPath": "/oMiKHO3H5RixfLsiU5Vumhlp5sj.jpg",
+  "genres": [
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "runtime": 104,
+  "voteAverage": 6.6,
+  "voteCount": 835,
+  "popularity": 4.9434,
+  "status": "Released",
+  "tagline": "Revenge gets ripped.",
+  "budget": 10000000,
+  "revenue": 12778225,
+  "productionCompanies": [
+    {
+      "id": 6705,
+      "name": "Film4 Productions",
+      "logoPath": "/iNB1FCwT4XjO6wkN3PnpPnwr9GX.png",
+      "originCountry": "GB"
+    },
+    {
+      "id": 129195,
+      "name": "Escape Plan",
+      "logoPath": null,
+      "originCountry": "GB"
+    },
+    {
+      "id": 41077,
+      "name": "A24",
+      "logoPath": "/1ZXsGaFPgrgS6ZZGS37AqD5uU12.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 173376,
+      "name": "Lobo Films",
+      "logoPath": null,
+      "originCountry": "GB"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "GB",
+      "name": "United Kingdom"
+    },
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt19637052",
+  "homepage": "https://tickets.loveliesbleeding.movie"
+}

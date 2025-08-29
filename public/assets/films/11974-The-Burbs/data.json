@@ -1,0 +1,69 @@
+{
+  "id": 11974,
+  "title": "The 'Burbs",
+  "originalTitle": "The 'Burbs",
+  "overview": "When secretive new neighbors move in next door, suburbanite Ray Peterson and his friends let their paranoia get the best of them as they start to suspect the newcomers of evildoings and commence an investigation. But it's hardly how Ray, who much prefers drinking beer, reading his newspaper and watching a ball game on the tube expected to spend his vacation.",
+  "releaseDate": "1989-02-17",
+  "posterPath": "/jwYKzJS0C3A711hmg1G4ptI0InF.jpg",
+  "backdropPath": "/pyeknyOKRLBd4ROOeYL6kV103ov.jpg",
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 102,
+  "voteAverage": 6.8,
+  "voteCount": 1286,
+  "popularity": 3.4698,
+  "status": "Released",
+  "tagline": "He's a man of peace in a savage land... Suburbia.",
+  "budget": 18000000,
+  "revenue": 49100000,
+  "productionCompanies": [
+    {
+      "id": 33,
+      "name": "Universal Pictures",
+      "logoPath": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 23,
+      "name": "Imagine Entertainment",
+      "logoPath": "/bJOFo2ufq7iFC1F4qZm8aLxF5aS.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 215830,
+      "name": "Rollins-Morra-Brezner Productions",
+      "logoPath": null,
+      "originCountry": ""
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0096734",
+  "homepage": ""
+}

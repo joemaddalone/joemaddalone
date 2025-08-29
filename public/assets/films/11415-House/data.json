@@ -1,0 +1,57 @@
+{
+  "id": 11415,
+  "title": "House",
+  "originalTitle": "House",
+  "overview": "Roger Cobb, a divorced horror novelist coming to terms with the disappearance of his young son, inherits an old mansion home to malevolent supernatural residents.",
+  "releaseDate": "1985-12-06",
+  "posterPath": "/ysIPmxLVYYvTUaOwEsLjF7nEf4C.jpg",
+  "backdropPath": "/6NuoAB5atGEhvhyNPm3bwQwlyjF.jpg",
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    }
+  ],
+  "runtime": 92,
+  "voteAverage": 6.2,
+  "voteCount": 589,
+  "popularity": 1.3139,
+  "status": "Released",
+  "tagline": "Horror Has Found a New Home.",
+  "budget": 3000000,
+  "revenue": 19444631,
+  "productionCompanies": [
+    {
+      "id": 1950,
+      "name": "New World Pictures",
+      "logoPath": "/eIoDtHIJKZaZ4hGbKgqC0PzlqJc.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0091223",
+  "homepage": ""
+}

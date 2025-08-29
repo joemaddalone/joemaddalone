@@ -1,0 +1,55 @@
+{
+  "id": 8092,
+  "title": "This Boy's Life",
+  "originalTitle": "This Boy's Life",
+  "overview": "When a son and mother move to Seattle in hopes for a better life, the mother meets a seemingly polite man. Things go south when the man turns out to be abusive, endangering their lives. As the mother struggles to maintain hope in an impossible situation, the son has plans to escape.",
+  "releaseDate": "1993-04-09",
+  "posterPath": "/pRMSZfen1Cv1eqwDbtxCBpBqxnU.jpg",
+  "backdropPath": "/6N6VUUR1gzbCkiGpQzvRREv3Od1.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "runtime": 115,
+  "voteAverage": 7.123,
+  "voteCount": 1019,
+  "popularity": 2.4352,
+  "status": "Released",
+  "tagline": "He looked like the ideal husband. He seemed like the perfect father. That's just what they needed. But that's not what they got.",
+  "budget": 0,
+  "revenue": 4104962,
+  "productionCompanies": [
+    {
+      "id": 54052,
+      "name": "Knickerbocker Films",
+      "logoPath": null,
+      "originCountry": "US"
+    },
+    {
+      "id": 174,
+      "name": "Warner Bros. Pictures",
+      "logoPath": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt0108330",
+  "homepage": ""
+}
