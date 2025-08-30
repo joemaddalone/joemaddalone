@@ -1,5 +1,5 @@
 import React, { useRef, useState, useLayoutEffect } from "react";
-import Path, { Svg, Rect } from "react-svg-path";
+import { Svg, Rect } from "react-svg-path";
 import "./index.css";
 import CharSpinner from "./CharSpinner";
 
@@ -80,7 +80,6 @@ export const ChartCatch = () => {
   const handleMouseMove = (e) => {
     const ctx = canvasRef.current.getContext("2d");
     const rect = canvasRef.current.getBoundingClientRect();
-    // console.log(rect);
 
     const x = e?.touches ? e.touches[0].clientX - rect.left : e.clientX - rect.left;
     const y = e?.touches ? e.touches[0].clientY - rect.top : e.clientY - rect.top;

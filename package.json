@@ -26,10 +26,10 @@
     "dagre": "^0.8.5",
     "gh-pages": "^6.3.0",
     "gridset": "^1.0.5",
+    "motion": "^12.23.12",
     "prop-types": "^15.8.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-spring": "^10.0.1",
     "react-svg-path": "^1.15.0",
     "tailwindcss": "^4.1.12"
   },
