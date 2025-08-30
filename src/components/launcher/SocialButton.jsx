@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import {
   RoundedSquare,
@@ -7,7 +7,8 @@ import {
   Rect,
   Text,
 } from "react-svg-path";
-import { useSpring, animated } from "react-spring";
+import { useSpring, motion } from "motion/react";
+
 import "./launcher.css";
 
 const SocialButton = ({ cx, cy, ox, offset, control }) => {
@@ -31,26 +32,37 @@ const SocialButton = ({ cx, cy, ox, offset, control }) => {
     };
   };
 
-  const { x } = useSpring({
-    config: { duration: activated ? 800 : 400 },
-    to: { x: activated ? 0 : 360 },
-    from: { x: activated ? 360 : 0 },
+  const x = useSpring(activated ? 0 : 360, {
+    type: "spring",
+    stiffness: 500,
+    damping: 100,
+    duration: activated ? 800 : 800,
   });
 
-  const { l } = useSpring({
-    config: { duration: activated ? 200 : 0 },
-    to: { l: activated ? 0 : bannerDist },
-    from: { l: activated ? bannerDist : 50 },
-    delay: activated ? 400 : 0,
-    onRest: () => setFlag(activated),
+  const l = useSpring(activated ? 0 : bannerDist, {
+    type: "spring",
+    stiffness: 100,
+    damping: 15,
+    delay: activated ? 400 : 0
   });
+
+  useEffect(() => {
+    if (activated) {
+      l.set(0);
+    }
+  }, [activated]);
+
+  useEffect(() => {
+    x.set(activated ? 0 : 360);
+  }, [activated]);
+
   return (
     <>
       {flag ? (
         <MarkerTriangle id="my-marker-id" color={activated?.color} />
       ) : null}
       <g className="flourish" transform={`translate(${tx}, ${cy})`}>
-        <animated.g className="control-box" strokeDashoffset={x}>
+        <motion.g className="control-box" strokeDashoffset={x}>
           <a href={control.url}>
             <RoundedSquare
               tabIndex={0}
@@ -63,7 +75,7 @@ const SocialButton = ({ cx, cy, ox, offset, control }) => {
               {...activator(control)}
             />
           </a>
-        </animated.g>
+        </motion.g>
         <use
           x={ox - 12}
           y={-12}
@@ -72,7 +84,7 @@ const SocialButton = ({ cx, cy, ox, offset, control }) => {
         />
       </g>
       {activated ? (
-        <animated.g className="control-box-banner" strokeDashoffset={l}>
+        <motion.g className="control-box-banner" strokeDashoffset={l}  onAnimationComplete={() => setFlag(activated)}>
           <Line
             className="control-box-banner"
             sx={activated.cx}
@@ -94,7 +106,7 @@ const SocialButton = ({ cx, cy, ox, offset, control }) => {
             stroke={activated.color}
             strokeDasharray={bannerDist}
           />
-        </animated.g>
+        </motion.g>
       ) : null}
       {flag && activated ? (
         <Rect
