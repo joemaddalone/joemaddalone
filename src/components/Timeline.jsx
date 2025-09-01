@@ -2,7 +2,6 @@ import React, { useState, useMemo } from 'react';
 import './Timeline.css';
 
 const Timeline = ({ data, className = '' }) => {
-  const [selectedEntry, setSelectedEntry] = useState(null);
   const [hoveredEntry, setHoveredEntry] = useState(null);
 
   // Helper function to parse various date formats
@@ -91,7 +90,7 @@ const Timeline = ({ data, className = '' }) => {
       {/* Timeline */}
       <div className="relative">
         {/* Central timeline line */}
-        <div style={{zIndex: -1}} className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-500 h-full rounded-full"></div>
+        <div style={{ zIndex: -1 }} className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-500 h-full rounded-full"></div>
 
         {decades.map((decade, decadeIndex) => (
           <div key={decade} className="mb-16">
@@ -108,15 +107,13 @@ const Timeline = ({ data, className = '' }) => {
             <div className="space-y-8">
               {groupedEntries[decade].map((entry, entryIndex) => {
                 const isLeft = entryIndex % 2 === 0;
-                const isSelected = selectedEntry === entry;
                 const isHovered = hoveredEntry === entry;
 
                 return (
                   <div
                     key={`${decade}-${entryIndex}`}
-                    className={`relative flex items-center ${
-                      isLeft ? 'flex-row' : 'flex-row-reverse'
-                    }`}
+                    className={`relative flex items-center ${isLeft ? 'flex-row' : 'flex-row-reverse'
+                      }`}
                   >
                     {/* Entry content */}
                     <div
@@ -125,14 +122,10 @@ const Timeline = ({ data, className = '' }) => {
                       onMouseLeave={() => setHoveredEntry(null)}
                     >
                       <div
-                        className={`p-6 rounded-lg shadow-lg transition-all duration-300 cursor-pointer ${
-                          isSelected
-                            ? 'bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500'
-                            : isHovered
+                        className={`p-6 rounded-lg shadow-lg transition-all duration-300 cursor-pointer ${isHovered
                             ? 'bg-gray-50 dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-600'
                             : 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700'
-                        }`}
-                        onClick={() => setSelectedEntry(isSelected ? null : entry)}
+                          }`}
                       >
                         {/* Date */}
                         <div className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2">
@@ -165,14 +158,6 @@ const Timeline = ({ data, className = '' }) => {
                         )}
                       </div>
                     </div>
-
-                    {/* Timeline node */}
-                    {/* <div className="w-full h-1 bg-white dark:bg-gray-900 border-4 relative z-10">
-											<svg className="w-full h-full" viewBox="0 0 20 100" preserveAspectRatio="xMidYMid meet">
-												<path d="M 0 0 L 100 100" stroke="currentColor" strokeWidth="2" fill="none" />
-											</svg>
-                    </div> */}
-
                     {/* Spacer for right side */}
                     <div className="w-5/12"></div>
                   </div>
@@ -190,48 +175,6 @@ const Timeline = ({ data, className = '' }) => {
           Total entries: {data.metadata?.totalEntries || data.entries.length}
         </p>
       </div>
-
-      {/* Selected entry modal */}
-      {selectedEntry && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
-            <div className="p-6">
-              <div className="flex justify-between items-start mb-4">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  {selectedEntry.title}
-                </h2>
-                <button
-                  onClick={() => setSelectedEntry(null)}
-                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-2xl font-bold"
-                >
-                  ×
-                </button>
-              </div>
-
-              <div className="text-lg text-blue-600 dark:text-blue-400 mb-4">
-                {formatDate(selectedEntry.date)}
-              </div>
-
-              {selectedEntry.details && (
-                <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  {selectedEntry.details}
-                </p>
-              )}
-
-              {selectedEntry.url && (
-                <a
-                  href={selectedEntry.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-                >
-                  View Source
-                </a>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
