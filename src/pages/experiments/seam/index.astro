@@ -4,7 +4,7 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
 
 <ExpLayout pageTitle="Seam Carving">
     <div class="container mx-auto max-w-2xl mt-6 prose">
-        <h2>Seam Carving</h2>
+        <h1>Seam Carving</h1>
         <p>
             This is a simple implementation of seam carving. It is not optimized
             for performance and is not a real-time implementation. It is a proof
@@ -25,6 +25,237 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
         </div>
         <div id="info" class="info"></div>
         <div class="image-container flex justify-center items-center"></div>
+    </div>
+
+    <div class="container mx-auto max-w-2xl mt-6 prose">
+        <h2>How it works</h2>
+
+        <p>
+            The algorithm works by calculating the energy of each pixel in the image and then finding the seam with the lowest energy. The seam is then removed from the image and the process is repeated until the image is the desired size.
+        </p>
+
+
+        <p>
+            The energy of each pixel is calculated by taking the gradient of the pixel in the x and y directions. The gradient is calculated by taking the difference between the pixel and the pixel above it in the y direction and the pixel and the pixel to the left of it in the x direction.
+        </p>
+
+<pre class="language-javascript"><code>{`function calculateEnergy(imageData) {
+  const { width, height, data } = imageData;
+  const energy = new Array(width * height);
+
+  // Helper function to calculate gradient between two pixels
+  const getGradient = (idx1, idx2) => {
+    const r1 = data[idx1], g1 = data[idx1 + 1], b1 = data[idx1 + 2];
+    const r2 = data[idx2], g2 = data[idx2 + 1], b2 = data[idx2 + 2];
+    return Math.sqrt((r2 - r1) ** 2 + (g2 - g1) ** 2 + (b2 - b1) ** 2);
+  };
+
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const idx = (y * width + x) * 4;
+      let gradX = 0, gradY = 0;
+
+      // X gradient (left to right)
+      if (x > 0 && x < width - 1) {
+        gradX = getGradient((y * width + (x - 1)) * 4, (y * width + (x + 1)) * 4);
+      }
+
+      // Y gradient (top to bottom)
+      if (y > 0 && y < height - 1) {
+        gradY = getGradient(((y - 1) * width + x) * 4, ((y + 1) * width + x) * 4);
+      }
+
+      energy[y * width + x] = Math.sqrt(gradX ** 2 + gradY ** 2);
+    }
+  }
+
+    return energy;
+}
+`}</code></pre>
+
+        <p>
+            The seam is found by using dynamic programming. The dynamic programming table is filled by taking the minimum energy of the pixel above it and the pixel to the left of it and adding the energy of the current pixel. The seam is then found by backtracking through the dynamic programming table.
+        </p>
+<pre class="language-javascript"><code>{`function findVerticalSeam(energy, width, height) {
+  const dp = new Array(width * height);
+  const path = new Array(width * height);
+
+  // Initialize first row
+  for (let x = 0; x < width; x++) {
+    dp[x] = energy[x];
+  }
+
+  // Fill DP table
+  for (let y = 1; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      let minEnergy = dp[(y - 1) * width + x];
+      let minX = x;
+
+      if (x > 0) {
+        const leftEnergy = dp[(y - 1) * width + (x - 1)];
+        if (leftEnergy < minEnergy) {
+          minEnergy = leftEnergy;
+          minX = x - 1;
+        }
+      }
+
+     if (x < width - 1) {
+        const rightEnergy = dp[(y - 1) * width + (x + 1)];
+        if (rightEnergy < minEnergy) {
+          minEnergy = rightEnergy;
+          minX = x + 1;
+        }
+      }
+
+      dp[y * width + x] = minEnergy + energy[y * width + x];
+      path[y * width + x] = minX;
+    }
+  }
+
+  // Find the minimum energy path
+  let minX = 0;
+  let minEnergy = dp[(height - 1) * width];
+
+  for (let x = 1; x < width; x++) {
+    if (dp[(height - 1) * width + x] < minEnergy) {
+      minEnergy = dp[(height - 1) * width + x];
+      minX = x;
+    }
+  }
+
+  // Reconstruct the seam
+  const seam = new Array(height);
+  seam[height - 1] = minX;
+
+  for (let y = height - 1; y > 0; y--) {
+    seam[y - 1] = path[y * width + seam[y]];
+  }
+
+  return seam;
+}
+`}</code></pre>
+
+<p>Here we remove the seam from the image.</p>
+
+<pre class="language-javascript"><code>{`function removeVerticalSeam(imageData, seam) {
+  const width = imageData.width;
+  const height = imageData.height;
+  const data = imageData.data;
+
+  const newData = new Uint8ClampedArray((width - 1) * height * 4);
+
+  for (let y = 0; y < height; y++) {
+    const seamX = seam[y];
+
+    // Copy pixels before the seam
+    for (let x = 0; x < seamX; x++) {
+      const oldIdx = (y * width + x) * 4;
+      const newIdx = (y * (width - 1) + x) * 4;
+      newData[newIdx] = data[oldIdx];
+      newData[newIdx + 1] = data[oldIdx + 1];
+      newData[newIdx + 2] = data[oldIdx + 2];
+      newData[newIdx + 3] = data[oldIdx + 3];
+    }
+
+    // Copy pixels after the seam
+    for (let x = seamX + 1; x < width; x++) {
+      const oldIdx = (y * width + x) * 4;
+      const newIdx = (y * (width - 1) + (x - 1)) * 4;
+      newData[newIdx] = data[oldIdx];
+      newData[newIdx + 1] = data[oldIdx + 1];
+      newData[newIdx + 2] = data[oldIdx + 2];
+      newData[newIdx + 3] = data[oldIdx + 3];
+    }
+  }
+
+  return new ImageData(newData, width - 1, height);
+}
+  `}</code></pre>
+
+        <p>
+            We put this all together in carveVerticalSeam.
+        </p>
+
+
+<pre class="language-javascript"><code>{`function carveVerticalSeam() {
+  // Calculate energy
+  const energy = calculateEnergy(currentImageData);
+
+  // Find seam
+  const seam = findVerticalSeam(
+    energy,
+    currentImageData.width,
+    currentImageData.height,
+  );
+  currentImageData = removeVerticalSeam(currentImageData, seam);
+}
+`}</code></pre>
+
+<p>I chose to capture the image data in a canvas rendering.</p>
+
+<pre class="language-javascript"><code>{`const CONFIG = {
+  IMAGE_PATH: "/assets/exp/seam/y.jpg",
+};
+
+// DOM element cache
+const DOM = {
+  init() {
+    this.info = document.getElementById("info");
+    this.container = document.querySelector(".image-container");
+  },
+};
+
+// Global state
+let originalImageData = null;
+let currentImageData = null;
+let canvas, ctx;
+let imageWidth, imageHeight;
+
+function init() {
+  if (!DOM.container) {
+    console.error("Container element not found");
+    return;
+  }
+
+  canvas = document.createElement("canvas");
+  canvas.id = "c";
+  DOM.container.appendChild(canvas);
+  ctx = canvas.getContext("2d");
+
+  let img = new Image();
+  img.onerror = function () {
+    console.error("Failed to load image");
+    if (DOM.info) {
+      DOM.info.textContent = "Error: Failed to load image";
+    }
+  };
+
+  img.onload = function () {
+    imageWidth = img.width;
+    imageHeight = img.height;
+    canvas.width = imageWidth;
+    canvas.height = imageHeight;
+    ctx.drawImage(img, 0, 0);
+
+    // Store original image data
+    originalImageData = ctx.getImageData(
+      0,
+      0,
+      canvas.width,
+      canvas.height,
+    );
+    currentImageData = new ImageData(
+      new Uint8ClampedArray(originalImageData.data),
+      originalImageData.width,
+      originalImageData.height,
+    );
+  };
+
+  img.src = CONFIG.IMAGE_PATH;
+}
+`}</code></pre>
+
+
     </div>
 
     <script is:inline>
@@ -160,67 +391,32 @@ import ExpLayout from "../../../layouts/ExpLayout.astro";
          * @returns {Array<number>} Energy values for each pixel
          */
         function calculateEnergy(imageData) {
-            const width = imageData.width;
-            const height = imageData.height;
-            const data = imageData.data;
+            const { width, height, data } = imageData;
             const energy = new Array(width * height);
+
+            // Helper function to calculate gradient between two pixels
+            const getGradient = (idx1, idx2) => {
+                const r1 = data[idx1], g1 = data[idx1 + 1], b1 = data[idx1 + 2];
+                const r2 = data[idx2], g2 = data[idx2 + 1], b2 = data[idx2 + 2];
+                return Math.sqrt((r2 - r1) ** 2 + (g2 - g1) ** 2 + (b2 - b1) ** 2);
+            };
 
             for (let y = 0; y < height; y++) {
                 for (let x = 0; x < width; x++) {
                     const idx = (y * width + x) * 4;
+                    let gradX = 0, gradY = 0;
 
-                    // Get RGB values
-                    const r = data[idx];
-                    const g = data[idx + 1];
-                    const b = data[idx + 2];
-
-                    // Calculate gradients
-                    let gradX = 0,
-                        gradY = 0;
-
-                    // X gradient
+                    // X gradient (left to right)
                     if (x > 0 && x < width - 1) {
-                        const leftIdx = (y * width + (x - 1)) * 4;
-                        const rightIdx = (y * width + (x + 1)) * 4;
-
-                        const leftR = data[leftIdx];
-                        const leftG = data[leftIdx + 1];
-                        const leftB = data[leftIdx + 2];
-
-                        const rightR = data[rightIdx];
-                        const rightG = data[rightIdx + 1];
-                        const rightB = data[rightIdx + 2];
-
-                        gradX = Math.sqrt(
-                            Math.pow(rightR - leftR, 2) +
-                                Math.pow(rightG - leftG, 2) +
-                                Math.pow(rightB - leftB, 2),
-                        );
+                        gradX = getGradient((y * width + (x - 1)) * 4, (y * width + (x + 1)) * 4);
                     }
 
-                    // Y gradient
+                    // Y gradient (top to bottom)
                     if (y > 0 && y < height - 1) {
-                        const topIdx = ((y - 1) * width + x) * 4;
-                        const bottomIdx = ((y + 1) * width + x) * 4;
-
-                        const topR = data[topIdx];
-                        const topG = data[topIdx + 1];
-                        const topB = data[topIdx + 2];
-
-                        const bottomR = data[bottomIdx];
-                        const bottomG = data[bottomIdx + 1];
-                        const bottomB = data[bottomIdx + 2];
-
-                        gradY = Math.sqrt(
-                            Math.pow(bottomR - topR, 2) +
-                                Math.pow(bottomG - topG, 2) +
-                                Math.pow(bottomB - topB, 2),
-                        );
+                        gradY = getGradient(((y - 1) * width + x) * 4, ((y + 1) * width + x) * 4);
                     }
 
-                    energy[y * width + x] = Math.sqrt(
-                        gradX * gradX + gradY * gradY,
-                    );
+                    energy[y * width + x] = Math.sqrt(gradX ** 2 + gradY ** 2);
                 }
             }
 
