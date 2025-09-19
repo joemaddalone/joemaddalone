@@ -1,13 +1,215 @@
 <!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/x-icon" href="/assets/favicon.ico"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.12.5"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js" integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><title>Seam Carving</title><style>.image-container[data-astro-cid-oszzfp6z]{width:100%;overflow:hidden}.image-container[data-astro-cid-oszzfp6z] canvas[data-astro-cid-oszzfp6z],.image-container[data-astro-cid-oszzfp6z] img[data-astro-cid-oszzfp6z]{display:block;max-width:100%;width:100%;height:auto}.controls[data-astro-cid-oszzfp6z]{display:flex;flex-wrap:wrap;gap:.5rem;margin:.5rem 0 .75rem}.controls[data-astro-cid-oszzfp6z] .ui[data-astro-cid-oszzfp6z].button{flex:1 1 30%;min-width:90px;box-sizing:border-box}@media (max-width: 480px){.controls[data-astro-cid-oszzfp6z] .ui[data-astro-cid-oszzfp6z].button{flex:1 1 calc(50% - .5rem)}}.info[data-astro-cid-oszzfp6z]{margin:10px;font-family:monospace;overflow-wrap:anywhere;font-size:.9rem}
 </style>
-<link rel="stylesheet" href="/_astro/_slug_.DnmDY69P.css"></head> <body> <div class="sticky top-0 z-50 bg-white/80 shadow-md"> <nav class="flex items-center justify-between text-black h-12"> <a class="mt1 ml-1" href="/"> <img src="/assets/favicon-32x32.png" width="32" height="32" alt=""> </a> <div class="flex items-stretch h-full nav-links "> <a class="px-4 border-l-2 border-l-gray-200 hover:bg-gray-100 duration-200 flex items-center h-full overflow-hidden" href="/writes">write</a> <a class="px-4 border-l-2 border-l-gray-200 hover:bg-gray-100 duration-200 flex items-center h-full overflow-hidden" href="/experiments">experiment</a> <a class="px-4 border-l-2 border-l-gray-200 hover:bg-gray-100 duration-200 flex items-center h-full overflow-hidden" href="/resume">work</a> </div> </nav> </div>  <div class="container mx-auto max-w-2xl mt-6 prose" data-astro-cid-oszzfp6z> <h2 data-astro-cid-oszzfp6z>Seam Carving</h2> <p data-astro-cid-oszzfp6z>
+<link rel="stylesheet" href="/_astro/_slug_.DnmDY69P.css"></head> <body> <div class="sticky top-0 z-50 bg-white/80 shadow-md"> <nav class="flex items-center justify-between text-black h-12"> <a class="mt1 ml-1" href="/"> <img src="/assets/favicon-32x32.png" width="32" height="32" alt=""> </a> <div class="flex items-stretch h-full nav-links "> <a class="px-4 border-l-2 border-l-gray-200 hover:bg-gray-100 duration-200 flex items-center h-full overflow-hidden" href="/writes">write</a> <a class="px-4 border-l-2 border-l-gray-200 hover:bg-gray-100 duration-200 flex items-center h-full overflow-hidden" href="/experiments">experiment</a> <a class="px-4 border-l-2 border-l-gray-200 hover:bg-gray-100 duration-200 flex items-center h-full overflow-hidden" href="/resume">work</a> </div> </nav> </div>  <div class="container mx-auto max-w-2xl mt-6 prose" data-astro-cid-oszzfp6z> <h1 data-astro-cid-oszzfp6z>Seam Carving</h1> <p data-astro-cid-oszzfp6z>
 This is a simple implementation of seam carving. It is not optimized
             for performance and is not a real-time implementation. It is a proof
             of concept.
 </p> <p data-astro-cid-oszzfp6z>
 The algorithm is based on the paper <a href="https://perso.crans.org/frenoy/matlab2012/seamcarving.pdf" data-astro-cid-oszzfp6z>Seam Carving for Content-Aware Image Resizing</a> by Shai Avidan and Ariel Shamir.
-</p> <div class="controls" data-astro-cid-oszzfp6z> <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_100" data-astro-cid-oszzfp6z>100%</button> <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_80" data-astro-cid-oszzfp6z>80%</button> <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_60" data-astro-cid-oszzfp6z>60%</button> <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_40" data-astro-cid-oszzfp6z>40%</button> <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_20" data-astro-cid-oszzfp6z>20%</button> </div> <div id="info" class="info" data-astro-cid-oszzfp6z></div> <div class="image-container flex justify-center items-center" data-astro-cid-oszzfp6z></div> </div> <script>
+</p> <div class="controls" data-astro-cid-oszzfp6z> <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_100" data-astro-cid-oszzfp6z>100%</button> <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_80" data-astro-cid-oszzfp6z>80%</button> <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_60" data-astro-cid-oszzfp6z>60%</button> <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_40" data-astro-cid-oszzfp6z>40%</button> <button class="border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:bg-blue-50" id="carveBtn_20" data-astro-cid-oszzfp6z>20%</button> </div> <div id="info" class="info" data-astro-cid-oszzfp6z></div> <div class="image-container flex justify-center items-center" data-astro-cid-oszzfp6z></div> </div> <div class="container mx-auto max-w-2xl mt-6 prose" data-astro-cid-oszzfp6z> <h2 data-astro-cid-oszzfp6z>How it works</h2> <p data-astro-cid-oszzfp6z>
+The algorithm works by calculating the energy of each pixel in the image and then finding the seam with the lowest energy. The seam is then removed from the image and the process is repeated until the image is the desired size.
+</p> <p data-astro-cid-oszzfp6z>
+The energy of each pixel is calculated by taking the gradient of the pixel in the x and y directions. The gradient is calculated by taking the difference between the pixel and the pixel above it in the y direction and the pixel and the pixel to the left of it in the x direction.
+</p> <pre class="language-javascript" data-astro-cid-oszzfp6z><code data-astro-cid-oszzfp6z>function calculateEnergy(imageData) {
+  const { width, height, data } = imageData;
+  const energy = new Array(width * height);
+
+  // Helper function to calculate gradient between two pixels
+  const getGradient = (idx1, idx2) =&gt; {
+    const r1 = data[idx1], g1 = data[idx1 + 1], b1 = data[idx1 + 2];
+    const r2 = data[idx2], g2 = data[idx2 + 1], b2 = data[idx2 + 2];
+    return Math.sqrt((r2 - r1) ** 2 + (g2 - g1) ** 2 + (b2 - b1) ** 2);
+  };
+
+  for (let y = 0; y &lt; height; y++) {
+    for (let x = 0; x &lt; width; x++) {
+      const idx = (y * width + x) * 4;
+      let gradX = 0, gradY = 0;
+
+      // X gradient (left to right)
+      if (x &gt; 0 &amp;&amp; x &lt; width - 1) {
+        gradX = getGradient((y * width + (x - 1)) * 4, (y * width + (x + 1)) * 4);
+      }
+
+      // Y gradient (top to bottom)
+      if (y &gt; 0 &amp;&amp; y &lt; height - 1) {
+        gradY = getGradient(((y - 1) * width + x) * 4, ((y + 1) * width + x) * 4);
+      }
+
+      energy[y * width + x] = Math.sqrt(gradX ** 2 + gradY ** 2);
+    }
+  }
+
+    return energy;
+}
+</code></pre> <p data-astro-cid-oszzfp6z>
+The seam is found by using dynamic programming. The dynamic programming table is filled by taking the minimum energy of the pixel above it and the pixel to the left of it and adding the energy of the current pixel. The seam is then found by backtracking through the dynamic programming table.
+</p> <pre class="language-javascript" data-astro-cid-oszzfp6z><code data-astro-cid-oszzfp6z>function findVerticalSeam(energy, width, height) {
+  const dp = new Array(width * height);
+  const path = new Array(width * height);
+
+  // Initialize first row
+  for (let x = 0; x &lt; width; x++) {
+    dp[x] = energy[x];
+  }
+
+  // Fill DP table
+  for (let y = 1; y &lt; height; y++) {
+    for (let x = 0; x &lt; width; x++) {
+      let minEnergy = dp[(y - 1) * width + x];
+      let minX = x;
+
+      if (x &gt; 0) {
+        const leftEnergy = dp[(y - 1) * width + (x - 1)];
+        if (leftEnergy &lt; minEnergy) {
+          minEnergy = leftEnergy;
+          minX = x - 1;
+        }
+      }
+
+     if (x &lt; width - 1) {
+        const rightEnergy = dp[(y - 1) * width + (x + 1)];
+        if (rightEnergy &lt; minEnergy) {
+          minEnergy = rightEnergy;
+          minX = x + 1;
+        }
+      }
+
+      dp[y * width + x] = minEnergy + energy[y * width + x];
+      path[y * width + x] = minX;
+    }
+  }
+
+  // Find the minimum energy path
+  let minX = 0;
+  let minEnergy = dp[(height - 1) * width];
+
+  for (let x = 1; x &lt; width; x++) {
+    if (dp[(height - 1) * width + x] &lt; minEnergy) {
+      minEnergy = dp[(height - 1) * width + x];
+      minX = x;
+    }
+  }
+
+  // Reconstruct the seam
+  const seam = new Array(height);
+  seam[height - 1] = minX;
+
+  for (let y = height - 1; y &gt; 0; y--) {
+    seam[y - 1] = path[y * width + seam[y]];
+  }
+
+  return seam;
+}
+</code></pre> <p data-astro-cid-oszzfp6z>Here we remove the seam from the image.</p> <pre class="language-javascript" data-astro-cid-oszzfp6z><code data-astro-cid-oszzfp6z>function removeVerticalSeam(imageData, seam) {
+  const width = imageData.width;
+  const height = imageData.height;
+  const data = imageData.data;
+
+  const newData = new Uint8ClampedArray((width - 1) * height * 4);
+
+  for (let y = 0; y &lt; height; y++) {
+    const seamX = seam[y];
+
+    // Copy pixels before the seam
+    for (let x = 0; x &lt; seamX; x++) {
+      const oldIdx = (y * width + x) * 4;
+      const newIdx = (y * (width - 1) + x) * 4;
+      newData[newIdx] = data[oldIdx];
+      newData[newIdx + 1] = data[oldIdx + 1];
+      newData[newIdx + 2] = data[oldIdx + 2];
+      newData[newIdx + 3] = data[oldIdx + 3];
+    }
+
+    // Copy pixels after the seam
+    for (let x = seamX + 1; x &lt; width; x++) {
+      const oldIdx = (y * width + x) * 4;
+      const newIdx = (y * (width - 1) + (x - 1)) * 4;
+      newData[newIdx] = data[oldIdx];
+      newData[newIdx + 1] = data[oldIdx + 1];
+      newData[newIdx + 2] = data[oldIdx + 2];
+      newData[newIdx + 3] = data[oldIdx + 3];
+    }
+  }
+
+  return new ImageData(newData, width - 1, height);
+}
+  </code></pre> <p data-astro-cid-oszzfp6z>
+We put this all together in carveVerticalSeam.
+</p> <pre class="language-javascript" data-astro-cid-oszzfp6z><code data-astro-cid-oszzfp6z>function carveVerticalSeam() {
+  // Calculate energy
+  const energy = calculateEnergy(currentImageData);
+
+  // Find seam
+  const seam = findVerticalSeam(
+    energy,
+    currentImageData.width,
+    currentImageData.height,
+  );
+  currentImageData = removeVerticalSeam(currentImageData, seam);
+}
+</code></pre> <p data-astro-cid-oszzfp6z>I chose to capture the image data in a canvas rendering.</p> <pre class="language-javascript" data-astro-cid-oszzfp6z><code data-astro-cid-oszzfp6z>const CONFIG = {
+  IMAGE_PATH: &quot;/assets/exp/seam/y.jpg&quot;,
+};
+
+// DOM element cache
+const DOM = {
+  init() {
+    this.info = document.getElementById(&quot;info&quot;);
+    this.container = document.querySelector(&quot;.image-container&quot;);
+  },
+};
+
+// Global state
+let originalImageData = null;
+let currentImageData = null;
+let canvas, ctx;
+let imageWidth, imageHeight;
+
+function init() {
+  if (!DOM.container) {
+    console.error(&quot;Container element not found&quot;);
+    return;
+  }
+
+  canvas = document.createElement(&quot;canvas&quot;);
+  canvas.id = &quot;c&quot;;
+  DOM.container.appendChild(canvas);
+  ctx = canvas.getContext(&quot;2d&quot;);
+
+  let img = new Image();
+  img.onerror = function () {
+    console.error(&quot;Failed to load image&quot;);
+    if (DOM.info) {
+      DOM.info.textContent = &quot;Error: Failed to load image&quot;;
+    }
+  };
+
+  img.onload = function () {
+    imageWidth = img.width;
+    imageHeight = img.height;
+    canvas.width = imageWidth;
+    canvas.height = imageHeight;
+    ctx.drawImage(img, 0, 0);
+
+    // Store original image data
+    originalImageData = ctx.getImageData(
+      0,
+      0,
+      canvas.width,
+      canvas.height,
+    );
+    currentImageData = new ImageData(
+      new Uint8ClampedArray(originalImageData.data),
+      originalImageData.width,
+      originalImageData.height,
+    );
+  };
+
+  img.src = CONFIG.IMAGE_PATH;
+}
+</code></pre> </div> <script>
         // Configuration constants
         const CONFIG = {
             SEAM_HIGHLIGHT_DURATION: 20, // ms
@@ -140,67 +342,32 @@ The algorithm is based on the paper <a href="https://perso.crans.org/frenoy/matl
          * @returns {Array<number>} Energy values for each pixel
          */
         function calculateEnergy(imageData) {
-            const width = imageData.width;
-            const height = imageData.height;
-            const data = imageData.data;
+            const { width, height, data } = imageData;
             const energy = new Array(width * height);
+
+            // Helper function to calculate gradient between two pixels
+            const getGradient = (idx1, idx2) => {
+                const r1 = data[idx1], g1 = data[idx1 + 1], b1 = data[idx1 + 2];
+                const r2 = data[idx2], g2 = data[idx2 + 1], b2 = data[idx2 + 2];
+                return Math.sqrt((r2 - r1) ** 2 + (g2 - g1) ** 2 + (b2 - b1) ** 2);
+            };
 
             for (let y = 0; y < height; y++) {
                 for (let x = 0; x < width; x++) {
                     const idx = (y * width + x) * 4;
+                    let gradX = 0, gradY = 0;
 
-                    // Get RGB values
-                    const r = data[idx];
-                    const g = data[idx + 1];
-                    const b = data[idx + 2];
-
-                    // Calculate gradients
-                    let gradX = 0,
-                        gradY = 0;
-
-                    // X gradient
+                    // X gradient (left to right)
                     if (x > 0 && x < width - 1) {
-                        const leftIdx = (y * width + (x - 1)) * 4;
-                        const rightIdx = (y * width + (x + 1)) * 4;
-
-                        const leftR = data[leftIdx];
-                        const leftG = data[leftIdx + 1];
-                        const leftB = data[leftIdx + 2];
-
-                        const rightR = data[rightIdx];
-                        const rightG = data[rightIdx + 1];
-                        const rightB = data[rightIdx + 2];
-
-                        gradX = Math.sqrt(
-                            Math.pow(rightR - leftR, 2) +
-                                Math.pow(rightG - leftG, 2) +
-                                Math.pow(rightB - leftB, 2),
-                        );
+                        gradX = getGradient((y * width + (x - 1)) * 4, (y * width + (x + 1)) * 4);
                     }
 
-                    // Y gradient
+                    // Y gradient (top to bottom)
                     if (y > 0 && y < height - 1) {
-                        const topIdx = ((y - 1) * width + x) * 4;
-                        const bottomIdx = ((y + 1) * width + x) * 4;
-
-                        const topR = data[topIdx];
-                        const topG = data[topIdx + 1];
-                        const topB = data[topIdx + 2];
-
-                        const bottomR = data[bottomIdx];
-                        const bottomG = data[bottomIdx + 1];
-                        const bottomB = data[bottomIdx + 2];
-
-                        gradY = Math.sqrt(
-                            Math.pow(bottomR - topR, 2) +
-                                Math.pow(bottomG - topG, 2) +
-                                Math.pow(bottomB - topB, 2),
-                        );
+                        gradY = getGradient(((y - 1) * width + x) * 4, ((y + 1) * width + x) * 4);
                     }
 
-                    energy[y * width + x] = Math.sqrt(
-                        gradX * gradX + gradY * gradY,
-                    );
+                    energy[y * width + x] = Math.sqrt(gradX ** 2 + gradY ** 2);
                 }
             }
 
