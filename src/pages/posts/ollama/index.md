@@ -3,6 +3,7 @@ title: 'ollama'
 date: 2023-11-24
 tags: ['post']
 excerpt: 'ollama + langchain'
+short: 'Ollama'
 ---
 
 <hgroup>

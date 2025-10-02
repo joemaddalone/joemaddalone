@@ -3,6 +3,7 @@ title: 'DupliBalance Disorder'
 date: 2023-12-27
 tags: ['post']
 excerpt: 'Dumb app + automation I did today'
+short: 'fin app'
 ---
 
 <hgroup>

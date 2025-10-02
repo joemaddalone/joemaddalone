@@ -3,6 +3,7 @@ title: 'Missed CSS: counters'
 date: 2023-10-23
 tags: ['post']
 excerpt: 'Numbering without ordered lists.'
+short: 'CSS: Counters'
 ---
 
 <hgroup>

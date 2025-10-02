@@ -3,6 +3,7 @@ title: "Missed CSS: accent color"
 date: 2025-09-23
 tags: ["post"]
 excerpt: "dead simple."
+short: 'CSS: accent'
 ---
 
 <hgroup>

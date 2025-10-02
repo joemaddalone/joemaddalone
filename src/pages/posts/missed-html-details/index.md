@@ -3,6 +3,7 @@ title: 'Missed HTML: details'
 date: 2021-12-13
 tags: ['post']
 excerpt: 'The details tag is often overlooked and reinvented.'
+short: 'HTML: details'
 ---
 
 <hgroup>

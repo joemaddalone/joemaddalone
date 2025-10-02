@@ -3,6 +3,7 @@ title: 'Missed HTML: ruby'
 date: 2022-12-28
 tags: ['post']
 excerpt: 'A quick win for otherwise complicated typography.'
+short: 'HTML: ruby'
 ---
 
 <hgroup>

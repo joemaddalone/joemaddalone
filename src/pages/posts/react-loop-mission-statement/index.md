@@ -3,6 +3,7 @@ title: 'React Loop Mission Statement'
 date: 2023-11-18
 tags: ['post']
 excerpt: 'A mission statement I wrote'
+short: 'Mission statement'
 ---
 
 <hgroup>

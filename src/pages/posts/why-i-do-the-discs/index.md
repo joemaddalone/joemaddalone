@@ -3,6 +3,7 @@ title: 'Why I Do the Discs'
 date: 2023-02-17
 tags: ['post']
 excerpt: 'I like physical media for movies.'
+short: 'Discs'
 ---
 
 <hgroup>

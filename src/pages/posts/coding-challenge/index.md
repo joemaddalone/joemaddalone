@@ -3,6 +3,7 @@ title: 'Joe Says: How to Conduct a Coding Challenge'
 date: 2023-11-17
 tags: ['post']
 excerpt: 'joe tells you stuff like he really knows...'
+short: 'Code challenge'
 ---
 
 <hgroup>

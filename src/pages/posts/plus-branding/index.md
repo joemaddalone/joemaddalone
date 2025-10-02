@@ -3,6 +3,7 @@ title: 'Plus Branding'
 date: 2023-05-02
 tags: ['post']
 excerpt: 'Thoughts on lazy branding (+).'
+short: '+ brands'
 ---
 
 <hgroup>

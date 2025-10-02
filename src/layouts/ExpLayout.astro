@@ -37,7 +37,7 @@ const { pageTitle, includeHeader = true, includeFooter = true, prism = true } = 
     )}
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body class="body-container">
     {includeHeader && <Header />}
     <slot />
     {includeFooter && <Footer />}

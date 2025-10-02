@@ -90,73 +90,69 @@ a:not(.resume a):not(.nav-links a):not(.explist a) {
 .explist {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+	gap: 4px;
 }
 
 .explist a {
   overflow: hidden;
   counter: numberH;
   counter-increment: numberH;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  border: 1px solid #222;
-  background-color: #eee;
-  padding: 10px;
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  text-decoration: none;
+  background-color: #fff2;
+  width: 95px;
+  height: 95px;
   color: #222;
+	transition: all 0.3s ease;
 }
 
 .explist a:hover {
-  background-color: #222;
+  background-color: #2228;
   color: #fff;
 }
 
-.explist a span.label {
-  font-size: 80px;
+/* .explist a div.label {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+  font-size: 60px;
   font-weight: bold;
   color: #ddd8;
-}
+} */
 
-.explist a span.description {
+.explist a div.label {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
+  top: 4px;
+  left: 4px;
+  font-size: 14px;
+	width: 90%;
+	word-wrap: break-word;
+	hyphens: manual;
+	letter-spacing: -1px;
+	text-transform: uppercase;
   line-height: 1;
   font-weight: bold;
-  color: #222;
+	color: #fff8;
 }
 
-.explist a span.counter {
+.explist a div.counter {
   position: absolute;
-  bottom: -4px;
-  right: 2px;
-  font-size: 12px;
+  bottom: 4px;
+  right: 4px;
+  font-size: 10px;
   font-weight: bold;
-  color: #222;
+  color: #fff8;
 }
 
-.explist a span.counter::before {
+.explist a div.counter::before {
   content: counter(numberH);
 }
 
-.explist a:hover span.description {
+.explist a:hover div.label {
   color: #fff;
+  /* filter: blur(2px); */
 }
 
-.explist a:hover span.label {
-  color: #444;
-  filter: blur(2px);
-}
-
-.explist a:hover span.counter {
+.explist a:hover div.counter {
   color: #fff;
 }
 

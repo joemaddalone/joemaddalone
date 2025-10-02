@@ -3,6 +3,7 @@ title: 'Crockford on the Alphabet'
 date: 2023-12-23
 tags: ['post']
 excerpt: 'Douglas Crockford tells us how to say letters.'
+short: 'Crockford ABC'
 ---
 
 <hgroup>
