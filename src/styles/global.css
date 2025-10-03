@@ -332,3 +332,22 @@ hgroup p {
 	display: flex;
 	justify-content: center;
 }
+
+
+.col-words {
+	width: 33%;
+	max-width: 450px;
+}
+
+.col-experiments {
+	width: 450px;
+}
+
+@media (max-width: 768px) {
+	.col-words {
+		width: 100%;
+	}
+	.col-experiments {
+		width: 100%;
+	}
+}
