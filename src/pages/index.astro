@@ -1,19 +1,9 @@
 ---
-import ExpLayout from "../layouts/ExpLayout.astro";
-import BlogPost from "../components/BlogPost.astro";
-import Prose from "../components/Prose.astro";
 import { getCollection } from "astro:content";
 import "../styles/global.css";
 const pageTitle = "Blog Page";
 import createSlug from "../lib/createSlug";
 const allPosts = await getCollection("blog");
-
-// random color always in a darker tone
-const randomColor = () => {
-  // use hsl
-  return `hsl(${Math.floor(Math.random() * 360)}, 100%, 18%)`;
-};
-const baseColor = randomColor();
 ---
 
 <html lang="en">
@@ -91,12 +81,9 @@ const baseColor = randomColor();
       sizes="16x16"
       href="/assets/favicon-16x16.png"
     />
-		<style define:vars={{ foregroundColor: baseColor, backgroundColor: baseColor }}>
-			body {
-				background-color: var(--backgroundColor);
-			}
-		</style>
-
+		<script>
+			document.body.style.backgroundColor = `hsl(${Math.floor(Math.random() * 360)}, 100%, 18%)`;
+		</script>
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta
       name="msapplication-TileImage"
