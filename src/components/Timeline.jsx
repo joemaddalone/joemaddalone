@@ -112,7 +112,7 @@ const Timeline = ({ data, className = '' }) => {
                 return (
                   <div
                     key={`${decade}-${entryIndex}`}
-                    className={`relative flex items-center ${isLeft ? 'flex-row' : 'flex-row-reverse'
+                    className={`relative flex items-center ${isLeft ? 'flex-row left-node' : 'flex-row-reverse right-node'
                       }`}
                   >
                     {/* Entry content */}

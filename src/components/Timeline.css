@@ -67,6 +67,28 @@
   animation: slideUp 0.3s ease-out;
 }
 
+.timeline-container .right-node:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: calc(5 / 14 * 100%);
+	width: 95px;
+	z-index:-1;
+	height: 3px;
+	background-color: var(--color-gray-500);
+}
+
+.timeline-container .left-node:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: calc(5 / 14 * 100%);
+	width: 95px;
+	z-index:-1;
+	height: 3px;
+	background-color: var(--color-gray-500);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
