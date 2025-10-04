@@ -90,7 +90,6 @@ a:not(.resume a):not(.nav-links a):not(.explist a) {
 .explist {
   display: flex;
   flex-wrap: wrap;
-	gap: 4px;
 }
 
 .explist a {
@@ -99,16 +98,26 @@ a:not(.resume a):not(.nav-links a):not(.explist a) {
   counter-increment: numberH;
   position: relative;
   background-color: #fff2;
-  width: 95px;
-  height: 95px;
+  width: 90px;
+  height: 90px;
+	margin: 2px;
+	/* border-radius: 2px; */
   color: #222;
 	transition: all 0.3s ease;
+	border-radius: 4px 4px 4px 4px;
 }
 
 .explist a:hover {
   background-color: #2228;
   color: #fff;
+	border-radius: 4px 4px 18px 4px;
+	corner-bottom-right-shape: bevel;
+	box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.5);
 }
+
+
+
+
 
 /* .explist a div.label {
 	position: absolute;
@@ -141,6 +150,7 @@ a:not(.resume a):not(.nav-links a):not(.explist a) {
   font-size: 10px;
   font-weight: bold;
   color: #fff8;
+	transition: all 0.3s ease;
 }
 
 .explist a div.counter::before {
@@ -153,7 +163,7 @@ a:not(.resume a):not(.nav-links a):not(.explist a) {
 }
 
 .explist a:hover div.counter {
-  color: #fff;
+  color: transparent;
 }
 
 /* ===== EXISTING COMPONENTS (PRESERVED) ===== */
@@ -343,7 +353,7 @@ hgroup p {
 	width: 450px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 902px) {
 	.col-words {
 		width: 100%;
 	}
