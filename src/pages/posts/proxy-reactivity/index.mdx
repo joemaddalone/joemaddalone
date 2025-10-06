@@ -245,5 +245,113 @@ count.value = 10; // Triggers the listener
 count.value = 10; // No trigger (same value)
 count.value = 20; // Triggers the listener again
 console.log(count.value); // 20
+
 `}
 </script>
+
+
+### Obligatory counter example:
+
+```js
+const s = new Stater();
+const count = s.useState(0);
+
+count.listen((value) => {
+  document.querySelector('#count').textContent = value;
+});
+
+const add = document.querySelector('#plus');
+add.addEventListener('click', () => {
+	count.value++;
+});
+
+const minus = document.querySelector('#minus');
+minus.addEventListener('click', () => {
+	count.value--;
+});
+```
+
+<div class="flex justify-center items-center gap-2 m-4">
+  <button id="minus" class="pointer bg-blue-500 text-white p-2 rounded-md" type="button">-</button>
+  <div class="text-2xl text-black" id="count">0</div>
+  <button id="plus" class="pointer bg-blue-500 text-white p-2 rounded-md" type="button">+</button>
+</div>
+
+
+<script>
+{`
+class Stater {
+  constructor(initialState = {}) {
+    this.stateId = 0;
+    this.listeners = new Map();
+    // our proxy
+    this.state = new Proxy(initialState, {
+      set: (target, property, value) => {
+        const old = target[property];
+        target[property] = value;
+        if (old !== value) {
+          if (this.listeners.has(property)) {
+            // if we have subscribers for this property, run them
+            this.listeners.get(property).forEach((fn) => fn(value));
+          }
+        }
+        return true;
+      },
+    });
+  }
+  listen(stateObj, fn) {
+    if (stateObj && stateObj._property) {
+      this.listeners.set(stateObj._property, [
+        ...(this.listeners.get(stateObj._property) || []),
+        fn,
+      ]);
+    }
+  }
+  useState(initialValue) {
+    const property = 'state_' + this.stateId++;
+    const listenRef = this.listen.bind(this);
+    const stateRef = this.state;
+    if (!(property in stateRef)) {
+      stateRef[property] = initialValue;
+    }
+    return {
+      _property: property,
+      get value() {
+        return stateRef[property];
+      },
+      set value(newValue) {
+        stateRef[property] = newValue;
+      },
+      // simpler access to listener creation
+      listen(fn) {
+        listenRef(this, fn);
+      },
+    };
+  }
+}
+
+const s = new Stater();
+const count = s.useState(0);
+
+count.listen((value) => {
+  document.querySelector('#count').textContent = value;
+});
+
+const add = document.querySelector('#plus');
+add.addEventListener('click', () => {
+	count.value++;
+});
+
+const minus = document.querySelector('#minus');
+minus.addEventListener('click', () => {
+	count.value--;
+});
+`}
+</script>
+
+By no means is this a production-ready solution, but it's a fun way to learn about the Proxy object and how to use it to create a simple reactive system.
+
+
+
+
+
