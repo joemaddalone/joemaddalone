@@ -62,7 +62,7 @@ state.x = 20; // Triggers the listener again
 let stateId = 0;
 const useState = (initialValue) => {
   const id = stateId++;
-  const property = 'state_0.4433803418871396';
+  const property = 'state_0.04317403836373579';
   // Initialize the state if it doesn't exist
   // Remember: this is our Proxy
   if (!(property in state)) {
@@ -91,4 +91,80 @@ count.value = 10; // Triggers the listener
 count.value = 10; // No trigger (same value)
 count.value = 20; // Triggers the listener again
 console.log(count.value); // 20
+
 </script>
+<h3 id="obligatory-counter-example">Obligatory counter example:</h3>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="js"><code><div class="ec-line"><div class="code"><span style="--0:#A2447B">const</span><span style="--0:#565869"> s </span><span style="--0:#646670">=</span><span style="--0:#565869"> </span><span style="--0:#A2447B">new</span><span style="--0:#565869"> </span><span style="--0:#066C9F">Stater</span><span style="--0:#646670">();</span></div></div><div class="ec-line"><div class="code"><span style="--0:#A2447B">const</span><span style="--0:#565869"> count </span><span style="--0:#646670">=</span><span style="--0:#565869"> s</span><span style="--0:#646670">.</span><span style="--0:#066C9F">useState</span><span style="--0:#646670">(</span><span style="--0:#B1403C">0</span><span style="--0:#646670">);</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#565869">count</span><span style="--0:#646670">.</span><span style="--0:#066C9F">listen</span><span style="--0:#646670">((</span><span style="--0:#565869">value</span><span style="--0:#646670">)</span><span style="--0:#565869"> </span><span style="--0:#646670">=&gt;</span><span style="--0:#565869"> </span><span style="--0:#646670">{</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#565869">  </span></span><span style="--0:#565869">document</span><span style="--0:#646670">.</span><span style="--0:#066C9F">querySelector</span><span style="--0:#646670">(</span><span style="--0:#646670">&#39;</span><span style="--0:#816100">#count</span><span style="--0:#646670">&#39;</span><span style="--0:#646670">).</span><span style="--0:#565869">textContent </span><span style="--0:#646670">=</span><span style="--0:#565869"> value</span><span style="--0:#646670">;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#646670">});</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#A2447B">const</span><span style="--0:#565869"> add </span><span style="--0:#646670">=</span><span style="--0:#565869"> document</span><span style="--0:#646670">.</span><span style="--0:#066C9F">querySelector</span><span style="--0:#646670">(</span><span style="--0:#646670">&#39;</span><span style="--0:#816100">#plus</span><span style="--0:#646670">&#39;</span><span style="--0:#646670">);</span></div></div><div class="ec-line"><div class="code"><span style="--0:#565869">add</span><span style="--0:#646670">.</span><span style="--0:#066C9F">addEventListener</span><span style="--0:#646670">(</span><span style="--0:#646670">&#39;</span><span style="--0:#816100">click</span><span style="--0:#646670">&#39;</span><span style="--0:#646670">,</span><span style="--0:#565869"> </span><span style="--0:#646670">()</span><span style="--0:#565869"> </span><span style="--0:#646670">=&gt;</span><span style="--0:#565869"> </span><span style="--0:#646670">{</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#565869">  </span></span><span style="--0:#565869">count</span><span style="--0:#646670">.</span><span style="--0:#565869">value</span><span style="--0:#646670">++;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#646670">});</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#A2447B">const</span><span style="--0:#565869"> minus </span><span style="--0:#646670">=</span><span style="--0:#565869"> document</span><span style="--0:#646670">.</span><span style="--0:#066C9F">querySelector</span><span style="--0:#646670">(</span><span style="--0:#646670">&#39;</span><span style="--0:#816100">#minus</span><span style="--0:#646670">&#39;</span><span style="--0:#646670">);</span></div></div><div class="ec-line"><div class="code"><span style="--0:#565869">minus</span><span style="--0:#646670">.</span><span style="--0:#066C9F">addEventListener</span><span style="--0:#646670">(</span><span style="--0:#646670">&#39;</span><span style="--0:#816100">click</span><span style="--0:#646670">&#39;</span><span style="--0:#646670">,</span><span style="--0:#565869"> </span><span style="--0:#646670">()</span><span style="--0:#565869"> </span><span style="--0:#646670">=&gt;</span><span style="--0:#565869"> </span><span style="--0:#646670">{</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#565869">  </span></span><span style="--0:#565869">count</span><span style="--0:#646670">.</span><span style="--0:#565869">value</span><span style="--0:#646670">--;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#646670">});</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="const s = new Stater();const count = s.useState(0);count.listen((value) => {  document.querySelector('#count').textContent = value;});const add = document.querySelector('#plus');add.addEventListener('click', () => {  count.value++;});const minus = document.querySelector('#minus');minus.addEventListener('click', () => {  count.value--;});"><div></div></button></div></figure></div>
+<div class="flex justify-center items-center gap-2 m-4"><button id="minus" class="pointer bg-blue-500 text-white p-2 rounded-md" type="button">-</button><div class="text-2xl text-black" id="count">0</div><button id="plus" class="pointer bg-blue-500 text-white p-2 rounded-md" type="button">+</button></div>
+<script>
+class Stater {
+constructor(initialState = {}) {
+  this.stateId = 0;
+  this.listeners = new Map();
+  // our proxy
+  this.state = new Proxy(initialState, {
+    set: (target, property, value) => {
+      const old = target[property];
+      target[property] = value;
+      if (old !== value) {
+        if (this.listeners.has(property)) {
+          // if we have subscribers for this property, run them
+          this.listeners.get(property).forEach((fn) => fn(value));
+        }
+      }
+      return true;
+    },
+  });
+}
+listen(stateObj, fn) {
+  if (stateObj && stateObj._property) {
+    this.listeners.set(stateObj._property, [
+      ...(this.listeners.get(stateObj._property) || []),
+      fn,
+    ]);
+  }
+}
+useState(initialValue) {
+  const property = 'state_' + this.stateId++;
+  const listenRef = this.listen.bind(this);
+  const stateRef = this.state;
+  if (!(property in stateRef)) {
+    stateRef[property] = initialValue;
+  }
+  return {
+    _property: property,
+    get value() {
+      return stateRef[property];
+    },
+    set value(newValue) {
+      stateRef[property] = newValue;
+    },
+    // simpler access to listener creation
+    listen(fn) {
+      listenRef(this, fn);
+    },
+  };
+}
+}
+
+const s = new Stater();
+const count = s.useState(0);
+
+count.listen((value) => {
+document.querySelector('#count').textContent = value;
+});
+
+const add = document.querySelector('#plus');
+add.addEventListener('click', () => {
+count.value++;
+});
+
+const minus = document.querySelector('#minus');
+minus.addEventListener('click', () => {
+count.value--;
+});
+</script>
+<p>By no means is this a production-ready solution, but it’s a fun way to learn about the Proxy object and how to use it to create a simple reactive system.</p>
