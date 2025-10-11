@@ -1,8 +1,9 @@
 ---
-title: 'DSPy Signatures in Ax'
+title: 'DSPy Signatures in Ax-llm'
 date: 2025-10-10
 tags: ['post']
-excerpt: 'DSPy sig ax'
+excerpt: 'DSPy signatures in ax-llm and how they eliminate brittle prompts.'
+short: 'DSPy > Prompt'
 ---
 
 <hgroup>

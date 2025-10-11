@@ -166,6 +166,14 @@ a:not(.resume a):not(.nav-links a):not(.explist a) {
   color: transparent;
 }
 
+// home page postlist
+ul.home-postlist {
+	outline: 1px solid #fff8;
+	li span a {
+		color: #fff8 !important;
+	}
+}
+
 /* ===== EXISTING COMPONENTS (PRESERVED) ===== */
 
 .expanded {

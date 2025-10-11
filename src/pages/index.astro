@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import BlogPost from "../components/BlogPost.astro";
 import "../styles/global.css";
 const pageTitle = "Blog Page";
 import createSlug from "../lib/createSlug";
@@ -98,24 +99,32 @@ const allPosts = await getCollection("blog");
 		</div>
     <div class="flex items-start justify-start p-4 h-container">
       <div class="flex flex-wrap col-words">
-        <h2 class="text-2xl font-bold font-mono text-white/30">/words</h2>
-        <div class="explist">
+        <h2 class="text-2xl font-bold font-mono text-white/30">/writes</h2>
+        <ul class="home-postlist mt-2">
           {
             allPosts
               .filter((post) => post.data.tags.includes("post"))
               .sort((a, b) => a.data.date.getTime() - b.data.date.getTime())
               .reverse()
               .map((post) => (
-                <a
-                  href={`/${createSlug(post.data.title)}`}
-
-                >
-                  <div class="label">{post.data?.short || post.data.title}</div>
-                  <div class="counter fill-low" />
-                </a>
+                <li class="mb-4! font-mono  mr-12! border-t border-white/20! pt-4!">
+                  <a class="hover:text-white/100! hover:underline!" href={`/${createSlug(post.data.title)}`}>
+                    <div class="text-white/80! text-md">
+                    {post.data.title}
+                    </div>
+                  </a>
+                    <div class="text-xs text-white/50!">{post.data.excerpt}</div>
+                </li>
               ))
           }
-        </div>
+          <!-- <li class="mb-4! font-mono border-t border-white/80! mr-12! pt-3">
+            <a class="hover:text-white/100! hover:underline!" href="/writes">
+              <div class="text-white/80! text-sm">
+              More ramblings...
+              </div>
+            </a>
+          </li> -->
+        </ul>
       </div>
       <div class="flex flex-wrap col-experiments">
         <h2 class="text-2xl font-bold font-mono text-white/30 basis-full">/experiments</h2>
