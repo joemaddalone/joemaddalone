@@ -78,7 +78,7 @@ state.x = 20; // Triggers the listener again
 let stateId = 0;
 const useState = (initialValue) => {
   const id = stateId++;
-  const property = 'state_0.8368103309336204';
+  const property = 'state_0.271663725257023';
   // Initialize the state if it doesn't exist
   // Remember: this is our Proxy
   if (!(property in state)) {
@@ -206,11 +206,11 @@ const cookie = document.querySelector('#cookies');
 
 const mover = (e) => {
 // if move right, increment
-if (e.movementX > 0) {
+if (e.movementX > 0 || e.movementY < 0) {
   cookieCount.value++;
 }
 // if move left, decrement
-if (e.movementX < 0) {
+if (e.movementX < 0 || e.movementY > 0) {
   if (cookieCount.value > 2) {
     cookieCount.value = cookieCount.value-1;
   }
