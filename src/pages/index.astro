@@ -82,9 +82,9 @@ const allPosts = await getCollection("blog");
       sizes="16x16"
       href="/assets/favicon-16x16.png"
     />
-		<script>
-			document.body.style.backgroundColor = `hsl(${Math.floor(Math.random() * 360)}, 100%, 18%)`;
-		</script>
+    <script>
+      document.body.style.backgroundColor = `hsl(${Math.floor(Math.random() * 360)}, 100%, 18%)`;
+    </script>
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta
       name="msapplication-TileImage"
@@ -93,109 +93,269 @@ const allPosts = await getCollection("blog");
     <meta name="theme-color" content="#ffffff" />
     <title>joe.maddalone</title>
   </head>
-  <body class="body-container">
-		<div class="mx-5 mt-1">
-			<h1 class="text-2xl font-bold font-mono text-white/30">Hi! I'm Joe.</h1>
-		</div>
-    <div class="flex items-start justify-start p-4 h-container">
-      <div class="flex flex-wrap col-words">
-        <h2 class="text-2xl font-bold font-mono text-white/30">/writes</h2>
-        <ul class="home-postlist mt-2">
-          {
-            allPosts
-              .filter((post) => post.data.tags.includes("post"))
-              .sort((a, b) => a.data.date.getTime() - b.data.date.getTime())
-              .reverse()
-              .map((post) => (
-                <li class="mb-4! font-mono  mr-12! border-t border-white/20! pt-4!">
-                  <a class="hover:text-white/100! hover:underline!" href={`/${createSlug(post.data.title)}`}>
-                    <div class="text-white/80! text-md">
-                    {post.data.title}
-                    </div>
-                  </a>
-                    <div class="text-xs text-white/50!">{post.data.excerpt}</div>
-                </li>
-              ))
-          }
-          <!-- <li class="mb-4! font-mono border-t border-white/80! mr-12! pt-3">
-            <a class="hover:text-white/100! hover:underline!" href="/writes">
-              <div class="text-white/80! text-sm">
-              More ramblings...
-              </div>
-            </a>
-          </li> -->
-        </ul>
+  <body class="">
+    <header class="w-full flex items-center justify-center p-4">
+      <div class="flex flex-col items-center justify-between">
+        <h1 class="text-2xl font-bold font-mono text-white/30">
+          Hi! I'm Joe Maddalone
+        </h1>
+        <div class="flex items-center justify-between">
+          <a
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+            href="https://www.linkedin.com/in/joemaddalone/"
+            class="text-white/80! text-md mr-4">linkedin</a
+          >
+          <a
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+            href="https://github.com/joemaddalone"
+            class="text-white/80! text-md mr-4">github</a
+          >
+          <a
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+            href="https://youtube.com/joemaddalone"
+            class="text-white/80! text-md mr-4">youtube</a
+          >
+          <a href="/resume" class="text-white/80! text-md">resume</a>
+        </div>
       </div>
-      <div class="flex flex-wrap col-experiments">
-        <h2 class="text-2xl font-bold font-mono text-white/30 basis-full">/experiments</h2>
-        <div class="explist">
-          <a href="/experiments/seam">
-            <div class="label">seam carving</div>
-            <div class="counter fill-low"></div>
-          </a>
-          <a href="/experiments/web-audio">
-            <div class="label">web audio</div>
-            <div class="counter fill-low"></div>
-          </a>
-          <a href="/experiments/canvas-exp">
-            <div class="label">canvas video grid</div>
-            <div class="counter fill-low"></div>
-          </a>
-          <a href="/experiments/canvas-video-shape">
-            <div class="label">canvas video shape clipping</div>
-            <div class="counter fill-low"></div>
-          </a>
-          <a href="/experiments/particles">
-            <div class="label">particles</div>
-            <div class="counter fill-low"></div>
-          </a>
-          <a href="/experiments/html-svg-canvas">
-            <div class="label text-left">&rarr;html &rarr;svg &rarr;canvas</div>
-            <div class="counter fill-low"></div>
-          </a>
+    </header>
+    <div class="w-full">
+      <div
+        class="max-w-[800px] w-full mx-auto flex flex-col items-center justify-start p-4"
+      >
+        <div class="">
+          <h2 class="text-2xl font-bold font-mono text-white/30">/writes</h2>
+          <ul class="mt-2">
+            {
+              allPosts
+                .filter((post) => post.data.tags.includes("post"))
+                .sort((a, b) => a.data.date.getTime() - b.data.date.getTime())
+                .reverse()
+                .map((post) => (
+                  <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+                    <a
+                      class="hover:text-white/100! hover:underline!"
+                      href={`/${createSlug(post.data.title)}`}
+                    >
+                      <div class="text-white/80! text-md">
+                        {post.data.title}
+                      </div>
+                    </a>
+                    <div class="text-xs text-white/50!">
+                      {post.data.excerpt}
+                    </div>
+                  </li>
+                ))
+            }
+          </ul>
         </div>
-				<h2 class="mt-6 text-2xl font-bold font-mono text-white/30 basis-full">/socials</h2>
-        <div class="explist">
-          <a href="https://github.com/joemaddalone">
-            <div class="label">github</div>
-            <div class="counter fill-low"></div>
-          </a>
-          <a href="https://linkedin.com/in/joemaddalone">
-            <div class="label">linkedin</div>
-            <div class="counter fill-low"></div>
-          </a>
-          <a href="https://youtube.com/joemaddalone">
-            <div class="label">youtube</div>
-            <div class="counter fill-low"></div>
-          </a>
-          <a href="https://twitter.com/joemaddalone">
-            <div class="label">twitter</div>
-            <div class="counter fill-low"></div>
-          </a>
+
+        <div class="mt-8 w-full">
+          <h2 class="text-2xl font-bold font-mono text-white/30">
+            /experiments
+          </h2>
+          <ul class="mt-2">
+            <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+              <a
+                class="hover:text-white/100! hover:underline!"
+                href="/experiments/html-svg-canvas/"
+              >
+                <div class="text-white/80! text-md">
+                  &rarr;html &rarr;svg &rarr;canvas
+                </div>
+              </a>
+              <div class="text-xs text-white/50!">
+                html &rarr;svg &rarr;canvas
+              </div>
+            </li>
+            <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+              <a
+                class="hover:text-white/100! hover:underline!"
+                href="/experiments/seam"
+              >
+                <div class="text-white/80! text-md">seam carving</div>
+              </a>
+              <div class="text-xs text-white/50!">image resizing algorithm</div>
+            </li>
+            <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+              <a
+                class="hover:text-white/100! hover:underline!"
+                href="/experiments/web-audio"
+              >
+                <div class="text-white/80! text-md">web audio</div>
+              </a>
+              <div class="text-xs text-white/50!">web audio code generator</div>
+            </li>
+            <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+              <a
+                class="hover:text-white/100! hover:underline!"
+                href="/experiments/canvas-exp"
+              >
+                <div class="text-white/80! text-md">canvas video grid</div>
+              </a>
+              <div class="text-xs text-white/50!">
+                canvas video grid experiment
+              </div>
+            </li>
+            <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+              <a
+                class="hover:text-white/100! hover:underline!"
+                href="/experiments/canvas-video-shape"
+              >
+                <div class="text-white/80! text-md">
+                  canvas video shape clipping
+                </div>
+              </a>
+              <div class="text-xs text-white/50!">
+                canvas video shape clipping experiment
+              </div>
+            </li>
+            <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+              <a
+                class="hover:text-white/100! hover:underline!"
+                href="/experiments/particles"
+              >
+                <div class="text-white/80! text-md">particles</div>
+              </a>
+              <div class="text-xs text-white/50!">particles experiment</div>
+            </li>
+          </ul>
         </div>
-				<h2 class="mt-6 text-2xl font-bold font-mono text-white/30 basis-full">/projects</h2>
-        <div class="explist">
-          <a href="https://joemaddalone.github.io/react-svg-path-docs/#/">
-            <div class="label">react-svg-path</div>
-            <div class="counter fill-low"></div>
-          </a>
-          <a href="https://2019.reactloop.com/">
-            <div class="label">react loop</div>
-            <div class="counter fill-low"></div>
-          </a>
-          <a href="https://joemaddalone.github.io/path/">
-            <div class="label">path</div>
-            <div class="counter fill-low"></div>
-          </a>
-        </div>
-				<h2 class="mt-6 text-2xl font-bold font-mono text-white/30 basis-full">&nbsp;</h2>
-				<div class="explist">
-          <a href="/resume">
-            <div class="label">RESUME</div>
-            <div class="counter fill-low"></div>
-          </a>
+
+        <div class="mt-8 w-full">
+          <h2 class="text-2xl font-bold font-mono text-white/30">/projects</h2>
+          <ul class="mt-2">
+            <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+              <a
+                class="hover:text-white/100! hover:underline!"
+                href="https://joemaddalone.github.io/react-svg-path-docs/#/"
+              >
+                <div class="text-white/80! text-md">react-svg-path</div>
+              </a>
+              <div class="text-xs text-white/50!">react-svg-path library</div>
+            </li>
+            <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+              <a
+                class="hover:text-white/100! hover:underline!"
+                href="https://2019.reactloop.com/"
+              >
+                <div class="text-white/80! text-md">react loop</div>
+              </a>
+              <div class="text-xs text-white/50!">react loop conference</div>
+            </li>
+            <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+              <a
+                class="hover:text-white/100! hover:underline!"
+                href="https://joemaddalone.github.io/path/"
+              >
+                <div class="text-white/80! text-md">path</div>
+              </a>
+              <div class="text-xs text-white/50!">path library</div>
+            </li>
+            <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+              <a
+                class="hover:text-white/100! hover:underline!"
+                href="https://github.com/joemaddalone/vogon"
+              >
+                <div class="text-white/80! text-md">vogon</div>
+              </a>
+              <div class="text-xs text-white/50!">vogon application</div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
+    <!-- <div
+      class="max-w-[800px] w-full mx-auto flex flex-col items-center justify-start p-4"
+    >
+
+
+      <h2 class="text-2xl font-bold font-mono text-white/30">/experiments</h2>
+      <ul class="mt-2">
+        <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+          <a
+            class="hover:text-white/100! hover:underline!"
+            href="/experiments/seam"
+          >
+            <div class="text-white/80! text-md">seam carving</div>
+          </a>
+          <div class="text-xs text-white/50!">image resizing algorithm</div>
+        </li>
+        <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+          <a
+            class="hover:text-white/100! hover:underline!"
+            href="/experiments/web-audio"
+          >
+            <div class="text-white/80! text-md">web audio</div>
+          </a>
+          <div class="text-xs text-white/50!">web audio code generator</div>
+        </li>
+        <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+          <a
+            class="hover:text-white/100! hover:underline!"
+            href="/experiments/canvas-exp"
+          >
+            <div class="text-white/80! text-md">canvas video grid</div>
+          </a>
+          <div class="text-xs text-white/50!">canvas video grid experiment</div>
+        </li>
+        <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+          <a
+            class="hover:text-white/100! hover:underline!"
+            href="/experiments/canvas-video-shape"
+          >
+            <div class="text-white/80! text-md">
+              canvas video shape clipping
+            </div>
+          </a>
+          <div class="text-xs text-white/50!">
+            canvas video shape clipping experiment
+          </div>
+        </li>
+        <li class="mb-4! font-mono border-t border-white/20! pt-4!">
+          <a
+            class="hover:text-white/100! hover:underline!"
+            href="/experiments/particles"
+          >
+            <div class="text-white/80! text-md">particles</div>
+          </a>
+          <div class="text-xs text-white/50!">particles experiment</div>
+        </li>
+        <a href="/experiments/html-svg-canvas">
+          <div class="text-white/80! text-md">
+            &rarr;html &rarr;svg &rarr;canvas
+          </div>
+          <div class="text-xs text-white/50!">
+            &rarr;html &rarr;svg &rarr;canvas
+          </div>
+        </a>
+      </ul>
+
+
+    <div class="my-8">
+      <h2 class="text-2xl font-bold font-mono text-white/30">/projects</h2>
+      <div class="explist">
+        <a href="https://joemaddalone.github.io/react-svg-path-docs/#/">
+          <div class="label">react-svg-path</div>
+          <div class="counter fill-low"></div>
+        </a>
+        <a href="https://2019.reactloop.com/">
+          <div class="label">react loop</div>
+          <div class="counter fill-low"></div>
+        </a>
+        <a href="https://joemaddalone.github.io/path/">
+          <div class="label">path</div>
+          <div class="counter fill-low"></div>
+        </a>
+        <a href="https://joemaddalone.github.io/vogon/">
+          <div class="label">vogon</div>
+          <div class="counter fill-low"></div>
+        </a>
+      </div>
+    </div>
+    </div> -->
   </body>
 </html>
