@@ -21,7 +21,7 @@
     "@tailwindcss/vite": "^4.1.12",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
-    "astro": "^5.12.4",
+    "astro": "^5.15.6",
     "astro-expressive-code": "^0.41.3",
     "dagre": "^0.8.5",
     "gh-pages": "^6.3.0",
