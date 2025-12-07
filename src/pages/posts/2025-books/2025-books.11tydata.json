@@ -1,3 +1,15 @@
 {
-    "books2025": []
+  "books2025": [
+    {
+      "title": "Careless People",
+      "subtitle": "A Cautionary Tale of Power, Greed, and Lost Idealism - A memoir",
+      "author": "Sarah Wynn-Williams",
+      "isbn": "9781250391230"
+    },
+    {
+      "title": "Zero to One: Notes on Startups, or How to Build the Future",
+      "author": "Peter A. Thiel",
+      "isbn": "9780804139298"
+    }
+  ]
 }

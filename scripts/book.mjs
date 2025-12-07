@@ -17,6 +17,7 @@ const getBook = async (isbn) => {
     }
 };
 
+
 const b = await getBook(isbn);
 const formatted = {
     title: b[`ISBN:${isbn}`].title,
@@ -32,9 +33,9 @@ const updateBooks = (formatted) => {
         if (words[0] == 'a' || words[0] == 'the' || words[0] == 'an') return words.splice(1).join(' ');
         return str;
     };
-    const books = JSON.parse(
-        fs.readFileSync(`../src/content/${READING_YEAR}-books/${READING_YEAR}-books.11tydata.json`)
-    );
+
+    const booksFile = `../src/pages/posts/${READING_YEAR}-books/${READING_YEAR}-books.11tydata.json`;
+    const books = JSON.parse(fs.readFileSync(booksFile));
     if (!books[`books${READING_YEAR}`].length) {
         books[`books${READING_YEAR}`].push(formatted);
     } else {
@@ -51,7 +52,7 @@ const updateBooks = (formatted) => {
         if (!inserted) books[`books${READING_YEAR}`].push(formatted);
     }
     fs.writeFileSync(
-        `../src/content/${READING_YEAR}-books/${READING_YEAR}-books.11tydata.json`,
+        booksFile,
         JSON.stringify(books, null, 2)
     );
 };
@@ -61,7 +62,8 @@ updateBooks(formatted);
 if (b[`ISBN:${isbn}`].cover) {
     const cover = b[`ISBN:${isbn}`].cover.large;
     try {
-        await downloadFile(cover, `../src/content/${READING_YEAR}-books/${isbn}.jpg`);
+
+        await downloadFile(cover, `../public/assets/books/${isbn}.jpg`);
         commit(`add ${isbn}`);
     } catch (err) {
         console.log('no cover');
