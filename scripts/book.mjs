@@ -22,7 +22,7 @@ const b = await getBook(isbn);
 const formatted = {
     title: b[`ISBN:${isbn}`].title,
     subtitle: b[`ISBN:${isbn}`].subtitle,
-    author: b[`ISBN:${isbn}`].authors[0].name,
+    author: b[`ISBN:${isbn}`]?.authors?.[0]?.name,
     isbn: isbn,
 };
 
