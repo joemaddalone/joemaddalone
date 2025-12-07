@@ -3,7 +3,9 @@ title: '2025 in the Books'
 date: 2025-12-31
 tags: ['post']
 excerpt: 'A bunch of things I read in 2025.'
+short: '2025 Books'
 ---
+import BookWidget from '../../../components/BookWidget.jsx';
 import data from './2025-books.11tydata.json';
 
 <hgroup>
@@ -11,19 +13,9 @@ import data from './2025-books.11tydata.json';
 	<p>A bunch of things I read in 2025.</p>
 </hgroup>
 
-<div class="ui divided items">
-
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mt-6">
 {data.books2025.map((book) => (
-	<div class="item">
-			<div class="image">
-				<img src={`/assets/books/${book.isbn}.jpg`} alt={book.title} />
-			</div>
-			<div class="content">
-				<div class="header">{book.title}</div>
-				<div class="meta i">{book.subtitle}</div>
-				<div class="meta pt2">{book.author}</div>
-			</div>
-	</div>
+	<BookWidget key={book.isbn} bookData={book} compact />
 ))}
 </div>
 
