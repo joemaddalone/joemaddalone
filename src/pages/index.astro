@@ -147,6 +147,9 @@ const allPosts = await getCollection("blog");
                     <div class="text-xs text-white/50!">
                       {post.data.excerpt}
                     </div>
+                    <div class="text-xs text-white/50!">
+                      {post.data.date.toLocaleDateString()}
+                    </div>
                   </li>
                 ))
             }
