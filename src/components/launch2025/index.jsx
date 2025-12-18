@@ -40,8 +40,8 @@ const Launch2025 = () => {
 							<p className="font-bold mb-2">DATELINE: INTERNET —</p>
 							<p>
 								"Hi, I'm Joe Maddalone." These simple words launched a thousand commits.
-								Experts say this new layout revolutionizes how we view personal portfolios.
-								"It's printed on digital paper," remarked one observer.
+								Experts say software engineering revolutionizes how we view everything.
+								"It does not seem to be slowing at all," remarked one observer.
 							</p>
 							<p className="mt-4">
 								In other news, the grid continues to adapt perfectly to all screen sizes,
