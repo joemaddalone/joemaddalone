@@ -1,7 +1,0 @@
----
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Intro from '../components/Intro.jsx';
----
-<BaseLayout includeHeader={false} includeFooter={false}>
-    <Intro client:load />
-</BaseLayout>

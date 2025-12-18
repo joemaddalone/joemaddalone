@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import icon from "astro-icon";
 
 import mdx from '@astrojs/mdx';
 
@@ -13,7 +14,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   integrations: [expressiveCode({
     themes: ['snazzy-light'],
-  }), mdx(), react()],
+  }), mdx(), react(), icon()],
 
   markdown: {
     shikiConfig: {
