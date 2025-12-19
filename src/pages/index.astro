@@ -1,7 +1,11 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Launch2025 from '../components/launch2025/index.jsx';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Launch2025 from "../components/launch2025/index.jsx";
+import { YouTube } from "@astro-community/astro-embed-youtube";
 ---
+
 <BaseLayout includeHeader={false} includeFooter={false}>
-    <Launch2025 client:load />
+  <Launch2025 client:load>
+    <YouTube id="DMljPB0NDFo" />
+  </Launch2025>
 </BaseLayout>

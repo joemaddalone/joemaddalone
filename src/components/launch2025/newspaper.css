@@ -98,7 +98,6 @@
 
 /* Cinema / Movie Poster */
 .cinema-section {
-  background-color: #111;
   color: #fff;
   height: 100%;
   display: flex;
@@ -115,11 +114,6 @@
 }
 
 .cinema-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, #000);
   padding: 1rem;
   text-align: center;
 }

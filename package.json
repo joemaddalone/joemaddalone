@@ -13,7 +13,7 @@
     "postgit": "git push --all"
   },
   "dependencies": {
-    "@astro-community/astro-embed-youtube": "^0.5.6",
+    "@astro-community/astro-embed-youtube": "^0.5.9",
     "@astrojs/mdx": "^4.3.1",
     "@astrojs/react": "^4.3.0",
     "@babel/runtime": "^7.28.2",

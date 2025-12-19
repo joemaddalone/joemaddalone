@@ -4,7 +4,7 @@ import { cn } from '../../lib/utils';
 import GithubCalendar from '../GithubCalendar';
 
 
-const Launch2025 = () => {
+const Launch2025 = ({ children }) => {
 	const currentDate = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
 	return (
@@ -132,16 +132,13 @@ const Launch2025 = () => {
 				</div>
 
 				{/* f - Youtube / Cinema */}
-				<div className="[grid-area:f] newspaper-border bg-black border-4 border-double border-black">
+				<div className="[grid-area:f] newspaper-border border-4 border-double border-black">
 					<div className="cinema-section cursor-pointer group">
-						<a href="https://www.youtube.com/@joemaddalone" target="_blank" rel="noopener noreferrer" className="cinema-section">
-							<img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop" alt="Cinema" className="cinema-poster group-hover:scale-105 transition-transform duration-700" />
-							<div className="cinema-overlay">
-								<div className="text-xs text-white mb-1 tracking-widest">NOW PLAYING</div>
-								<h2 className="cinema-title group-hover:text-red-500 transition-colors">YOUTUBE</h2>
-								<p className="text-gray-300 text-sm italic mt-1">Watch the latest episodes.</p>
-							</div>
-						</a>
+						<div className="market-header">
+							<span>Now Playing</span>
+							<span>By Joe Maddalone</span>
+						</div>
+						{children}
 					</div>
 				</div>
 

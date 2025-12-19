@@ -1,54 +1,53 @@
-'use client'
+'use client';
 
-import { Skeleton } from './Skeleton'
-import { type FunctionComponent, useCallback, useEffect, useState } from 'react'
+import { Skeleton } from './Skeleton';
+import { type FunctionComponent, useCallback, useEffect, useState } from 'react';
 import {
   ActivityCalendar,
   type Props as ActivityCalendarProps,
   type ThemeInput,
-} from 'react-activity-calendar'
+} from 'react-activity-calendar';
 
 const explicitTheme: ThemeInput = {
   light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259'],
   dark: ['#383838', '#4D455D', '#7DB9B6', '#F5E9CF', '#E96479'],
-}
+};
 
 interface Props extends Omit<ActivityCalendarProps, 'data' | 'theme'> {
-  username: string
+  username: string;
 }
 
 async function fetchCalendarData(username: string): Promise<ApiResponse> {
   const response = await fetch(
     `https://github-contributions-api.jogruber.de/v4/${username}?y=last`,
-  )
-  const data: ApiResponse | ApiErrorResponse = await response.json()
+  );
+  const data: ApiResponse | ApiErrorResponse = await response.json();
 
   if (!response.ok) {
     throw Error(
-      `Fetching GitHub contribution data for "${username}" failed: ${
-        (data as ApiErrorResponse).error
+      `Fetching GitHub contribution data for "${username}" failed: ${(data as ApiErrorResponse).error
       }`,
-    )
+    );
   }
 
-  return data as ApiResponse
+  return data as ApiResponse;
 }
 
 const GithubCalendar: FunctionComponent<Props> = ({ username, ...props }) => {
-  const [data, setData] = useState<ApiResponse | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<Error | null>(null)
+  const [data, setData] = useState<ApiResponse | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
 
   const fetchData = useCallback(() => {
-    setLoading(true)
-    setError(null)
+    setLoading(true);
+    setError(null);
     fetchCalendarData(username)
       .then(setData)
       .catch(setError)
-      .finally(() => setLoading(false))
-  }, [username])
+      .finally(() => setLoading(false));
+  }, [username]);
 
-  useEffect(fetchData, [fetchData])
+  useEffect(fetchData, [fetchData]);
 
   if (error) {
     return (
@@ -60,15 +59,12 @@ const GithubCalendar: FunctionComponent<Props> = ({ username, ...props }) => {
           height={0}
           className="bento-lg:w-48 h-auto w-24"
         />
-        <p className="bento-lg:w-64 text-muted-foreground w-48 text-center text-sm">
-          This component is down. Please email me!
-        </p>
       </div>
-    )
+    );
   }
 
   if (loading || !data) {
-    return <Skeleton className="size-full" />
+    return <Skeleton className="size-full" />;
   }
 
   return (
@@ -96,36 +92,36 @@ const GithubCalendar: FunctionComponent<Props> = ({ username, ...props }) => {
         />
       </div>
     </>
-  )
-}
+  );
+};
 
 interface Activity {
-  date: string
-  count: number
-  level: 0 | 1 | 2 | 3 | 4
+  date: string;
+  count: number;
+  level: 0 | 1 | 2 | 3 | 4;
 }
 
 interface ApiResponse {
   total: {
-    [year: number]: number
-    [year: string]: number
-  }
-  contributions: Array<Activity>
+    [year: number]: number;
+    [year: string]: number;
+  };
+  contributions: Array<Activity>;
 }
 
 interface ApiErrorResponse {
-  error: string
+  error: string;
 }
 
 const selectLastNDays = (contributions: Activity[], days: number) => {
-  const today = new Date()
-  const startDate = new Date(today)
-  startDate.setDate(today.getDate() - days)
+  const today = new Date();
+  const startDate = new Date(today);
+  startDate.setDate(today.getDate() - days);
 
   return contributions.filter((activity) => {
-    const activityDate = new Date(activity.date)
-    return activityDate >= startDate && activityDate <= today
-  })
-}
+    const activityDate = new Date(activity.date);
+    return activityDate >= startDate && activityDate <= today;
+  });
+};
 
-export default GithubCalendar
+export default GithubCalendar;
