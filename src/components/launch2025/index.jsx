@@ -1,7 +1,6 @@
 import './index.css';
 import './newspaper.css';
 import { cn } from '../../lib/utils';
-import GithubCalendar from '../GithubCalendar';
 
 
 const Launch2025 = ({ children }) => {
@@ -122,11 +121,8 @@ const Launch2025 = ({ children }) => {
 						</div>
 						<div className="flex-grow flex items-center justify-center relative overflow-hidden mt-2">
 							<div className="opacity-80 scale-90 origin-top">
-								<GithubCalendar username="joemaddalone" client:load />
+								<img src="https://github-readme-stats.vercel.app/api?username=joemaddalone&show_icons=true&count_private=true&show=prs_merged,prs_merged_percentage&hide=contribs" alt="" />
 							</div>
-						</div>
-						<div className="text-center text-xs text-gray-500 mt-1 border-top border-gray-300 pt-1">
-							* contributions over time
 						</div>
 					</div>
 				</div>
