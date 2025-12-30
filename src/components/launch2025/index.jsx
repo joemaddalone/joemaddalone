@@ -31,10 +31,6 @@ const Launch2025 = ({ children }) => {
 				<article className="[grid-area:intro] newspaper-border p-4 bg-white">
 					<div className="lead-story">
 						<h2 className="headline-large">Software Engineer Builds Cool Stuff</h2>
-						<div className="lead-image-container">
-							{/* Placeholder for lead image */}
-							{/* <span className="text-4xl text-gray-500 font-serif">PHOTO</span> */}
-						</div>
 						<div className="lead-text">
 							<p className="font-bold mb-2">DATELINE: INTERNET —</p>
 							<p>
