@@ -145,6 +145,47 @@
   justify-content: space-between;
 }
 
+.market-stock-item {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.15rem;
+}
+
+.market-stock-item:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.market-ticker {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #6b9bd1;
+  letter-spacing: 0.5px;
+}
+
+.market-company {
+  margin-top: -5px;
+  font-size: 0.7rem;
+  color: var(--ink-color);
+}
+
+.market-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.market-price {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: var(--ink-color);
+}
+
+.market-gain {
+  font-size: 0.65rem;
+  color: #16a34a;
+  font-weight: 600;
+}
+
 /* Classifieds */
 .classifieds-section {
   font-family: var(--font-sans);

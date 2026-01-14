@@ -96,8 +96,8 @@ const Launch2025 = ({ children }) => {
 								<span className="listing-dots"></span>
 								<span className="listing-value">Typescript/SVG</span>
 							</a>
-							<a href="#" className="listing-item group">
-								<span className="listing-title">NWCJS (hiatus)</span>
+							<a href="https://www.youtube.com/@NorthwestChicagoJavascript" className="listing-item group">
+								<span className="listing-title">NWCJS</span>
 								<span className="listing-dots"></span>
 								<span className="listing-value">Meetup/Organizer</span>
 							</a>
@@ -112,25 +112,109 @@ const Launch2025 = ({ children }) => {
 				<div className="[grid-area:e] newspaper-border p-2 bg-white">
 					<div className="market-section">
 						<div className="market-header">
-							<span>Market Data</span>
-							<span>GITHUB: JM</span>
+							<span>Tech Stack</span>
+							<span>SYMBOL: JM</span>
 						</div>
-						<div className="flex-grow flex items-center justify-center relative overflow-hidden mt-2">
-							<div className="opacity-80 scale-90 origin-top">
-								<img src="https://github-readme-stats.vercel.app/api?username=joemaddalone&show_icons=true&count_private=true&show=prs_merged,prs_merged_percentage&hide=contribs" alt="" />
+						<div className="grid grid-cols-2 gap-x-4 w-full mt-2 px-2">
+							{/* Column 1 */}
+							<div className="flex flex-col">
+								<div className="market-stock-item">
+									<div className="market-ticker">TS</div>
+									<div className="market-company">TypeScript</div>
+									<div className="market-stats">
+										<span className="market-price">99.99</span>
+										<span className="market-gain">+15.35 (+19.71%)</span>
+									</div>
+								</div>
+								<div className="market-stock-item">
+									<div className="market-ticker">REACT</div>
+									<div className="market-company">React</div>
+									<div className="market-stats">
+										<span className="market-price">87.50</span>
+										<span className="market-gain">+12.40 (+16.53%)</span>
+									</div>
+								</div>
+								<div className="market-stock-item">
+									<div className="market-ticker">NODE</div>
+									<div className="market-company">Node.js</div>
+									<div className="market-stats">
+										<span className="market-price">93.24</span>
+										<span className="market-gain">+8.56 (+12.34%)</span>
+									</div>
+								</div>
+								<div className="market-stock-item">
+									<div className="market-ticker">NEXT</div>
+									<div className="market-company">Next.js</div>
+									<div className="market-stats">
+										<span className="market-price">82.15</span>
+										<span className="market-gain">+9.20 (+14.08%)</span>
+									</div>
+								</div>
+							</div>
+							{/* Column 2 */}
+							<div className="flex flex-col">
+								<div className="market-stock-item">
+									<div className="market-ticker">TAIL</div>
+									<div className="market-company">Tailwind CSS</div>
+									<div className="market-stats">
+										<span className="market-price">77.92</span>
+										<span className="market-gain">+5.76 (+17.02%)</span>
+									</div>
+								</div>
+								<div className="market-stock-item">
+									<div className="market-ticker">GIT</div>
+									<div className="market-company">Git</div>
+									<div className="market-stats">
+										<span className="market-price">95.60</span>
+										<span className="market-gain">+11.25 (+13.33%)</span>
+									</div>
+								</div>
+								<div className="market-stock-item">
+									<div className="market-ticker">SQL</div>
+									<div className="market-company">PostgreSQL</div>
+									<div className="market-stats">
+										<span className="market-price">89.40</span>
+										<span className="market-gain">+7.80 (+15.47%)</span>
+									</div>
+								</div>
+								<div className="market-stock-item">
+									<div className="market-ticker">DRZL</div>
+									<div className="market-company">Drizzle ORM</div>
+									<div className="market-stats">
+										<span className="market-price">55.05</span>
+										<span className="market-gain">+31.95 (+138.31%)</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				{/* f - Youtube / Cinema */}
-				<div className="[grid-area:f] newspaper-border border-4 border-double border-black">
-					<div className="cinema-section cursor-pointer group">
+				<div className="[grid-area:f] newspaper-border bg-white">
+					<div className="cinema-section">
 						<div className="market-header">
 							<span>Now Playing</span>
 							<span>By Joe Maddalone</span>
 						</div>
 						{children}
+						<div className="cinema-footer bg-white border-t border-gray-300">
+							<div className="cinema-rating px-4 py-3 flex flex-col text-black">
+								<div className="flex items-center justify-between mb-1">
+									<div className="flex items-center gap-1">
+										<span className="text-yellow-500 text-lg">★★★★<span className="text-gray-300 text-lg">★</span></span>
+
+									</div>
+									<div className="text-xs font-bold uppercase tracking-wide">Critics' Choice</div>
+								</div>
+								<p className="text-sm italic leading-relaxed mb-1">
+									"A masterclass in modern development. Maddalone delivers compelling content with technical precision and creative flair."
+								</p>
+								<p className="text-xs font-bold">
+									— Chet Ledger, <span className="font-normal italic">The Tech Tribune</span>
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -170,11 +254,14 @@ const Launch2025 = ({ children }) => {
 						<span className="font-sans text-xs font-bold uppercase">Github</span>
 					</a>
 				</div>
-
-				<div className="[grid-area:j] newspaper-border p-4 bg-white flex flex-col items-center justify-center text-center">
-					<h4 className="font-bold uppercase text-sm mb-2">Subscribe</h4>
-					<p className="text-xs mb-2">Get the daily edition delivered.</p>
-					<button className="bg-black text-white text-xs px-2 py-1 hover:bg-gray-800">Sign Up</button>
+				{/* j - Social: Youtube */}
+				<div className="[grid-area:j] newspaper-border p-2 bg-white flex items-center justify-center">
+					<a target="_blank" rel="noopener noreferrer" href="https://youtube.com/@joemaddalone" className="flex flex-col items-center group">
+						<span className="text-3xl mb-1 group-hover:scale-110 transition-transform font-serif font-bold">
+							YT
+						</span>
+						<span className="font-sans text-xs font-bold uppercase">Youtube</span>
+					</a>
 				</div>
 
 				{/* k - Social: Twitter */}
