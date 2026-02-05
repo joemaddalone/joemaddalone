@@ -4,14 +4,15 @@
 
 ## Current Projects
 
-- **[frogstar](https://github.com/joemaddalone/frogstar)** - Self-hosted weightlifting thing (nextjs)
+- **[fenchurch](https://github.com/joemaddalone/fenchurch)** - Initialize projects with AI tooling and prompts
+- **[frogstar](https://github.com/joemaddalone/frogstar)** - Weight lifting planner/tracker (nextjs)
 - **[vogon](https://github.com/joemaddalone/vogon)** - Plex/Jellyfin art management (nextjs)
 - **[hactar](https://github.com/joemaddalone/hactar)** - A Plex hard drive savior (node)
-- **[filets](https://github.com/joemaddalone/filets)** - Typescript lib for working with files (TypeScript)
-- **[react-svg-path](https://joemaddalone.github.io/react-svg-path-docs/#/)** - react svg path component library (React)
+- **[filets](https://github.com/joemaddalone/filets)** - Typescript lib for working with files
+- **[react-svg-path](https://joemaddalone.github.io/react-svg-path-docs/#/)** - React SVG path component library
 - **[path](https://joemaddalone.github.io/path/)** - A simple svg path generation utility (SVG)
 - **[gridset](https://joemaddalone.github.io/gridset/)** - An imaginary grid (Javascript)
-- **[el337.com](https://el337.com)** - My personal blog (but can he dance ...?)
+- **[el337.com](https://el337.com)** - My personal blog
 
 
 
