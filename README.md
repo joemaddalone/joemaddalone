@@ -26,9 +26,9 @@
 
 ## Latest Blog Posts [![Blog](https://img.shields.io/badge/-0088CC?style=flat-square&logo=rss&logoColor=white)](https://el337.com)
 
+- [Ollama + Pi](https://el337.com/posts/ollama-pi/)
 - [2025 Movies You May Have Overlooked](https://el337.com/posts/2025-movies-you-may-have-overlooked)
 - [I am an AI Freeloader](https://el337.com/posts/i-am-an-ai-freeloader)
-- [2025: A mofo of a year](https://el337.com/posts/2025-a-mofo-of-a-year)
 
 ## GitHub Activity
 
