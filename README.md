@@ -12,8 +12,6 @@
 - **[filets](https://github.com/joemaddalone/filets)** - Typescript lib for working with files (file + ts = filets)
 - **[react-svg-path](https://joemaddalone.github.io/react-svg-path-docs/#/)** - React SVG path component library
 - **[path](https://joemaddalone.github.io/path/)** - A simple svg path generation utility (SVG)
-- **[gridset](https://joemaddalone.github.io/gridset/)** - An imaginary grid (Javascript)
-- **[el337.com](https://el337.com)** - My personal blog
 
 
 
