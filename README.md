@@ -4,6 +4,7 @@
 
 ## Current Projects
 
+- **[garkbit](https://github.com/joemaddalone/garkbit)** - Automated image generation pipeline powered by local llms
 - **[zod-inquirer](https://github.com/joemaddalone/zod-inquirer)** - Generate validated inquirer.js prompts from Zod schemas
 - **[fenchurch](https://github.com/joemaddalone/fenchurch)** - Initialize projects with AI tooling and prompts
 - **[frogstar](https://github.com/joemaddalone/frogstar)** - Weight lifting planner/tracker (nextjs)
