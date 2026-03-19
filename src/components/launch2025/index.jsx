@@ -76,6 +76,11 @@ const Launch2025 = ({ children }) => {
 							Project Show Times
 						</div>
 						<div className="listing-content">
+							<a href="https://github.com/joemaddalone/garkbit" className="listing-item group">
+								<span className="listing-title">garkbit</span>
+								<span className="listing-dots"></span>
+								<span className="listing-value">AI image generation pipeline</span>
+							</a>
 							<a href="https://joemaddalone.github.io/react-svg-path-docs/#/" className="listing-item group">
 								<span className="listing-title">react-svg-path</span>
 								<span className="listing-dots"></span>
@@ -229,6 +234,22 @@ const Launch2025 = ({ children }) => {
 						<div className="classified-item">
 							<p className="classified-title">LOST CAT</p>
 							<p>Answers to "Sudo". Reward.</p>
+						</div>
+						<div className="classified-item">
+							<p className="classified-title">Premium AI Image Prompts</p>
+							<p>Wife says must go today. <a target="_blank" rel="noopener" href="https://z-image-prompts.com" className="underline">See Prompts</a>.</p>
+						</div>
+						<div className="classified-item">
+							<p className="classified-title">Join our Office Pool</p>
+							<p>You win 100% of the time, 5% of the time. <a target="_blank" rel="noopener" href="https://officepoolprint.com" className="underline">Win big</a>.</p>
+						</div>
+						<div className="classified-item">
+							<p className="classified-title">Like facebook, but for cats</p>
+							<p>Looking for investors who realize the potential for a cat facebook <a target="_blank" rel="noopener" href="https://officialshipping.com" className="underline">and other ideas</a>.</p>
+						</div>
+						<div className="classified-item">
+							<p className="classified-title">Unused Graph paper</p>
+							<p>Found in a box. <a target="_blank" rel="noopener" href="https://printgraphs.com" className="underline">Graph paper</a>.</p>
 						</div>
 						<div className="classified-item flex-grow flex items-end justify-center">
 							<a href="/resume" className="font-bold underline">More About Joe</a>
