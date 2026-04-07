@@ -18,17 +18,17 @@
 
 ## Latest Videos  [![Youtube](https://img.shields.io/badge/-FF5722?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@JoeMaddalone)
 
-- [Build a local RAG system with Ollama, libSQL, and an EPUB.](https://youtu.be/PZVXYrjDa8w)
-- [Next.js: typedRoutes](https://youtu.be/N9Y3mMz0fqw?si=uQdV1bzAbxQkkziI)
+- [Build a local coding agent from scratch with Ollama and AI SDK](https://youtu.be/jDwwNq11Nuo)
+- [Build a local RAG system with Ollama, libSQL, and an EPUB](https://youtu.be/PZVXYrjDa8w)
 - [React: useSyncExternalStore](https://youtu.be/Y5Pn1910uiE?si=yhlZUkZymlLxlXMH)
 
 
 
 ## Latest Blog Posts [![Blog](https://img.shields.io/badge/-0088CC?style=flat-square&logo=rss&logoColor=white)](https://el337.com)
 
+- [Build a local RAG system with Ollama, libSQL, and an EPUB](https://el337.com/posts/build-a-local-rag-system-with-ollama-lib-sql-and-an-epub/)
 - [Ollama + Pi](https://el337.com/posts/ollama-pi/)
 - [2025 Movies You May Have Overlooked](https://el337.com/posts/2025-movies-you-may-have-overlooked)
-- [I am an AI Freeloader](https://el337.com/posts/i-am-an-ai-freeloader)
 
 ## GitHub Activity
 
