@@ -4,6 +4,7 @@
 
 ## Current Projects
 
+- **[zugar](https://github.com/joemaddalone/zugar)** - DSPy-inspired Zod Schema -> prompt + structured output
 - **[garkbit](https://github.com/joemaddalone/garkbit)** - Automated image generation pipeline powered by local llms
 - **[zod-inquirer](https://github.com/joemaddalone/zod-inquirer)** - Generate validated inquirer.js prompts from Zod schemas
 - **[fenchurch](https://github.com/joemaddalone/fenchurch)** - Initialize projects with AI tooling and prompts
@@ -18,6 +19,9 @@
 
 ## Latest Videos  [![Youtube](https://img.shields.io/badge/-FF5722?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@JoeMaddalone)
 
+
+- [Turn Claude Cowork into a Local AI Agent](https://youtu.be/uXD3qOMDpSI)
+- [Run LLMs 2X faster on a Mac with oMLX](https://youtu.be/6LPqdsM1TrU)
 - [Build a local coding agent from scratch with Ollama and AI SDK](https://youtu.be/jDwwNq11Nuo)
 - [Build a local RAG system with Ollama, libSQL, and an EPUB](https://youtu.be/PZVXYrjDa8w)
 - [React: useSyncExternalStore](https://youtu.be/Y5Pn1910uiE?si=yhlZUkZymlLxlXMH)
