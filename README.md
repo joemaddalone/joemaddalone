@@ -19,7 +19,9 @@
 
 ## Latest Videos  [![Youtube](https://img.shields.io/badge/-FF5722?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@JoeMaddalone)
 
-
+- [JSX Officially Outdated? Meet TSRX](https://youtu.be/BJG9wS12jEc)
+- [Run your AI on Nvidia’s GPUs for FREE](https://youtu.be/n-zV2KNffRY)
+- [The Best LLM for Your Hardware](https://youtu.be/Qjf_hU4wjEc)
 - [Turn Claude Cowork into a Local AI Agent](https://youtu.be/uXD3qOMDpSI)
 - [Run LLMs 2X faster on a Mac with oMLX](https://youtu.be/6LPqdsM1TrU)
 - [Build a local coding agent from scratch with Ollama and AI SDK](https://youtu.be/jDwwNq11Nuo)
