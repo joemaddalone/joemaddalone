@@ -11,7 +11,6 @@
 - **[frogstar](https://github.com/joemaddalone/frogstar)** - Weight lifting planner/tracker (nextjs)
 - **[vogon](https://github.com/joemaddalone/vogon)** - Plex/Jellyfin art management (nextjs)
 - **[hactar](https://github.com/joemaddalone/hactar)** - A Plex hard drive savior (node)
-- **[filets](https://github.com/joemaddalone/filets)** - Typescript lib for working with files (file + ts = filets)
 - **[react-svg-path](https://joemaddalone.github.io/react-svg-path-docs/#/)** - React SVG path component library
 - **[path](https://joemaddalone.github.io/path/)** - A simple svg path generation utility (SVG)
 
@@ -19,14 +18,13 @@
 
 ## Latest Videos  [![Youtube](https://img.shields.io/badge/-FF5722?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@JoeMaddalone)
 
+- [Run MLX LLMs 23% Faster on a Mac with MTP](https://youtu.be/jU02xG69jXI)
 - [JSX Officially Outdated? Meet TSRX](https://youtu.be/BJG9wS12jEc)
 - [Run your AI on Nvidia’s GPUs for FREE](https://youtu.be/n-zV2KNffRY)
-- [The Best LLM for Your Hardware](https://youtu.be/Qjf_hU4wjEc)
 - [Turn Claude Cowork into a Local AI Agent](https://youtu.be/uXD3qOMDpSI)
 - [Run LLMs 2X faster on a Mac with oMLX](https://youtu.be/6LPqdsM1TrU)
 - [Build a local coding agent from scratch with Ollama and AI SDK](https://youtu.be/jDwwNq11Nuo)
 - [Build a local RAG system with Ollama, libSQL, and an EPUB](https://youtu.be/PZVXYrjDa8w)
-- [React: useSyncExternalStore](https://youtu.be/Y5Pn1910uiE?si=yhlZUkZymlLxlXMH)
 
 
 
@@ -39,7 +37,3 @@
 ## GitHub Activity
 
 ![GitHub Contribution Graph](https://ghchart.rshah.org/joemaddalone)
-
-
-
-
