@@ -2,8 +2,10 @@
 
 > Building to learn and usually abandon
 
-## Current Projects
 
+## Current Projects
+- **[inference-lab](https://github.com/joemaddalone/inference-lab)** - Run a bunch of MLX Inference Engines
+- **[guide-mark-ii](https://github.com/joemaddalone/guide-mark-ii)** - Benchmark LLMs on Apple Silicon
 - **[zugar](https://github.com/joemaddalone/zugar)** - DSPy-inspired Zod Schema -> prompt + structured output
 - **[garkbit](https://github.com/joemaddalone/garkbit)** - Automated image generation pipeline powered by local llms
 - **[zod-inquirer](https://github.com/joemaddalone/zod-inquirer)** - Generate validated inquirer.js prompts from Zod schemas
@@ -18,8 +20,9 @@
 
 ## Latest Videos  [![Youtube](https://img.shields.io/badge/-FF5722?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@JoeMaddalone)
 
-- [Run MLX LLMs 23% Faster on a Mac with MTP](https://youtu.be/jU02xG69jXI)
-- [JSX Officially Outdated? Meet TSRX](https://youtu.be/BJG9wS12jEc)
+- [A 15-year Old Homeless Kid Invented Neural Networks](https://youtu.be/EWtvZP3oVtc)
+- [The Only Skill You Need to Improve Your Codebase](https://youtu.be/5BtbAwPQjF8)
+- [Run MLX LLMs 50% Faster on a Mac with DSpark](https://youtu.be/5BtbAwPQjF8)
 - [Run your AI on Nvidia’s GPUs for FREE](https://youtu.be/n-zV2KNffRY)
 - [Turn Claude Cowork into a Local AI Agent](https://youtu.be/uXD3qOMDpSI)
 - [Run LLMs 2X faster on a Mac with oMLX](https://youtu.be/6LPqdsM1TrU)
@@ -27,9 +30,10 @@
 - [Build a local RAG system with Ollama, libSQL, and an EPUB](https://youtu.be/PZVXYrjDa8w)
 
 
-
 ## Latest Blog Posts [![Blog](https://img.shields.io/badge/-0088CC?style=flat-square&logo=rss&logoColor=white)](https://el337.com)
 
+- [What We Didn't Learn from Walter Pitts](https://el337.com/posts/what-we-didnt-learn-from-walter-pitts/)
+- [Baby's First Local AI](https://el337.com/posts/babys-first-local-ai/)
 - [Build a local RAG system with Ollama, libSQL, and an EPUB](https://el337.com/posts/build-a-local-rag-system-with-ollama-lib-sql-and-an-epub/)
 - [Ollama + Pi](https://el337.com/posts/ollama-pi/)
 - [2025 Movies You May Have Overlooked](https://el337.com/posts/2025-movies-you-may-have-overlooked)
