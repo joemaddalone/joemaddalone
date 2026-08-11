@@ -1,0 +1,61 @@
+{
+  "id": 1290159,
+  "title": "A House of Dynamite",
+  "originalTitle": "A House of Dynamite",
+  "overview": "When a single, unattributed missile is launched at the United States, a race begins to determine who is responsible and how to respond.",
+  "releaseDate": "2025-10-02",
+  "posterPath": "/AiJ8L90ftPAwVf3SDx7Fj9IMZoy.jpg",
+  "backdropPath": "/5SVRVwBfHCIkffiq0MmbdvnHWSz.jpg",
+  "genres": [
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 112,
+  "voteAverage": 6.393,
+  "voteCount": 1074,
+  "popularity": 6.6866,
+  "status": "Released",
+  "tagline": "Not if. When.",
+  "budget": 0,
+  "revenue": 181125,
+  "productionCompanies": [
+    {
+      "id": 20344,
+      "name": "First Light",
+      "logoPath": null,
+      "originCountry": "US"
+    },
+    {
+      "id": 247171,
+      "name": "Prologue Entertainment",
+      "logoPath": "/5745DrW9mdPOelyORtkpVD1FHL8.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 770,
+      "name": "Kingsgate Films",
+      "logoPath": null,
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt32376165",
+  "homepage": "https://www.ahouseofdynamitefilm.com"
+}

@@ -1,0 +1,19 @@
+---
+title: '2023 in the Books'
+date: 2023-12-31
+tags: ['books']
+excerpt: 'A bunch of things I read in 2023.'
+short: '2023 Books'
+coverImage: "./2023-books.jpeg"
+draft: true
+---
+import data from './2023-books.11tydata.json';
+import BookWidget from '../../../components/BookWidget.jsx';
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mt-6">
+{data.books2023.map((book) => (
+	<div key={book.isbn} className="flex justify-center items-center w-full">
+	<BookWidget bookData={book} compact />
+	</div>
+))}
+</div>

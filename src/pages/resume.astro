@@ -1,12 +1,12 @@
 ---
 import "../styles/global.css";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import Layout from "../layouts/Layout.astro";
 import data from "./_resume.11tydata.json";
 const pageTitle = "Resume of Joe Maddalone";
 const work = data.resume.work.slice(0, 5);
 ---
 
-<BaseLayout pageTitle={pageTitle} includeFooter={false}>
+<Layout pageTitle={pageTitle} includeFooter={false}>
   <div class="mt-5 mb-5">
     <div class="resume container border-1 border-gray-200 rounded-lg">
       <div class="heading p-4">
@@ -233,4 +233,4 @@ const work = data.resume.work.slice(0, 5);
       </div>
     </div>
   </div>
-</BaseLayout>
+</Layout>

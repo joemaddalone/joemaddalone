@@ -1,0 +1,77 @@
+{
+  "id": 1078605,
+  "title": "Weapons",
+  "originalTitle": "Weapons",
+  "overview": "When all but one child from the same class mysteriously vanish on the same night at exactly the same time, a community is left questioning who or what is behind their disappearance.",
+  "releaseDate": "2025-08-04",
+  "posterPath": "/cpf7vsRZ0MYRQcnLWteD5jK9ymT.jpg",
+  "backdropPath": "/yKWZIDo4ixcDUeelk2QGVA1EVmC.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    }
+  ],
+  "runtime": 129,
+  "voteAverage": 7.314,
+  "voteCount": 2456,
+  "popularity": 23.2018,
+  "status": "Released",
+  "tagline": "Last night at 2:17 AM, every child from Mrs. Gandy's class woke up, got out of bed, went downstairs, opened the front door, walked into the dark ...and they never came back.",
+  "budget": 38000000,
+  "revenue": 265894217,
+  "productionCompanies": [
+    {
+      "id": 12,
+      "name": "New Line Cinema",
+      "logoPath": "/2ycs64eqV5rqKYHyQK0GVoKGvfX.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 240675,
+      "name": "Subconscious",
+      "logoPath": null,
+      "originCountry": "US"
+    },
+    {
+      "id": 829,
+      "name": "Vertigo Entertainment",
+      "logoPath": "/iJo9zP5QCKyBsmKSOcvXd6UDNih.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 18609,
+      "name": "BoulderLight Pictures",
+      "logoPath": "/pxtYCfl1DWzvizqZcYwE4NefOOF.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 216687,
+      "name": "Domain Entertainment",
+      "logoPath": "/kKVYqekveOvLK1IgqdJojLjQvtu.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt26581740",
+  "homepage": "https://www.warnerbros.com/movies/weapons"
+}

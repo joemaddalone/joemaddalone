@@ -1,0 +1,233 @@
+{
+  "books2024": [
+    {
+      "title": "'Salem's Lot",
+      "author": "Stephen King",
+      "isbn": "9780307743671",
+      "link": "https://amzn.to/4w899cJ"
+    },
+    {
+      "title": "Affliction",
+      "author": "Russell Banks",
+      "isbn": "9780060920074",
+      "link": "https://amzn.to/4fHpD5I"
+    },
+    {
+      "title": "The Alchemy of Us",
+      "subtitle": "How Humans and Matter Transformed One Another",
+      "author": "Ainissa Ramirez",
+      "isbn": "9780262043809",
+      "link": "https://amzn.to/4fog4aB"
+    },
+    {
+      "title": "American gods",
+      "author": "Neil Gaiman",
+      "isbn": "9780062059888",
+      "link": "https://amzn.to/4b18xx9"
+    },
+    {
+      "title": "The Big Short",
+      "subtitle": "Inside the Doomsday Machine",
+      "author": "Michael Lewis",
+      "isbn": "9780393353150",
+      "link": "https://amzn.to/3RlUWtC"
+    },
+    {
+      "title": "Black mass",
+      "subtitle": "the true story of an unholy alliance between the FBI, and the Irish mob",
+      "author": "Dick Lehr",
+      "isbn": "9780060959258",
+      "link": ""
+    },
+    {
+      "title": "Calling Bullshit",
+      "subtitle": "The Art of Skepticism in a Data-Driven World",
+      "author": "Carl T. Bergstrom",
+      "isbn": "9780525509189",
+      "link": ""
+    },
+    {
+      "title": "Catching the Big Fish",
+      "subtitle": "Meditation, Consciousness, and Creativity",
+      "author": "David Lynch",
+      "isbn": "9781585425402",
+      "link": "https://amzn.to/4weYixR"
+    },
+    {
+      "title": "The Dark Tower II: The Drawing of the Three",
+      "author": "Stephen King",
+      "isbn": "9780451163523",
+      "link": "https://amzn.to/4gN3fsF"
+    },
+    {
+      "title": "The Dark Tower III: The Waste Lands",
+      "author": "Stephen King",
+      "isbn": "9781444723465",
+      "link": "https://amzn.to/4ywErLZ"
+    },
+    {
+      "title": "The Dark Tower IV: Wizard and Glass",
+      "author": "Stephen King",
+      "isbn": "9781444723472",
+      "link": "https://amzn.to/45dQlwK"
+    },
+    {
+      "title": "The Dark Tower V: Wolves of the Calla",
+      "author": "Stephen King",
+      "isbn": "9781416516934",
+      "link": "https://amzn.to/4faDaTh"
+    },
+    {
+      "title": "The Dark Tower VI: Song of Susannah",
+      "author": "Stephen King",
+      "isbn": "9781416521495",
+      "link": "https://amzn.to/4weYwVD"
+    },
+    {
+      "title": "The Dark Tower VII: The Dark Tower",
+      "author": "Stephen King",
+      "isbn": "9781880418628",
+      "link": "https://amzn.to/4buQAqQ"
+    },
+    {
+      "title": "Distrust that particular flavor",
+      "author": "William Gibson",
+      "isbn": "9780399158438",
+      "link": "https://amzn.to/3TeaUGI"
+    },
+    {
+      "title": "The Drop",
+      "author": "Dennis Lehane",
+      "isbn": "9780062365446",
+      "link": "https://amzn.to/4yrzYtW"
+    },
+    {
+      "title": "The Everything War",
+      "subtitle": "Amazon’s Ruthless Quest to Own the World and Remake Corporate Power",
+      "author": "Dana Mattioli",
+      "isbn": "9780316269773",
+      "link": "https://amzn.to/3TaAgFs"
+    },
+    {
+      "title": "Fancy Bear Goes Phishing",
+      "subtitle": "The Dark History of the Information Age, in Five Extraordinary Hacks",
+      "author": "Scott J. Shapiro",
+      "isbn": "9780374601171",
+      "link": "https://amzn.to/4wo6iMI"
+    },
+    {
+      "title": "Genius Makers",
+      "subtitle": "The Mavericks Who Brought AI to Google, Facebook, and the World",
+      "author": "Cade Metz",
+      "isbn": "9781524742676",
+      "link": "https://amzn.to/3T9Er4l"
+    },
+    {
+      "title": "Guest in the House",
+      "author": "Emily Carroll",
+      "isbn": "9781250255525",
+      "link": "https://amzn.to/4wmXgzJ"
+    },
+    {
+      "title": "Hank Show",
+      "subtitle": "How a House-Painting, Drug-Running DEA Informant Built the Machine That Rules Our Lives",
+      "author": "McKenzie Funk",
+      "isbn": "9781250209276",
+      "link": "https://amzn.to/4gGXGfn"
+    },
+    {
+      "title": "Homo deus",
+      "subtitle": "a brief history of tomorrow",
+      "author": "Yuval Noah Harari",
+      "isbn": "9780062464316",
+      "link": "https://amzn.to/3RidGdy"
+    },
+    {
+      "title": "Killing sacred cows",
+      "subtitle": "overcoming the financial myths that are destroying your prosperity",
+      "author": "Garrett B. Gunderson",
+      "isbn": "9781929774517",
+      "link": "https://amzn.to/4b18Ms3"
+    },
+    {
+      "title": "Leave the Gun, Take the Cannoli",
+      "subtitle": "The Epic Story of the Making of the Godfather",
+      "author": "Mark Seal",
+      "isbn": "9781982158590",
+      "link": "https://amzn.to/4aWBaeU"
+    },
+    {
+      "title": "Mother night",
+      "author": "Kurt Vonnegut",
+      "isbn": "9780385334143",
+      "link": "https://amzn.to/4fr9Hn1"
+    },
+    {
+      "title": "Nexus",
+      "subtitle": "A Brief History of Information Networks from the Stone Age to AI",
+      "author": "Yuval Noah Harari",
+      "isbn": "9780593734223",
+      "link": "https://amzn.to/4fmqHdV"
+    },
+    {
+      "title": "Nuclear War",
+      "subtitle": "A Scenario",
+      "author": "Annie Jacobsen",
+      "isbn": "9780593476093",
+      "link": "https://amzn.to/4hmLlx7"
+    },
+    {
+      "title": "The prestige",
+      "author": "Christopher Priest",
+      "isbn": "9780312858865",
+      "link": "https://amzn.to/4vAetV5"
+    },
+    {
+      "title": "Quantum Supremacy",
+      "subtitle": "How the Quantum Computer Revolution Will Change Everything",
+      "author": "Michio Kaku",
+      "isbn": "9780385548366",
+      "link": "https://amzn.to/4vF6rKC"
+    },
+    {
+      "title": "Revenge of the nerd, or, ... The singular adventures of the man who would be Booger",
+      "subtitle": "a memoir",
+      "author": "Curtis Armstrong",
+      "isbn": "9781250113948",
+      "link": "https://amzn.to/3TIqMRU"
+    },
+    {
+      "title": "Sorry I'm Late, I Didn't Want to Come",
+      "author": "Jessica Pan",
+      "isbn": "9780857526151",
+      "link": "https://amzn.to/4bU1oyT"
+    },
+    {
+      "title": "Super Squats",
+      "subtitle": "How to Gain 30 Pounds of Muscle in 6 Weeks",
+      "author": "Randall J. Strossen (Ph.D.)",
+      "isbn": "9780926888005",
+      "link": "https://amzn.to/4wMcEW3"
+    },
+    {
+      "title": "The Switch",
+      "author": "Elmore Leonard",
+      "isbn": "9780060082208",
+      "link": "https://amzn.to/3Tq1sjy"
+    },
+    {
+      "title": "What the dormouse said",
+      "subtitle": "how the sixties counterculture shaped the personal computer industry",
+      "author": "John Markoff",
+      "isbn": "9780143036760",
+      "link": "https://amzn.to/4prSM8i"
+    },
+    {
+      "title": "Where Wizards Stay Up Late",
+      "subtitle": "The Origins Of The Internet",
+      "author": "Katie Hafner",
+      "isbn": "9780684832678",
+      "link": "https://amzn.to/4wVomxS"
+    }
+  ]
+}

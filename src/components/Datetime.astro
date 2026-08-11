@@ -1,0 +1,45 @@
+---
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+import IconCalendar from "@/assets/icons/IconCalendar.svg";
+import { SITE } from "@/config";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+export interface Props {
+  class?: string;
+  size?: "sm" | "lg";
+  timezone: string | undefined;
+  date: string | Date;
+}
+
+const {
+  date,
+  size = "sm",
+  class: className = "",
+  timezone: postTimezone,
+} = Astro.props;
+
+/* ========== Formatted Datetime ========== */
+const datetime = dayjs.tz(
+  date instanceof Date ? dayjs(date).utc().format("YYYY-MM-DD") : date,
+  postTimezone || SITE.timezone
+);
+
+const formattedDate = datetime.format("MMM D, YYYY"); // e.g., '22 Mar, 2025'
+---
+
+<div class:list={["flex items-center gap-x-2 bg-background/90 rounded-lg px-2 py-1 border border-border/50", className]}>
+  <IconCalendar
+    class:list={[
+      "text-foreground inline-block size-6 min-w-[1.375rem]",
+      { "scale-90": size === "sm" },
+    ]}
+  />
+  <time
+    class:list={["text-sm text-foreground", { "sm:text-base": size === "lg" }]}
+    datetime={datetime.toISOString()}>{formattedDate}</time
+  >
+</div>

@@ -1,0 +1,76 @@
+{
+  "id": 1160360,
+  "title": "If I Had Legs I'd Kick You",
+  "originalTitle": "If I Had Legs I'd Kick You",
+  "overview": "With her life crashing down around her, Linda attempts to navigate her child's mysterious illness, her absent husband, a missing person, and an increasingly hostile relationship with her therapist.",
+  "releaseDate": "2025-10-10",
+  "posterPath": "/oeXvzS5jgA2dBd2kSAFl9MmGSwg.jpg",
+  "backdropPath": "/hHN4iGAu0sCYvR0oaFmemKXDnVV.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 113,
+  "voteAverage": 6.7,
+  "voteCount": 62,
+  "popularity": 11.2149,
+  "status": "Released",
+  "tagline": "Everything is under control.",
+  "budget": 0,
+  "revenue": 21263,
+  "productionCompanies": [
+    {
+      "id": 41077,
+      "name": "A24",
+      "logoPath": "/1ZXsGaFPgrgS6ZZGS37AqD5uU12.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 243162,
+      "name": "Central Pictures",
+      "logoPath": null,
+      "originCountry": "US"
+    },
+    {
+      "id": 208363,
+      "name": "Fat City",
+      "logoPath": "/nPXwPbmlUVl9saVTNBMuvPGRV7c.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 247337,
+      "name": "Bronxburgh",
+      "logoPath": null,
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    },
+    {
+      "englishName": "Spanish",
+      "iso6391": "es",
+      "name": "Español"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt18382850",
+  "homepage": "https://a24films.com/films/if-i-had-legs-id-kick-you"
+}

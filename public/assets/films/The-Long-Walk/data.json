@@ -1,0 +1,75 @@
+{
+  "id": 604079,
+  "title": "The Long Walk",
+  "originalTitle": "The Long Walk",
+  "overview": "In a dystopian near-future America, fifty teenage boys take part in a deadly annual walking contest, forced to maintain a minimum pace or be executed, until only one survivor remains.",
+  "releaseDate": "2025-09-10",
+  "posterPath": "/wobVTa99eW0ht6c1rNNzLkazPtR.jpg",
+  "backdropPath": "/zf7BQY4k5RNFI1sD4n9EVLnEG8m.jpg",
+  "genres": [
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    }
+  ],
+  "runtime": 108,
+  "voteAverage": 6.945,
+  "voteCount": 1096,
+  "popularity": 17.6836,
+  "status": "Released",
+  "tagline": "The task is simple: walk or die.",
+  "budget": 20000000,
+  "revenue": 62871697,
+  "productionCompanies": [
+    {
+      "id": 1632,
+      "name": "Lionsgate",
+      "logoPath": "/cisLn1YAUuptXVBa0xjq7ST9cH0.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 221429,
+      "name": "Media Capital Technologies",
+      "logoPath": "/7xNNmHcuDy0tOqZmsUMnZ6HcZ6E.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 829,
+      "name": "Vertigo Entertainment",
+      "logoPath": "/iJo9zP5QCKyBsmKSOcvXd6UDNih.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 161357,
+      "name": "about:blank",
+      "logoPath": "/kQlxsHQKQsDOXmKPZVqEyL827NJ.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt10374610",
+  "homepage": "https://www.thelongwalk.movie"
+}

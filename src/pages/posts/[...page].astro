@@ -1,0 +1,35 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Card from "@/components/Card.astro";
+import Pagination from "@/components/Pagination.astro";
+import getSortedPosts from "@/utils/getSortedPosts";
+import { SITE } from "@/config";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return paginate(getSortedPosts(posts), { pageSize: SITE.postPerPage });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const [firstPost, ...restPosts] = page.data;
+
+console.log(page.data)
+
+---
+
+<Layout title="Posts">
+  <main id="main-content" class="mx-auto max-w-5xl px-4 pb-4">
+    <p class="font-mono text-xs tracking-widest uppercase text-foreground/40 mb-4 mt-8">// posts</p>
+    <ul class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      {firstPost && <Card variant="h2" featured {...firstPost} />}
+      {restPosts.map((data) => <Card variant="h3" {...data} />)}
+    </ul>
+  </main>
+
+  <Pagination {page} />
+
+</Layout>

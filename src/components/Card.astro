@@ -1,0 +1,69 @@
+---
+import { slugifyStr } from "@/utils/slugify";
+import type { CollectionEntry } from "astro:content";
+import Datetime from "./Datetime.astro";
+import { Image } from "astro:assets";
+
+export interface Props extends CollectionEntry<"blog"> {
+  variant?: "h2" | "h3";
+  featured?: boolean;
+}
+
+const { variant = "h2", data, featured = false } = Astro.props;
+
+const { title, excerpt, date, timezone, coverImage } = data;
+
+const hasImage = !!coverImage;
+const imageSrc = coverImage ?? coverImage;
+
+const headerProps = {
+  style: { viewTransitionName: slugifyStr(title) },
+  class: "text-lg font-medium decoration-dashed hover:underline",
+};
+---
+
+<li class:list={["group", featured ? "col-span-full" : ""]}>
+  <a
+    href={`/posts/${slugifyStr(title)}`}
+    class="block cursor-pointer rounded-lg transition-colors duration-200 hover:bg-muted/50 mb-4"
+  >
+    <div class:list={[hasImage ? "relative" : ""]}>
+
+      {hasImage && (
+        <div class="overflow-hidden rounded-lg aspect-video">
+          <Image
+            src={imageSrc}
+            alt={title}
+            width={featured ? 1200 : 800}
+            height={featured ? 675 : 450}
+            loading="lazy"
+            decoding="async"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          />
+        </div>
+      )}
+      <div class="absolute left-1 top-1">
+          <Datetime {date} {timezone} />
+      </div>
+      <div class:list={[hasImage ? "absolute inset-x-0 bottom-0 bg-black backdrop-blur-sm px-3 py-2 rounded-b-lg" : "mt-3"]}>
+        <h2
+          {...headerProps}
+          class:list={[
+            featured ? "text-2xl font-bold sm:text-3xl" : "text-lg font-medium",
+            hasImage ? "text-foreground font-serif decoration-dashed hover:underline" : "font-serif decoration-dashed hover:underline",
+          ]}
+        >
+          {title}
+        </h2>
+        <p
+          class:list={[
+            featured ? "text-base" : "text-sm",
+            hasImage ? "mt-1 text-foreground/80" : "mt-1 text-foreground/80",
+          ]}
+        >
+          {excerpt}
+        </p>
+      </div>
+    </div>
+  </a>
+</li>

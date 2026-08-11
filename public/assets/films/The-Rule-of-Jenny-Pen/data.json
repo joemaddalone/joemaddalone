@@ -1,0 +1,63 @@
+{
+  "id": 1212742,
+  "title": "The Rule of Jenny Pen",
+  "originalTitle": "The Rule of Jenny Pen",
+  "overview": "Confined to a secluded rest home and trapped within his stroke-ridden body, a former Judge must stop an elderly psychopath who employs a child's puppet to abuse the home's residents with deadly consequences.",
+  "releaseDate": "2025-03-07",
+  "posterPath": "/5vqK1wbrgmUvqHn6yPt9b6qT9iL.jpg",
+  "backdropPath": "/eftVUg9R1lys3wT8kHJqMaK64m7.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    }
+  ],
+  "runtime": 104,
+  "voteAverage": 6.009,
+  "voteCount": 115,
+  "popularity": 1.4946,
+  "status": "Released",
+  "tagline": "",
+  "budget": 0,
+  "revenue": 422256,
+  "productionCompanies": [
+    {
+      "id": 159950,
+      "name": "Light in the Dark Productions",
+      "logoPath": null,
+      "originCountry": ""
+    },
+    {
+      "id": 6509,
+      "name": "Blueskin Films",
+      "logoPath": "/hcxaHN2HTKZIQA7kgP0lINQP1Uy.png",
+      "originCountry": "NZ"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "NZ",
+      "name": "New Zealand"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt6874690",
+  "homepage": ""
+}

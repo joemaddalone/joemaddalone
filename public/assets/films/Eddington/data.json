@@ -1,0 +1,85 @@
+{
+  "id": 648878,
+  "title": "Eddington",
+  "originalTitle": "Eddington",
+  "overview": "In May of 2020, a standoff between a small-town sheriff and mayor sparks a powder keg as neighbor is pitted against neighbor in Eddington, New Mexico.",
+  "releaseDate": "2025-07-16",
+  "posterPath": "/4GIqZUgPZ146BhibsPHMHef2nXX.jpg",
+  "backdropPath": "/5PJkK2iVXRO1ydrtgwuJdevmnOe.jpg",
+  "genres": [
+    {
+      "id": 37,
+      "name": "Western"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    }
+  ],
+  "runtime": 148,
+  "voteAverage": 6.396,
+  "voteCount": 618,
+  "popularity": 9.9462,
+  "status": "Released",
+  "tagline": "Hindsight is 2020.",
+  "budget": 25000000,
+  "revenue": 13738227,
+  "productionCompanies": [
+    {
+      "id": 41077,
+      "name": "A24",
+      "logoPath": "/1ZXsGaFPgrgS6ZZGS37AqD5uU12.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 123620,
+      "name": "Square Peg",
+      "logoPath": "/ePRhZ3yb09Ya6WMzCCBYopwIYbE.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 178359,
+      "name": "828 Productions",
+      "logoPath": "/8Vir3jz2OMrcLFdcpRAg6LQixJp.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 142269,
+      "name": "IPR.VC",
+      "logoPath": "/ggrWFqk5mPMks0vE3aCy3l9e0dv.png",
+      "originCountry": "FI"
+    },
+    {
+      "id": 103376,
+      "name": "Access Entertainment",
+      "logoPath": "/zAyfGEx1LJOkwNTrHugnWHzLRE.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    },
+    {
+      "iso31661": "FI",
+      "name": "Finland"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt31176520",
+  "homepage": "https://a24films.com/films/eddington"
+}

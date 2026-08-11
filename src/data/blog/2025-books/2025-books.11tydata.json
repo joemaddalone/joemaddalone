@@ -1,0 +1,95 @@
+{
+  "books2025": [
+    {
+      "title": "Careless People",
+      "subtitle": "A Cautionary Tale of Power, Greed, and Lost Idealism - A memoir",
+      "author": "Sarah Wynn-Williams",
+      "isbn": "9781250391230",
+      "link": "https://amzn.to/45bskX7"
+    },
+    {
+      "title": "The Department of Truth, Vol. 6: Twilight's Last Gleaming",
+      "author": "James Tynion IV",
+      "isbn": "9781534330153",
+      "link": "https://amzn.to/4fnFlS5"
+    },
+    {
+      "title": "Disenlightenment",
+      "subtitle": "Politics, Horror, and Entertainment",
+      "author": "David Mamet",
+      "isbn": "9780063455092",
+      "link": "https://amzn.to/4wJwHEK"
+    },
+    {
+      "title": "Ghost in the wires",
+      "subtitle": "my adventures as the world's most wanted hacker",
+      "author": "Kevin D. Mitnick",
+      "isbn": "9780316037709",
+      "link": "https://amzn.to/4wT6W4V"
+    },
+    {
+      "title": "The Invisible Man",
+      "author": "H. G. Wells",
+      "isbn": "9780451528520",
+      "link": "https://amzn.to/4pwtkyw"
+    },
+    {
+      "title": "It's (Almost) Always Sunny in Philadelphia",
+      "author": "Kimberly Potts",
+      "isbn": "9781668008508",
+      "link": ""
+    },
+    {
+      "title": "Reality Is Not What It Seems",
+      "subtitle": "The journey to Quantum Gravity",
+      "author": "Carlo Rovelli",
+      "isbn": "9780141983219",
+      "link": "https://amzn.to/3T5VvIA"
+    },
+    {
+      "title": "The Short-Timers",
+      "author": "Gustav Hasford",
+      "isbn": "9780553239454",
+      "link": "https://amzn.to/4gMUrTM"
+    },
+    {
+      "title": "The Last Ronin",
+      "isbn": "9781684058419",
+      "link": "https://amzn.to/4wczIxt"
+    },
+    {
+      "title": "The Unworthy",
+      "subtitle": "A Novel",
+      "author": "Agustina Bazterrica",
+      "isbn": "9781668051887",
+      "link": "https://amzn.to/3R3M8sl"
+    },
+    {
+      "title": "The Warriors",
+      "author": "Sol Yurick",
+      "isbn": "9781788164337",
+      "link": "https://amzn.to/4hgMGWg"
+    },
+    {
+      "title": "We Are Legion",
+      "subtitle": "(We Are Bob)",
+      "author": "Dennis E. Taylor",
+      "isbn": "9781680680584",
+      "link": "https://amzn.to/4wKQFPk"
+    },
+    {
+      "title": "Zen and the Art of Motorcycle Maintenance",
+      "subtitle": "An Inquiry Into Values",
+      "author": "Robert M. Pirsig",
+      "isbn": "9780060589462",
+      "link": "https://amzn.to/4hgMFBG"
+    },
+    {
+      "title": "Zero to One",
+      "subtitle": "Notes on Startups, or How to Build the Future",
+      "author": "Peter A. Thiel",
+      "isbn": "9780804139298",
+      "link": "https://amzn.to/4wMcdLp"
+    }
+  ]
+}

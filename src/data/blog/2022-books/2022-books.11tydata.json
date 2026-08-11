@@ -1,0 +1,292 @@
+{
+  "books2022": [
+    {
+      "title": "Algorithms to Live By",
+      "subtitle": "The Computer Science of Human Decisions",
+      "author": "Brian Christian and Tom Griffiths",
+      "isbn": "9781627790369",
+      "link": "https://amzn.to/4gMYJdO"
+    },
+    {
+      "title": "All You Need is Kill",
+      "author": "Hiroshi Sakurazaka",
+      "isbn": "9784088801254",
+      "link": "https://amzn.to/4b2SAqh"
+    },
+    {
+      "title": "Babyteeth, Vol 1 thru 3",
+      "author": "Donnie Cates and Garry Brown",
+      "isbn": "9781935002772",
+      "link": "https://amzn.to/4prUjv0"
+    },
+    {
+      "title": "Between Two Fires",
+      "isbn": "9780425256909",
+      "author": "Christopher Buehlman",
+      "link": "https://amzn.to/4bRBxHP"
+    },
+    {
+      "title": "Blockchain Basics",
+      "subtitle": "A Non-Technical Introduction in 25 Steps",
+      "author": "Daniel Drescher",
+      "isbn": "9781484226032",
+      "link": "https://amzn.to/4xcilNx"
+    },
+    {
+      "title": "Cinema Speculation",
+      "author": "Quentin Tarantino",
+      "isbn": "9780063112582",
+      "link": "https://amzn.to/4pwv1fm"
+    },
+    {
+      "title": "City of Sedition",
+      "subtitle": "The History of New York City During the Civil War",
+      "author": "John Strausbaugh",
+      "isbn": "9781455584178",
+      "link": "https://amzn.to/4wQuZBk"
+    },
+    {
+      "title": "The Color of Money",
+      "author": "Walter Tevis",
+      "isbn": "9781560254850",
+      "link": "https://amzn.to/4fbK76A"
+    },
+    {
+      "title": "Cultish",
+      "subtitle": "The Language of Fanaticism",
+      "author": "Amanda Montell",
+      "isbn": "9780062993151",
+      "link": "https://amzn.to/4ytTTbN"
+    },
+    {
+      "title": "Death Wins a Goldfish",
+      "author": "Brian Rea",
+      "isbn": "9781452172552",
+      "link": "https://amzn.to/4prUczA"
+    },
+    {
+      "title": "Digital Zettelkasten",
+      "subtitle": "Principles, Methods, & Examples",
+      "author": "David Kadavy",
+      "isbn": "9780578928098",
+      "link": "https://amzn.to/45e52zS"
+    },
+    {
+      "title": "Donnie Brasco",
+      "subtitle": "My Undercover Life in the Mafia - A True Story by FBI Agent",
+      "author": "Joseph D. Pistone",
+      "isbn": "9780451192578",
+      "link": "https://amzn.to/4yuvW3T"
+    },
+    {
+      "title": "Factfulness",
+      "subtitle": "Ten Reasons We're Wrong About the World--and Why Things Are Better Than You Think",
+      "author": "Hans Rosling",
+      "isbn": "9781250107817",
+      "link": "https://amzn.to/4hmAQK8"
+    },
+    {
+      "title": "The Final Girl Support Group",
+      "author": "Grady Hendrix",
+      "isbn": "9780593201237",
+      "link": "https://amzn.to/4pt86ld"
+    },
+    {
+      "title": "From Hell: Master Edition",
+      "author": "Alan Moore and Eddie Campbell",
+      "isbn": "0878162860",
+      "link": "https://amzn.to/4hmAPG4"
+    },
+    {
+      "title": "Geiger, Vol. 1",
+      "author": "Geoff Johns and Gary Frank",
+      "isbn": "9781534320024",
+      "link": "https://amzn.to/4prdR2y"
+    },
+    {
+      "title": "The Hustler",
+      "isbn": "9781560254737",
+      "author": "Walter Tevis",
+      "link": "https://amzn.to/3RjRNum"
+    },
+    {
+      "title": "I Heard You Paint Houses",
+      "isbn": "9781586421557",
+      "author": "Charles Brandt",
+      "link": "https://amzn.to/4ywFMlZ"
+    },
+    {
+      "title": "The Impending Blindness of Billie Scott",
+      "isbn": "9781910395646",
+      "author": "Zoe Thorogood",
+      "link": "https://amzn.to/4fmrOu7"
+    },
+    {
+      "title": "The Innovators",
+      "subtitle": "How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution",
+      "isbn": "9781476708690",
+      "author": "Walter Isaacson",
+      "link": "https://amzn.to/4yrBCvL"
+    },
+    {
+      "title": "Judas: The Last Days",
+      "isbn": "9781631402142",
+      "author": "W. Maxwell Prince and John Armor",
+      "link": "https://amzn.to/4yCoynp"
+    },
+    {
+      "title": "Killers of the Flower Moon",
+      "isbn": "9780385534246",
+      "author": "David Grann",
+      "link": "https://amzn.to/4ftUAZT"
+    },
+    {
+      "title": "The Lathe of Heaven",
+      "author": "Ursula K. Le Guin",
+      "isbn": "9781416556961",
+      "link": "https://amzn.to/4pscOQd"
+    },
+    { "title": "Later", "isbn": "9781789096491", "author": "Stephen King", "link": "https://amzn.to/4wcBIWB" },
+    {
+      "title": "The Many Deaths of Laila Starr",
+      "isbn": "9781684158058",
+      "author": "Ram V and Felipe Amdrade",
+      "link": "https://amzn.to/4wSDAUd"
+    },
+    {
+      "title": "Molly's Game",
+      "isbn": "9780062213082",
+      "author": "Molly Bloom",
+      "link": "https://amzn.to/4fHr18q"
+    },
+    { "title": "My Damage", "isbn": "9780306825804", "author": "Keith Morris", "link": "https://amzn.to/4wQuW8C" },
+    {
+      "title": "Norse Mythology",
+      "author": "Neil Gaiman",
+      "isbn": "9780393356182",
+      "link": "https://amzn.to/4fcbwoP"
+    },
+    {
+      "title": "Once Upon Atari",
+      "isbn": "9780986218668",
+      "author": "Howard Scott Warshaw",
+      "link": "https://amzn.to/4vDUnta"
+    },
+    {
+      "title": "The Order of Time",
+      "isbn": "9781683249122",
+      "author": "Carlo Rovelli",
+      "link": "https://amzn.to/4buRvHO"
+    },
+    {
+      "title": "Permanent Record",
+      "author": "Edward Snowden",
+      "isbn": " 9781250772909",
+      "link": "https://amzn.to/4gMYlvS"
+    },
+    {
+      "title": "Project Hail Mary",
+      "author": "Andy Weir",
+      "isbn": "9781529100617",
+      "link": "https://amzn.to/4friiWK"
+    },
+    {
+      "title": "Proving Ground",
+      "subtitle": "The Untold Story of the Six Women Who Programmed the World's First Modern Computer",
+      "isbn": "9781538718285",
+      "author": "Kathy Kleiman",
+      "link": "https://amzn.to/4vDUjtq"
+    },
+    {
+      "title": "The Queen's Gambit",
+      "isbn": "0394528018",
+      "author": "Walter Tevis",
+      "link": "https://amzn.to/4wMdq5p"
+    },
+    {
+      "title": "Road to Perdition",
+      "isbn": "9781401231910",
+      "author": "Max Allan Collins",
+      "link": "https://amzn.to/4pwreP5"
+    },
+    { "title": "Recursion", "isbn": "9781984826015", "author": "Blake Crouch", "link": "https://amzn.to/44CN4XO" },
+    {
+      "title": "Sapiens: A Brief History of Humankind",
+      "isbn": "9780062316110",
+      "author": "Yuval Noah Harari",
+      "link": "https://amzn.to/4futAtl"
+    },
+    {
+      "title": "Stiff",
+      "subtitle": "The Curious Lives of Human Cadavers",
+      "isbn": "9780393050936",
+      "author": "Mary Roach",
+      "link": "https://amzn.to/45bvYAe"
+    },
+    {
+      "title": "The Stranger in the Woods",
+      "author": "Michael Finkel",
+      "isbn": "9781101924921",
+      "link": "https://amzn.to/4fK0mb3"
+    },
+    {
+      "title": "The Subtle Art of Not Giving a F*ck",
+      "subtitle": "A counterintuitive approach to living a better life",
+      "isbn": "9780062457714",
+      "author": "Mark Manson",
+      "link": "https://amzn.to/3TKdWTa"
+    },
+    {
+      "title": "The Taking of Jemima Boone",
+      "subtitle": "Colonial Settlers, Tribal Nations, and the Kidnap That Shaped a Nation",
+      "isbn": "9780063118331",
+      "author": "Matthew Pearl",
+      "link": "https://amzn.to/4fK0iIl"
+    },
+    {
+      "title": "Tender is the Flesh",
+      "isbn": "9781797112695",
+      "author": "Augustina Bazterrica",
+      "link": "https://amzn.to/4yBaWsC"
+    },
+    {
+      "title": "The Twelve Lives of Alfred Hitchcock",
+      "subtitle": "An Anatomy of the Master of Suspense",
+      "isbn": "9781662074929",
+      "author": "Edward White",
+      "link": "https://amzn.to/3RfZ8ep"
+    },
+    {
+      "title": "Unmask Alice",
+      "isbn": "9781637740422",
+      "subtitle": "LSD, Satanic Panic, and the Imposter Behind the World's Most Notorious Diaries",
+      "author": "Rick Emerson",
+      "link": "https://amzn.to/4fo1eRc"
+    },
+    {
+      "title": "V for Vendetta",
+      "isbn": "1852862912",
+      "author": "Alan Moore and David Lloyd",
+      "link": "https://amzn.to/4b4Mqpr"
+    },
+    {
+      "title": "The Victorian Internet",
+      "isbn": "9781620405925",
+      "subtitle": "The Remarkable Story of the Telegraph and the Nineteenth Century's On-line Pioneers",
+      "author": "Tom Standage",
+      "link": "https://amzn.to/4f71OEg"
+    },
+    {
+      "title": "A Walk Through Hell",
+      "author": "Garth Ennis and Goran Sudzuka",
+      "isbn": "9781949028423",
+      "link": "https://amzn.to/4gNkwlG"
+    },
+    {
+      "title": "Y: The Last Man",
+      "isbn": "9781563899805",
+      "author": "Brian K. Vaughn and Pia Guerra",
+      "link": "https://amzn.to/4wbhSux"
+    }
+  ]
+}

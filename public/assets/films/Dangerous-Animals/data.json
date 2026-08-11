@@ -1,0 +1,79 @@
+{
+  "id": 1285965,
+  "title": "Dangerous Animals",
+  "originalTitle": "Dangerous Animals",
+  "overview": "A savvy and free-spirited surfer is abducted by a shark-obsessed serial killer. Held captive on his boat, she must figure out how to escape before he carries out a ritualistic feeding to the sharks below.",
+  "releaseDate": "2025-06-05",
+  "posterPath": "/9tk3Si960hg4E49eMt81dS7Qe9Z.jpg",
+  "backdropPath": "/6bfas8v3FzZ3qpzR2RWpw4z9DT7.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 98,
+  "voteAverage": 6.459,
+  "voteCount": 435,
+  "popularity": 5.2148,
+  "status": "Released",
+  "tagline": "You're safer in the water.",
+  "budget": 2000000,
+  "revenue": 9207791,
+  "productionCompanies": [
+    {
+      "id": 8533,
+      "name": "LD Entertainment",
+      "logoPath": "/5jxaT7zoJKtnwqxniiJ9iJLsJru.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 212408,
+      "name": "Brouhaha Entertainment",
+      "logoPath": "/63KGHkv2ir0WdhIKuVXDltukmTT.png",
+      "originCountry": "AU"
+    },
+    {
+      "id": 167684,
+      "name": "Range Media Partners",
+      "logoPath": "/kzQwU2H6woBFti9cqjr9BrVXrst.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 85465,
+      "name": "Oddfellows Entertainment",
+      "logoPath": "/oxx1bmXDQxeBsvYZmCxMtfJ5wa3.png",
+      "originCountry": "CA"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "AU",
+      "name": "Australia"
+    },
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    },
+    {
+      "iso31661": "CA",
+      "name": "Canada"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt32299316",
+  "homepage": "https://www.independentfilmco.com/films/dangerous-animals"
+}

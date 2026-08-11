@@ -1,0 +1,262 @@
+---
+import { render, type CollectionEntry } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Tag from "@/components/Tag.astro";
+import Datetime from "@/components/Datetime.astro";
+import ShareLinks from "@/components/ShareLinks.astro";
+import BackButton from "@/components/BackButton.astro";
+import BackToTopButton from "@/components/BackToTopButton.astro";
+import { getPath } from "@/utils/getPath";
+import { slugifyStr } from "@/utils/slugify";
+import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
+import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
+import { SITE } from "@/config";
+import { Image } from "astro:assets";
+
+export interface Props {
+  post: CollectionEntry<"blog">;
+  posts: CollectionEntry<"blog">[];
+}
+
+const { post, posts } = Astro.props;
+
+const {
+  title,
+  excerpt,
+  ogImage: initOgImage,
+  canonicalURL,
+  date,
+  timezone,
+  tags,
+  coverImage,
+  coverImageInPost,
+} = post.data;
+
+const { Content } = await render(post);
+
+let ogImageUrl: string | undefined;
+
+// Determine OG image source
+if (typeof initOgImage === "string") {
+  ogImageUrl = initOgImage; // Remote OG image (absolute URL)
+} else if (initOgImage?.src) {
+  ogImageUrl = initOgImage.src; // Local asset
+}
+
+// Use dynamic OG image if enabled and no remote|local ogImage
+if (!ogImageUrl && SITE.dynamicOgImage) {
+  ogImageUrl = `${getPath(post.id, post.filePath)}/index.png`;
+}
+
+// Resolve OG image URL (or fallback to SITE.ogImage / default `og.png`)
+const ogImage = ogImageUrl
+  ? new URL(ogImageUrl, Astro.url.origin).href
+  : undefined;
+
+const layoutProps = {
+  title: `${title} | ${SITE.title}`,
+  excerpt,
+  date,
+  canonicalURL,
+  ogImage,
+  scrollSmooth: true,
+};
+
+/* ========== Prev/Next Posts ========== */
+
+const allPosts = posts.map(({ data: { title }, id, filePath }) => ({
+  id,
+  title,
+  filePath,
+}));
+
+const currentPostIndex = allPosts.findIndex((a) => a.id === post.id);
+
+const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
+const nextPost =
+  currentPostIndex !== allPosts.length ? allPosts[currentPostIndex + 1] : null;
+---
+
+<Layout {...layoutProps}>
+  <Header />
+  <BackButton />
+  <main
+    id="main-content"
+    class:list={[
+      "mx-auto w-full max-w-5xl px-4 pb-12",
+      { "mt-8": !SITE.showBackButton },
+    ]}
+    data-pagefind-body
+  >
+    <!-- Mono-kicker metadata -->
+    <div class="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1">
+      <p class="font-mono text-xs tracking-widest uppercase text-accent/60">
+        // post
+      </p>
+      {
+        date && (
+          <span class="font-mono text-xs text-foreground/40">
+            <Datetime {date} {timezone} size="sm" />
+          </span>
+        )
+      }
+    </div>
+
+    <h1
+      transition:name={slugifyStr(title)}
+      class="inline-block text-2xl font-bold tracking-tight sm:text-3xl"
+    >
+      {title}
+    </h1>
+
+    {excerpt && (
+      <p class="mt-3 max-w-2xl text-base text-foreground/70">{excerpt}</p>
+    )}
+
+    {
+      coverImage && coverImageInPost && (
+        <div class="my-6 overflow-hidden rounded-lg">
+          <Image
+            src={coverImage}
+            alt={title}
+            width={1200}
+            height={675}
+            loading="lazy"
+            decoding="async"
+            class="h-auto w-full object-cover"
+          />
+        </div>
+      )
+    }
+
+    <article
+      id="article"
+      class="app-prose mx-auto mt-8 max-w-3xl prose-pre:bg-(--shiki-dark-bg)"
+    >
+      <Content />
+    </article>
+
+    <hr class="my-8 border-border" />
+
+    <ul class="mt-4 mb-8 sm:my-8">
+      {tags.map((tag) => <Tag tag={slugifyStr(tag)} tagName={tag} />)}
+    </ul>
+
+    <BackToTopButton />
+
+    <ShareLinks />
+
+    <hr class="my-6 border-border" />
+
+    <!-- Previous/Next Post Buttons -->
+    <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      {
+        prevPost && (
+          <a
+            href={`/posts/${slugifyStr(prevPost.title)}`}
+            class="group flex w-full gap-2"
+          >
+            <IconChevronLeft class="mt-0.5 inline-block flex-none shrink-0 rtl:rotate-180 text-foreground/40 group-hover:text-accent transition-colors" />
+            <div>
+              <span class="font-mono text-xs uppercase tracking-widest text-foreground/40">
+                Previous
+              </span>
+              <div class="text-sm text-foreground/70 group-hover:text-accent transition-colors leading-snug">
+                {prevPost.title}
+              </div>
+            </div>
+          </a>
+        )
+      }
+      {
+        nextPost && (
+          <a
+            href={`/posts/${slugifyStr(nextPost.title)}`}
+            class="group flex w-full justify-end gap-2 text-end sm:col-start-2"
+          >
+            <div>
+              <span class="font-mono text-xs uppercase tracking-widest text-foreground/40">
+                Next
+              </span>
+              <div class="text-sm text-foreground/70 group-hover:text-accent transition-colors leading-snug">
+                {nextPost.title}
+              </div>
+            </div>
+            <IconChevronRight class="mt-0.5 inline-block flex-none shrink-0 rtl:rotate-180 text-foreground/40 group-hover:text-accent transition-colors" />
+          </a>
+        )
+      }
+    </div>
+  </main>
+</Layout>
+
+<script is:inline data-astro-rerun>
+  /** Create a progress indicator
+   *  at the top */
+  function createProgressBar() {
+    // Create the main container div
+    const progressContainer = document.createElement("div");
+    progressContainer.className =
+      "progress-container fixed top-0 z-10 h-1 w-full bg-background";
+
+    // Create the progress bar div
+    const progressBar = document.createElement("div");
+    progressBar.className = "progress-bar h-1 w-0 bg-accent";
+    progressBar.id = "myBar";
+
+    // Append the progress bar to the progress container
+    progressContainer.appendChild(progressBar);
+
+    // Append the progress container to the document body or any other desired parent element
+    document.body.appendChild(progressContainer);
+  }
+  createProgressBar();
+
+  /** Update the progress bar
+   *  when user scrolls */
+  function updateScrollProgress() {
+    document.addEventListener("scroll", () => {
+      const winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      if (document) {
+        const myBar = document.getElementById("myBar");
+        if (myBar) {
+          myBar.style.width = scrolled + "%";
+        }
+      }
+    });
+  }
+  updateScrollProgress();
+
+  /** Attaches links to headings in the document,
+   *  allowing sharing of sections easily */
+  function addHeadingLinks() {
+    const headings = Array.from(
+      document.querySelectorAll("h2, h3, h4, h5, h6"),
+    );
+    for (const heading of headings) {
+      heading.classList.add("group");
+      const link = document.createElement("a");
+      link.className =
+        "heading-link ms-2 no-underline opacity-75 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100";
+      link.href = "#" + heading.id;
+
+      const span = document.createElement("span");
+      span.ariaHidden = "true";
+      span.innerText = "#";
+      link.appendChild(span);
+      heading.appendChild(link);
+    }
+  }
+  addHeadingLinks();
+
+  /* Go to page start after page swap */
+  document.addEventListener("astro:after-swap", () =>
+    window.scrollTo({ left: 0, top: 0, behavior: "instant" }),
+  );
+</script>

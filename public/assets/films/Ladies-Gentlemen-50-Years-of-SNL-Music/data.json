@@ -1,0 +1,69 @@
+{
+  "id": 1421461,
+  "title": "Ladies & Gentlemen... 50 Years of SNL Music",
+  "originalTitle": "Ladies & Gentlemen... 50 Years of SNL Music",
+  "overview": "Untold stories behind the culture-defining and newsmaking musical performances, sketches and cameos of the past 50 years.",
+  "releaseDate": "2025-01-27",
+  "posterPath": "/bRFyfEgTkt62kgWU1jhOl6bkXPs.jpg",
+  "backdropPath": "/zNZBu7gvreUUfVAdV3p760TfmIZ.jpg",
+  "genres": [
+    {
+      "id": 10402,
+      "name": "Music"
+    },
+    {
+      "id": 99,
+      "name": "Documentary"
+    },
+    {
+      "id": 10770,
+      "name": "TV Movie"
+    }
+  ],
+  "runtime": 128,
+  "voteAverage": 7.615,
+  "voteCount": 13,
+  "popularity": 1.1752,
+  "status": "Released",
+  "tagline": "",
+  "budget": 0,
+  "revenue": 0,
+  "productionCompanies": [
+    {
+      "id": 1756,
+      "name": "Broadway Video",
+      "logoPath": "/d7YyNzysIF0lSb4lJRf1ar6MHxi.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 89394,
+      "name": "RadicalMedia",
+      "logoPath": "/m1Hku3PhgdsQiPO8uVe7szyrxAb.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 156793,
+      "name": "Two One Five Entertainment",
+      "logoPath": "/gmj4HrHXWgBcgvgSAxzy3q3AcLl.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt35076584",
+  "homepage": "https://www.nbc.com/nbc-insider/show/ladies-gentlemen-50-years-of-snl-music"
+}

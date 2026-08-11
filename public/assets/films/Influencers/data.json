@@ -1,0 +1,58 @@
+{
+  "id": 1476740,
+  "title": "Influencers",
+  "originalTitle": "Influencers",
+  "overview": "In the picturesque landscapes of Southern France, a young woman's chilling fascination with murder and identity theft sends her life into a whirlwind of chaos.",
+  "releaseDate": "2025-07-26",
+  "posterPath": "/nRdjGDxBW60OhzjAtikLgQBwt3B.jpg",
+  "backdropPath": "/m63y5ozkIBpPr3LxjZUFH8vQKlk.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 110,
+  "voteAverage": 6.772,
+  "voteCount": 46,
+  "popularity": 5.2645,
+  "status": "Released",
+  "tagline": "We all have to start somewhere.",
+  "budget": 0,
+  "revenue": 0,
+  "productionCompanies": [
+    {
+      "id": 261588,
+      "name": "Jackrabbit Media",
+      "logoPath": "/j4gQzYnvvH5mTwKKrbbf9q9Im9F.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "French",
+      "iso6391": "fr",
+      "name": "Français"
+    },
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt36833584",
+  "homepage": ""
+}
