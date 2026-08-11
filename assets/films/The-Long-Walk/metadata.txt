@@ -1,0 +1,36 @@
+Film: The Long Walk
+Original Title: The Long Walk
+Release Date: 2025-09-10
+Runtime: 108 minutes
+Rating: 6.945/10 (1096 votes)
+Popularity: 17.6836
+Status: Released
+
+Tagline: "The task is simple: walk or die."
+
+Overview:
+In a dystopian near-future America, fifty teenage boys take part in a deadly annual walking contest, forced to maintain a minimum pace or be executed, until only one survivor remains.
+
+Genres:
+- Science Fiction
+- Thriller
+- Horror
+
+Production Companies:
+- Lionsgate (US)
+- Media Capital Technologies (US)
+- Vertigo Entertainment (US)
+- about:blank (US)
+
+Production Countries:
+- United States of America
+
+Spoken Languages:
+- English (English)
+
+Budget: $20,000,000
+Revenue: $62,871,697
+IMDB: https://www.imdb.com/title/tt10374610
+Homepage: https://www.thelongwalk.movie
+
+Data retrieved on: 2026-01-31T19:48:53.352Z

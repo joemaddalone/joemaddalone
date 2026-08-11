@@ -1,0 +1,60 @@
+{
+  "id": 1241983,
+  "title": "Train Dreams",
+  "originalTitle": "Train Dreams",
+  "overview": "A logger leads a life of quiet grace as he experiences love and loss during an era of monumental change in early 20th-century America.",
+  "releaseDate": "2025-11-05",
+  "posterPath": "/l3zS4YnpOi4usyEXGJMtxSqDDyb.jpg",
+  "backdropPath": "/u5NWHVhZ6HWc1fXnqn82cMar5St.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "runtime": 102,
+  "voteAverage": 7.348,
+  "voteCount": 223,
+  "popularity": 33.2327,
+  "status": "Released",
+  "tagline": "",
+  "budget": 10000000,
+  "revenue": 0,
+  "productionCompanies": [
+    {
+      "id": 3540,
+      "name": "Kamala Films",
+      "logoPath": null,
+      "originCountry": "US"
+    },
+    {
+      "id": 22146,
+      "name": "Black Bear Pictures",
+      "logoPath": "/v37N1mFeXNQfvPankg3feBhVvM7.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "Mandarin",
+      "iso6391": "zh",
+      "name": "普通话"
+    },
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt29768334",
+  "homepage": "https://www.netflix.com/title/82020378"
+}

@@ -1,0 +1,38 @@
+Film: Eddington
+Original Title: Eddington
+Release Date: 2025-07-16
+Runtime: 148 minutes
+Rating: 6.396/10 (618 votes)
+Popularity: 9.9462
+Status: Released
+
+Tagline: "Hindsight is 2020."
+
+Overview:
+In May of 2020, a standoff between a small-town sheriff and mayor sparks a powder keg as neighbor is pitted against neighbor in Eddington, New Mexico.
+
+Genres:
+- Western
+- Comedy
+- Crime
+
+Production Companies:
+- A24 (US)
+- Square Peg (US)
+- 828 Productions (US)
+- IPR.VC (FI)
+- Access Entertainment (US)
+
+Production Countries:
+- United States of America
+- Finland
+
+Spoken Languages:
+- English (English)
+
+Budget: $25,000,000
+Revenue: $13,738,227
+IMDB: https://www.imdb.com/title/tt31176520
+Homepage: https://a24films.com/films/eddington
+
+Data retrieved on: 2026-01-31T19:49:25.260Z

@@ -1,0 +1,100 @@
+{
+  "id": 1128655,
+  "title": "The Surfer",
+  "originalTitle": "The Surfer",
+  "overview": "A man returns to the idyllic beach of his childhood to surf with his son. When he is humiliated by a group of locals, the man is drawn into a conflict that keeps rising and pushes him to his breaking point.",
+  "releaseDate": "2025-04-11",
+  "posterPath": "/gm9Ou0dkxhb1vcrkB6uRhoifcHC.jpg",
+  "backdropPath": "/iuW4CPRcaTZzTRDr8iLg2KYdKCM.jpg",
+  "genres": [
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "runtime": 100,
+  "voteAverage": 5.746,
+  "voteCount": 257,
+  "popularity": 7.404,
+  "status": "Released",
+  "tagline": "Don't live here, don't surf here.",
+  "budget": 0,
+  "revenue": 0,
+  "productionCompanies": [
+    {
+      "id": 7888,
+      "name": "ScreenWest",
+      "logoPath": "/6HhOnizpDOvKjprTl47tPqvHLvZ.png",
+      "originCountry": "AU"
+    },
+    {
+      "id": 831,
+      "name": "Saturn Films",
+      "logoPath": "/vLENXiYTyITnMDrTKabUXhgTKX2.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 15780,
+      "name": "Arenamedia",
+      "logoPath": "/bdQFj7E5yNsir5pMgacux2SoLGQ.png",
+      "originCountry": "AU"
+    },
+    {
+      "id": 111422,
+      "name": "Lovely Productions",
+      "logoPath": "/6H3JNNi6bFy7RAMYcTHbf0uSozR.png",
+      "originCountry": "IE"
+    },
+    {
+      "id": 155758,
+      "name": "Tea Shop Productions",
+      "logoPath": "/iZi0zd9ijrcWR9zlEUUthG8d600.png",
+      "originCountry": "GB"
+    },
+    {
+      "id": 74346,
+      "name": "Stan",
+      "logoPath": "/1akCJMjyZsiS4v3NTJD5Y0LFZ4R.png",
+      "originCountry": "AU"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "AU",
+      "name": "Australia"
+    },
+    {
+      "iso31661": "IE",
+      "name": "Ireland"
+    },
+    {
+      "iso31661": "GB",
+      "name": "United Kingdom"
+    },
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    },
+    {
+      "englishName": "French",
+      "iso6391": "fr",
+      "name": "Français"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt27813235",
+  "homepage": "https://www.thesurferfilm.com"
+}

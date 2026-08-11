@@ -1,0 +1,63 @@
+{
+  "id": 1140535,
+  "title": "Presence",
+  "originalTitle": "Presence",
+  "overview": "A couple and their children move into a seemingly normal suburban home. When strange events occur, they begin to believe there is something else in the house with them. The presence is about to disrupt their lives in unimaginable ways.",
+  "releaseDate": "2025-01-17",
+  "posterPath": "/xZIGHoHj0DF0zdibwa66cRWHdHO.jpg",
+  "backdropPath": "/eT1L3IVcHUL58wLn48E5dxlea3Z.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "runtime": 84,
+  "voteAverage": 6.119,
+  "voteCount": 664,
+  "popularity": 6.8613,
+  "status": "Released",
+  "tagline": "In this house there is a presence.",
+  "budget": 2000000,
+  "revenue": 11069405,
+  "productionCompanies": [
+    {
+      "id": 8850,
+      "name": "Extension 765",
+      "logoPath": "/o3nVHmmi077juQZcpSeO5Ha6UiE.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 250844,
+      "name": "The Spectral Spirit Company",
+      "logoPath": null,
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt28249919",
+  "homepage": "https://www.presencemovie.com"
+}

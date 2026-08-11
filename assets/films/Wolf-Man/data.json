@@ -1,0 +1,65 @@
+{
+  "id": 710295,
+  "title": "Wolf Man",
+  "originalTitle": "Wolf Man",
+  "overview": "With his marriage fraying, Blake persuades his wife Charlotte to take a break from the city and visit his remote childhood home in rural Oregon. As they arrive at the farmhouse in the dead of night, they're attacked by an unseen animal and barricade themselves inside the home as the creature prowls the perimeter. But as the night stretches on, Blake begins to behave strangely, transforming into something unrecognizable.",
+  "releaseDate": "2025-01-15",
+  "posterPath": "/wpSDzTBfF0Eeo5lzu2w9FTujGqd.jpg",
+  "backdropPath": "/wwARk7hRIfHfh2n2ubN6N7lvTne.jpg",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "runtime": 102,
+  "voteAverage": 6.22,
+  "voteCount": 894,
+  "popularity": 5.9909,
+  "status": "Released",
+  "tagline": "Protect your own.",
+  "budget": 25000000,
+  "revenue": 35153314,
+  "productionCompanies": [
+    {
+      "id": 33,
+      "name": "Universal Pictures",
+      "logoPath": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 242184,
+      "name": "Cloak & Co.",
+      "logoPath": "/sYlCuBVE1bz1KhQoOfMZiXO13vH.png",
+      "originCountry": "US"
+    },
+    {
+      "id": 3172,
+      "name": "Blumhouse Productions",
+      "logoPath": "/rzKluDcRkIwHZK2pHsiT667A2Kw.png",
+      "originCountry": "US"
+    }
+  ],
+  "productionCountries": [
+    {
+      "iso31661": "US",
+      "name": "United States of America"
+    }
+  ],
+  "spokenLanguages": [
+    {
+      "englishName": "English",
+      "iso6391": "en",
+      "name": "English"
+    }
+  ],
+  "adult": false,
+  "video": false,
+  "originalLanguage": "en",
+  "imdbId": "tt4216984",
+  "homepage": "https://www.wolfmanmovie.com"
+}
