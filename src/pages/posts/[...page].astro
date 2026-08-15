@@ -2,8 +2,7 @@
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
+import NewspaperMasthead from "@/components/NewspaperMasthead.astro";
 import Card from "@/components/Card.astro";
 import Pagination from "@/components/Pagination.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
@@ -16,20 +15,22 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 const { page } = Astro.props;
 const [firstPost, ...restPosts] = page.data;
-
-console.log(page.data)
-
 ---
 
-<Layout title="Posts">
-  <main id="main-content" class="mx-auto max-w-5xl px-4 pb-4">
-    <p class="font-mono text-xs tracking-widest uppercase text-foreground/40 mb-4 mt-8">// posts</p>
-    <ul class="grid grid-cols-1 gap-8 md:grid-cols-2">
-      {firstPost && <Card variant="h2" featured {...firstPost} />}
-      {restPosts.map((data) => <Card variant="h3" {...data} />)}
-    </ul>
+<Layout title="Posts" includeHeader={false} includeFooter={false}>
+  <main
+    id="main-content"
+    class="newspaper-theme min-h-screen p-4 md:p-8"
+  >
+    <NewspaperMasthead section="All the News" />
+
+    <section class="mx-auto max-w-5xl">
+      <ul class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {firstPost && <Card variant="h2" featured {...firstPost} />}
+        {restPosts.map((data) => <Card variant="h3" {...data} />)}
+      </ul>
+    </section>
+
+    <Pagination {page} />
   </main>
-
-  <Pagination {page} />
-
 </Layout>

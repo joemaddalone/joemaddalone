@@ -1,5 +1,4 @@
 import "./index.css";
-import "./newspaper.css";
 import { cn } from "../../lib/utils";
 
 const Launch2025 = ({ children }) => {
@@ -39,10 +38,10 @@ const Launch2025 = ({ children }) => {
             <div className="lead-text">
               <p className="font-bold mb-2">DATELINE: INTERNET —</p>
               <p>
-                "Hi, I'm Joe Maddalone." These simple words launched a thousand
-                commits. Experts say software engineering revolutionizes how we
-                view everything. "It does not seem to be slowing at all,"
-                remarked one observer.
+                Hi, I'm Joe Maddalone. I build things I need or want and then
+                try to teach others how to do the same. I teach stuff on{" "}
+                <a href="https://el337.com">el337.com</a> &{" "}
+                <a href="https://www.youtube.com/@JoeMAddalone">YouTube</a>.
               </p>
               <p className="mt-4">
                 In other news, the grid continues to adapt perfectly to all
@@ -59,16 +58,11 @@ const Launch2025 = ({ children }) => {
             Latest News
           </h3>
           <div className="flex-grow flex flex-col justify-center items-center cursor-pointer hover:bg-gray-100 transition-colors">
-            <a
-              href="https://el337.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-center group"
-            >
+            <a href="/posts" className="text-center group">
               <h4 className="font-serif text-2xl mb-2 group-hover:underline">
                 Read The Blog
               </h4>
-              <p className="text-sm text-gray-600">Fresh insights daily.</p>
+              <p className="text-sm text-gray-600">Mostly Movies and Books.</p>
             </a>
           </div>
         </aside>
@@ -97,7 +91,7 @@ const Launch2025 = ({ children }) => {
                 <span className="listing-title">garkbit</span>
                 <span className="listing-dots"></span>
                 <span className="listing-value">
-                  AI image generation pipeline
+                  ollama
                 </span>
               </a>
               <a
@@ -106,15 +100,15 @@ const Launch2025 = ({ children }) => {
               >
                 <span className="listing-title">react-svg-path</span>
                 <span className="listing-dots"></span>
-                <span className="listing-value">TypeScript/React</span>
+                <span className="listing-value">svg+react</span>
               </a>
               <a
-                href="https://2019.reactloop.com"
+                href="https://github.com/joemaddalone/zugar"
                 className="listing-item group"
               >
-                <span className="listing-title">ReactLoop</span>
+                <span className="listing-title">zugar</span>
                 <span className="listing-dots"></span>
-                <span className="listing-value">Conference/Organizer</span>
+                <span className="listing-value">ai-sdk+dspy</span>
               </a>
               <a
                 href="https://github.com/joemaddalone/vogon"
@@ -122,7 +116,7 @@ const Launch2025 = ({ children }) => {
               >
                 <span className="listing-title">vogon</span>
                 <span className="listing-dots"></span>
-                <span className="listing-value">Next/Typescript</span>
+                <span className="listing-value">next</span>
               </a>
               <a
                 href="https://github.com/joemaddalone/path"
@@ -130,15 +124,15 @@ const Launch2025 = ({ children }) => {
               >
                 <span className="listing-title">path</span>
                 <span className="listing-dots"></span>
-                <span className="listing-value">Typescript/SVG</span>
+                <span className="listing-value">svg+ts</span>
               </a>
               <a
-                href="https://www.youtube.com/@NorthwestChicagoJavascript"
+                href="https://github.com/joemaddalone/inference-lab"
                 className="listing-item group"
               >
-                <span className="listing-title">NWCJS</span>
+                <span className="listing-title">inference-lab</span>
                 <span className="listing-dots"></span>
-                <span className="listing-value">Meetup/Organizer</span>
+                <span className="listing-value">MLX engines</span>
               </a>
               {/* <div className="mt-2 text-center text-xs italic border-t border-gray-300 pt-1">
 								<a href="/custom-work" className="underline hover:decoration-2">View Full Schedule</a>
@@ -270,11 +264,49 @@ const Launch2025 = ({ children }) => {
               CLASSIFIEDS
             </h3>
             <div className="classified-item">
-              <p className="classified-title">DEVELOPER FOR HIRE</p>
+              <p className="classified-title">MLX Engine Benchmark Showdown</p>
               <p>
-                Experienced full-stack eng. Will code for food.{" "}
-                <a href="/resume" className="underline">
-                  View Resume
+                Benchmarking MLX-based inference engines. For more details, ask
+                for{" "}
+                <a
+                  href="https://el337.com/posts/mlx-engine-benchmark-showdown/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="underline"
+                >
+                  Joe
+                </a>
+                .
+              </p>
+            </div>
+            <div className="classified-item">
+              <p className="classified-title">Hot take:</p>
+              <p>
+                I don't care about 100×ing my workflow, says{" "}
+                <a
+                  href="https://el337.com/posts/hot-take-i-dont-care-about-100-ing-my-workflow/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="underline"
+                >
+                  Unemployable Man
+                </a>
+                .
+              </p>
+            </div>
+            <div className="classified-item">
+              <p className="classified-title">
+                What We Didn't Learn from Walter Pitts
+              </p>
+              <p>
+                Burn the dissertation{" "}
+                <a
+                  href="https://el337.com/posts/what-we-didnt-learn-from-walter-pitts/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="underline"
+                >
+                  here
                 </a>
                 .
               </p>
@@ -283,11 +315,28 @@ const Launch2025 = ({ children }) => {
               <p className="classified-title">LOST CAT</p>
               <p>Answers to "Sudo". Reward.</p>
             </div>
-            <div className="classified-item flex-grow flex items-end justify-center">
+            <div className="classified-item">
+              <p className="classified-title">
+                Apple's Built-in LLM Sucks, Mostly
+              </p>
+              <p>
+                good at one thing...
+                <a
+                  href="https://el337.com/posts/apples-built-in-llm-sucks-mostly/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="underline"
+                >
+                  details here
+                </a>
+                .
+              </p>
+            </div>
+            {/* <div className="classified-item flex-grow flex items-end justify-center">
               <a href="/resume" className="font-bold underline">
                 More About Joe
               </a>
-            </div>
+            </div>*/}
           </div>
         </div>
 

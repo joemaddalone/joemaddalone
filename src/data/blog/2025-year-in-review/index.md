@@ -4,7 +4,6 @@ date: 2026-01-21
 tags: ["sentimental"]
 excerpt: "holy fuck what a year."
 coverImage: "./image.png"
-draft: true
 ---
 
 ## A sudden relocation

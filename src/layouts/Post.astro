@@ -1,7 +1,7 @@
 ---
 import { render, type CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Header.astro";
+import NewspaperMasthead from "@/components/NewspaperMasthead.astro";
 import Tag from "@/components/Tag.astro";
 import Datetime from "@/components/Datetime.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
@@ -78,116 +78,117 @@ const nextPost =
   currentPostIndex !== allPosts.length ? allPosts[currentPostIndex + 1] : null;
 ---
 
-<Layout {...layoutProps}>
-  <Header />
-  <BackButton />
+<Layout {...layoutProps} includeHeader={false} includeFooter={false}>
   <main
     id="main-content"
-    class:list={[
-      "mx-auto w-full max-w-5xl px-4 pb-12",
-      { "mt-8": !SITE.showBackButton },
-    ]}
+    class="newspaper-theme min-h-screen p-4 md:p-8"
     data-pagefind-body
   >
-    <!-- Mono-kicker metadata -->
-    <div class="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1">
-      <p class="font-mono text-xs tracking-widest uppercase text-accent/60">
-        // post
-      </p>
+    <NewspaperMasthead section={tags[0] ?? "News"} />
+    <BackButton />
+
+    <article class="mx-auto max-w-3xl">
+      <!-- Mono-kicker metadata -->
+      <div class="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1">
+        <p class="font-mono text-xs tracking-widest uppercase text-black/60">
+          // {tags.map((tag) => tag).join(" · ")}
+        </p>
+      </div>
+
+      <h1
+        transition:name={slugifyStr(title)}
+        class="headline-large text-center"
+      >
+        {title}
+      </h1>
+
       {
         date && (
-          <span class="font-mono text-xs text-foreground/40">
-            <Datetime {date} {timezone} size="sm" />
-          </span>
+          <div class="my-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-y-2 border-black py-2 font-mono text-xs uppercase tracking-widest text-black/70">
+            <Datetime {date} {timezone} />
+            <span>By {SITE.author}</span>
+          </div>
         )
       }
-    </div>
 
-    <h1
-      transition:name={slugifyStr(title)}
-      class="inline-block text-2xl font-bold tracking-tight sm:text-3xl"
-    >
-      {title}
-    </h1>
+      {excerpt && (
+        <p class="mx-auto mt-4 max-w-2xl text-center italic text-black/70">
+          {excerpt}
+        </p>
+      )}
 
-    {excerpt && (
-      <p class="mt-3 max-w-2xl text-base text-foreground/70">{excerpt}</p>
-    )}
+      {
+        coverImage && coverImageInPost && (
+          <figure class="my-6">
+            <div class="overflow-hidden border border-black">
+              <Image
+                src={coverImage}
+                alt={title}
+                width={1200}
+                height={675}
+                loading="lazy"
+                decoding="async"
+                class="newspaper-image h-auto w-full object-cover"
+              />
+            </div>
+            <figcaption class="mt-2 text-center font-mono text-xs uppercase tracking-widest text-black/60">
+              {title}
+            </figcaption>
+          </figure>
+        )
+      }
 
-    {
-      coverImage && coverImageInPost && (
-        <div class="my-6 overflow-hidden rounded-lg">
-          <Image
-            src={coverImage}
-            alt={title}
-            width={1200}
-            height={675}
-            loading="lazy"
-            decoding="async"
-            class="h-auto w-full object-cover"
-          />
-        </div>
-      )
-    }
+      <div id="article" class="newspaper-article mt-8">
+        <Content />
+      </div>
 
-    <article
-      id="article"
-      class="app-prose mx-auto mt-8 max-w-3xl prose-pre:bg-(--shiki-dark-bg)"
-    >
-      <Content />
+      <hr class="my-8 border-black" />
+      <BackToTopButton />
+
+      <ShareLinks />
+
+      <hr class="my-6 border-black" />
+
+      <!-- Previous/Next Post Buttons -->
+      <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        {
+          prevPost && (
+            <a
+              href={`/posts/${slugifyStr(prevPost.title)}`}
+              class="group flex w-full gap-2"
+            >
+              <IconChevronLeft class="mt-0.5 inline-block flex-none shrink-0 text-black/40" />
+              <div>
+                <span class="font-mono text-xs uppercase tracking-widest text-black/50">
+                  Previous
+                </span>
+                <div class="font-serif text-lg font-bold leading-snug">
+                  {prevPost.title}
+                </div>
+              </div>
+            </a>
+          )
+        }
+        {
+          nextPost && (
+            <a
+              href={`/posts/${slugifyStr(nextPost.title)}`}
+              class="group flex w-full justify-end gap-2 text-end sm:col-start-2"
+            >
+              <div>
+                <span class="font-mono text-xs uppercase tracking-widest text-black/50">
+                  Next
+                </span>
+                <div class="font-serif text-lg font-bold leading-snug">
+                  {nextPost.title}
+                </div>
+              </div>
+              <IconChevronRight class="mt-0.5 inline-block flex-none shrink-0 text-black/40" />
+            </a>
+          )
+        }
+      </div>
     </article>
-
-    <hr class="my-8 border-border" />
-
-    <ul class="mt-4 mb-8 sm:my-8">
-      {tags.map((tag) => <Tag tag={slugifyStr(tag)} tagName={tag} />)}
-    </ul>
-
-    <BackToTopButton />
-
-    <ShareLinks />
-
-    <hr class="my-6 border-border" />
-
-    <!-- Previous/Next Post Buttons -->
-    <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-      {
-        prevPost && (
-          <a
-            href={`/posts/${slugifyStr(prevPost.title)}`}
-            class="group flex w-full gap-2"
-          >
-            <IconChevronLeft class="mt-0.5 inline-block flex-none shrink-0 rtl:rotate-180 text-foreground/40 group-hover:text-accent transition-colors" />
-            <div>
-              <span class="font-mono text-xs uppercase tracking-widest text-foreground/40">
-                Previous
-              </span>
-              <div class="text-sm text-foreground/70 group-hover:text-accent transition-colors leading-snug">
-                {prevPost.title}
-              </div>
-            </div>
-          </a>
-        )
-      }
-      {
-        nextPost && (
-          <a
-            href={`/posts/${slugifyStr(nextPost.title)}`}
-            class="group flex w-full justify-end gap-2 text-end sm:col-start-2"
-          >
-            <div>
-              <span class="font-mono text-xs uppercase tracking-widest text-foreground/40">
-                Next
-              </span>
-              <div class="text-sm text-foreground/70 group-hover:text-accent transition-colors leading-snug">
-                {nextPost.title}
-              </div>
-            </div>
-            <IconChevronRight class="mt-0.5 inline-block flex-none shrink-0 rtl:rotate-180 text-foreground/40 group-hover:text-accent transition-colors" />
-          </a>
-        )
-      }
-    </div>
   </main>
 </Layout>
 
@@ -198,11 +199,13 @@ const nextPost =
     // Create the main container div
     const progressContainer = document.createElement("div");
     progressContainer.className =
-      "progress-container fixed top-0 z-10 h-1 w-full bg-background";
+      "progress-container fixed top-0 z-10 h-1 w-full";
+    progressContainer.style.background = "#f1ebdc";
 
     // Create the progress bar div
     const progressBar = document.createElement("div");
-    progressBar.className = "progress-bar h-1 w-0 bg-accent";
+    progressBar.className = "progress-bar h-1 w-0";
+    progressBar.style.background = "#8b0000";
     progressBar.id = "myBar";
 
     // Append the progress bar to the progress container

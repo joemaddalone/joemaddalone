@@ -5,38 +5,28 @@
 
 ## Current Projects
 - **[inference-lab](https://github.com/joemaddalone/inference-lab)** - Run a bunch of MLX Inference Engines
-- **[guide-mark-ii](https://github.com/joemaddalone/guide-mark-ii)** - Benchmark LLMs on Apple Silicon
 - **[zugar](https://github.com/joemaddalone/zugar)** - DSPy-inspired Zod Schema -> prompt + structured output
-- **[garkbit](https://github.com/joemaddalone/garkbit)** - Automated image generation pipeline powered by local llms
 - **[zod-inquirer](https://github.com/joemaddalone/zod-inquirer)** - Generate validated inquirer.js prompts from Zod schemas
 - **[fenchurch](https://github.com/joemaddalone/fenchurch)** - Initialize projects with AI tooling and prompts
 - **[frogstar](https://github.com/joemaddalone/frogstar)** - Weight lifting planner/tracker (nextjs)
 - **[vogon](https://github.com/joemaddalone/vogon)** - Plex/Jellyfin art management (nextjs)
 - **[hactar](https://github.com/joemaddalone/hactar)** - A Plex hard drive savior (node)
-- **[react-svg-path](https://joemaddalone.github.io/react-svg-path-docs/#/)** - React SVG path component library
-- **[path](https://joemaddalone.github.io/path/)** - A simple svg path generation utility (SVG)
 
+## Courses
 
+- [Mastering Astryx](https://el337.com/courses/astryx/)
+- [Build an AI Agent in Typescript](https://el337.com/courses/build-an-ai-agent-in-typescript/)
+- [JavaScript Regular Expressions](https://el337.com/courses/javascript-regular-expressions/)
+- [Master SVG Path: From Basics to Beautiful Curves](https://el337.com/courses/master-svg-path/)
+- [Web Animations API](https://el337.com/courses/web-animations-api/)
 
-## Latest Videos  [![Youtube](https://img.shields.io/badge/-FF5722?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@JoeMaddalone)
+## Latest Videos
 
+- [Run MLX LLMs with the Fastest MLX Engine on Apple Silicon](https://youtu.be/olRzPoZNhI4)
+- [Managing AI Skills: Finally Solved with SkillsGate](https://youtu.be/Yzw0blfcb6Q)
+- [Llama.cpp Model Routing](https://youtu.be/F01cBv_IyUI)
 - [A 15-year Old Homeless Kid Invented Neural Networks](https://youtu.be/EWtvZP3oVtc)
 - [The Only Skill You Need to Improve Your Codebase](https://youtu.be/5BtbAwPQjF8)
-- [Run MLX LLMs 50% Faster on a Mac with DSpark](https://youtu.be/5BtbAwPQjF8)
-- [Run your AI on Nvidia’s GPUs for FREE](https://youtu.be/n-zV2KNffRY)
-- [Turn Claude Cowork into a Local AI Agent](https://youtu.be/uXD3qOMDpSI)
-- [Run LLMs 2X faster on a Mac with oMLX](https://youtu.be/6LPqdsM1TrU)
-- [Build a local coding agent from scratch with Ollama and AI SDK](https://youtu.be/jDwwNq11Nuo)
-- [Build a local RAG system with Ollama, libSQL, and an EPUB](https://youtu.be/PZVXYrjDa8w)
-
-
-## Latest Blog Posts [![Blog](https://img.shields.io/badge/-0088CC?style=flat-square&logo=rss&logoColor=white)](https://el337.com)
-
-- [What We Didn't Learn from Walter Pitts](https://el337.com/posts/what-we-didnt-learn-from-walter-pitts/)
-- [Baby's First Local AI](https://el337.com/posts/babys-first-local-ai/)
-- [Build a local RAG system with Ollama, libSQL, and an EPUB](https://el337.com/posts/build-a-local-rag-system-with-ollama-lib-sql-and-an-epub/)
-- [Ollama + Pi](https://el337.com/posts/ollama-pi/)
-- [2025 Movies You May Have Overlooked](https://el337.com/posts/2025-movies-you-may-have-overlooked)
 
 ## GitHub Activity
 

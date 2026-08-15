@@ -1,5 +1,5 @@
 /* Newspaper Theme Variables */
-:root {
+.newspaper-theme {
   --paper-color: #f1ebdc;
   --ink-color: #2b2b2b;
   --accent-color: #8b0000; /* Dark Red for accents */
@@ -300,4 +300,101 @@
   font-variant-numeric: tabular-nums;
   font-size: 0.75rem;
   font-weight: bold;
+}
+
+/* ===== Newspaper links: ink with a dark-red hover ===== */
+.newspaper-theme a:not(.nav-links a):not(.explist a) {
+  color: var(--ink-color);
+  transition: color 0.2s ease;
+}
+
+.newspaper-theme a:not(.nav-links a):not(.explist a):hover {
+  color: var(--accent-color);
+}
+
+/* ===== Newspaper imagery ===== */
+.newspaper-image {
+  filter: sepia(0.3) contrast(1.15);
+}
+
+/* ===== Post article typography ===== */
+.newspaper-article {
+  font-family: var(--font-body);
+  color: var(--ink-color);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.newspaper-article p {
+  text-align: justify;
+  hyphens: auto;
+  margin-bottom: 1rem;
+}
+
+.newspaper-article h1,
+.newspaper-article h2,
+.newspaper-article h3,
+.newspaper-article h4,
+.newspaper-article h5,
+.newspaper-article h6 {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.15;
+  margin: 2rem 0 1rem;
+}
+
+.newspaper-article h2 {
+  font-size: 1.75rem;
+}
+
+.newspaper-article h3 {
+  font-size: 1.375rem;
+}
+
+.newspaper-article h4 {
+  font-size: 1.125rem;
+}
+
+.newspaper-article h5 {
+  font-size: 1rem;
+}
+
+.newspaper-article h6 {
+  font-size: 0.875rem;
+}
+
+.newspaper-article ul,
+.newspaper-article ol {
+  margin: 0 0 1rem 1.5rem;
+  padding-left: 1rem;
+}
+
+.newspaper-article li {
+  margin-bottom: 0.25rem;
+}
+
+.newspaper-article blockquote {
+  border-left: 3px solid var(--ink-color);
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.newspaper-article code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  background: #ede4cf;
+  padding: 0.1em 0.3em;
+}
+
+.newspaper-article img {
+  max-width: 100%;
+  height: auto;
+}
+
+.newspaper-article hr {
+  border: none;
+  border-top: 1px solid var(--ink-color);
+  margin: 2rem 0;
 }

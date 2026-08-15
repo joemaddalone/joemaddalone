@@ -1,0 +1,25 @@
+---
+interface Props {
+  section?: string;
+}
+
+const { section = "All the News" } = Astro.props;
+
+const currentDate = new Date().toLocaleDateString("en-US", {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<header class="newspaper-header">
+  <h1>
+    <a href="/">The Daily Joe</a>
+  </h1>
+  <div class="newspaper-date">
+    <span>Vol. 1, No. 1</span>
+    <span>{currentDate}</span>
+    <span>{section}</span>
+  </div>
+</header>

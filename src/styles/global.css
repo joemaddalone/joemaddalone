@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../components/launch2025/newspaper.css";
 @plugin '@tailwindcss/typography';
 
 @view-transition {
