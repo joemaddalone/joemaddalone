@@ -22,10 +22,10 @@
 
 ## Latest Videos
 
-- [Run MLX LLMs with the Fastest MLX Engine on Apple Silicon](https://youtu.be/olRzPoZNhI4)
+- [Run MLX LLMs with the Fastest MLX Engine on Apple Silicon](https://el337.com/posts/mlx-engine-benchmark-showdown/)
 - [Managing AI Skills: Finally Solved with SkillsGate](https://youtu.be/Yzw0blfcb6Q)
 - [Llama.cpp Model Routing](https://youtu.be/F01cBv_IyUI)
-- [A 15-year Old Homeless Kid Invented Neural Networks](https://youtu.be/EWtvZP3oVtc)
+- [A 15-year Old Homeless Kid Invented Neural Networks](https://el337.com/posts/what-we-didnt-learn-from-walter-pitts/)
 - [The Only Skill You Need to Improve Your Codebase](https://youtu.be/5BtbAwPQjF8)
 
 ## GitHub Activity
