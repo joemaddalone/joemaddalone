@@ -33,15 +33,13 @@ const Launch2025 = ({ children }) => {
         <article className="[grid-area:intro] newspaper-border p-4 bg-white">
           <div className="lead-story">
             <h2 className="headline-large">
-              Software Engineer Builds Cool Stuff
+              code, film, nerd.
             </h2>
             <div className="lead-text">
               <p className="font-bold mb-2">DATELINE: INTERNET —</p>
               <p>
-                Hi, I'm Joe Maddalone. I build things I need or want and then
-                try to teach others how to do the same. I teach stuff on{" "}
-                <a href="https://el337.com">el337.com</a> &{" "}
-                <a href="https://www.youtube.com/@JoeMAddalone">YouTube</a>.
+                Hi, I'm Joe Maddalone. I build things I need or want and obsess over film and books. I teach stuff on{" "}
+                <a href="https://el337.com">el337.com</a>
               </p>
               <p className="mt-4">
                 In other news, the grid continues to adapt perfectly to all
@@ -85,54 +83,46 @@ const Launch2025 = ({ children }) => {
             <div className="listing-header">Project Show Times</div>
             <div className="listing-content">
               <a
-                href="https://github.com/joemaddalone/garkbit"
+                href="https://el337.com/courses/astryx/"
                 className="listing-item group"
               >
-                <span className="listing-title">garkbit</span>
+                <span className="listing-title">Mastering Astryx</span>
                 <span className="listing-dots"></span>
                 <span className="listing-value">
-                  ollama
+                  13 lessons
                 </span>
               </a>
               <a
-                href="https://joemaddalone.github.io/react-svg-path-docs/#/"
+                href="https://el337.com/courses/build-an-ai-agent-in-typescript/"
                 className="listing-item group"
               >
-                <span className="listing-title">react-svg-path</span>
+                <span className="listing-title">Build an AI Agent in Typescript</span>
                 <span className="listing-dots"></span>
-                <span className="listing-value">svg+react</span>
+                <span className="listing-value">8 lessons</span>
               </a>
               <a
-                href="https://github.com/joemaddalone/zugar"
+                href="https://el337.com/courses/javascript-regular-expressions/"
                 className="listing-item group"
               >
-                <span className="listing-title">zugar</span>
+                <span className="listing-title">JavaScript Regular Expressions</span>
                 <span className="listing-dots"></span>
-                <span className="listing-value">ai-sdk+dspy</span>
+                <span className="listing-value">11 lessons</span>
               </a>
               <a
-                href="https://github.com/joemaddalone/vogon"
+                href="https://el337.com/courses/master-svg-path/"
                 className="listing-item group"
               >
-                <span className="listing-title">vogon</span>
+                <span className="listing-title">Master SVG Path</span>
                 <span className="listing-dots"></span>
-                <span className="listing-value">next</span>
+                <span className="listing-value">4 lessons</span>
               </a>
               <a
-                href="https://github.com/joemaddalone/path"
+                href="https://el337.com/courses/web-animations-api/"
                 className="listing-item group"
               >
-                <span className="listing-title">path</span>
+                <span className="listing-title">Web Animations API</span>
                 <span className="listing-dots"></span>
-                <span className="listing-value">svg+ts</span>
-              </a>
-              <a
-                href="https://github.com/joemaddalone/inference-lab"
-                className="listing-item group"
-              >
-                <span className="listing-title">inference-lab</span>
-                <span className="listing-dots"></span>
-                <span className="listing-value">MLX engines</span>
+                <span className="listing-value">7 lessons</span>
               </a>
               {/* <div className="mt-2 text-center text-xs italic border-t border-gray-300 pt-1">
 								<a href="/custom-work" className="underline hover:decoration-2">View Full Schedule</a>
