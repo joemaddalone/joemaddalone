@@ -5,7 +5,6 @@ tags: ["film"]
 excerpt: "I like physical media for movies."
 short: "Discs"
 coverImage: "./index.png"
-draft: true
 ---
 
 There's a lot of stuff on them there discs that you won't find on a streaming service.

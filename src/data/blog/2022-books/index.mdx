@@ -9,10 +9,8 @@ coverImage: "./2022-books.jpeg"
 import data from './2022-books.11tydata.json';
 import BookWidget from '../../../components/BookWidget.jsx';
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mt-6">
+<div class="grid grid-cols-1 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-6xl mx-auto mt-6 justify-items-center">
 {data.books2022.map((book) => (
-	<div key={book.isbn} className="flex justify-center items-center w-full">
-	<BookWidget bookData={book} compact />
-	</div>
+	<BookWidget key={book.isbn} bookData={book} compact />
 ))}
 </div>

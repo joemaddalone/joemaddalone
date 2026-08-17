@@ -4,8 +4,8 @@ export const SITE = {
   profile: "https://joemaddalone.com/",
   desc: "Joe Maddalone's talks about software, books, and movies.",
   title: "Joe MAddalone",
-  postPerIndex: 9,
-  postPerPage: 9,
+  postPerIndex: 10,
+  postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   showArchives: false,
   showBackButton: true, // show back button in post detail
