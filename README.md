@@ -14,6 +14,8 @@
 
 ## Courses
 
+
+
 - [Mastering Astryx](https://el337.com/courses/astryx/)
 - [Build an AI Agent in Typescript](https://el337.com/courses/build-an-ai-agent-in-typescript/)
 - [JavaScript Regular Expressions](https://el337.com/courses/javascript-regular-expressions/)
@@ -22,11 +24,13 @@
 
 ## Latest Videos
 
+
+- [Agent Orchestration on Easy Mode](https://el337.com/tools/orca/)
 - [Run MLX LLMs with the Fastest MLX Engine on Apple Silicon](https://el337.com/posts/mlx-engine-benchmark-showdown/)
-- [Managing AI Skills: Finally Solved with SkillsGate](https://youtu.be/Yzw0blfcb6Q)
-- [Llama.cpp Model Routing](https://youtu.be/F01cBv_IyUI)
+- [Managing AI Skills: Finally Solved with SkillsGate](https://el337.com/tools/skillsgate/)
+- [Llama.cpp Model Routing](https://el337.com/tools/llama-forge/)
 - [A 15-year Old Homeless Kid Invented Neural Networks](https://el337.com/posts/what-we-didnt-learn-from-walter-pitts/)
-- [The Only Skill You Need to Improve Your Codebase](https://youtu.be/5BtbAwPQjF8)
+- [The Only Skill You Need to Improve Your Codebase](https://el337.com/tools/improve/)
 
 ## GitHub Activity
 
