@@ -1,0 +1,280 @@
+---
+interface Props {
+  variant?: "default" | "minimal";
+}
+const { variant = "default" } = Astro.props;
+const pathname = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === "/" ? pathname === "/" : pathname.startsWith(href);
+---
+
+<header class="site-header" role="banner">
+  <div class="page-inner">
+    <div class="bar">
+      <!-- Lockup -->
+      <a href="/" class="lockup" aria-label="Joe Maddalone — home">
+        <span class="lockup-name">JOE MADDALONE</span>
+        {
+          variant === "default" && (
+            <span class="lockup-sub">A DIGITAL GARDEN — NOTES / WRITING / VISUALS</span>
+          )
+        }
+      </a>
+
+      <!-- Desktop nav — small uppercase, thin, quiet -->
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="/posts" class:list={["nav-link", isActive("/posts") && "is-active"]}>
+          <span>Writing</span><span class="nav-arrow" aria-hidden="true"> →</span>
+        </a>
+        <a href="/notes" class:list={["nav-link", isActive("/notes") && "is-active"]}>
+          <span>Notes</span><span class="nav-arrow" aria-hidden="true"> →</span>
+        </a>
+        <a href="/visuals" class:list={["nav-link", isActive("/visuals") && "is-active"]}>
+          <span>Visuals</span><span class="nav-arrow" aria-hidden="true"> →</span>
+        </a>
+        <a href="/archive" class:list={["nav-link", isActive("/archive") && "is-active"]}>
+          <span>Archive</span><span class="nav-arrow" aria-hidden="true"> →</span>
+        </a>
+        <a
+          href="https://github.com/joemaddalone"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-link nav-link--ext"
+          aria-label="GitHub (external)"
+        >
+          <span>GH</span><span aria-hidden="true"> ↗</span>
+        </a>
+      </nav>
+
+      <!-- Mobile toggle — geometric + -->
+      <button
+        id="site-nav-toggle"
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav-panel"
+        aria-label="Open navigation"
+      >
+        <span class="nav-toggle-icon" aria-hidden="true">+</span>
+        <span class="sr-only">Menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile panel -->
+    <div id="site-nav-panel" class="nav-panel" hidden>
+      <nav class="nav-panel-links" aria-label="Primary mobile">
+        <a href="/posts" class="panel-link"><span>Writing</span><span aria-hidden="true"> →</span></a>
+        <a href="/notes" class="panel-link"><span>Notes</span><span aria-hidden="true"> →</span></a>
+        <a href="/visuals" class="panel-link"><span>Visuals</span><span aria-hidden="true"> →</span></a>
+        <a href="/archive" class="panel-link"><span>Archive</span><span aria-hidden="true"> →</span></a>
+        <a href="https://github.com/joemaddalone" target="_blank" rel="noopener noreferrer" class="panel-link"><span>GitHub</span><span aria-hidden="true"> ↗</span></a>
+      </nav>
+      <div class="panel-meta">
+        <span class="meta-mono">GARDEN — JOE MADDALONE / CHICAGO</span>
+        <span class="meta-mono">NOT A RESUME · NOT A COURSE — TEACHING AT EL337.COM</span>
+      </div>
+    </div>
+  </div>
+  <div class="hairline" aria-hidden="true"></div>
+</header>
+
+<script is:inline>
+  (() => {
+    const btn = document.getElementById("site-nav-toggle");
+    const panel = document.getElementById("site-nav-panel");
+    if (!btn || !panel) return;
+    const icon = btn.querySelector(".nav-toggle-icon");
+    const update = (open) => {
+      btn.setAttribute("aria-expanded", String(open));
+      btn.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+      if (icon) icon.textContent = open ? "×" : "+";
+      if (open) panel.removeAttribute("hidden");
+      else panel.setAttribute("hidden", "");
+    };
+    btn.addEventListener("click", () => {
+      const open = btn.getAttribute("aria-expanded") !== "true";
+      update(open);
+    });
+    // close on nav
+    panel.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => update(false)));
+    // close on escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") update(false);
+    });
+  })();
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 56px;
+    padding-block: 14px;
+  }
+
+  .lockup {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1;
+    min-width: 0;
+  }
+
+  .lockup-name {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+
+  .lockup-sub {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-shrink: 0;
+  }
+
+  .nav-link {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 4px 0;
+    border-bottom: 1px solid transparent;
+    transition:
+      color var(--duration-fast) var(--ease),
+      border-color var(--duration-fast) var(--ease),
+      transform var(--duration-fast) var(--ease);
+  }
+
+  .nav-link:hover {
+    color: var(--ink);
+    opacity: 1;
+  }
+
+  .nav-link.is-active {
+    color: var(--ink);
+    border-bottom-color: var(--ink);
+  }
+
+  .nav-arrow {
+    display: inline-block;
+    transition: transform var(--duration-normal) var(--ease);
+  }
+
+  .nav-link:hover .nav-arrow {
+    transform: translateX(3px);
+  }
+
+  .nav-link--ext {
+    color: var(--ink-faint);
+  }
+
+  .nav-toggle {
+    display: none;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    color: var(--ink);
+    flex-shrink: 0;
+  }
+
+  .nav-toggle-icon {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .nav-panel {
+    border-top: 1px solid var(--line-soft);
+    padding-block: 18px 20px;
+  }
+
+  .nav-panel-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line-soft);
+    font-family: var(--font-sans);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .panel-link:last-child {
+    border-bottom: none;
+  }
+
+  .panel-meta {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .hairline {
+    height: 1px;
+    background: var(--line-soft);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (max-width: 760px) {
+    .nav-desktop { display: none; }
+    .nav-toggle { display: inline-flex; }
+    .lockup-name { font-size: 12px; }
+    .lockup-sub { font-size: 8px; letter-spacing: 0.12em; }
+  }
+</style>

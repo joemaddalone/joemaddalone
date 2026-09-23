@@ -1,109 +1,65 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-const { pageTitle, includeHeader = true, includeFooter = true } = Astro.props;
+import SiteHeader from "@/components/SiteHeader.astro";
+import SiteFooter from "@/components/SiteFooter.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  pageTitle?: string;
+  includeHeader?: boolean;
+  includeFooter?: boolean;
+  headerVariant?: "default" | "minimal";
+}
+
+const {
+  title,
+  description = "A digital garden by Joe Maddalone — ideas, notes, visuals, and writing. Not a resume, not a course — teaching lives at el337.com.",
+  pageTitle,
+  includeHeader = true,
+  includeFooter = true,
+  headerVariant = "default",
+} = Astro.props;
+
+const siteTitle = title ?? pageTitle ?? "Joe Maddalone — A Digital Garden";
+const canonical = Astro.url.href;
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <meta name="theme-color" content="#EBE2CB" />
+    <title>{siteTitle}</title>
+
+    <!-- Inter + JetBrains Mono — grotesk + mono system per DESIGN.md -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="/assets/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="/assets/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="/assets/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="/assets/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/assets/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/assets/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/assets/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/assets/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/assets/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="/assets/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/favicon-16x16.png"
-    />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="/assets/ms-icon-144x144.png"
-    />
-    <meta name="theme-color" content="#ffffff" />
-    <link href="//unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet" />
-    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
-    />
-    <title>{pageTitle}</title>
   </head>
   <body>
-    {includeHeader && <Header />}
-    <slot />
-    {includeFooter && <Footer />}
+    <div class="page-shell">
+      {includeHeader && <SiteHeader variant={headerVariant} />}
+      <slot />
+      {includeFooter && <SiteFooter />}
+    </div>
   </body>
 </html>
+
+<style>
+  /* Ensure grain texture from global.css sits behind */
+  :global(html) {
+    background: var(--bg);
+  }
+</style>

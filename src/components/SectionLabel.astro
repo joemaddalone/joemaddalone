@@ -1,0 +1,76 @@
+---
+interface Props {
+  label: string;
+  sublabel?: string;
+  kicker?: string;
+  rule?: boolean;
+}
+
+const { label, sublabel, kicker, rule = true } = Astro.props;
+---
+
+<div class="section-label">
+  {rule && <div class="rule" aria-hidden="true"></div>}
+  <div class="label-row">
+    <div class="label-main">
+      {kicker && <span class="kicker">{kicker}</span>}
+      <h2 class="label-title">{label}</h2>
+      {sublabel && <span class="label-sub">{sublabel}</span>}
+    </div>
+    <slot name="aside" />
+  </div>
+</div>
+
+<style>
+  .section-label {
+    margin-bottom: 28px;
+  }
+
+  .rule {
+    height: 1px;
+    background: var(--line-soft);
+    margin-bottom: 18px;
+  }
+
+  .label-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .label-main {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .label-title {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: clamp(18px, 2.2vw, 24px);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .label-sub {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+</style>

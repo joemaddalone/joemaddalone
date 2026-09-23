@@ -2,8 +2,8 @@ export const SITE = {
   website: "https://joemaddalone.com/", // replace this with your deployed domain
   author: "Joe Maddalone",
   profile: "https://joemaddalone.com/",
-  desc: "Joe Maddalone's talks about software, books, and movies.",
-  title: "Joe MAddalone",
+  desc: "A digital garden by Joe Maddalone — notes, writing, visuals, and links worth keeping. Not a resume, not a classroom (that's el337.com).",
+  title: "Joe Maddalone",
   postPerIndex: 10,
   postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes

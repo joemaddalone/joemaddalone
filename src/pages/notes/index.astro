@@ -1,0 +1,300 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import NoteCard from "@/components/NoteCard.astro";
+import { getCollection } from "astro:content";
+import getSortedNotes from "@/utils/getSortedNotes";
+
+const notes = await getCollection("notes", ({ data }) => !data.draft);
+const sorted = getSortedNotes(notes);
+const allTags = Array.from(new Set(sorted.map((n) => (n.data.tag ?? "note").toLowerCase()))).sort();
+---
+
+<Layout
+  title="Notes — Joe Maddalone"
+  description="Notes — short clippings with a tag and a trail back to the source. Things I liked, things I didn't, kept here."
+>
+  <main id="main-content" class="page-inner notes-page">
+    <header class="notes-header">
+      <div class="notes-kicker">
+        <span class="meta-mono">GARDEN — NOTES</span>
+        <span class="meta-mono">{sorted.length} CLIPPINGS</span>
+      </div>
+      <h1 class="notes-title">Notes</h1>
+      <p class="notes-copy">
+        Things I clipped, things I kept — a sentence or two, a tag, and a trail back to where I found it.
+        What I liked, what I didn't, and why it stuck. No essays here, just notes.
+      </p>
+    </header>
+
+    <div class="notes-controls">
+      <div class="search-wrap">
+        <label class="search-label" for="notes-search">
+          <span class="meta-label">Search</span>
+        </label>
+        <div class="search-field">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            id="notes-search"
+            class="search-input"
+            type="search"
+            placeholder="Search blurbs, tags, sources…"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+      </div>
+
+      <div class="filter-group" role="group" aria-label="Filter by tag">
+        <span class="meta-label">Tag</span>
+        <div class="chip-row" id="tag-chips">
+          <button class="chip is-active" type="button" data-value="all">All</button>
+          {allTags.map((tag) => (
+            <button class="chip" type="button" data-value={tag}>{tag}</button>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="notes-list" id="notes-list">
+      {sorted.length === 0 ? (
+        <div class="notes-empty">
+          <p>No notes yet. Add files to <code>src/data/notes/</code> — each file needs <code>date</code>, <code>tag</code>, and optionally <code>source</code>.</p>
+          <pre class="notes-example"><code>{`---\ndate: 2026-09-18\ntag: tooling\nsource: https://example.com/article\nsourceLabel: example.com\n---\n\nYour blurb here — 1–5 sentences.`}</code></pre>
+        </div>
+      ) : (
+        sorted.map((note, i) => (
+          <NoteCard note={note} indexLabel={String(i + 1).padStart(2, "0")} />
+        ))
+      )}
+    </div>
+
+    <p id="notes-empty-filter" class="notes-empty-filter" hidden>No notes match the current filters.</p>
+
+    <div class="notes-foot">
+      <span class="meta-mono">END — {sorted.length} CLIPPINGS</span>
+      <span class="meta-mono">TENDED IN src/data/notes/</span>
+    </div>
+  </main>
+</Layout>
+
+<script is:inline>
+  (() => {
+    const search = document.getElementById("notes-search");
+    const list = document.getElementById("notes-list");
+    const emptyFilter = document.getElementById("notes-empty-filter");
+    if (!list || !emptyFilter) return;
+
+    const cards = Array.from(list.querySelectorAll(".note-card"));
+    if (!cards.length) return;
+
+    let activeTag = "all";
+
+    const apply = () => {
+      const q = (search?.value || "").trim().toLowerCase();
+      let visible = 0;
+      for (const card of cards) {
+        const tag = (card.getAttribute("data-tag") || "").toLowerCase();
+        const hay = (card.getAttribute("data-haystack") || "").toLowerCase();
+        const tagOk = activeTag === "all" || tag === activeTag;
+        // also search visible text as fallback
+        const textOk = !q || hay.includes(q) || (card.textContent || "").toLowerCase().includes(q);
+        const show = tagOk && textOk;
+        card.hidden = !show;
+        if (show) visible++;
+      }
+      emptyFilter.hidden = visible !== 0;
+    };
+
+    search?.addEventListener("input", apply);
+
+    const chips = Array.from(document.querySelectorAll("#tag-chips .chip"));
+    for (const chip of chips) {
+      chip.addEventListener("click", () => {
+        activeTag = chip.getAttribute("data-value") || "all";
+        for (const c of chips) c.classList.toggle("is-active", c === chip);
+        apply();
+      });
+    }
+  })();
+</script>
+
+<style>
+  .notes-page {
+    padding-bottom: clamp(40px, 6vw, 80px);
+  }
+
+  .notes-header {
+    padding-block: clamp(28px, 5vw, 52px) 20px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .notes-kicker {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .notes-kicker .meta-mono { font-size: 10px; }
+
+  .notes-title {
+    font-family: var(--font-sans);
+    font-weight: 900;
+    font-size: clamp(32px, 5vw, 56px);
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .notes-copy {
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    max-width: 56ch;
+  }
+
+  .notes-controls {
+    padding-block: 18px;
+    border-bottom: 1px solid var(--line-soft);
+    display: grid;
+    gap: 18px;
+  }
+
+  .search-wrap {
+    display: grid;
+    gap: 8px;
+    max-width: 560px;
+  }
+
+  .search-field {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    align-items: center;
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    padding-inline: 6px 10px;
+    transition: border-color var(--duration-fast) var(--ease);
+  }
+
+  .search-field:focus-within { border-color: var(--line); }
+
+  .search-icon {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--ink-faint);
+    text-align: center;
+  }
+
+  .search-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--ink);
+    padding: 10px 0;
+  }
+
+  .search-input::placeholder { color: var(--ink-faint); }
+
+  .filter-group {
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .chip {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    padding: 6px 10px;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+      background var(--duration-fast) var(--ease),
+      color var(--duration-fast) var(--ease),
+      border-color var(--duration-fast) var(--ease);
+  }
+
+  .chip:hover { border-color: var(--line); color: var(--ink); }
+
+  .chip.is-active {
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+  }
+
+  .notes-list {
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .notes-empty {
+    padding: 24px 0;
+    display: grid;
+    gap: 14px;
+  }
+
+  .notes-empty p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    max-width: 62ch;
+  }
+
+  .notes-empty code {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    background: var(--surface-muted);
+    border: 1px solid var(--line-soft);
+    padding: 0.15em 0.35em;
+  }
+
+  .notes-example {
+    background: var(--surface-muted);
+    border: 1px solid var(--line-soft);
+    padding: 14px;
+    overflow-x: auto;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .notes-example code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-family: var(--font-mono);
+    color: var(--ink-muted);
+  }
+
+  .notes-empty-filter {
+    padding: 24px 0;
+    font-size: 13px;
+    color: var(--ink-muted);
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .notes-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 18px;
+  }
+
+  .notes-foot .meta-mono { font-size: 10px; }
+</style>

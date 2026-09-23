@@ -1,7 +1,6 @@
 ---
 import { slugifyStr } from "@/utils/slugify";
 import type { CollectionEntry } from "astro:content";
-import Datetime from "./Datetime.astro";
 import { Image } from "astro:assets";
 
 export interface Props extends CollectionEntry<"blog"> {
@@ -10,64 +9,129 @@ export interface Props extends CollectionEntry<"blog"> {
 }
 
 const { data, featured = false } = Astro.props;
-
-const { title, excerpt, date, timezone, coverImage } = data;
-
+const { title, excerpt, date, coverImage } = data;
 const hasImage = !!coverImage;
+const href = `/posts/${slugifyStr(title)}`;
+const year = String(new Date(date).getFullYear());
 ---
 
-<li class:list={["group newspaper-border bg-white", featured && "col-span-full"]}>
-  <a
-    href={`/posts/${slugifyStr(title)}`}
-    class:list={[
-      "flex h-full flex-col",
-      featured && "md:flex-row",
-    ]}
-  >
-    {
-      hasImage && (
-        <div
-          class:list={[
-            "overflow-hidden border-black",
-            featured ? "md:w-2/3 md:border-b-0 md:border-r" : "border-b",
-          ]}
-        >
-          <Image
-            src={coverImage}
-            alt={title}
-            width={featured ? 1200 : 800}
-            height={featured ? 675 : 450}
-            loading="lazy"
-            decoding="async"
-            class="newspaper-image h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-          />
-        </div>
-      )
-    }
-    <div class:list={["flex flex-1 flex-col p-4", featured && "md:w-1/3"]}>
-      <div class="mb-2 font-mono text-xs uppercase tracking-widest text-black/60">
-        {date && <Datetime {date} {timezone} />}
+<li class:list={["card", featured && "card--featured"]}>
+  <a href={href} class:list={["card-link", featured && "card-link--featured"]}>
+    {hasImage && (
+      <div class:list={["card-media", featured && "card-media--featured"]}>
+        <Image
+          src={coverImage!}
+          alt={title}
+          width={featured ? 1200 : 800}
+          height={featured ? 675 : 450}
+          loading="lazy"
+          decoding="async"
+          class="card-img"
+        />
       </div>
-      <h2
-        class:list={[
-          "font-bold leading-tight",
-          featured ? "text-3xl sm:text-4xl" : "text-xl",
-        ]}
-      >
-        {title}
-      </h2>
-      {
-        excerpt && (
-          <p
-            class:list={[
-              "mt-2 text-black/70",
-              featured ? "text-base" : "text-sm",
-            ]}
-          >
-            {excerpt}
-          </p>
-        )
-      }
+    )}
+    <div class:list={["card-body", featured && "card-body--featured"]}>
+      <div class="card-meta">
+        <span class="meta-mono">{year}</span>
+        <span class="meta-mono" aria-hidden="true">·</span>
+        <span class="meta-mono">{(data.tags?.[0] ?? "NOTE").toUpperCase()}</span>
+      </div>
+      <h2 class:list={["card-title", featured ? "card-title--featured" : ""]}>{title}</h2>
+      {excerpt && <p class="card-excerpt">{excerpt}</p>}
+      <span class="card-arrow" aria-hidden="true">→</span>
     </div>
   </a>
 </li>
+
+<style>
+  .card {
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  .card-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card-link--featured {
+    flex-direction: row;
+  }
+
+  .card-media {
+    overflow: hidden;
+    border-bottom: 1px solid var(--line-soft);
+    background: var(--surface-muted);
+  }
+
+  .card-media--featured {
+    width: 66%;
+    border-bottom: none;
+    border-right: 1px solid var(--line-soft);
+  }
+
+  .card-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 220ms var(--ease);
+  }
+
+  .card:hover .card-img { transform: scale(1.02); }
+
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px;
+  }
+
+  .card-body--featured { width: 34%; }
+
+  .card-meta {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .card-meta .meta-mono { font-size: 10px; color: var(--ink-faint); }
+
+  .card-title {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .card-title--featured { font-size: clamp(18px, 2vw, 24px); }
+
+  .card-excerpt {
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--ink-muted);
+  }
+
+  .card-arrow {
+    margin-top: auto;
+    padding-top: 10px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--ink-faint);
+    transition: transform var(--duration-normal) var(--ease);
+  }
+
+  .card:hover .card-arrow { transform: translateX(4px); }
+
+  @media (max-width: 768px) {
+    .card-link--featured { flex-direction: column; }
+    .card-media--featured { width: 100%; border-right: none; border-bottom: 1px solid var(--line-soft); }
+    .card-body--featured { width: 100%; }
+  }
+</style>

@@ -1,16 +1,8 @@
 ---
 import { render, type CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
-import NewspaperMasthead from "@/components/NewspaperMasthead.astro";
-import Tag from "@/components/Tag.astro";
-import Datetime from "@/components/Datetime.astro";
-import ShareLinks from "@/components/ShareLinks.astro";
-import BackButton from "@/components/BackButton.astro";
-import BackToTopButton from "@/components/BackToTopButton.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
-import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
-import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
 import { Image } from "astro:assets";
 
@@ -36,230 +28,445 @@ const {
 const { Content } = await render(post);
 
 let ogImageUrl: string | undefined;
+if (typeof initOgImage === "string") ogImageUrl = initOgImage;
+else if (initOgImage?.src) ogImageUrl = initOgImage.src;
 
-// Determine OG image source
-if (typeof initOgImage === "string") {
-  ogImageUrl = initOgImage; // Remote OG image (absolute URL)
-} else if (initOgImage?.src) {
-  ogImageUrl = initOgImage.src; // Local asset
-}
-
-// Use dynamic OG image if enabled and no remote|local ogImage
 if (!ogImageUrl && SITE.dynamicOgImage) {
   ogImageUrl = `${getPath(post.id, post.filePath)}/index.png`;
 }
 
-// Resolve OG image URL (or fallback to SITE.ogImage / default `og.png`)
-const ogImage = ogImageUrl
-  ? new URL(ogImageUrl, Astro.url.origin).href
-  : undefined;
+const ogImage = ogImageUrl ? new URL(ogImageUrl, Astro.url.origin).href : undefined;
 
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
-  excerpt,
-  date,
-  canonicalURL,
+  description: excerpt ?? title,
   ogImage,
-  scrollSmooth: true,
 };
 
-/* ========== Prev/Next Posts ========== */
-
-const allPosts = posts.map(({ data: { title }, id, filePath }) => ({
-  id,
-  title,
-  filePath,
-}));
-
+// Prev/next (sorted order)
+const allPosts = posts.map(({ data: { title: t }, id, filePath }) => ({ id, title: t, filePath }));
 const currentPostIndex = allPosts.findIndex((a) => a.id === post.id);
+const prevPost = currentPostIndex > 0 ? allPosts[currentPostIndex - 1] : null;
+const nextPost = currentPostIndex >= 0 && currentPostIndex < allPosts.length - 1 ? allPosts[currentPostIndex + 1] : null;
 
-const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
-const nextPost =
-  currentPostIndex !== allPosts.length ? allPosts[currentPostIndex + 1] : null;
+// Garden entry header — not a field report, just an entry in the garden
+const year = String(new Date(date).getFullYear());
+const d = new Date(date);
+const displayDate = d.toLocaleDateString("en-GB", { day: "2-digit", month: "long", year: "numeric" }).toUpperCase();
+const readingMinutes = 6; // conservative default; content varies
+const entryId = `ENTRY / ${String(currentPostIndex + 1).padStart(3, "0")}`;
+const primaryTag = (tags?.[0] ?? "NOTE").toUpperCase();
 ---
 
-<Layout {...layoutProps} includeHeader={false} includeFooter={false}>
-  <main
-    id="main-content"
-    class="newspaper-theme min-h-screen p-4 md:p-8"
-    data-pagefind-body
-  >
-    <NewspaperMasthead section={tags[0] ?? "News"} />
-    <BackButton />
+<Layout {...layoutProps} headerVariant="minimal">
+  <main id="main-content" class="page-inner post-page">
+    <!-- Top rule + breadcrumb -->
+    <div class="post-top">
+      <a href="/posts" class="back-link">
+        <span aria-hidden="true">←</span><span> Writing</span>
+      </a>
+      <span class="meta-mono post-top-meta">{entryId} · {primaryTag} · {year}</span>
+    </div>
+    <div class="hairline" aria-hidden="true"></div>
 
-    <article class="mx-auto max-w-3xl">
-      <!-- Mono-kicker metadata -->
-      <div class="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1">
-        <p class="font-mono text-xs tracking-widest uppercase text-black/60">
-          // {tags.map((tag) => tag).join(" · ")}
-        </p>
-      </div>
+    <article class="post-article">
+      <header class="post-header">
+        <div class="post-kicker">
+          <span class="meta-mono">{entryId}</span>
+          <span class="meta-mono kicker-sep" aria-hidden="true">·</span>
+          <span class="meta-mono">{primaryTag}</span>
+        </div>
 
-      <h1
-        transition:name={slugifyStr(title)}
-        class="headline-large text-center"
-      >
-        {title}
-      </h1>
+        <h1 class="post-title" transition:name={slugifyStr(title)}>{title}</h1>
 
-      {
-        date && (
-          <div class="my-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-y-2 border-black py-2 font-mono text-xs uppercase tracking-widest text-black/70">
-            <Datetime {date} {timezone} />
-            <span>By {SITE.author}</span>
+        {excerpt && <p class="post-excerpt">{excerpt}</p>}
+
+        <div class="post-meta-row">
+          <span class="meta-mono">{displayDate}</span>
+          <span class="meta-mono" aria-hidden="true">·</span>
+          <span class="meta-mono">{readingMinutes} MIN READ</span>
+          <span class="meta-mono" aria-hidden="true">·</span>
+          <span class="meta-mono">BY {SITE.author.toUpperCase()}</span>
+        </div>
+
+        {tags?.length ? (
+          <div class="post-tags">
+            {tags.map((tag) => (
+              <span class="tag">{tag.toUpperCase()}</span>
+            ))}
           </div>
-        )
-      }
+        ) : null}
+      </header>
 
-      {excerpt && (
-        <p class="mx-auto mt-4 max-w-2xl text-center italic text-black/70">
-          {excerpt}
-        </p>
+      {coverImage && coverImageInPost && (
+        <figure class="post-figure">
+          <div class="figure-frame">
+            <Image
+              src={coverImage}
+              alt={title}
+              width={1200}
+              height={675}
+              loading="eager"
+              decoding="async"
+              class="figure-img"
+            />
+          </div>
+          <figcaption class="figure-caption">
+            <span class="meta-mono">FIG — {title}</span>
+          </figcaption>
+        </figure>
       )}
 
-      {
-        coverImage && coverImageInPost && (
-          <figure class="my-6">
-            <div class="overflow-hidden border border-black">
-              <Image
-                src={coverImage}
-                alt={title}
-                width={1200}
-                height={675}
-                loading="lazy"
-                decoding="async"
-                class="newspaper-image h-auto w-full object-cover"
-              />
-            </div>
-            <figcaption class="mt-2 text-center font-mono text-xs uppercase tracking-widest text-black/60">
-              {title}
-            </figcaption>
-          </figure>
-        )
-      }
+      <div class="hairline hairline--soft" aria-hidden="true"></div>
 
-      <div id="article" class="newspaper-article mt-8">
+      <div id="article" class="article-body">
         <Content />
       </div>
 
-      <hr class="my-8 border-black" />
-      <BackToTopButton />
+      <div class="hairline" aria-hidden="true"></div>
 
-      <ShareLinks />
+      <!-- Prev / Next — editorial, not buttons -->
+      <nav class="post-nav" aria-label="Adjacent posts">
+        {prevPost ? (
+          <a href={`/posts/${slugifyStr(prevPost.title)}`} class="post-nav-link post-nav-link--prev">
+            <span class="meta-mono">Previous</span>
+            <span class="post-nav-title">{prevPost.title}</span>
+          </a>
+        ) : <span />}
+        {nextPost ? (
+          <a href={`/posts/${slugifyStr(nextPost.title)}`} class="post-nav-link post-nav-link--next">
+            <span class="meta-mono">Next</span>
+            <span class="post-nav-title">{nextPost.title}</span>
+          </a>
+        ) : <span />}
+      </nav>
 
-      <hr class="my-6 border-black" />
-
-      <!-- Previous/Next Post Buttons -->
-      <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-        {
-          prevPost && (
-            <a
-              href={`/posts/${slugifyStr(prevPost.title)}`}
-              class="group flex w-full gap-2"
-            >
-              <IconChevronLeft class="mt-0.5 inline-block flex-none shrink-0 text-black/40" />
-              <div>
-                <span class="font-mono text-xs uppercase tracking-widest text-black/50">
-                  Previous
-                </span>
-                <div class="font-serif text-lg font-bold leading-snug">
-                  {prevPost.title}
-                </div>
-              </div>
-            </a>
-          )
-        }
-        {
-          nextPost && (
-            <a
-              href={`/posts/${slugifyStr(nextPost.title)}`}
-              class="group flex w-full justify-end gap-2 text-end sm:col-start-2"
-            >
-              <div>
-                <span class="font-mono text-xs uppercase tracking-widest text-black/50">
-                  Next
-                </span>
-                <div class="font-serif text-lg font-bold leading-snug">
-                  {nextPost.title}
-                </div>
-              </div>
-              <IconChevronRight class="mt-0.5 inline-block flex-none shrink-0 text-black/40" />
-            </a>
-          )
-        }
+      <div class="post-foot-actions">
+        <a href="/posts" class="arrow-link"><span>Back to writing</span><span class="arrow" aria-hidden="true"> →</span></a>
+        <a href="/archive" class="arrow-link arrow-link--muted"><span>Open archive</span><span class="arrow" aria-hidden="true"> →</span></a>
       </div>
     </article>
   </main>
 </Layout>
 
 <script is:inline data-astro-rerun>
-  /** Create a progress indicator
-   *  at the top */
-  function createProgressBar() {
-    // Create the main container div
-    const progressContainer = document.createElement("div");
-    progressContainer.className =
-      "progress-container fixed top-0 z-10 h-1 w-full";
-    progressContainer.style.background = "#f1ebdc";
-
-    // Create the progress bar div
-    const progressBar = document.createElement("div");
-    progressBar.className = "progress-bar h-1 w-0";
-    progressBar.style.background = "#8b0000";
-    progressBar.id = "myBar";
-
-    // Append the progress bar to the progress container
-    progressContainer.appendChild(progressBar);
-
-    // Append the progress container to the document body or any other desired parent element
-    document.body.appendChild(progressContainer);
-  }
-  createProgressBar();
-
-  /** Update the progress bar
-   *  when user scrolls */
-  function updateScrollProgress() {
-    document.addEventListener("scroll", () => {
-      const winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      const height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      if (document) {
-        const myBar = document.getElementById("myBar");
-        if (myBar) {
-          myBar.style.width = scrolled + "%";
-        }
-      }
-    });
-  }
-  updateScrollProgress();
-
-  /** Attaches links to headings in the document,
-   *  allowing sharing of sections easily */
-  function addHeadingLinks() {
-    const headings = Array.from(
-      document.querySelectorAll("h2, h3, h4, h5, h6"),
-    );
+  (() => {
+    const headings = Array.from(document.querySelectorAll("#article h2, #article h3, #article h4, #article h5, #article h6"));
     for (const heading of headings) {
+      if (!heading.id) continue;
       heading.classList.add("group");
       const link = document.createElement("a");
-      link.className =
-        "heading-link ms-2 no-underline opacity-75 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100";
+      link.className = "heading-link ms-2 no-underline opacity-60 hover:opacity-100 focus:opacity-100";
       link.href = "#" + heading.id;
-
+      link.setAttribute("aria-label", "Link to this section");
       const span = document.createElement("span");
-      span.ariaHidden = "true";
-      span.innerText = "#";
+      span.setAttribute("aria-hidden", "true");
+      span.textContent = "#";
       link.appendChild(span);
       heading.appendChild(link);
     }
-  }
-  addHeadingLinks();
-
-  /* Go to page start after page swap */
-  document.addEventListener("astro:after-swap", () =>
-    window.scrollTo({ left: 0, top: 0, behavior: "instant" }),
-  );
+  })();
 </script>
+
+<style>
+  .post-page {
+    padding-bottom: clamp(40px, 6vw, 80px);
+  }
+
+  .hairline {
+    height: 1px;
+    background: var(--line-soft);
+  }
+  .hairline--soft {
+    opacity: 0.85;
+  }
+
+  .post-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-block: 14px;
+  }
+
+  .back-link {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .back-link:hover { color: var(--ink); opacity: 1; }
+
+  .post-top-meta {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+
+  .post-article {
+    max-width: var(--reading-width);
+    margin-inline: auto;
+    padding-top: clamp(28px, 5vw, 48px);
+  }
+
+  .post-kicker {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .kicker-sep { opacity: 0.4; }
+
+  .post-title {
+    font-family: var(--font-sans);
+    font-weight: 900;
+    font-size: clamp(28px, 4.2vw, 44px);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .post-excerpt {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    max-width: 58ch;
+    font-style: italic;
+  }
+
+  .post-meta-row {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    align-items: center;
+    padding-block: 12px;
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .post-meta-row .meta-mono {
+    font-size: 10px;
+  }
+
+  .post-tags {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 1px solid var(--line-soft);
+    padding: 4px 8px;
+    background: var(--surface);
+    line-height: 1;
+  }
+
+  .post-figure {
+    margin: 28px 0 8px;
+  }
+
+  .figure-frame {
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  .figure-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .figure-caption {
+    margin-top: 8px;
+    text-align: left;
+  }
+
+  .figure-caption .meta-mono {
+    font-size: 10px;
+    color: var(--ink-faint);
+  }
+
+  /* Article body — generous, restrained, editorial */
+  :global(.article-body) {
+    font-size: 17px;
+    line-height: 1.78;
+    color: var(--ink);
+    padding-top: 18px;
+  }
+
+  :global(.article-body p) {
+    margin-block: 1.15em;
+  }
+
+  :global(.article-body h2),
+  :global(.article-body h3),
+  :global(.article-body h4) {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    text-transform: uppercase;
+    margin-top: 2.2em;
+    margin-bottom: 0.6em;
+    color: var(--ink);
+  }
+
+  :global(.article-body h2) { font-size: 26px; }
+  :global(.article-body h3) { font-size: 19px; }
+  :global(.article-body h4) { font-size: 15px; letter-spacing: 0.06em; color: var(--ink-muted); }
+
+  :global(.article-body a) {
+    text-decoration: underline;
+    text-decoration-color: var(--line);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+
+  :global(.article-body a:hover) {
+    text-decoration-color: var(--ink);
+    opacity: 1;
+  }
+
+  :global(.article-body blockquote) {
+    border-left: 1.5px solid var(--line);
+    padding-left: 18px;
+    margin: 1.6em 0;
+    color: var(--ink-muted);
+    font-style: italic;
+  }
+
+  :global(.article-body code) {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    background: var(--surface-muted);
+    padding: 0.15em 0.35em;
+    border: 1px solid var(--line-soft);
+  }
+
+  :global(.article-body pre) {
+    background: var(--surface) !important;
+    border: 1px solid var(--line-soft) !important;
+    border-radius: 0 !important;
+    padding: 18px !important;
+    overflow-x: auto;
+    margin: 1.5em 0;
+  }
+
+  :global(.article-body pre code) {
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  :global(.article-body ul),
+  :global(.article-body ol) {
+    padding-left: 1.25em;
+    margin: 1em 0;
+  }
+
+  :global(.article-body li + li) { margin-top: 0.35em; }
+
+  :global(.article-body img) {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--line-soft);
+  }
+
+  :global(.article-body hr) {
+    border: none;
+    border-top: 1px solid var(--line-soft);
+    margin: 2.2em 0;
+  }
+
+  /* Let film/book grids breathe beyond reading column */
+  :global(.article-body .grid) {
+    max-width: none;
+  }
+
+  .post-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-block: 18px;
+    margin-top: 6px;
+  }
+
+  .post-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    padding: 12px 0;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .post-nav-link--next {
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .post-nav-link .meta-mono {
+    font-size: 10px;
+    color: var(--ink-faint);
+  }
+
+  .post-nav-title {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    color: var(--ink);
+    overflow-wrap: anywhere;
+  }
+
+  .post-nav-link:hover { opacity: 1; }
+  .post-nav-link:hover .post-nav-title { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+
+  .post-foot-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-top: 10px;
+  }
+
+  .arrow-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .arrow-link--muted { color: var(--ink-muted); }
+  .arrow-link .arrow { transition: transform var(--duration-normal) var(--ease); }
+  .arrow-link:hover .arrow { transform: translateX(4px); }
+  .arrow-link:hover { opacity: 1; }
+
+  @media (max-width: 640px) {
+    .post-nav { grid-template-columns: 1fr; }
+    .post-nav-link--next { text-align: left; align-items: flex-start; }
+  }
+</style>

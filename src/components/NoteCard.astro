@@ -1,0 +1,149 @@
+---
+import { render, type CollectionEntry } from "astro:content";
+
+interface Props {
+  note: CollectionEntry<"notes">;
+  indexLabel?: string;
+}
+
+const { note, indexLabel } = Astro.props;
+const { Content } = await render(note);
+const d = note.data.date;
+const dateLabel = new Date(d).toLocaleDateString("en-GB", {
+  day: "2-digit",
+  month: "short",
+  year: "numeric",
+}).toUpperCase();
+const tag = (note.data.tag ?? "note").toUpperCase();
+const source = note.data.source;
+const sourceLabel = note.data.sourceLabel ?? (source ? new URL(source).hostname.replace(/^www\./, "") : undefined);
+---
+
+<article class="note-card" data-tag={note.data.tag?.toLowerCase()} data-haystack={`${tag} ${note.data.excerpt ?? ""} ${source ?? ""} ${sourceLabel ?? ""}`.toLowerCase()}>
+  <div class="note-head">
+    <div class="note-meta">
+      {indexLabel && <span class="meta-mono note-index">{indexLabel}</span>}
+      <span class="meta-mono">{dateLabel}</span>
+      <span class="meta-mono dot" aria-hidden="true">·</span>
+      <span class="note-tag">{tag}</span>
+    </div>
+    {source && (
+      <a
+        href={source}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="note-source"
+        aria-label={`Source: ${sourceLabel ?? source}`}
+      >
+        <span class="note-source-label">{sourceLabel ?? "Source"}</span>
+        <span aria-hidden="true"> ↗</span>
+      </a>
+    )}
+  </div>
+
+  <div class="note-body">
+    {
+      note.body ? (
+        <Content />
+      ) : note.data.excerpt ? (
+        <p>{note.data.excerpt}</p>
+      ) : null
+    }
+  </div>
+</article>
+
+<style>
+  .note-card {
+    border-top: 1px solid var(--line-soft);
+    padding-block: 18px;
+  }
+
+  .note-card:first-child {
+    border-top: none;
+  }
+
+  .note-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .note-meta {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .note-meta .meta-mono {
+    font-size: 10px;
+    color: var(--ink-faint);
+  }
+
+  .note-index {
+    color: var(--ink-faint);
+    min-width: 2ch;
+  }
+
+  .dot { opacity: 0.45; }
+
+  .note-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    padding: 3px 8px;
+    line-height: 1;
+  }
+
+  .note-source {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1px;
+    white-space: nowrap;
+  }
+
+  .note-source:hover {
+    color: var(--ink);
+    opacity: 1;
+  }
+
+  .note-source-label {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 11px;
+    color: inherit;
+  }
+
+  .note-body {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--ink);
+    max-width: 62ch;
+  }
+
+  .note-body :global(p) {
+    margin: 0;
+  }
+
+  .note-body :global(a) {
+    text-decoration: underline;
+    text-decoration-color: var(--line);
+    text-underline-offset: 3px;
+  }
+
+  .note-body :global(a:hover) {
+    text-decoration-color: var(--ink);
+    opacity: 1;
+  }
+</style>

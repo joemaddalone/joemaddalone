@@ -1,11 +1,663 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Launch2025 from "../components/launch2025/index.jsx";
-import { YouTube } from "@astro-community/astro-embed-youtube";
+import Layout from "@/layouts/Layout.astro";
+import SectionLabel from "@/components/SectionLabel.astro";
+import ArchiveRow from "@/components/ArchiveRow.astro";
+import { getCollection } from "astro:content";
+import getSortedPosts from "@/utils/getSortedPosts";
+import getSortedNotes from "@/utils/getSortedNotes";
+import getSortedVisuals from "@/utils/getSortedVisuals";
+import { slugifyStr } from "@/utils/slugify";
+
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+const sorted = getSortedPosts(posts);
+const recentPosts = sorted.slice(0, 6);
+
+const notes = await getCollection("notes", ({ data }) => !data.draft);
+const sortedNotes = getSortedNotes(notes);
+const recentNotes = sortedNotes.slice(0, 4);
+
+const visuals = await getCollection("visuals", ({ data }) => !data.draft);
+const sortedVisuals = getSortedVisuals(visuals);
+const recentVisuals = sortedVisuals.slice(0, 2);
 ---
 
-<Layout includeHeader={false} includeFooter={false}>
-    <Launch2025 client:load>
-        <YouTube id="olRzPoZNhI4" />
-    </Launch2025>
+<Layout
+  title="Joe Maddalone — A Digital Garden"
+  description="A digital garden by Joe Maddalone — ideas, notes, visuals, and writing tended in public. Not a resume, not a course — teaching lives at el337.com."
+>
+  <main id="main-content" class="page-inner">
+    <!-- HERO — sparse, typographic, signage -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-main">
+          <div class="hero-kicker">
+            <span class="mono-kicker">A DIGITAL GARDEN — CHICAGO</span>
+            <span class="mono-kicker mono-kicker--sep" aria-hidden="true">·</span>
+            <span class="mono-kicker">TENDED IN PUBLIC</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span>IDEAS I'M GROWING.</span>
+            <span>NOTES I'M KEEPING.</span>
+          </h1>
+
+          <p class="hero-copy">
+            Not a resume — that's elsewhere. Not a course — I teach at <a href="https://el337.com" target="_blank" rel="noopener noreferrer" class="hero-inline-link">el337.com</a>. This is a small, tended patch for things I like, things I don't, and trails back to where I found them.
+          </p>
+
+          <div class="hero-actions">
+            <a href="/notes" class="arrow-link hero-cta">
+              <span>Wander the notes</span><span class="arrow" aria-hidden="true"> →</span>
+            </a>
+            <a href="/posts" class="hero-secondary">Browse writing →</a>
+          </div>
+
+          <div class="hero-system">
+            <span class="meta-mono">GARDEN — TENDED</span>
+            <span class="meta-mono">{sorted.length + sortedNotes.length + sortedVisuals.length} ENTRIES ACROSS WRITING / NOTES / VISUALS</span>
+            <span class="meta-mono">LAST TENDED — {new Date().toISOString().slice(0, 10).replace(/-/g, ".")}</span>
+          </div>
+        </div>
+
+        <aside class="hero-index" aria-label="Garden index">
+          <div class="index-card">
+            <div class="index-card-head">
+              <span class="meta-label">Garden index</span>
+              <span class="meta-mono">J.M — 001</span>
+            </div>
+            <div class="index-lines" aria-hidden="true"></div>
+            <div class="index-list">
+              <div class="index-row">
+                <span class="index-key">This is</span>
+                <span class="index-val">A garden, not a resume</span>
+              </div>
+              <div class="index-row">
+                <span class="index-key">Tending</span>
+                <span class="index-val">Ideas, notes, visuals & writing</span>
+              </div>
+              <div class="index-row">
+                <span class="index-key">Teaching</span>
+                <span class="index-val"><a href="https://el337.com" target="_blank" rel="noopener noreferrer" class="index-link">el337.com</a> — that's where I teach</span>
+              </div>
+              <div class="index-row">
+                <span class="index-key">Tended in</span>
+                <span class="index-val">Chicago — <a href="mailto:joe.maddalone@gmail.com" class="index-link">joe.maddalone@gmail.com</a></span>
+              </div>
+            </div>
+            <div class="index-foot">
+              <span class="meta-mono">TENDED IN PUBLIC — SINCE 2000</span>
+              <span class="meta-mono">BUILT WITH ASTRO / TYPESCRIPT · INTER / JETBRAINS MONO</span>
+            </div>
+          </div>
+
+          <div class="hero-mini-links">
+            <a href="https://github.com/joemaddalone" target="_blank" rel="noopener noreferrer" class="mini-link">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/joemaddalone/" target="_blank" rel="noopener noreferrer" class="mini-link">LinkedIn ↗</a>
+            <a href="https://youtube.com/@joemaddalone" target="_blank" rel="noopener noreferrer" class="mini-link">YouTube ↗</a>
+            <a href="https://x.com/joemaddalone" target="_blank" rel="noopener noreferrer" class="mini-link">X ↗</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- HOME GRID — Notes + Writing side-by-side when wide -->
+    <div class="home-grid">
+      {recentNotes.length > 0 && (
+        <section class="section home-col">
+          <SectionLabel label="Notes" kicker="Clippings" sublabel={`${sortedNotes.length} notes — newest first`} />
+          <div class="notes-teaser">
+            {recentNotes.map((note, i) => {
+              const d = note.data.date;
+              const dateLabel = new Date(d).toLocaleDateString("en-GB", { day: "2-digit", month: "short" }).toUpperCase();
+              const tag = (note.data.tag ?? "note").toUpperCase();
+              const source = note.data.source;
+              const sourceLabel = note.data.sourceLabel ?? (source ? new URL(source).hostname.replace(/^www\./, "") : undefined);
+              const blurb = note.data.excerpt ?? note.body?.split("\n").find((l) => l.trim())?.trim() ?? "";
+              return (
+                <div class="note-teaser-row">
+                  <div class="note-teaser-meta">
+                    <span class="meta-mono">{String(i + 1).padStart(2, "0")} — {dateLabel}</span>
+                    <span class="note-tag">{tag}</span>
+                  </div>
+                  <p class="note-teaser-blurb">{blurb}</p>
+                  {source && (
+                    <a href={source} target="_blank" rel="noopener noreferrer" class="note-teaser-source">
+                      {sourceLabel ?? "Source"} ↗
+                    </a>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <div class="section-cta">
+            <a href="/notes" class="arrow-link"><span>Browse all notes</span><span class="arrow" aria-hidden="true"> →</span></a>
+          </div>
+        </section>
+      )}
+
+      <section class:list={["section home-col", recentNotes.length === 0 && "home-col--full"]}>
+        <SectionLabel label="Writing" kicker="Longer beds" sublabel="recent entries — newest first" />
+        <div class="writing-list">
+          {recentPosts.map((post, i) => {
+            const d = post.data.date;
+            const year = String(new Date(d).getFullYear());
+            const type = (post.data.tags?.[0] ?? "note").toUpperCase();
+            const href = `/posts/${slugifyStr(post.data.title)}`;
+            const idx = String(i + 1).padStart(2, "0");
+            return (
+              <ArchiveRow
+                href={href}
+                index={idx}
+                year={year}
+                type={type}
+                title={post.data.title}
+                meta={post.data.excerpt}
+              />
+            );
+          })}
+        </div>
+        <div class="section-cta">
+          <a href="/posts" class="arrow-link"><span>All writing</span><span class="arrow" aria-hidden="true"> →</span></a>
+        </div>
+      </section>
+    </div>
+
+    <!-- VISUALS — diagrams / images / drawings (homepage teaser) -->
+    {recentVisuals.length > 0 && (
+      <section class="section">
+        <SectionLabel label="Visuals" kicker="Drawn & seen" sublabel={`${sortedVisuals.length} images — newest first`} />
+        <div class="visuals-teaser-grid">
+          {recentVisuals.map((visual) => {
+            const slug = visual.id.replace(/\/index$/, "").replace(/\.mdx?$/, "").split("/")[0] ?? visual.id;
+            const href = `/visuals/${slug}`;
+            const dateLabel = new Date(visual.data.date).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }).toUpperCase();
+            const tagLabel = (visual.data.tag ?? "visual").toUpperCase();
+            return (
+              <a href={href} class="visual-teaser-card">
+                <div class="visual-teaser-frame">
+                  <img
+                    src={visual.data.image.src}
+                    alt={visual.data.alt ?? visual.data.title ?? slug}
+                    width={(visual.data.image as any).width ?? 960}
+                    height={(visual.data.image as any).height ?? 540}
+                    loading="lazy"
+                    decoding="async"
+                    class="visual-teaser-img"
+                  />
+                </div>
+                <div class="visual-teaser-meta">
+                  <span class="meta-mono">{dateLabel}</span>
+                  <span class="meta-mono" aria-hidden="true">·</span>
+                  <span class="visual-teaser-tag">{tagLabel}</span>
+                </div>
+                {visual.data.title && <h3 class="visual-teaser-title">{visual.data.title}</h3>}
+                {visual.data.description && <p class="visual-teaser-desc">{visual.data.description}</p>}
+                <span class="visual-teaser-link" aria-hidden="true">View →</span>
+              </a>
+            );
+          })}
+        </div>
+        <div class="section-cta">
+          <a href="/visuals" class="arrow-link"><span>Browse all visuals</span><span class="arrow" aria-hidden="true"> →</span></a>
+        </div>
+      </section>
+    )}
+
+
+  </main>
 </Layout>
+
+<style>
+  /* Hero */
+  .hero {
+    padding-block: clamp(32px, 6vw, 72px) clamp(28px, 5vw, 56px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) 360px;
+    gap: clamp(24px, 4vw, 48px);
+    align-items: start;
+  }
+
+  .mono-kicker {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .hero-kicker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  .mono-kicker--sep {
+    opacity: 0.5;
+  }
+
+  .hero-title {
+    font-family: var(--font-sans);
+    font-weight: 900;
+    font-size: var(--text-hero);
+    line-height: 0.88;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero-title span {
+    display: block;
+  }
+
+  .hero-copy {
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink-muted);
+    max-width: 52ch;
+  }
+
+  .hero-inline-link {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--line);
+    text-underline-offset: 3px;
+  }
+
+  .hero-inline-link:hover { opacity: 1; text-decoration-color: var(--ink); }
+
+  .hero-actions {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .hero-cta {
+    font-weight: 800;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+  }
+
+  .hero-cta:hover {
+    opacity: 1;
+    transform: translateX(1px);
+  }
+
+  .hero-secondary {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+  }
+
+  .hero-system {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line-soft);
+    max-width: 52ch;
+  }
+
+  .hero-system .meta-mono {
+    font-size: 10px;
+  }
+
+  /* Index card — instrument / archive detail */
+  .hero-index {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: sticky;
+    top: 72px;
+  }
+
+  .index-card {
+    background: var(--surface);
+    border: 1px solid var(--line-soft);
+    padding: 16px 16px 14px;
+  }
+
+  .index-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .index-lines {
+    height: 1px;
+    background: repeating-linear-gradient(
+      to right,
+      var(--line-soft) 0 6px,
+      transparent 6px 10px
+    );
+    margin: 12px 0;
+  }
+
+  .index-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .index-row {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 12px;
+    align-items: baseline;
+  }
+
+  .index-key {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .index-val {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--ink-muted);
+  }
+
+  .index-link {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--line);
+    text-underline-offset: 3px;
+  }
+
+  .index-foot {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .hero-mini-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .mini-link {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 1px solid var(--line-soft);
+    padding: 6px 8px;
+    background: var(--surface);
+    transition:
+      border-color var(--duration-fast) var(--ease),
+      color var(--duration-fast) var(--ease);
+  }
+
+  .mini-link:hover {
+    color: var(--ink);
+    border-color: var(--line);
+    opacity: 1;
+  }
+
+  .section {
+    padding-block: clamp(36px, 6vw, 72px);
+  }
+
+  /* Homepage editorial grid — Field Notes + Writing side-by-side when wide */
+  .home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: clamp(28px, 3vw, 48px);
+    align-items: start;
+    border-top: 1px solid transparent; /* no visual, just keeps rhythm */
+  }
+
+  .home-col {
+    min-width: 0;
+  }
+
+  .home-col--full {
+    grid-column: 1 / -1;
+  }
+
+  /* Collapse to single-column on narrower viewports — not a shrink, a reflow */
+  @media (max-width: 980px) {
+    .home-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Field notes teaser */
+  .notes-teaser {
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .note-teaser-row {
+    display: grid;
+    gap: 8px;
+    padding-block: 16px;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .note-teaser-row:first-child { border-top: none; }
+
+  .note-teaser-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .note-teaser-meta .meta-mono { font-size: 10px; color: var(--ink-faint); }
+
+  .note-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    padding: 3px 8px;
+    line-height: 1;
+  }
+
+  .note-teaser-blurb {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink);
+    max-width: 62ch;
+    margin: 0;
+  }
+
+  .note-teaser-source {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1px;
+    width: fit-content;
+  }
+
+  .note-teaser-source:hover { color: var(--ink); opacity: 1; }
+
+  /* Writing list */
+  .writing-list {
+    border-bottom: 1px solid var(--line-soft);
+    padding-bottom: 2px;
+  }
+
+  .section-cta {
+    padding-top: 18px;
+  }
+
+  .arrow-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition:
+      transform var(--duration-fast) var(--ease),
+      border-color var(--duration-fast) var(--ease);
+  }
+
+  .arrow-link:hover {
+    opacity: 1;
+    border-bottom-color: var(--ink);
+  }
+
+  .arrow-link .arrow {
+    transition: transform var(--duration-normal) var(--ease);
+  }
+
+  .arrow-link:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 980px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-index {
+      position: static;
+      max-width: 420px;
+    }
+  }
+
+  /* Visuals teaser — 2 editorial cards, square, generous whitespace */
+  .visuals-teaser-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    border-bottom: 1px solid var(--line-soft);
+    padding-bottom: 18px;
+  }
+
+  .visual-teaser-card {
+    display: grid;
+    gap: 0;
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .visual-teaser-card:hover { opacity: 1; }
+  .visual-teaser-card:hover .visual-teaser-img { transform: scale(1.015); }
+
+  .visual-teaser-frame {
+    overflow: hidden;
+    background: var(--surface-muted);
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .visual-teaser-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform var(--duration-normal) var(--ease);
+  }
+
+  .visual-teaser-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 12px 12px 0 12px;
+  }
+
+  .visual-teaser-meta .meta-mono { font-size: 10px; color: var(--ink-faint); }
+
+  .visual-teaser-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 1px solid var(--line-soft);
+    background: var(--bg);
+    padding: 3px 8px;
+    line-height: 1;
+  }
+
+  .visual-teaser-title {
+    margin: 8px 12px 0 12px;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .visual-teaser-desc {
+    margin: 6px 12px 0 12px;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--ink-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .visual-teaser-link {
+    margin: 10px 12px 12px 12px;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink);
+    width: fit-content;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: border-color var(--duration-fast) var(--ease);
+  }
+
+  .visual-teaser-card:hover .visual-teaser-link { border-bottom-color: var(--ink); }
+
+  @media (max-width: 760px) {
+    .visuals-teaser-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 560px) {
+    .hero-title { font-size: clamp(36px, 11vw, 52px); }
+  }
+</style>

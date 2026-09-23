@@ -7,16 +7,16 @@ const URL = Astro.url;
 
 {
   SHARE_LINKS.length > 0 && (
-    <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start">
-      <span class="italic">Share this post on:</span>
-      <div class="text-center">
+    <div class="share">
+      <span class="meta-mono">Share</span>
+      <div class="share-links">
         {SHARE_LINKS.map(social => (
           <LinkButton
             href={`${social.href + URL}`}
-            class="scale-90 p-2 hover:rotate-6 sm:p-1"
+            class="share-link"
             title={social.linkTitle}
           >
-            <social.icon class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" />
+            <social.icon class="share-icon" />
             <span class="sr-only">{social.linkTitle}</span>
           </LinkButton>
         ))}
@@ -24,3 +24,33 @@ const URL = Astro.url;
     </div>
   )
 }
+
+<style>
+  .share {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding-block: 14px;
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .share .meta-mono { font-size: 10px; color: var(--ink-faint); letter-spacing: 0.12em; }
+  .share-links { display: flex; gap: 6px; flex-wrap: wrap; }
+  .share-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    color: var(--ink-muted);
+  }
+  .share-link:hover { color: var(--ink); border-color: var(--line); opacity: 1; }
+  .share-icon { width: 16px; height: 16px; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+</style>

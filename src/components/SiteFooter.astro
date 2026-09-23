@@ -1,0 +1,200 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer" role="contentinfo">
+  <div class="hairline" aria-hidden="true"></div>
+  <div class="page-inner">
+    <div class="footer-grid">
+      <div class="footer-lockup">
+        <div class="footer-name">JOE MADDALONE</div>
+        <div class="footer-sub">A DIGITAL GARDEN — CHICAGO</div>
+        <div class="footer-note">
+          A small garden of ideas, notes, and images — tended in public. Not a resume.
+          Teaching lives at <a href="https://el337.com" target="_blank" rel="noopener noreferrer" class="footer-inline-link">el337.com</a>.
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col">
+          <div class="footer-label">Index</div>
+          <a href="/posts">Writing</a>
+          <a href="/notes">Notes</a>
+          <a href="/visuals">Visuals</a>
+          <a href="/archive">Archive</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-label">Elsewhere</div>
+          <a href="https://github.com/joemaddalone" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/joemaddalone/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://youtube.com/@joemaddalone" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+          <a href="https://x.com/joemaddalone" target="_blank" rel="noopener noreferrer">X ↗</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-label">Colophon</div>
+          <span class="footer-meta">BUILT WITH ASTRO / TYPESCRIPT</span>
+          <span class="footer-meta">TYPE — INTER / JETBRAINS MONO</span>
+          <span class="footer-meta">© {year} JOE MADDALONE</span>
+          <span class="footer-meta footer-meta--muted">LAST TENDED — {year}.{(String(new Date().getMonth()+1).padStart(2,"0"))}.{(String(new Date().getDate()).padStart(2,"0"))}</span>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="meta-mono">JOE MADDALONE — A DIGITAL GARDEN — EST. 2000</span>
+      <span class="meta-mono footer-bottom-right">TENDED, NOT LAUNCHED. TEACHING AT EL337.COM.</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: auto;
+    padding-bottom: 32px;
+    background: transparent;
+  }
+
+  .hairline {
+    height: 1px;
+    background: var(--line-soft);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1.6fr;
+    gap: 40px 48px;
+    padding-block: 36px 28px;
+  }
+
+  .footer-lockup {
+    min-width: 0;
+  }
+
+  .footer-name {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .footer-sub {
+    margin-top: 6px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .footer-note {
+    margin-top: 14px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    max-width: 32ch;
+  }
+
+  .footer-inline-link {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--line);
+    text-underline-offset: 3px;
+  }
+
+  .footer-inline-link:hover { opacity: 1; text-decoration-color: var(--ink); }
+
+  .footer-nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+  }
+
+  .footer-label {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .footer-col a {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-muted);
+    width: fit-content;
+  }
+
+  .footer-col a:hover {
+    color: var(--ink);
+    opacity: 1;
+  }
+
+  .footer-meta {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    line-height: 1.5;
+  }
+
+  .footer-meta--muted {
+    margin-top: 6px;
+    color: var(--ink-faint);
+    opacity: 0.8;
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 18px;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  .footer-bottom .meta-mono {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  .footer-bottom-right {
+    text-align: right;
+  }
+
+  @media (max-width: 860px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .footer-nav {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .footer-nav {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .footer-bottom-right { text-align: left; }
+  }
+</style>

@@ -1,6 +1,6 @@
 import React from 'react';
+
 const FilmWidget = ({ filmData, posterPath = null, compact = false, className = '' }) => {
-  // Helper function to format runtime from minutes to hours:minutes
   const formatRuntime = (minutes) => {
     if (!minutes) return '';
     const hours = Math.floor(minutes / 60);
@@ -8,49 +8,42 @@ const FilmWidget = ({ filmData, posterPath = null, compact = false, className = 
     return hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
   };
 
-  // Helper function to format release date
   const formatReleaseDate = (dateString) => {
     if (!dateString) return '';
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
+    return date.toLocaleDateString('en-GB', {
       year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+      month: 'short',
+      day: '2-digit',
+    }).toUpperCase();
   };
 
-  // Compact mode render
   if (compact) {
     return (
-      <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden ${className} not-prose`}>
-        <div className="relative group cursor-pointer overflow-hidden">
-          <a
-            href={`https://www.themoviedb.org/movie/${filmData.id}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            <img
-              src={posterPath}
-              alt={`${filmData.title} poster`}
-              width={200}
-              height={300}
-              className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-          </a>
-        </div>
-
-        {/* Compact Information Section */}
+      <div className={`group not-prose overflow-hidden border border-[var(--line-soft)] bg-[var(--surface)] ${className}`}>
+        <a
+          href={`https://www.themoviedb.org/movie/${filmData.id}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block overflow-hidden"
+        >
+          <img
+            src={posterPath}
+            alt={`${filmData.title} poster`}
+            width={200}
+            height={300}
+            className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+            loading="lazy"
+          />
+        </a>
         <div className="p-3">
-          {/* Title */}
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-1 line-clamp-2">
+          <h3 className="line-clamp-2 text-[13px] font-bold leading-tight tracking-[-0.02em] text-[var(--ink)]">
             {filmData.title}
           </h3>
-
-          {/* Release Date */}
           {filmData.releaseDate && (
-            <p className="text-xs text-gray-600 dark:text-gray-400">
+            <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.08em] text-[var(--ink-faint)]">
               {formatReleaseDate(filmData.releaseDate)}
+              {filmData.runtime ? ` · ${formatRuntime(filmData.runtime)}` : ''}
             </p>
           )}
         </div>
@@ -58,89 +51,62 @@ const FilmWidget = ({ filmData, posterPath = null, compact = false, className = 
     );
   }
 
-  // Full mode render
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden ${className} not-prose`}>
-      {/* Poster Section */}
-      <div className="relative group cursor-pointer overflow-hidden">
-        <a
-          href={`https://www.themoviedb.org/movie/${filmData.id}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
-          <img
-            src={posterPath}
-            alt={`${filmData.title} poster`}
-            width={500}
-            height={750}
-            className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-        </a>
-
-        {/* Runtime Badge */}
+    <div className={`not-prose overflow-hidden border border-[var(--line-soft)] bg-[var(--surface)] ${className}`}>
+      <a
+        href={`https://www.themoviedb.org/movie/${filmData.id}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative block overflow-hidden"
+      >
+        <img
+          src={posterPath}
+          alt={`${filmData.title} poster`}
+          width={500}
+          height={750}
+          className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          loading="lazy"
+        />
         {filmData.runtime && (
-          <div className="absolute top-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-sm font-medium">
+          <div className="absolute right-2 top-2 border border-[var(--line-soft)] bg-[var(--surface)] px-2 py-1 font-mono text-[10px] uppercase tracking-[0.08em] text-[var(--ink-muted)]">
             {formatRuntime(filmData.runtime)}
           </div>
         )}
-
-        {/* Genre Tags Overlay */}
-        {filmData.genres && filmData.genres.length > 0 && (
+        {filmData.genres?.length ? (
           <div className="absolute bottom-2 left-2 right-2 flex flex-wrap gap-1">
             {filmData.genres.map((genre) => (
               <span
                 key={genre.id}
-                className="px-2 py-1 bg-black bg-opacity-75 text-white text-xs rounded font-medium"
+                className="border border-[var(--line-soft)] bg-[var(--surface)] px-2 py-1 font-mono text-[10px] uppercase tracking-[0.06em] text-[var(--ink-muted)]"
               >
                 {genre.name}
               </span>
             ))}
           </div>
-        )}
-
-        {/* Overview Hover Overlay */}
+        ) : null}
         {filmData.overview && (
-          <a
-            href={`https://www.themoviedb.org/movie/${filmData.id}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            <div className="absolute inset-0 bg-black/60 bg-opacity-90 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <p className="text-sm leading-relaxed text-center text-shadow-lg/30">
-                {filmData.overview}
-              </p>
-            </div>
-          </a>
+          <div className="absolute inset-0 flex items-center justify-center bg-[var(--ink)]/75 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <p className="text-center text-[13px] leading-relaxed text-[var(--bg)]">
+              {filmData.overview}
+            </p>
+          </div>
         )}
-      </div>
-
-      {/* Film Information Section */}
+      </a>
       <div className="p-4">
-        {/* Title */}
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+        <h3 className="text-[15px] font-bold leading-tight tracking-[-0.02em] text-[var(--ink)]">
           {filmData.title}
         </h3>
-
-        {/* Original Title (if different) */}
         {filmData.originalTitle && filmData.originalTitle !== filmData.title && (
-          <p className="text-sm text-gray-600 dark:text-gray-400 italic mb-2">
-            {filmData.originalTitle}
-          </p>
+          <p className="mt-1 text-[12px] italic text-[var(--ink-muted)]">{filmData.originalTitle}</p>
         )}
-
-        {/* Release Date */}
         {filmData.releaseDate && (
-          <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
-            🗓️ {formatReleaseDate(filmData.releaseDate)}
+          <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.08em] text-[var(--ink-faint)]">
+            {formatReleaseDate(filmData.releaseDate)}
           </p>
         )}
-
-        {/* Tagline */}
         {filmData.tagline && (
-          <p className="text-sm text-gray-600 dark:text-gray-400 italic mb-3 border-l-4 border-blue-500 pl-3">
-            "{filmData.tagline}"
+          <p className="mt-3 border-l border-[var(--line)] pl-3 text-[13px] italic leading-relaxed text-[var(--ink-muted)]">
+            “{filmData.tagline}”
           </p>
         )}
       </div>

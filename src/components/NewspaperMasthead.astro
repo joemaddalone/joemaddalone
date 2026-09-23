@@ -2,24 +2,36 @@
 interface Props {
   section?: string;
 }
-
-const { section = "All the News" } = Astro.props;
-
-const currentDate = new Date().toLocaleDateString("en-US", {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
+const { section = "Index" } = Astro.props;
 ---
 
-<header class="newspaper-header">
-  <h1>
-    <a href="/">The Daily Joe</a>
-  </h1>
-  <div class="newspaper-date">
-    <span>Vol. 1, No. 1</span>
-    <span>{currentDate}</span>
-    <span>{section}</span>
+<div class="masthead">
+  <div class="masthead-rule" aria-hidden="true"></div>
+  <div class="masthead-row">
+    <a href="/" class="masthead-lockup">JOE MADDALONE</a>
+    <span class="meta-mono">{section.toUpperCase()}</span>
   </div>
-</header>
+  <div class="masthead-rule masthead-rule--soft" aria-hidden="true"></div>
+</div>
+
+<style>
+  .masthead { padding-block: 10px 0; }
+  .masthead-rule { height: 1px; background: var(--line-soft); }
+  .masthead-rule--soft { opacity: 0.9; margin-top: 10px; }
+  .masthead-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-block: 10px;
+  }
+  .masthead-lockup {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .masthead-row .meta-mono { font-size: 10px; color: var(--ink-faint); }
+</style>

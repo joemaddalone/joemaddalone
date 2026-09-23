@@ -1,0 +1,133 @@
+---
+interface Props {
+  href: string;
+  year: string;
+  type: string;
+  title: string;
+  meta?: string;
+  index?: string;
+}
+
+const { href, year, type, title, meta, index } = Astro.props;
+---
+
+<a href={href} class="archive-row">
+  <span class="col-year-type">
+    {index && <span class="row-index">{index}</span>}
+    <span class="mono-year">{year}</span>
+    <span class="mono-sep" aria-hidden="true"> / </span>
+    <span class="mono-type">{type}</span>
+  </span>
+  <span class="col-title">
+    <span class="row-title">{title}</span>
+    {meta && <span class="row-meta">{meta}</span>}
+  </span>
+  <span class="col-arrow" aria-hidden="true">→</span>
+</a>
+
+<style>
+  .archive-row {
+    display: grid;
+    grid-template-columns: 168px 1fr auto;
+    gap: 16px;
+    align-items: baseline;
+    padding-block: 18px;
+    border-top: 1px solid var(--line-soft);
+    color: inherit;
+    text-decoration: none;
+    transition:
+      opacity var(--duration-fast) var(--ease),
+      transform var(--duration-fast) var(--ease);
+  }
+
+  .archive-row:last-child {
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .archive-row:hover {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+
+  .archive-row:hover .col-arrow {
+    transform: translateX(4px);
+  }
+
+  .col-year-type {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .row-index {
+    color: var(--ink-faint);
+    min-width: 2ch;
+  }
+
+  .mono-year,
+  .mono-type {
+    color: var(--ink-muted);
+  }
+
+  .mono-sep {
+    color: var(--line);
+  }
+
+  .col-title {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .row-title {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    color: var(--ink);
+    overflow-wrap: anywhere;
+  }
+
+  .row-meta {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--ink-muted);
+    max-width: 56ch;
+  }
+
+  .col-arrow {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--ink-faint);
+    transition: transform var(--duration-normal) var(--ease);
+    align-self: center;
+  }
+
+  @media (max-width: 760px) {
+    .archive-row {
+      grid-template-columns: 1fr auto;
+      gap: 8px 12px;
+      padding-block: 16px;
+    }
+    .col-year-type {
+      order: 1;
+    }
+    .col-title {
+      order: 3;
+      grid-column: 1 / -1;
+    }
+    .col-arrow {
+      order: 2;
+    }
+    .row-title { font-size: 15px; }
+  }
+</style>

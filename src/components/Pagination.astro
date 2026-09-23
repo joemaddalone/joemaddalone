@@ -1,39 +1,96 @@
 ---
 import type { Page } from "astro";
 import type { CollectionEntry } from "astro:content";
-import IconArrowLeft from "@/assets/icons/IconArrowLeft.svg";
-import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
-import LinkButton from "./LinkButton.astro";
 
 export interface Props {
   page: Page<CollectionEntry<"blog">>;
 }
 
 const { page } = Astro.props;
+const prev = page.url.prev as string | undefined;
+const next = page.url.next as string | undefined;
 ---
 
 {
   page.lastPage > 1 && (
-    <nav class="mt-auto mb-8 flex justify-center" aria-label="Pagination">
-      <LinkButton
-        disabled={!page.url.prev}
-        href={page.url.prev as string}
-        class:list={["me-4 select-none", { "opacity-50": !page.url.prev }]}
-        ariaLabel="Previous"
-      >
-        <IconArrowLeft class="inline-block rtl:rotate-180" />
-        Prev
-      </LinkButton>
-      {page.currentPage} / {page.lastPage}
-      <LinkButton
-        disabled={!page.url.next}
-        href={page.url.next as string}
-        class:list={["ms-4 select-none", { "opacity-50": !page.url.next }]}
-        ariaLabel="Next"
-      >
-        Next
-        <IconArrowRight class="inline-block rtl:rotate-180" />
-      </LinkButton>
+    <nav class="pagination" aria-label="Pagination">
+      <div class="pagination-inner">
+        {prev ? (
+          <a href={prev} class="page-link" aria-label="Previous page">
+            <span aria-hidden="true">←</span><span> Prev</span>
+          </a>
+        ) : (
+          <span class="page-link is-disabled" aria-disabled="true">
+            <span aria-hidden="true">←</span><span> Prev</span>
+          </span>
+        )}
+
+        <span class="page-indicator">
+          <span class="meta-mono">{String(page.currentPage).padStart(2, "0")} / {String(page.lastPage).padStart(2, "0")}</span>
+        </span>
+
+        {next ? (
+          <a href={next} class="page-link" aria-label="Next page">
+            <span>Next </span><span aria-hidden="true">→</span>
+          </a>
+        ) : (
+          <span class="page-link is-disabled" aria-disabled="true">
+            <span>Next </span><span aria-hidden="true">→</span>
+          </span>
+        )}
+      </div>
     </nav>
   )
 }
+
+<style>
+  .pagination {
+    margin-top: 28px;
+    border-top: 1px solid var(--line-soft);
+    padding-top: 18px;
+  }
+
+  .pagination-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .page-link {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink);
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    padding: 8px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition:
+      border-color var(--duration-fast) var(--ease),
+      transform var(--duration-fast) var(--ease);
+  }
+
+  .page-link:hover {
+    border-color: var(--line);
+    transform: translateY(-1px);
+    opacity: 1;
+  }
+
+  .page-link.is-disabled {
+    opacity: 0.35;
+    pointer-events: none;
+    border-color: var(--line-soft);
+    transform: none;
+  }
+
+  .page-indicator .meta-mono {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--ink-faint);
+  }
+</style>

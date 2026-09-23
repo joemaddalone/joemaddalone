@@ -1,0 +1,306 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import VisualCard from "@/components/VisualCard.astro";
+import { getCollection } from "astro:content";
+import getSortedVisuals from "@/utils/getSortedVisuals";
+
+const visuals = await getCollection("visuals", ({ data }) => !data.draft);
+const sorted = getSortedVisuals(visuals);
+
+const allTags = Array.from(new Set(sorted.map((v) => (v.data.tag ?? "visual").toLowerCase()))).sort();
+const allYears = Array.from(new Set(sorted.map((v) => String(new Date(v.data.date).getFullYear())))).sort((a, b) => Number(b) - Number(a));
+
+const slugFor = (id: string) => id.replace(/\/index$/, "").replace(/\.mdx?$/, "").split("/")[0] ?? id;
+---
+
+<Layout
+  title="Visuals — Joe Maddalone"
+  description="Visuals — diagrams, images, and drawings I'm keeping here. Things that caught my eye, with a title and a short why."
+>
+  <main id="main-content" class="page-inner visuals-page">
+    <header class="visuals-header">
+      <div class="visuals-kicker">
+        <span class="meta-mono">GARDEN — VISUALS</span>
+        <span class="meta-mono">{sorted.length} IMAGES</span>
+      </div>
+      <h1 class="visuals-title">Visuals</h1>
+      <p class="visuals-copy">
+        Diagrams, sketches, photos, and images I'm keeping — each with a title and a short reason
+        it's here. Things I liked, not just things I made.
+      </p>
+    </header>
+
+    <div class="visuals-controls">
+      <div class="search-wrap">
+        <label class="search-label" for="visuals-search">
+          <span class="meta-label">Search</span>
+        </label>
+        <div class="search-field">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            id="visuals-search"
+            class="search-input"
+            type="search"
+            placeholder="Search titles, descriptions, tags…"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+      </div>
+
+      <div class="filter-groups">
+        <div class="filter-group" role="group" aria-label="Filter by tag">
+          <span class="meta-label">Tag</span>
+          <div class="chip-row" id="visuals-tag-chips">
+            <button class="chip is-active" type="button" data-value="all">All</button>
+            {allTags.map((tag) => (
+              <button class="chip" type="button" data-value={tag}>{tag}</button>
+            ))}
+          </div>
+        </div>
+
+        <div class="filter-group" role="group" aria-label="Filter by year">
+          <span class="meta-label">Year</span>
+          <div class="chip-row" id="visuals-year-chips">
+            <button class="chip is-active" type="button" data-value="all">All</button>
+            {allYears.map((y) => (
+              <button class="chip" type="button" data-value={y}>{y}</button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {sorted.length === 0 ? (
+      <div class="visuals-empty">
+        <p>No visuals yet. Add a folder in <code>src/data/images/</code> with an <code>index.md</code> and an image file:</p>
+        <pre class="visuals-example"><code>{`src/data/images/2026-09-18-system-loop/\n  index.md        # frontmatter + optional caption\n  diagram.svg     # or .png / .jpg / .webp`}</code></pre>
+        <pre class="visuals-example"><code>{`---\ntitle: \"System Loop — Local Inference\"\ndate: 2026-09-18\ndescription: \"A small diagram of the local inference loop.\"\nimage: \"./diagram.svg\"\nalt: \"Diagram showing prompt → model → tool → observation loop\"\ntag: \"diagram\"\n---\n\nOptional longer caption in the body is rendered below the image.`}</code></pre>
+      </div>
+    ) : (
+      <div id="visuals-grid" class="visuals-grid">
+        {sorted.map((visual) => {
+          const slug = slugFor(visual.id);
+          const href = `/visuals/${slug}`;
+          const year = String(new Date(visual.data.date).getFullYear());
+          const tag = (visual.data.tag ?? "visual").toLowerCase();
+          const haystack = `${visual.data.title ?? ""} ${visual.data.description ?? ""} ${visual.data.tag ?? ""} ${visual.body ?? ""}`.toLowerCase();
+          return (
+            <div class="visual-grid-item" data-year={year} data-tag={tag} data-haystack={haystack}>
+              <VisualCard visual={visual} href={href} compact />
+            </div>
+          );
+        })}
+      </div>
+    )}
+
+    <p id="visuals-empty-filter" class="visuals-empty-filter" hidden>No visuals match the current filters.</p>
+
+    <div class="visuals-foot">
+      <span class="meta-mono">END — {sorted.length} IMAGES</span>
+      <span class="meta-mono">TENDED IN src/data/images/</span>
+    </div>
+  </main>
+</Layout>
+
+<script is:inline>
+  (() => {
+    const search = document.getElementById("visuals-search");
+    const grid = document.getElementById("visuals-grid");
+    const emptyFilter = document.getElementById("visuals-empty-filter");
+    if (!grid || !emptyFilter) return;
+
+    const items = Array.from(grid.querySelectorAll(".visual-grid-item"));
+    if (!items.length) return;
+
+    let activeTag = "all";
+    let activeYear = "all";
+
+    const apply = () => {
+      const q = (search?.value || "").trim().toLowerCase();
+      let visible = 0;
+      for (const item of items) {
+        const tag = (item.getAttribute("data-tag") || "").toLowerCase();
+        const year = item.getAttribute("data-year") || "";
+        const hay = (item.getAttribute("data-haystack") || "").toLowerCase();
+        const tagOk = activeTag === "all" || tag === activeTag;
+        const yearOk = activeYear === "all" || year === activeYear;
+        const qOk = !q || hay.includes(q) || (item.textContent || "").toLowerCase().includes(q);
+        const show = tagOk && yearOk && qOk;
+        item.hidden = !show;
+        if (show) visible++;
+      }
+      emptyFilter.hidden = visible !== 0;
+    };
+
+    search?.addEventListener("input", apply);
+
+    const bindChips = (selector, setActive) => {
+      const chips = Array.from(document.querySelectorAll(selector));
+      for (const chip of chips) {
+        chip.addEventListener("click", () => {
+          setActive(chip.getAttribute("data-value") || "all");
+          for (const c of chips) c.classList.toggle("is-active", c === chip);
+          apply();
+        });
+      }
+    };
+
+    bindChips("#visuals-tag-chips .chip", (v) => (activeTag = v));
+    bindChips("#visuals-year-chips .chip", (v) => (activeYear = v));
+  })();
+</script>
+
+<style>
+  .visuals-page { padding-bottom: clamp(40px, 6vw, 80px); }
+
+  .visuals-header {
+    padding-block: clamp(28px, 5vw, 52px) 20px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .visuals-kicker {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .visuals-kicker .meta-mono { font-size: 10px; }
+
+  .visuals-title {
+    font-family: var(--font-sans);
+    font-weight: 900;
+    font-size: clamp(32px, 5vw, 56px);
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .visuals-copy {
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    max-width: 56ch;
+  }
+
+  .visuals-controls {
+    padding-block: 18px;
+    border-bottom: 1px solid var(--line-soft);
+    display: grid;
+    gap: 18px;
+  }
+
+  .search-wrap {
+    display: grid;
+    gap: 8px;
+    max-width: 560px;
+  }
+
+  .search-field {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    align-items: center;
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    padding-inline: 6px 10px;
+    transition: border-color var(--duration-fast) var(--ease);
+  }
+
+  .search-field:focus-within { border-color: var(--line); }
+
+  .search-icon { font-family: var(--font-mono); font-size: 14px; color: var(--ink-faint); text-align: center; }
+
+  .search-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--ink);
+    padding: 10px 0;
+  }
+
+  .search-input::placeholder { color: var(--ink-faint); }
+
+  .filter-groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 24px;
+  }
+
+  .filter-group { display: grid; gap: 8px; min-width: 0; }
+  .chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  .chip {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    padding: 6px 10px;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+      background var(--duration-fast) var(--ease),
+      color var(--duration-fast) var(--ease),
+      border-color var(--duration-fast) var(--ease);
+  }
+
+  .chip:hover { border-color: var(--line); color: var(--ink); }
+
+  .chip.is-active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+  .visuals-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    padding-block: 18px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .visuals-empty {
+    padding: 24px 0;
+    display: grid;
+    gap: 14px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .visuals-empty p { font-size: 13px; line-height: 1.6; color: var(--ink-muted); max-width: 62ch; }
+  .visuals-empty code { font-family: var(--font-mono); font-size: 11px; background: var(--surface-muted); border: 1px solid var(--line-soft); padding: 0.15em 0.35em; }
+
+  .visuals-example {
+    background: var(--surface-muted);
+    border: 1px solid var(--line-soft);
+    padding: 14px;
+    overflow-x: auto;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .visuals-example code { background: transparent; border: none; padding: 0; font-family: var(--font-mono); color: var(--ink-muted); }
+
+  .visuals-empty-filter { padding: 24px 0; font-size: 13px; color: var(--ink-muted); border-bottom: 1px solid var(--line-soft); }
+
+  .visuals-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 18px;
+  }
+
+  .visuals-foot .meta-mono { font-size: 10px; }
+
+  @media (max-width: 760px) {
+    .filter-groups { grid-template-columns: 1fr; }
+    .visuals-grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,180 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+
+interface Props {
+  visual: CollectionEntry<"visuals">;
+  href?: string;
+  compact?: boolean;
+}
+
+const { visual, href, compact = false } = Astro.props;
+const { title, description, image, alt, date, tag } = visual.data;
+const dateLabel = new Date(date).toLocaleDateString("en-GB", {
+  day: "2-digit",
+  month: "short",
+  year: "numeric",
+}).toUpperCase();
+const tagLabel = (tag ?? "visual").toUpperCase();
+const idPart = visual.id.replace(/\/index$/, "");
+
+const Wrapper = href ? "a" : "div";
+---
+
+<Wrapper href={href} class:list={["visual-card", compact && "visual-card--compact"]}>
+  <div class="visual-frame">
+    <Image
+      src={image}
+      alt={alt ?? title ?? "Visual"}
+      width={compact ? 720 : 960}
+      height={compact ? 405 : 540}
+      loading={compact ? "lazy" : "eager"}
+      class="visual-img"
+    />
+  </div>
+  <div class="visual-meta">
+    <div class="visual-meta-top">
+      <span class="meta-mono">{dateLabel}</span>
+      <span class="meta-mono dot" aria-hidden="true">·</span>
+      <span class="visual-tag">{tagLabel}</span>
+      {idPart && <span class="meta-mono visual-id">{idPart}</span>}
+    </div>
+    {title && <h3 class="visual-title">{title}</h3>}
+    {description && <p class="visual-desc">{description}</p>}
+    {href && !compact && <span class="visual-link" aria-hidden="true">View artifact →</span>}
+  </div>
+  {compact && href && (
+    <span class="visual-link-compact" aria-hidden="true">→</span>
+  )}
+</Wrapper>
+
+<style>
+  .visual-card {
+    display: grid;
+    gap: 0;
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .visual-card:where(a):hover {
+    opacity: 1;
+  }
+
+  .visual-card:where(a):hover .visual-img {
+    transform: scale(1.015);
+  }
+
+  .visual-frame {
+    overflow: hidden;
+    background: var(--surface-muted);
+    border-bottom: 1px solid var(--line-soft);
+    /* no radius — square per DESIGN.md */
+  }
+
+  .visual-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform var(--duration-normal) var(--ease);
+  }
+
+  .visual-meta {
+    padding: 12px 14px 14px;
+    display: grid;
+    gap: 6px;
+  }
+
+  .visual-meta-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .dot { opacity: 0.45; }
+
+  .meta-mono { font-size: 10px; color: var(--ink-faint); }
+
+  .visual-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 1px solid var(--line-soft);
+    background: var(--bg);
+    padding: 3px 8px;
+    line-height: 1;
+  }
+
+  .visual-id {
+    margin-left: auto;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    opacity: 0.9;
+  }
+
+  .visual-title {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .visual-desc {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--ink-muted);
+  }
+
+  .visual-link {
+    margin-top: 4px;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink);
+    width: fit-content;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: border-color var(--duration-fast) var(--ease);
+  }
+
+  .visual-card:where(a):hover .visual-link { border-bottom-color: var(--ink); }
+
+  .visual-card--compact .visual-meta { padding: 10px 12px 12px; }
+  .visual-card--compact .visual-title { font-size: 12px; }
+  .visual-card--compact .visual-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .visual-link-compact {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--ink-faint);
+    transition: transform var(--duration-normal) var(--ease);
+    /* container needs relative for this — applied when compact */
+  }
+
+  .visual-card--compact {
+    position: relative;
+  }
+
+  .visual-card--compact:where(a):hover .visual-link-compact { transform: translateX(4px); }
+</style>

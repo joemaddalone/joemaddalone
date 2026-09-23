@@ -1,36 +1,35 @@
 ---
-import IconHash from "@/assets/icons/IconHash.svg";
-
 export interface Props {
   tag: string;
   tagName: string;
   size?: "sm" | "lg";
 }
 
-const { tag, tagName, size = "sm" } = Astro.props;
+const { tag, tagName } = Astro.props;
 ---
 
-<li
-  class:list={[
-    "group inline-block group-hover:cursor-pointer",
-    size === "sm" ? "my-1 underline-offset-4" : "mx-1 my-3 underline-offset-8",
-  ]}
->
-  <a
-    href={`/tags/${tag}/`}
-    transition:name={tag}
-    class:list={[
-      "relative pe-2 text-lg underline decoration-dashed group-hover:-top-0.5 group-hover:text-accent focus-visible:p-1 focus-visible:no-underline",
-      { "text-sm": size === "sm" },
-    ]}
-  >
-    <IconHash
-      class:list={[
-        "inline-block opacity-80",
-        { "-me-2 size-4": size === "sm" },
-        { "-me-2 size-6": size === "lg" },
-      ]}
-    />
-    &nbsp;<span>{tagName}</span>
+<li class="tag-item">
+  <a href={`/tags/${tag}/`} transition:name={tag} class="tag-link">
+    <span class="tag-hash" aria-hidden="true">#</span><span>{tagName.toUpperCase()}</span>
   </a>
 </li>
+
+<style>
+  .tag-item { display: inline-block; }
+  .tag-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    padding: 4px 8px;
+    line-height: 1;
+  }
+  .tag-link:hover { color: var(--ink); border-color: var(--line); opacity: 1; }
+  .tag-hash { color: var(--ink-faint); }
+</style>

@@ -1,0 +1,423 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import getSortedPosts from "@/utils/getSortedPosts";
+import { slugifyStr } from "@/utils/slugify";
+
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+const sorted = getSortedPosts(posts);
+
+// Filter values from content
+const allTags = Array.from(new Set(sorted.flatMap((p) => p.data.tags ?? []))).sort();
+const allYears = Array.from(new Set(sorted.map((p) => String(new Date(p.data.date).getFullYear())))).sort((a, b) => Number(b) - Number(a));
+---
+
+<Layout
+  title="Archive — Joe Maddalone"
+  description="Everything in the garden — writing, notes, and visuals in one index."
+>
+  <main id="main-content" class="page-inner archive-page">
+    <header class="archive-header">
+      <div class="archive-kicker">
+        <span class="meta-mono">GARDEN — ARCHIVE</span>
+        <span class="meta-mono">{sorted.length} ENTRIES</span>
+      </div>
+      <h1 class="archive-title">Archive</h1>
+      <p class="archive-copy">
+        Everything in one place — writing, notes, and visuals, searchable and filterable.
+        The quiet way to explore the garden.
+      </p>
+    </header>
+
+    <div class="archive-controls">
+      <div class="search-wrap">
+        <label class="search-label" for="archive-search">
+          <span class="meta-label">Search</span>
+        </label>
+        <div class="search-field">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            id="archive-search"
+            class="search-input"
+            type="search"
+            placeholder="Search titles, excerpts, tags…"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+      </div>
+
+      <div class="filter-groups">
+        <div class="filter-group" role="group" aria-label="Filter by type">
+          <span class="meta-label">Type</span>
+          <div class="chip-row" id="type-chips">
+            <button class="chip is-active" type="button" data-filter="type" data-value="all">All</button>
+            {allTags.map((tag) => (
+              <button class="chip" type="button" data-filter="type" data-value={tag.toLowerCase()}>{tag}</button>
+            ))}
+          </div>
+        </div>
+
+        <div class="filter-group" role="group" aria-label="Filter by year">
+          <span class="meta-label">Year</span>
+          <div class="chip-row" id="year-chips">
+            <button class="chip is-active" type="button" data-filter="year" data-value="all">All</button>
+            {allYears.map((y) => (
+              <button class="chip" type="button" data-filter="year" data-value={y}>{y}</button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="archive-table-head" aria-hidden="true">
+      <span class="meta-mono">YEAR</span>
+      <span class="meta-mono">TYPE</span>
+      <span class="meta-mono">TITLE</span>
+      <span class="meta-mono" style="text-align:right">→</span>
+    </div>
+
+    <div id="archive-list" class="archive-list">
+      {sorted.map((post) => {
+        const year = String(new Date(post.data.date).getFullYear());
+        const type = (post.data.tags?.[0] ?? "note").toLowerCase();
+        const typeLabel = (post.data.tags?.[0] ?? "note").toUpperCase();
+        const href = `/posts/${slugifyStr(post.data.title)}`;
+        const haystack = `${post.data.title} ${post.data.excerpt ?? ""} ${(post.data.tags ?? []).join(" ")} ${post.data.short ?? ""}`.toLowerCase();
+        return (
+          <a
+            href={href}
+            class="archive-row"
+            data-year={year}
+            data-type={type}
+            data-haystack={haystack}
+          >
+            <span class="col-year">{year}</span>
+            <span class="col-type">{typeLabel}</span>
+            <span class="col-title">
+              <span class="row-title">{post.data.title}</span>
+              {post.data.excerpt && <span class="row-excerpt">{post.data.excerpt}</span>}
+            </span>
+            <span class="col-arrow" aria-hidden="true">→</span>
+          </a>
+        );
+      })}
+    </div>
+
+    <p id="archive-empty" class="archive-empty" hidden>No records match the current filters.</p>
+
+    <div class="archive-foot">
+      <span class="meta-mono">END — {sorted.length} ENTRIES</span>
+      <a href="/posts" class="arrow-link"><span>Browse writing</span><span class="arrow" aria-hidden="true"> →</span></a>
+    </div>
+  </main>
+</Layout>
+
+<script is:inline>
+  (() => {
+    const search = document.getElementById("archive-search");
+    const list = document.getElementById("archive-list");
+    const empty = document.getElementById("archive-empty");
+    if (!search || !list || !empty) return;
+
+    const rows = Array.from(list.querySelectorAll(".archive-row"));
+    let activeType = "all";
+    let activeYear = "all";
+
+    const apply = () => {
+      const q = (search.value || "").trim().toLowerCase();
+      let visible = 0;
+      for (const row of rows) {
+        const year = row.getAttribute("data-year") || "";
+        const type = row.getAttribute("data-type") || "";
+        const hay = row.getAttribute("data-haystack") || "";
+        const typeOk = activeType === "all" || type === activeType;
+        const yearOk = activeYear === "all" || year === activeYear;
+        const qOk = !q || hay.includes(q);
+        const show = typeOk && yearOk && qOk;
+        row.hidden = !show;
+        if (show) visible++;
+      }
+      empty.hidden = visible !== 0;
+    };
+
+    search.addEventListener("input", apply);
+
+    const bindChips = (selector, getActive, setActive) => {
+      const chips = Array.from(document.querySelectorAll(selector));
+      for (const chip of chips) {
+        chip.addEventListener("click", () => {
+          const val = chip.getAttribute("data-value") || "all";
+          setActive(val);
+          for (const c of chips) c.classList.toggle("is-active", c === chip);
+          apply();
+        });
+      }
+    };
+
+    bindChips("#type-chips .chip", () => activeType, (v) => (activeType = v));
+    bindChips("#year-chips .chip", () => activeYear, (v) => (activeYear = v));
+  })();
+</script>
+
+<style>
+  .archive-page {
+    padding-bottom: clamp(40px, 6vw, 80px);
+  }
+
+  .archive-header {
+    padding-block: clamp(28px, 5vw, 52px) 20px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .archive-kicker {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .archive-kicker .meta-mono {
+    font-size: 10px;
+  }
+
+  .archive-title {
+    font-family: var(--font-sans);
+    font-weight: 900;
+    font-size: clamp(32px, 5vw, 56px);
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .archive-copy {
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    max-width: 56ch;
+  }
+
+  .archive-controls {
+    padding-block: 18px;
+    border-bottom: 1px solid var(--line-soft);
+    display: grid;
+    gap: 18px;
+  }
+
+  .search-wrap {
+    display: grid;
+    gap: 8px;
+    max-width: 560px;
+  }
+
+  .search-field {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    align-items: center;
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    padding-inline: 6px 10px;
+    transition: border-color var(--duration-fast) var(--ease);
+  }
+
+  .search-field:focus-within {
+    border-color: var(--line);
+  }
+
+  .search-icon {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--ink-faint);
+    text-align: center;
+  }
+
+  .search-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--ink);
+    padding: 10px 0;
+  }
+
+  .search-input::placeholder {
+    color: var(--ink-faint);
+  }
+
+  .filter-groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 24px;
+  }
+
+  .filter-group {
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .chip {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    padding: 6px 10px;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+      background var(--duration-fast) var(--ease),
+      color var(--duration-fast) var(--ease),
+      border-color var(--duration-fast) var(--ease);
+  }
+
+  .chip:hover {
+    border-color: var(--line);
+    color: var(--ink);
+  }
+
+  .chip.is-active {
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+  }
+
+  .archive-table-head {
+    display: grid;
+    grid-template-columns: 72px 120px 1fr 24px;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    margin-top: 6px;
+  }
+
+  .archive-list {
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .archive-row {
+    display: grid;
+    grid-template-columns: 72px 120px 1fr 24px;
+    gap: 16px;
+    align-items: baseline;
+    padding-block: 16px;
+    border-top: 1px solid var(--line-soft);
+    transition:
+      opacity var(--duration-fast) var(--ease),
+      transform var(--duration-fast) var(--ease);
+  }
+
+  .archive-row:first-child { border-top: none; }
+
+  .archive-row:hover {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+
+  .archive-row:hover .col-arrow {
+    transform: translateX(4px);
+  }
+
+  .col-year,
+  .col-type {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .col-title {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .row-title {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  .row-excerpt {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--ink-muted);
+    max-width: 62ch;
+  }
+
+  .col-arrow {
+    font-family: var(--font-mono);
+    color: var(--ink-faint);
+    text-align: right;
+    transition: transform var(--duration-normal) var(--ease);
+  }
+
+  .archive-empty {
+    padding: 24px 0;
+    font-size: 13px;
+    color: var(--ink-muted);
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .archive-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 18px;
+  }
+
+  .arrow-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .arrow-link .arrow {
+    transition: transform var(--duration-normal) var(--ease);
+  }
+
+  .arrow-link:hover .arrow { transform: translateX(4px); }
+  .arrow-link:hover { opacity: 1; }
+
+  @media (max-width: 760px) {
+    .filter-groups { grid-template-columns: 1fr; }
+    .archive-table-head { display: none; }
+    .archive-row {
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "meta arrow"
+        "title title";
+      gap: 8px 12px;
+      padding-block: 14px;
+    }
+    .col-year, .col-type { grid-area: meta; display: inline-flex; gap: 8px; }
+    .col-type::before { content: "/"; color: var(--line); margin-right: 2px; }
+    .col-title { grid-area: title; }
+    .col-arrow { grid-area: arrow; align-self: center; }
+  }
+</style>
