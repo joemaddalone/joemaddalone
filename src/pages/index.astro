@@ -580,6 +580,7 @@ const recentVisuals = sortedVisuals.slice(0, 2);
   .visual-teaser-card:hover .visual-teaser-img { transform: scale(1.015); }
 
   .visual-teaser-frame {
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     background: var(--surface-muted);
     border-bottom: 1px solid var(--line-soft);
@@ -588,8 +589,8 @@ const recentVisuals = sortedVisuals.slice(0, 2);
   .visual-teaser-img {
     display: block;
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
     transition: transform var(--duration-normal) var(--ease);
   }
 

@@ -71,26 +71,17 @@ The homepage should immediately communicate:
 
 ## 3.1 Background
 
-Use a warm, slightly gray/cream background.
-
-Primary:
-
-``` css
---background: #E7E6E1;
-```
-
-Useful supporting surfaces:
+Use the sampled warm paper palette. The default page ground is white-smoke
+rather than a neutral gray, and secondary surfaces are slightly lighter.
 
 ``` css
---surface: #ECEAE4;
---surface-raised: #F0EEE8;
---surface-muted: #DDDCD6;
+--paper: #f7f4ec;
+--paper-2: #fffdf8;
 ```
 
-Do not use a stark `#FFFFFF` page background.
-
-The slight warmth is important. The reference feels almost like paper or
-a physical architectural material rather than a digital white canvas.
+Do not use a stark `#FFFFFF` page background. The slight warmth is
+important: the site should feel like paper or a physical architectural
+material rather than a digital white canvas.
 
 ### Optional texture
 
@@ -107,74 +98,110 @@ The texture should be felt rather than noticed.
 
 # 4. Color System
 
-Keep the palette extremely small.
+## 4.1 Semantic tokens
 
-``` css
-:root {
-  --bg: #E7E6E1;
-  --surface: #ECEAE4;
-  --surface-raised: #F0EEE8;
+Every component and type should refer to semantic roles, not inlined hex
+values. The existing names `--bg`, `--surface`, `--ink`, and related
+aliases remain compatibility names for current components.
 
-  --ink: #111210;
-  --ink-muted: #686862;
-  --ink-faint: #999890;
+| Role | Purpose | Light | Dark |
+|---|---|---|---|
+| `paper` | Page background, default node fill | `#f7f4ec` | `#20221f` |
+| `paper-2` | Diagram/container background, secondary fill | `#fffdf8` | `#292c27` |
+| `ink` | Primary text and primary stroke | `#101318` | `#f5f1e8` |
+| `muted` | Secondary text, default arrow stroke | `#4b5260` | `#b7b8b1` |
+| `soft` | Sublabels and boundary labels | `#8e8a81` | `#7e817a` |
+| `rule` | Hairline borders | `rgba(16,19,24,0.12)` | `rgba(245,241,232,0.10)` |
+| `rule-solid` | Stronger borders and baselines | `#e0d9c2` | `#46483f` |
+| `accent` | One or two focal elements per diagram | `#a14a2a` | `#c96a42` |
+| `accent-tint` | Accent-bordered box fill | `rgba(161,74,42,0.10)` | `rgba(201,106,66,0.14)` |
+| `link` | HTTP/API calls and external arrows | `#a14a2a` | `#c96a42` |
 
-  --line: #C9C8C1;
-  --line-soft: #D7D5CE;
-
-  --accent: #111210;
-}
-```
+The palette is sampled from the site itself, with the warm brick accent
+added specifically for diagrams. The site otherwise remains nearly
+monochromatic. When inverting light to dark, preserve opacity while
+flipping the ink RGB: `rgba(16,19,24, X)` becomes
+`rgba(245,241,232, X)`. The accent brightens from `#a14a2a` to `#c96a42`
+on dark paper.
 
 ### Rules
 
--   Black/near-black is the primary accent.
+-   Near-black ink remains the dominant interface color.
+-   The warm brick accent is reserved for focal diagrams, technical links,
+    and external actions that need a clear semantic signal.
 -   Do not introduce arbitrary colors for visual interest.
--   Links should generally use typography and underline/position rather
-    than a bright accent color.
--   Status colors should only appear when the information actually
-    requires status semantics.
--   Images may introduce color naturally, but surrounding UI should
-    remain restrained.
+-   Use no more than one accent focal role per diagram or compact view.
+-   Status colors should only appear when the information requires status
+    semantics.
+-   Images may introduce color naturally, but surrounding UI remains
+    restrained.
 
-The design should be nearly monochromatic.
+## 4.2 Series palette
+
+Multi-series chart types may opt into the desaturated editorial series
+palette. Use `accent` for the focal series and the following only when
+overlapping entities must be distinguished:
+
+| Token | Light | Dark |
+|---|---|---|
+| `series-1` | `#7c8f6f` | `#9caf8f` |
+| `series-2` | `#5e7a9b` | `#82a0c0` |
+| `series-3` | `#b8915a` | `#d3ad7a` |
+| `series-4` | `#9c6b50` | `#b88670` |
+| `series-5` | `#6e6479` | `#8d8298` |
+
+Series fills use `0.18` opacity in light mode and `0.22` in dark mode;
+strokes use the full color. Do not backfill these tokens into
+architecture, swimlane, or other non-chart diagrams.
+
+## 4.3 Terminal skin
+
+The terminal-window primitive may opt into a separate fixed skin:
+
+| Token | Value | Purpose |
+|---|---|---|
+| `terminal-page` | `#0a0a0a` | Page behind the window |
+| `terminal-paper` | `#141414` | Window body and node fill |
+| `terminal-bar` | `#1b1b1b` | Titlebar |
+| `terminal-border` | `#2b2b2b` | Window border and hairlines |
+| `terminal-ink` | `#f5f5f5` | Primary text and stroke |
+| `terminal-muted` | `#9a9a9a` | Secondary text and sublabels |
+| `terminal-soft` | `#5c5c5c` | Inactive marks and spokes |
+| `terminal-accent` | `#ff5a36` | The single accent |
+| `terminal-accent-tint` | `rgba(255,90,54,0.12)` | Accent box fill |
+
+This skin does not replace the default palette and must not introduce a
+second hue.
 
 ------------------------------------------------------------------------
 
 # 5. Typography
 
-Typography is one of the primary visual elements.
+Typography is one of the primary visual elements. Use the exact brand
+pair: Inter for names, headings, and prose; JetBrains Mono only for
+technical content such as ports, commands, URLs, field types, IDs, and
+system metadata.
 
-## 5.1 Display / Headings
+| Role | Family | Size | Weight | Usage |
+|---|---|---|---|---|
+| `title` | Inter | 1.75rem | 900 | Page H1 |
+| `node-name` | Inter | 12px | 600 | Human-readable labels |
+| `sublabel` | JetBrains Mono | 9px | 400 | Port, protocol, URL, field type |
+| `eyebrow` | JetBrains Mono | 7--8px | 500 | Tracked, uppercase type tags |
+| `arrow-label` | JetBrains Mono | 8px | 400 | Arrow annotations |
+| `callout` | Inter | 14px | 400 | Editorial asides only |
 
-Use a strong grotesk sans-serif.
+### Font stack
 
-Characteristics:
-
--   geometric
--   compact
--   bold
--   contemporary
--   slightly industrial
-
-Good candidates:
-
--   Geist
--   Inter
--   Helvetica Neue
--   Arial
--   Neue Haas Grotesk
--   IBM Plex Sans
-
-Prefer a font with strong uppercase forms.
-
-Example:
-
-``` css
-font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+``` html
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 ```
 
-Large headings should feel like **signage**, not marketing copy.
+## 5.1 Display / headings
+
+Use Inter with strong uppercase forms. Large headings should feel like
+**signage**, not marketing copy. The site uses uppercase display
+typography with tight tracking.
 
 Example:
 
@@ -188,13 +215,9 @@ rather than:
 Here are some things I've worked on
 ```
 
-------------------------------------------------------------------------
-
 ## 5.2 Body
 
 Body text should remain highly readable.
-
-Use the same sans-serif family or a complementary neutral sans.
 
 ``` css
 font-size: 16px;
@@ -207,20 +230,10 @@ Long-form writing should use a constrained reading width:
 max-width: 680px;
 ```
 
-------------------------------------------------------------------------
-
 ## 5.3 Metadata
 
-Metadata is an important part of the aesthetic.
-
-Use:
-
--   small font size
--   uppercase
--   increased letter spacing
--   muted color
-
-Example:
+Metadata is an important part of the aesthetic. Use small uppercase
+labels with increased letter spacing and muted color.
 
 ``` text
 PROJECT / 2026
@@ -228,25 +241,32 @@ TYPE / EXPERIMENT
 STATUS / ACTIVE
 ```
 
-Suggested:
-
 ``` css
 font-size: 10px;
 letter-spacing: 0.12em;
 text-transform: uppercase;
 ```
 
-A small monospace font can be used for technical metadata, timestamps,
-IDs, filenames, and system-like information.
+JetBrains Mono is for technical content, not a blanket “dev” font.
+Human-readable names always stay in Inter.
 
-Good candidates:
+------------------------------------------------------------------------
 
--   Geist Mono
--   IBM Plex Mono
--   JetBrains Mono
--   SF Mono
+# 5.4 Stroke, radius, and spacing
 
-Do not use monospace for all body text.
+| Token | Value | Use |
+|---|---:|---|
+| `stroke-thin` | `0.8` | Tag-box outlines and leaf nodes |
+| `stroke-default` | `1` | Most strokes |
+| `stroke-strong` | `1.2` | Emphasis strokes |
+| `radius-sm` | `4px` | Small tags |
+| `radius-md` | `6px` | Node boxes |
+| `radius-lg` | `8px` | Containers and rings |
+| `grid` | `4px` | Base unit for coordinates, sizes, and gaps |
+
+Every spacing decision should be divisible by four unless optical
+adjustment is necessary. Use thin, low-contrast rules to define
+information hierarchy without turning the page into a field of boxes.
 
 ------------------------------------------------------------------------
 
@@ -822,61 +842,45 @@ The restraint is the point.
 
 # 21. Design Tokens
 
-A starting token set:
+The canonical token set is defined in `src/styles/global.css` and uses
+semantic roles. The values below are the documentation reference; CSS
+variables are the source of truth at runtime.
 
 ``` css
 :root {
-  /* Color */
-  --color-bg: #E7E6E1;
-  --color-surface: #ECEAE4;
-  --color-surface-raised: #F0EEE8;
+  --paper: #f7f4ec;
+  --paper-2: #fffdf8;
+  --ink: #101318;
+  --muted: #4b5260;
+  --soft: #8e8a81;
+  --rule: rgba(16, 19, 24, 0.12);
+  --rule-solid: #e0d9c2;
+  --accent: #a14a2a;
+  --accent-tint: rgba(161, 74, 42, 0.10);
+  --link: #a14a2a;
 
-  --color-ink: #111210;
-  --color-ink-muted: #686862;
-  --color-ink-faint: #999890;
+  --series-1: #7c8f6f;
+  --series-2: #5e7a9b;
+  --series-3: #b8915a;
+  --series-4: #9c6b50;
+  --series-5: #6e6479;
 
-  --color-line: #C9C8C1;
-  --color-line-soft: #D7D5CE;
-
-  /* Typography */
   --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
-  --font-mono: "Geist Mono", "SF Mono", monospace;
+  --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
 
-  --text-xs: 10px;
-  --text-sm: 12px;
-  --text-base: 16px;
-  --text-lg: 20px;
-  --text-xl: 32px;
-  --text-2xl: 48px;
-  --text-3xl: 72px;
-  --text-display: clamp(56px, 8vw, 128px);
-
-  /* Layout */
-  --page-padding: clamp(24px, 4vw, 64px);
-  --content-width: 1440px;
-  --reading-width: 680px;
-
-  /* Spacing */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-6: 24px;
-  --space-8: 32px;
-  --space-12: 48px;
-  --space-16: 64px;
-  --space-24: 96px;
-  --space-32: 128px;
-  --space-48: 192px;
-
-  /* Motion */
-  --duration-fast: 150ms;
-  --duration-normal: 220ms;
-  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --stroke-thin: 0.8;
+  --stroke-default: 1;
+  --stroke-strong: 1.2;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --grid: 4px;
 }
 ```
 
-These values are starting points, not rigid requirements.
+In dark mode, invert the paper/ink roles, preserve the opacity in
+`--rule`, and brighten the accent and series colors according to the
+semantic token table in section 4.
 
 ------------------------------------------------------------------------
 

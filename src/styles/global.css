@@ -7,25 +7,58 @@
    ------------------------------------------------------- */
 
 :root {
-  /* Color — warm paper — warmer than #E7E6E1, with lifted surfaces for contrast */
-  --bg: #f7f4ec;;
-  --surface: #fffdf8;
-  --surface-raised: #FBF8F0;
-  --surface-muted: #DFD5BE;
+  color-scheme: light;
 
+  /* Semantic color roles */
+  --paper: #f7f4ec;
+  --paper-2: #fffdf8;
   --ink: #101318;
-  --ink-muted: #4b5260;
-  --ink-faint: #8E8A81;
+  --muted: #4b5260;
+  --soft: #8e8a81;
+  --rule: rgba(16, 19, 24, 0.12);
+  --rule-solid: #e0d9c2;
+  --accent: #a14a2a;
+  --accent-tint: rgba(161, 74, 42, 0.10);
+  --link: #a14a2a;
 
-  --line: #CFC1A5;
-  --line-soft: #E0D9C2;
+  --series-1: #7c8f6f;
+  --series-2: #5e7a9b;
+  --series-3: #b8915a;
+  --series-4: #9c6b50;
+  --series-5: #6e6479;
 
-  --accent: #121410;
+  --series-fill-opacity: 0.18;
+
+  --terminal-page: #0a0a0a;
+  --terminal-paper: #141414;
+  --terminal-bar: #1b1b1b;
+  --terminal-border: #2b2b2b;
+  --terminal-ink: #f5f5f5;
+  --terminal-muted: #9a9a9a;
+  --terminal-soft: #5c5c5c;
+  --terminal-accent: #ff5a36;
+  --terminal-accent-tint: rgba(255, 90, 54, 0.12);
+
+  /* Existing component aliases */
+  --bg: var(--paper);
+  --surface: var(--paper-2);
+  --surface-raised: #fbf8f0;
+  --surface-muted: #dfd5be;
+  --ink-muted: var(--muted);
+  --ink-faint: var(--soft);
+  --line: var(--rule);
+  --line-soft: var(--rule-solid);
 
   /* Typography */
   --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-mono: "Geist Mono", "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+  --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
 
+  --text-title: 1.75rem;
+  --text-node-name: 12px;
+  --text-sublabel: 9px;
+  --text-eyebrow: 7.5px;
+  --text-arrow-label: 8px;
+  --text-callout: 14px;
   --text-xs: 10px;
   --text-sm: 12px;
   --text-base: 16px;
@@ -35,6 +68,15 @@
   --text-3xl: 72px;
   --text-display: clamp(42px, 8vw, 96px);
   --text-hero: clamp(40px, 7vw, 78px);
+
+  /* Stroke, radius, and grid */
+  --stroke-thin: 0.8;
+  --stroke-default: 1;
+  --stroke-strong: 1.2;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --grid: 4px;
 
   /* Layout */
   --page-padding: clamp(20px, 4vw, 64px);
@@ -58,6 +100,33 @@
   --duration-fast: 150ms;
   --duration-normal: 220ms;
   --ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --paper: #20221f;
+    --paper-2: #292c27;
+    --ink: #f5f1e8;
+    --muted: #b7b8b1;
+    --soft: #7e817a;
+    --rule: rgba(245, 241, 232, 0.10);
+    --rule-solid: #46483f;
+    --accent: #c96a42;
+    --accent-tint: rgba(201, 106, 66, 0.14);
+    --link: #c96a42;
+
+    --series-1: #9caf8f;
+    --series-2: #82a0c0;
+    --series-3: #d3ad7a;
+    --series-4: #b88670;
+    --series-5: #8d8298;
+    --series-fill-opacity: 0.22;
+
+    --surface-raised: #30332d;
+    --surface-muted: #353832;
+  }
 }
 
 /* Base */
@@ -103,17 +172,22 @@ body::before {
 
 /* Focus */
 :focus-visible {
-  outline: 2px solid var(--ink);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
-/* Links — typography + position, not color */
+/* Links — typography + position, with semantic color for external calls */
 a {
   color: inherit;
   text-decoration: none;
   transition:
+    color var(--duration-fast) var(--ease),
     opacity var(--duration-fast) var(--ease),
     transform var(--duration-fast) var(--ease);
+}
+
+a[href^="http"] {
+  color: var(--link);
 }
 
 a:hover {
@@ -162,7 +236,7 @@ hr.strong,
 
 .display {
   font-family: var(--font-sans);
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 0.88;
   text-transform: uppercase;
