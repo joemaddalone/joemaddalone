@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#191a18">
+<title>American Pop — Four Generations of Music</title>
+<style>
+  :root { color-scheme: dark; --paper:#191a18; --ink:#f5f1e8; --muted:#b7b8b1; --melody:#d3ad7a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); }
+  main { min-height:100svh; display:grid; place-items:center; padding:20px; }
+  figure { margin:0; width:min(100%,1920px); }
+  svg { display:block; width:100%; height:auto; }
+  svg text { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; fill:var(--ink); }
+  .display { font-family:Georgia,"Times New Roman",serif; letter-spacing:-3px; }
+  .name { font-size:44px; font-weight:700; letter-spacing:4px; }
+  .label { font-size:16px; letter-spacing:2px; fill:var(--muted); }
+  .era { font-size:20px; fill:var(--muted); }
+  .anchor { font-family:Georgia,"Times New Roman",serif; font-size:32px; }
+  .detail { font-size:20px; fill:var(--muted); }
+  .aside { font-family:Georgia,"Times New Roman",serif; font-size:24px; font-style:italic; fill:var(--muted); }
+  .rule { stroke:#f5f1e8; stroke-opacity:.16; fill:none; }
+  .art { color:var(--illustration, var(--melody)); fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+  .zalmie-art { --illustration:#d3ad7a; }
+  .benny-art { --illustration:#9caf8f; }
+  .tony-art { --illustration:#d58a78; }
+  .pete-art { --illustration:#82a8c8; }
+  .thread { fill:none; stroke:#e0bd87; stroke-width:5; stroke-linecap:round; stroke-linejoin:round; }
+  .echo { fill:none; stroke:#b88670; stroke-width:1.5; stroke-opacity:.36; }
+  .accessible-copy { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+  @media(max-width:720px) { main { padding:0; overflow-x:auto; justify-items:start; } figure { min-width:1100px; } }
+  @media print { @page { size:landscape; margin:0; } body { print-color-adjust:exact; -webkit-print-color-adjust:exact; } main { min-height:0; padding:0; } figure { min-width:0; width:100%; } }
+</style>
+</head>
+<body>
+<main><figure aria-label="American Pop family and musical lineage">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="american-pop-title american-pop-desc">
+<title id="american-pop-title">American Pop — Four Generations of Music</title>
+<desc id="american-pop-desc">One musical thread passes from Zalmie to his son Benny, to Benny's son Tony, to Tony's son Pete, evolving from vaudeville notation through recorded music and rebellious electric sound to an accumulated musical legacy.</desc>
+<defs>
+  <linearGradient id="american-pop-atmosphere" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#86603e" stop-opacity=".15"/>
+    <stop offset=".36" stop-color="#b8915a" stop-opacity=".10"/>
+    <stop offset=".67" stop-color="#9c6b50" stop-opacity=".12"/>
+    <stop offset="1" stop-color="#5e7a9b" stop-opacity=".10"/>
+  </linearGradient>
+  <linearGradient id="american-pop-signal" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#d3ad7a"/>
+    <stop offset=".36" stop-color="#d9b688"/>
+    <stop offset=".67" stop-color="#c9826b"/>
+    <stop offset="1" stop-color="#e0bd87"/>
+  </linearGradient>
+  <marker id="american-pop-arrow" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto"><path d="M2 2L14 8L2 14" fill="none" stroke="#d3ad7a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <!-- A four-note phrase recurs in every era: inherited, not replaced. -->
+  <g id="american-pop-phrase" class="art">
+    <ellipse cx="0" cy="12" rx="6" ry="4" transform="rotate(-20 0 12)" fill="currentColor"/>
+    <path d="M6 12V-16L30 -20V4"/>
+    <ellipse cx="24" cy="4" rx="6" ry="4" transform="rotate(-20 24 4)" fill="currentColor"/>
+    <ellipse cx="48" cy="-4" rx="6" ry="4" transform="rotate(-20 48 -4)" fill="currentColor"/>
+    <path d="M54 -4V-32M78 8V-20"/>
+    <ellipse cx="72" cy="8" rx="6" ry="4" transform="rotate(-20 72 8)" fill="currentColor"/>
+  </g>
+</defs>
+<rect width="1920" height="1080" fill="#191a18"/>
+<rect x="64" y="340" width="1792" height="380" fill="url(#american-pop-atmosphere)"/>
+
+<text x="80" y="64" class="label">AMERICAN POP (1981) / A FAMILY’S MUSICAL LINEAGE</text>
+<text x="76" y="160" class="display" font-size="96">AMERICAN POP</text>
+<text x="80" y="212" font-size="28" letter-spacing="4">FOUR GENERATIONS OF MUSIC</text>
+<text x="1272" y="144" class="aside">The sound changes.</text>
+<text x="1272" y="180" class="aside">The inheritance continues.</text>
+<path d="M80 244H1840" class="rule"/>
+
+<!-- Equally weighted names establish the family before the musical environments. -->
+<text x="80" y="288" class="label">GENERATION ONE</text>
+<text x="80" y="344" class="name">ZALMIE</text>
+<text x="544" y="288" class="label">GENERATION TWO</text>
+<text x="544" y="344" class="name">BENNY</text>
+<text x="1008" y="288" class="label">GENERATION THREE</text>
+<text x="1008" y="344" class="name">TONY</text>
+<text x="1472" y="288" class="label">GENERATION FOUR</text>
+<text x="1472" y="344" class="name">PETE</text>
+<g fill="none" stroke="#d3ad7a" stroke-width="2.5" stroke-linecap="round" marker-end="url(#american-pop-arrow)">
+  <path d="M352 324H508"/>
+  <path d="M816 324H972"/>
+  <path d="M1264 324H1436"/>
+</g>
+
+<!-- Zalmie: theatrical folds and footlights, not a modern concert stage. -->
+<g class="art zalmie-art" opacity=".8">
+  <path d="M96 396H404M112 396V540Q140 524 152 480V412M128 396V488M388 396V540Q360 524 348 480V412M372 396V488"/>
+  <path d="M160 412Q248 460 340 412M176 408Q248 440 324 408"/>
+  <path d="M144 560H368M160 552V560M200 552V560M240 552V560M280 552V560M320 552V560M360 552V560"/>
+  <path d="M212 472H300M212 484H300M212 496H300M212 508H300M212 520H300" stroke-opacity=".5"/>
+  <use href="#american-pop-phrase" transform="translate(220 504) scale(.8)"/>
+</g>
+
+<!-- Benny: the same phrase revolves inside a reproducible recorded medium. -->
+<g class="art benny-art" opacity=".8">
+  <circle cx="708" cy="484" r="80"/><circle cx="708" cy="484" r="64"/><circle cx="708" cy="484" r="48"/><circle cx="708" cy="484" r="24"/><circle cx="708" cy="484" r="4"/>
+  <path d="M804 420V500Q804 516 788 516H772M820 428V504Q820 532 792 532H780"/>
+  <use href="#american-pop-phrase" transform="translate(660 492) scale(.65)"/>
+  <path d="M580 556H612M584 544H608M592 532H600" stroke-opacity=".6"/>
+</g>
+
+<!-- Tony: an angled electric-sound gesture marks a generational rupture. -->
+<g class="art tony-art" opacity=".8">
+  <path d="M1068 552L1136 484L1124 464L1148 440L1164 452L1220 396L1236 412L1180 468L1192 484L1168 508L1148 496L1080 564Z"/>
+  <path d="M1084 548L1228 404M1092 556L1232 412M1140 472L1160 492M1116 508L1132 524"/>
+  <path d="M1032 536V412H1096M1044 536V424H1084M1212 552H1252V452H1224M1224 536H1240" stroke-opacity=".35"/>
+  <use href="#american-pop-phrase" transform="translate(1164 548) scale(.65)"/>
+</g>
+
+<!-- Pete: three earlier material languages layered into one recording surface. -->
+<g class="art pete-art" opacity=".8">
+  <path d="M1520 424H1768V548H1520ZM1540 524H1748M1540 536H1748"/>
+  <path d="M1544 448H1608M1544 460H1608M1544 472H1608M1544 484H1608M1544 496H1608" stroke-opacity=".6"/>
+  <use href="#american-pop-phrase" transform="translate(1548 480) scale(.65)"/>
+  <circle cx="1660" cy="476" r="28"/><circle cx="1660" cy="476" r="20"/><circle cx="1660" cy="476" r="8"/>
+  <path d="M1708 496V456L1720 480L1732 444L1744 500M1520 416Q1560 436 1592 416"/>
+  <path d="M1552 524V536M1584 524V536M1616 524V536M1648 524V536M1680 524V536M1712 524V536"/>
+</g>
+
+<!-- ONE continuous musical thread: staff -> grooves -> electric signal -> layered sound. -->
+<path d="M96 596H464M96 608H464M96 632H464M96 644H464" class="echo"/>
+<path d="M512 604H592Q624 580 656 604T720 604T784 604T848 604H932M512 636H592Q624 660 656 636T720 636T784 636T848 636H932" class="echo"/>
+<path id="american-pop-musical-thread" class="thread" style="stroke:url(#american-pop-signal)" d="M96 620H544C564 620 572 596 592 596S620 644 640 644S668 596 688 596S716 644 736 644S764 596 784 596S812 620 832 620H992L1012 620L1024 596L1040 648L1060 572L1080 664L1104 600L1124 636L1144 584L1164 648L1184 608L1200 620H1480C1492 620 1492 584 1504 584S1516 656 1528 656S1540 596 1552 596S1564 644 1576 644S1588 576 1600 576S1612 664 1624 664S1636 592 1648 592S1660 648 1672 648S1684 604 1696 604S1708 636 1720 636S1732 620 1744 620H1824"/>
+<path d="M1480 592H1504C1540 560 1552 616 1576 592S1612 568 1648 592S1684 616 1720 592H1824M1480 648H1504C1540 680 1552 624 1576 648S1612 672 1648 648S1684 624 1720 648H1824" class="echo"/>
+<use href="#american-pop-phrase" transform="translate(228 620)"/>
+<g fill="#191a18" stroke="#e0bd87" stroke-width="3">
+  <circle cx="488" cy="620" r="10"/><circle cx="952" cy="620" r="10"/><circle cx="1416" cy="620" r="10"/>
+</g>
+<path d="M488 636V692M952 636V692M1416 636V692" class="rule"/>
+<text x="488" y="724" class="label" text-anchor="middle">INHERITS</text>
+<text x="952" y="724" class="label" text-anchor="middle">TRANSFORMS</text>
+<text x="1416" y="724" class="label" text-anchor="middle">ACCUMULATES</text>
+
+<!-- A restrained historical baseline supports, rather than leads, the lineage. -->
+<text x="80" y="776" class="anchor">The stage</text>
+<text x="544" y="776" class="anchor">The record</text>
+<text x="1008" y="776" class="anchor">The rock revolution</text>
+<text x="1472" y="776" class="anchor">The legacy</text>
+<text x="80" y="812" class="era">Immigrant America / vaudeville</text>
+<text x="544" y="812" class="era">Radio / records / swing</text>
+<text x="1008" y="812" class="era">Rock / youth / counterculture</text>
+<text x="1472" y="812" class="era">Stage / recording / rock memory</text>
+<text x="80" y="860" class="detail">Live presence. Limited reach.</text>
+<text x="544" y="860" class="detail">Wider reach. A changing world.</text>
+<text x="1008" y="860" class="detail">Creative freedom. Family conflict.</text>
+<text x="1472" y="860" class="detail">An entire past. Its weight, too.</text>
+<path d="M80 904H1840" class="rule"/>
+<path d="M248 896V912M712 896V912M1176 896V912M1640 896V912" class="rule"/>
+<text x="248" y="944" class="label" text-anchor="middle">EARLY 20TH CENTURY</text>
+<text x="712" y="944" class="label" text-anchor="middle">MID-CENTURY</text>
+<text x="1176" y="944" class="label" text-anchor="middle">ROCK / COUNTERCULTURE ERA</text>
+<text x="1640" y="944" class="label" text-anchor="middle">LATE 20TH-CENTURY POP</text>
+<text x="80" y="1004" class="aside">Music, ambition, identity and trauma travel together.</text>
+<text x="1840" y="1004" class="aside" text-anchor="end">The American dream changes hands.</text>
+<text x="80" y="1052" font-size="12" fill="#b7b8b1">ONE FAMILY / FOUR GENERATIONS / FOUR MUSICAL WORLDS / ONE CONTINUING CREATIVE LEGACY</text>
+<text x="1840" y="1052" font-size="12" text-anchor="end" fill="#b7b8b1">ZALMIE → BENNY → TONY → PETE</text>
+</svg>
+<figcaption class="accessible-copy">
+<h1>American Pop (1981): Four Generations of Music</h1>
+<p>Zalmie is Benny's father; Benny is Tony's father; Tony is Pete's father. A single evolving musical thread connects all four generations from left to right.</p>
+<p>Zalmie establishes the lineage in immigrant America and vaudeville: live performance with limited reach. Benny carries it into the world of radio, records and swing: wider distribution in a changing musical world. Tony transforms it through rock, youth culture and counterculture: creative freedom accompanied by generational conflict. Pete inherits the accumulated legacy, with echoes of theatrical notation, record grooves and electric sound inside his recording world: access to the past and the burden of carrying it.</p>
+<p>The historical eras are broad musical environments, not a dated plot chronology. Music, ambition, identity, trauma and the American dream are transmitted and transformed, not ranked as progress.</p>
+</figcaption>
+</figure></main>
+</body>
+</html>

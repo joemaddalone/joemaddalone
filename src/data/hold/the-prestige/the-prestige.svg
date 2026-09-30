@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1400" role="img" aria-labelledby="prestige-title prestige-desc" width="2400" height="1400">
+  <style>
+:root { color-scheme:dark; --paper:#191713; --ink:#eee6d7; --muted:#b8ad9c; --angier:#d3ad7a; --borden:#94a8b5; }
+svg text { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; fill:var(--ink); }
+.display { font-family:Georgia,"Times New Roman",serif; letter-spacing:-2px; }
+.movement { font-family:Georgia,"Times New Roman",serif; font-size:36px; }
+.name { font-size:24px; font-weight:700; letter-spacing:2px; }
+.label { font-size:16px; letter-spacing:2px; fill:var(--muted); }
+.detail { font-size:20px; fill:var(--muted); }
+.aside { font-family:Georgia,"Times New Roman",serif; font-size:24px; font-style:italic; fill:var(--muted); }
+.gold { fill:var(--angier); }
+.blue { fill:var(--borden); }
+.rule { fill:none; stroke:#eee6d7; stroke-opacity:.15; }
+.path { fill:none; stroke-width:4; stroke-linecap:round; }
+.angier { stroke:var(--angier); }
+.borden { stroke:var(--borden); }
+.icon { fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.connector { fill:none; stroke:#b8ad9c; stroke-opacity:.35; stroke-dasharray:3 6; }
+.accessible-copy { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+</style>
+<title id="prestige-title">The Prestige — Two Magicians, One Obsession</title>
+<desc id="prestige-desc">Angier and Borden's shared stage splits after Julia's death into two intertwined rival paths; a theater cutaway exposes Borden's twin brothers sharing one identity and Angier's machine creating duplicates, then reveals identity, family and life as the costs beneath the same illusion.</desc>
+<defs>
+<linearGradient id="prestige-stage" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#493221"/><stop offset=".5" stop-color="#2d2420"/><stop offset="1" stop-color="#211b17"/></linearGradient>
+<linearGradient id="prestige-curtain"><stop stop-color="#563228"/><stop offset="1" stop-color="#261b17"/></linearGradient>
+<linearGradient id="prestige-backstage" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#121211"/><stop offset=".5" stop-color="#171919"/><stop offset="1" stop-color="#222018"/></linearGradient>
+<g id="prestige-magician" fill="currentColor">
+  <path d="M-18 -30V-34H-10V-52H10V-34H18V-30ZM-6 -28H6L5 -16H-5Z"/>
+  <path d="M-8 -14L-18 -8L-24 22L-18 25L-12 4L-14 38H-3L-4 60H-12L-10 22H10L12 60H4L3 38H14L12 4L18 25L24 22L18 -8L8 -14L0 -2Z"/>
+</g>
+<g id="prestige-door" class="icon"><path d="M-32 36V-48H32V36M-24 36V-40H24V36M-40 36H40"/><circle cx="14" cy="-2" r="2"/></g>
+<g id="prestige-tank" class="icon"><path d="M-28 -36H28V36H-28ZM-32 -40H32M-24 -16H24M-24 40H24"/><path d="M-10 12L4 4L14 14M4 4L0 -4M4 4L0 20" stroke-opacity=".4"/><circle cx="-3" cy="-10" r="4" stroke-opacity=".4"/></g>
+<g id="prestige-coil" class="icon"><path d="M-24 36H24M-16 36V12H16V36M0 12V-40M-20 -36H20M-24 -28H24M-28 -20H28M-24 -12H24M-20 -4H20"/></g>
+<marker id="prestige-arrow" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2L10 6L2 10" fill="none" stroke="#b8ad9c" stroke-width="1.5"/></marker>
+</defs>
+<rect width="2400" height="1400" fill="#191713"/>
+<text x="80" y="56" class="label">THE PRESTIGE (2006) / THE STORY IS THE TRICK</text>
+<text x="76" y="152" class="display" font-size="100">THE PRESTIGE</text>
+<text x="80" y="208" font-size="28" letter-spacing="4">TWO MAGICIANS. ONE OBSESSION.</text>
+<text x="1776" y="148" class="aside">Look at the performance.</text>
+<text x="1776" y="184" class="aside">Then look beneath it.</text>
+<path d="M80 240H2320" class="rule"/>
+<g text-anchor="middle">
+  <text x="548" y="296" class="movement">The Pledge</text>
+  <text x="1224" y="296" class="movement">The Turn</text>
+  <text x="1956" y="296" class="movement">The Prestige</text>
+  <text x="548" y="332" class="label">ESTABLISH THE ORDINARY</text>
+  <text x="1224" y="332" class="label">MAKE IT IMPOSSIBLE</text>
+  <text x="1956" y="332" class="label">REVEAL THE COST</text>
+</g>
+
+<!-- Above the floor: warm spectacle, paired doors, applause, and two legible paths. -->
+<rect x="224" y="356" width="2112" height="412" fill="url(#prestige-stage)"/>
+<path d="M224 356H872V412Q552 472 224 408ZM872 356H1576V412Q1224 464 872 412ZM1576 356H2336V412Q1956 472 1576 412Z" fill="url(#prestige-curtain)"/>
+<g class="rule"><path d="M256 368V440M288 368V436M320 368V432M836 368V432M904 368V432M940 368V432M1540 368V432M1608 368V432M1644 368V432M2304 368V436"/></g>
+<g id="prestige-layer-performance" text-anchor="end">
+  <text x="200" y="428" class="label" style="fill:#eee6d7">PERFORMANCE</text>
+  <text x="200" y="460" class="label" style="letter-spacing:0">The visible</text>
+  <text x="200" y="484" class="label" style="letter-spacing:0">effect.</text>
+</g>
+<text x="272" y="468" class="name gold">ROBERT ANGIER</text>
+<text x="272" y="500" class="name blue">ALFRED BORDEN</text>
+<text x="272" y="584" class="detail">One stage. Shared ambition.</text>
+<text x="272" y="616" class="detail">Cutter teaches the craft.</text>
+
+<!-- Shared line splits at a single tragic rupture. Crossings have dark under-strokes. -->
+<path d="M288 536H560" fill="none" stroke="#eee6d7" stroke-width="4"/>
+<path id="prestige-angier-path" class="path angier" d="M560 536C648 536 672 520 744 520S848 604 928 604S1024 520 1112 520S1216 604 1304 604S1416 520 1512 520S1600 500 1704 500H2232"/>
+<path id="prestige-borden-ground" d="M560 536C648 536 672 604 744 604S848 520 928 520S1024 604 1112 604S1216 520 1304 520S1416 604 1512 604S1600 636 1704 636H2232" fill="none" stroke="#191713" stroke-width="12"/>
+<path id="prestige-borden-path" class="path borden" d="M560 536C648 536 672 604 744 604S848 520 928 520S1024 604 1112 604S1216 520 1304 520S1416 604 1512 604S1600 636 1704 636H2232"/>
+<circle cx="560" cy="536" r="10" fill="#191713" stroke="#c57d64" stroke-width="3"/>
+<path d="M560 552V652" fill="none" stroke="#c57d64" stroke-opacity=".5"/>
+<text x="496" y="688" class="name" style="fill:#c57d64">JULIA’S DEATH</text>
+<text x="496" y="724" class="detail">Blame becomes obsession.</text>
+<text x="1224" y="676" class="label" text-anchor="middle">SABOTAGE ↔ COUNTERTRICK ↔ ESCALATION</text>
+<text x="1224" y="464" class="name" text-anchor="middle">THE TRANSPORTED MAN</text>
+<text x="1224" y="712" class="aside" text-anchor="middle">The rivalry becomes a machine.</text>
+<g color="#d3ad7a"><use href="#prestige-door" transform="translate(1800 452) scale(.6)"/><use href="#prestige-door" transform="translate(2080 452) scale(.6)"/></g>
+<g color="#94a8b5"><use href="#prestige-door" transform="translate(1800 592) scale(.6)"/><use href="#prestige-door" transform="translate(2080 592) scale(.6)"/></g>
+<text x="1940" y="452" class="detail" text-anchor="middle">Gone. Returned.</text>
+<text x="1940" y="592" class="detail" text-anchor="middle">Gone. Returned.</text>
+<text x="1956" y="704" class="aside" text-anchor="middle">The same effect. Different realities.</text>
+
+<!-- Stage floor + audience makes the epistemic boundary unmistakable. -->
+<path d="M224 752H2336M224 760H2336" stroke="#d3ad7a" stroke-opacity=".4"/>
+<g fill="#0f0f0e"><circle cx="940" cy="744" r="9"/><circle cx="972" cy="744" r="9"/><circle cx="1004" cy="744" r="9"/><circle cx="1036" cy="744" r="9"/><circle cx="1068" cy="744" r="9"/><circle cx="1100" cy="744" r="9"/></g>
+<text x="1160" y="744" class="label">APPLAUSE IS NOT AN EXPLANATION</text>
+
+<!-- Lower layers become increasingly exposed toward the right. -->
+<rect x="224" y="776" width="2112" height="504" fill="url(#prestige-backstage)"/>
+<path d="M872 356V1280M1576 356V1280" class="rule" stroke-dasharray="3 12"/>
+<g id="prestige-layer-method" text-anchor="end">
+  <text x="200" y="832" class="label" style="fill:#eee6d7">METHOD</text>
+  <text x="200" y="864" class="label" style="letter-spacing:0">Behind</text>
+  <text x="200" y="888" class="label" style="letter-spacing:0">the floor.</text>
+</g>
+<g id="prestige-layer-secret" text-anchor="end">
+  <text x="200" y="1012" class="label" style="fill:#eee6d7">SECRET</text>
+  <text x="200" y="1044" class="label" style="letter-spacing:0">Behind</text>
+  <text x="200" y="1068" class="label" style="letter-spacing:0">the name.</text>
+</g>
+<g id="prestige-layer-cost" text-anchor="end">
+  <text x="200" y="1192" class="label" style="fill:#eee6d7">COST</text>
+  <text x="200" y="1224" class="label" style="letter-spacing:0">Behind</text>
+  <text x="200" y="1248" class="label" style="letter-spacing:0">the applause.</text>
+</g>
+
+<!-- Pledge: a prop, a journal, and a deliberately opaque underside. -->
+<g class="icon" color="#b8ad9c" opacity=".5"><use href="#prestige-tank" transform="translate(336 844)"/><path d="M416 804H468V872H416ZM424 820H460M424 832H460M424 844H452M420 824L464 852M408 812V880H460"/></g>
+<text x="512" y="836" class="label">PROPS / JOURNALS</text>
+<text x="512" y="868" class="detail">Evidence can also misdirect.</text>
+<path d="M272 928H804" class="rule"/>
+<text x="272" y="992" class="aside">A knot. A doubt. A private life.</text>
+<text x="272" y="1032" class="detail">The method is already a secret.</text>
+<text x="272" y="1200" class="aside">A death turns craft into revenge.</text>
+
+<!-- Turn: the feedback mechanism and an industrial branch of Angier's path. -->
+<path d="M1512 536V788" class="connector"/>
+<g class="icon" color="#94a8b5"><use href="#prestige-coil" transform="translate(1400 844)"/><path d="M1360 872H1440M1416 824L1436 804L1424 788"/></g>
+<text x="920" y="820" class="name gold">TESLA’S MACHINE</text>
+<text x="920" y="852" class="detail">An explanation becomes replication.</text>
+<text x="920" y="884" class="label">SCIENCE DOES NOT END THE OBSESSION</text>
+<path d="M920 940H1496M920 1108H1496" class="rule"/>
+<text x="920" y="980" class="label">DIARIES / CIPHERS / BAIT</text>
+<!-- An open journal: private handwriting faces an encoded, deliberately misleading record. -->
+<g id="prestige-cipher-journal" aria-hidden="true">
+  <path d="M952 1000Q1068 984 1192 1008Q1316 984 1432 1000V1092Q1316 1076 1192 1100Q1068 1076 952 1092Z" fill="#b8ad9c" fill-opacity=".06" stroke="#b8ad9c" stroke-opacity=".65" stroke-width="2"/>
+  <path d="M1192 1008V1100M944 1008V1100Q1068 1084 1192 1108Q1316 1084 1440 1100V1008" class="icon" color="#b8ad9c" opacity=".4"/>
+  <g font-family="Georgia, serif" font-style="italic" font-size="16" fill="#b8ad9c" opacity=".8">
+    <text x="976" y="1028" style="font-family:Georgia,serif">The secret is not the effect.</text>
+    <text x="976" y="1048" style="font-family:Georgia,serif">Look where the light ends.</text>
+    <text x="976" y="1068" style="font-family:Georgia,serif">A name can be a disguise.</text>
+  </g>
+  <g font-size="14" letter-spacing="3" opacity=".75">
+    <text x="1216" y="1028" style="font-family:monospace">VJQX · 17 · KMRD</text>
+    <text x="1216" y="1048" style="font-family:monospace">04 19 08 / 23 11</text>
+    <text x="1216" y="1068" style="font-family:monospace">X → VII → ? → X</text>
+  </g>
+  <path d="M972 1040L1172 1050M1232 1056L1400 1068" stroke="#c57d64" stroke-width="1.5" stroke-opacity=".8"/>
+</g>
+<text x="920" y="1200" class="aside">Each secret demands another sacrifice.</text>
+
+<!-- Prestige: a cutaway, not a family tree or two unrelated character cards. -->
+<path d="M1640 944H2288M1640 1120H2288" class="rule"/>
+<text x="1640" y="816" class="name gold">ANGIER / ONE BECOMES TWO</text>
+<g color="#d3ad7a">
+  <use href="#prestige-magician" transform="translate(1696 888) scale(.5)"/>
+  <use href="#prestige-coil" transform="translate(1816 888) scale(.65)"/>
+  <use href="#prestige-magician" transform="translate(1944 888) scale(.5)"/>
+  <use href="#prestige-magician" transform="translate(2072 888) scale(.5)" opacity=".4"/>
+</g>
+<g class="line" fill="none" stroke="#b8ad9c" stroke-opacity=".6" marker-end="url(#prestige-arrow)"><path d="M1728 888H1768"/><path d="M1864 888H1912"/><path d="M1980 888H2040"/></g>
+<text x="2144" y="876" class="detail">One returns.</text>
+<text x="2144" y="908" class="detail">One drowns.</text>
+<text x="1640" y="996" class="name blue">BORDEN / TWO LIVE AS ONE</text>
+<g color="#94a8b5"><use href="#prestige-magician" transform="translate(1696 1060) scale(.5)"/><use href="#prestige-magician" transform="translate(1816 1060) scale(.5)"/><path d="M1728 1060H1784" fill="none" stroke="currentColor" stroke-width="2"/></g>
+<text x="1904" y="1048" class="detail">Two brothers. Borden / Fallon.</text>
+<text x="1904" y="1080" class="detail">One name. Two private lives.</text>
+
+<!-- Identical containers descend from props to evidence. No explicit gore. -->
+<g class="icon" color="#d3ad7a"><use href="#prestige-tank" transform="translate(1664 1188) scale(.65)"/><use href="#prestige-tank" transform="translate(1736 1188) scale(.65)" opacity=".8"/><use href="#prestige-tank" transform="translate(1808 1188) scale(.65)" opacity=".6"/><use href="#prestige-tank" transform="translate(1880 1188) scale(.65)" opacity=".4"/><use href="#prestige-tank" transform="translate(1952 1188) scale(.65)" opacity=".2"/></g>
+<text x="1640" y="1244" class="label gold">ANGIER HIDES THE COST: LIFE</text>
+<text x="2032" y="1160" class="label blue">BORDEN HIDES THE METHOD</text>
+<text x="2032" y="1192" class="detail">Identity. Marriage. A brother.</text>
+<text x="2032" y="1224" class="detail">One survives to raise his daughter.</text>
+<text x="2032" y="1256" class="detail">Angier dies; the tanks remain.</text>
+<path d="M80 1304H2320" class="rule"/>
+<text x="80" y="1344" class="aside">Two solutions to the same obsession. Neither without a price.</text>
+<text x="2320" y="1344" class="label" text-anchor="end">PERFORMANCE → METHOD → SECRET → COST</text>
+<text x="80" y="1380" font-size="12" fill="#b8ad9c">THE PLEDGE ESTABLISHES THE WORLD. THE TURN HIDES THE MECHANISM. THE PRESTIGE EXPOSES WHAT THE ILLUSION COST.</text>
+</svg>

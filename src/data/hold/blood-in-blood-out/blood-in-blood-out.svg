@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="blood-map-title blood-map-desc" width="1920" height="1080">
+  <style>
+:root { color-scheme: dark; --paper: #191a18; --ink: #f5f1e8; --muted: #b7b8b1; --cruz: #d3ad7a; --paco: #82a0c0; --miklo: #c9826b; --rupture: #df7359; }
+text { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; fill: #f5f1e8; }
+.display { font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -3px; }
+.small { font-size: 16px; letter-spacing: 2px; }
+.act { font-size: 20px; font-weight: 600; letter-spacing: 3px; }
+.act-name { font-family: Georgia, "Times New Roman", serif; font-size: 28px; }
+.name { font-size: 28px; font-weight: 700; letter-spacing: 3px; }
+.event { font-size: 20px; font-weight: 600; letter-spacing: 1px; }
+.detail { font-size: 20px; fill: #b7b8b1; }
+.aside { font-family: Georgia, "Times New Roman", serif; font-size: 24px; font-style: italic; fill: #b7b8b1; }
+.cruz { fill: #d3ad7a; } .paco { fill: #82a0c0; } .miklo { fill: #c9826b; }
+.path { fill: none; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+.path-cruz { stroke: #d3ad7a; } .path-paco { stroke: #82a0c0; } .path-miklo { stroke: #c9826b; }
+.station { fill: #191a18; stroke-width: 3; }
+.rule { stroke: #f5f1e8; stroke-opacity: .16; stroke-width: 1; }
+.leader { stroke: #b7b8b1; stroke-opacity: .45; stroke-width: 1; fill: none; }
+</style>
+  <title id="blood-map-title">Blood In, Blood Out</title>
+  <desc id="blood-map-desc">Three cousins share one turning point: Cruz's assault and broken back lead him through pain-medication addiction to sobriety and reason; Paco and Miklo avenge him, are arrested, and diverge into boot camp and police authority with regret, and prison with gang power understood as destiny but without freedom.</desc>
+  <defs>
+    <pattern id="blood-prison-bars" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M12 0V24" stroke="#c9826b" stroke-width="1" opacity=".15"/></pattern>
+    <clipPath id="blood-confinement"><path d="M812 340H1848V428H1344L812 736Z"/></clipPath>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0L8 3L0 6Z" fill="#b7b8b1"/></marker>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0L8 3L0 6Z" fill="#df7359"/></marker>
+    <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0 0L8 3L0 6Z" fill="#82a0c0"/></marker>
+  </defs>
+  <rect width="1920" height="1080" fill="#191a18"/>
+  <!-- The title and all narrative content remain inside the exportable 16:9 SVG. -->
+  <text x="80" y="64" class="small" fill="#b7b8b1">A FILM IN THREE CHARACTER ARCS</text>
+  <text x="76" y="156" class="display" font-size="88">BLOOD IN, BLOOD OUT</text>
+  <text x="80" y="204" font-size="28" fill="#b7b8b1">Three Cousins. Three Paths. One Turning Point.</text>
+  <path d="M1664 192H1840" class="leader" marker-end="url(#arrow)"/>
+  <text x="1664" y="172" class="small">READ LEFT TO RIGHT</text>
+  <path d="M80 232H1840" class="rule"/>
+
+  <!-- Exactly three major sections, with open rather than boxed composition. -->
+  <text x="80" y="276" class="act">ACT I</text>
+  <text x="176" y="276" class="act-name">Origins</text>
+  <text x="712" y="276" class="act">ACT II</text>
+  <text x="816" y="276" class="act-name">Transformation</text>
+  <text x="1328" y="276" class="act">ACT III</text>
+  <text x="1440" y="276" class="act-name">Consequences</text>
+  <path d="M688 248V900M1296 248V900" class="rule" stroke-dasharray="2 10"/>
+
+  <!-- Confinement narrows as Miklo gains status; it never opens at his endpoint. -->
+  <path d="M812 340H1848V428H1344L812 736Z" fill="#c9826b" opacity=".035"/>
+  <g clip-path="url(#blood-confinement)"><rect x="812" y="340" width="1036" height="396" fill="url(#blood-prison-bars)"/></g>
+  <path d="M812 340H1848V428H1344L812 736" fill="none" stroke="#c9826b" stroke-opacity=".18"/>
+  <text x="1352" y="320" class="small miklo">POWER INCREASES / FREEDOM DECREASES</text>
+
+  <!-- One shared rupture crosses the three close origins, not three unrelated timelines. -->
+  <rect x="496" y="384" width="112" height="332" fill="#df7359" opacity=".05"/>
+  <path d="M548 392V700" stroke="#df7359" stroke-opacity=".48" stroke-width="2" stroke-dasharray="4 8"/>
+  <text x="464" y="328" class="small" style="fill:#df7359">THE SHARED TURNING POINT</text>
+  <text x="464" y="364" font-size="32" font-weight="700" style="fill:#df7359">ASSAULT ON CRUZ</text>
+  <text x="568" y="400" class="detail">Broken back. A future disrupted.</text>
+
+  <!-- Exactly three primary paths. Bridge arcs preserve traceability at crossings. -->
+  <path id="paco-journey" class="path path-paco" d="M280 512H352Q364 512 364 524V532Q364 544 376 544H424Q436 544 436 532V516Q436 504 448 504H504Q516 504 516 516V536Q516 548 528 548H748Q760 548 760 536V512Q760 500 772 500H1200Q1212 500 1212 512V516Q1212 528 1224 528H1420Q1432 528 1432 516V492Q1432 480 1444 480H1600"/>
+  <path id="miklo-journey-ground" d="M280 648H500Q512 648 512 660V668Q512 680 524 680H868Q880 680 880 668V516C904 516 904 484 880 484V416Q880 404 892 404H1036Q1048 404 1048 392V388Q1048 376 1060 376H1204Q1216 376 1216 364V360Q1216 348 1228 348H1600" fill="none" stroke="#191a18" stroke-width="13"/>
+  <path id="miklo-journey" class="path path-miklo" d="M280 648H500Q512 648 512 660V668Q512 680 524 680H868Q880 680 880 668V516C904 516 904 484 880 484V416Q880 404 892 404H1036Q1048 404 1048 392V388Q1048 376 1060 376H1204Q1216 376 1216 364V360Q1216 348 1228 348H1600"/>
+  <path id="cruz-journey-ground" d="M280 436H356Q368 436 368 424V420Q368 408 380 408H480Q492 408 492 420V424Q492 436 504 436H644Q656 436 656 448V532C632 532 632 564 656 564V664C632 664 632 696 656 696V836Q656 848 668 848H1128Q1140 848 1140 836V796Q1140 784 1152 784H1356Q1368 784 1368 772V712Q1368 700 1380 700H1600" fill="none" stroke="#191a18" stroke-width="13"/>
+  <path id="cruz-journey" class="path path-cruz" d="M280 436H356Q368 436 368 424V420Q368 408 380 408H480Q492 408 492 420V424Q492 436 504 436H644Q656 436 656 448V532C632 532 632 564 656 564V664C632 664 632 696 656 696V836Q656 848 668 848H1128Q1140 848 1140 836V796Q1140 784 1152 784H1356Q1368 784 1368 772V712Q1368 700 1380 700H1600"/>
+
+  <!-- Origins: closely grouped, with different starting contours. -->
+  <text x="80" y="408" class="name cruz">CRUZ</text>
+  <text x="80" y="440" class="detail">Straight and narrow</text>
+  <text x="80" y="368" class="event cruz">PROMISING FUTURE</text>
+  <text x="80" y="496" class="name paco">PACO</text>
+  <text x="80" y="528" class="detail">Chip on his shoulder</text>
+  <text x="80" y="572" class="event paco">DESTINED FOR TROUBLE</text>
+  <text x="80" y="652" class="name miklo">MIKLO</text>
+  <text x="80" y="684" class="detail">Out of place</text>
+  <text x="80" y="716" class="event miklo">WEAK BUT BRAVE</text>
+  <circle cx="280" cy="436" r="6" fill="#d3ad7a"/>
+  <circle cx="280" cy="512" r="6" fill="#82a0c0"/>
+  <circle cx="280" cy="648" r="6" fill="#c9826b"/>
+  <circle cx="548" cy="436" r="12" fill="#191a18" stroke="#df7359" stroke-width="4"/>
+  <circle cx="548" cy="436" r="4" fill="#df7359"/>
+
+  <!-- Shared revenge binds Paco and Miklo before their institutional split. -->
+  <path d="M596 548H608M608 548V680M596 680H608" fill="none" stroke="#f5f1e8" stroke-opacity=".7" stroke-width="2"/>
+  <path d="M568 740H584Q608 740 608 716V696" class="leader"/>
+  <text x="384" y="772" class="event">AVENGING CRUZ</text>
+  <text x="384" y="804" class="detail">Paco + Miklo · both arrested</text>
+
+  <!-- Act II: institution, transformation, and the cost of each trajectory. -->
+  <circle cx="780" cy="500" r="8" class="station path-paco"/>
+  <text x="716" y="452" class="event paco">BOOT CAMP</text>
+  <circle cx="1000" cy="500" r="8" class="station path-paco"/>
+  <text x="956" y="548" class="event paco">POLICE OFFICER</text>
+  <text x="956" y="576" class="detail">Hard-nosed. Brutal toward</text>
+  <text x="956" y="604" class="detail">young men like his younger self.</text>
+
+  <circle cx="824" cy="680" r="8" class="station path-miklo"/>
+  <text x="724" y="724" class="event miklo">PRISON</text>
+  <circle cx="948" cy="404" r="8" class="station path-miklo"/>
+  <text x="916" y="320" class="event miklo">PROVE HIMSELF</text>
+  <text x="916" y="352" class="detail">Willing to risk death</text>
+  <circle cx="1148" cy="376" r="8" class="station path-miklo"/>
+  <text x="1076" y="440" class="event miklo">RISE THROUGH</text>
+  <text x="1076" y="468" class="event miklo">PRISON GANGS</text>
+
+  <circle cx="900" cy="848" r="8" class="station path-cruz"/>
+  <text x="736" y="784" class="event cruz">PAIN-MEDICATION ADDICTION</text>
+  <text x="736" y="816" class="detail">No future</text>
+  <text x="736" y="892" class="aside">The promise does not return.</text>
+
+  <!-- Act III: distinct emotional endings, not moral rankings. -->
+  <circle cx="1256" cy="528" r="8" class="station path-paco"/>
+  <text x="1328" y="568" class="event paco">SELF-REFLECTION</text>
+  <circle cx="1408" cy="700" r="8" class="station path-cruz"/>
+  <path d="M1408 716V732" class="leader"/>
+  <text x="1400" y="764" class="event cruz">SOBRIETY</text>
+  <text x="1400" y="796" class="detail">Perspective, not</text>
+  <text x="1400" y="824" class="detail">a restored future</text>
+
+  <circle cx="1600" cy="348" r="10" class="station path-miklo"/>
+  <text x="1632" y="376" class="name miklo">MIKLO</text>
+  <text x="1632" y="404" class="event">PRISON GANG LEADER</text>
+  <text x="1632" y="468" font-size="36" font-family="Georgia, serif">Destiny</text>
+  <text x="1632" y="496" class="detail">As he sees it. Still imprisoned.</text>
+
+  <circle cx="1600" cy="480" r="10" class="station path-paco"/>
+  <path d="M1600 496V540" class="leader"/>
+  <text x="1632" y="568" class="name paco">PACO</text>
+  <text x="1632" y="624" font-size="36" font-family="Georgia, serif">Regret</text>
+  <text x="1632" y="660" class="detail">Authority without resolution</text>
+
+  <circle cx="1600" cy="700" r="10" class="station path-cruz"/>
+  <path d="M1600 716V736" class="leader"/>
+  <text x="1632" y="764" class="name cruz">CRUZ</text>
+  <text x="1632" y="800" class="event">SOBER</text>
+  <text x="1632" y="844" font-size="36" font-family="Georgia, serif">Voice of reason</text>
+
+  <!-- Colophon: compact arc summaries and the central contradictions. -->
+  <path d="M80 916H1840" class="rule"/>
+  <text x="80" y="952" class="event cruz">CRUZ</text>
+  <text x="80" y="984" font-size="16">PROMISE → ASSAULT → ADDICTION → SOBRIETY → REASON</text>
+  <text x="80" y="1020" class="aside">Lost his future. Found perspective.</text>
+  <text x="712" y="952" class="event paco">PACO</text>
+  <text x="712" y="984" font-size="16">TROUBLE → REVENGE → BOOT CAMP → POLICE → REGRET</text>
+  <text x="712" y="1020" class="aside">Gained authority. Found regret.</text>
+  <text x="1328" y="952" class="event miklo">MIKLO</text>
+  <text x="1328" y="984" font-size="16">OUTSIDER → REVENGE → PRISON → POWER → DESTINY</text>
+  <text x="1328" y="1020" class="aside">Gained power. Lost freedom.</text>
+  <text x="80" y="1060" font-size="12" fill="#b7b8b1">PATH HEIGHT EXPRESSES EACH CHARACTER’S CHANGING CONDITION — NOT A SHARED MEASURE OF SUCCESS.</text>
+  <text x="1840" y="1060" font-size="12" text-anchor="end" fill="#b7b8b1">ONE STORY / THREE CONSEQUENCES</text>
+</svg>

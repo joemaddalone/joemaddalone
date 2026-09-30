@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1200" role="img" aria-labelledby="predestination-title predestination-desc" width="2000" height="1200">
+  <style>
+:root { color-scheme:dark; --paper:#191a18; --ink:#f5f1e8; --muted:#b7b8b1; }
+.controls { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px; margin:8px 0 20px; }
+.controls span { color:var(--muted); font-size:14px; margin-right:12px; }
+button { background:transparent; border:1px solid #55564e; color:var(--ink); padding:12px 20px; font:inherit; cursor:pointer; }
+button[aria-pressed="true"] { border-color:#d3ad7a; background:#d3ad7a18; }
+button:focus-visible { outline:2px solid #d3ad7a; outline-offset:4px; }
+svg text { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; fill:var(--ink); }
+.display { font-family:Georgia,"Times New Roman",serif; letter-spacing:-2px; }
+.name { font-size:28px; font-weight:700; letter-spacing:3px; }
+.label { font-size:16px; letter-spacing:2px; fill:var(--muted); }
+.detail { font-size:20px; fill:var(--muted); }
+.aside { font-family:Georgia,"Times New Roman",serif; font-size:24px; font-style:italic; fill:var(--muted); }
+.line { fill:none; stroke:#b7b8b1; stroke-opacity:.25; stroke-width:1.5; }
+.face { fill:none; stroke:#e0d2b9; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.case { fill:#191a18; stroke:#b7b8b1; stroke-width:2; }
+.revealed { display:none; }
+[data-stage="identity"] .identity-reveal,[data-stage="causality"] .identity-reveal,[data-stage="causality"] .causal-reveal { display:inline; }
+[data-stage="identity"] .disguise,[data-stage="causality"] .disguise { opacity:.25; }
+[data-stage="identity"] .identity,[data-stage="causality"] .identity { color:#d3ad7a !important; }
+.identity { fill:currentColor; }
+.accessible-copy { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.controls { padding:16px; }
+.controls { display:none; }
+.identity-reveal,.causal-reveal { display:inline; }
+</style>
+<title id="predestination-title">Predestination — One Life. One Loop. No Beginning.</title>
+<desc id="predestination-desc">Five roles resolve into one life: Jane becomes John, John becomes the temporal Agent, the Agent works as the Bartender and later becomes the Bomber he hunts; John fathers Jane's baby, the Agent carries that same baby into the past, and the baby grows up as Jane.</desc>
+<defs>
+<linearGradient id="predestination-ribbon" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#caa889"/><stop offset=".38" stop-color="#92a5b1"/><stop offset=".7" stop-color="#788b99"/><stop offset="1" stop-color="#b39c8a"/></linearGradient>
+<g id="predestination-face" class="face">
+  <!-- A shared drawn face is a conceptual identity motif, not a claim that surgery leaves appearances unchanged. -->
+  <path d="M-22 -26Q-18 -42 0 -42Q18 -42 22 -26L20 -4Q16 18 0 22Q-16 18 -20 -4Z"/>
+  <path d="M-16 -16L-6 -18M6 -18L16 -16M-14 -10H-8M8 -10H14M0 -12L-4 2L2 4M-8 12Q0 16 8 12M-12 20V30M12 20V30M-28 40L-12 30L0 36L12 30L28 40"/>
+</g>
+<g id="predestination-case" class="case"><rect x="-20" y="-12" width="40" height="28" rx="2"/><path d="M-8 -12V-20H8V-12M-20 -2H20M-4 -4V4H4V-4"/></g>
+<marker id="predestination-arrow" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M2 2L12 7L2 12" fill="none" stroke="#d3ad7a" stroke-width="2"/></marker>
+</defs>
+<rect width="2000" height="1200" fill="#191a18"/>
+<text x="80" y="56" class="label">PREDESTINATION (2014) / AN IDENTITY PARADOX</text>
+<text x="76" y="148" class="display" font-size="96">PREDESTINATION</text>
+<text x="80" y="204" font-size="28" letter-spacing="4">ONE LIFE. ONE LOOP. NO BEGINNING.</text>
+<text x="1544" y="148" class="aside">The hunter.</text>
+<text x="1544" y="184" class="aside">The hunted.</text>
+<path d="M80 240H1920" class="line"/>
+
+<!-- No start marker: the ribbon is a single closed object. -->
+<ellipse id="predestination-loop" cx="1000" cy="672" rx="568" ry="316" fill="none" stroke="url(#predestination-ribbon)" stroke-width="28" stroke-opacity=".12"/>
+<ellipse cx="1000" cy="672" rx="568" ry="316" fill="none" stroke="url(#predestination-ribbon)" stroke-width="3"/>
+<!-- Narration folds inward and rejoins the same life. -->
+<path d="M1568 672C1504 524 1240 392 1000 392C832 392 708 428 640 480" class="line" stroke-dasharray="4 8"/>
+<g class="revealed identity-reveal" fill="none" stroke="#d3ad7a" stroke-width="2" marker-end="url(#predestination-arrow)">
+  <path d="M704 402Q760 376 824 368"/>
+  <path d="M1368 432Q1412 460 1440 492"/>
+  <path d="M1564 704Q1552 748 1524 784"/>
+  <path d="M1192 970Q1132 984 1080 986"/>
+  <path d="M456 760Q432 716 432 668"/>
+</g>
+
+<!-- Five disguises share one inner face when the viewer changes the reading. -->
+<g class="identity" style="color:#caa889" transform="translate(600 456)">
+  <g class="disguise"><path d="M-28 -8Q-40 -56 0 -64Q40 -56 28 -8L16 4H-16Z"/><path d="M-14 -12H14L32 72H-32ZM-18 72V100H-10V72M10 72V100H18V72"/></g>
+  <use href="#predestination-face" class="revealed identity-reveal"/>
+</g>
+<g class="identity" style="color:#a0acb7" transform="translate(1400 456)">
+  <g class="disguise"><path d="M-24 -28Q-28 -60 0 -60Q28 -60 24 -28L16 -8H-16Z"/><path d="M-16 -8L-32 12L-24 72H-4L-8 100H-20L-12 56H12L20 100H8L4 72H24L32 12L16 -8Z"/></g>
+  <use href="#predestination-face" class="revealed identity-reveal"/>
+</g>
+<g class="identity" style="color:#b5b5a8" transform="translate(1640 672)">
+  <g class="disguise"><path d="M-24 -28Q-24 -58 0 -58Q24 -58 24 -28L16 -8H-16Z"/><path d="M-16 -8L-36 12L-28 76H28L36 12L16 -8L0 20Z"/><path d="M-20 32H20V84H-20Z" fill="#191a18" stroke="currentColor" stroke-width="2"/></g>
+  <use href="#predestination-face" class="revealed identity-reveal"/>
+</g>
+<g class="identity" style="color:#8ca2b0" transform="translate(1080 936)">
+  <g class="disguise"><path d="M-28 -30V-38H-16V-52H16V-38H28V-30ZM-18 -28H18L14 -8H-14Z"/><path d="M-16 -8L-36 12L-32 72H-8L-12 104H-24L-16 56H16L24 104H12L8 72H32L36 12L16 -8L0 12Z"/></g>
+  <use href="#predestination-face" class="revealed identity-reveal"/>
+</g>
+<g class="identity" style="color:#9e8d82" transform="translate(400 760)">
+  <g class="disguise"><path d="M-34 0Q-40 -60 0 -64Q40 -60 34 0L18 -12H-18Z"/><path d="M-18 -8L-40 12L-44 84H44L40 12L18 -8ZM-20 84V108H-8V84M8 84V108H20V84"/></g>
+  <use href="#predestination-face" class="revealed identity-reveal"/>
+</g>
+
+<!-- Labels sit outside the ribbon, leaving the paradox at its center. -->
+<text x="360" y="332" class="name">JANE</text>
+<text x="360" y="364" class="detail">Longing / isolation / possibility</text>
+<text x="1392" y="332" class="name">JOHN</text>
+<text x="1392" y="364" class="detail">Loss / transformation / pursuit</text>
+<text x="1696" y="600" class="name">THE BARTENDER</text>
+<text x="1696" y="632" class="detail">The listening storyteller.</text>
+<text x="1696" y="664" class="detail">Inside his own story.</text>
+<text x="1208" y="1012" class="name">THE AGENT</text>
+<text x="1208" y="1048" class="detail">Intervention completes the circuit.</text>
+<text x="80" y="720" class="name">THE BOMBER</text>
+<text x="80" y="756" class="detail">The apparent enemy.</text>
+<text x="80" y="792" class="detail revealed identity-reveal">The possible future self.</text>
+
+<text x="1000" y="608" class="display" font-size="48" text-anchor="middle">WHO CREATED</text>
+<text x="1000" y="668" class="display" font-size="48" text-anchor="middle">WHOM?</text>
+<text x="1000" y="720" class="label" text-anchor="middle">NO PRIVILEGED FIRST EVENT</text>
+<text x="1000" y="768" class="aside revealed identity-reveal" text-anchor="middle">Five roles. One life.</text>
+
+<!-- The baby is self-parentage, not an external origin or a sixth unrelated person. -->
+<g transform="translate(1000 340)" fill="none" stroke="#d3ad7a" stroke-width="2">
+  <path d="M-28 8Q-20 -24 0 -24Q20 -24 28 8L0 40Z"/><circle cy="-4" r="8"/><path d="M-20 8L12 24M20 8L-8 28"/>
+</g>
+<text x="1000" y="292" class="label" text-anchor="middle">THE BABY</text>
+<text x="1000" y="424" class="detail revealed causal-reveal" text-anchor="middle">Jane’s child. John’s child. Jane herself.</text>
+<g class="revealed causal-reveal">
+  <g fill="none" stroke="#d3ad7a" stroke-width="1.5" marker-end="url(#predestination-arrow)">
+    <path d="M720 340H944"/>
+    <path d="M1280 340H1056"/>
+  </g>
+  <text x="768" y="316" class="label">MOTHER</text>
+  <text x="1160" y="316" class="label">FATHER</text>
+  <path d="M1040 916C1240 804 1360 544 1112 456" class="line" stroke-dasharray="4 8"/>
+  <text x="1360" y="864" class="label">THE AGENT RETURNS THE BABY</text>
+  <text x="1360" y="892" class="detail">To 1945. She grows up as Jane.</text>
+  <text x="544" y="900" class="label">THE HUNTER BECOMES THE HUNTED</text>
+  <text x="544" y="932" class="detail">The Agent’s later self is the Bomber.</text>
+</g>
+<use href="#predestination-case" transform="translate(784 408) scale(.8)"/>
+<use href="#predestination-case" transform="translate(1492 816) scale(.8)"/>
+<use href="#predestination-case" transform="translate(640 936) scale(.8)"/>
+<text x="1696" y="724" class="label revealed identity-reveal">AGENT UNDER COVER</text>
+<text x="1520" y="496" class="label">BIRTH / TRANSFORMATION</text>
+<text x="496" y="604" class="label revealed causal-reveal">JOHN MEETS JANE</text>
+<text x="496" y="632" class="detail revealed causal-reveal">The lover he was seeking.</text>
+
+<path d="M80 1112H1920" class="line"/>
+<text x="80" y="1152" class="aside revealed identity-reveal">What looked like five people was one person completing their own existence.</text>
+<text x="1920" y="1184" font-size="12" text-anchor="end" fill="#b7b8b1">THE SHARED FACE IS SYMBOLIC. THE RIBBON MAPS CAUSAL IDENTITY, NOT SIMPLE BIOLOGICAL CHRONOLOGY.</text>
+</svg>

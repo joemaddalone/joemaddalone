@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1200" role="img" aria-labelledby="meridian-title meridian-desc" width="2400" height="1200">
+  <style>
+:root { color-scheme:dark; --paper:#191713; --ink:#eee5d5; --muted:#b9aa95; --dust:#ceaa75; --blood:#ab5846; }
+svg text { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; fill:var(--ink); }
+.display { font-family:Georgia,"Times New Roman",serif; letter-spacing:-3px; }
+.label { font-size:16px; letter-spacing:2px; fill:var(--muted); }
+.name { font-size:28px; font-weight:700; letter-spacing:3px; }
+.place { font-size:20px; letter-spacing:2px; fill:var(--muted); }
+.detail { font-size:20px; fill:var(--muted); }
+.aside { font-family:Georgia,"Times New Roman",serif; font-size:24px; font-style:italic; fill:var(--muted); }
+.rule { fill:none; stroke:#eee5d5; stroke-opacity:.18; }
+.trail { fill:none; stroke:#e0bc83; stroke-width:4; stroke-linecap:round; }
+.scar { fill:none; stroke:#ab5846; stroke-linecap:round; }
+.terrain { fill:none; stroke:#ceaa75; stroke-opacity:.15; stroke-width:1; }
+.icon { fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.accessible-copy { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+</style>
+<title id="meridian-title">Blood Meridian — The Evening Redness in the West</title>
+<desc id="meridian-desc">The already-violent Kid travels through the borderlands with the Glanton gang, whose scalp trade turns violence into commerce; his continuous trail survives the gang while Judge Holden's circles grow into an immense presence around the isolated Man, leaving resistance and domination unresolved.</desc>
+<defs>
+  <linearGradient id="meridian-sky"><stop offset="0" stop-color="#3b3023"/><stop offset=".45" stop-color="#2b211b"/><stop offset=".78" stop-color="#241916"/><stop offset="1" stop-color="#571f1b"/></linearGradient>
+  <linearGradient id="meridian-ground"><stop offset="0" stop-color="#342b20"/><stop offset=".5" stop-color="#261e19"/><stop offset="1" stop-color="#160f0e"/></linearGradient>
+  <linearGradient id="meridian-red"><stop offset="0" stop-color="#8a392e" stop-opacity="0"/><stop offset="1" stop-color="#8a392e" stop-opacity=".7"/></linearGradient>
+  <marker id="meridian-arrow" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2L10 6L2 10" fill="none" stroke="#b9aa95" stroke-width="1.5"/></marker>
+  <g id="meridian-rider" fill="#100e0c">
+    <path d="M-24 0Q-8 -12 12 -4L20 -20L28 -16L24 0L16 8L12 28H6L4 10H-12L-16 28H-22L-20 4L-30 12L-34 8Z"/>
+    <!-- Angular mounted gunman: hat, riding coat, boot, and upright long gun. -->
+    <path d="M-12 -30L-12 -33L-5 -34L-4 -42H5L7 -34L14 -33V-30ZM-4 -29H6L4 -23H-3Z"/>
+    <path d="M-5 -23L5 -23L12 -14L20 -12L18 -8L8 -10L5 -4L9 5L0 10L-4 22H-11L-8 18L-5 5L-12 0L-8 -14Z"/>
+    <path d="M-17 -48H-14V-12H-10V-6H-19V-14H-17Z"/>
+  </g>
+  <g id="meridian-walker" fill="#eee5d5">
+    <!-- Lean frontier silhouette with an asymmetric coat and separated boot shapes. -->
+    <path d="M-14 -30V-33L-6 -34L-5 -42H5L7 -34L14 -33V-30ZM-4 -29H5L4 -22H-3Z"/>
+    <path d="M-5 -21L5 -21L10 -15L13 -3L10 0L6 -10L5 -1L10 9L2 8L-2 4L-9 10L-7 -9L-11 1L-15 -1L-11 -15Z"/>
+    <path d="M-6 7L-2 7L-3 24L-10 24L-10 20L-6 19ZM2 7H6L9 19L14 20V24H6L2 15Z"/>
+    <path d="M-17 -38H-14V7H-11V13H-19V5H-17Z"/>
+  </g>
+  <g id="meridian-judge" fill="#d8cab2">
+    <!-- The Judge stays physically imposing, but reads as a frontier man rather than a rounded mascot. -->
+    <path d="M-21 -34V-38L-10 -40L-8 -50H9L12 -40L22 -38V-34Z"/>
+    <path d="M-7 -33H8L7 -23L3 -19H-3L-7 -24Z"/>
+    <path d="M-8 -18L-19 -14L-25 7L-22 17L-16 17L-15 3L-12 -4L-14 28L-4 30L0 23L5 30L16 28L12 -4L16 3L17 17H23L26 8L20 -14L8 -18L3 -10H-3Z"/>
+    <path d="M-12 28H-3L-4 46L-6 51H-18V46L-12 44ZM3 28H12L13 44L19 46V51H7L4 46Z"/>
+    <path d="M-14 2H14" fill="none" stroke="#191713" stroke-width="2"/>
+  </g>
+</defs>
+<rect width="2400" height="1200" fill="#191713"/>
+<text x="80" y="56" class="label">A HUMAN JOURNEY THROUGH A LANDSCAPE BECOMING MYTH</text>
+<text x="76" y="152" class="display" font-size="100">BLOOD MERIDIAN</text>
+<text x="80" y="208" font-size="28" letter-spacing="4">OR THE EVENING REDNESS IN THE WEST</text>
+<text x="1840" y="108" class="aside">The Kid enters.</text>
+<text x="1840" y="144" class="aside">The gang passes.</text>
+<text x="1840" y="180" class="aside">The landscape remains.</text>
+<path d="M80 240H2320" class="rule"/>
+
+<!-- Panoramic terrain is the narrative ground, not a decorative backdrop. -->
+<rect x="64" y="272" width="2272" height="720" fill="url(#meridian-sky)"/>
+<path d="M64 584L176 532L280 552L408 488L496 552L592 572L736 416L820 520L900 444L1012 548L1140 460L1224 544L1340 396L1456 524L1560 488L1660 556L1776 504L1920 560L2064 520L2200 568L2336 548V992H64Z" fill="#181510"/>
+<path d="M64 672Q228 592 408 668T768 652T1160 676T1560 664T1944 688T2336 668V992H64Z" fill="url(#meridian-ground)"/>
+<path d="M1520 656Q1856 600 2336 588V760Q1980 700 1520 716Z" fill="url(#meridian-red)"/>
+<g class="terrain">
+  <path d="M80 708Q280 636 476 708T872 692T1272 708T1656 704M80 732Q280 660 476 732T872 716T1272 732T1656 728M80 756Q280 684 476 756T872 740T1272 756T1656 752"/>
+  <path d="M632 584L736 436L804 532M664 596L736 460L788 548M1224 584L1340 420L1420 532M1264 600L1340 452L1400 548"/>
+  <path d="M1480 652Q1536 728 1496 816T1512 972M1504 656Q1560 728 1520 816T1536 972" stroke-opacity=".5"/>
+</g>
+<g class="icon" color="#ceaa75" opacity=".35">
+  <!-- Fort and legal documents belong to the same world as the scar. -->
+  <path d="M388 624V588H400V596H412V588H424V596H436V588H448V624M384 624H452M412 624V612H424V624"/>
+  <path d="M884 644V608L908 588L932 608V644M908 620V644M956 644V600H980V644M872 644H992"/>
+  <path d="M1000 656V624L1024 604L1048 624V656M1016 604L1020 580L1012 560M1040 600L1052 576" stroke="#ab5846"/>
+</g>
+
+<!-- The Judge's circle moves beyond the scale of the human procession. -->
+<g fill="none" stroke="#d8cab2">
+  <circle cx="600" cy="392" r="36" opacity=".30"/>
+  <circle cx="1040" cy="408" r="84" opacity=".24"/>
+  <circle cx="1560" cy="440" r="140" opacity=".20"/>
+  <circle cx="2064" cy="580" r="244" opacity=".22"/>
+  <circle cx="2064" cy="580" r="272" opacity=".08"/>
+  <path d="M584 392H616M600 376V408M968 408H1112M1040 336V480M1560 308V324M1560 556V572" opacity=".20"/>
+</g>
+<circle cx="212" cy="404" r="28" fill="#ceaa75" opacity=".35"/>
+<circle cx="1040" cy="408" r="60" fill="#ab5846" opacity=".08"/>
+<circle cx="2064" cy="580" r="240" fill="#ab5846" opacity=".06"/>
+<text x="520" y="312" class="label">JUDGE HOLDEN</text>
+<text x="928" y="304" class="label">KNOWLEDGE AS POSSESSION</text>
+<text x="1416" y="272" class="label">WAR AS AN ABSOLUTE ORDER</text>
+<text x="1900" y="288" class="label">A MAN / A SYSTEM / A PRESENCE</text>
+<!-- Symbolic scale changes are conceptual, not literal changes in the Judge's body. -->
+<use href="#meridian-judge" transform="translate(600 712) scale(.55)"/>
+<use href="#meridian-judge" transform="translate(1040 680) scale(1)" opacity=".65"/>
+<use href="#meridian-judge" transform="translate(1560 580) scale(2)" opacity=".18"/>
+<use href="#meridian-judge" transform="translate(2064 548) scale(4)" opacity=".20"/>
+
+<!-- Violence as a feedback system, rather than a catalogue of injuries. -->
+<g id="meridian-commerce">
+  <g fill="none" stroke="#b9aa95" stroke-opacity=".6" stroke-width="1.5" marker-end="url(#meridian-arrow)">
+    <path d="M860 388H936"/>
+    <path d="M1060 388H1128"/>
+    <path d="M1250 388H1332"/>
+    <path d="M1480 388H1512Q1528 388 1528 404V480Q1528 496 1512 496H1280"/>
+    <path d="M1060 496H788Q772 496 772 480V404Q772 388 788 388"/>
+  </g>
+  <g text-anchor="middle" dominant-baseline="middle">
+    <text x="820" y="388" class="label">WAR</text>
+    <text x="1000" y="388" class="label">SCALPS</text>
+    <text x="1190" y="388" class="label">MONEY</text>
+    <text x="1410" y="388" class="label">INCENTIVE</text>
+    <text x="1170" y="496" class="label">MORE VIOLENCE</text>
+  </g>
+  <text x="792" y="448" class="aside">Contracted killing. Repeating returns.</text>
+</g>
+
+<!-- A broad scar carries the gang; a fine uninterrupted trail carries the Kid. -->
+<path class="scar" stroke-width="24" opacity=".16" d="M556 772C660 752 720 784 832 772S1044 796 1160 824S1352 768 1456 824S1528 868 1576 880"/>
+<path class="scar" stroke-width="7" opacity=".6" d="M556 772C660 752 720 784 832 772S1044 796 1160 824S1352 768 1456 824S1528 868 1576 880"/>
+<path d="M720 776L700 808M940 786L956 816M1096 808L1072 840M1260 808L1268 844M1428 812L1408 856" class="scar" stroke-width="2" opacity=".6"/>
+<path id="meridian-kid-trail" class="trail" d="M104 736C180 736 216 716 288 740S408 760 472 744S584 748 644 760S744 796 832 772S968 768 1040 792S1132 824 1208 816S1320 780 1384 808S1492 888 1568 880S1696 864 1792 888S1912 920 1984 908S2100 928 2208 924"/>
+<g>
+  <use href="#meridian-walker" transform="translate(128 732) scale(.55)"/>
+  <use href="#meridian-rider" transform="translate(588 744) scale(.7)"/>
+  <use href="#meridian-rider" transform="translate(668 748) scale(.65)"/>
+  <use href="#meridian-rider" transform="translate(748 764) scale(.7)"/>
+  <use href="#meridian-rider" transform="translate(832 744) scale(.8)"/>
+  <use href="#meridian-rider" transform="translate(916 756) scale(.7)"/>
+  <use href="#meridian-rider" transform="translate(1000 768) scale(.7)"/>
+  <use href="#meridian-rider" transform="translate(1100 792) scale(.65)"/>
+  <use href="#meridian-rider" transform="translate(1200 788) scale(.65)"/>
+  <use href="#meridian-rider" transform="translate(1300 772) scale(.6)"/>
+  <use href="#meridian-rider" transform="translate(1412 804) scale(.5)"/>
+  <use href="#meridian-walker" transform="translate(1640 852) scale(.55)"/>
+  <use href="#meridian-walker" transform="translate(1984 880) scale(.75)"/>
+</g>
+<!-- Human milestones occupy open ground, with clear space from the trail. -->
+<text x="104" y="660" class="name">THE KID</text>
+<text x="104" y="692" class="detail">Fourteen. Already violent.</text>
+<text x="264" y="816" class="label">WANDERER</text>
+<text x="408" y="684" class="label">SOLDIER</text>
+<text x="624" y="648" class="name">THE GLANTON GANG</text>
+<text x="624" y="680" class="detail">A moving force. A widening scar.</text>
+<text x="792" y="860" class="label">SCALPHUNTER / PARTICIPANT</text>
+<text x="1120" y="912" class="label">RESISTANCE IS NOT INNOCENCE</text>
+<text x="1584" y="952" class="label">SURVIVOR</text>
+<text x="1940" y="996" class="name">THE MAN</text>
+<text x="1940" y="1032" class="aside">What, exactly, has survived?</text>
+<text x="808" y="560" class="label">JOHN JOEL GLANTON</text>
+<text x="808" y="592" class="detail">Command → commerce → greed → destruction</text>
+<text x="1728" y="800" class="aside">The procession ends.</text>
+<text x="1728" y="832" class="aside">The presence does not.</text>
+<text x="2160" y="868" class="label">DOMINION</text>
+<text x="1728" y="352" class="aside">Human agency meets</text>
+<text x="1728" y="384" class="aside">an absolute philosophy.</text>
+
+<!-- Geography is keyed, not distorted into an east-to-west GPS route. -->
+<text x="104" y="304" class="place">TENNESSEE / FRONTIER</text>
+<text x="520" y="552" class="place">TEXAS</text>
+<text x="1112" y="648" class="place">NORTHERN MEXICO</text>
+<text x="1440" y="936" class="place">YUMA</text>
+<text x="2024" y="1080" class="place">FORT GRIFFIN / 1878</text>
+<g id="meridian-map">
+  <text x="80" y="936" class="label">BORDERLANDS / GEOGRAPHIC KEY</text>
+  <g transform="translate(80 960)" class="icon" color="#b9aa95" opacity=".7">
+    <path d="M8 40L72 40L116 48L172 44L216 56L304 48M80 12V40L96 64L136 104M168 12V44L192 92M240 12V52L280 84" stroke-opacity=".35"/>
+    <path d="M292 28Q244 72 184 76T64 28" stroke="#ab5846" stroke-width="2.5"/>
+    <circle cx="292" cy="28" r="3"/><circle cx="184" cy="76" r="3"/><circle cx="64" cy="28" r="3"/>
+  </g>
+  <text x="112" y="968" font-size="12" fill="#b9aa95">YUMA</text>
+  <text x="324" y="968" font-size="12" fill="#b9aa95">TEXAS</text>
+  <text x="92" y="1076" font-size="12" fill="#b9aa95">SONORA</text>
+  <text x="252" y="1076" font-size="12" fill="#b9aa95">CHIHUAHUA</text>
+  <text x="440" y="980" class="detail">1849–50: the gang’s borderlands</text>
+  <text x="440" y="1012" class="detail">1878: the Man’s final encounter</text>
+  <text x="440" y="1044" class="label">SCHEMATIC GEOGRAPHY / NOT TO SCALE</text>
+</g>
+<path d="M80 1112H2320" class="rule"/>
+<text x="80" y="1152" class="aside">Can he pass through the Judge’s world without wholly belonging to it?</text>
+<text x="2320" y="1152" class="label" text-anchor="end">THE LANDSCAPE CONTINUES.</text>
+<text x="80" y="1184" font-size="12" fill="#b9aa95">THE TRAIL IS THE KID’S JOURNEY. THE SCAR IS THE GANG’S COMMERCE. THE CIRCLES ARE THE JUDGE’S CLAIM TO ORDER.</text>
+</svg>
