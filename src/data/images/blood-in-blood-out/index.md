@@ -1,5 +1,5 @@
 ---
-title: "Blood In, Blood Out — Three Paths"
+title: "Blood In, Blood Out: Three Paths"
 date: 2026-09-30
 description: "A cinematic narrative map of Blood In, Blood Out"
 image: "./blood-in-blood-out.svg"
