@@ -1,20 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1200" role="img" aria-labelledby="meridian-title meridian-desc" width="2400" height="1200">
-  <style>
-:root { color-scheme:dark; --paper:#191713; --ink:#eee5d5; --muted:#b9aa95; --dust:#ceaa75; --blood:#ab5846; }
-svg text { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; fill:var(--ink); }
-.display { font-family:Georgia,"Times New Roman",serif; letter-spacing:-3px; }
-.label { font-size:16px; letter-spacing:2px; fill:var(--muted); }
-.name { font-size:28px; font-weight:700; letter-spacing:3px; }
-.place { font-size:20px; letter-spacing:2px; fill:var(--muted); }
-.detail { font-size:20px; fill:var(--muted); }
-.aside { font-family:Georgia,"Times New Roman",serif; font-size:24px; font-style:italic; fill:var(--muted); }
-.rule { fill:none; stroke:#eee5d5; stroke-opacity:.18; }
-.trail { fill:none; stroke:#e0bc83; stroke-width:4; stroke-linecap:round; }
-.scar { fill:none; stroke:#ab5846; stroke-linecap:round; }
-.terrain { fill:none; stroke:#ceaa75; stroke-opacity:.15; stroke-width:1; }
-.icon { fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
-.accessible-copy { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
-</style>
+<svg style="color-scheme:dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1200" role="img" aria-labelledby="meridian-title meridian-desc" width="2400" height="1200">
+  
 <title id="meridian-title">Blood Meridian — The Evening Redness in the West</title>
 <desc id="meridian-desc">The already-violent Kid travels through the borderlands with the Glanton gang, whose scalp trade turns violence into commerce; his continuous trail survives the gang while Judge Holden's circles grow into an immense presence around the isolated Man, leaving resistance and domination unresolved.</desc>
 <defs>
@@ -46,25 +31,25 @@ svg text { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; fill:var(--i
   </g>
 </defs>
 <rect width="2400" height="1200" fill="#191713"/>
-<text x="80" y="56" class="label">A HUMAN JOURNEY THROUGH A LANDSCAPE BECOMING MYTH</text>
-<text x="76" y="152" class="display" font-size="100">BLOOD MERIDIAN</text>
-<text x="80" y="208" font-size="28" letter-spacing="4">OR THE EVENING REDNESS IN THE WEST</text>
-<text x="1840" y="108" class="aside">The Kid enters.</text>
-<text x="1840" y="144" class="aside">The gang passes.</text>
-<text x="1840" y="180" class="aside">The landscape remains.</text>
-<path d="M80 240H2320" class="rule"/>
+<text x="80" y="56" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">A HUMAN JOURNEY THROUGH A LANDSCAPE BECOMING MYTH</text>
+<text x="76" y="152" style="font-family:Georgia,'Times New Roman',serif;fill:#eee5d5;letter-spacing:-3px" font-size="100">BLOOD MERIDIAN</text>
+<text x="80" y="208" font-size="28" letter-spacing="4" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#eee5d5">OR THE EVENING REDNESS IN THE WEST</text>
+<text x="1840" y="108" style="font-family:Georgia,'Times New Roman',serif;fill:#b9aa95;font-size:24px;font-style:italic">The Kid enters.</text>
+<text x="1840" y="144" style="font-family:Georgia,'Times New Roman',serif;fill:#b9aa95;font-size:24px;font-style:italic">The gang passes.</text>
+<text x="1840" y="180" style="font-family:Georgia,'Times New Roman',serif;fill:#b9aa95;font-size:24px;font-style:italic">The landscape remains.</text>
+<path d="M80 240H2320" style="fill:none;stroke:#eee5d5;stroke-opacity:.18"/>
 
 <!-- Panoramic terrain is the narrative ground, not a decorative backdrop. -->
 <rect x="64" y="272" width="2272" height="720" fill="url(#meridian-sky)"/>
 <path d="M64 584L176 532L280 552L408 488L496 552L592 572L736 416L820 520L900 444L1012 548L1140 460L1224 544L1340 396L1456 524L1560 488L1660 556L1776 504L1920 560L2064 520L2200 568L2336 548V992H64Z" fill="#181510"/>
 <path d="M64 672Q228 592 408 668T768 652T1160 676T1560 664T1944 688T2336 668V992H64Z" fill="url(#meridian-ground)"/>
 <path d="M1520 656Q1856 600 2336 588V760Q1980 700 1520 716Z" fill="url(#meridian-red)"/>
-<g class="terrain">
+<g style="fill:none;stroke:#ceaa75;stroke-opacity:.15;stroke-width:1">
   <path d="M80 708Q280 636 476 708T872 692T1272 708T1656 704M80 732Q280 660 476 732T872 716T1272 732T1656 728M80 756Q280 684 476 756T872 740T1272 756T1656 752"/>
   <path d="M632 584L736 436L804 532M664 596L736 460L788 548M1224 584L1340 420L1420 532M1264 600L1340 452L1400 548"/>
   <path d="M1480 652Q1536 728 1496 816T1512 972M1504 656Q1560 728 1520 816T1536 972" stroke-opacity=".5"/>
 </g>
-<g class="icon" color="#ceaa75" opacity=".35">
+<g color="#ceaa75" opacity=".35" style="color:#ceaa75;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round">
   <!-- Fort and legal documents belong to the same world as the scar. -->
   <path d="M388 624V588H400V596H412V588H424V596H436V588H448V624M384 624H452M412 624V612H424V624"/>
   <path d="M884 644V608L908 588L932 608V644M908 620V644M956 644V600H980V644M872 644H992"/>
@@ -83,10 +68,10 @@ svg text { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; fill:var(--i
 <circle cx="212" cy="404" r="28" fill="#ceaa75" opacity=".35"/>
 <circle cx="1040" cy="408" r="60" fill="#ab5846" opacity=".08"/>
 <circle cx="2064" cy="580" r="240" fill="#ab5846" opacity=".06"/>
-<text x="520" y="312" class="label">JUDGE HOLDEN</text>
-<text x="928" y="304" class="label">KNOWLEDGE AS POSSESSION</text>
-<text x="1416" y="272" class="label">WAR AS AN ABSOLUTE ORDER</text>
-<text x="1900" y="288" class="label">A MAN / A SYSTEM / A PRESENCE</text>
+<text x="520" y="312" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">JUDGE HOLDEN</text>
+<text x="928" y="304" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">KNOWLEDGE AS POSSESSION</text>
+<text x="1416" y="272" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">WAR AS AN ABSOLUTE ORDER</text>
+<text x="1900" y="288" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">A MAN / A SYSTEM / A PRESENCE</text>
 <!-- Symbolic scale changes are conceptual, not literal changes in the Judge's body. -->
 <use href="#meridian-judge" transform="translate(600 712) scale(.55)"/>
 <use href="#meridian-judge" transform="translate(1040 680) scale(1)" opacity=".65"/>
@@ -103,20 +88,20 @@ svg text { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; fill:var(--i
     <path d="M1060 496H788Q772 496 772 480V404Q772 388 788 388"/>
   </g>
   <g text-anchor="middle" dominant-baseline="middle">
-    <text x="820" y="388" class="label">WAR</text>
-    <text x="1000" y="388" class="label">SCALPS</text>
-    <text x="1190" y="388" class="label">MONEY</text>
-    <text x="1410" y="388" class="label">INCENTIVE</text>
-    <text x="1170" y="496" class="label">MORE VIOLENCE</text>
+    <text x="820" y="388" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">WAR</text>
+    <text x="1000" y="388" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">SCALPS</text>
+    <text x="1190" y="388" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">MONEY</text>
+    <text x="1410" y="388" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">INCENTIVE</text>
+    <text x="1170" y="496" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">MORE VIOLENCE</text>
   </g>
-  <text x="792" y="448" class="aside">Contracted killing. Repeating returns.</text>
+  <text x="792" y="448" style="font-family:Georgia,'Times New Roman',serif;fill:#b9aa95;font-size:24px;font-style:italic">Contracted killing. Repeating returns.</text>
 </g>
 
 <!-- A broad scar carries the gang; a fine uninterrupted trail carries the Kid. -->
-<path class="scar" stroke-width="24" opacity=".16" d="M556 772C660 752 720 784 832 772S1044 796 1160 824S1352 768 1456 824S1528 868 1576 880"/>
-<path class="scar" stroke-width="7" opacity=".6" d="M556 772C660 752 720 784 832 772S1044 796 1160 824S1352 768 1456 824S1528 868 1576 880"/>
-<path d="M720 776L700 808M940 786L956 816M1096 808L1072 840M1260 808L1268 844M1428 812L1408 856" class="scar" stroke-width="2" opacity=".6"/>
-<path id="meridian-kid-trail" class="trail" d="M104 736C180 736 216 716 288 740S408 760 472 744S584 748 644 760S744 796 832 772S968 768 1040 792S1132 824 1208 816S1320 780 1384 808S1492 888 1568 880S1696 864 1792 888S1912 920 1984 908S2100 928 2208 924"/>
+<path style="fill:none;stroke:#ab5846;stroke-linecap:round" stroke-width="24" opacity=".16" d="M556 772C660 752 720 784 832 772S1044 796 1160 824S1352 768 1456 824S1528 868 1576 880"/>
+<path style="fill:none;stroke:#ab5846;stroke-linecap:round" stroke-width="7" opacity=".6" d="M556 772C660 752 720 784 832 772S1044 796 1160 824S1352 768 1456 824S1528 868 1576 880"/>
+<path d="M720 776L700 808M940 786L956 816M1096 808L1072 840M1260 808L1268 844M1428 812L1408 856" style="fill:none;stroke:#ab5846;stroke-linecap:round" stroke-width="2" opacity=".6"/>
+<path id="meridian-kid-trail" style="fill:none;stroke:#e0bc83;stroke-width:4;stroke-linecap:round" d="M104 736C180 736 216 716 288 740S408 760 472 744S584 748 644 760S744 796 832 772S968 768 1040 792S1132 824 1208 816S1320 780 1384 808S1492 888 1568 880S1696 864 1792 888S1912 920 1984 908S2100 928 2208 924"/>
 <g>
   <use href="#meridian-walker" transform="translate(128 732) scale(.55)"/>
   <use href="#meridian-rider" transform="translate(588 744) scale(.7)"/>
@@ -133,48 +118,48 @@ svg text { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; fill:var(--i
   <use href="#meridian-walker" transform="translate(1984 880) scale(.75)"/>
 </g>
 <!-- Human milestones occupy open ground, with clear space from the trail. -->
-<text x="104" y="660" class="name">THE KID</text>
-<text x="104" y="692" class="detail">Fourteen. Already violent.</text>
-<text x="264" y="816" class="label">WANDERER</text>
-<text x="408" y="684" class="label">SOLDIER</text>
-<text x="624" y="648" class="name">THE GLANTON GANG</text>
-<text x="624" y="680" class="detail">A moving force. A widening scar.</text>
-<text x="792" y="860" class="label">SCALPHUNTER / PARTICIPANT</text>
-<text x="1120" y="912" class="label">RESISTANCE IS NOT INNOCENCE</text>
-<text x="1584" y="952" class="label">SURVIVOR</text>
-<text x="1940" y="996" class="name">THE MAN</text>
-<text x="1940" y="1032" class="aside">What, exactly, has survived?</text>
-<text x="808" y="560" class="label">JOHN JOEL GLANTON</text>
-<text x="808" y="592" class="detail">Command → commerce → greed → destruction</text>
-<text x="1728" y="800" class="aside">The procession ends.</text>
-<text x="1728" y="832" class="aside">The presence does not.</text>
-<text x="2160" y="868" class="label">DOMINION</text>
-<text x="1728" y="352" class="aside">Human agency meets</text>
-<text x="1728" y="384" class="aside">an absolute philosophy.</text>
+<text x="104" y="660" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#eee5d5;font-size:28px;font-weight:700;letter-spacing:3px">THE KID</text>
+<text x="104" y="692" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:20px">Fourteen. Already violent.</text>
+<text x="264" y="816" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">WANDERER</text>
+<text x="408" y="684" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">SOLDIER</text>
+<text x="624" y="648" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#eee5d5;font-size:28px;font-weight:700;letter-spacing:3px">THE GLANTON GANG</text>
+<text x="624" y="680" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:20px">A moving force. A widening scar.</text>
+<text x="792" y="860" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">SCALPHUNTER / PARTICIPANT</text>
+<text x="1120" y="912" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">RESISTANCE IS NOT INNOCENCE</text>
+<text x="1584" y="952" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">SURVIVOR</text>
+<text x="1940" y="996" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#eee5d5;font-size:28px;font-weight:700;letter-spacing:3px">THE MAN</text>
+<text x="1940" y="1032" style="font-family:Georgia,'Times New Roman',serif;fill:#b9aa95;font-size:24px;font-style:italic">What, exactly, has survived?</text>
+<text x="808" y="560" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">JOHN JOEL GLANTON</text>
+<text x="808" y="592" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:20px">Command → commerce → greed → destruction</text>
+<text x="1728" y="800" style="font-family:Georgia,'Times New Roman',serif;fill:#b9aa95;font-size:24px;font-style:italic">The procession ends.</text>
+<text x="1728" y="832" style="font-family:Georgia,'Times New Roman',serif;fill:#b9aa95;font-size:24px;font-style:italic">The presence does not.</text>
+<text x="2160" y="868" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">DOMINION</text>
+<text x="1728" y="352" style="font-family:Georgia,'Times New Roman',serif;fill:#b9aa95;font-size:24px;font-style:italic">Human agency meets</text>
+<text x="1728" y="384" style="font-family:Georgia,'Times New Roman',serif;fill:#b9aa95;font-size:24px;font-style:italic">an absolute philosophy.</text>
 
 <!-- Geography is keyed, not distorted into an east-to-west GPS route. -->
-<text x="104" y="304" class="place">TENNESSEE / FRONTIER</text>
-<text x="520" y="552" class="place">TEXAS</text>
-<text x="1112" y="648" class="place">NORTHERN MEXICO</text>
-<text x="1440" y="936" class="place">YUMA</text>
-<text x="2024" y="1080" class="place">FORT GRIFFIN / 1878</text>
+<text x="104" y="304" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:20px;letter-spacing:2px">TENNESSEE / FRONTIER</text>
+<text x="520" y="552" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:20px;letter-spacing:2px">TEXAS</text>
+<text x="1112" y="648" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:20px;letter-spacing:2px">NORTHERN MEXICO</text>
+<text x="1440" y="936" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:20px;letter-spacing:2px">YUMA</text>
+<text x="2024" y="1080" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:20px;letter-spacing:2px">FORT GRIFFIN / 1878</text>
 <g id="meridian-map">
-  <text x="80" y="936" class="label">BORDERLANDS / GEOGRAPHIC KEY</text>
-  <g transform="translate(80 960)" class="icon" color="#b9aa95" opacity=".7">
+  <text x="80" y="936" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">BORDERLANDS / GEOGRAPHIC KEY</text>
+  <g transform="translate(80 960)" color="#b9aa95" opacity=".7" style="color:#b9aa95;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round">
     <path d="M8 40L72 40L116 48L172 44L216 56L304 48M80 12V40L96 64L136 104M168 12V44L192 92M240 12V52L280 84" stroke-opacity=".35"/>
     <path d="M292 28Q244 72 184 76T64 28" stroke="#ab5846" stroke-width="2.5"/>
     <circle cx="292" cy="28" r="3"/><circle cx="184" cy="76" r="3"/><circle cx="64" cy="28" r="3"/>
   </g>
-  <text x="112" y="968" font-size="12" fill="#b9aa95">YUMA</text>
-  <text x="324" y="968" font-size="12" fill="#b9aa95">TEXAS</text>
-  <text x="92" y="1076" font-size="12" fill="#b9aa95">SONORA</text>
-  <text x="252" y="1076" font-size="12" fill="#b9aa95">CHIHUAHUA</text>
-  <text x="440" y="980" class="detail">1849–50: the gang’s borderlands</text>
-  <text x="440" y="1012" class="detail">1878: the Man’s final encounter</text>
-  <text x="440" y="1044" class="label">SCHEMATIC GEOGRAPHY / NOT TO SCALE</text>
+  <text x="112" y="968" font-size="12" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95">YUMA</text>
+  <text x="324" y="968" font-size="12" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95">TEXAS</text>
+  <text x="92" y="1076" font-size="12" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95">SONORA</text>
+  <text x="252" y="1076" font-size="12" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95">CHIHUAHUA</text>
+  <text x="440" y="980" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:20px">1849–50: the gang’s borderlands</text>
+  <text x="440" y="1012" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:20px">1878: the Man’s final encounter</text>
+  <text x="440" y="1044" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px">SCHEMATIC GEOGRAPHY / NOT TO SCALE</text>
 </g>
-<path d="M80 1112H2320" class="rule"/>
-<text x="80" y="1152" class="aside">Can he pass through the Judge’s world without wholly belonging to it?</text>
-<text x="2320" y="1152" class="label" text-anchor="end">THE LANDSCAPE CONTINUES.</text>
-<text x="80" y="1184" font-size="12" fill="#b9aa95">THE TRAIL IS THE KID’S JOURNEY. THE SCAR IS THE GANG’S COMMERCE. THE CIRCLES ARE THE JUDGE’S CLAIM TO ORDER.</text>
+<path d="M80 1112H2320" style="fill:none;stroke:#eee5d5;stroke-opacity:.18"/>
+<text x="80" y="1152" style="font-family:Georgia,'Times New Roman',serif;fill:#b9aa95;font-size:24px;font-style:italic">Can he pass through the Judge’s world without wholly belonging to it?</text>
+<text x="2320" y="1152" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95;font-size:16px;letter-spacing:2px" text-anchor="end">THE LANDSCAPE CONTINUES.</text>
+<text x="80" y="1184" font-size="12" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b9aa95">THE TRAIL IS THE KID’S JOURNEY. THE SCAR IS THE GANG’S COMMERCE. THE CIRCLES ARE THE JUDGE’S CLAIM TO ORDER.</text>
 </svg>

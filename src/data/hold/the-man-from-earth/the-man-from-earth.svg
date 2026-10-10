@@ -1,29 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="earth-title earth-desc" width="1920" height="1080">
-  <style>
-:root { color-scheme:dark; --paper:#191a18; --ink:#f5f1e8; --muted:#b7b8b1; }
-svg text { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; fill:var(--ink); }
-.display { font-family:Georgia,"Times New Roman",serif; letter-spacing:-2px; }
-.name { font-size:28px; font-weight:700; letter-spacing:3px; }
-.profession { font-size:16px; letter-spacing:1px; fill:var(--muted); }
-.question { font-family:Georgia,"Times New Roman",serif; font-size:24px; }
-.state { font-size:16px; fill:var(--muted); }
-.label { font-size:16px; letter-spacing:2px; fill:var(--muted); }
-.aside { font-family:Georgia,"Times New Roman",serif; font-size:24px; font-style:italic; fill:var(--muted); }
-.rule { fill:none; stroke:#f5f1e8; stroke-opacity:.16; }
-.ripple { fill:none; stroke:#d3ad7a; stroke-width:1; }
-.icon { fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
-.connection { fill:none; stroke:#b7b8b1; stroke-opacity:.28; stroke-width:1.5; }
-.lens text.name,.lens text.question { fill:var(--lens); }
-.lens { color:var(--lens); }
-.harry { --lens:#a7b697; }
-.edith { --lens:#d3ad7a; }
-.dan { --lens:#ba947c; }
-.sandy { --lens:#d2c8ac; }
-.art { --lens:#b7b8b1; }
-.will { --lens:#91a8bf; }
-.linda { --lens:#c2c7b1; }
-.accessible-copy { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
-</style>
+<svg style="color-scheme:dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="earth-title earth-desc" width="1920" height="1080">
+  
 <title id="earth-title">The Man from Earth — One Impossible Claim</title>
 <desc id="earth-desc">John Oldman's claim to be a never-aging 14,000-year-old man ripples through seven colleagues' biological, religious, anthropological, historical, archaeological, psychiatric and curious perspectives, contrasting their reconstruction of the past with his claimed memories.</desc>
 <defs>
@@ -43,31 +19,31 @@ svg text { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; fill:var(--i
   </mask>
 </defs>
 <rect width="1920" height="1080" fill="#191a18"/>
-<text x="80" y="56" class="label">A CONVERSATION THAT OUTGROWS THE ROOM</text>
-<text x="76" y="132" class="display" font-size="72">THE MAN FROM EARTH</text>
-<text x="80" y="184" font-size="24" letter-spacing="2">ONE IMPOSSIBLE CLAIM. SEVEN WAYS OF SEEING IT.</text>
-<path d="M80 208H1840" class="rule"/>
+<text x="80" y="56" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:2px">A CONVERSATION THAT OUTGROWS THE ROOM</text>
+<text x="76" y="132" style="font-family:Georgia,'Times New Roman',serif;fill:#f5f1e8;letter-spacing:-2px" font-size="72">THE MAN FROM EARTH</text>
+<text x="80" y="184" font-size="24" letter-spacing="2" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#f5f1e8">ONE IMPOSSIBLE CLAIM. SEVEN WAYS OF SEEING IT.</text>
+<path d="M80 208H1840" style="fill:none;stroke:#f5f1e8;stroke-opacity:.16"/>
 
 <!-- History expands, but the human gathering stays physically small. -->
 <ellipse cx="960" cy="596" rx="800" ry="400" fill="url(#earth-light)"/>
 <g mask="url(#earth-open-water)">
-  <ellipse cx="960" cy="596" rx="272" ry="176" class="ripple" opacity=".25"/>
-  <ellipse cx="960" cy="596" rx="376" ry="240" class="ripple" opacity=".22"/>
-  <ellipse cx="960" cy="596" rx="496" ry="304" class="ripple" opacity=".19"/>
-  <ellipse cx="960" cy="596" rx="640" ry="356" class="ripple" opacity=".16"/>
-  <ellipse cx="960" cy="596" rx="800" ry="392" class="ripple" opacity=".14"/>
+  <ellipse cx="960" cy="596" rx="272" ry="176" style="fill:none;stroke:#d3ad7a;stroke-width:1" opacity=".25"/>
+  <ellipse cx="960" cy="596" rx="376" ry="240" style="fill:none;stroke:#d3ad7a;stroke-width:1" opacity=".22"/>
+  <ellipse cx="960" cy="596" rx="496" ry="304" style="fill:none;stroke:#d3ad7a;stroke-width:1" opacity=".19"/>
+  <ellipse cx="960" cy="596" rx="640" ry="356" style="fill:none;stroke:#d3ad7a;stroke-width:1" opacity=".16"/>
+  <ellipse cx="960" cy="596" rx="800" ry="392" style="fill:none;stroke:#d3ad7a;stroke-width:1" opacity=".14"/>
   <!-- Later ripples fracture and overlap as categories become insufficient. -->
-  <path d="M232 432Q516 160 960 232T1736 452M196 724Q468 1012 960 964T1752 740" class="ripple" opacity=".10" stroke-dasharray="4 12"/>
-  <path d="M352 856Q640 1008 1028 948M1216 248Q1560 296 1720 508M248 488Q308 364 444 292" class="ripple" opacity=".24"/>
+  <path d="M232 432Q516 160 960 232T1736 452M196 724Q468 1012 960 964T1752 740" style="fill:none;stroke:#d3ad7a;stroke-width:1" opacity=".10" stroke-dasharray="4 12"/>
+  <path d="M352 856Q640 1008 1028 948M1216 248Q1560 296 1720 508M248 488Q308 364 444 292" style="fill:none;stroke:#d3ad7a;stroke-width:1" opacity=".24"/>
 </g>
 
 <!-- A small ordinary room, with seven seats and a doorway; no sci-fi machinery. -->
-<rect x="712" y="440" width="496" height="284" class="rule" stroke-width="2"/>
-<g class="rule" stroke-width="2">
+<rect x="712" y="440" width="496" height="284" style="fill:none;stroke:#f5f1e8;stroke-opacity:.16" stroke-width="2"/>
+<g style="fill:none;stroke:#f5f1e8;stroke-opacity:.16" stroke-width="2">
   <path d="M940 416V428H980V416M704 480H692V512H704M1216 480H1228V512H1216M704 588H692V620H704M1216 588H1228V620H1216M792 732V744H824V732M1096 732V744H1128V732"/>
 </g>
 <!-- Orthogonal question routes belong to one conversation, not seven boxed profiles. -->
-<g class="connection">
+<g style="fill:none;stroke:#b7b8b1;stroke-opacity:.28;stroke-width:1.5">
   <path d="M960 352V420"/>
   <path d="M620 524V536Q620 544 628 544H700"/>
   <path d="M1296 524V536Q1296 544 1288 544H1220"/>
@@ -79,121 +55,121 @@ svg text { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; fill:var(--i
 
 <!-- The impossible claim stays neutral; it is not presented as an established fact. -->
 <g id="earth-john">
-  <text x="960" y="496" class="name" text-anchor="middle">JOHN OLDMAN</text>
-  <text x="960" y="532" class="label" text-anchor="middle">THE CLAIM</text>
-  <text x="960" y="608" class="display" font-size="68" text-anchor="middle">14,000</text>
-  <text x="960" y="656" font-size="24" letter-spacing="4" text-anchor="middle">YEARS OLD. NEVER AGED.</text>
-  <text x="960" y="692" class="aside" text-anchor="middle">“I remember.”</text>
+  <text x="960" y="496" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#f5f1e8;font-size:28px;font-weight:700;letter-spacing:3px" text-anchor="middle">JOHN OLDMAN</text>
+  <text x="960" y="532" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:2px" text-anchor="middle">THE CLAIM</text>
+  <text x="960" y="608" style="font-family:Georgia,'Times New Roman',serif;fill:#f5f1e8;letter-spacing:-2px" font-size="68" text-anchor="middle">14,000</text>
+  <text x="960" y="656" font-size="24" letter-spacing="4" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#f5f1e8">YEARS OLD. NEVER AGED.</text>
+  <text x="960" y="692" style="font-family:Georgia,'Times New Roman',serif;fill:#b7b8b1;font-size:24px;font-style:italic" text-anchor="middle">“I remember.”</text>
 </g>
 
 <!-- Seven lenses, each with its own question and nonconvergent emotional movement. -->
-<g class="lens sandy" id="earth-sandy">
-  <g class="icon"><path d="M788 240H824V288H788ZM796 252H816M796 264H816M796 276H808M780 248V296H816"/></g>
-  <text x="848" y="252" class="name">SANDY</text>
-  <text x="848" y="280" class="profession">HISTORIAN</text>
-  <text x="848" y="316" class="question">The record—or a living witness?</text>
-  <text x="848" y="344" class="state">Documents → lived history → uncertainty</text>
+<g style="color:#d2c8ac" id="earth-sandy">
+  <g style="color:#d2c8ac;fill:none;stroke:#d2c8ac;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M788 240H824V288H788ZM796 252H816M796 264H816M796 276H808M780 248V296H816"/></g>
+  <text x="848" y="252" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#d2c8ac;font-size:28px;font-weight:700;letter-spacing:3px">SANDY</text>
+  <text x="848" y="280" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:1px">HISTORIAN</text>
+  <text x="848" y="316" style="font-family:Georgia,'Times New Roman',serif;fill:#d2c8ac;font-size:24px">The record—or a living witness?</text>
+  <text x="848" y="344" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">Documents → lived history → uncertainty</text>
 </g>
-<g class="lens dan" id="earth-dan">
-  <g class="icon" transform="translate(432 376)" aria-hidden="true" stroke-width="2.5">
+<g style="color:#ba947c" id="earth-dan">
+  <g transform="translate(432 376)" aria-hidden="true" stroke-width="2.5" style="color:#ba947c;fill:none;stroke:#ba947c;stroke-width:2;stroke-linecap:round;stroke-linejoin:round">
     <!-- Alternating human footprints evoke origins and migration. -->
     <path d="M16 24C8 24 4 32 6 40L12 56C14 62 22 62 24 56L26 40C28 32 24 24 16 24Z"/>
     <ellipse cx="12" cy="14" rx="6" ry="8"/><circle cx="24" cy="16" r="3"/><circle cx="30" cy="22" r="2"/>
     <path d="M54 12C46 12 42 20 44 28L50 44C52 50 60 50 62 44L64 28C66 20 62 12 54 12Z"/>
     <ellipse cx="58" cy="2" rx="6" ry="8"/><circle cx="46" cy="4" r="3"/><circle cx="40" cy="10" r="2"/>
   </g>
-  <text x="520" y="388" class="name">DAN</text>
-  <text x="520" y="416" class="profession">ANTHROPOLOGIST</text>
-  <text x="432" y="480" class="question">Human origins, sitting before us?</text>
-  <text x="432" y="508" class="state">Early societies → witness → implications</text>
+  <text x="520" y="388" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#ba947c;font-size:28px;font-weight:700;letter-spacing:3px">DAN</text>
+  <text x="520" y="416" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:1px">ANTHROPOLOGIST</text>
+  <text x="432" y="480" style="font-family:Georgia,'Times New Roman',serif;fill:#ba947c;font-size:24px">Human origins, sitting before us?</text>
+  <text x="432" y="508" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">Early societies → witness → implications</text>
 </g>
-<g class="lens art" id="earth-art">
-  <g class="icon"><path d="M1192 436H1256M1196 444H1252M1200 452H1248M1212 388H1236L1232 404Q1252 416 1244 432H1204Q1196 416 1216 404Z"/></g>
-  <text x="1280" y="388" class="name">ART</text>
-  <text x="1280" y="416" class="profession">ARCHAEOLOGIST</text>
-  <text x="1192" y="480" class="question">Where is the physical evidence?</text>
-  <text x="1192" y="508" class="state">Artifacts → “a living artifact?” → doubt</text>
+<g style="color:#b7b8b1" id="earth-art">
+  <g style="color:#b7b8b1;fill:none;stroke:#b7b8b1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M1192 436H1256M1196 444H1252M1200 452H1248M1212 388H1236L1232 404Q1252 416 1244 432H1204Q1196 416 1216 404Z"/></g>
+  <text x="1280" y="388" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:28px;font-weight:700;letter-spacing:3px">ART</text>
+  <text x="1280" y="416" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:1px">ARCHAEOLOGIST</text>
+  <text x="1192" y="480" style="font-family:Georgia,'Times New Roman',serif;fill:#b7b8b1;font-size:24px">Where is the physical evidence?</text>
+  <text x="1192" y="508" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">Artifacts → “a living artifact?” → doubt</text>
 </g>
-<g class="lens harry" id="earth-harry">
-  <g class="icon" transform="translate(280 548) scale(.8)" aria-hidden="true" stroke-width="2.5">
+<g style="color:#a7b697" id="earth-harry">
+  <g transform="translate(280 548) scale(.8)" aria-hidden="true" stroke-width="2.5" style="color:#a7b697;fill:none;stroke:#a7b697;stroke-width:2;stroke-linecap:round;stroke-linejoin:round">
     <!-- Two full twists and paired rungs make the DNA silhouette explicit. -->
     <path d="M4 0C4 16 44 16 44 32S4 48 4 64S44 80 44 96M44 0C44 16 4 16 4 32S44 48 44 64S4 80 4 96"/>
     <path d="M8 4H40M12 12H36M12 24H36M8 28H40M8 36H40M12 44H36M12 56H36M8 60H40M8 68H40M12 76H36M12 88H36M8 92H40" stroke-opacity=".7"/>
   </g>
-  <text x="352" y="576" class="name">HARRY</text>
-  <text x="352" y="604" class="profession">BIOLOGIST</text>
-  <text x="280" y="660" class="question">Can a body outlive its biology?</text>
-  <text x="280" y="692" class="state">Skepticism → aging questions → unease</text>
+  <text x="352" y="576" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#a7b697;font-size:28px;font-weight:700;letter-spacing:3px">HARRY</text>
+  <text x="352" y="604" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:1px">BIOLOGIST</text>
+  <text x="280" y="660" style="font-family:Georgia,'Times New Roman',serif;fill:#a7b697;font-size:24px">Can a body outlive its biology?</text>
+  <text x="280" y="692" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">Skepticism → aging questions → unease</text>
 </g>
-<g class="lens will" id="earth-will">
-  <g class="icon" transform="translate(1312 544)" aria-hidden="true" stroke-width="2.5">
+<g style="color:#91a8bf" id="earth-will">
+  <g transform="translate(1312 544)" aria-hidden="true" stroke-width="2.5" style="color:#91a8bf;fill:none;stroke:#91a8bf;stroke-width:2;stroke-linecap:round;stroke-linejoin:round">
     <!-- A recognizable head profile contains the mind, not a diagnostic label. -->
     <path d="M12 80V60C-4 48 0 20 16 12C32 4 56 12 60 32L68 48H56V60Q56 68 40 68V80"/>
     <path d="M16 28C12 20 24 16 28 24C32 14 44 20 44 28C56 28 52 40 44 40C44 50 32 52 28 44C20 52 12 44 16 36C8 36 8 28 16 28Z"/>
     <path d="M28 24V44M16 28Q24 28 24 36M44 28Q36 28 36 40" stroke-opacity=".65"/>
   </g>
-  <text x="1400" y="576" class="name">WILL</text>
-  <text x="1400" y="604" class="profession">PSYCHIATRY PROFESSOR</text>
-  <text x="1320" y="660" class="question">Could he believe an untrue story?</text>
-  <text x="1320" y="692" class="state">Lie / delusion / truth: unresolved</text>
+  <text x="1400" y="576" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#91a8bf;font-size:28px;font-weight:700;letter-spacing:3px">WILL</text>
+  <text x="1400" y="604" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:1px">PSYCHIATRY PROFESSOR</text>
+  <text x="1320" y="660" style="font-family:Georgia,'Times New Roman',serif;fill:#91a8bf;font-size:24px">Could he believe an untrue story?</text>
+  <text x="1320" y="692" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">Lie / delusion / truth: unresolved</text>
 </g>
-<g class="lens edith" id="earth-edith">
-  <g class="icon" transform="translate(460 764)" aria-hidden="true" stroke-width="2.5">
+<g style="color:#d3ad7a" id="earth-edith">
+  <g transform="translate(460 764)" aria-hidden="true" stroke-width="2.5" style="color:#d3ad7a;fill:none;stroke:#d3ad7a;stroke-width:2;stroke-linecap:round;stroke-linejoin:round">
     <!-- Open scripture and a cross ground the faith lens in a familiar object. -->
     <path d="M4 12Q24 4 44 16Q64 4 84 12V60Q64 52 44 64Q24 52 4 60ZM44 16V64M0 20V68Q24 60 44 72Q64 60 88 68V20"/>
     <path d="M24 20V44M16 28H32M56 24H72M56 36H72M56 48H68M16 52H32"/>
   </g>
-  <text x="560" y="792" class="name">EDITH</text>
-  <text x="560" y="820" class="profession">ART HISTORY PROFESSOR / DEVOUT CHRISTIAN</text>
-  <text x="464" y="868" class="question">Faith meets someone’s claimed memory.</text>
-  <text x="464" y="900" class="state">Scripture → overlapping histories → conflict</text>
+  <text x="560" y="792" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#d3ad7a;font-size:28px;font-weight:700;letter-spacing:3px">EDITH</text>
+  <text x="560" y="820" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:1px">ART HISTORY PROFESSOR / DEVOUT CHRISTIAN</text>
+  <text x="464" y="868" style="font-family:Georgia,'Times New Roman',serif;fill:#d3ad7a;font-size:24px">Faith meets someone’s claimed memory.</text>
+  <text x="464" y="900" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">Scripture → overlapping histories → conflict</text>
 </g>
-<g class="lens linda" id="earth-linda">
-  <g class="icon" transform="translate(1120 764)" aria-hidden="true" stroke-width="2.5">
+<g style="color:#c2c7b1" id="earth-linda">
+  <g transform="translate(1120 764)" aria-hidden="true" stroke-width="2.5" style="color:#c2c7b1;fill:none;stroke:#c2c7b1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round">
     <!-- An open-ended thought, rather than an academic instrument. -->
     <path d="M72 44C80 36 80 20 68 12C56 4 28 4 16 16C4 28 12 48 28 52H52"/>
     <circle cx="20" cy="64" r="5"/><circle cx="8" cy="76" r="3"/>
     <path d="M32 24C32 12 52 12 52 24C52 32 40 32 40 40"/>
     <circle cx="40" cy="48" r="1.5" fill="currentColor" stroke="none"/>
   </g>
-  <text x="1208" y="792" class="name">LINDA</text>
-  <text x="1208" y="820" class="profession">YOUNG STUDENT</text>
-  <text x="1120" y="868" class="question">What if he is telling the truth?</text>
-  <text x="1120" y="900" class="state">Curiosity → imagination → possibility</text>
+  <text x="1208" y="792" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#c2c7b1;font-size:28px;font-weight:700;letter-spacing:3px">LINDA</text>
+  <text x="1208" y="820" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:1px">YOUNG STUDENT</text>
+  <text x="1120" y="868" style="font-family:Georgia,'Times New Roman',serif;fill:#c2c7b1;font-size:24px">What if he is telling the truth?</text>
+  <text x="1120" y="900" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">Curiosity → imagination → possibility</text>
 </g>
 
 <!-- Deep-time scale: all recorded history is only the final portion of the claim. -->
-<text x="80" y="292" class="label">HIS CLAIMED</text>
-<text x="80" y="320" class="label">LIFETIME</text>
+<text x="80" y="292" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:2px">HIS CLAIMED</text>
+<text x="80" y="320" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:2px">LIFETIME</text>
 <path d="M100 356V852" stroke="#d3ad7a" stroke-width="3" fill="none"/>
-<path d="M88 356H112M88 632H112M88 780H112M88 836H112M88 852H112" class="rule"/>
-<text x="124" y="364" class="state">14,000 years ago</text>
-<text x="124" y="408" class="state">Prehistory</text>
-<text x="124" y="640" class="state">Ancient</text>
-<text x="124" y="664" class="state">civilizations</text>
-<text x="124" y="788" class="state">Recorded past</text>
-<text x="124" y="860" class="state">Modern world</text>
+<path d="M88 356H112M88 632H112M88 780H112M88 836H112M88 852H112" style="fill:none;stroke:#f5f1e8;stroke-opacity:.16"/>
+<text x="124" y="364" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">14,000 years ago</text>
+<text x="124" y="408" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">Prehistory</text>
+<text x="124" y="640" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">Ancient</text>
+<text x="124" y="664" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">civilizations</text>
+<text x="124" y="788" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">Recorded past</text>
+<text x="124" y="860" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">Modern world</text>
 <path d="M104 848H116" stroke="#f5f1e8" stroke-width="3"/>
-<text x="80" y="892" font-size="12" fill="#b7b8b1">A HUMAN LIFETIME: A SLIVER</text>
+<text x="80" y="892" font-size="12" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1">A HUMAN LIFETIME: A SLIVER</text>
 
 <!-- The two ways of reaching the past: recovered traces versus recalled experience. -->
-<text x="1728" y="388" class="label">KNOWLEDGE</text>
-<text x="1728" y="416" class="state">Reconstructs.</text>
-<g class="icon" color="#b7b8b1" opacity=".6"><path d="M1732 444H1764V484H1732ZM1740 456H1756M1740 468H1756M1776 452L1800 444L1816 464L1792 480Z"/></g>
-<path d="M1728 520H1840" class="rule"/>
-<text x="1728" y="564" class="label">MEMORY</text>
-<text x="1728" y="592" class="state">“I was there.”</text>
-<g class="icon" color="#d3ad7a" opacity=".6"><path d="M1732 648L1752 624L1772 640L1792 616L1816 648M1732 656H1816"/><circle cx="1796" cy="612" r="8"/><path d="M1740 684Q1748 660 1756 684M1748 668V692"/></g>
+<text x="1728" y="388" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:2px">KNOWLEDGE</text>
+<text x="1728" y="416" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">Reconstructs.</text>
+<g color="#b7b8b1" opacity=".6" style="color:#b7b8b1;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M1732 444H1764V484H1732ZM1740 456H1756M1740 468H1756M1776 452L1800 444L1816 464L1792 480Z"/></g>
+<path d="M1728 520H1840" style="fill:none;stroke:#f5f1e8;stroke-opacity:.16"/>
+<text x="1728" y="564" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:2px">MEMORY</text>
+<text x="1728" y="592" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px">“I was there.”</text>
+<g color="#d3ad7a" opacity=".6" style="color:#d3ad7a;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M1732 648L1752 624L1772 640L1792 616L1816 648M1732 656H1816"/><circle cx="1796" cy="612" r="8"/><path d="M1740 684Q1748 660 1756 684M1748 668V692"/></g>
 
 <!-- The emotional progression is not a second plot timeline or belief ranking. -->
-<path d="M80 936H1840" class="rule"/>
-<text x="80" y="972" class="label">CURIOSITY</text>
-<text x="80" y="1004" class="aside">Is his story true?</text>
-<path d="M424 976H620" class="connection"/>
-<text x="688" y="972" class="label">INTELLECTUAL CONFLICT</text>
-<text x="688" y="1004" class="aside">Can our frameworks contain it?</text>
-<path d="M1120 976H1304" class="connection"/>
-<text x="1360" y="972" class="label">EXISTENTIAL CONSEQUENCE</text>
-<text x="1360" y="1004" class="aside">What would it mean if he were?</text>
-<text x="960" y="1052" font-size="20" text-anchor="middle">THEY STUDY THE PAST. HE CLAIMS TO BE THE PAST.</text>
+<path d="M80 936H1840" style="fill:none;stroke:#f5f1e8;stroke-opacity:.16"/>
+<text x="80" y="972" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:2px">CURIOSITY</text>
+<text x="80" y="1004" style="font-family:Georgia,'Times New Roman',serif;fill:#b7b8b1;font-size:24px;font-style:italic">Is his story true?</text>
+<path d="M424 976H620" style="fill:none;stroke:#b7b8b1;stroke-opacity:.28;stroke-width:1.5"/>
+<text x="688" y="972" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:2px">INTELLECTUAL CONFLICT</text>
+<text x="688" y="1004" style="font-family:Georgia,'Times New Roman',serif;fill:#b7b8b1;font-size:24px;font-style:italic">Can our frameworks contain it?</text>
+<path d="M1120 976H1304" style="fill:none;stroke:#b7b8b1;stroke-opacity:.28;stroke-width:1.5"/>
+<text x="1360" y="972" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#b7b8b1;font-size:16px;letter-spacing:2px">EXISTENTIAL CONSEQUENCE</text>
+<text x="1360" y="1004" style="font-family:Georgia,'Times New Roman',serif;fill:#b7b8b1;font-size:24px;font-style:italic">What would it mean if he were?</text>
+<text x="960" y="1052" font-size="20" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fill:#f5f1e8">THEY STUDY THE PAST. HE CLAIMS TO BE THE PAST.</text>
 </svg>
