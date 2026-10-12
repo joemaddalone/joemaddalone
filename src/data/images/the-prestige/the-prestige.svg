@@ -15,13 +15,13 @@
       <stop offset="0.5" stop-color="#171919"/>
       <stop offset="1" stop-color="#222018"/>
     </linearGradient>
-    <clipPath id="clip-path-4">
+    <clipPath id="clip-path-1">
       <path d="M1758 882 L1770 882 L1770 894 L1758 894 Z"/>
     </clipPath>
-    <clipPath id="clip-path-5">
+    <clipPath id="clip-path-2">
       <path d="M1902 882 L1914 882 L1914 894 L1902 894 Z"/>
     </clipPath>
-    <clipPath id="clip-path-6">
+    <clipPath id="clip-path-3">
       <path d="M2030 882 L2042 882 L2042 894 L2030 894 Z"/>
     </clipPath>
   </defs>
@@ -31,8 +31,6 @@
     <text transform="matrix(1 0 0 1 80 56)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" letter-spacing="2"><tspan x="0" y="0">THE PRESTIGE (2006) / THE STORY IS THE TRICK</tspan></text>
     <text transform="matrix(1 0 0 1 76 152)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="100" fill="#eee6d7" letter-spacing="-2"><tspan x="0" y="0">THE PRESTIGE</tspan></text>
     <text transform="matrix(1 0 0 1 80 208)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="28" fill="#eee6d7" letter-spacing="4"><tspan x="0" y="0">TWO MAGICIANS. ONE OBSESSION.</tspan></text>
-    <text transform="matrix(1 0 0 1 1776 148)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="24" font-style="italic" fill="#b8ad9c"><tspan x="0" y="0">Look at the performance.</tspan></text>
-    <text transform="matrix(1 0 0 1 1776 184)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="24" font-style="italic" fill="#b8ad9c"><tspan x="0" y="0">Then look beneath it.</tspan></text>
     <path d="M80 240 L2320 240" fill="none" stroke="#eee6d7" stroke-opacity="0.15"/>
     <g>
       <text transform="matrix(1 0 0 1 548 296)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="36" fill="#eee6d7" text-anchor="middle"><tspan x="0" y="0">The Pledge</tspan></text>
@@ -46,14 +44,12 @@
     <path d="M224 356 L872 356 L872 412 C658.667 452 442.667 450.667 224 408 Z M872 356 L1576 356 L1576 412 C1341.333 446.667 1106.667 446.667 872 412 Z M1576 356 L2336 356 L2336 412 C2082.667 452 1829.333 452 1576 412 Z" fill="url(#linear-gradient-2)"/>
     <path d="M256 368 L256 440 M288 368 L288 436 M320 368 L320 432 M836 368 L836 432 M904 368 L904 432 M940 368 L940 432 M1540 368 L1540 432 M1608 368 L1608 432 M1644 368 L1644 432 M2304 368 L2304 436" fill="none" stroke="#eee6d7" stroke-opacity="0.15"/>
     <g id="prestige-layer-performance">
-      <text transform="matrix(1 0 0 1 200 428)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#eee6d7" letter-spacing="2" text-anchor="end"><tspan x="0" y="0">PERFORMANCE</tspan></text>
-      <text transform="matrix(1 0 0 1 200 460)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" text-anchor="end"><tspan x="0" y="0">The visible</tspan></text>
-      <text transform="matrix(1 0 0 1 200 484)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" text-anchor="end"><tspan x="0" y="0">effect.</tspan></text>
+      <text transform="matrix(1 0 0 1 200 528)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#eee6d7" letter-spacing="2" text-anchor="end"><tspan x="0" y="0">PERFORMANCE</tspan></text>
+      <text transform="matrix(1 0 0 1 200 560)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" text-anchor="end"><tspan x="0" y="0">The visible surface</tspan></text>
     </g>
     <text transform="matrix(1 0 0 1 272 468)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="24" font-weight="bold" fill="#d3ad7a" letter-spacing="2"><tspan x="0" y="0">ROBERT ANGIER</tspan></text>
     <text transform="matrix(1 0 0 1 272 500)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="24" font-weight="bold" fill="#94a8b5" letter-spacing="2"><tspan x="0" y="0">ALFRED BORDEN</tspan></text>
     <text transform="matrix(1 0 0 1 272 584)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="20" fill="#b8ad9c"><tspan x="0" y="0">One stage. Shared ambition.</tspan></text>
-    <text transform="matrix(1 0 0 1 272 616)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="20" fill="#b8ad9c"><tspan x="0" y="0">Cutter teaches the craft.</tspan></text>
     <path d="M288 536 L560 536" fill="none" stroke="#eee6d7" stroke-width="4"/>
     <path id="prestige-angier-path" d="M560 536 C648 536 672 520 744 520 C816 520 848 604 928 604 C1008 604 1024 520 1112 520 C1200 520 1216 604 1304 604 C1392 604 1416 520 1512 520 C1608 520 1600 500 1704 500 L2232 500" fill="none" stroke="#d3ad7a" stroke-width="4" stroke-linecap="round"/>
     <path id="prestige-borden-ground" d="M560 536 C648 536 672 604 744 604 C816 604 848 520 928 520 C1008 520 1024 604 1112 604 C1200 604 1216 520 1304 520 C1392 520 1416 604 1512 604 C1608 604 1600 636 1704 636 L2232 636" fill="none" stroke="#191713" stroke-width="12"/>
@@ -61,8 +57,6 @@
     <path d="M570 536 C570 541.523 565.523 546 560 546 C554.477 546 550 541.523 550 536 C550 530.477 554.477 526 560 526 C565.523 526 570 530.477 570 536 Z" fill="#191713" stroke="#c57d64" stroke-width="3"/>
     <path d="M560 552 L560 652" fill="none" stroke="#c57d64" stroke-opacity="0.5"/>
     <text transform="matrix(1 0 0 1 496 688)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="24" font-weight="bold" fill="#c57d64" letter-spacing="2"><tspan x="0" y="0">JULIA’S DEATH</tspan></text>
-    <text transform="matrix(1 0 0 1 496 724)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="20" fill="#b8ad9c"><tspan x="0" y="0">Blame becomes obsession.</tspan></text>
-    <text transform="matrix(1 0 0 1 1224 676)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" letter-spacing="2" text-anchor="middle"><tspan x="0" y="0">SABOTAGE ↔ COUNTERTRICK ↔ ESCALATION</tspan></text>
     <text transform="matrix(1 0 0 1 1224 464)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="24" font-weight="bold" fill="#eee6d7" letter-spacing="2" text-anchor="middle"><tspan x="0" y="0">THE TRANSPORTED MAN</tspan></text>
     <text transform="matrix(1 0 0 1 1224 712)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="24" font-style="italic" fill="#b8ad9c" text-anchor="middle"><tspan x="0" y="0">The rivalry becomes a machine.</tspan></text>
     <g>
@@ -90,21 +84,21 @@
     <text transform="matrix(1 0 0 1 1956 704)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="24" font-style="italic" fill="#b8ad9c" text-anchor="middle"><tspan x="0" y="0">The same effect. Different realities.</tspan></text>
     <path d="M224 752 L2336 752 M224 760 L2336 760" fill="#000000" stroke="#d3ad7a" stroke-opacity="0.4"/>
     <path d="M224 776 L2336 776 L2336 1280 L224 1280 Z" fill="url(#linear-gradient-3)"/>
-    <path d="M872 356 L872 1280 M1523.159 356 L1523.159 1280" fill="none" stroke="#eee6d7" stroke-opacity="0.15" stroke-dasharray="3 12"/>
+    <path d="M872 356 L872 1280 M1523.159 356 L1523.159 1280" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="3" stroke-dasharray="3 12"/>
     <g id="prestige-layer-method">
-      <text transform="matrix(1 0 0 1 200 832)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#eee6d7" letter-spacing="2" text-anchor="end"><tspan x="0" y="0">METHOD</tspan></text>
-      <text transform="matrix(1 0 0 1 200 864)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" text-anchor="end"><tspan x="0" y="0">Behind</tspan></text>
-      <text transform="matrix(1 0 0 1 200 888)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" text-anchor="end"><tspan x="0" y="0">the floor.</tspan></text>
+      <text transform="matrix(1 0 0 1 200 842)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#eee6d7" letter-spacing="2" text-anchor="end"><tspan x="0" y="0">METHOD</tspan></text>
+      <text transform="matrix(1 0 0 1 200 874)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" text-anchor="end"><tspan x="0" y="0">Beneath the floor</tspan></text>
+      <text transform="matrix(1 0 0 1 919.566 992.054)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="24" font-weight="bold" fill="#94a8b5" letter-spacing="2"><tspan x="0" y="0">BORDEN’S MACHINE</tspan></text>
+      <text transform="matrix(1 0 0 1 921.464 1024.014)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="20" fill="#b8ad9c"><tspan x="0" y="0">A deception becomes reality</tspan></text>
+      <text transform="matrix(1 0 0 1 1246.241 911.392)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" letter-spacing="2"><tspan x="0" y="0">THE MAN IN THE BOX?</tspan></text>
     </g>
     <g id="prestige-layer-secret">
-      <text transform="matrix(1 0 0 1 200 1012)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#eee6d7" letter-spacing="2" text-anchor="end"><tspan x="0" y="0">SECRET</tspan></text>
-      <text transform="matrix(1 0 0 1 200 1044)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" text-anchor="end"><tspan x="0" y="0">Behind</tspan></text>
-      <text transform="matrix(1 0 0 1 200 1068)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" text-anchor="end"><tspan x="0" y="0">the name.</tspan></text>
+      <text transform="matrix(1 0 0 1 200 1042)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#eee6d7" letter-spacing="2" text-anchor="end"><tspan x="0" y="0">SECRET</tspan></text>
+      <text transform="matrix(1 0 0 1 200 1074)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" text-anchor="end"><tspan x="0" y="0">Behind the name</tspan></text>
     </g>
     <g id="prestige-layer-cost">
-      <text transform="matrix(1 0 0 1 200 1192)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#eee6d7" letter-spacing="2" text-anchor="end"><tspan x="0" y="0">COST</tspan></text>
-      <text transform="matrix(1 0 0 1 200 1224)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" text-anchor="end"><tspan x="0" y="0">Behind</tspan></text>
-      <text transform="matrix(1 0 0 1 200 1248)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" text-anchor="end"><tspan x="0" y="0">the applause.</tspan></text>
+      <text transform="matrix(1 0 0 1 200 1212)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#eee6d7" letter-spacing="2" text-anchor="end"><tspan x="0" y="0">COST</tspan></text>
+      <text transform="matrix(1 0 0 1 200 1244)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" text-anchor="end"><tspan x="0" y="0">Behind the applause</tspan></text>
     </g>
     <g opacity="0.5">
       <g>
@@ -117,31 +111,30 @@
     <text transform="matrix(1 0 0 1 512 836)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" letter-spacing="2"><tspan x="0" y="0">PROPS / JOURNALS</tspan></text>
     <text transform="matrix(1 0 0 1 512 868)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="20" fill="#b8ad9c"><tspan x="0" y="0">Evidence as misdirecion</tspan></text>
     <path d="M272 948 L804 948" fill="none" stroke="#eee6d7" stroke-opacity="0.15"/>
-    <text transform="matrix(1 0 0 1 272 992)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="24" font-style="italic" fill="#b8ad9c"><tspan x="0" y="0">A knot. A doubt. A private life.</tspan></text>
+    <text transform="matrix(1 0 0 1 272 992)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="24" font-style="italic" fill="#b8ad9c"><tspan x="0" y="0">A knot. A doubt. Two lives not what they seem.</tspan></text>
     <text transform="matrix(1 0 0 1 272 1032)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="20" fill="#b8ad9c"><tspan x="0" y="0">The method is already a secret.</tspan></text>
-    <text transform="matrix(1 0 0 1 272 1230)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="24" font-style="italic" fill="#b8ad9c"><tspan x="0" y="0">A death turns craft into revenge.</tspan></text>
+    <text transform="matrix(1 0 0 1 272 1230)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="24" font-style="italic" fill="#b8ad9c"><tspan x="0" y="0">Tragedy turns craft into revenge.</tspan></text>
     <g>
-      <path d="M1376 880 L1424 880 M1384 880 L1384 856 L1416 856 L1416 880 M1400 856 L1400 804 M1380 808 L1420 808 M1376 816 L1424 816 M1372 824 L1428 824 M1376 832 L1424 832 M1380 840 L1420 840" fill="none" stroke="#94a8b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M1360 872 L1440 872 M1416 824 L1436 804 L1424 788" fill="none" stroke="#94a8b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M1325.017 872.6 L1373.017 872.6 M1333.017 872.6 L1333.017 848.6 L1365.017 848.6 L1365.017 872.6 M1349.017 848.6 L1349.017 796.6 M1329.017 800.6 L1369.017 800.6 M1325.017 808.6 L1373.017 808.6 M1321.017 816.6 L1377.017 816.6 M1325.017 824.6 L1373.017 824.6 M1329.017 832.6 L1369.017 832.6" fill="none" stroke="#94a8b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text transform="matrix(1 0 0 1 920 820)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="24" font-weight="bold" fill="#d3ad7a" letter-spacing="2"><tspan x="0" y="0">TESLA’S MACHINE</tspan></text>
-    <text transform="matrix(1 0 0 1 920 852)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="20" fill="#b8ad9c"><tspan x="0" y="0">An explanation becomes replication.</tspan></text>
-    <text transform="matrix(1 0 0 1 920 884)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" letter-spacing="2"><tspan x="0" y="0">SCIENCE DOES NOT END THE OBSESSION</tspan></text>
-    <text transform="matrix(1 0 0 1 920 980)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" letter-spacing="2"><tspan x="0" y="0">DIARIES / CIPHERS / BAIT</tspan></text>
+    <text transform="matrix(1 0 0 1 920 820)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="24" font-weight="bold" fill="#d3ad7a" letter-spacing="2"><tspan x="0" y="0">ANGIER’S MACHINE</tspan></text>
+    <text transform="matrix(1 0 0 1 920 852.87)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="20" fill="#b8ad9c"><tspan x="0" y="0">An explanation becomes replication.</tspan></text>
+    <text transform="matrix(1 0 0 1 1224.329 1112.536)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" letter-spacing="2"><tspan x="0" y="0">THE MAN IN THE CIPHERS?</tspan></text>
+    <text transform="matrix(1 0 0 1 272 1071.875)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="20" fill="#b8ad9c"><tspan x="0" y="0">Blame becomes obsession.</tspan></text>
     <g id="prestige-cipher-journal">
-      <path d="M952 1020.774 C1029.333 1008.817 1109.333 1011.807 1192 1029.741 C1274.667 1011.807 1354.667 1008.817 1432 1020.774 L1432 1123.9 C1354.667 1111.943 1274.667 1114.933 1192 1132.868 C1109.333 1114.933 1029.333 1111.943 952 1123.9 Z" fill="#b8ad9c" fill-opacity="0.06" stroke="#b8ad9c" stroke-opacity="0.65" stroke-width="2"/>
-      <path d="M1192 1029.741 L1192 1132.868 M944 1029.741 L944 1132.868 C1026.667 1120.911 1109.333 1123.9 1192 1141.835 C1274.667 1123.9 1357.333 1120.911 1440 1132.868 L1440 1029.741" fill="none" stroke="#b8ad9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+      <path d="M1259.058 993.828 C1288.044 985.204 1318.031 987.361 1349.017 1000.294 C1380.003 987.361 1409.989 985.204 1438.976 993.828 L1438.976 1068.2 C1409.989 1059.577 1380.003 1061.734 1349.017 1074.668 C1318.031 1061.734 1288.044 1059.577 1259.058 1068.2 Z" fill="#b8ad9c" fill-opacity="0.06" stroke="#b8ad9c" stroke-opacity="0.65" stroke-width="2"/>
+      <path d="M1349.017 1000.294 L1349.017 1074.668 M1256.059 1000.294 L1256.059 1074.668 C1287.045 1066.045 1318.031 1068.2 1349.017 1081.135 C1380.003 1068.2 1410.988 1066.045 1441.974 1074.668 L1441.974 1000.294" fill="none" stroke="#b8ad9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
       <g opacity="0.8">
-        <text transform="matrix(1 0 0 1.121 976 1052.16)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="16" font-style="italic" fill="#eee6d7"><tspan x="0" y="0">The secret is not the effect.</tspan></text>
-        <text transform="matrix(1 0 0 1.121 976 1074.579)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="16" font-style="italic" fill="#eee6d7"><tspan x="0" y="0">Look where the light ends.</tspan></text>
-        <text transform="matrix(1 0 0 1.121 976 1096.998)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="16" font-style="italic" fill="#eee6d7"><tspan x="0" y="0">A name can be a disguise.</tspan></text>
+        <text transform="matrix(0.375 0 0 0.808 1268.054 1016.463)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="16" font-style="italic" fill="#eee6d7"><tspan x="0" y="0">The secret is not the effect.</tspan></text>
+        <text transform="matrix(0.375 0 0 0.808 1268.054 1032.631)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="16" font-style="italic" fill="#eee6d7"><tspan x="0" y="0">Look where the light ends.</tspan></text>
+        <text transform="matrix(0.375 0 0 0.808 1268.054 1048.799)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="16" font-style="italic" fill="#eee6d7"><tspan x="0" y="0">A name can be a disguise.</tspan></text>
       </g>
       <g opacity="0.75">
-        <text transform="matrix(1 0 0 1.121 1216 1052.16)" x="0" y="0" xml:space="preserve" font-family="monospace" font-size="14" fill="#eee6d7" letter-spacing="3"><tspan x="0" y="0">VJQX · 17 · KMRD</tspan></text>
-        <text transform="matrix(1 0 0 1.121 1216 1074.579)" x="0" y="0" xml:space="preserve" font-family="monospace" font-size="14" fill="#eee6d7" letter-spacing="3"><tspan x="0" y="0">04 19 08 / 23 11</tspan></text>
-        <text transform="matrix(1 0 0 1.121 1216 1096.998)" x="0" y="0" xml:space="preserve" font-family="monospace" font-size="14" fill="#eee6d7" letter-spacing="3"><tspan x="0" y="0">X → VII → ? → X</tspan></text>
+        <text transform="matrix(0.375 0 0 0.808 1358.013 1016.463)" x="0" y="0" xml:space="preserve" font-family="monospace" font-size="14" fill="#eee6d7" letter-spacing="3"><tspan x="0" y="0">VJQX · 17 · KMRD</tspan></text>
+        <text transform="matrix(0.375 0 0 0.808 1358.013 1032.631)" x="0" y="0" xml:space="preserve" font-family="monospace" font-size="14" fill="#eee6d7" letter-spacing="3"><tspan x="0" y="0">04 19 08 / 23 11</tspan></text>
+        <text transform="matrix(0.375 0 0 0.808 1358.013 1048.799)" x="0" y="0" xml:space="preserve" font-family="monospace" font-size="14" fill="#eee6d7" letter-spacing="3"><tspan x="0" y="0">X → VII → ? → X</tspan></text>
       </g>
-      <path d="M972 1065.611 L1172 1076.821 M1232 1083.546 L1400 1096.998" fill="#000000" stroke="#c57d64" stroke-opacity="0.8" stroke-width="1.5"/>
+      <path d="M1266.554 1026.163 L1341.52 1034.248 M1364.01 1039.098 L1426.981 1048.799" fill="#000000" stroke="#c57d64" stroke-opacity="0.8" stroke-width="1.5"/>
     </g>
     <text transform="matrix(1 0 0 1 920 1230)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="24" font-style="italic" fill="#b8ad9c"><tspan x="0" y="0">Each secret demands another sacrifice.</tspan></text>
     <text transform="matrix(1 0 0 1 1640 816)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="24" font-weight="bold" fill="#d3ad7a" letter-spacing="2"><tspan x="0" y="0">ANGIER / ONE BECOMES TWO</tspan></text>
@@ -162,32 +155,32 @@
     </g>
     <g>
       <path d="M1728 888 L1768 888" fill="none" stroke="#b8ad9c" stroke-opacity="0.6"/>
-      <g clip-path="url(#clip-path-4)">
+      <g clip-path="url(#clip-path-1)">
         <path d="M1760 884 L1768 888 L1760 892" fill="none" stroke="#b8ad9c" stroke-width="1.5"/>
       </g>
       <path d="M1864 888 L1912 888" fill="none" stroke="#b8ad9c" stroke-opacity="0.6"/>
-      <g clip-path="url(#clip-path-5)">
+      <g clip-path="url(#clip-path-2)">
         <path d="M1904 884 L1912 888 L1904 892" fill="none" stroke="#b8ad9c" stroke-width="1.5"/>
       </g>
       <path d="M1980 888 L2040 888" fill="none" stroke="#b8ad9c" stroke-opacity="0.6"/>
-      <g clip-path="url(#clip-path-6)">
+      <g clip-path="url(#clip-path-3)">
         <path d="M2032 884 L2040 888 L2032 892" fill="none" stroke="#b8ad9c" stroke-width="1.5"/>
       </g>
     </g>
-    <text transform="matrix(1 0 0 1 1639.856 996)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="24" font-weight="bold" fill="#94a8b5" letter-spacing="2"><tspan x="0" y="0">BORDEN / TWO BECOME ONE</tspan></text>
+    <text transform="matrix(1 0 0 1 1639.856 1006)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="24" font-weight="bold" fill="#94a8b5" letter-spacing="2"><tspan x="0" y="0">BORDEN / TWO BECOME ONE</tspan></text>
     <g>
       <g>
-        <path d="M1687 1045 L1687 1043 L1691 1043 L1691 1034 L1701 1034 L1701 1043 L1705 1043 L1705 1045 Z M1693 1046 L1699 1046 L1698.5 1052 L1693.5 1052 Z" fill="#94a8b5"/>
-        <path d="M1692 1053 L1687 1056 L1684 1071 L1687 1072.5 L1690 1062 L1689 1079 L1694.5 1079 L1694 1090 L1690 1090 L1691 1071 L1701 1071 L1702 1090 L1698 1090 L1697.5 1079 L1703 1079 L1702 1062 L1705 1072.5 L1708 1071 L1705 1056 L1700 1053 L1696 1059 Z" fill="#94a8b5"/>
+        <path d="M1687 1055 L1687 1053 L1691 1053 L1691 1044 L1701 1044 L1701 1053 L1705 1053 L1705 1055 Z M1693 1056 L1699 1056 L1698.5 1062 L1693.5 1062 Z" fill="#94a8b5"/>
+        <path d="M1692 1063 L1687 1066 L1684 1081 L1687 1082.5 L1690 1072 L1689 1089 L1694.5 1089 L1694 1100 L1690 1100 L1691 1081 L1701 1081 L1702 1100 L1698 1100 L1697.5 1089 L1703 1089 L1702 1072 L1705 1082.5 L1708 1081 L1705 1066 L1700 1063 L1696 1069 Z" fill="#94a8b5"/>
       </g>
       <g>
-        <path d="M1807 1045 L1807 1043 L1811 1043 L1811 1034 L1821 1034 L1821 1043 L1825 1043 L1825 1045 Z M1813 1046 L1819 1046 L1818.5 1052 L1813.5 1052 Z" fill="#94a8b5"/>
-        <path d="M1812 1053 L1807 1056 L1804 1071 L1807 1072.5 L1810 1062 L1809 1079 L1814.5 1079 L1814 1090 L1810 1090 L1811 1071 L1821 1071 L1822 1090 L1818 1090 L1817.5 1079 L1823 1079 L1822 1062 L1825 1072.5 L1828 1071 L1825 1056 L1820 1053 L1816 1059 Z" fill="#94a8b5"/>
+        <path d="M1807 1055 L1807 1053 L1811 1053 L1811 1044 L1821 1044 L1821 1053 L1825 1053 L1825 1055 Z M1813 1056 L1819 1056 L1818.5 1062 L1813.5 1062 Z" fill="#94a8b5"/>
+        <path d="M1812 1063 L1807 1066 L1804 1081 L1807 1082.5 L1810 1072 L1809 1089 L1814.5 1089 L1814 1100 L1810 1100 L1811 1081 L1821 1081 L1822 1100 L1818 1100 L1817.5 1089 L1823 1089 L1822 1072 L1825 1082.5 L1828 1081 L1825 1066 L1820 1063 L1816 1069 Z" fill="#94a8b5"/>
       </g>
-      <path d="M1728 1060 L1784 1060" fill="none" stroke="#94a8b5" stroke-width="2"/>
+      <path d="M1728 1070 L1784 1070" fill="none" stroke="#94a8b5" stroke-width="2"/>
     </g>
-    <text transform="matrix(1 0 0 1 1639.952 843.232)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#d3ad7a" letter-spacing="2"><tspan x="0" y="0">ANGIER HIDES THE COST: LIFE</tspan></text>
-    <text transform="matrix(1 0 0 1 1639.856 1021.32)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#94a8b5" letter-spacing="2"><tspan x="0" y="0">BORDEN HIDES THE METHOD: IDENTITY</tspan></text>
+    <text transform="matrix(1 0 0 1 1639.952 843.232)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#d3ad7a" letter-spacing="2"><tspan x="0" y="0">THE COST: LIFE</tspan></text>
+    <text transform="matrix(1 0 0 1 1639.856 1031.32)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#94a8b5" letter-spacing="2"><tspan x="0" y="0">THE COST: IDENTITY</tspan></text>
     <path d="M80 1304 L2320 1304" fill="none" stroke="#eee6d7" stroke-opacity="0.15"/>
     <text transform="matrix(1 0 0 1 2320 1344)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="16" fill="#b8ad9c" letter-spacing="2" text-anchor="end"><tspan x="0" y="0">PERFORMANCE → METHOD → SECRET → COST</tspan></text>
     <text transform="matrix(1 0 0 1 1640.29 1230)" x="0" y="0" xml:space="preserve" font-family="Georgia" font-size="24" font-style="italic" fill="#b8ad9c"><tspan x="0" y="0">Two solutions to the same obsession. Neither without a price.</tspan></text>
