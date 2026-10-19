@@ -4,17 +4,14 @@
 
 
 ## Current Projects
+- **[chessbench](https://github.com/joemaddalone/chessbench)** - Compare AI agents on forced-checkmate puzzles.
 - **[inference-lab](https://github.com/joemaddalone/inference-lab)** - Run a bunch of MLX Inference Engines
 - **[zugar](https://github.com/joemaddalone/zugar)** - DSPy-inspired Zod Schema -> prompt + structured output
-- **[zod-inquirer](https://github.com/joemaddalone/zod-inquirer)** - Generate validated inquirer.js prompts from Zod schemas
-- **[fenchurch](https://github.com/joemaddalone/fenchurch)** - Initialize projects with AI tooling and prompts
 - **[frogstar](https://github.com/joemaddalone/frogstar)** - Weight lifting planner/tracker (nextjs)
 - **[vogon](https://github.com/joemaddalone/vogon)** - Plex/Jellyfin art management (nextjs)
 - **[hactar](https://github.com/joemaddalone/hactar)** - A Plex hard drive savior (node)
 
 ## Courses
-
-
 
 - [Mastering Astryx](https://el337.com/courses/astryx/)
 - [Build an AI Agent in Typescript](https://el337.com/courses/build-an-ai-agent-in-typescript/)
@@ -24,13 +21,10 @@
 
 ## Latest Videos
 
-
-- [Agent Orchestration on Easy Mode](https://el337.com/tools/orca/)
-- [Run MLX LLMs with the Fastest MLX Engine on Apple Silicon](https://el337.com/posts/mlx-engine-benchmark-showdown/)
-- [Managing AI Skills: Finally Solved with SkillsGate](https://el337.com/tools/skillsgate/)
-- [Llama.cpp Model Routing](https://el337.com/tools/llama-forge/)
-- [A 15-year Old Homeless Kid Invented Neural Networks](https://el337.com/posts/what-we-didnt-learn-from-walter-pitts/)
-- [The Only Skill You Need to Improve Your Codebase](https://el337.com/tools/improve/)
+- [OMLX + Splash: Run MLX LLMs 5x Faster](https://youtu.be/KZdY2a5IbOw)
+- [Find Anything with DigUp Local AI](https://youtu.be/7Jn4MrEmCjw)
+- [Cloning Adobe Is Morally Correct And You Should Do It](https://youtu.be/mVsmhKW6zOM)
+- [How Are These Tiny AI Models So Damn Good?](https://el337.com/tools/desert-ant-cli/)
 
 ## GitHub Activity
 
