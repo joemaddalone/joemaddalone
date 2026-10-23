@@ -32,7 +32,7 @@
     <path d="M560 486 C560 492.627 554.627 498 548 498 C541.373 498 536 492.627 536 486 C536 479.373 541.373 474 548 474 C554.627 474 560 479.373 560 486 Z" fill="#191a18" stroke="#df7359" stroke-width="4"/>
     <path d="M552 486 C552 488.209 550.209 490 548 490 C545.791 490 544 488.209 544 486 C544 483.791 545.791 482 548 482 C550.209 482 552 483.791 552 486 Z" fill="#df7359"/>
     <g filter="url(#filter-1)">
-      <text transform="matrix(1.043 -0.073 0.073 1.043 546.058 654.344)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="20" font-weight="600" fill="#fffff" letter-spacing="1" text-anchor="middle"><tspan x="0" y="0">AVENGING</tspan><tspan x="0" y="18">CRUZ</tspan></text>
+      <text transform="matrix(1.043 -0.073 0.073 1.043 546.058 654.344)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="20" font-weight="600" fill="#fffff" style="fill: #fff;" letter-spacing="1" text-anchor="middle"><tspan x="0" y="0">AVENGING</tspan><tspan x="0" y="18">CRUZ</tspan></text>
     </g>
     <path d="M785.49 550 C785.49 554.418 781.908 558 777.49 558 C773.072 558 769.49 554.418 769.49 550 C769.49 545.582 773.072 542 777.49 542 C781.908 542 785.49 545.582 785.49 550 Z" fill="#191a18" stroke="#82a0c0" stroke-width="3"/>
     <text transform="matrix(1 0 0 1 711.5 515.66)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;" font-size="20" font-weight="600" fill="#82a0c0" letter-spacing="1"><tspan x="0" y="0">BOOT CAMP</tspan></text>
