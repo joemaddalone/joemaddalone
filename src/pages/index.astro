@@ -119,11 +119,15 @@ const recentVisuals = sortedVisuals.slice(0, 2);
                     <span class="note-tag">{tag}</span>
                   </div>
                   <p class="note-teaser-blurb">{blurb}</p>
-                  {source && (
+                  {source ? (
                     <a href={source} target="_blank" rel="noopener noreferrer" class="note-teaser-source">
                       {sourceLabel ?? "Source"} ↗
                     </a>
-                  )}
+                  ) : sourceLabel ? (
+                  <span class="note-teaser-source">
+                    {sourceLabel ?? "Source"}
+                  </span>
+                  ) : null}
                 </div>
               );
             })}

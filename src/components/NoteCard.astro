@@ -27,7 +27,7 @@ const sourceLabel = note.data.sourceLabel ?? (source ? new URL(source).hostname.
       <span class="meta-mono dot" aria-hidden="true">·</span>
       <span class="note-tag">{tag}</span>
     </div>
-    {source && (
+    {source ? (
       <a
         href={source}
         target="_blank"
@@ -38,7 +38,11 @@ const sourceLabel = note.data.sourceLabel ?? (source ? new URL(source).hostname.
         <span class="note-source-label">{sourceLabel ?? "Source"}</span>
         <span aria-hidden="true"> ↗</span>
       </a>
-    )}
+    ) : sourceLabel ? (
+      <span class="note-source note-source--static">
+        <span class="note-source-label">{sourceLabel}</span>
+      </span>
+    ) : null}
   </div>
 
   <div class="note-body">
@@ -116,6 +120,16 @@ const sourceLabel = note.data.sourceLabel ?? (source ? new URL(source).hostname.
   .note-source:hover {
     color: var(--ink);
     opacity: 1;
+  }
+
+  .note-source--static {
+    border-bottom: none;
+    padding-bottom: 0;
+    cursor: default;
+  }
+
+  .note-source--static:hover {
+    color: var(--ink-muted);
   }
 
   .note-source-label {
