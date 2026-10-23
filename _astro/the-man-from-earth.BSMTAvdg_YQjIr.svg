@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <title>the-man-from-earth.svg</title>
+  <g id="LAYER">
+    <path d="M0 0 L1920 0 L1920 1080 L0 1080 Z" fill="#191a18"/>
+    <g id="HEADER">
+      <text transform="matrix(1 0 0 1 77.453 94.438)" x="0" y="0" xml:space="preserve" font-family="Georgia, serif" font-size="72" fill="#f5f1e8" letter-spacing="-2"><tspan x="0" y="0">THE MAN FROM EARTH</tspan></text>
+      <text transform="matrix(1 0 0 1 81.453 146.438)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="24" fill="#f5f1e8" letter-spacing="2"><tspan x="0" y="0">ONE IMPOSSIBLE CLAIM. SEVEN WAYS OF SEEING IT.</tspan></text>
+    </g>
+    <path d="M81.453 170.438 L1841.453 170.438" fill="none" stroke="#f5f1e8" stroke-opacity="0.16"/>
+    <g>
+      <text transform="matrix(1 0 0 1 83.951 813.069)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1" letter-spacing="2"><tspan x="0" y="0">KNOWLEDGE</tspan></text>
+      <text transform="matrix(1 0 0 1 83.951 841.069)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1"><tspan x="0" y="0">Reconstructs.</tspan></text>
+      <path id="KNOWLEDGE" d="M87.951 869.069 L119.951 869.069 L119.951 909.069 L87.951 909.069 Z M95.951 881.069 L111.951 881.069 M95.951 893.069 L111.951 893.069 M131.951 877.069 L155.951 869.069 L171.951 889.069 L147.951 905.069 Z" fill="none" stroke="#b7b8b1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+    </g>
+    <g>
+      <text transform="matrix(1 0 0 1 1742.966 812.685)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1" letter-spacing="2"><tspan x="0" y="0">MEMORY</tspan></text>
+      <text transform="matrix(1 0 0 1 1742.966 840.685)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1"><tspan x="0" y="0">“I was there.”</tspan></text>
+      <g id="MEMORY" opacity="0.6">
+        <path d="M1746.966 896.685 L1766.966 872.685 L1786.966 888.685 L1806.966 864.685 L1830.966 896.685 M1746.966 904.685 L1830.966 904.685" fill="none" stroke="#d3ad7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1818.966 860.685 C1818.966 865.103 1815.384 868.685 1810.966 868.685 C1806.548 868.685 1802.966 865.103 1802.966 860.685 C1802.966 856.267 1806.548 852.685 1810.966 852.685 C1815.384 852.685 1818.966 856.267 1818.966 860.685 Z" fill="none" stroke="#d3ad7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1754.966 932.685 C1760.299 916.685 1765.633 916.685 1770.966 932.685 M1762.966 916.685 L1762.966 940.685" fill="none" stroke="#d3ad7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+    <g id="FOOTER">
+      <path d="M80.875 978.324 L1840.875 978.324" fill="none" stroke="#f5f1e8" stroke-opacity="0.16"/>
+      <text transform="matrix(1 0 0 1 80.875 1014.324)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1" letter-spacing="2"><tspan x="0" y="0">CURIOSITY</tspan></text>
+      <text transform="matrix(1 0 0 1 80.875 1046.324)" x="0" y="0" xml:space="preserve" font-family="Georgia, serif" font-size="24" font-style="italic" fill="#b7b8b1"><tspan x="0" y="0">Is his story true?</tspan></text>
+      <text transform="matrix(1 0 0 1 861.969 1014.324)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1" letter-spacing="2"><tspan x="0" y="0">INTELLECTUAL CONFLICT</tspan></text>
+      <text transform="matrix(1 0 0 1 808.875 1046.324)" x="0" y="0" xml:space="preserve" font-family="Georgia, serif" font-size="24" font-style="italic" fill="#b7b8b1"><tspan x="0" y="0">Can our frameworks contain it?</tspan></text>
+      <text transform="matrix(1 0 0 1 1573.155 1014.324)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1" letter-spacing="2"><tspan x="0" y="0">EXISTENTIAL CONSEQUENCE</tspan></text>
+      <text transform="matrix(1 0 0 1 1610.375 1046.324)" x="0" y="0" xml:space="preserve" font-family="Georgia, serif" font-size="24" font-style="italic" fill="#b7b8b1"><tspan x="0" y="0">What would it mean?</tspan></text>
+    </g>
+    <text transform="matrix(1 0 0 1 981.193 210.345)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="20" fill="#f5f1e8" text-anchor="middle"><tspan x="0" y="0">THEY STUDY THE PAST. HE CLAIMS TO BE THE PAST.</tspan></text>
+    <g id="DAN">
+      <g id="earth-dan">
+        <text transform="matrix(1 0 0 1 1448.117 450.332)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="28" font-weight="bold" fill="#ba947c" letter-spacing="3"><tspan x="0" y="0">DAN</tspan></text>
+        <text transform="matrix(1 0 0 1 1448.213 476.508)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1" letter-spacing="1"><tspan x="0" y="0">ANTHROPOLOGIST</tspan></text>
+        <text transform="matrix(1 0 0 1 1448.117 509.845)" x="0" y="0" xml:space="preserve" font-family="Georgia, serif" font-size="24" fill="#ba947c"><tspan x="0" y="0">Human origins, sitting before us?</tspan></text>
+        <text transform="matrix(1 0 0 1 1448.117 537.74)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1"><tspan x="0" y="0">Early societies → Witness → Implications</tspan></text>
+      </g>
+      <g>
+        <path d="M1375.915 454.328 C1367.915 454.328 1363.915 462.328 1365.915 470.328 L1371.915 486.328 C1373.915 492.328 1381.915 492.328 1383.915 486.328 L1385.915 470.328 C1387.915 462.328 1383.915 454.328 1375.915 454.328 Z" fill="none" stroke="#ba947c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1377.915 444.328 C1377.915 448.746 1375.229 452.328 1371.915 452.328 C1368.602 452.328 1365.915 448.746 1365.915 444.328 C1365.915 439.91 1368.602 436.328 1371.915 436.328 C1375.229 436.328 1377.915 439.91 1377.915 444.328 Z" fill="none" stroke="#ba947c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1386.915 446.328 C1386.915 447.985 1385.572 449.328 1383.915 449.328 C1382.259 449.328 1380.915 447.985 1380.915 446.328 C1380.915 444.671 1382.259 443.328 1383.915 443.328 C1385.572 443.328 1386.915 444.671 1386.915 446.328 Z" fill="none" stroke="#ba947c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1391.915 452.328 C1391.915 453.432 1391.02 454.328 1389.915 454.328 C1388.811 454.328 1387.915 453.432 1387.915 452.328 C1387.915 451.223 1388.811 450.328 1389.915 450.328 C1391.02 450.328 1391.915 451.223 1391.915 452.328 Z" fill="none" stroke="#ba947c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1413.915 442.328 C1405.915 442.328 1401.915 450.328 1403.915 458.328 L1409.915 474.328 C1411.915 480.328 1419.915 480.328 1421.915 474.328 L1423.915 458.328 C1425.915 450.328 1421.915 442.328 1413.915 442.328 Z" fill="none" stroke="#ba947c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1423.915 432.328 C1423.915 436.746 1421.229 440.328 1417.915 440.328 C1414.602 440.328 1411.915 436.746 1411.915 432.328 C1411.915 427.91 1414.602 424.328 1417.915 424.328 C1421.229 424.328 1423.915 427.91 1423.915 432.328 Z" fill="none" stroke="#ba947c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1408.915 434.328 C1408.915 435.985 1407.572 437.328 1405.915 437.328 C1404.259 437.328 1402.915 435.985 1402.915 434.328 C1402.915 432.671 1404.259 431.328 1405.915 431.328 C1407.572 431.328 1408.915 432.671 1408.915 434.328 Z" fill="none" stroke="#ba947c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1401.915 440.328 C1401.915 441.432 1401.02 442.328 1399.915 442.328 C1398.811 442.328 1397.915 441.432 1397.915 440.328 C1397.915 439.223 1398.811 438.328 1399.915 438.328 C1401.02 438.328 1401.915 439.223 1401.915 440.328 Z" fill="none" stroke="#ba947c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <path d="M1363.745 406.932 L1824.994 406.932 C1832.71 406.932 1838.966 411.814 1838.966 417.836 L1838.966 544.031 C1838.966 550.053 1832.71 554.936 1824.994 554.936 L1363.745 554.936 C1356.029 554.936 1349.774 550.053 1349.774 544.031 L1349.774 417.836 C1349.774 411.814 1356.029 406.932 1363.745 406.932 Z" fill="none" stroke="#754c24" stroke-miterlimit="10"/>
+    </g>
+    <g id="HARRY">
+      <g id="earth-harry">
+        <text transform="matrix(1 0 0 1 182.294 442.097)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="28" font-weight="bold" fill="#a7b697" letter-spacing="3"><tspan x="0" y="0">HARRY</tspan></text>
+        <text transform="matrix(1 0 0 1 182.294 471.137)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1" letter-spacing="1"><tspan x="0" y="0">BIOLOGIST</tspan></text>
+        <text transform="matrix(1 0 0 1 182.294 507.338)" x="0" y="0" xml:space="preserve" font-family="Georgia, serif" font-size="24" fill="#a7b697"><tspan x="0" y="0">Can a body outlive its biology?</tspan></text>
+        <text transform="matrix(1 0 0 1 182.294 538.097)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1"><tspan x="0" y="0">Skepticism → Aging questions → Unease</tspan></text>
+      </g>
+      <g>
+        <path d="M144.932 417.577 C135.881 426.628 158.508 449.255 149.457 458.306 C140.406 467.357 117.779 444.73 108.728 453.781 C99.677 462.832 122.304 485.459 113.253 494.51 M167.559 440.204 C158.508 449.255 135.881 426.628 126.83 435.679 C117.779 444.73 140.406 467.357 131.355 476.408 C122.304 485.459 99.677 462.832 90.626 471.882" fill="none" stroke="#a7b697" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M144.932 422.102 L163.034 440.204 M142.669 428.89 L156.245 442.467 M135.881 435.679 L149.457 449.255 M131.355 435.679 L149.457 453.781 M126.83 440.204 L144.932 458.306 M124.567 446.992 L138.143 460.569 M117.779 453.781 L131.355 467.357 M113.253 453.781 L131.355 471.882 M108.728 458.306 L126.83 476.408 M106.465 465.094 L120.041 478.671 M99.677 471.882 L113.253 485.459 M95.151 471.882 L113.253 489.984" fill="none" stroke="#a7b697" stroke-opacity="0.7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <path d="M97.529 406.932 L545.783 406.932 C553.281 406.932 559.361 411.814 559.361 417.836 L559.361 544.031 C559.361 550.053 553.281 554.935 545.783 554.935 L97.529 554.935 C90.03 554.935 83.951 550.053 83.951 544.031 L83.951 417.836 C83.951 411.814 90.03 406.932 97.529 406.932 Z" fill="none" stroke="#754c24" stroke-miterlimit="10"/>
+    </g>
+    <g id="EDITH">
+      <g id="earth-edith">
+        <text transform="matrix(1 0 0 1 797.37 818.258)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="28" font-weight="bold" fill="#d3ad7a" letter-spacing="3"><tspan x="0" y="0">EDITH</tspan></text>
+        <text transform="matrix(1 0 0 1 797.466 844.631)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1" letter-spacing="1"><tspan x="0" y="0">ART HISTORY PROFESSOR / DEVOUT CHRISTIAN</tspan></text>
+        <text transform="matrix(1 0 0 1 797.37 878.166)" x="0" y="0" xml:space="preserve" font-family="Georgia, serif" font-size="24" fill="#d3ad7a"><tspan x="0" y="0">Faith meets someone’s claimed memory.</tspan></text>
+        <text transform="matrix(1 0 0 1 797.37 906.258)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1"><tspan x="0" y="0">Scripture → Overlapping histories → Conflict</tspan></text>
+        <g>
+          <path d="M559.361 283.542 L659.361 283.542" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M659.361 283.542 L769.088 352.474" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+        </g>
+        <g>
+          <path d="M559.361 283.542 L659.361 283.542" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M659.361 283.542 L769.088 352.474" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+        </g>
+      </g>
+      <g>
+        <path d="M714.224 794.693 C724.206 790.628 734.187 791.644 744.168 797.741 C754.15 791.644 764.131 790.628 774.112 794.693 L774.112 831.272 C764.131 827.208 754.15 828.224 744.168 834.32 C734.187 828.224 724.206 827.208 714.224 831.272 Z M744.168 797.741 L744.168 834.32 M711.23 800.789 L711.23 837.369 C723.207 833.304 734.187 834.32 744.168 840.417 C754.15 834.32 765.129 833.304 777.107 837.369 L777.107 800.789" fill="none" stroke="#d3ad7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M729.196 800.789 L729.196 819.079 M723.207 806.886 L735.185 806.886 M753.152 803.837 L765.129 803.837 M753.152 812.982 L765.129 812.982 M753.152 822.127 L762.135 822.127 M723.207 825.175 L735.185 825.175" fill="none" stroke="#d3ad7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <path d="M706.482 778.32 L1229.559 778.32 C1237.527 778.32 1243.986 782.789 1243.986 788.301 L1243.986 916.343 C1243.986 921.855 1237.527 926.324 1229.559 926.324 L706.482 926.324 C698.514 926.324 692.055 921.855 692.055 916.343 L692.055 788.301 C692.055 782.789 698.514 778.32 706.482 778.32 Z" fill="none" stroke="#754c24" stroke-miterlimit="10"/>
+    </g>
+    <g id="ART">
+      <g id="earth-art">
+        <text transform="matrix(1 0 0 1 1460.692 253.641)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="28" font-weight="bold" fill="#b7b8b1" letter-spacing="3"><tspan x="0" y="0">ART</tspan></text>
+        <text transform="matrix(1 0 0 1 1460.62 280.681)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1" letter-spacing="1"><tspan x="0" y="0">ARCHAEOLOGIST</tspan></text>
+        <text transform="matrix(1 0 0 1 1460.571 314.883)" x="0" y="0" xml:space="preserve" font-family="Georgia, serif" font-size="24" fill="#b7b8b1"><tspan x="0" y="0">Where is the physical evidence?</tspan></text>
+        <text transform="matrix(1 0 0 1 1460.62 343.641)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1"><tspan x="0" y="0">Artifacts → “A living artifact?” → Doubt</tspan></text>
+      </g>
+      <path d="M1374.682 282.087 L1438.682 282.087 M1378.682 290.087 L1434.682 290.087 M1382.682 298.087 L1430.682 298.087 M1394.682 234.087 L1418.682 234.087 L1414.682 250.087 C1428.015 258.087 1432.015 267.42 1426.682 278.087 L1386.682 278.087 C1381.349 267.42 1385.349 258.087 1398.682 250.087 Z" fill="none" stroke="#b7b8b1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M1375.312 214.605 L1825.153 214.605 C1832.782 214.605 1838.966 219.55 1838.966 225.65 L1838.966 351.563 C1838.966 357.663 1832.782 362.609 1825.153 362.609 L1375.312 362.609 C1367.683 362.609 1361.5 357.663 1361.5 351.563 L1361.5 225.65 C1361.5 219.55 1367.683 214.605 1375.312 214.605 Z" fill="none" stroke="#754c24" stroke-miterlimit="10"/>
+    </g>
+    <g id="WILL">
+      <g id="earth-will">
+        <text transform="matrix(1 0 0 1 182.965 251.26)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="28" font-weight="bold" fill="#91a8bf" letter-spacing="3"><tspan x="0" y="0">WILL</tspan></text>
+        <text transform="matrix(1 0 0 1 182.965 280.126)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1" letter-spacing="1"><tspan x="0" y="0">PSYCHIATRY PROFESSOR</tspan></text>
+        <text transform="matrix(1 0 0 1 182.965 316.154)" x="0" y="0" xml:space="preserve" font-family="Georgia, serif" font-size="24" fill="#91a8bf"><tspan x="0" y="0">Could he believe an untrue story?</tspan></text>
+        <text transform="matrix(1 0 0 1 182.965 347.26)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1"><tspan x="0" y="0">Lie → Delusion → Truth: unresolved</tspan></text>
+      </g>
+      <g>
+        <path d="M106.216 303.474 L106.216 283.474 C90.216 271.474 94.216 243.474 110.216 235.474 C126.216 227.474 150.216 235.474 154.216 255.474 L162.216 271.474 L150.216 271.474 L150.216 283.474 C150.216 288.808 144.883 291.474 134.216 291.474 L134.216 303.474" fill="none" stroke="#91a8bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M110.216 251.474 C106.216 243.474 118.216 239.474 122.216 247.474 C126.216 237.474 138.216 243.474 138.216 251.474 C150.216 251.474 146.216 263.474 138.216 263.474 C138.216 273.474 126.216 275.474 122.216 267.474 C114.216 275.474 106.216 267.474 110.216 259.474 C102.216 259.474 102.216 251.474 110.216 251.474 Z" fill="none" stroke="#91a8bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M122.216 247.474 L122.216 267.474 M110.216 251.474 C115.549 251.474 118.216 254.141 118.216 259.474 M138.216 251.474 C132.883 251.474 130.216 255.474 130.216 263.474" fill="none" stroke="#91a8bf" stroke-opacity="0.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <path d="M97.331 214.605 L545.971 214.605 C553.366 214.605 559.361 219.42 559.361 225.359 L559.361 351.855 C559.361 357.794 553.366 362.609 545.971 362.609 L97.331 362.609 C89.936 362.609 83.941 357.794 83.941 351.855 L83.941 225.359 C83.941 219.42 89.936 214.605 97.331 214.605 Z" fill="none" stroke="#754c24" stroke-miterlimit="10"/>
+    </g>
+    <g id="LINDA">
+      <g id="earth-linda">
+        <text transform="matrix(1 0 0 1 1435.782 646.711)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="28" font-weight="bold" fill="#c2c7b1" letter-spacing="3"><tspan x="0" y="0">LINDA</tspan></text>
+        <text transform="matrix(1 0 0 1 1435.782 673.084)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1" letter-spacing="1"><tspan x="0" y="0">YOUNG STUDENT</tspan></text>
+        <text transform="matrix(1 0 0 1 1435.828 706.619)" x="0" y="0" xml:space="preserve" font-family="Georgia, serif" font-size="24" fill="#c2c7b1"><tspan x="0" y="0">What if he is telling the truth?</tspan></text>
+        <text transform="matrix(1 0 0 1 1435.782 734.711)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1"><tspan x="0" y="0">Curiosity → Imagination → Possibility</tspan></text>
+      </g>
+      <g>
+        <path d="M1407.266 653.849 C1413.864 647.252 1413.864 634.057 1403.968 627.46 C1394.072 620.863 1370.982 620.863 1361.086 630.759 C1351.191 640.655 1357.788 657.147 1370.982 660.446 L1390.774 660.446" fill="none" stroke="#c2c7b1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1403.8 659.351 C1403.8 661.628 1401.954 663.474 1399.677 663.474 C1397.4 663.474 1395.553 661.628 1395.553 659.351 C1395.553 657.074 1397.4 655.228 1399.677 655.228 C1401.954 655.228 1403.8 657.074 1403.8 659.351 Z" fill="none" stroke="#c2c7b1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1411.257 671.019 C1411.257 672.385 1410.149 673.493 1408.783 673.493 C1407.417 673.493 1406.309 672.385 1406.309 671.019 C1406.309 669.652 1407.417 668.545 1408.783 668.545 C1410.149 668.545 1411.257 669.652 1411.257 671.019 Z" fill="none" stroke="#c2c7b1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1376.15 636.184 C1376.15 626.288 1392.643 626.288 1392.643 636.184 C1392.643 642.781 1382.747 642.781 1382.747 649.377" fill="none" stroke="#c2c7b1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1384.093 654.364 C1384.093 655.048 1383.539 655.601 1382.856 655.601 C1382.173 655.601 1381.619 655.048 1381.619 654.364 C1381.619 653.681 1382.173 653.127 1382.856 653.127 C1383.539 653.127 1384.093 653.681 1384.093 654.364 Z" fill="#c2c7b1"/>
+      </g>
+      <path d="M1350.901 610.609 L1824.821 610.609 C1832.633 610.609 1838.966 615.424 1838.966 621.363 L1838.966 747.859 C1838.966 753.798 1832.633 758.613 1824.821 758.613 L1350.901 758.613 C1343.09 758.613 1336.757 753.798 1336.757 747.859 L1336.757 621.363 C1336.757 615.424 1343.09 610.609 1350.901 610.609 Z" fill="none" stroke="#754c24" stroke-miterlimit="10"/>
+    </g>
+    <g id="SANDY">
+      <g id="earth-sandy">
+        <g>
+          <text transform="matrix(1 0 0 1 166.901 652.793)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="28" font-weight="bold" fill="#d2c8ac" letter-spacing="3"><tspan x="0" y="0">SANDY</tspan></text>
+          <text transform="matrix(1 0 0 1 166.901 680.5)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1" letter-spacing="1"><tspan x="0" y="0">HISTORIAN</tspan></text>
+          <text transform="matrix(1 0 0 1 166.901 715.367)" x="0" y="0" xml:space="preserve" font-family="Georgia, serif" font-size="24" fill="#d2c8ac"><tspan x="0" y="0">The record—or a living witness?</tspan></text>
+          <text transform="matrix(1 0 0 1 166.901 744.793)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1"><tspan x="0" y="0">Documents → Lived history → Uncertainty</tspan></text>
+        </g>
+      </g>
+      <path d="M106.901 625.493 L142.901 625.493 L142.901 673.493 L106.901 673.493 Z M114.901 637.493 L134.901 637.493 M114.901 649.493 L134.901 649.493 M114.901 661.493 L126.901 661.493 M98.901 633.493 L98.901 681.493 L134.901 681.493" fill="none" stroke="#d2c8ac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M97.704 610.609 L545.608 610.609 C553.203 610.609 559.361 615.554 559.361 621.655 L559.361 747.567 C559.361 753.668 553.203 758.613 545.608 758.613 L97.704 758.613 C90.108 758.613 83.951 753.668 83.951 747.567 L83.951 621.655 C83.951 615.554 90.108 610.609 97.704 610.609 Z" fill="none" stroke="#754c24" stroke-miterlimit="10"/>
+    </g>
+    <g id="JOHN">
+      <g id="earth-john">
+        <text transform="matrix(1 0 0 1 960 410.724)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="28" font-weight="bold" fill="#f5f1e8" letter-spacing="3" text-anchor="middle"><tspan x="0" y="0">JOHN OLDMAN</tspan></text>
+        <text transform="matrix(1 0 0 1 960 446.724)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="16" fill="#b7b8b1" letter-spacing="2" text-anchor="middle"><tspan x="0" y="0">THE CLAIM</tspan></text>
+        <text transform="matrix(1 0 0 1 960 522.724)" x="0" y="0" xml:space="preserve" font-family="Georgia, serif" font-size="68" fill="#f5f1e8" letter-spacing="-2" text-anchor="middle"><tspan x="0" y="0">14,000</tspan></text>
+        <text transform="matrix(1 0 0 1 960 570.724)" x="0" y="0" xml:space="preserve" font-family="&apos;Helvetica Neue&apos;, sans-serif" font-size="24" fill="#f5f1e8" letter-spacing="4" text-anchor="middle"><tspan x="0" y="0">YEARS OLD</tspan></text>
+        <text transform="matrix(1 0 0 1 960 606.724)" x="0" y="0" xml:space="preserve" font-family="Georgia, serif" font-size="24" font-style="italic" fill="#b7b8b1" text-anchor="middle"><tspan x="0" y="0">“I remember.”</tspan></text>
+      </g>
+      <path d="M727.302 487.351 C727.302 355.663 834.057 248.908 965.745 248.908 C1097.433 248.908 1204.188 355.663 1204.188 487.351 C1204.188 619.039 1097.433 725.794 965.745 725.794 C834.057 725.794 727.302 619.039 727.302 487.351 Z" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+    </g>
+    <g>
+      <path d="M559.361 283.542 L659.361 283.542" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+      <path d="M659.361 283.542 L769.088 352.474" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+    </g>
+    <path d="M559.361 475.968 L727.302 475.968" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M1349.774 480.787 L1204.188 480.787" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M559.361 684.211 L659.361 684.211" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M659.361 684.211 L750.863 592.709" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M1261.5 288.607 L1361.5 288.607" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M1261.5 288.607 L1175.949 374.157" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M1236.757 683.197 L1336.757 683.197" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M1236.757 683.197 L1167.598 614.038" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M961.969 729.319 L961.969 778.32" fill="none" stroke="#8c6239" stroke-width="2" stroke-miterlimit="10"/>
+  </g>
+</svg>
