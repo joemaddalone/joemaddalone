@@ -3,6 +3,7 @@ import { render, type CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
+import Datetime from "@/components/Datetime.astro";
 import { SITE } from "@/config";
 import { Image } from "astro:assets";
 
@@ -52,7 +53,6 @@ const nextPost = currentPostIndex >= 0 && currentPostIndex < allPosts.length - 1
 // Garden entry header — not a field report, just an entry in the garden
 const year = String(new Date(date).getFullYear());
 const d = new Date(date);
-const displayDate = d.toLocaleDateString("en-GB", { day: "2-digit", month: "long", year: "numeric" }).toUpperCase();
 const readingMinutes = 6; // conservative default; content varies
 const entryId = `ENTRY / ${String(currentPostIndex + 1).padStart(3, "0")}`;
 const primaryTag = (tags?.[0] ?? "NOTE").toUpperCase();
@@ -82,7 +82,10 @@ const primaryTag = (tags?.[0] ?? "NOTE").toUpperCase();
         {excerpt && <p class="post-excerpt">{excerpt}</p>}
 
         <div class="post-meta-row">
-          <span class="meta-mono">{displayDate}</span>
+          <span class="meta-mono">
+              <Datetime {date} {timezone} size="sm" />
+
+          </span>
           <span class="meta-mono" aria-hidden="true">·</span>
           <span class="meta-mono">{readingMinutes} MIN READ</span>
           <span class="meta-mono" aria-hidden="true">·</span>
